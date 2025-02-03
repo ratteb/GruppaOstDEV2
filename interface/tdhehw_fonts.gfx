@@ -62,4 +62,49 @@ bitmapfonts = {
             G = { 86 172 91 }
         }
     }
+    bitmapfont = {
+        name = "TD_event_font_14pt"
+		path = "gfx/fonts/TD_event_font_14pt"
+        color = 0xffffffff
+
+        textcolors = {
+            G = { 86 172 91 }
+        }
+    }
+    bitmapfont = {
+        name = "TD_event_font_16pt"
+		path = "gfx/fonts/TD_event_font_16pt"
+        color = 0xfff8f1e4
+
+        textcolors = {
+            G = { 86 172 91 }
+        }
+    }
+    bitmapfont = {
+        name = "TD_event_font_18pt"
+		path = "gfx/fonts/TD_event_font_18pt"
+        color = 0xfff8f1e4
+
+        textcolors = {
+            G = { 86 172 91 }
+        }
+    }
+    bitmapfont = {
+        name = "TD_event_font_22pt"
+		path = "gfx/fonts/TD_event_font_22pt"
+        color = 0xffffffff
+
+        textcolors = {
+            G = { 86 172 91 }
+        }
+    }
+    bitmapfont = {
+        name = "TD_event_font_26pt"
+		path = "gfx/fonts/TD_event_font_26pt"
+        color = 0xffffffff
+
+        textcolors = {
+            G = { 86 172 91 }
+        }
+    }
 }

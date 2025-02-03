@@ -36,7 +36,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "Title"
 				position = { x = 14 y = 70 }
-				font = "TDHEHWText_font_26pt"
+				font = "TD_event_font_26pt"
 				borderSize = {x = 0 y = 0}
 				text = "Title text here!"	
 				maxWidth = 551
@@ -69,7 +69,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "Description"
 				position = { x = 32 y = 0 }
-				font = "TDHEHWText_font_16pt_outline"
+				font = "TD_event_font_16pt"
 				borderSize = {x = 0 y = 0}
 				text = "Long text here!"	
 				maxWidth = 512
@@ -499,7 +499,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "Title"
 				position = { x = 26 y = 68 }
-				font = "TDHEHWText_font_26pt"
+				font = "TD_event_font_26pt"
 				borderSize = {x = 0 y = 0}
 				text = "Title text here!"	
 				maxWidth = 570
@@ -524,7 +524,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "Description"
 				position = { x = 39 y = 170 }
-				font = "TDHEHWText_font_18pt_outline"
+				font = "TD_event_font_18pt"
 				borderSize = {x = 0 y = 0}
 				text = "Long text here!"	
 				maxWidth = 570
@@ -564,7 +564,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "Name"
 			position = { x = 0 y = 0 }
-			font = "hoi_20bs"
+			font = "TD_event_font_22pt"
 			maxWidth = 340
 			maxHeight = 40
 			format = center
