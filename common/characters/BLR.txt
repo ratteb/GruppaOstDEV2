@@ -1,0 +1,16 @@
+characters={
+	BLR_alexander_lukashenko={
+		name="Alexander Lukashenko"
+		portraits={
+			civilian={
+				large=GFX_alexander_lukashenko
+			}
+		}
+		country_leader={
+			ideology=putinism
+			desc = BLR_alexander_lukashenko_desc
+			expire="3000.1.1.1"
+			id=-1
+		}
+	}
+}

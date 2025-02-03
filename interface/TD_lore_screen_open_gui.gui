@@ -1,0 +1,32 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "lore_open_button"
+		position = { x = 0 y = 0}	
+		size = { width = 38 height= 38 }
+		orientation = center
+		origo = center
+		fade_time = 100
+		moveable = no
+		fade_type = linear
+		click_to_front = no
+		clipping = no
+
+		buttonType ={
+			name ="lore_button01"
+			spriteType = "GFX_lore_open_button"
+			position = { x= 875 y = -428 }
+			Orientation = "UPPER_LEFT"
+		}	
+			instantTextBoxType = {
+				name = "LORE_BUTTON_LOC"
+				position = { x = 910 y = -430 }
+				font = "TDHEHWText_font_22pt_outline"
+				borderSize = {x = 0 y = 0}
+				text = "LORE_BUTTON_LOC"
+				maxWidth = 1244
+				maxHeight = 844
+				format = left
+			}	
+	}
+}

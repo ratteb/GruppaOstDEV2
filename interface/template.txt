@@ -1,0 +1,87 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "government_gui_window"
+		position = { x = -300 y = -140 }	
+		size = { width = 800 height= 650 }
+		orientation = center
+		origo = center
+		fade_time = 100
+		moveable = yes
+		fade_type = linear
+		click_to_front = no
+		clipping = no
+		
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_scripted_gui_window_background"
+		}	
+
+		instantTextboxType = {
+			name = "government_title"
+			position = { x = 100 y = 50 }
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "GOVERNMENT_TITLE_LOC"
+			maxWidth = 400
+			maxHeight = 20
+			fixedsize = yes
+		}
+        # everything prime minister related
+		instantTextboxType = {
+			name = "prime_minister_title"
+			position = { x = 500 y = 120 }
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "PRIME_MINISTER_TITLE_LOC"
+			maxWidth = 400
+			maxHeight = 20
+			fixedsize = yes
+		}
+
+		buttonType ={
+			name ="prime_minister_button"
+			spriteType = "GFX_add_pol_idea_button"
+			position = { x= 175 y = -160 }
+			pdx_tooltip = "PM_SOV_MEDVEDEV_LOC"
+			Orientation = "center"
+		}
+         # Everything economic ministers related
+		instantTextboxType = {
+			name = "economic_ministers_title"
+			position = { x = 170 y = 340 }
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "ECONOMIC_MINISTERS_TITLE_LOC"
+			maxWidth = 400
+			maxHeight = 20
+			fixedsize = yes
+		}
+		buttonType ={
+			name ="economic_minister_1_button"
+			spriteType = "GFX_add_pol_idea_button"
+			position = { x= -240 y = 60 }
+			Orientation = "center"
+		}
+		buttonType ={
+			name ="economic_minister_2_button"
+			spriteType = "GFX_add_pol_idea_button"
+			position = { x= -160 y = 60 }
+			Orientation = "center"
+		}
+
+		buttonType ={
+			name ="economic_minister_3_button"
+			spriteType = "GFX_add_pol_idea_button"
+			position = { x= -80 y = 60 }
+			Orientation = "center"
+		}
+
+		buttonType ={
+			name ="economic_minister_4_button"
+			spriteType = "GFX_add_pol_idea_button"
+			position = { x= 0 y = 60 }
+			Orientation = "center"
+		}
+	}
+}

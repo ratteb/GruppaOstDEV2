@@ -1,0 +1,89 @@
+﻿
+focus_tree = {
+	id = novorossiya_focus01
+	
+	country = {
+		
+		modifier = {
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1000 }
+    # Russian Dome of Freedom / Azov Bombing 
+
+	focus = {
+		id = NOV_end_the_bombings
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = NOV_the_threat_against_the_people }
+		x = 0
+		y = 2
+		relative_position_id = NOV_the_threat_against_the_people
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+
+		available = {
+			NOT = { is_in_faction_with = UKR }
+			has_government = SOV
+			NOT = { has_idea = NOV_russian_dome_of_freedom_construction }
+		}
+		
+		bypass = {
+           NOT = { has_idea = azov_terror_bombing }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			221 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3 
+					instant_build = yes
+				}
+			}
+			226 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3 
+					instant_build = yes
+				}
+			}
+			197 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3 
+					instant_build = yes
+				}
+			}
+			192 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3 
+					instant_build = yes
+				}
+			}
+			834 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3 
+					instant_build = yes
+				}
+			}
+			remove_ideas = azov_terror_bombing
+			
+		}
+	}
+    # Novorossiyan Defense Command / Probing Attacks 
+}

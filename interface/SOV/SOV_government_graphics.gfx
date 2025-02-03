@@ -1,0 +1,46 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_government_transparent_bg"
+		textureFile = "/gfx/interface/scripted_gui_graphics/government_gui_transparent.dds"
+	}
+	spriteType = {
+		name = "GFX_scripted_gui_window_background"
+		textureFile = "/gfx/interface/scripted_gui_graphics/ruling_party_gov_gui_background.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_edinaya_rossiya"
+		textureFile = "/gfx/interface/scripted_gui_graphics/SOV_government_gui_ruling_party_button.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_edinaya_rossiya_cabinet"
+		textureFile = "/gfx/interface/scripted_gui_graphics/SOV_UR_ruling_party_gov_gui_background.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_edinaya_rossiya_DEF"
+		textureFile = "/gfx/interface/scripted_gui_graphics/SOV_government_gui_military_button.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_edinaya_rossiya_OPO"
+		textureFile = "/gfx/interface/scripted_gui_graphics/SOV_government_gui_opposition_button.dds"
+	}
+	spriteType = {
+		name = "GFX_close_button"
+		textureFile = "/gfx/interface/scripted_gui_graphics/close_button.dds"
+	}
+
+	spriteType = {
+		name = "GFX_open_button"
+		textureFile = "/gfx/interface/scripted_gui_graphics/open_government_window.dds"
+	}
+
+	spriteType = {
+		name = "GFX_add_pol_idea_button"
+		textureFile = "/gfx/interface/scripted_gui_graphics/add_pol_idea_button.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dmitry_medvedev_PM"
+		textureFile = "/gfx/interface/SOV_government_graphics/dmitry_medvedev_PM.dds"
+	}
+}

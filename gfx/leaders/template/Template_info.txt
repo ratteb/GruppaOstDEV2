@@ -1,0 +1,17 @@
+READ THIS BEFORE MAKING ANY PORTRAITS! IF YOU USE GIMP READ BELOW THIS! 
+
+1. When you make a portrait, find a suitable, quality image that matches the size of the other ones used. Install a software like GIMP and cut out the image properly  to make it a PNG. 
+2. When that is done, export the image as a PNG and copy the template.dds into the country file for the country leader (in GFX to be percise)
+3. After you copied template.dds into the country file make sure to rename THAT file (not the one within template) to the desired character name. 
+4. When that is done, import the PNG into paint.net and open the template. 
+5. Make a new layer, and press ctr+c on the other tab with the PNG
+6. Paste it onto the template, and station the PNG correctly until it looks good. 
+7. Merge both layers before you do any kind of editing. 
+8. Click on 'edit' and click on accents and shadows, when clicked press in these values: Accents -4 Shadows 100, brightness 83, radius 10.00
+9. Click on 'edit' again and click on Brightness and Contrast, when clicked press in these values: Brightness -73, contrast 26
+10. Click on 'effects' and select noise and put in these values: Intensity 32, colour saturation 266, coverage 50
+11. When that is all done, click save and do the nescessary steps to get it into the game. 
+
+IF YOU USE GIMP READ BELOW THIS! 
+Steps until step 7 are the same. 
+1. 

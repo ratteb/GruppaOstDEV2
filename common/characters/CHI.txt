@@ -1,0 +1,16 @@
+characters={
+	CHI_xi_jinping ={
+		name="Xi Jinping"
+		portraits={
+			civilian={
+				large=GFX_portrait_xi_jinping
+			}
+		}
+		country_leader={
+			ideology= chinese_socialism
+			desc = ""
+			expire="3000.1.1.1"
+			id=-1
+		}
+	}
+}

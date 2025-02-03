@@ -1,0 +1,34 @@
+spriteTypes = {
+
+	# this file is for ideology graphics
+
+	spriteType = {
+		name = "GFX_ideology_socialism_group"
+		texturefile = "gfx/interface/ideologies/socialism_group.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_communism_group"
+		texturefile = "gfx/interface/ideologies/communism_group.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_easternism_group"
+		texturefile = "gfx/interface/ideologies/easternism_group.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_westernism_group"
+		texturefile = "gfx/interface/ideologies/westernism_group.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_despotism_group"
+		texturefile = "gfx/interface/ideologies/despotism_group.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_neutrality_group"
+		texturefile = "gfx/interface/ideologies/neutrality_group.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_salafism_group"
+		texturefile = "gfx/interface/ideologies/salafism_group.dds"
+	}
+
+}

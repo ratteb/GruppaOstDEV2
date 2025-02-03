@@ -1,0 +1,16 @@
+characters={
+	USA_donald_trump={
+		name="Donald J. Trump"
+		portraits={
+			civilian={
+				large=GFX_portrait_donald_trump
+			}
+		}
+		country_leader={
+			ideology=western_conservatism
+			desc = 
+			expire="3000.1.1.1"
+			id=-1
+		}
+	}
+}

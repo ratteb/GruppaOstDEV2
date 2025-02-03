@@ -1,0 +1,96 @@
+ideas = {
+
+	womens_rights = {
+		law = yes
+		use_list_view = yes
+
+		womens_rights_sharia = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+				has_government = salafism
+			}
+
+			visible = {
+				has_government = salafism
+			}
+
+			modifier = {
+				salafism_drift = 0.08
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				westernism_drift = -0.09
+			}
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}
+
+		womens_rights_refused = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			modifier = {
+				despotism_drift = 0.08
+				stability_factor = -0.05
+				recruitable_population_factor = -0.1
+				war_support_factor = 0.05
+				westernism_drift = -0.09
+			}
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}
+
+		womens_rights_semi_accepted = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			allowed_to_remove = { always = no }
+
+			modifier = {
+				stability_factor = 0.05
+				neutrality_drift = 0.06
+				westernism_drift = 0.02
+				easternism_drift = 0.06
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+		}
+
+		womens_rights_accepted = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+			allowed_to_remove = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = -0.1
+				westernism_drift = 0.06
+				neutrality_drift = 0.04
+				easternism_drift = 0.04
+			}
+
+			cancel_if_invalid = no
+		}
+
+	}
+}
+

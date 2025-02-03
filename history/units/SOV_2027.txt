@@ -1,0 +1,68 @@
+﻿division_template = {
+	name = "15th Guards Motor Rifle Regiment"
+
+	division_names_group = SOV_ARM_01
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+        motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "1st Guards Tank Regiment"
+
+	division_names_group = SOV_ARM_01
+
+	regiments = {
+		modern_armor = { x = 0 y = 0 }
+		modern_armor = { x = 0 y = 1 }
+		modern_armor = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "136th Reconnaissance Battalion"
+
+	division_names_group = SOV_ARM_01
+
+	regiments = {
+		Infantry = { x = 0 y = 0 }
+		Infantry = { x = 0 y = 1 }
+
+	}
+}
+
+units = {
+	division = {
+		name = "1st Guards Tank Regiment"
+		location = 6414
+		division_template = "1st Guards Tank Regiment"
+		start_experience_factor = 0.87
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "15th Guards Motor Rifle Regiment"
+		location = 6414
+		division_template = "15th Guards Motor Rifle Regiment"
+		start_experience_factor = 0.87
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "136th Reconnaissance Battalion"
+		location = 6414
+		division_template = "136th Reconnaissance Battalion"
+		start_experience_factor = 0.87
+		start_equipment_factor = 1
+	}
+}

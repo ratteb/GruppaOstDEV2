@@ -1,0 +1,84 @@
+ideas = {
+
+	un_status = {
+		law = yes
+		use_list_view = yes
+
+		non_un = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			visible = {
+			}
+
+			modifier = {
+			}
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}
+
+		un_observer= {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			visible = {
+			}
+
+			modifier = {
+			}
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}
+		un_member = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			visible = {
+			}
+
+			modifier = {
+			}
+
+			default = yes
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}
+		unsc_member= {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			visible = {
+			}
+
+			modifier = {
+			}
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}
+	}	
+}
+

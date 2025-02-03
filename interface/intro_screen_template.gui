@@ -1,0 +1,101 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "intro_screen"
+		position = { x = -300 y = -140 }	
+		size = { width = 800 height= 650 }
+		orientation = center
+		origo = center
+		fade_time = 100
+		moveable = yes
+		fade_type = linear
+		click_to_front = no
+		clipping = no
+		
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_scripted_gui_window_background"
+		}	
+
+		#instantTextboxType = {
+			#name = "government_title"
+			#position = { x = 100 y = 50 }
+			#font = "hoi_36header"
+			#borderSize = {x = 0 y = 0}
+			#text = "GOVERNMENT_TITLE_LOC"
+			#maxWidth = 400
+			#maxHeight = 20
+			#fixedsize = yes
+		#}
+    }
+    containerWindowType = {
+		name = "intro_image"
+		position = { x = -285 y = -230 }
+		size = {width = 2150 height = 390 }
+		orientation = center 
+		origo = center
+		fade_time = 100
+		moveable = no 
+		fade_type = linear
+		click_to_front = no
+		clipping = yes 
+
+		iconType = {
+			name = "intro_screen_image_template"
+			position = { x = 0 y = 0 }
+			orientation = center 
+			spriteType = "GFX_intro_image_template"
+		}
+	}
+	containerWindowType = {
+		name = "intro_background"
+		position = { x = -280 y = -32 }
+		size = { width = 2130 height = 1050 }
+		orientation = center 
+		origo = center
+		fade_time = 100
+		moveable = no 
+		fade_type = linear
+		click_to_front = no
+		clipping = yes 
+	    
+		iconType = {
+			name = "intro_screen_background"
+			position = { x = 0 y = 0 }
+			orientation = center 
+			spriteType = "GFX_intro_background"
+		}
+
+		instantTextboxType = {
+			name = "intro_text_screen01"
+			position = { x = 1070 y = 525}
+			font = "hoi_18"
+			borderSize = {x = 0 y = 0}
+			text = "INTRO_TEXT_SCREEN_TEMPLATE01_LOC"
+			maxWidth = 400
+			maxHeight = 20
+			fixedsize = yes
+		}
+
+	}
+	containerWindowType = {
+		name = "button_left"
+		position = { x = 0 y = 0 }
+		size = { width = 200% height = 200% }
+		orientation = center 
+		origo = center
+		fade_time = 100
+		moveable = no 
+		fade_type = linear
+		click_to_front = no
+		clipping = yes 
+			
+		buttonType ={
+			name ="arrow_left"
+			spriteType = "GFX_arrow_left"
+			position = { x= -390 y = 360 }
+			Orientation = "center"
+		}
+		}
+}
+

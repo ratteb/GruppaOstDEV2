@@ -1,0 +1,51 @@
+﻿
+focus_tree = {
+	id = ukraine_focus01
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = UKR
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1000 }
+    # Ukraine political crisis 
+	focus = {
+		id = UKR_asses_the_situation
+		icon = GFX_goal_generic_major_war
+		x = 20
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {has_government = easternism }
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = ukraine.1
+			add_political_power = 120
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+		}
+	}
+
+}

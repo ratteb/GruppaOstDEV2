@@ -1,0 +1,7 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_cover_bg01"
+		textureFile = "/gfx/interface/guimore/gui_cover.dds"
+	}
+}

@@ -1,0 +1,53 @@
+﻿
+focus_tree = {
+	id = ukraine_focus02
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1000 }
+    # Ukraine political crisis 
+	focus = {
+		id = UKR_crisis_is_over
+		icon = GFX_goal_generic_major_war
+		x = 10
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+
+		available = {
+			NOT = {has_government = easternism }
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 120
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+			set_country_flag = UKR_political_crisis_over
+		}
+	}
+
+}

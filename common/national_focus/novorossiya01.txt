@@ -1,0 +1,460 @@
+﻿
+focus_tree = {
+	id = novorossiya_focus01
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = NOV
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1000 }
+    # Russian Dome of Freedom / Azov Bombing 
+	focus = {
+		id = NOV_the_threat_against_the_people
+		icon = GFX_goal_generic_major_war
+		x = 10
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+
+		available = {
+			NOT = { is_in_faction_with = UKR }
+			has_government = SOV
+			NOT = { has_idea = NOV_strengthen_the_novorossiyan_defense_command }
+		}
+		
+		bypass = {
+           NOT = { has_idea = azov_terror_bombing }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = NOV_russian_dome_of_freedom_construction
+				days = 655
+			}
+			country_event = novorossiya.1
+		}
+	}
+	focus = {
+		id = NOV_increase_the_stabilization
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = NOV_the_threat_against_the_people }
+		x = -2
+		y = 1
+		relative_position_id = NOV_the_threat_against_the_people
+
+		cost = 12
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+
+		available = {
+			NOT = { is_in_faction_with = UKR }
+			has_government = SOV
+			NOT = { has_idea = NOV_strengthen_the_novorossiyan_defense_command }
+			has_idea = NOV_russian_dome_of_freedom_construction
+		}
+		
+		bypass = {
+           NOT = { has_idea = azov_terror_bombing }
+		   NOT = { has_idea = NOV_russian_dome_of_freedom_construction }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = NOV_tooltip_1_tt
+			hidden_effect = {
+				196 = {
+					add_compliance = 2.5
+				}
+			    200 = {
+					add_compliance = 2.5
+				}
+				
+				country_event = novorossiya.3
+			}
+			
+		}
+	}
+	focus = {
+		id = NOV_increase_the_stabilization2
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = NOV_increase_the_stabilization}
+		x = -2
+		y = 1
+		relative_position_id = NOV_increase_the_stabilization
+
+		cost = 12
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+
+		available = {
+			NOT = { is_in_faction_with = UKR }
+			has_government = SOV
+			NOT = { has_idea = NOV_strengthen_the_novorossiyan_defense_command }
+			has_idea = NOV_russian_dome_of_freedom_construction
+		}
+		
+		bypass = {
+           NOT = { has_idea = azov_terror_bombing }
+		   NOT = { has_idea = NOV_russian_dome_of_freedom_construction }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = NOV_tooltip_1_tt
+			hidden_effect = {
+				221 = {
+					add_compliance = 2.5
+				}
+			    226 = {
+					add_compliance = 2.5
+				}
+				197 = {
+					add_compliance = 2.5
+				}
+				192 = {
+					add_compliance = 2.5
+				}
+				834 = {
+					add_compliance = 2.5
+				}
+				766 = {
+					add_compliance = 2.5
+				}
+			}
+			
+		}
+	}
+	focus = {
+		id = NOV_civil_governments
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = NOV_increase_the_stabilization}
+		x = 0
+		y = 1
+		relative_position_id = NOV_increase_the_stabilization
+
+		cost = 12
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+
+		available = {
+			NOT = { is_in_faction_with = UKR }
+			has_government = SOV
+			NOT = { has_idea = NOV_strengthen_the_novorossiyan_defense_command }
+			has_idea = NOV_russian_dome_of_freedom_construction
+		}
+		
+		bypass = {
+           NOT = { has_idea = azov_terror_bombing }
+		   NOT = { has_idea = NOV_russian_dome_of_freedom_construction }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = NOV_civil_governments_idea
+		}
+	}
+	focus = {
+		id = NOV_rebuild_industry
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = NOV_civil_governments}
+		x = 0
+		y = 1
+		relative_position_id = NOV_civil_governments
+
+		cost = 12
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+
+		available = {
+			NOT = { is_in_faction_with = UKR }
+			has_government = SOV
+			NOT = { has_idea = NOV_strengthen_the_novorossiyan_defense_command }
+			has_idea = NOV_russian_dome_of_freedom_construction
+		}
+		
+		bypass = {
+           NOT = { has_idea = azov_terror_bombing }
+		   NOT = { has_idea = NOV_russian_dome_of_freedom_construction }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+completion_reward = {
+	custom_effect_tooltip = NOV_tooltip_2_tt
+	hidden_effect = {
+		227 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		228 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1 
+				instant_build = yes
+			}
+		}
+    }
+}
+}
+	focus = {
+		id = NOV_end_the_bombings
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = NOV_the_threat_against_the_people }
+		x = 0
+		y = 2
+		relative_position_id = NOV_the_threat_against_the_people
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+
+		available = {
+			NOT = { is_in_faction_with = UKR }
+			has_government = SOV
+			NOT = { has_idea = NOV_russian_dome_of_freedom_construction }
+		}
+		
+		bypass = {
+           NOT = { has_idea = azov_terror_bombing }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			221 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3 
+					instant_build = yes
+				}
+			}
+			226 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3 
+					instant_build = yes
+				}
+			}
+			197 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3 
+					instant_build = yes
+				}
+			}
+			192 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3 
+					instant_build = yes
+				}
+			}
+			834 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3 
+					instant_build = yes
+				}
+			}
+			remove_ideas = azov_terror_bombing
+			
+		}
+	}
+    # Novorossiyan Defense Command / Probing Attacks 
+	focus = {
+		id = NOV_the_threat_to_our_army
+		icon = GFX_goal_generic_major_war
+		x = 16
+		y = 1
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+
+		available = {
+			NOT = { is_in_faction_with = UKR }
+			has_government = SOV
+			NOT = { has_idea = NOV_russian_dome_of_freedom_construction }
+		}
+		
+		bypass = {
+           NOT = { has_idea = NOV_azov_insurgency }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = NOV_strengthen_the_novorossiyan_defense_command
+				days = 365
+			}
+		}
+	}
+
+	focus = {
+		id = NOV_end_the_insurgency
+		icon = GFX_goal_generic_major_war
+		x = 0
+		y = 2
+
+		prerequisite = { focus = NOV_the_threat_to_our_army }
+		relative_position_id = NOV_the_threat_to_our_army
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+
+		available = {
+			NOT = { is_in_faction_with = UKR }
+			has_government = SOV
+			NOT = { has_idea = NOV_strengthen_the_novorossiyan_defense_command}
+		}
+		
+		bypass = {
+           NOT = { has_idea = NOV_azov_insurgency }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOV_defense_command
+				add_idea = NOV_defense_command01
+			}
+			remove_ideas = NOV_azov_insurgency
+		    add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 1200
+                producer = SOV
+            }
+		}
+	}
+
+	# Comb 
+	focus = {
+		id = NOV_go_novorossiya
+		icon = GFX_goal_generic_major_war
+		x = 13
+		y = 5
+
+		prerequisite = {
+			focus = NOV_end_the_bombings
+		}
+
+		prerequisite = {
+			focus = NOV_end_the_insurgency
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+
+		available = {
+			NOT = { is_in_faction_with = UKR }
+			has_government = SOV
+			NOT = { has_idea = azov_terror_bombing }
+			NOT = { has_idea = NOV_azov_insurgency }
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = NOV_za_novorossi
+				days = 70
+			}
+		}
+	}
+}

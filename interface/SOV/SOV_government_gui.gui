@@ -1,0 +1,118 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "government_transparent_bg"
+		position = { x = 0 y = 0 }	
+		size = { width = 1452 height= 966 }
+		orientation = center
+		origo = center
+		fade_time = 100
+		moveable = yes
+		fade_type = linear
+		click_to_front = no
+		clipping = no
+		
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_government_transparent_bg"
+		}
+    }
+	containerWindowType = {
+		name = "SOV_button_ruling_party"
+		position = { x = 0 y = 0 }	
+		size = { width = 116 height= 116 }
+		orientation = center
+		clipping = no
+				
+			buttonType = {
+				name = "button_ruling_party"
+				position = {x=-714 y=354}
+				spriteType = "GFX_SOV_edinaya_rossiya"
+				pdx_tooltip = "SOV_UR_button_tooltip_LOC"
+				clicksound = click_default
+			}
+	}
+	containerWindowType = {
+		name = "SOV_button_ministry_of_defence"
+		position = { x = 0 y = 0 }	
+		size = { width = 116 height= 116 }
+		orientation = center
+		clipping = no
+				
+			buttonType = {
+				name = "button_ministry_of_defence"
+				position = {x=-594 y=354}
+				spriteType = "GFX_SOV_edinaya_rossiya_DEF"
+				clicksound = click_default
+			}
+	}
+	containerWindowType = {
+		name = "SOV_button_opposition"
+		position = { x = 0 y = 0 }	
+		size = { width = 116 height= 116 }
+		orientation = center
+		clipping = no
+				
+			buttonType = {
+				name = "button_opposition"
+				position = {x=-474 y=354}
+				spriteType = "GFX_SOV_edinaya_rossiya_OPO"
+				clicksound = click_default
+			}
+	}
+	containerWindowType = {
+		name = "SOV_government_gui_window_info"
+		position = { x = 0 y = 0 }	
+		size = { width = 1452 height= 966 }
+		orientation = center
+		origo = center
+		fade_time = 100
+		fade_type = linear
+		click_to_front = no
+		clipping = no
+		
+		background = {
+			name = "CabinetInfo"		
+			quadTextureSprite ="GFX_scripted_gui_window_background"
+		}
+		
+			instantTextBoxType = {
+				name = "GOVERNMENT_INFORMATION_LOC"
+				position = { x = 120 y = 170 }
+				font = "TDHEHWText_font_18pt"
+				borderSize = {x = 0 y = 0}
+				text = "GOVERNMENT_INFORMATION_LOC"	
+				maxWidth = 1244
+				maxHeight = 844
+				format = left
+			}
+			instantTextBoxType = {
+				name = "Title"
+				position = { x = 454 y = 68 }
+				font = "TDHEHWText_font_26pt"
+				borderSize = {x = 0 y = 0}
+				text = "GOVERNMENT_INFORMATION_TITLE_LOC"	
+				maxWidth = 570
+				maxHeight = 65
+				format = centre
+			}
+    }
+	containerWindowType = {
+		name = "SOV_UR_edinaya_rossiya_GOV_gui"
+		position = { x = 0 y = 0 }	
+		size = { width = 1452 height= 966 }
+		orientation = center
+		origo = center
+		fade_time = 100
+		fade_type = linear
+		click_to_front = no
+		clipping = no
+		
+		background = {
+			name = "Cabinet"		
+			quadTextureSprite ="GFX_SOV_edinaya_rossiya_cabinet"
+		}
+	}
+}
+
+

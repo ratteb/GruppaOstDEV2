@@ -1,0 +1,52 @@
+ideas = {
+
+	country = {
+		GEO_memories_of_2008 = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = GEO
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+		ABK_memories_of_2008 = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = ABK 
+				tag = SOT
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+	}
+}

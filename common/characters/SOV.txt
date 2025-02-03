@@ -1,0 +1,144 @@
+characters={
+	SOV_vladimir_putin={
+		name="Vladimir, V. Putin"
+		portraits={
+			civilian={
+				large=GFX_Vladimir_Putin01
+			}
+		}
+		country_leader={
+			ideology=putinism
+			desc = SOV_vladimir_putin_desc
+			expire="3000.1.1.1"
+			id=-1
+		}
+	}
+
+	SOV_dmitry_medvedev={
+		name="Dmitry Medvedev"
+		portraits={
+			civilian={
+				large=GFX_Vladimir_Putin01
+			}
+		}
+		country_leader={
+			ideology=putinism
+			desc = ""
+			expire="3000.1.1.1"
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SOV_dmitry_medvedev
+			can_be_fired = no
+			allowed  = {
+				tag  = SOV
+			}
+			available  = {
+			}
+			traits  = {
+				underage_monarch
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor = 1.0 
+			}
+		}
+	}
+
+	SOV_dmitry_medvedev01={
+		name="Dmitry Medvedev"
+		portraits={
+			civilian={
+				large=GFX_Vladimir_Putin01
+			}
+		}
+		country_leader={
+			ideology=putinism
+			desc = ""
+			expire="3000.1.1.1"
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SOV_dmitry_medvedev01
+			can_be_fired = no
+			allowed  = {
+				tag  = SOV
+			}
+			available  = {
+			}
+			traits  = {
+				underage_monarch
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor = 1.0 
+			}
+		}
+	}
+
+	SOV_dmitry_medvedev02={
+		name="Dmitry Medvedev"
+		portraits={
+			civilian={
+				large=GFX_Vladimir_Putin01
+			}
+		}
+		country_leader={
+			ideology=putinism
+			desc = ""
+			expire="3000.1.1.1"
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SOV_dmitry_medvedev02
+			can_be_fired = no
+			allowed  = {
+				tag  = SOV
+			}
+			available  = {
+			}
+			traits  = {
+				underage_monarch
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor = 1.0 
+			}
+		}
+	}
+
+	SOV_dmitry_medvedev03={
+		name="Dmitry Medvedev"
+		portraits={
+			civilian={
+				large=GFX_Vladimir_Putin01
+			}
+		}
+		country_leader={
+			ideology=putinism
+			desc = ""
+			expire="3000.1.1.1"
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SOV_dmitry_medvedev03
+			can_be_fired = no
+			allowed  = {
+				tag  = SOV
+			}
+			available  = {
+			}
+			traits  = {
+				underage_monarch
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor = 1.0 
+			}
+		}
+	}
+}

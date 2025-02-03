@@ -1,0 +1,25 @@
+﻿###########################
+# placeholder Events
+###########################
+
+add_namespace = placeholder
+
+# Event Chain for Russian Dome of Freedom 
+country_event = {
+	id = placeholder.1
+	title = placeholder.1.t
+	desc = placeholder.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # May They Be Saved....
+		name = placeholder.1.a
+		ai_chance = { factor = 90 }
+    }
+}
+
+
+
+
+

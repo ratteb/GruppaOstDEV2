@@ -1,0 +1,307 @@
+ideas = {
+
+	country = {
+		NOV_azov_insurgency = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = NOV
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.10
+				consumer_goods_factor = 0.03
+				conscription_factor = -0.1
+				experience_gain_army = 0.1
+			}
+		}
+
+		azov_terror_bombing = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = NOV
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.10
+				consumer_goods_factor = 0.08
+				monthly_population = -0.3
+			}
+		}
+
+		NOV_defense_command = {
+			picture = GFX_idea_NOV_defense_command
+			
+			allowed = {
+				tag = NOV
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = -0.15
+				army_core_attack_factor = 0.15
+				army_defence_factor = 0.20
+			}
+		}
+		NOV_defense_command01 = {
+			picture = GFX_idea_NOV_defense_command01
+			
+			allowed = {
+				tag = NOV
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = -0.30
+				army_core_attack_factor = 0.30
+				army_defence_factor = 0.30
+			}
+		}
+
+		NOV_russian_dome_of_freedom_construction = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = NOV
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.10
+				consumer_goods_factor = 0.08
+				conscription_factor = -0.6
+				production_speed_anti_air_building_factor = -0.9
+			}
+		}
+
+		NOV_strengthen_the_novorossiyan_defense_command = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = NOV
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.30
+				consumer_goods_factor = 0.06
+				conscription_factor = -0.05
+			}
+		}
+
+		NOV_za_novorossi= {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = NOV
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.25
+				stability_factor = 0.08
+				resistance_activity = -0.2
+				compliance_gain = 0.3
+			}
+		}
+		NOV_ukrainian_partisans= {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = NOV
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_growth = 0.02
+				resistance_target = 0.04
+				industrial_capacity_factory = -0.015
+				non_core_manpower = -0.04
+			}
+		}
+		NOV_civil_governments_idea= {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = NOV
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				compliance_gain = 0.05
+				industrial_capacity_factory = 0.025
+				non_core_manpower = 0.08
+				local_resources = 0.05
+			}
+		}
+		NOV_memories_of_donbass = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = NOV
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+		NOV_memories_of_svo = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = NOV
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+	}
+
+}

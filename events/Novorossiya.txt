@@ -1,0 +1,55 @@
+﻿###########################
+# Novorossiyan Events
+###########################
+
+add_namespace = novorossiya
+
+# Event Chain for Russian Dome of Freedom 
+country_event = {
+	id = novorossiya.1
+	title = novorossiya.1.t
+	desc = novorossiya.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # May They Be Saved....
+		name = novorossiya.1.a
+		ai_chance = { factor = 90 }
+		country_event = { id = novorossiya.2 days = 10 }
+    }
+}
+
+country_event = {
+	id = novorossiya.2
+	title = novorossiya.2.t
+	desc = novorossiya.2.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Our revenge will come 
+		name = novorossiya.2.a
+		ai_chance = { factor = 90 }
+    }
+}
+# Random event about resistance
+country_event = {
+	id = novorossiya.3
+	title = novorossiya.3.t
+	desc = novorossiya.3.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Our revenge will come 
+		name = novorossiya.3.a
+		ai_chance = { factor = 90 }
+		custom_effect_tooltip = NOV_tooltip_3_tt
+		hidden_effect = { 
+			add_ideas = NOV_ukrainian_partisans
+		}
+    }
+}
+
+

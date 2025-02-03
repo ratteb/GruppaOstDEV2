@@ -1,0 +1,16 @@
+characters={
+	UKR_ihor_palytsya={
+		name="Ihor Palytsya"
+		portraits={
+			civilian={
+				large=GFX_ihor_palaytsya
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			desc = UKR_ihor_palytsya_desc
+			expire="3000.1.1.1"
+			id=-1
+		}
+	}
+}

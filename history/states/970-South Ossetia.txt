@@ -1,0 +1,34 @@
+state={
+	id=970
+	name="STATE_970"
+	provinces={
+		1530 6671 9626 
+	}
+
+	history = {
+		owner = SOT
+		victory_points = {
+			1530 3
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			
+
+		}
+		add_claim_by = GEO
+		add_core_of = SOT
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 1
+
+			}
+
+		}
+
+	}
+	manpower=53532
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=town
+}

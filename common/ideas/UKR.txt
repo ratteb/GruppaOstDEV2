@@ -1,0 +1,156 @@
+ideas = {
+
+	country = {
+		azof_insurgency01 = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+                tag = UKR
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+		    modifier = {
+                political_power_cost = 1.5
+			    consumer_goods_factor = 0.80
+			    conscription_factor = -0.8
+			    join_faction_tension = 0.80
+			    local_resources_factor = -0.2
+			    surrender_limit = -0.9
+			    stability_factor = -1
+			    weekly_manpower = -300
+			    despotism_drift = 0.09
+			}
+		}
+
+        # AZOV INSURGENCY ABOVE THIS LINE! 
+		ineffective_sbu01 = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+                tag = UKR
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.1
+				foreign_subversive_activites = 0.6
+				operative_slot = -1
+			}
+
+			# SBU above this line
+
+		
+		
+	    }
+			# SBU above this line
+		UKR_political_chaos01 = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+                tag = UKR
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.7
+				neutrality_drift = -0.17
+				stability_factor = -0.4
+			}
+
+			# SBU above this line
+
+		
+		
+	    }
+		UKR_political_chaos02 = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+                tag = UKR
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.65
+				neutrality_drift = -0.15
+				stability_factor = -0.37
+			}
+
+		
+		
+	    }
+		UKR_political_chaos03 = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+                tag = UKR
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.60
+				neutrality_drift = -0.13
+				stability_factor = -0.35
+			}
+
+		
+		
+	    }
+    }
+
+}

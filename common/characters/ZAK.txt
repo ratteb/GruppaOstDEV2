@@ -1,0 +1,16 @@
+characters={
+	ZAK_farkas_sandor={
+		name="Farkas Sandor"
+		portraits={
+			civilian={
+				large=GFX_farkas_sandor
+			}
+		}
+		country_leader={
+			ideology=western_autocracy
+			desc = 
+			expire="3000.1.1.1"
+			id=-1
+		}
+	}
+}

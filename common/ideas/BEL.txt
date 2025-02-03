@@ -1,0 +1,37 @@
+ideas = {
+
+	country = {
+		BEL_flemish_militants06 = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = BEL
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.5
+				neutrality_drift = 0.06
+				stability_weekly = -0.005
+				army_org = -20
+				required_garrison_factor = 0.6
+				resistance_activity = 0.8
+				resistance_decay_on_our_occupied_states = 0.7
+				resistance_target = 0.6
+			}
+		}
+	}
+}

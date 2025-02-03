@@ -1,0 +1,33 @@
+ideas = {
+
+	#womens_rights = {
+		law = yes
+		use_list_view = yes
+
+		#dog_whistle= {
+
+			#cost = 150
+			#removal_cost = -1
+
+			#available = {
+				#has_government = salafism
+			#}
+
+			#visible = {
+				#has_government = salafism
+			#}
+
+			#modifier = {
+				#salafism_drift = 0.08
+				#stability_factor = 0.05
+				#war_support_factor = 0.05
+				#westernism_drift = -0.09
+			#}
+
+			#allowed_to_remove = { always = no }
+
+			#cancel_if_invalid = no
+		#}
+	}	
+}
+

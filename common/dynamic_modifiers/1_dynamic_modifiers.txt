@@ -1,0 +1,107 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#       attacker_modifier = no  # if yes this modifier will also be read in combat for 
+#                               # people engaging in the combat even if not in the state
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+ SOV_russian_armed_forces = {
+	icon = "GFX_idea_unknown"
+
+
+	conscription_factor = RAF_manpower_factor_variable
+	conscription  = RAF_manpower_variable 
+	acclimatization_cold_climate_gain_factor = RAF_cold_defense_variable
+	acclimatization_hot_climate_gain_factor = RAF_hot_defense_variable
+	air_superiority_bonus_in_combat = RAF_cas_bonus_variable
+	army_attack_factor = RAF_attack_bonus_variable
+	army_attack_speed_factor = RAF_attack_speed_variable
+	army_defence_factor = RAF_defense_variable 
+	army_speed_factor = RAF_speed_variable
+	army_morale_factor = RAF_morale_variable
+	army_org_factor = RAF_org_variable
+	army_org_regain = RAF_recovery_variable
+	breakthrough_factor = RAF_breakthrough_variable
+	cas_damage_reduction = RAF_camouflage_variable
+	dig_in_speed_factor = RAF_dig_speed_variable
+	max_dig_in_factor = RAF_dig_max_variable
+	max_planning_factor = RAF_planning_variable
+	planning_speed = RAF_planning_speed_variable
+	experience_loss_factor = RAF_xp_protection_variable
+    experience_gain_army_factor = RAF_xp_gain_variable
+	special_forces_min = RAF_special_forces_variable
+	land_night_attack = RAF_nightvis_variable
+}
+
+SOV_sotnik_program = {
+	icon = "GFX_idea_unknown"
+
+	custom_modifier_tooltip = SOV_sotnik_program_cmt
+
+	conscription_factor = sotnik_manpower_factor_variable
+	conscription  = sotnik_manpower_variable 
+	acclimatization_cold_climate_gain_factor = sotnik_cold_defense_variable
+	acclimatization_hot_climate_gain_factor = sotnik_hot_defense_variable
+	air_superiority_bonus_in_combat = sotnik_cas_bonus_variable
+	army_attack_factor = sotnik_attack_bonus_variable
+	army_attack_speed_factor = sotnik_attack_speed_variable
+	army_defence_factor = sotnik_defense_variable 
+	army_speed_factor = sotnik_speed_variable
+	army_morale_factor = sotnik_morale_variable
+	army_org_factor = sotnik_org_variable
+	army_org_regain = sotnik_recovery_variable
+	breakthrough_factor = sotnik_breakthrough_variable
+	cas_damage_reduction = sotnik_camouflage_variable
+	dig_in_speed_factor = sotnik_dig_speed_variable
+	max_dig_in_factor = sotnik_dig_max_variable
+	max_planning_factor = sotnik_planning_variable
+	planning_speed = sotnik_planning_speed_variable
+	experience_loss_factor = sotnik_xp_protection_variable
+    experience_gain_army_factor = sotnik_xp_gain_variable
+	special_forces_min = sotnik_special_forces_variable
+	land_night_attack = sotnik_nightvis_variable
+	political_power_factor = sotnik_political_power_perc_variable
+	research_speed_factor = sotnik_research_speed_variable
+}
+ SOV_demographics_crisis = {
+	icon = "GFX_idea_unknown"
+
+
+	monthly_population = SOV_DC_population_growth_variable
+	research_speed_factor = SOV_DC_research_speed_variable
+	local_resources_factor = SOV_DC_resource_digging_variable
+	surrender_limit = SOV_DC_surrender_limit_variable
+	political_power_gain = SOV_DC_political_gain_variable
+	political_power_factor = SOV_DC_political_gain_perc_variable
+	stability_factor = SOV_DC_stability_variable
+	war_support_factor = SOV_DC_war_support_variable
+	production_factory_efficiency_gain_factor = SOV_DC_eff_gain_variable
+	production_factory_max_efficiency_factor = SOV_DC_max_eff_variable
+	line_change_production_efficiency_factor = SOV_DC_eff_retention_variable
+	production_lack_of_resource_penalty_factor = SOV_DC_no_resource_penalty_variable
+	fuel_gain_factor = SOV_DC_fuel_variable
+	production_speed_buildings_factor = SOV_DC_construction_speed_variable
+	consumer_goods_factor = SOV_DC_consumer_goods_variable
+
+ }

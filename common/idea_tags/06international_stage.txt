@@ -1,0 +1,11 @@
+idea_categories = {
+    international_stage = {
+        slot = state_recognition
+        slot = state_alignment
+        slot = un_status
+        slot = economic_alliance
+        cost = 150
+        removal_cost = -1
+        ledger = civilian
+    }
+}

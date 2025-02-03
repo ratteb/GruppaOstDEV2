@@ -1,0 +1,99 @@
+﻿###########################
+# Chinese Events
+###########################
+
+add_namespace = ukraine 
+add_namespace = news_ukraine
+
+# Irrelevant for now 
+country_event = {
+	id = ukraine.1
+	title = ukraine.1.t
+	desc = ukraine.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # May They Be Saved....
+		name = ukraine.1.a
+		ai_chance = { factor = 90 }
+		load_focus_tree = ukraine_focus02
+    }
+}
+
+# Mobilization on the border with Zakarpattia. 
+news_event = {
+	id = news_ukraine.1
+	title = news_ukraine.1.t
+	desc = news_ukraine.1.d
+	picture = GFX_news_ukraine_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news_ukraine.1.a
+	}
+}
+
+# War in Zakarpattia (Political Chaos)
+news_event = {
+	id = news_ukraine.2
+	title = news_ukraine.2.t
+	desc = news_ukraine.2.d
+	picture = GFX_news_ukraine_event_002
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news_ukraine.2.a
+	}
+}
+# Ukraine and Hungary signed peace deal 
+news_event = {
+	id = news_ukraine.3
+	title = news_ukraine.3.t
+	desc = news_ukraine.3.d
+	picture = GFX_news_ukraine_event_003
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news_ukraine.3.a
+	}
+}
+# Hungary wins against Ukraine 
+news_event = {
+	id = news_ukraine.4
+	title = news_ukraine.4.t
+	desc = news_ukraine.4.d
+	picture = GFX_news_ukraine_event_004
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news_ukraine.4.a
+	}
+}
+# Ukraine wins against hungary in a quick victory 
+news_event = {
+	id = news_ukraine.5
+	title = news_ukraine.5.t
+	desc = news_ukraine.5.d
+	picture = GFX_news_ukraine_event_005
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news_ukraine.5.a
+	}
+}

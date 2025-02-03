@@ -1,0 +1,224 @@
+scripted_gui = {
+  SOV_government_gui = {
+    window_name = "government_transparent_bg"
+    context_type = player_context
+
+    visible = {
+      has_country_flag = SOV_open_government_gui
+    }
+
+    effects = {
+    }
+
+    triggers = {
+    }
+
+    dynamic_lists = {
+	  }
+
+    properties = {
+    }
+
+    ai_enabled = {
+		always = no
+    }
+
+    ai_test_interval = 290  # The higher, the long it takes the ai to do actions
+	ai_test_variance = 0.5
+
+    ai_check = {
+    }
+
+    ai_check_scope = {
+    }
+
+    ai_weights = {
+    }
+  }
+  SOV_government_gui_info = {
+    window_name = "SOV_government_gui_window_info"
+    context_type = player_context
+    parent_window_name = "government_transparent_bg"
+
+    visible = {
+      has_country_flag = SOV_government_gui_window_info_open
+    }
+
+    effects = {
+    }
+
+    triggers = {
+    }
+
+    dynamic_lists = {
+	  }
+
+    properties = {
+    }
+
+    ai_enabled = {
+		always = no
+    }
+
+    ai_test_interval = 290  # The higher, the long it takes the ai to do actions
+	ai_test_variance = 0.5
+
+    ai_check = {
+    }
+
+    ai_check_scope = {
+    }
+
+    ai_weights = {
+    }
+  }
+  SOV_government_gui_info = {
+    window_name = "SOV_UR_edinaya_rossiya_GOV_gui"
+    context_type = player_context
+    parent_window_name = "government_transparent_bg"
+
+    visible = {
+      has_country_flag = SOV_UR_edinaya_rossiya_GOV_open
+    }
+
+    effects = {
+    }
+
+    triggers = {
+    }
+
+    dynamic_lists = {
+	  }
+
+    properties = {
+    }
+
+    ai_enabled = {
+		always = no
+    }
+
+    ai_test_interval = 290  # The higher, the long it takes the ai to do actions
+	ai_test_variance = 0.5
+
+    ai_check = {
+    }
+
+    ai_check_scope = {
+    }
+
+    ai_weights = {
+    }
+  }
+  SOV_government_gui = {
+    window_name = "SOV_button_ruling_party"
+    context_type = player_context
+    parent_window_name = "government_transparent_bg"
+
+    visible = {
+    }
+
+    effects = {
+      button_ruling_party_click = {
+        set_country_flag = SOV_UR_edinaya_rossiya_GOV_open
+      }
+    }
+
+    triggers = {
+    }
+
+    dynamic_lists = {
+	  }
+
+    properties = {
+    }
+
+    ai_enabled = {
+		always = no
+    }
+
+    ai_test_interval = 290  # The higher, the long it takes the ai to do actions
+	ai_test_variance = 0.5
+
+    ai_check = {
+    }
+
+    ai_check_scope = {
+    }
+
+    ai_weights = {
+    }
+  }
+  SOV_government_gui = {
+    window_name = "SOV_button_ministry_of_defence"
+    context_type = player_context
+    parent_window_name = "government_transparent_bg"
+
+    visible = {
+    }
+
+    effects = {
+    }
+
+    triggers = {
+    }
+
+    dynamic_lists = {
+	  }
+
+    properties = {
+    }
+
+    ai_enabled = {
+		always = no
+    }
+
+    ai_test_interval = 290  # The higher, the long it takes the ai to do actions
+	ai_test_variance = 0.5
+
+    ai_check = {
+    }
+
+    ai_check_scope = {
+    }
+
+    ai_weights = {
+    }
+  }
+  SOV_government_gui = {
+    window_name = "SOV_button_opposition"
+    context_type = player_context
+    parent_window_name = "government_transparent_bg"
+
+    visible = {
+    }
+
+    effects = {
+    }
+
+    triggers = {
+    }
+
+    dynamic_lists = {
+	  }
+
+    properties = {
+    }
+
+    ai_enabled = {
+		always = no
+    }
+
+    ai_test_interval = 290  # The higher, the long it takes the ai to do actions
+	ai_test_variance = 0.5
+
+    ai_check = {
+    }
+
+    ai_check_scope = {
+    }
+
+    ai_weights = {
+    }
+  }
+
+}

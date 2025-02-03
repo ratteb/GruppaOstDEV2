@@ -1,0 +1,33 @@
+ideas = {
+
+	country = {
+		azov_insurgency01 = {
+			picture = usa_great_depression_3
+			
+			allowed = {
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 1
+				consumer_goods_factor = 0.60
+				conscription_factor = -0.5
+				join_faction_tension = 0.20
+				local_resources_factor = -0.2
+			}
+		}
+	}
+}

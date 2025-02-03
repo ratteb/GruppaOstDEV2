@@ -1,0 +1,38 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "cover_gui"
+		position = { x = -650 y = 70}	
+		size = { width = 84 height= 28 }
+		orientation = center
+		origo = center
+		fade_time = 100
+		moveable = no
+		fade_type = linear
+		click_to_front = no
+		clipping = no
+		
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_cover_bg01"
+		}
+
+		#iconType ={
+		#	name ="production_header_bg"
+		#	spriteType = "GFX_header_bg"
+		#	position = { x= 5 y = 7 }
+		#	Orientation = "UPPER_LEFT"
+		#}	
+
+		#instantTextboxType = {
+		#	name = "political_title"
+		#	position = { x = 45 y = 8 }
+		#	font = "hoi_36header"
+		#	borderSize = {x = 0 y = 0}
+		#	text = "POLITICAL_POLITICAL"
+		#	maxWidth = 400
+		#	maxHeight = 20
+		#	fixedsize = yes
+		#}
+	}
+}

@@ -1,0 +1,34 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_scripted_gui_window_background"
+		textureFile = "/gfx/interface/scripted_gui_graphics/government_gui_background.dds"
+	}
+
+	spriteType = {
+		name = "GFX_close_button"
+		textureFile = "/gfx/interface/scripted_gui_graphics/close_button.dds"
+	}
+
+	spriteType = {
+		name = "GFX_open_button"
+		textureFile = "/gfx/interface/scripted_gui_graphics/open_government_window.dds"
+	}
+
+	spriteType = {
+		name = "GFX_intro_image_template"
+		textureFile = "/gfx/interface/scripted_gui_graphics/intro_image_template.dds"
+	}
+	spriteType = {
+		name = "GFX_intro_background"
+		textureFile = "/gfx/interface/scripted_gui_graphics/intro_screen_background.dds"
+	}
+	spriteType = {
+		name = "GFX_arrow_left"
+		textureFile = "/gfx/interface/scripted_gui_graphics/arrow_left_intro.dds"
+	}
+	spriteType = {
+		name = "GFX_arrow_right"
+		textureFile = "/gfx/interface/scripted_gui_graphics/arrow_right_intro.dds"
+	}
+}

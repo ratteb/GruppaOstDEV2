@@ -1,0 +1,25 @@
+﻿l_english:
+ # Sotnik 1 Focus tree
+ SOV_sotnik1_announcement:0 "Sotnik-1 Program"
+
+ SOV_announce_new_equipments:0 "Announce New Equipment"
+
+ SOV_showcase_new_equipments:0 "«ARMY-2027»"
+
+ SOV_put_it_in_production:0 "Mass Produce New Equipment"
+
+ SOV_boost_production_quotas:0 "Expand Production"
+
+ SOV_review_officer_corps:0 "Review Officer Corps"
+
+ SOV_officer_corps_reform:0 "Reform Officer Corps"
+
+ SOV_NCO_system:0 "Introduce NCO System"
+
+ SOV_expand_reserve_officer:0 "Expand Reserve Officer System"
+
+ # Russia Ideas and Spirits 
+ SOV_memories_of_chechnya:0 "Memories of the Chechen Wars"
+ SOV_memories_of_chechnya_desc:0 "\n\n\n\n£memories_of_chechnya_texticon \n\n\n\n\nIn 1994 the First Chechen war began, with Russian conscript troops crossing the borders of the illegal regime in Chechnya, however what followed was horror, many military deaths of conscript soldiers, humanitarian crisises, and a total emberassment of the Russian Army which got bogged down by a group of rag tag militants. In the end Yeltsin signed a peace agreement with Chechnya which secured their independence. Many lessons were learned from that war, where not to use armoured vehicles, and how to conduct better armed operations in urban centres like Grozny, but also mountains in the rest of the Republic. In 1999 with Putin as Prime Minister, and Yeltsin as President, after a significant terrorist attack by Islamic militants the Russian Federation once again invaded Chechnya in what is known as the Second Chechen War. From 1999 until 2000 the Second Chechen war raged, and a counter insurgency is what remained after, with countless of deaths, terrorist attacks, and controversies, mainly during the counter insurgency period. A big lesson learned is the trauma from using conscripts in military operations. Therefore, unless completely nescessary §Rwe dont use conscripts in any of our military conflicts.§!"
+ SOV_tooltip_1_tt:0 "§RWe Will Never Relive Those Days.§!"
+ 

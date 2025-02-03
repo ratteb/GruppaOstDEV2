@@ -1,0 +1,118 @@
+ideas = {
+
+	country = {
+		SOV_economic_stagnation01 = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = SOV
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.15
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				production_speed_buildings_factor = -0.2
+				production_factory_efficiency_gain_factor = -0.2
+			}
+		}
+        # Economic stagnation above this line 
+
+		SOV_za_rodinu = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = SOV
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.2
+				stability_factor = 0.05
+				war_support_factor = 0.2
+				easternism_drift = 0.04 
+			}
+		}
+		SOV_memories_of_chechnya = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = SOV
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				custom_effect_tooltip = {
+					SOV_tooltip_1_tt
+				}
+			}
+		}
+		SOV_russkiy_mir01 = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				easternism_drift = 0.04
+				war_support_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+	}
+}

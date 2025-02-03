@@ -1,0 +1,16 @@
+characters={
+	NOV_denis_pushilin={
+		name="Denis Pushilin"
+		portraits={
+			civilian={
+				large=GFX_denis_pushilin
+			}
+		}
+		country_leader={
+			ideology=putinism
+			desc = NOV_denis_pushilin_desc
+			expire="3000.1.1.1"
+			id=-1
+		}
+	}
+}

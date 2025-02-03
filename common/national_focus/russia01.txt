@@ -1,0 +1,1509 @@
+
+focus_tree = {
+	id = russia01_focus_tree
+	
+	country = {
+		
+		modifier = {
+			add = 10
+			tag = SOV
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 4000 y = 1000 }
+    # Sotnik-1 Programme
+
+	focus = {
+		id = SOV_sotnik1_announcement
+		icon = GFX_goal_generic_major_war
+		x = 20
+		y = 2
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+			add_dynamic_modifier = { modifier = SOV_sotnik_program }
+			
+			hidden_effect = {country_lock_all_division_template = yes
+			}
+			custom_effect_tooltip = SOV_sotnik1_announcement_cet
+	}
+	}
+	focus = {
+		id = SOV_announce_new_equipments
+		prerequisite = { focus = SOV_sotnik1_announcement }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_sotnik1_announcement
+		x = 3
+		y = 1
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_variable = {
+				var = sotnik_research_speed_variable
+				value = 0.07
+			}
+			add_to_variable = {
+				var = sotnik_political_power_perc_variable
+				value = -0.03
+			}
+			custom_effect_tooltip = SOV_announce_new_equipment_cet	
+		}
+	}
+	focus = {
+		id = SOV_showcase_new_equipments
+		prerequisite = { focus = SOV_announce_new_equipments }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_announce_new_equipments
+		x = 0
+		y = 1
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_put_it_in_production
+		prerequisite = { focus = SOV_showcase_new_equipments }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_showcase_new_equipments
+		x = 0
+		y = 1
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_boost_production_quotas
+		prerequisite = { focus = SOV_put_it_in_production}
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_put_it_in_production
+		x = 0
+		y = 1
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_review_officer_corps
+		prerequisite = { focus = SOV_sotnik1_announcement }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_sotnik1_announcement
+		x = 0
+		y = 1
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+			custom_effect_tooltip = sotnik_tooltip_1_tt
+			add_to_variable  = {
+				var = sotnik_planning_variable
+				value = 0.03
+			}
+			add_to_variable  = {
+				var = sotnik_planning_speed_variable
+				value = 0.05
+			}
+			hidden_effect = {
+				add_political_power = 120
+				army_experience = 30
+			}
+		}
+	}
+	focus = {
+		id = SOV_officer_corps_reform
+		prerequisite = { focus = SOV_review_officer_corps }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_review_officer_corps
+		x = 0
+		y = 1
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_officer_corps_reform
+		prerequisite = { focus = SOV_review_officer_corps }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_review_officer_corps
+		x = 0
+		y = 1
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_NCO_system
+		prerequisite = { focus = SOV_officer_corps_reform }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_officer_corps_reform
+		mutually_exclusive = {focus = SOV_expand_reserve_officer }
+		x = -1
+		y = 1
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_expand_reserve_officer
+		prerequisite = { focus = SOV_officer_corps_reform }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_officer_corps_reform
+		mutually_exclusive = {focus = SOV_NCO_system }
+		x = 1
+		y = 1
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_review_strategical_doctrines
+		prerequisite = { focus = SOV_sotnik1_announcement }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_sotnik1_announcement
+		x = -5
+		y = 1
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_announce_strategic_changes
+		prerequisite = { focus = SOV_review_strategical_doctrines }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_review_strategical_doctrines
+		x = 0
+		y = 1
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	#Conventional means 
+	focus = {
+		id = SOV_return_to_conventional_means
+		prerequisite = { focus = SOV_announce_strategic_changes }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_announce_strategic_changes
+		mutually_exclusive = {focus = SOV_continue_hybrid_warfare }
+		x = 2
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	# Tank warfare
+	focus = {
+		id = SOV_emphasis_tank_warfare
+		prerequisite = { focus = SOV_return_to_conventional_means }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_return_to_conventional_means
+		mutually_exclusive = { focus = SOV_emphasis_drone_warfare }
+		mutually_exclusive = { focus = SOV_emphasis_ifv_warfare }
+		x = 0
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_mass_produce_tank14
+		prerequisite = { focus = SOV_emphasis_tank_warfare }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_emphasis_tank_warfare
+		x = -3
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_admit_tank_failures
+		prerequisite = { focus = SOV_mass_produce_tank14}
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_mass_produce_tank14
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_renew_soviet_doctrine
+		prerequisite = { focus = SOV_emphasis_tank_warfare }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_emphasis_tank_warfare
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_improve_mistakes
+		prerequisite = { focus = SOV_renew_soviet_doctrine}
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_renew_soviet_doctrine
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_tank24
+		prerequisite = { focus = SOV_improve_mistakes}
+		prerequisite = { focus = SOV_admit_tank_failures}
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_improve_mistakes
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	# Drone warfare
+	focus = {
+		id = SOV_emphasis_drone_warfare
+		prerequisite = { focus = SOV_return_to_conventional_means }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_return_to_conventional_means
+		mutually_exclusive = { focus = SOV_emphasis_tank_warfare }
+		mutually_exclusive = { focus = SOV_emphasis_ifv_warfare }
+		x = 2
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_advanced_drone_training
+		prerequisite = { focus = SOV_emphasis_drone_warfare}
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_emphasis_drone_warfare
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_recon_drones
+		prerequisite = { focus = SOV_advanced_drone_training}
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_advanced_drone_training
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_counter_drone_warfare
+		prerequisite = { focus = SOV_emphasis_drone_warfare}
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_emphasis_drone_warfare
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_attack_drones
+		prerequisite = { focus = SOV_counter_drone_warfare}
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_counter_drone_warfare
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_orlon_drone
+		prerequisite = { focus = SOV_attack_drones}
+		prerequisite = { focus = SOV_recon_drones}
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_attack_drones
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	# IFV warfare 
+	focus = {
+		id = SOV_emphasis_ifv_warfare
+		prerequisite = { focus = SOV_return_to_conventional_means }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_return_to_conventional_means
+		mutually_exclusive = { focus = SOV_emphasis_tank_warfare }
+		mutually_exclusive = { focus = SOV_emphasis_drone_warfare }
+		x = 4
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_remove_weak_ifv
+		prerequisite = { focus = SOV_emphasis_ifv_warfare}
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_emphasis_ifv_warfare
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_remove_soviet_doctrine
+		prerequisite = { focus = SOV_remove_weak_ifv}
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_remove_weak_ifv
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_new_infantry_tactics
+		prerequisite = { focus = SOV_emphasis_ifv_warfare}
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_emphasis_ifv_warfare
+		x = 3
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_more_ifv_less_tank
+		prerequisite = { focus = SOV_new_infantry_tactics}
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_new_infantry_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_tank25
+		prerequisite = { focus = SOV_more_ifv_less_tank}
+		prerequisite = { focus = SOV_remove_soviet_doctrine}
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_more_ifv_less_tank
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_new_russian_doctrine
+		prerequisite = { focus = SOV_tank25
+		focus = SOV_tank24 
+		focus = SOV_orlon_drone }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_orlon_drone
+		x = 0
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	# Non conventional reforms
+	focus = {
+		id = SOV_continue_hybrid_warfare
+		prerequisite = { focus = SOV_announce_strategic_changes }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_announce_strategic_changes
+		mutually_exclusive = {focus = SOV_return_to_conventional_means }
+		x = -6
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	# Cyber Warfare 
+	focus = {
+		id = SOV_emphasis_cyber_warfare
+		prerequisite = { focus = SOV_continue_hybrid_warfare }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_continue_hybrid_warfare
+		mutually_exclusive = {focus = SOV_emphasis_information_warfare}
+		mutually_exclusive = { focus = SOV_emphasis_information_warfare }
+		x = 0
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_new_os
+		prerequisite = { focus = SOV_emphasis_cyber_warfare }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_emphasis_cyber_warfare
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_get_rid_of_windows
+		prerequisite = { focus = SOV_new_os }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_new_os
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_new_programmers
+		prerequisite = { focus = SOV_emphasis_cyber_warfare }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_emphasis_cyber_warfare
+		x = 3
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_education_investment_cyber
+		prerequisite = { focus = SOV_new_programmers }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_new_programmers
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_new_generation_cyber
+		prerequisite = { focus = SOV_education_investment_cyber }
+		prerequisite = { focus = SOV_get_rid_of_windows }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_education_investment_cyber
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	# Information Warfare 
+	focus = {
+		id = SOV_emphasis_information_warfare
+		prerequisite = { focus = SOV_continue_hybrid_warfare }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_continue_hybrid_warfare
+		mutually_exclusive = {focus = SOV_emphasis_cyber_warfare}
+		mutually_exclusive = { focus = SOV_emphasis_infiltration_warfare}
+		x = -2
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_buy_telegram
+		prerequisite = { focus = SOV_emphasis_information_warfare }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_emphasis_information_warfare
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_release_stolen_docs
+		prerequisite = { focus = SOV_buy_telegram }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_buy_telegram
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_infiltrate_west_news
+		prerequisite = { focus = SOV_emphasis_information_warfare }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_emphasis_information_warfare
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_hire_influencers
+		prerequisite = { focus = SOV_infiltrate_west_news }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_infiltrate_west_news
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_russia_today
+		prerequisite = { focus = SOV_release_stolen_docs }
+		prerequisite = { focus = SOV_hire_influencers }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_hire_influencers
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	# Infiltration Warfare 
+	focus = {
+		id = SOV_emphasis_infiltration_warfare
+		prerequisite = { focus = SOV_continue_hybrid_warfare }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_continue_hybrid_warfare
+		mutually_exclusive = {focus = SOV_emphasis_cyber_warfare}
+		mutually_exclusive = { focus = SOV_emphasis_information_warfare }
+		x = -4
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_classic_intelligence
+		prerequisite = { focus = SOV_emphasis_infiltration_warfare}
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_emphasis_infiltration_warfare
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_send_agents_eu
+		prerequisite = { focus = SOV_emphasis_infiltration_warfare}
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_emphasis_infiltration_warfare
+		x = -3
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_no_digital_traces
+		prerequisite = { focus = SOV_classic_intelligence}
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_classic_intelligence
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_find_weakness
+		prerequisite = { focus = SOV_send_agents_eu}
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_send_agents_eu
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_europe_is_ours
+		prerequisite = { focus = SOV_no_digital_traces}
+		prerequisite = { focus = SOV_find_weakness}
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_no_digital_traces
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_hybrid_warfare_returned
+		prerequisite = { focus = SOV_europe_is_ours 
+		focus = SOV_russia_today 
+		focus = SOV_new_generation_cyber }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_russia_today
+		x = 0
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+	focus = {
+		id = SOV_sotnik1_finished
+		prerequisite = { focus = SOV_hybrid_warfare_returned
+		focus = SOV_new_russian_doctrine  }
+		icon = GFX_goal_generic_major_war
+		relative_position_id = SOV_hybrid_warfare_returned
+		x = 6
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+		}
+	}
+}

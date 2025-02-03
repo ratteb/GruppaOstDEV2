@@ -1,0 +1,16 @@
+spriteTypes = {
+	#Internal Events 
+	spriteType = {
+		name = "GFX_placeholder"
+		texturefile = "gfx/event_pictures/report_event_japan_army_mountainside.dds"
+	}
+   #news events 
+	spriteType = {
+		name = "GFX_news_test_event_001"
+		texturefile = "gfx/event_pictures/news_test_event_001.dds"
+	}
+	spriteType = {
+		name = "GFX_news_test_event_002"
+		texturefile = "gfx/event_pictures/news_test_event_002.dds"
+	}
+}

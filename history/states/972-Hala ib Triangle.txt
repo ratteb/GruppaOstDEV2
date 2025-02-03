@@ -1,0 +1,19 @@
+state={
+	id=972
+	name="STATE_972"
+	provinces={
+		13364 
+	}
+
+	history {
+		owner = EGY
+		add_claim_by = SUD
+		add_core_of = EGY
+		victory_points = {
+			13364 1
+		}
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

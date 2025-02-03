@@ -1,0 +1,26 @@
+scripted_gui = {
+  government_open_close_button_gui = {
+    window_name = "lore_open_button"
+    context_type = player_context
+
+    visible = {
+      always = yes
+    }
+
+    effects = {
+    }
+
+    triggers = {
+    }
+
+    dynamic_lists = {
+	}
+
+    properties = {
+    }
+
+    ai_enabled = {
+		always = no
+    }
+  }
+}

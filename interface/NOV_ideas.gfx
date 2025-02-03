@@ -1,0 +1,11 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_idea_NOV_defense_command"
+		texturefile = "gfx/interface/ideas/NOV/NOV_defense_command.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NOV_defense_command01"
+		texturefile = "gfx/interface/ideas/NOV/NOV_defense_command.dds"
+	}
+}

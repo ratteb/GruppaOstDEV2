@@ -1,0 +1,9 @@
+idea_categories = {
+    recruitment_laws = {
+        slot = mobilization_laws
+        slot = age_brackets
+        cost = 150
+        removal_cost = -1
+        ledger = civilian
+    }
+}

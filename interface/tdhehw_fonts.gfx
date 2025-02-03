@@ -1,0 +1,65 @@
+bitmapfonts = {
+    bitmapfont = {
+        name = "TDHEHWText_font_26pt"
+		path = "gfx/fonts/TDHEHWText_font_26pt"
+        color = 0xffffffff
+
+        textcolors = {
+            G = { 86 172 91 }
+        }
+    }
+    bitmapfont = {
+        name = "TDHEHWText_font_18pt"
+		path = "gfx/fonts/TDHEHWText_font_18pt"
+        color = 0xffffffff
+
+        textcolors = {
+            G = { 86 172 91 }
+        }
+    }
+    bitmapfont = {
+        name = "TDHEHWText_font_18pt_outline"
+		path = "gfx/fonts/TDHEHWText_font_18pt_outline"
+        color = 0xffffffff
+
+        textcolors = {
+            G = { 86 172 91 }
+        }
+    }
+    bitmapfont = {
+        name = "TDHEHWText_font_14pt"
+		path = "gfx/fonts/TDHEHWText_font_14pt"
+        color = 0xffffffff
+
+        textcolors = {
+            G = { 86 172 91 }
+        }
+    }
+    bitmapfont = {
+        name = "TDHEHWText_font_22pt_outline"
+		path = "gfx/fonts/TDHEHWText_font_22pt_outline"
+        color = 0xffffffff
+
+        textcolors = {
+            G = { 86 172 91 }
+        }
+    }
+    bitmapfont = {
+        name = "TDHEHWText_font_14pt_outline"
+		path = "gfx/fonts/TDHEHWText_font_14pt_outline"
+        color = 0xff000000
+
+        textcolors = {
+            G = { 86 172 91 }
+        }
+    }
+    bitmapfont = {
+        name = "TDHEHWText_font_16pt_outline"
+		path = "gfx/fonts/TDHEHWText_font_16pt_outline"
+        color = 0xffffffff
+
+        textcolors = {
+            G = { 86 172 91 }
+        }
+    }
+}

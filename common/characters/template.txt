@@ -1,0 +1,16 @@
+characters={
+	AFG_mohammed_zahir_shah={
+		name="Mohammed Zahir Shah"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=despotism
+			desc = 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

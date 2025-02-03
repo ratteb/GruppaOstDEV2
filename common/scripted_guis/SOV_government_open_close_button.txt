@@ -1,0 +1,55 @@
+scripted_gui = {
+  government_open_close_button_gui = {
+    window_name = "government_open_close_button_gui_window"
+    context_type = player_context
+
+    visible = {
+      tag = SOV
+    }
+
+    effects = {
+      government_button01_click = { 
+        if = { limit = {has_country_flag = SOV_open_government_gui}
+        clr_country_flag = SOV_open_government_gui
+        }
+        else = {
+          set_country_flag = SOV_open_government_gui
+        }
+        if = { limit = { has_country_flag = SOV_government_gui_window_info_open }
+        clr_country_flag = SOV_government_gui_window_info_open 
+        }
+        else = {
+          set_country_flag = SOV_government_gui_window_info_open
+        }
+        if = { limit = { has_country_flag = SOV_UR_edinaya_rossiya_GOV_open }
+        clr_country_flag = SOV_UR_edinaya_rossiya_GOV_open }
+      }
+    
+    }
+
+    triggers = {
+    }
+
+    dynamic_lists = {
+	}
+
+    properties = {
+    }
+
+    ai_enabled = {
+		always = no
+    }
+
+    ai_test_interval = 290  # The higher, the long it takes the ai to do actions
+	ai_test_variance = 0.5
+
+    ai_check = {
+    }
+
+    ai_check_scope = {
+    }
+
+    ai_weights = {
+    }
+  }
+}

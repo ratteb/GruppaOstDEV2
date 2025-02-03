@@ -1,0 +1,24 @@
+﻿###########################
+# Chinese Events
+###########################
+
+add_namespace = hungary
+
+# Japanese Stage Border Incident
+country_event = {
+	id = hungary.1
+	title = hungary.1.t
+	desc = hungary.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # May They Be Saved....
+		name = hungary.1.a
+		ai_chance = { factor = 90 }
+		swap_ideas = {
+			remove_idea = HUN_zakarpat_occupation
+			add_idea = HUN_zakarpat_occupation2
+		}
+    }
+}

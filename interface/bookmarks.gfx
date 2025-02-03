@@ -1,0 +1,9 @@
+spriteTypes = {
+
+	# this file is for the bookmarks
+	
+	spriteType = {
+		name = "GFX_select_date_2027"
+		texturefile = "gfx/interface/select_date_2027.dds"
+	}
+}

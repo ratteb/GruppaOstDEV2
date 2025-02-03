@@ -1,0 +1,175 @@
+ideas = {
+
+	economic_alliance = {
+		law = yes
+		use_list_view = yes
+
+		prosul = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			visible = {
+			}
+
+			modifier = {
+			}
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}
+
+		african_union = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			visible = {
+			}
+
+			modifier = {
+			}
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}
+		nafta = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			visible = {
+			}
+
+			modifier = {
+			}
+
+			default = yes
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}
+		saarc = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			visible = {
+			}
+
+			modifier = {
+			}
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}
+		asean = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			visible = {
+			}
+
+			modifier = {
+			}
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}
+		sco = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			visible = {
+			}
+
+			modifier = {
+			}
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}
+		efta = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			visible = {
+			}
+
+			modifier = {
+			}
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}
+		arab_leauge = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			visible = {
+			}
+
+			modifier = {
+			}
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}
+		none = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			visible = {
+			}
+
+			modifier = {
+			}
+
+			allowed_to_remove = { always = no }
+			default = yes
+
+			cancel_if_invalid = no
+		}
+	}	
+}
+

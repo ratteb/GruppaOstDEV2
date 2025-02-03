@@ -1,0 +1,44 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_Vladimir_Putin01"
+		texturefile = "gfx/leaders/SOV/vladimir_putin01.dds"
+	}
+
+	#Russia above this line
+	spriteType = {
+		name = "GFX_denis_pushilin"
+		texturefile = "gfx/leaders/NOV/denis_pushilin.dds"
+	}
+
+	# Novorossiya above this line
+	spriteType = {
+		name = "GFX_ihor_palaytsya"
+		texturefile = "gfx/leaders/UKR/ihor_palaytsya.dds"
+	}
+
+	#Ukraine above this line 
+	spriteType = {
+		name = "GFX_alexander_lukashenko"
+		texturefile = "gfx/leaders/BLR/alexander_lukashenko.dds"
+	}
+
+	#Belarus above this line
+	spriteType = {
+		name = "GFX_farkas_sandor"
+		texturefile = "gfx/leaders/ZAK/farkas_sandor.dds"
+	}
+
+	# Zakarpatia and Hungary above this line 
+	spriteType = {
+		name = "GFX_portrait_donald_trump"
+		texturefile = "gfx/leaders/USA/donald_trump.dds"
+	}
+	# USA above this line 
+	spriteType = {
+		name = "GFX_portrait_xi_jinping"
+		texturefile = "gfx/leaders/CHI/xi_jinping.dds"
+	}
+
+	# China above this line 
+}

@@ -1,0 +1,149 @@
+scripted_gui = {
+  intro_gui = {
+    window_name = "intro_screen"
+    context_type = player_context
+
+    visible = {
+		always = no
+    }
+
+    effects = {
+    }
+
+    triggers = {
+    }
+
+    dynamic_lists = {
+	}
+
+    properties = {
+    }
+
+    ai_enabled = {
+		always = no
+    }
+
+    ai_test_interval = 290  # The higher, the long it takes the ai to do actions
+	ai_test_variance = 0.5
+
+    ai_check = {
+    }
+
+    ai_check_scope = {
+    }
+
+    ai_weights = {
+    }
+  }
+  intro_screen_image_gui = {
+    window_name = "intro_image"
+    context_type = player_context
+    parent_window_name = intro_screen
+
+    visible = {
+		always = yes
+    }
+
+    effects = {
+    }
+
+    triggers = {
+    }
+
+    dynamic_lists = {
+	}
+
+    properties = {
+    }
+
+    ai_enabled = {
+		always = no
+    }
+
+    ai_test_interval = 290  # The higher, the long it takes the ai to do actions
+	ai_test_variance = 0.5
+
+    ai_check = {
+    }
+
+    ai_check_scope = {
+    }
+
+    ai_weights = {
+    }
+  }
+  intro_screen_background_gui = {
+    window_name = "intro_background"
+    context_type = player_context
+    parent_window_name = intro_screen
+
+    visible = {
+		always = yes
+    }
+
+    effects = {
+    }
+
+    triggers = {
+    }
+
+    dynamic_lists = {
+	}
+
+    properties = {
+    }
+
+    ai_enabled = {
+		always = no
+    }
+
+    ai_test_interval = 290  # The higher, the long it takes the ai to do actions
+	ai_test_variance = 0.5
+
+    ai_check = {
+    }
+
+    ai_check_scope = {
+    }
+
+    ai_weights = {
+    }
+  }
+  intro_button_left_gui = {
+    window_name = "button_left"
+    context_type = player_context
+    parent_window_name = intro_screen
+
+    visible = {
+		always = yes
+    }
+
+    effects = {
+    }
+
+    triggers = {
+    }
+
+    dynamic_lists = {
+	}
+
+    properties = {
+    }
+
+    ai_enabled = {
+		always = no
+    }
+
+    ai_test_interval = 290  # The higher, the long it takes the ai to do actions
+	ai_test_variance = 0.5
+
+    ai_check = {
+    }
+
+    ai_check_scope = {
+    }
+
+    ai_weights = {
+    }
+  }
+}

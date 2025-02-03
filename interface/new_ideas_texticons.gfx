@@ -1,0 +1,33 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_sotnik1_program_texticon"
+		texturefile = "gfx/texticons/banners/sotnik1_program.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_memories_of_donbass_texticon"
+		texturefile = "gfx/texticons/banners/memories_of_donbass.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_memories_of_svo_texticon"
+		texturefile = "gfx/texticons/banners/memories_of_svo.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_memories_of_chechnya_texticon"
+		texturefile = "gfx/texticons/banners/memories_of_chechnya.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_russkiy_mir_texticon"
+		texturefile = "gfx/texticons/banners/russkiy_mir.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_memories_of_2008_texticon"
+		texturefile = "gfx/texticons/banners/georgian_war.dds"
+		legacy_lazy_load = no
+	}
+}

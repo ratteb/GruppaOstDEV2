@@ -1,0 +1,54 @@
+﻿###########################
+# Chinese Events
+###########################
+
+add_namespace = test
+add_namespace = news_test
+
+# Irrelevant for now 
+country_event = {
+	id = ukraine.1
+	title = ukraine.1.t
+	desc = ukraine.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # May They Be Saved....
+		name = ukraine.1.a
+		ai_chance = { factor = 90 }
+		load_focus_tree = ukraine_focus02
+    }
+}
+
+# Mobilization on the border with Zakarpattia. 
+news_event = {
+	id = news_test.1
+	title = news_test.1.t
+	desc = news_test.1.d
+	picture = GFX_news_test_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news_test.1.a
+	}
+}
+news_event = {
+	id = news_test.2
+	title = news_test.2.t
+	desc = news_test.2.d
+	picture = GFX_news_test_event_002
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news_test.2.a
+	}
+}
+
+

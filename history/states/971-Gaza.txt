@@ -1,0 +1,22 @@
+state={
+	id=971
+	name="STATE_971"
+	provinces={
+		13363
+	}
+	history = {
+
+		owner = ENG
+		add_core_of = PAL
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			13363 3
+		}
+	}
+	manpower=2000048
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
