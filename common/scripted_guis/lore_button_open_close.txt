@@ -1,6 +1,7 @@
 scripted_gui = {
   government_open_close_button_gui = {
     window_name = "lore_open_button"
+    parent_window_token = top_bar
     context_type = player_context
 
     visible = {
