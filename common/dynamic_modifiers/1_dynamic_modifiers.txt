@@ -54,6 +54,34 @@
 	land_night_attack = RAF_nightvis_variable
 }
 
+ SOV_gerasimov_doctrine = {
+	icon = "GFX_idea_unknown"
+
+
+	conscription_factor = GRSD_manpower_factor_variable
+	conscription  = GRSD_manpower_variable 
+	acclimatization_cold_climate_gain_factor = GRSD_cold_defense_variable
+	acclimatization_hot_climate_gain_factor = GRSD_hot_defense_variable
+	air_superiority_bonus_in_combat = GRSD_cas_bonus_variable
+	army_attack_factor = GRSD_attack_bonus_variable
+	army_attack_speed_factor = GRSD_attack_speed_variable
+	army_defence_factor = GRSD_defense_variable 
+	army_speed_factor = GRSD_speed_variable
+	army_morale_factor = GRSD_morale_variable
+	army_org_factor = GRSD_org_variable
+	army_org_regain = GRSD_recovery_variable
+	breakthrough_factor = GRSD_breakthrough_variable
+	cas_damage_reduction = GRSD_camouflage_variable
+	dig_in_speed_factor = GRSD_dig_speed_variable
+	max_dig_in_factor = GRSD_dig_max_variable
+	max_planning_factor = GRSD_planning_variable
+	planning_speed = GRSD_planning_speed_variable
+	experience_loss_factor = GRSD_xp_protection_variable
+    experience_gain_army_factor = GRSD_xp_gain_variable
+	special_forces_min = GRSD_special_forces_variable
+	land_night_attack = GRSD_nightvis_variable
+}
+
 SOV_sotnik_program = {
 	icon = "GFX_idea_unknown"
 

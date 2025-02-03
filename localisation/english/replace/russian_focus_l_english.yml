@@ -18,6 +18,54 @@
 
  SOV_expand_reserve_officer:0 "Expand Reserve Officer System"
 
+ SOV_review_strategical_doctrines:0 "Review Strategical Doctrines"
+
+ SOV_announce_strategic_changes:0 "Plan Strategic Changes"
+
+ SOV_continue_hybrid_warfare:0 "Continue With Gerasimov's Doctrine"
+
+ SOV_emphasis_infiltration_warfare:0 "Focus on Infiltration"
+
+ SOV_send_agents_eu:0 "More Agents in the EU"
+
+ SOV_find_weakness:0 "Find their Weakspots"
+
+ SOV_classic_intelligence:0 "Use KGB Knowledge"
+
+ SOV_no_digital_traces:0 "Ditch the Digital World"
+
+ SOV_europe_is_ours:0 "Europe in Our Grasp"
+
+ SOV_emphasis_information_warfare:0 "Focus on Propaganda"
+
+ SOV_buy_telegram:0 "Purchase Telegram"
+
+ SOV_release_stolen_docs:0 "Release Confidential Information"
+
+ SOV_infiltrate_west_news:0 "Infiltrate the Western Media"
+
+ SOV_hire_influencers:0 "'Sponsor' Influencers"
+
+ SOV_russia_today:0 "Russia Today, and Tomorrow"
+
+ SOV_emphasis_cyber_warfare:0 "Focus on Cyberwar"
+
+ SOV_new_os:0 "Our Own Operating System"
+
+ SOV_get_rid_of_windows:0 "Ban Windows from Government PCs"
+
+ SOV_new_programmers:0 "Hire New Programmers"
+
+ SOV_education_investment_cyber:0 "Invest in IT Classes"
+
+ SOV_new_generation_cyber:0 "Ratnik Computer Programme"
+
+ SOV_hybrid_warfare_returned:0 "Gerasimov's Doctrine Finalized!"
+
+ SOV_return_to_conventional_means:0 "Scrap Gerasimov's Doctrine"
+
+
+
  # Russia Ideas and Spirits 
  SOV_memories_of_chechnya:0 "Memories of the Chechen Wars"
  SOV_memories_of_chechnya_desc:0 "\n\n\n\n£memories_of_chechnya_texticon \n\n\n\n\nIn 1994 the First Chechen war began, with Russian conscript troops crossing the borders of the illegal regime in Chechnya, however what followed was horror, many military deaths of conscript soldiers, humanitarian crisises, and a total emberassment of the Russian Army which got bogged down by a group of rag tag militants. In the end Yeltsin signed a peace agreement with Chechnya which secured their independence. Many lessons were learned from that war, where not to use armoured vehicles, and how to conduct better armed operations in urban centres like Grozny, but also mountains in the rest of the Republic. In 1999 with Putin as Prime Minister, and Yeltsin as President, after a significant terrorist attack by Islamic militants the Russian Federation once again invaded Chechnya in what is known as the Second Chechen War. From 1999 until 2000 the Second Chechen war raged, and a counter insurgency is what remained after, with countless of deaths, terrorist attacks, and controversies, mainly during the counter insurgency period. A big lesson learned is the trauma from using conscripts in military operations. Therefore, unless completely nescessary §Rwe dont use conscripts in any of our military conflicts.§!"
