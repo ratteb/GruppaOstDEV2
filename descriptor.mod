@@ -3,7 +3,7 @@ picture = "thumbnail.png"
 tags={
 	"Alternative History"
 }
-name="The Double Headed Eagle Has Won! [DEV]"
+name="Gruppa Ost[DEV]"
 supported_version="1.15.*"
 replace_path="history/states"
 replace_path="map/strategicregions"
