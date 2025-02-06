@@ -1,6 +1,7 @@
 ﻿l_english:
  # Sotnik 1 Focus tree
  SOV_sotnik1_announcement:0 "Sotnik-1 Program"
+ SOV_sotnik1_announcement_desc:0 "2 Years after the victory in the Special Military Operation, Vladimir Putin and the Ministry of Defense have drawn up the plan and opened the budget to announce the Sotnik-1 Modernization Program, looked to overhaul the equipment, tactics, and status of the Russian Armed Forces. Many issues were noted with the Armed Forces, the Gerasimov Doctrine was proven to be too ineffective to secure a quick victory in Ukraine, and has cost us a lot of Russian lives in the process, we need to make a choice to scrap this doctrine or renew it to make it effective enough. And we must remind ourselves to always be ready for a war with the collective west!"
 
  SOV_announce_new_equipments:0 "Announce New Equipment"
 

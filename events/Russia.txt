@@ -18,11 +18,6 @@ country_event = {
 	option = { # May They Be Saved....
 		name = placeholder.1.a
 		ai_chance = { factor = 90 }
-
-		add_timed_idea = {
-			idea = SOV_idea_suffering_from_purges
-			days = 104
-		}
     }
 }
 

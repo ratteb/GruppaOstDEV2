@@ -45,7 +45,7 @@ focus_tree = {
 			custom_effect_tooltip = SOV_sotnik1_announcement_cet
 
 			country_event = SOV_sotnik.1
-	}
+	    }
 	}
 	focus = {
 		id = SOV_announce_new_equipments
@@ -62,7 +62,11 @@ focus_tree = {
 		}
 
 		available = {
-			has_idea = SOV_idea_suffering_from_purges
+			custom_trigger_tooltip = {
+				tooltip = SOV_equipments_ctt
+				has_idea = SOV_idea_suffering_from_purges 
+			}
+			has_completed_focus = SOV_review_officer_corps
 		}
 		
 		bypass = {
@@ -99,6 +103,10 @@ focus_tree = {
 		}
 
 		available = {
+		    custom_trigger_tooltip = {
+				tooltip = SOV_equipments_ctt
+				has_idea = SOV_idea_suffering_from_purges 
+			}
 		}
 		
 		bypass = {
@@ -126,6 +134,10 @@ focus_tree = {
 		}
 
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOV_equipments_ctt
+				has_idea = SOV_idea_suffering_from_purges 
+			}
 		}
 		
 		bypass = {
@@ -153,6 +165,10 @@ focus_tree = {
 		}
 
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOV_equipments_ctt
+				has_idea = SOV_idea_suffering_from_purges 
+			}
 		}
 		
 		bypass = {
@@ -231,6 +247,10 @@ focus_tree = {
 		}
 
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOV_officer_corps_reform_ctt
+				not = { has_idea = SOV_idea_suffering_from_purges }
+			}
 		}
 		
 		bypass = {
@@ -275,6 +295,14 @@ focus_tree = {
 		}
 
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOV_officer_corps_reform_ctt
+				not = { has_idea = SOV_idea_suffering_from_purges }
+			}
+			custom_trigger_tooltip = {
+				tooltip = SOV_chose_install_NCO_ctt
+				has_country_flag = SOV_picked_nco_officer
+			}
 		}
 		
 		bypass = {
@@ -303,6 +331,15 @@ focus_tree = {
 		}
 
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOV_officer_corps_reform_ctt
+				not = { has_idea = SOV_idea_suffering_from_purges }
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = SOV_chose_expand_reserve_ctt
+				has_country_flag = SOV_picked_reserve_officer
+			}
 		}
 		
 		bypass = {
@@ -330,6 +367,10 @@ focus_tree = {
 		}
 
 		available = {
+			OR = {
+				has_completed_focus = SOV_NCO_system
+				has_completed_focus = SOV_expand_reserve_officer
+			}
 		}
 		
 		bypass = {
