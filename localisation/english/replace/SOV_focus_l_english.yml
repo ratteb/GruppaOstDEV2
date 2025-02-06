@@ -64,6 +64,46 @@
 
  SOV_return_to_conventional_means:0 "Scrap Gerasimov's Doctrine"
 
+ SOV_emphasis_tank_warfare:0 "Focus on Tank Warfare"
+
+ SOV_mass_produce_tank14:0 "Mass Produce T-14"
+
+ SOV_admit_tank_failures:0 "Admit Failures of Tank Warfare..."
+
+ SOV_renew_soviet_doctrine:0 "New 'Soviet' Doctrine"
+
+ SOV_improve_mistakes:0 "...And Improve From the Past"
+
+ SOV_tank24:0 "T-24 Armata"
+
+ SOV_emphasis_drone_warfare:0 "Focus on Drones"
+
+ SOV_advanced_drone_training:0 "Advanced Drone Training"
+
+ SOV_recon_drones:0 "Eyes Everywhere..."
+
+ SOV_counter_drone_warfare:0 "Develop Drone Counter Measures"
+
+ SOV_attack_drones:0 "...And Infinite Ways to Destroy Them"
+
+ SOV_orlon_drone:0 "Orlon-L3"
+
+ SOV_emphasis_ifv_warfare:0 "Focus on IFV's"
+
+ SOV_remove_weak_ifv:0 "Phase Out Weak IFV's"
+
+ SOV_remove_soviet_doctrine:0 "Begone Soviet Tank Doctrine!"
+
+ SOV_new_infantry_tactics:0 "True Centurions of the Century!"
+
+ SOV_more_ifv_less_tank:0 "IFV's Over Tanks"
+
+ SOV_tank25:0 "T-25 Armata"
+
+ SOV_new_russian_doctrine:0 "New Russian Doctrine"
+
+ SOV_sotnik1_finished:0 "Sotnik-1 Programme Completed."
+
 
 
  # Russia Ideas and Spirits 

@@ -1,0 +1,7 @@
+spriteTypes = {
+	# GENERIC PLACEHOLDER 
+	spriteType = {
+		name = "GFX_goal_no_data"
+		texturefile = "gfx/interface/goals/focus_no_data.dds"
+	}
+}
