@@ -114,5 +114,32 @@ ideas = {
 				stability_factor = 0.05
 			}
 		}
+	    SOV_idea_suffering_from_purges = {
+		    picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = SOV
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				custom_effect_tooltip = {
+					SOV_tooltip_1_tt
+				}
+			}
+		}
 	}
 }

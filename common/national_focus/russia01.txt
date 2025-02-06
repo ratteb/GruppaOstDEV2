@@ -43,6 +43,8 @@ focus_tree = {
 			hidden_effect = {country_lock_all_division_template = yes
 			}
 			custom_effect_tooltip = SOV_sotnik1_announcement_cet
+
+			country_event = SOV_sotnik.1
 	}
 	}
 	focus = {
@@ -60,6 +62,7 @@ focus_tree = {
 		}
 
 		available = {
+			has_idea = SOV_idea_suffering_from_purges
 		}
 		
 		bypass = {
@@ -187,73 +190,73 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {	
-			custom_effect_tooltip = sotnik_tooltip_1_tt
 			add_to_variable  = {
-				var = sotnik_planning_variable
+				var = sotnik_army_xp_gain_perc_variable
+				value = 0.15
+			}
+			add_to_variable  = {
+				var = political_power_factor
+				value = 0.02
+			}
+
+			add_to_variable = {
+				var = RAF_planning_speed_variable
 				value = 0.03
 			}
-			add_to_variable  = {
-				var = sotnik_planning_speed_variable
+
+			add_to_variable = {
+				var = RAF_planning_variable
 				value = 0.05
 			}
-			hidden_effect = {
-				add_political_power = 120
-				army_experience = 30
+
+				add_political_power = -200
+				army_experience = -30
+				add_manpower = -150
+
+			custom_effect_tooltip = SOV_review_officer_corps_cet
+		}
+	}
+	focus = {
+		id = SOV_officer_corps_reform
+		prerequisite = { focus = SOV_review_officer_corps }
+		icon = GFX_goal_no_data
+		relative_position_id = SOV_review_officer_corps
+		x = 0
+		y = 1
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+        	add_to_variable = {
+				var = RAF_xp_gain_variable
+				value = 0.05
+			}	
+
+			add_to_variable = {
+				var = RAF_morale_variable
+				value = 0.02
 			}
-		}
-	}
-	focus = {
-		id = SOV_officer_corps_reform
-		prerequisite = { focus = SOV_review_officer_corps }
-		icon = GFX_goal_no_data
-		relative_position_id = SOV_review_officer_corps
-		x = 0
-		y = 1
 
-		cost = 3.6
+			add_to_variable = {
+				var = RAF_org_variable
+				value = 0.05
+			}
 
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {	
-		}
-	}
-	focus = {
-		id = SOV_officer_corps_reform
-		prerequisite = { focus = SOV_review_officer_corps }
-		icon = GFX_goal_no_data
-		relative_position_id = SOV_review_officer_corps
-		x = 0
-		y = 1
-
-		cost = 3.6
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {	
+			custom_effect_tooltip = SOV_officer_corps_reform_cet
 		}
 	}
 	focus = {
