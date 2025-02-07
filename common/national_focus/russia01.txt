@@ -207,7 +207,7 @@ focus_tree = {
 
 		completion_reward = {	
 			add_to_variable  = {
-				var = sotnik_army_xp_gain_perc_variable
+				var = sotnik_xp_gain_variable
 				value = 0.15
 			}
 			add_to_variable  = {
@@ -228,6 +228,13 @@ focus_tree = {
 				add_political_power = -200
 				army_experience = -30
 				add_manpower = -150
+
+			hidden_effect = {
+				country_event =  {
+				 id = SOV_sotnik.2
+				 days = 9
+				}
+			}
 
 			custom_effect_tooltip = SOV_review_officer_corps_cet
 		}

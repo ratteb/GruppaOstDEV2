@@ -6,7 +6,7 @@ add_namespace = SOV_sotnik
 
 # Event Chain for SOtnik Program
 
-# Just a test 
+# Announcing of the Sotnik-1 Modernization Program
 country_event = {
 	id = SOV_sotnik.1
 	title = SOV_sotnik.1.t
@@ -15,9 +15,29 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	option = { # May They Be Saved....
-		name = placeholder.1.a
+	option = { # Ura! 
+		name = SOV_sotnik.1.a
 		ai_chance = { factor = 90 }
+    }
+}
+
+# Purges in the Officer corps dont go as planned
+country_event = {
+	id = SOV_sotnik.2
+	title = SOV_sotnik.2.t
+	desc = SOV_sotnik.2.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # What the hell man!?
+		name = SOV_sotnik.2.a
+		ai_chance = { factor = 90 }
+
+		add_timed_idea = {
+			idea = SOV_idea_suffering_from_purges
+			days = 106
+		}
     }
 }
 
