@@ -200,6 +200,8 @@ add_ideas = {
 	lgbt_semi_ban
 	russia_rosgvardia
 	SOV_memories_of_chechnya 
+	min_very_high_bracket
+	max_super_high_bracket
 }
 
 add_timed_idea = {

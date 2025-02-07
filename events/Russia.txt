@@ -41,6 +41,28 @@ country_event = {
     }
 }
 
+# Choice NCO or Reserve officer 
+country_event = {
+	id = SOV_sotnik.3
+	title = SOV_sotnik.3.t
+	desc = SOV_sotnik.3.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # NCO system 
+		name = SOV_sotnik.3.a
+		ai_chance = { factor = 50 }
+		set_country_flag = SOV_picked_nco_officer
+    }
+
+	option = { # Reserve officer system 
+		name = SOV_sotnik.3.b
+		ai_chance = { factor = 50 }
+		set_country_flag = SOV_picked_reserve_officer
+	}
+}
+
 
 
 

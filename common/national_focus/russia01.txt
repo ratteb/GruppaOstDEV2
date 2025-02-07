@@ -283,6 +283,8 @@ focus_tree = {
 				value = 0.05
 			}
 
+			country_event = SOV_sotnik.3
+
 			custom_effect_tooltip = SOV_officer_corps_reform_cet
 		}
 	}

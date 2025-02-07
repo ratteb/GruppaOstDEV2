@@ -137,6 +137,8 @@ ideas = {
 			
 			modifier = {
 				political_power_cost = 0.15
+				experience_gain_army_factor = -0.3
+				weekly_manpower = -50
 			}
 		}
 	}
