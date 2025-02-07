@@ -48,6 +48,38 @@ ideas = {
 			modifier = {
 				conscription = 0.008
 				training_time_factor = -0.3
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+		}
+
+		contract_service = {
+
+			cost = 150
+			removal_cost = -1
+			level = 2
+
+			available = {
+			}
+
+			allowed_to_remove = { always = no }
+
+			ai_will_do = {
+   				factor = 1
+
+   				modifier = {
+					factor = 60 # being disarmed is bad in a wargame yo
+					has_idea = disarmed_nation
+				}
+			}
+
+			modifier = {
+				conscription = 0.012
+				training_time_factor = -0.3
 			}
 
 			default = yes
