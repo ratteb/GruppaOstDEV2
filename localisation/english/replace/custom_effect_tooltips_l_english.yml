@@ -6,4 +6,7 @@
 
   SOV_review_officer_corps_cet: "Modify §YSotnik Modernization Program§! by\nArmy Experience Gain: §G+15.00%§!\nPolitical Power Gain: §G+2.00%§!\n\nModify §RArmed Forces of the Russian Federation§! by\nPlanning Speed: §G+2.00%§!\nMax Planning: §G+5.00%§!\n\n We will start a wide investigation and review of the §0Officer Corps§! and remove anyone who has underpreformed or has been caught with §Rcorruption§! in order to improve structural integrity and combat capabilities of the §RArmed Forces of the Russian Federation§!"
   SOV_officer_corps_reform_cet: "Modify §RArmed Forces of the Russian Federation§! by\nArmy Experience Gain: §G+5.00%§!\nRecovery Rate: §G+2.00%§!\nOrganization: §G+5.00%§!\n\nWe will reform the §0Officer Corps§! in order to prepare for our strategical and doctrinal changes, we will however have to make a choice between an §CNCO System§! or continue the §GReserve Officer Corps§! Whatever we choose, we cannot afford any mistakes."
+
+  SOV_expand_reserve_officer_cet: "Modify §RArmed Forces of the Russian Federation§! by\nDivision Organization: §G+20.00%§!\nArmy Organization Regain: §R-5.00%§!\nDivision Recovery Rate §R-10.00%§!"
+  SOV_NCO_system_cet: "Modify §RArmed Forces of the Russian Federation§! by\nDivision Organization: §R-15.00%§!\nArmy Organization Regain: §G+25.00%§!\nDivision Recovery Rate: §G+20.00%§!"
  

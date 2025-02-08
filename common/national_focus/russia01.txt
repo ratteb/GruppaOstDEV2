@@ -321,7 +321,23 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		completion_reward = {	
+		completion_reward = {
+			add_to_variable = {
+				var = RAF_morale_variable
+				value = 0.25
+			}
+
+			add_to_variable = {
+				var = RAF_recovery_variable
+				value = 0.20
+			}
+
+			add_to_variable = {
+				var = RAF_org_variable
+				value = -0.15
+			}
+
+			custom_effect_tooltip = SOV_NCO_system_cet
 		}
 	}
 	focus = {
@@ -359,6 +375,22 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {	
+
+			add_to_variable = {
+				var = RAF_org_variable
+				value = 0.20
+			}
+
+			add_to_variable = {
+				var = RAF_recovery_variable 
+				value = -0.1
+			}
+
+			add_to_variable = {
+				var = RAF_morale_variable
+				value = -0.05
+			}
+			custom_effect_tooltip = SOV_expand_reserve_officer_cet
 		}
 	}
 	focus = {
