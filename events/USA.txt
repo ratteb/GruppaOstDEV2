@@ -1,0 +1,71 @@
+﻿###########################
+# placeholder Events
+###########################
+
+add_namespace = USA_trump
+
+# Event Chain for SOtnik Program
+
+# Announcing of the Sotnik-1 Modernization Program
+country_event = {
+	id = USA_trump.1
+	title = USA_trump.1.t
+	desc = USA_trump.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Ura! 
+		name = USA_trump.1.a
+		ai_chance = { factor = 90 }
+		add_political_power = 5
+		add_stability = 0.02
+    }
+}
+
+# Purges in the Officer corps dont go as planned
+country_event = {
+	id = USA_trump.2
+	title = USA_trump.2.t
+	desc = USA_trump.2.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # What the hell man!?
+		name = USA_trump.2.a
+		ai_chance = { factor = 90 }
+
+		add_timed_idea = {
+			idea = SOV_idea_suffering_from_purges
+			days = 106
+		}
+    }
+}
+
+# Choice NCO or Reserve officer 
+country_event = {
+	id = USA_trump.3
+	title = USA_trump.3.t
+	desc = USA_trump.3.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # NCO system 
+		name = USA_trump.3.a
+		ai_chance = { factor = 50 }
+		set_country_flag = SOV_picked_nco_officer
+    }
+
+	option = { # Reserve officer system 
+		name = USA_trump.3.b
+		ai_chance = { factor = 50 }
+		set_country_flag = SOV_picked_reserve_officer
+	}
+}
+
+
+
+
+
