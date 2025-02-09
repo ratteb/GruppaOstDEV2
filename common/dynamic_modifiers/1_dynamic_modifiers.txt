@@ -134,3 +134,25 @@ SOV_sotnik_program = {
 	consumer_goods_factor = SOV_DC_consumer_goods_variable
 
  }
+
+  UKR_demographics_crisis = {
+	icon = "GFX_idea_unknown"
+
+
+	monthly_population = UKR_DC_population_growth_variable
+	research_speed_factor = UKR_DC_research_speed_variable
+	local_resources_factor = UKR_DC_resource_digging_variable
+	surrender_limit = UKR_DC_surrender_limit_variable
+	political_power_gain = UKR_DC_political_gain_variable
+	political_power_factor = UKR_DC_political_gain_perc_variable
+	stability_factor = UKR_DC_stability_variable
+	war_support_factor = UKR_DC_war_support_variable
+	production_factory_efficiency_gain_factor = UKR_DC_eff_gain_variable
+	production_factory_max_efficiency_factor = UKR_DC_max_eff_variable
+	line_change_production_efficiency_factor = UKR_DC_eff_retention_variable
+	production_lack_of_resource_penalty_factor = UKR_DC_no_resource_penalty_variable
+	fuel_gain_factor = UKR_DC_fuel_variable
+	production_speed_buildings_factor = UKR_DC_construction_speed_variable
+	consumer_goods_factor = UKR_DC_consumer_goods_variable
+
+ }
