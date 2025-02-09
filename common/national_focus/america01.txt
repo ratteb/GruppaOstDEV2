@@ -3,6 +3,7 @@ focus_tree = {
 	id = america_focus01
 	
 	country = {
+		factor = 0
 		
 		modifier = {
 			add = 10
