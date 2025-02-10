@@ -69,7 +69,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			country_event = USA_trump.2
 		}
 	}
 	
@@ -127,7 +127,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			country_event = USA_trump.3
 		}
 	}
 
@@ -156,7 +156,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			country_event = USA_trump.4
 		}
 	}
 

@@ -4,9 +4,9 @@
 
 add_namespace = USA_trump
 
-# Event Chain for SOtnik Program
+# Event Chain for trump
 
-# Announcing of the Sotnik-1 Modernization Program
+# The January Rally
 country_event = {
 	id = USA_trump.1
 	title = USA_trump.1.t
@@ -15,7 +15,7 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	option = { # Ura! 
+	option = { # Rally 
 		name = USA_trump.1.a
 		ai_chance = { factor = 90 }
 		add_political_power = 5
@@ -23,7 +23,7 @@ country_event = {
     }
 }
 
-# Purges in the Officer corps dont go as planned
+# Finishing the Wall
 country_event = {
 	id = USA_trump.2
 	title = USA_trump.2.t
@@ -32,18 +32,14 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	option = { # What the hell man!?
+	option = { # Promises Kept
 		name = USA_trump.2.a
 		ai_chance = { factor = 90 }
-
-		add_timed_idea = {
-			idea = SOV_idea_suffering_from_purges
-			days = 106
-		}
+		add_stability = 0.01
     }
 }
 
-# Choice NCO or Reserve officer 
+# State of the Union
 country_event = {
 	id = USA_trump.3
 	title = USA_trump.3.t
@@ -52,16 +48,45 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	option = { # NCO system 
+	option = { # State of Union
 		name = USA_trump.3.a
-		ai_chance = { factor = 50 }
-		set_country_flag = SOV_picked_nco_officer
-    }
+		ai_chance = { factor = 90 }
+		add_political_power = 10
 
-	option = { # Reserve officer system 
-		name = USA_trump.3.b
-		ai_chance = { factor = 50 }
-		set_country_flag = SOV_picked_reserve_officer
+	}
+}
+
+# Don Achievements
+country_event = {
+	id = USA_trump.4
+	title = USA_trump.4.t
+	desc = USA_trump.4.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # State of Union
+		name = USA_trump.4.a
+		ai_chance = { factor = 90 }
+		add_political_power = 10
+
+	}
+}
+
+# America First
+country_event = {
+	id = USA_trump.4
+	title = USA_trump.4.t
+	desc = USA_trump.4.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # State of Union
+		name = USA_trump.4.a
+		ai_chance = { factor = 90 }
+		add_political_power = 10
+
 	}
 }
 
