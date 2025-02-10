@@ -95,6 +95,41 @@ add_opinion_modifier = {
 	modifier = hostile_status
 }
 
+set_variable = {
+	var = UKR_DC_population_growth_variable
+	value = -1.25
+}
+set_variable = {
+	var = UKR_DC_political_gain_perc_variable
+	value = -0.35
+}
+set_variable = {
+	var = UKR_DC_stability_variable
+	value = -0.35
+}
+set_variable = {
+	var = UKR_DC_war_support_variable
+	value = -0.5
+}
+set_variable = {
+	var = UKR_DC_eff_gain_variable
+	value = -0.12
+}
+set_variable = {
+	var = UKR_DC_eff_retention_variable
+	value = -0.175
+}
+set_variable = {
+	var = UKR_DC_consumer_goods_variable
+	value = -0.07
+}
+set_variable = {
+	var = UKR_DC_construction_speed_variable
+	value = -0.4
+}
+
+
+add_dynamic_modifier = { modifier = UKR_demographics_crisis }
 add_ideas = {
 	disarmed_nation
 	azof_insurgency01
