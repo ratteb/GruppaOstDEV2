@@ -14,11 +14,11 @@ focus_tree = {
 	default = no
 	
 	continuous_focus_position = { x = 50 y = 1000 }
-    # Ukraine political crisis 
+    # Ukraine Main Tree 
 	focus = {
 		id = UKR_asses_the_situation
-		icon = GFX_goal_generic_major_war
-		x = 20
+		icon = GFX_goal_no_data
+		x = 40
 		y = 1
 
 		cost = 5
@@ -39,12 +39,563 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			country_event = ukraine.1
-			add_political_power = 120
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.1
-			}
+		}
+	}
+
+	# Political Crisis 
+	focus = {
+		id = UKR_political_crisis
+		prerequisite = { focus = UKR_asses_the_situation }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_asses_the_situation
+		x = -14
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = UKR_establish_roadblocks
+		prerequisite = { focus = UKR_political_crisis }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_political_crisis
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = UKR_increase_gov_media
+		prerequisite = { focus = UKR_establish_roadblocks }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_establish_roadblocks
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = UKR_stab_the_rada
+		prerequisite = { focus = UKR_establish_roadblocks }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_establish_roadblocks
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = UKR_war_against_corruption
+		prerequisite = { focus = UKR_stab_the_rada }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_stab_the_rada
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = UKR_support_from_the_ppl
+		prerequisite = { focus = UKR_increase_gov_media }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_increase_gov_media
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = UKR_bucha_mall_incident
+		prerequisite = { focus = UKR_support_from_the_ppl }
+		prerequisite = { focus = UKR_war_against_corruption }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_support_from_the_ppl
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+# NG offer 
+	focus = {
+		id = UKR_ng_offer
+		prerequisite = { focus = UKR_bucha_mall_incident }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_bucha_mall_incident
+		mutually_exclusive = {focus = UKR_pd_offer }
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = UKR_sideline_pd
+		prerequisite = { focus = UKR_ng_offer }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_ng_offer
+		x = 2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = UKR_most_loyal_ng
+		prerequisite = { focus = UKR_sideline_pd}
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_sideline_pd
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = UKR_announce_national_emergency
+		prerequisite = { focus = UKR_ng_offer }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_ng_offer
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = UKR_hand_the_issue_to_ng
+		prerequisite = { focus = UKR_announce_national_emergency }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_announce_national_emergency
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = UKR_crisis_to_ng
+		prerequisite = { focus = UKR_hand_the_issue_to_ng }
+		prerequisite = { focus = UKR_most_loyal_ng }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_hand_the_issue_to_ng
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+# pd offer 
+	focus = {
+		id = UKR_pd_offer
+		prerequisite = { focus = UKR_bucha_mall_incident}
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_bucha_mall_incident
+		mutually_exclusive = {focus = UKR_ng_offer }
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = UKR_heavy_equipment_for_pd
+		prerequisite = { focus = UKR_pd_offer}
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_pd_offer
+		x = -2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = UKR_purge_unloyal_officers
+		prerequisite = { focus = UKR_heavy_equipment_for_pd}
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_heavy_equipment_for_pd
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = UKR_sideline_ng
+		prerequisite = { focus = UKR_pd_offer}
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_pd_offer
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = UKR_police_combat_unit
+		prerequisite = { focus = UKR_sideline_ng}
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_sideline_ng
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = UKR_crisis_to_pd
+		prerequisite = { focus = UKR_police_combat_unit }
+		prerequisite = { focus = UKR_purge_unloyal_officers }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_police_combat_unit
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = UKR_end_of_the_crisis
+		prerequisite = { focus = UKR_crisis_to_ng 
+		focus = UKR_crisis_to_pd }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_crisis_to_ng
+		x = -2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
 		}
 	}
 
