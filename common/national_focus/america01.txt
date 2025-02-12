@@ -98,7 +98,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			add_political_power = 10
 		}
 	}
 
@@ -478,7 +478,8 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			country_event = USA_trump.11
+			navy_experience = 10
 		}
 	}
 
@@ -508,7 +509,8 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			country_event = USA_trump.10
+			army_experience = 10
 		}
 	}
 
@@ -566,7 +568,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			country_event = USA_trump.12
 		}
 	}
 
@@ -595,7 +597,8 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			country_event = USA_trump.13
+			air_experience = 10 
 		}
 	}
 
@@ -624,7 +627,8 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			country_event = USA_trump.14
+			navy_experience = 5
 		}
 	}
 

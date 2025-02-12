@@ -138,7 +138,7 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	option = { # troops
+	option = { # His achievements
 		name = USA_trump.8.a
 		ai_chance = { factor = 90 }
 		add_political_power = 2
@@ -158,22 +158,97 @@ country_event = {
 	
 	option = { # study taiwan
 		name = USA_trump.9.a
-		ai_chance = { factor = 90 }
-		add_political_power = 2
-		add_stability = 0.01
+		ai_chance = { factor = 50 }
 		complete_national_focus = USA_study_zelensky
 	}
 
 	option = { # study elensky
 		name = USA_trump.9.b
-		ai_chance = { factor = 90 }
+		ai_chance = { factor = 50 }
 		complete_national_focus = USA_study_taiwan_strait
 
 	}
 }
 
+# Taiwan Strait Choice
+country_event = {
+	id = USA_trump.11
+	title = USA_trump.11.t
+	desc = USA_trump.11.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # taiwan study
+		name = USA_trump.11.a
+		ai_chance = { factor = 90 }
+		
+	}
+}
 
+# Elensky Choice
+country_event = {
+	id = USA_trump.10
+	title = USA_trump.10.t
+	desc = USA_trump.10.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # ukraine study
+		name = USA_trump.10.a
+		ai_chance = { factor = 90 }
+		
+	}
+}
 
+# Sams Ships
+country_event = {
+	id = USA_trump.12
+	title = USA_trump.12.t
+	desc = USA_trump.12.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # navy
+		name = USA_trump.12.a
+		ai_chance = { factor = 90 }
+		
+	}
+}
+
+# Sams Planes
+country_event = {
+	id = USA_trump.13
+	title = USA_trump.13.t
+	desc = USA_trump.13.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # airforce
+		name = USA_trump.13.a
+		ai_chance = { factor = 90 }
+		
+	}
+}
+
+# Naval Strat
+country_event = {
+	id = USA_trump.14
+	title = USA_trump.14.t
+	desc = USA_trump.14.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Naval Strat
+		name = USA_trump.14.a
+		ai_chance = { factor = 90 }
+		
+	}
+}
 
 
 
