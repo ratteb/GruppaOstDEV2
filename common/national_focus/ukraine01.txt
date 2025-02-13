@@ -42,6 +42,316 @@ focus_tree = {
 		}
 	}
 
+	# the insurgency
+
+	focus = {
+		id = UKR_azov_insurgency
+		prerequisite = { focus = UKR_asses_the_situation }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_asses_the_situation
+		x = 0
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = UKR_go_hard_or_go_home
+		prerequisite = { focus = UKR_azov_insurgency }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_azov_insurgency
+		mutually_exclusive = { focus = UKR_softer_response }
+		x = -2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = UKR_auth_heavy_equip
+		prerequisite = { focus = UKR_go_hard_or_go_home }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_go_hard_or_go_home
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = UKR_final_azov_push
+		prerequisite = { focus = UKR_auth_heavy_equip }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_auth_heavy_equip
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = UKR_ass_their_leaders
+		prerequisite = { focus = UKR_auth_heavy_equip }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_auth_heavy_equip
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = UKR_end_of_the_insurgency
+		prerequisite = { focus = UKR_ass_their_leaders }
+		prerequisite = { focus = UKR_final_azov_push }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_final_azov_push
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = UKR_softer_response
+		prerequisite = { focus = UKR_azov_insurgency }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_azov_insurgency
+		mutually_exclusive = { focus = UKR_go_hard_or_go_home }
+		x = 2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = UKR_deal_w_insurgents
+		prerequisite = { focus = UKR_softer_response }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_softer_response
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = UKR_azov_peace_deal
+		prerequisite = { focus = UKR_deal_w_insurgents }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_deal_w_insurgents
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = UKR_end_the_insurgency_q
+		prerequisite = { focus = UKR_azov_peace_deal }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_azov_peace_deal
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	# the crime wave 
+
+	focus = {
+		id = UKR_crimewave
+		prerequisite = { focus = UKR_asses_the_situation }
+		icon = GFX_goal_no_data
+		relative_position_id = UKR_asses_the_situation
+		x = 14
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
 	# Political Crisis 
 	focus = {
 		id = UKR_political_crisis
