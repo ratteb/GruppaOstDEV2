@@ -56,14 +56,26 @@
  USA_trump.14.d: "boom, ship go boom"
  USA_trump.14.a: "Thunderstruck"
 
- USA_trump.15.t:
- USA_trump.15.d:
- USA_trump.15.a:
+ USA_trump.15.t: "The Crisis still Lingers"
+ USA_trump.15.d: "Join the Army!!!!"
+ USA_trump.15.a: "And The Army Goes Rolling Along"
 
- USA_trump.16.t:
- USA_trump.16.d:
- USA_trump.16.a:
+ USA_trump.16.t: "Promote the Military"
+ USA_trump.16.d: "Out with the Woke"
+ USA_trump.16.a: "The Few, The Proud"
 
- USA_trump.17.t:
- USA_trump.17.d:
- USA_trump.17.a:
+ USA_trump.17.t: "Increase the Benefits"
+ USA_trump.17.d: "Gimme, Gimme, Money"
+ USA_trump.17.a: "More, and more"
+
+ USA_trump.18.t: "What went Wrong? What went Right?"
+ USA_trump.18.d: "Study the Russo-Ukrainian war and how our equipment succeded and failed"
+ USA_trump.18.a: "Warfare is changing"
+
+ USA_trump.19.t: "Anti-Drone Measures and Tactics"
+ USA_trump.19.d: "The Russo-Ukrainian war started a new type of warfare. one we must be prepared for as it has seemingly changed the way wars will work for the foreseable future."
+ USA_trump.19.a: "Otorvali My leopardu golovu"
+
+ USA_trump.20.t:
+ USA_trump.20.d:
+ USA_trump.20.a:

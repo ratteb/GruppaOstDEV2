@@ -250,7 +250,85 @@ country_event = {
 	}
 }
 
+# Recruitment Crisis
+country_event = {
+	id = USA_trump.15
+	title = USA_trump.15.t
+	desc = USA_trump.15.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Recruit Crisis
+		name = USA_trump.15.a
+		ai_chance = { factor = 90 }
+		
+	}
+}
 
+# Promote the Army
+country_event = {
+	id = USA_trump.16
+	title = USA_trump.16.t
+	desc = USA_trump.16.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Mil Propaganda
+		name = USA_trump.16.a
+		ai_chance = { factor = 90 }
+		add_manpower = 50000
+		add_political_power = -5
+		add_war_support = 0.05
+	}
+}
 
+# Increase Benefits
+country_event = {
+	id = USA_trump.17
+	title = USA_trump.17.t
+	desc = USA_trump.17.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Mil Benefits
+		name = USA_trump.17.a
+		ai_chance = { factor = 90 }
+		add_manpower = 80000
+		add_political_power = -15
+	}
+}
 
+# Wrong, Right
+country_event = {
+	id = USA_trump.18
+	title = USA_trump.18.t
+	desc = USA_trump.18.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Wrong, Right
+		name = USA_trump.18.a
+		ai_chance = { factor = 90 }
+		add_political_power = -10
+	}
+}
 
+# Anti Drone
+country_event = {
+	id = USA_trump.19
+	title = USA_trump.19.t
+	desc = USA_trump.19.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Anti Drone
+		name = USA_trump.19.a
+		ai_chance = { factor = 90 }
+		add_political_power = -10
+	}
+}
