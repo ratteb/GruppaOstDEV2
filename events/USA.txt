@@ -329,6 +329,101 @@ country_event = {
 	option = { # Anti Drone
 		name = USA_trump.19.a
 		ai_chance = { factor = 90 }
-		add_political_power = -10
+		add_political_power = -1
+	}
+}
+
+# Mil R&D
+country_event = {
+	id = USA_trump.20
+	title = USA_trump.20.t
+	desc = USA_trump.20.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Tank (Place Holder)
+		name = USA_trump.20.a
+		ai_chance = { factor = 90 }
+	}
+
+	option = { # Drone (Place Holder)
+		name = USA_trump.20.b
+		ai_chance = { factor = 50 }
+	}
+}
+
+# Semper Supra
+country_event = {
+	id = USA_trump.21
+	title = USA_trump.21.t
+	desc = USA_trump.21.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Semper Supra
+		name = USA_trump.21.a
+		ai_chance = { factor = 90 }
+	}
+}
+
+# State of the Economy
+country_event = {
+	id = USA_trump.22
+	title = USA_trump.22.t
+	desc = USA_trump.22.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Economy
+		name = USA_trump.22.a
+		ai_chance = { factor = 90 }
+	}
+}
+
+# Bess Achievements
+country_event = {
+	id = USA_trump.23
+	title = USA_trump.23.t
+	desc = USA_trump.23.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Bessent
+		name = USA_trump.23.a
+		ai_chance = { factor = 90 }
+	}
+}
+
+# 3rd bank Chart.
+country_event = {
+	id = USA_trump.24
+	title = USA_trump.24.t
+	desc = USA_trump.24.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Bank
+		name = USA_trump.24.a
+		ai_chance = { factor = 90 }
+	}
+}
+
+# WMAGA
+country_event = {
+	id = USA_trump.25
+	title = USA_trump.25.t
+	desc = USA_trump.25.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # WMAGA
+		name = USA_trump.25.a
+		ai_chance = { factor = 90 }
 	}
 }

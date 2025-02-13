@@ -274,7 +274,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			country_event = USA_trump.22
 		}
 	}
 
@@ -303,7 +303,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			country_event = USA_trump.23
 		}
 	}
 
@@ -332,7 +332,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			country_event = USA_trump.24
 		}
 	}
 
@@ -361,7 +361,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			add_offsite_building = { type = arms_factory level = 11 }
 		}
 	}
 
@@ -390,7 +390,9 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			add_resource = { type = oil amount = 45 state = 375 }
+			add_resource = { type = oil amount = 50 state = 463 }
+			add_resource = { type = oil amount = 30 state = 378 }
 		}
 	}
 
@@ -715,7 +717,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			country_event = USA_trump.20
 		}
 	}
 
@@ -804,7 +806,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			country_event = USA_trump.21
 		}
 	}
 
@@ -835,7 +837,9 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
+			country_event = USA_trump.25
+			add_political_power = 20
+			add_stability = 0.01
 		}
 	}
 }

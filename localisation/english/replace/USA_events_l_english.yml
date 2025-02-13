@@ -76,6 +76,28 @@
  USA_trump.19.d: "The Russo-Ukrainian war started a new type of warfare. one we must be prepared for as it has seemingly changed the way wars will work for the foreseable future."
  USA_trump.19.a: "Otorvali My leopardu golovu"
 
- USA_trump.20.t:
- USA_trump.20.d:
- USA_trump.20.a:
+ USA_trump.20.t: "Military Research and Development"
+ USA_trump.20.d: "R&D"
+ USA_trump.20.a: "Tank (place holder)"
+ USA_trump.20.b: "Drone or something (place holder)"
+
+ USA_trump.21.t: "Semper Supra"
+ USA_trump.21.d: "We have done reforms"
+ USA_trump.21.a: "Always Above"
+
+ USA_trump.22.t: "State of the Economy"
+ USA_trump.22.d: "Stonks"
+ USA_trump.22.a: "Promises made, Promises kept"
+
+ USA_trump.23.t: "Bessent's Achievements"
+ USA_trump.23.d: "No clue who he is"
+ USA_trump.23.a: "Economy guy"
+
+ USA_trump.24.t: "3rd National Bank Charter"
+ USA_trump.24.d: "Jackson moment"
+ USA_trump.24.a: "MAGA"
+
+ USA_trump.25.t: "We Made America Great Again!"
+ USA_trump.25.d: "Trump Dub, ez"
+ USA_trump.25.a: "WMAGA!"
+
