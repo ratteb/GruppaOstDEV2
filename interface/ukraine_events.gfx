@@ -25,4 +25,14 @@ spriteTypes = {
 		name = "GFX_news_ukraine_event_005"
 		texturefile = "gfx/event_pictures/news_ukraine_event_005.dds"
 	}
+
+	# RUSSIA 
+
+	# country event 
+		spriteType = {
+		name = "GFX_report_daily_briefing_mod"
+		texturefile = "gfx/event_pictures/report_event_briefing_mod.dds"
+	}
+
+	
 }

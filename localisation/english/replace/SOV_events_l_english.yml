@@ -2,9 +2,22 @@
 
  # Sotnik Modernization Program Events
  SOV_sotnik.1.t: "Sotnik-1 Modernization Programme"
+ SOV_sotnik.1.d: "It was only 7:00 in the morning, in the Kremlin, Moscow, Vladimir Putin was sitting at the head where the daily briefings of the Ministry of Defense are held, ever since the Special Military Operation, he had seen this same room, same people, as he sat there, waiting, at 7:05 percisely everyone was there, Putin started with a sigh: 'So, how are the plans of the Modernization Programme? Are they ready? Can we commence?' At these questions, Valery Gerasimov, practically the head of the Russian Army at this point, gave an excited answer: 'Yes mister president, we are ready to commence the modernization programme, the entire plan is written out on the document in front of you, all you must do is sign and give us the budget.' something akin to a smile came onto his face, it was clear that Gerasimov was proud of the long hours of work put in this plan, yet Putin seemed, not impressed, he hasnt smiled and simply looked down at the document.\n\nAfter quickly skimming it, Putin turned to the last page and signed the document, with another sign he handed it to his secretary, the briefing didn't take long, it was boring reports about numbers of conscripts, officers, expenses and earnings, Putin was getting old and he simply couldn't bother with much of it anymore, at 7:30 it was over, and they all left the room, however Putin still had a job to do, announce the modernization program on live television for the nation to witness, with certain examples already being shown on the news sites and television: 'Dear citizens of Russia...'"
  SOV_sotnik.1.a: "Ura!"
+
+ SOV_sotnik.2.t: "Officer Corps Purges Cause Slowdowns!"
+ SOV_sotnik.2.a: "What the Hell Man!?"
 
  SOV_sotnik.3.t: "Officer Corps Reform Results"
  SOV_sotnik.3.a: "We Will Implement an NCO System!"
  SOV_sotnik.3.b: "We Will Continue With the Reserve Officer System"
+
+ SOV_sotnik.4.t: "Gerasimov's Reaction"
+ SOV_sotnik.4.d: "He angry boy"
+ SOV_sotnik.4.a: "Let Him Bark"
+ SOV_sotnik.4.b: "Punish Him for Speaking Out"
+
+ SOV_sotnik.5.t: "Gerasimov's Reaction"
+ SOV_sotnik.5.d: "He happy boy"
+ SOV_sotnik.5.a: "Keep Him Happy"
 

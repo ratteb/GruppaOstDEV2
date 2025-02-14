@@ -11,7 +11,7 @@ country_event = {
 	id = SOV_sotnik.1
 	title = SOV_sotnik.1.t
 	desc = SOV_sotnik.1.d
-	picture = GFX_report_event_chinese_soldiers_fighting
+	picture = GFX_report_daily_briefing_mod
 	
 	is_triggered_only = yes
 	
@@ -63,6 +63,52 @@ country_event = {
 	}
 }
 
+# Gerasimov responds to reserve officers 
+country_event = {
+	id = SOV_sotnik.4
+	title = SOV_sotnik.4.t
+	desc = SOV_sotnik.4.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Keep him barking 
+		name = SOV_sotnik.4.a
+		ai_chance = { factor = 90 }
+		set_country_flag = SOV_didnt_punish_gerasimov
+		add_political_power = -25
+		add_command_power = -50
+		army_experience = 10
+    }
+	option = { # Punish him for speaking out 
+		name = SOV_sotnik.4.b
+		ai_chance = { factor = 10 }
+		set_country_flag = SOV_punished_gerasimov
+		add_political_power = 25
+		add_command_power = 35
+		army_experience = -5
+		add_timed_idea = {
+			idea = SOV_silence_critics
+			days = 56
+		}
+    }
+}
+
+# Gerasimov responds to NCO 
+country_event = {
+	id = SOV_sotnik.5
+	title = SOV_sotnik.5.t
+	desc = SOV_sotnik.5.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # A great development
+		name = SOV_sotnik.5.a
+		ai_chance = { factor = 90 }
+		add_political_power = 5
+    }
+}
 
 
 

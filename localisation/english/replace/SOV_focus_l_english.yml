@@ -12,12 +12,16 @@
  SOV_boost_production_quotas:0 "Expand Production"
 
  SOV_review_officer_corps:0 "Review Officer Corps"
+ SOV_review_officer_corps_desc:0 "What we have realized in the many years of war, is that the Russian Armed Forces, and more specifically the Russian Officer Corps is plagued by corruption, and other major issues. The Ministry of Defense has ordered a nation wide review and inspection of the Officer Corps in order to get rid of underpreforming officers, corrupt officers, and those that do not comply with the standards of the Russian Armed Forces, those in charge of Contract Soldiers will be more harshly punished and investigated than others, as they are our main force ready to defend the Motherland."
 
  SOV_officer_corps_reform:0 "Reform Officer Corps"
+ SOV_officer_corps_reform_desc:0 "We have realized in the wake of the Special Military Operation, that our Officer Corps is lackluster, we have a choice in the matter on either following Gerasimov's plan of inserting the widepsread NCO system, which will give us more flexibility on the field, and allow us to reorganize quickly, or we can follow the plans of the old guard and continue with the Reserve Officer Corps, which prioritizes strategical levels of organization and movements in a big force. Whichever we choose, we must make sure it is the right one, lest our army gets defeated and emberassed in a major war."
 
  SOV_NCO_system:0 "Introduce NCO System"
+ SOV_NCO_system_desc:0 "After careful consideration, the Ministry of Defense, with the approval of President Vladimir V. Putin, has chosen to impliment the plans and strategies of Valery Gerasimov, and introduce the NCO system, decomissioning a lot of our reserve officers, and immediately beginning the training and review of new Non Comissioned Officers within our combat units, giving them more freedom to make orders, move around, and divert from the central command. Allowing for quick decisions to be made on the field. The West is not one step ahead!"
 
  SOV_expand_reserve_officer:0 "Expand Reserve Officer System"
+ SOV_expand_reserve_officer_desc:0 "With the size of the Russian Armed Forces, the Ministry of Defense and Vladimir Putin had decided that the strategical level is much more important, and that a large reserve officer corps can solve the lack of strategical command expertise, while this does sacrifice liberties of the individual units, the army as a whole will have much more cohesion and organization, leading to a large, decisive and organized force. This however has once again proven the influence the Old Guard has over Putin and the Ministry of Defense..."
 
  SOV_review_strategical_doctrines:0 "Review Strategical Doctrines"
 

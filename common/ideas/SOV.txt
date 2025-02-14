@@ -141,5 +141,34 @@ ideas = {
 				weekly_manpower = -50
 			}
 		}
+
+	    SOV_silence_critics = {
+		    picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = SOV
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = -0.15
+				stability_factor = -0.05
+				war_support_factor = 0.1
+				easternism_drift = 0.02
+			}
+		}
 	}
 }

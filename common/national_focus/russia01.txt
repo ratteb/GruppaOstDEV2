@@ -337,7 +337,11 @@ focus_tree = {
 				value = -0.15
 			}
 
+			add_manpower = 2750
+
 			custom_effect_tooltip = SOV_NCO_system_cet
+
+			country_event = SOV_sotnik.5
 		}
 	}
 	focus = {
@@ -390,7 +394,11 @@ focus_tree = {
 				var = RAF_morale_variable
 				value = -0.05
 			}
+
+			add_manpower = -756
 			custom_effect_tooltip = SOV_expand_reserve_officer_cet
+
+			country_event = SOV_sotnik.4
 		}
 	}
 	focus = {
