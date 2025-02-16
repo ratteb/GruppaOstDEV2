@@ -156,3 +156,31 @@ SOV_sotnik_program = {
 	consumer_goods_factor = UKR_DC_consumer_goods_variable
 
  }
+
+  USA_american_armed_forces = {
+	icon = "GFX_idea_unknown"
+
+
+	conscription_factor = USAF_manpower_factor_variable
+	conscription  = USAF_manpower_variable 
+	acclimatization_cold_climate_gain_factor = USAF_cold_defense_variable
+	acclimatization_hot_climate_gain_factor = USAF_hot_defense_variable
+	air_superiority_bonus_in_combat = USAF_cas_bonus_variable
+	army_attack_factor = USAF_attack_bonus_variable
+	army_attack_speed_factor = USAF_attack_speed_variable
+	army_defence_factor = USAF_defense_variable 
+	army_speed_factor = USAF_speed_variable
+	army_morale_factor = USAF_morale_variable
+	army_org_factor = USAF_org_variable
+	army_org_regain = USAF_recovery_variable
+	breakthrough_factor = USAF_breakthrough_variable
+	cas_damage_reduction = USAF_camouflage_variable
+	dig_in_speed_factor = USAF_dig_speed_variable
+	max_dig_in_factor = USAF_dig_max_variable
+	max_planning_factor = USAF_planning_variable
+	planning_speed = USAF_planning_speed_variable
+	experience_loss_factor = USAF_xp_protection_variable
+    experience_gain_army_factor = USAF_xp_gain_variable
+	special_forces_min = USAF_special_forces_variable
+	land_night_attack = USAF_nightvis_variable
+}

@@ -128,11 +128,11 @@ add_to_faction = ALB
 add_to_faction = BOS
 
 set_popularities = {
-	westernism = 99
+	westernism = 98
 	communism = 0
 	neutrality = 1
 	easternism = 0
-	socialism = 0
+	socialism = 1
 	despotism = 0
 }
 
@@ -156,5 +156,46 @@ create_country_leader = {
 	}
 }
 
+# US Armed Forces
 
+set_variable = {
+	var = USAF_attack_bonus_variable
+	value = 0.10
+}
 
+set_variable = {
+	var = USAF_defense_variable
+	value = -0.10
+}
+
+set_variable = {
+	var = USAF_breakthrough_variable
+	value = 0.20
+}
+
+set_variable = {
+	var = USAF_dig_max_variable
+	value = -0.25
+}
+
+set_variable = {
+	var = USAF_dig_speed_variable
+	value = 0.05
+}
+
+set_variable = {
+	var = USAF_xp_gain_variable
+	value = -0.15
+}
+
+set_variable = {
+	var = USAF_speed_variable
+	value = 0.05
+}
+
+set_variable = {
+	var = 
+	value = 0.05
+}
+
+add_dynamic_modifier = { modifier = USA_american_armed_forces }
