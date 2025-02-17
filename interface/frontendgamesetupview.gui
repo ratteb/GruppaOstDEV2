@@ -10,16 +10,12 @@ guiTypes = {
 	containerWindowType = {
 		name = "bookmark_entry"
 		position = { x= 0 y = 0 }
-		size = { width=232 height=211}
+		size = { width=383 height=650}
 		clipping = no
 		fade_time = 500
 		fade_type = linear
 
-		background = {
-			name = "background"
-			quadTextureSprite = "GFX_bookmark_entry_bg"
-			clicksound = click_checkbox
-		}
+
 
 		iconType = {
 			name = "icon"
@@ -30,7 +26,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "date"
-			position = { x = 22 y = 147 }
+			position = { x = 122 y = 40 }
 			font = "hoi_20b"
 			borderSize = {x = 0 y = 0}
 			text = "FE_BOOKMARK_DATE"
@@ -503,7 +499,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name ="gamesetup_scenario_window"
-		size = { width = 579 height = 512 }
+		size = { width = 779 height = 712 }
 		clipping = no
 		orientation = center
 		origo = center
@@ -511,7 +507,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "title"
-			position = { x = 120 y = 14 }
+			position = { x = 218 y = 20 }
 			textureFile = ""
 			font = "hoi_20b"
 			borderSize = {x = 0 y = 0}
@@ -533,7 +529,7 @@ guiTypes = {
 
 			gridboxType = {
 				name ="bookmarks_grid"
-				position = { x = 130 y = 0 }
+				position = { x = -64 y = -25 }
 				size = { width = 100%% height = 100%% }
 				slotsize = { width = 2600 height = 0 }
 				add_horizontal = yes
@@ -543,33 +539,22 @@ guiTypes = {
 		}
 
 		instantTextBoxType = {
-			name = "history_title"
-			position = { x = 110 y = 274 }
-			font = "hoi_20b"
-			borderSize = {x = 0 y = 0}
-			text = "BM_HISTORY_TITLE"
-			maxWidth = 340
-			maxHeight = 30
-			format = centre
-		}
-
-		instantTextBoxType = {
 			name = "bookmark_title"
-			position = { x = 25 y = 305 }
-			font = "hoi4_typewriter22"
+			position = { x = 412 y = 68 }
+			font = "TD_event_font_20pt"
 			borderSize = {x = 0 y = 0}
-			maxWidth = 340
+			maxWidth = 360
 			maxHeight = 30
 			format = left
 		}
 
 		instantTextBoxType = {
 			name = "bookmark_desc"
-			position = { x = 25 y = 330 }
-			font = "hoi4_typewriter16"
+			position = { x = 404 y = 130 }
+			font = "TD_event_font_16pt"
 			borderSize = {x = 0 y = 0}
-			maxWidth = 535
-			maxHeight = 100
+			maxWidth = 359
+			maxHeight = 548
 			format = left
 			scrollbarType = standardtext_slider
 
@@ -577,7 +562,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "back_button"
-			position = { x = 30 y = -57 }
+			position = { x = 470 y = -42 }
 			quadTextureSprite ="GFX_button_221x34"
 			buttonText = "BACK"
 			buttonFont = "hoi_18mbs"
@@ -589,7 +574,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "select_button"
-			position = { x = -252 y = -57 }
+			position = { x = -685 y = -42 }
 			quadTextureSprite ="GFX_button_221x34"
 			buttonText = "FE_SELECT_SCENARIO"
 			buttonFont = "hoi_18mbs"

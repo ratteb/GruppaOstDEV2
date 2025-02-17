@@ -99,6 +99,15 @@ bitmapfonts = {
         }
     }
     bitmapfont = {
+        name = "TD_event_font_20pt"
+		path = "gfx/fonts/TD_event_font_20pt"
+        color = 0xffffffff
+
+        textcolors = {
+            G = { 86 172 91 }
+        }
+    }
+    bitmapfont = {
         name = "TD_event_font_26pt"
 		path = "gfx/fonts/TD_event_font_26pt"
         color = 0xffffffff
