@@ -1,8 +1,11 @@
 ﻿l_english:
 
  # Ukraine Internal
- ukraine.1.t:0 "The Political Crisis."
- ukraine.1.d:0 "I heard Chesseburgers taste amazing!"
+ ukraine.1.t:0 "Assess the Situation"
+ ukraine.1.d:0 "It was a grey morning in Ukraine, Christmas and New Years had just passed, and tempratures have been as low as can be, president Igor was sitting in his office within the city of Kyiv looking at certain documents, ever since the end of the war, Ukraine has been on the decline, he had multiple documents on his table, one by the Ministry of Internal Affairs, referring to things about crime, poverty, and standards of living, another one by the National Guard, relating to the insurgency happening right inside their country, and the last one, by his own political party.\n\nThe Ministry of Internal Affairs reports a large growth in crime rates, increase in povery and reduction of living standards, over the past year violent crimes have increased by 45% majority in major cities, thousands of people entered poverty, and have no way out, and every year, less children attend, and pass high school.\n\nThe National Guard reported a casualty rate of atleast 677 National Guard soldiers over the past 2 months, with help from the Armed Forces being nearly nothing, a 30% increase in activity by the Azovites, and atleast 300 seizures of homes being successful with heavy weaponry being found, extreme nationalist rhetoric, and hate for the current government of Ukraine. A large report also details how the brigade has smuggled in weapons into the territory of the Russian Federation, causing a large drop in relations.\n\nAnd the last report, by the "For Motherland" party, atleast 300 rallies over the past 2 years have been done all accross the country, with a total drop in support of over 40% for Igor as president, citing failures to help the Ukrainian people, a large drop in the standards of living, no way to revive the economy, and authoritarian policies. This has led to a large amount of political violence, mainly between right wing, left wing, and the centre, with riots being a major issue, and a potential removal of the president of Ukraine.\n\nIn the end, Ukraine does not have the resources to tackle all these issues at once, and so Igor decided to direct all efforts to...."
+ ukraine.1.a:0 "The Political Crisis!"
+ ukraine.1.b:0 "The Azov Insurgency!"
+ ukraine.1.c:0 "The Crime Wave!"
 
  # Ukraine News
  news_ukraine.1.t:0 "Military Buildup near Zakarpattia"

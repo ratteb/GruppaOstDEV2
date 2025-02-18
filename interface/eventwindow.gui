@@ -64,7 +64,6 @@ guiTypes = {
 			background = {
 				name = "Background"	
 				quadTextureSprite ="GFX_event_report_tileable_midsection"
-				borderSize = {x = 512 y = 512 }
 			}
 
 			instantTextBoxType = {
@@ -72,8 +71,7 @@ guiTypes = {
 				position = { x = 32 y = 0 }
 				font = "TD_event_font_16pt"
 				borderSize = {x = 0 y = 0}
-				text = "Long text here!"
-				scrollbarType = "standardtext_slider"	
+				text = "Long text here!"	
 				clipping = yes 
 				maxWidth = 512
 				maxHeight = 512

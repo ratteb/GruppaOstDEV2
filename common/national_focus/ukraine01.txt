@@ -39,6 +39,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			country_event = ukraine.1
 		}
 	}
 
@@ -59,6 +60,10 @@ focus_tree = {
 		}
 
 		available = {
+				custom_trigger_tooltip = {
+				tooltip = UKR_chose_focus_azov_ctt
+				has_country_flag = UKR_focus_azov
+			}
 		}
 		
 		bypass = {
@@ -339,6 +344,10 @@ focus_tree = {
 		}
 
 		available = {
+				custom_trigger_tooltip = {
+				tooltip = UKR_chose_focus_crimewave_ctt
+				has_country_flag = UKR_focus_crimewave
+			}
 		}
 		
 		bypass = {
@@ -900,6 +909,10 @@ focus_tree = {
 		}
 
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = UKR_chose_focus_politicalcrisis_ctt
+				has_country_flag = UKR_focus_political
+			}
 		}
 		
 		bypass = {

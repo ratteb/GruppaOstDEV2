@@ -4,4 +4,9 @@
  SOV_chose_expand_reserve_ctt: "§GWe Have Decided on Expanding the Reserve Officer Corps§!"
  SOV_chose_install_NCO_ctt: "§CWe Have Decided on Implimenting an NCO System§!"
  SOV_equipments_ctt: "§RWe Have Been Forced to Redirect Efforts Due to Slowdown§!"
+
+ #Ukraine Tree
+ UKR_chose_focus_azov_ctt: "§RWe Have Chosen To Focus on the Azov Insurgency§!"
+ UKR_chose_focus_crimewave_ctt: "§BWe Have Chosen To Focus on the Crimewave§!"
+ UKR_chose_focus_politicalcrisis_ctt: "§0We Have Chosen To Focus on the Political Crisis§!"
  

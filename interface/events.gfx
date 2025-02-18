@@ -1,10 +1,10 @@
 spriteTypes = {
-	#Internal Events 
+	#UKRAINE INTERNAL 
 	spriteType = {
-		name = "GFX_placeholder"
-		texturefile = "gfx/event_pictures/report_event_japan_army_mountainside.dds"
+		name = "GFX_kiev_doomer"
+		texturefile = "gfx/event_pictures/report_event_kiev_doomer.dds"
 	}
-   #news events 
+   #UKRAINE NEWS 
 	spriteType = {
 		name = "GFX_news_ukraine_event_001"
 		texturefile = "gfx/event_pictures/news_ukraine_event_001.dds"

@@ -3,21 +3,34 @@
 ###########################
 
 add_namespace = ukraine 
+add_namespace = ukraine_crimewave
+add_namespace = ukraine_azov
+add_namespace = ukraine_political_crisis
 add_namespace = news_ukraine
 
-# Irrelevant for now 
+# Assess the Situation
 country_event = {
 	id = ukraine.1
 	title = ukraine.1.t
 	desc = ukraine.1.d
-	picture = GFX_report_event_chinese_soldiers_fighting
+	picture = GFX_kiev_doomer
 	
 	is_triggered_only = yes
 	
-	option = { # May They Be Saved....
+	option = { #Political Crisis 
 		name = ukraine.1.a
-		ai_chance = { factor = 90 }
-		load_focus_tree = ukraine_focus02
+		ai_chance = { factor = 1 }
+		set_country_flag = UKR_focus_political
+    }
+	option = { #Azov insurgency 
+		name = ukraine.1.b
+		ai_chance = { factor = 1 }
+		set_country_flag = UKR_focus_azov
+    }
+	option = { #crime wave 
+		name = ukraine.1.c
+		ai_chance = { factor = 1 }
+		set_country_flag = UKR_focus_crimewave
     }
 }
 
