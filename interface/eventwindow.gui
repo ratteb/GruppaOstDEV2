@@ -58,6 +58,7 @@ guiTypes = {
 			position = { x=0 y=121 }	
 			size = { width = 580 height = 100 }
 			moveable = yes
+			fixedsize = yes
 			clipping = yes
 			Orientation = UPPER_LEFT
 
@@ -71,7 +72,8 @@ guiTypes = {
 				position = { x = 32 y = 0 }
 				font = "TD_event_font_16pt"
 				borderSize = {x = 0 y = 0}
-				text = "Long text here!"	
+				text = "Long text here!"
+				scrollbarType = "standardtext_slider"
 				clipping = yes 
 				maxWidth = 512
 				maxHeight = 512
