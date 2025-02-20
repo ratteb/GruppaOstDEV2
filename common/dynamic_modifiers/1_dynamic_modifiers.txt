@@ -183,4 +183,6 @@ SOV_sotnik_program = {
     experience_gain_army_factor = USAF_xp_gain_variable
 	special_forces_min = USAF_special_forces_variable
 	land_night_attack = USAF_nightvis_variable
+	political_power_gain = USAF_political_gain_variable
+	war_support_factor = USAF_war_support_variable
 }

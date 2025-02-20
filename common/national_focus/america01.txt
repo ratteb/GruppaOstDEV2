@@ -1,4 +1,4 @@
-﻿
+
 focus_tree = {
 	id = america_focus01
 	
@@ -18,7 +18,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_january_rally
-		icon = GFX_goal_no_data
+		icon = GFX_goal_january_rally
 		x = 21
 		y = 2
 
