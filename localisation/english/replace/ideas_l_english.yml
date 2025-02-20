@@ -50,6 +50,9 @@
  UKR_political_chaos01_desc:0 "Our country's political sphere is nothing but utter chaos. People are fighting on the streets, our president is not that popular and reforms are desperately needed. We could reach out to Russia and risk a complete upheval of the country's political sphere. Or try to fix it on our own."
  UKR_political_chaos02:0 "Political Chaos"
  UKR_political_chaos03:0 "Political Chaos"
+ UKR_demographics_crisis:0 "Demographics Crisis"
+ UKR_ukraine_armed_forces:0 "Armed Forces of Ukraine"
+ UKR_ukraine_armed_forces_desc:0 "\n\n\n\n£armed_forces_ukraine_texticon \n\n\n\n\n The Armed Forces of Ukraine was formed on the 6th of December 1991, tracing its lineage back to the 1910s and 1920s, it used to be one of the most powerful armies in Europe, up until the defeat of Ukraine in the Russo-Ukraine war in 2025,  afterwards, a large demobilization was to be conducted, leaving the army with only its most experienced. However, the major destruction of the military hardware, has left it with nothing but a shell of its former self. The Armed Forces is tasked with defending Ukraine from internal and external threats, however major issues have to be noted with corruption and unmotivated personnel. The Armed Forces however remembers its victories not only in 2014, but also in 2022, where they have emberassed an invader and proven capable of fighting for itself."
 
  #Russia 
  SOV_economic_stagnation01:0 "Economic Stagnation"

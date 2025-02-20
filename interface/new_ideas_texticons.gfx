@@ -6,6 +6,11 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_armed_forces_ukraine_texticon"
+		texturefile = "gfx/texticons/banners/armed_force_ukraine.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "GFX_memories_of_donbass_texticon"
 		texturefile = "gfx/texticons/banners/memories_of_donbass.dds"
 		legacy_lazy_load = no

@@ -4,8 +4,10 @@
  SOV_sotnik1_announcement_desc:0 "2 Years after the victory in the Special Military Operation, Vladimir Putin and the Ministry of Defense have drawn up the plan and opened the budget to announce the Sotnik-1 Modernization Program, looked to overhaul the equipment, tactics, and status of the Russian Armed Forces. Many issues were noted with the Armed Forces, the Gerasimov Doctrine was proven to be too ineffective to secure a quick victory in Ukraine, and has cost us a lot of Russian lives in the process, we need to make a choice to scrap this doctrine or renew it to make it effective enough. And we must remind ourselves to always be ready for a war with the collective west!"
 
  SOV_announce_new_equipments:0 "Announce New Equipment"
+ SOV_announce_new_equipments_desc:0 "With a new modernization programme, ofcourse, involves the production and research of new types of equipment, bodyarmour, uniforms, and other such improvements. We will announce in one of the daily briefings of the Ministry of Defense the introduction and implementation of new types of equipment, in order to bolster faith and support for the programme. We will then be able to showcase these in the ARMY-2027 International convention."
 
  SOV_showcase_new_equipments:0 "«ARMY-2027»"
+ SOV_showcase_new_equipments_desc:0 "«ARMY-2027» Is the name of the International Military-Technical Form that will be held in the wake of 2027, with other nations such as China, Iran, Belarus, and many more exchanging Military technologies, showcasing them, and a potential for making new contacts in the international sphere. This will be held in Novosibirsk, Russia, and we hope to learn much from our international compatriots!"
 
  SOV_put_it_in_production:0 "Mass Produce New Equipment"
 

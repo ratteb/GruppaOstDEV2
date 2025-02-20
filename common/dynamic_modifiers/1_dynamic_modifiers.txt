@@ -157,6 +157,34 @@ SOV_sotnik_program = {
 
  }
 
+  UKR_ukraine_armed_forces = {
+	icon = "GFX_idea_unknown"
+
+
+	conscription_factor = AFU_manpower_factor_variable
+	conscription  = AFU_manpower_variable 
+	acclimatization_cold_climate_gain_factor = AFU_cold_defense_variable
+	acclimatization_hot_climate_gain_factor = AFU_hot_defense_variable
+	air_superiority_bonus_in_combat = AFU_cas_bonus_variable
+	army_attack_factor = AFU_attack_bonus_variable
+	army_attack_speed_factor = AFU_attack_speed_variable
+	army_defence_factor = AFU_defense_variable 
+	army_speed_factor = AFU_speed_variable
+	army_morale_factor = AFU_morale_variable
+	army_org_factor = AFU_org_variable
+	army_org_regain = AFU_recovery_variable
+	breakthrough_factor = AFU_breakthrough_variable
+	cas_damage_reduction = AFU_camouflage_variable
+	dig_in_speed_factor = AFU_dig_speed_variable
+	max_dig_in_factor = AFU_dig_max_variable
+	max_planning_factor = AFU_planning_variable
+	planning_speed = AFU_planning_speed_variable
+	experience_loss_factor = AFU_xp_protection_variable
+    experience_gain_army_factor = AFU_xp_gain_variable
+	special_forces_min = AFU_special_forces_variable
+	land_night_attack = AFU_nightvis_variable
+}
+
   USA_american_armed_forces = {
 	icon = "GFX_idea_unknown"
 

@@ -94,7 +94,7 @@ add_opinion_modifier = {
 	target = NOV
 	modifier = hostile_status
 }
-
+# demographics crisis 
 set_variable = {
 	var = UKR_DC_population_growth_variable
 	value = -1.25
@@ -127,8 +127,45 @@ set_variable = {
 	var = UKR_DC_construction_speed_variable
 	value = -0.4
 }
+# AFU 
 
-
+set_variable = {
+	var = AFU_attack_bonus_variable 
+	value = -0.25
+}
+set_variable = {
+	var = AFU_defense_variable 
+	value = 0.05
+}
+set_variable = {
+	var = AFU_morale_variable
+	value = -0.35
+}
+set_variable = {
+	var = AFU_org_variable
+	value = 0.06
+}
+set_variable = {
+	var = AFU_recovery_variable
+	value = -0.09
+}
+set_variable = {
+	var = AFU_xp_protection_variable
+	value = -0.26
+}
+set_variable = {
+	var = AFU_camouflage_variable
+	value = 0.35
+}
+set_variable = {
+	var = AFU_dig_speed_variable
+	value = 0.25
+}
+set_variable = {
+	var = AFU_dig_max_variable
+	value = 0.15
+}
+add_dynamic_modifier = { modifier = UKR_ukraine_armed_forces }
 add_dynamic_modifier = { modifier = UKR_demographics_crisis }
 add_ideas = {
 	disarmed_nation
