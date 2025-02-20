@@ -12,4 +12,12 @@ spriteTypes = {
 		name = "GFX_goal_january_rally"
 		texturefile = "gfx/interface/goals/focus_january_rally.dds"
 	}
+
+
+
+	# Finish the Wall
+	spriteType = {
+		name = "GFX_goal_finish_the_wall"
+		texturefile = "gfx/interface/goals/focus_finish_the_wall.dds"
+	}
 }
