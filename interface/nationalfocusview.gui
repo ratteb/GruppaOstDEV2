@@ -680,7 +680,7 @@ guiTypes = {
 			name = "name"
 			position = { x = 30 y = 12 }
 			textureFile = ""
-			font = "hoi_24header"
+			font = "TD_event_font_26pt"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 450
@@ -732,23 +732,23 @@ guiTypes = {
 			name = "desc"
 			position = { x = 34 y = 250 }
 			textureFile = ""
-			font = "hoi_18mbs"
+			font = "TD_event_font_18pt"
 			borderSize = {x = 5 y = 0}
 			text = "Description"
 			maxWidth = 480
 			maxHeight = 600
-			format = center
+			format = left
 		}
 
 		iconType = {
 			name = "reward_bg"
-			position = { x = 75 y = 545 }
+			position = { x = 0 y = 545 }
 			spriteType = "GFX_unit_list_header"
 		}		
 		
 		instantTextboxType = {
 			name = "reward_label"
-			position = { x = 38 y = 550 }
+			position = { x = 30 y = 550 }
 			textureFile = ""
 			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
