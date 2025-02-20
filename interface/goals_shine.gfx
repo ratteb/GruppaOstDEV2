@@ -65,7 +65,7 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
-}
+
 
  # JANUARY RALLY SHINE
 	SpriteType = {

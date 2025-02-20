@@ -4,11 +4,9 @@ spriteTypes = {
 		name = "GFX_goal_no_data"
 		texturefile = "gfx/interface/goals/focus_no_data.dds"
 	}
-}
+
 
 # Trump's icons
-
-spriteTypes = {
 	# January Rally
 	spriteType = {
 		name = "GFX_goal_january_rally"
