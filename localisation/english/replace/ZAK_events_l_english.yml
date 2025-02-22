@@ -1,0 +1,13 @@
+﻿l_english:
+
+ # Zakarpattia Events
+ zakarpattia.1.t: "A Request from Karpatalija"
+ zakarpattia.1.d: "A request has reached the table of our ministers, it was from the command of the Karpatalija region and they are requesting monitors to monitor the referendum process. What shall we do?"
+ zakarpattia.1.a: "Refuse Their Offer"
+ zakarpattia.1.b: "Send the Monitor"
+
+ zakarpattia.2.t: "Request from Zakarpattia Region"
+ zakarpattia.2.d: "The Hungarian Peacekeepers in the Zakarpattia region have come to us with a request to send a monitoring mission on wether the referendum process is going correctly. The Ministry of Territorial Integrity has claimed this would be a good way for us to assert our influence in the region, and make sure the Hungarians do not try to strip more territory from our nation as has already happened. However we might get claims of electoral meddling if the referendum goes in our favour.\n\nWether in all the decision is up to the president to send this mission, it may even provide us with a way to sneak in SBU agents more effectively."
+ zakarpattia.2.a: "Send the Monitors"
+ zakarpattia:2.b: "Our Resources are Spread Thin"
+

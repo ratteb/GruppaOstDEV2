@@ -65,5 +65,66 @@ ideas = {
 				westernism_drift = 0.04
 			}
 		}
+
+	ZAK_hungary_monitor = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = ZAK
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+				NOT = { HUN = { has_idea = HUN_zakarpat_occupation }}
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				westernism_drift = 0.05
+				political_power_factor = 0.12
+				party_popularity_stability_factor = 0.05
+				monthly_population = 0.07
+			}
+		}
+
+	ZAK_ukraine_monitor = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = ZAK
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+				NOT = { HUN = { has_idea = HUN_zakarpat_occupation }}
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 0.05
+				political_power_factor = -0.15
+				party_popularity_stability_factor = -0.12
+				monthly_population = 0.05
+				
+			}
+		}
 	}
 }

@@ -16,7 +16,7 @@ focus_tree = {
 
 	focus = {
 		id = ZAK_the_occupation
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_no_data
 		x = 6
 		y = 2
 
@@ -50,7 +50,7 @@ focus_tree = {
 	focus = {
 		id = ZAK_rebuild_karpatia
 		prerequisite = { focus = ZAK_the_occupation }
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_no_data
 		relative_position_id = ZAK_the_occupation
 		x = 1
 		y = 1
@@ -84,7 +84,7 @@ focus_tree = {
 	focus = {
 		id = ZAK_contact_hungary
 		prerequisite = { focus = ZAK_the_occupation }
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_no_data
 		relative_position_id = ZAK_the_occupation
 		x = -1
 		y = 1
@@ -93,10 +93,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				JAP = { has_government = communism }
-				factor = 0
-			}
 		}
 
 		available = {
@@ -109,12 +105,13 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			HUN = { country_event = zakarpattia.1 }
 		}
 	}
 	focus = {
 		id = ZAK_contact_ukraine
 		prerequisite = { focus = ZAK_contact_hungary }
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_no_data
 		relative_position_id = ZAK_contact_hungary
 		x = 0
 		y = 1
@@ -123,10 +120,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				JAP = { has_government = communism }
-				factor = 0
-			}
 		}
 
 		available = {
@@ -138,12 +131,13 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			UKR = { country_event = zakarpattia.2 }
 		}
 	}
 	focus = {
 		id = ZAK_increase_5th_brigade
 		prerequisite = { focus = ZAK_rebuild_karpatia }
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_no_data
 		relative_position_id = ZAK_rebuild_karpatia
 		x = 0
 		y = 1
@@ -184,7 +178,7 @@ focus_tree = {
 		id = ZAK_prepare_referendum
 		prerequisite = { focus = ZAK_increase_5th_brigade }
 		prerequisite = { focus = ZAK_contact_ukraine }
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_no_data
 		relative_position_id = ZAK_contact_ukraine
 		x = 1
 		y = 1
@@ -215,7 +209,7 @@ focus_tree = {
 	focus = {
 		id = ZAK_hold_referendum
 		prerequisite = { focus = ZAK_prepare_referendum}
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_no_data
 		relative_position_id = ZAK_prepare_referendum
 		x = 0
 		y = 1
@@ -229,16 +223,18 @@ focus_tree = {
 				factor = 0
 			}
 		}
-custom_effect_tooltip = "ZAK_tooltip_1_tt"
-    hidden_effect = {
-		available = {
-			NOT = { is_in_faction_with = UKR }
-			NOT = { is_puppet_of = UKR }
-			NOT = { has_war_with = UKR }
-		}
-	}
 	available = {
-			UKR = { has_country_flag = UKR_political_crisis_over}
+
+		custom_trigger_tooltip = {
+				tooltip = ZAK_referendum_requirements_ctt
+				UKR = { has_country_flag = UKR_political_crisis_over }
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZAK_referendum_requirements02_ctt
+				NOT = { is_in_faction_with = UKR }
+			    NOT = { is_puppet_of = UKR }
+			    NOT = { has_war_with = UKR }
+			}
 	}
 
 		cancel_if_invalid = yes
