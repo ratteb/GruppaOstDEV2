@@ -57,6 +57,10 @@ set_variable = {
 	var = RAF_dig_speed_variable
 	value = -0.17
 }
+set_variable = {
+	var = RAF_manpower_factor_variable
+	value = -0.82
+}
 
 # Sotnik Programme 
 set_variable = {
@@ -195,13 +199,13 @@ recruit_character = SOV_dmitry_medvedev
 
 add_ideas = {
 	SOV_economic_stagnation01
-	limited_conscription
+	contract_service
 	murder_semi_legal
 	lgbt_semi_ban
 	russia_rosgvardia
 	SOV_memories_of_chechnya 
-	min_very_high_bracket
-	max_super_high_bracket
+	min_super_high_bracket
+	44_year_old
 }
 
 add_timed_idea = {

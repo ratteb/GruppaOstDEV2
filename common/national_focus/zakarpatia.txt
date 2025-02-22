@@ -192,6 +192,16 @@ focus_tree = {
 				factor = 0
 			}
 		}
+		select_effect = {
+			country_event = { id = zakarpattia.3 
+			                  days = 1 } 
+			country_event = { id = zakarpattia.4
+			                  days = 1 }
+			country_event = { id = zakarpattia.5
+			                  days = 1 }
+			country_event = { id = zakarpattia.6
+			                  days = 1 }
+		}
 
 		available = {
 			NOT = { is_in_faction_with = UKR }

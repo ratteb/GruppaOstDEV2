@@ -78,7 +78,6 @@ ideas = {
 			}
 
 			cancel = {
-				NOT = { HUN = { has_idea = HUN_zakarpat_occupation }}
 
 			}
 
@@ -108,7 +107,6 @@ ideas = {
 			}
 
 			cancel = {
-				NOT = { HUN = { has_idea = HUN_zakarpat_occupation }}
 
 			}
 

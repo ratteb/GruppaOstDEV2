@@ -168,11 +168,13 @@ set_variable = {
 add_dynamic_modifier = { modifier = UKR_ukraine_armed_forces }
 add_dynamic_modifier = { modifier = UKR_demographics_crisis }
 add_ideas = {
-	disarmed_nation
+	self_defence_force
 	azof_insurgency01
 	ineffective_sbu01
 	UKR_political_chaos01 
 	enforced_neutrality
+	min_super_high_bracket 
+	max_super_high_bracket
 }
 recruit_character = UKR_ihor_palytsya
 set_politics = {

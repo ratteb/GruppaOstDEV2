@@ -102,6 +102,9 @@ HUN = {
 add_manpower = 4500
 add_ideas = {
 	ZAK_5th_brigade
+	volunteer_only
+	max_high_bracket
+	min_super_high_bracket
 }
 recruit_character = ZAK_farkas_sandor
 

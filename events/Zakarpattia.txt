@@ -3,6 +3,10 @@
 ###########################
 
 add_namespace = zakarpattia
+add_namespace = ZAK_ref_ukraine
+add_namespace = ZAK_ref_nomon
+add_namespace = ZAK_ref_hungary
+add_namespace = ZAK_ref_allmon
 add_namespace = news_zakarpattia
 
 # Send request to Hungary 
@@ -17,14 +21,20 @@ country_event = {
 	# no
 	option = { 
 		name = zakarpattia.1.a
-		ai_chance = { factor = 30 }
+		ai_chance = { factor = 40 }
+		ZAK = {
+			set_country_flag = no_hun_monitor
+			country_event = zakarpattia.8
+		}
     }
 	# yes
 	option = { 
 		name = zakarpattia.1.b
-		ai_chance = { factor = 70 }
+		ai_chance = { factor = 40 }
 		ZAK = { add_political_power = 15 
 		        add_ideas = ZAK_hungary_monitor 
+				set_country_flag = hun_monitor
+				country_event = zakarpattia.7 
 			}
     }
 }
@@ -40,18 +50,185 @@ country_event = {
 	# yes 
 	option = { 
 		name = zakarpattia.2.a
-		ai_chance = { factor = 50 }
+		ai_chance = { factor = 40 }
 		ZAK = { add_political_power = 15 
 		        add_ideas = ZAK_ukraine_monitor 
+				set_country_flag = ukr_monitor
+				country_event = zakarpattia.9 
 			}
-			set_country_flag = UKR_zakarpattia_monitor
     }
 	# no 
 	option = { 
 		name = zakarpattia.2.b
-		ai_chance = { factor = 50 }
-		ZAK = { add_political_power = -15 }
+		ai_chance = { factor = 40 }
+		ZAK = { add_political_power = -15 
+		set_country_flag = no_ukr_monitor 
+		country_event =  zakarpattia.10 
+		}
     }
+}
+
+# start of referendum preparations NO MONITORS 
+country_event = {
+	id = zakarpattia.3
+	title = zakarpattia.3.t
+	desc = zakarpattia.3.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	trigger = {
+		has_country_flag = no_ukr_monitor
+		has_country_flag = no_hun_monitor
+	}
+	
+	is_triggered_only = yes
+	
+	# yes 
+	option = { 
+		name = zakarpattia.3.a
+		ai_chance = { factor = 50 }
+    }
+	# no 
+	option = { 
+		name = zakarpattia.3.b
+		ai_chance = { factor = 50 }
+    }
+}
+# start of referendum preparations only HUNGARY monitors 
+country_event = {
+	id = zakarpattia.4
+	title = zakarpattia.4.t
+	desc = zakarpattia.4.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = hun_monitor 
+		has_country_flag = no_ukr_monitor
+	}
+	
+	# yes 
+	option = { 
+		name = zakarpattia.4.a
+		ai_chance = { factor = 50 }
+    }
+	# no 
+	option = { 
+		name = zakarpattia.4.b
+		ai_chance = { factor = 50 }
+    }
+}
+# start of referendum preparations only UKRAINE monitors 
+country_event = {
+	id = zakarpattia.5
+	title = zakarpattia.5.t
+	desc = zakarpattia.5.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	trigger = {
+		has_country_flag = ukr_monitor 
+		has_country_flag = no_hun_monitor
+	}
+	is_triggered_only = yes
+	
+	# yes 
+	option = { 
+		name = zakarpattia.5.a
+		ai_chance = { factor = 50 }
+    }
+	# no 
+	option = { 
+		name = zakarpattia.5.b
+		ai_chance = { factor = 50 }
+    }
+}
+# Zakarpattia referendum prep BOTH Monitor 
+country_event = {
+	id = zakarpattia.6
+	title = zakarpattia.6.t
+	desc = zakarpattia.6.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	trigger = {
+		has_country_flag = hun_monitor
+		has_country_flag = ukr_monitor 
+	}
+	
+	is_triggered_only = yes
+	
+	# yes 
+	option = { 
+		name = zakarpattia.6.a
+		ai_chance = { factor = 50 }
+	}
+	# no 
+	option = { 
+		name = zakarpattia.6.b
+		ai_chance = { factor = 50 }
+    }
+}
+# Hungary  approves 
+country_event = {
+	id = zakarpattia.7
+	title = zakarpattia.7.t
+	desc = zakarpattia.7.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	
+	is_triggered_only = yes
+	
+	# okay
+	option = { 
+		name = zakarpattia.7.a
+		ai_chance = { factor = 50 }
+	}
+}
+# Hungary declines 
+country_event = {
+	id = zakarpattia.8
+	title = zakarpattia.8.t
+	desc = zakarpattia.8.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	
+	is_triggered_only = yes
+	
+	# okay
+	option = { 
+		name = zakarpattia.8.a
+		ai_chance = { factor = 50 }
+	}
+}
+# Ukraine Approves 
+country_event = {
+	id = zakarpattia.9
+	title = zakarpattia.9.t
+	desc = zakarpattia.9.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	
+	is_triggered_only = yes
+	
+	# okay
+	option = { 
+		name = zakarpattia.9.a
+		ai_chance = { factor = 50 }
+	}
+}
+# Ukraine declines 
+country_event = {
+	id = zakarpattia.10
+	title = zakarpattia.10.t
+	desc = zakarpattia.10.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+
+	
+	is_triggered_only = yes
+	
+	# okay
+	option = { 
+		name = zakarpattia.10.a
+		ai_chance = { factor = 50 }
+	}
 }
 
 # Mobilization on the border with Zakarpattia. 
