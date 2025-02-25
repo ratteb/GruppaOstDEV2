@@ -35,4 +35,10 @@ spriteTypes = {
 		texturefile = "gfx/texticons/banners/georgian_war.dds"
 		legacy_lazy_load = no
 	}
+
+	spriteType = {
+		name = "GFX_russia_map_texticon"
+		texturefile = "gfx/texticons/maps/russianmaptexticon.dds"
+		legacy_lazy_load = no 
+	}
 }

@@ -6,14 +6,6 @@ bookmarks = {
 		picture = "GFX_select_date_2027"
 		default_country  = "SOV"
 	
-		FRA = {
-			history = FRA_BLITZKRIEG_DESC
-			ideology = westernism
-			ideas={
-			}
-			focuses = {
-			}
-		}
 		USA = {
 			history = USA_BLITZKRIEG_DESC
 			ideology = westernism
@@ -21,39 +13,6 @@ bookmarks = {
 			}
 			focuses = {
 			}
-		}
-		ENG = {
-			history = ENG_BLITZKRIEG_DESC
-			ideology = westernism
-			ideas = {
-			}
-			focuses = {
-			}
-			
-		}
-		GER = {
-			history = GER_BLITZKRIEG_DESC
-			ideology = easternism
-			ideas = {
-			}
-			focuses = {
-			}
-		}
-		ITA = {
-			history = ITA_BLITZKRIEG_DESC
-			ideology = easternism
-			ideas={
-			}
-			focuses = {
-			}			
-		}
-		JAP = {
-			history = JAP_BLITZKRIEG_DESC
-			ideology = easternism
-			ideas={
-			}	
-			focuses = {
-			}		
 		}
 		SOV = {
 			history = SOV_2027_DESC
@@ -63,9 +22,22 @@ bookmarks = {
 			focuses = {
 			}
 		}
+	    CHI = {
+			history = CHI_2027_DESC
+			ideology = socialism 
+			ideas = {
+			}
+			focuses = {
 
-		"---"={
-			history = "OTHER_BLITZKRIEG_DESC"
+			}
+		}
+		FRA = {
+			history = FRA_BLITZKRIEG_DESC
+			ideology = westernism
+			ideas={
+			}
+			focuses = {
+			}
 		}
 	}
 
