@@ -129,13 +129,15 @@ guiTypes = {
 			position = { x = 20 y = 823 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
+			scale=0.650
 		}
 
 		buttonType = {
 			name = "country"
 			quadTextureSprite = "GFX_country_selection_entry"
-			position = { x=0 y =820 }
+			position = { x=0 y =803 }
 			clicksound = click_checkbox
+			scale=0.980
 		}
 	}
 
@@ -622,8 +624,8 @@ guiTypes = {
 			gridboxType = {
 				name ="countries_grid"
 				padding = { top = 0 bottom = 50 }
-				position = { x = 50 y = -366 }
-				slotsize = { width = 150 height = 90 }
+				position = { x = 50 y = -352 }
+				slotsize = { width = 150 height = 94 }
 				size = { height = 300 width = 1 }
 				scrollbarType = "right_vertical_slider"
 				add_horizontal = no
