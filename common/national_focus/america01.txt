@@ -50,7 +50,7 @@ focus_tree = {
 		icon = GFX_goal_finish_the_wall
 		relative_position_id = USA_january_rally
 		x = 0
-		y = 1
+		y = 2
 
 		cost = 1.2
 
@@ -76,10 +76,10 @@ focus_tree = {
 	focus = {
 		id = USA_1_more_year
 		prerequisite = { focus = USA_build_the_wall }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_one_more_year
 		relative_position_id = USA_build_the_wall
 		x = 0
-		y = 1
+		y = 2
 
 		cost = 0.2
 
@@ -105,7 +105,7 @@ focus_tree = {
 	focus = {
 		id = USA_state_of_the_union
 		prerequisite = { focus = USA_1_more_year }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_state_of_union
 		relative_position_id = USA_1_more_year
 		x = -6
 		y = 1
@@ -134,7 +134,7 @@ focus_tree = {
 	focus = {
 		id = USA_trump_achievement
 		prerequisite = { focus = USA_state_of_the_union }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_don_achieve
 		relative_position_id = USA_state_of_the_union
 		x = 0
 		y = 1
@@ -877,4 +877,34 @@ focus_tree = {
 			add_stability = 0.01
 		}
 	}
-}
+
+ # The Border crisis
+
+    focus = {
+		id = USA_border_crisis
+		icon = GFX_goal_no_data
+		x = 35
+		y = 3
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+        }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			
+		}
+	}
+}	

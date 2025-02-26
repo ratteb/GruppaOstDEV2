@@ -427,3 +427,5 @@ country_event = {
 		ai_chance = { factor = 90 }
 	}
 }
+
+add_namespace = USA_border

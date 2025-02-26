@@ -20,4 +20,32 @@ spriteTypes = {
 		name = "GFX_goal_finish_the_wall"
 		texturefile = "gfx/interface/goals/focus_finish_the_wall.dds"
 	}
+
+
+
+
+	# One more Year
+	spriteType = {
+		name = "GFX_goal_one_more_year"
+		texturefile = "gfx/interface/goals/focus_one_more_year.dds"
+	}
+
+
+
+
+
+	# State of the Union
+	spriteType = {
+		name = "GFX_goal_state_of_union"
+		texturefile = "gfx/interface/goals/focus_state_of_union.dds"
+	}
+
+
+
+
+	# Don Achieve
+	spriteType = {
+		name = "GFX_goal_don_achieve"
+		texturefile = "gfx/interface/goals/focus_don_achieve.dds"
+	}
 }
