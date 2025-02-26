@@ -690,7 +690,7 @@ guiTypes = {
 		}
 		iconType = {
 			name = "symbol"
-			position = { x = 42 y = 88 }
+			position = { x = 28 y = 58 }
 			spriteType = "GFX_goal_unknown"
 			alwaystransparent = yes
 		}
@@ -856,7 +856,7 @@ guiTypes = {
 		}
 		iconType = {
 			name = "symbol"
-			position = { x = 42 y = 88 }
+			position = { x = 42 y = 58 }
 			spriteType = "GFX_goal_unknown"
 			alwaystransparent = yes
 		}
