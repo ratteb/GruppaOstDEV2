@@ -14,11 +14,6 @@ ideas = {
 			}
 
 			modifier = {
-				communism_drift = 0.08
-				political_power_factor = -0.2
-				easternism_drift = -0.1
-				stability_factor = -0.05
-				research_speed_factor = 0.08
 			}
 
 			allowed_to_remove = { always = no }
@@ -38,10 +33,6 @@ ideas = {
 			allowed_to_remove = { always = no }
 
 			modifier = {
-				socialism_drift = 0.06
-				political_power_factor = 0.05
-				easternism_drift = -0.06
-				research_speed_factor = 0.02
 			}
 
 			default = yes
@@ -59,8 +50,6 @@ ideas = {
 			}
 			allowed_to_remove = { always = no }
 			modifier = {
-				stability_factor = 0.2
-				political_power_factor = 0.2
 			}
 
 			cancel_if_invalid = no

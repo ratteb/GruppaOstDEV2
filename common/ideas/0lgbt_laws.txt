@@ -14,10 +14,6 @@ ideas = {
 			}
 
 			modifier = {
-				political_power_factor = -0.35
-				stability_factor = -0.05
-				war_support_factor = -0.45
-				westernism_drift = 0.12
 			}
 
 			allowed_to_remove = { always = no }
@@ -36,10 +32,6 @@ ideas = {
 			}
 
 			modifier = {
-				political_power_factor = -0.15
-				stability_factor = -0.02
-				war_support_factor = -0.35
-				westernism_drift = 0.08
 			}
 
 			allowed_to_remove = { always = no }
@@ -56,10 +48,6 @@ ideas = {
 			}
 
 			modifier = {
-				political_power_factor = 0.05
-				stability_factor = 0.02
-				war_support_factor = -0.25
-				westernism_drift = 0.02
 			}
 
 			allowed_to_remove = { always = no }
@@ -76,9 +64,6 @@ ideas = {
 			}
 
 			modifier = {
-				political_power_factor = 0.10
-				stability_factor = 0.03
-				westernism_drift = -0.01
 			}
 
 			allowed_to_remove = { always = no }
@@ -95,10 +80,6 @@ ideas = {
 			}
 
 			modifier = {
-				political_power_factor = 0.15
-				stability_factor = 0.04
-				war_support_factor = 0.05
-				westernism_drift = -0.03
 			}
 
 			allowed_to_remove = { always = no }

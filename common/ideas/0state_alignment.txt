@@ -16,7 +16,6 @@ ideas = {
 			}
 
 			modifier = {
-				easternism_drift = 0.09
 			}
 
 			allowed_to_remove = { always = no }
@@ -36,7 +35,6 @@ ideas = {
 			}
 
 			modifier = {
-				easternism_drift = 0.09
 			}
 
 			allowed_to_remove = { always = no }
@@ -56,7 +54,6 @@ ideas = {
 			}
 
 			modifier = {
-				westernism_drift = 0.09
 			}
 
 			allowed_to_remove = { always = no }
@@ -75,7 +72,6 @@ ideas = {
 			}
 
 			modifier = {
-				socialism_drift = 0.09
 			}
 
 			allowed_to_remove = { always = no }
@@ -94,7 +90,6 @@ ideas = {
 			}
 
 			modifier = {
-				neutrality_drift = 0.09
 			}
 
 			default = yes

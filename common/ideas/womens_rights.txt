@@ -38,11 +38,6 @@ ideas = {
 			}
 
 			modifier = {
-				despotism_drift = 0.08
-				stability_factor = -0.05
-				recruitable_population_factor = -0.1
-				war_support_factor = 0.05
-				westernism_drift = -0.09
 			}
 
 			allowed_to_remove = { always = no }
@@ -61,10 +56,6 @@ ideas = {
 			allowed_to_remove = { always = no }
 
 			modifier = {
-				stability_factor = 0.05
-				neutrality_drift = 0.06
-				westernism_drift = 0.02
-				easternism_drift = 0.06
 			}
 
 			default = yes
@@ -81,11 +72,6 @@ ideas = {
 			}
 			allowed_to_remove = { always = no }
 			modifier = {
-				stability_factor = 0.1
-				war_support_factor = -0.1
-				westernism_drift = 0.06
-				neutrality_drift = 0.04
-				easternism_drift = 0.04
 			}
 
 			cancel_if_invalid = no
