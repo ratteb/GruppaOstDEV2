@@ -4,7 +4,7 @@ tags={
 	"Alternative History"
 }
 name="Gruppa Ost[DEV]"
-supported_version="1.15.*"
+supported_version="1.16.*"
 replace_path="history/states"
 replace_path="map/strategicregions"
 replace_path="map"
