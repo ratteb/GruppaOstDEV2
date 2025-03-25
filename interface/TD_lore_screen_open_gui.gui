@@ -29,4 +29,29 @@ guiTypes = {
 				format = left
 			}	
 	}
+
+	containerWindowType = {
+		name = "lore_screen"
+		position = { x = 0 y = 0 }	
+		size = { width = 986 height= 986 }
+		orientation = center
+		origo = center
+		fade_time = 100
+		moveable = no
+		fade_type = linear
+		click_to_front = no
+		clipping = no
+
+		background = {
+			name = "LoreScreenBg"		
+			quadTextureSprite ="lore_screen_bg_gfx"
+		}
+
+		buttonType = {
+				name = "close_lore_screen_button"
+				position = {x=6 y=6}
+				spriteType = "GFX_event_button_minimize"
+				clicksound = click_default
+			}
+}
 }

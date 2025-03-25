@@ -1,0 +1,10 @@
+on_actions = {
+
+	on_startup = {
+		effect = {
+			USA = { set_country_flag = unique_opening_screen }
+            GER = { set_country_flag = unique_opening_screen }
+            SOV = { set_country_flag = unique_opening_screen }
+		}
+	}
+}

@@ -113,6 +113,12 @@ set_variable = {
 add_dynamic_modifier = { modifier = SOV_demographics_crisis }
 add_dynamic_modifier = { modifier = SOV_russian_armed_forces }
 
+resize_array = { SOV.opening_screen_chapters = 3 }
+
+resize_array = { SOV.opening_screen_chapter_photos_0 = 4 }
+resize_array = { SOV.opening_screen_chapter_photos_1 = 4 }
+resize_array = { SOV.opening_screen_chapter_photos_2 = 4 }
+
 if = {
 	limit = {
 		NOT = { has_dlc = "By Blood Alone" }

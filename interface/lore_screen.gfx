@@ -1,0 +1,7 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "lore_screen_bg_gfx"
+		texturefile = "gfx/interface/lore_screen_graphics/lore_screen_main_screen.dds"
+	}
+}

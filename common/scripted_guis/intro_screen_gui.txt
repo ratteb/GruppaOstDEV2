@@ -1,87 +1,14 @@
 scripted_gui = {
   intro_gui = {
-    window_name = "intro_screen"
+    window_name = "lore_screen"
     context_type = player_context
 
     visible = {
-		always = no
+		has_country_flag = unique_opening_screen
     }
 
     effects = {
-    }
-
-    triggers = {
-    }
-
-    dynamic_lists = {
-	}
-
-    properties = {
-    }
-
-    ai_enabled = {
-		always = no
-    }
-
-    ai_test_interval = 290  # The higher, the long it takes the ai to do actions
-	ai_test_variance = 0.5
-
-    ai_check = {
-    }
-
-    ai_check_scope = {
-    }
-
-    ai_weights = {
-    }
-  }
-  intro_screen_image_gui = {
-    window_name = "intro_image"
-    context_type = player_context
-    parent_window_name = intro_screen
-
-    visible = {
-		always = yes
-    }
-
-    effects = {
-    }
-
-    triggers = {
-    }
-
-    dynamic_lists = {
-	}
-
-    properties = {
-    }
-
-    ai_enabled = {
-		always = no
-    }
-
-    ai_test_interval = 290  # The higher, the long it takes the ai to do actions
-	ai_test_variance = 0.5
-
-    ai_check = {
-    }
-
-    ai_check_scope = {
-    }
-
-    ai_weights = {
-    }
-  }
-  intro_screen_background_gui = {
-    window_name = "intro_background"
-    context_type = player_context
-    parent_window_name = intro_screen
-
-    visible = {
-		always = yes
-    }
-
-    effects = {
+      close_lore_screen_button_click = { clr_country_flag = unique_opening_screen }
     }
 
     triggers = {
@@ -110,15 +37,16 @@ scripted_gui = {
     }
   }
   intro_button_left_gui = {
-    window_name = "button_left"
+    window_name = "lore_open_button"
     context_type = player_context
-    parent_window_name = intro_screen
+    parent_window_name = lore_screen
 
     visible = {
 		always = yes
     }
 
     effects = {
+      lore_button01_click = { set_country_flag = unique_opening_screen }
     }
 
     triggers = {
@@ -146,4 +74,5 @@ scripted_gui = {
     ai_weights = {
     }
   }
+  
 }
