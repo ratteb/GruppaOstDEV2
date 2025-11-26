@@ -10,3 +10,16 @@
   SOV_expand_reserve_officer_cet: "Modify §RArmed Forces of the Russian Federation§! by\nDivision Organization: §G+20.00%§!\nArmy Organization Regain: §R-5.00%§!\nDivision Recovery Rate §R-10.00%§!"
   SOV_NCO_system_cet: "Modify §RArmed Forces of the Russian Federation§! by\nDivision Organization: §R-15.00%§!\nArmy Organization Regain: §G+25.00%§!\nDivision Recovery Rate: §G+20.00%§!"
  
+    
+ # Ukraine Political Crisis 
+  UKR_political_crisis_info_CET: "§RYou won't know the lore of the crisis§!"
+  UKR_political_crisis_info2_CET: "§0Good Luck in this long winded fight!§!"
+  UKR_plan27_CET: "§2We will begin a large scale plan to a politically stable future, however we will have to make some promises... And prefferably not break them.§!"
+  UKR_promise_stability_CET: "§2We will promise a stable country and future, it is advisable to keep on this promise.§!"
+  UKR_promise_security_CET: "§2We will promise reform in our security, more police, less crime, it is advisable we follow on this promise the most.§!\n\n §RIf we follow on this promise the effectiveness of our fight against the crimewave will be much higher.§!"
+  UKR_save_banks_CET: "§2We will reassure the banks in hopes they don't resist our plans.§!"
+  UKR_promise_wealth_CET: "§2We will promise wealth and prosperity to our people, this will be hard to fulfill but if we do it will surely boost our popularity!§!"
+  UKR_prove_health_CET: "§2We will showcase large healthcare projects to show that Ukraine has not lost its spirit or dedication! However they may take a while to even become possible to build...§!"
+  UKR_promise_health_CET: "§2We will promise healthcare for our people, it is advisable to also invest in rural and destroyed healthcare, we have much experise left behind.§!"
+  UKR_new_future_CET: "§2Ukraine is not yet lost! Let's toast to a new future with Ihor! Glory to Ukraine! Glory to the Heroes!§!"
+  UKR_prep_rada_CET: "§2We will prepare the Verkhovna Rada to implement new policies and spearhead ourselves into a new future! A Ukrainian future!§!"

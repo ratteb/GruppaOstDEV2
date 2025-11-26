@@ -192,7 +192,7 @@ set_popularities = {
 	socialism = 19
 	despotism = 22
 }
-
+set_country_flag = UKR_all_is_fine
 create_country_leader = {
 	name = "Mr Generic"
 	desc = ""

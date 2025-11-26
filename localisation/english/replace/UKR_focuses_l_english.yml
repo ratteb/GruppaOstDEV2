@@ -21,6 +21,16 @@
  UKR_crisis_to_ng:0 "Crisis Dealt With by the NG"
  UKR_end_of_the_crisis:0 "End of the Crisis?"
 
+ UKR_announce_plan27:0 "Plan-27"
+ UKR_promises_of_wealth:0 "Promise Prosperity"
+ UKR_promises_of_health:0 "Promise Healthcare"
+ UKR_promises_of_stability:0 "Promise Stability"
+ UKR_reassure_the_banks:0 "Reassure the Bankers"
+ UKR_promise_security:0 "Promise Security"
+ UKR_show_plans_of_health:0 "Showcase Grand Healthcare Projects"
+ UKR_prep_the_verkhovna_rada:0 "Prepare the Verkhovna Rada"
+ UKR_to_new_beginnings:0 "To a Renewed Future!"
+
  UKR_azov_insurgency:0 "The Azov Insurgency"
  UKR_go_hard_or_go_home:0 "Go Hard, or Go Home"
  UKR_auth_heavy_equip:0 "Authorize Heavy Equipment"
