@@ -33,7 +33,80 @@ country_event = {
 		set_country_flag = UKR_focus_crimewave
     }
 }
+# the political crisis 
+country_event = {
+	id = ukraine.2
+	title = ukraine.2.t
+	desc = ukraine.2.d
+	picture = GFX_kiev_doomer
+	
+	is_triggered_only = yes
+	
+	option = { #Understood
+		name = ukraine.2.a
+		ai_chance = { factor = 1 }
+		country_event = ukraine.3
+    }
+	option = { # I heard enough 
+		name = ukraine.2.b
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = UKR_political_crisis_info_CET
+    }
+}
+# the political crisis 2 
+country_event = {
+	id = ukraine.3
+	title = ukraine.3.t
+	desc = ukraine.3.d
+	picture = GFX_kiev_doomer
+	
+	is_triggered_only = yes
+	
+	option = { # Thanks
+		name = ukraine.3.b
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = UKR_political_crisis_info2_CET
+    }
+}
+# TTS Episentr Incident 
+country_event = {
+	id = ukraine.4
+	title = ukraine.4.t
+	desc = ukraine.4.d
+	picture = GFX_kiev_doomer
+	
+	is_triggered_only = yes
+	
+	option = { # I heard enough 
+		name = ukraine.4.b
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = UKR_bucha_incident_CET
+		set_country_flag = UKR_episenter_incident
+		clr_country_flag = UKR_all_is_fine
+		mark_focus_tree_layout_dirty = yes
+    }
+}
 
+# How will we deal with this 
+country_event = {
+	id = ukraine.5
+	title = ukraine.5.t
+	desc = ukraine.5.d
+	picture = GFX_kiev_doomer
+	
+	is_triggered_only = yes
+
+	option = { # Offer from the PD
+		name = ukraine.5.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = UKR_bucha_incident3_CET
+    }
+	option = { # Offer from the NG
+		name = ukraine.5.b
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = UKR_bucha_incident4_CET
+    }
+}
 # Mobilization on the border with Zakarpattia. 
 news_event = {
 	id = news_ukraine.1
