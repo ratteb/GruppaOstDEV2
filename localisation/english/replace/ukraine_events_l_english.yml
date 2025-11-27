@@ -6,6 +6,13 @@
  ukraine.1.a:0 "The Political Crisis!"
  ukraine.1.b:0 "The Azov Insurgency!"
  ukraine.1.c:0 "The Crime Wave!"
+ ukraine.2.t:0 "The Political Crisis"
+ ukraine.2.d:0 "Placeholder"
+ ukraine.2.a:0 "Understood"
+ Ukraine.2.b:0 "I've Had Enough!"
+ ukraine.3.t:0 "The Political Crisis 2"
+ ukraine.3.d:0 "Placeholder"
+ ukraine.3.a:0 "Thanks"
 
  # Ukraine News
  news_ukraine.1.t:0 "Military Buildup near Zakarpattia"

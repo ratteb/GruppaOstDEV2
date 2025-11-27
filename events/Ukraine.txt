@@ -80,10 +80,31 @@ country_event = {
 	option = { # I heard enough 
 		name = ukraine.4.b
 		ai_chance = { factor = 1 }
-		custom_effect_tooltip = UKR_political_crisis_info3_CET
+		custom_effect_tooltip = UKR_bucha_incident_CET
 		set_country_flag = UKR_episenter_incident
 		clr_country_flag = UKR_all_is_fine
 		mark_focus_tree_layout_dirty = yes
+    }
+}
+
+# How will we deal with this 
+country_event = {
+	id = ukraine.5
+	title = ukraine.5.t
+	desc = ukraine.5.d
+	picture = GFX_kiev_doomer
+	
+	is_triggered_only = yes
+
+	option = { # Offer from the PD
+		name = ukraine.5.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = UKR_bucha_incident3_CET
+    }
+	option = { # Offer from the NG
+		name = ukraine.5.b
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = UKR_bucha_incident4_CET
     }
 }
 # Mobilization on the border with Zakarpattia. 

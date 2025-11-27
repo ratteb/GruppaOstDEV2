@@ -9,11 +9,15 @@
 
   SOV_expand_reserve_officer_cet: "Modify §RArmed Forces of the Russian Federation§! by\nDivision Organization: §G+20.00%§!\nArmy Organization Regain: §R-5.00%§!\nDivision Recovery Rate §R-10.00%§!"
   SOV_NCO_system_cet: "Modify §RArmed Forces of the Russian Federation§! by\nDivision Organization: §R-15.00%§!\nArmy Organization Regain: §G+25.00%§!\nDivision Recovery Rate: §G+20.00%§!"
- 
+ # §R§!
     
  # Ukraine Political Crisis 
   UKR_political_crisis_info_CET: "§RYou won't know the lore of the crisis§!"
   UKR_political_crisis_info2_CET: "§0Good Luck in this long winded fight!§!"
+  UKR_bucha_incident2_CET: "§RWhoever is Behind This, WILL PAY!§!"
+  UKR_bucha_incident3_CET: "§4We Will Side Towards the Police§!"
+  UKR_bucha_incident4_CET: "§7We Will Side Towards the National Guard§!"
+
   UKR_plan27_CET: "§2We will begin a large scale plan to a politically stable future, however we will have to make some promises... And prefferably not break them.§!"
   UKR_promise_stability_CET: "§2We will promise a stable country and future, it is advisable to keep on this promise.§!"
   UKR_promise_security_CET: "§2We will promise reform in our security, more police, less crime, it is advisable we follow on this promise the most.§!\n\n §RIf we follow on this promise the effectiveness of our fight against the crimewave will be much higher.§!"
