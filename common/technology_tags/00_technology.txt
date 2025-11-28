@@ -139,6 +139,17 @@ technology_categories = {
 technology_folders = {
 	infantry_folder = {
 		ledger = army
+		available = {
+			NOT = {
+				has_country_flag = SOV_inf
+			}
+		}
+	}
+	SOV_infantry_folder = {
+		ledger = army
+		available = {
+			has_country_flag = SOV_inf
+		}
 	}
 	support_folder = {
 		ledger = army

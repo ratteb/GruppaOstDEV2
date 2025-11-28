@@ -109,7 +109,7 @@ set_variable = {
 	value = -0.05
 }
 
-
+set_country_flag = SOV_inf
 add_dynamic_modifier = { modifier = SOV_demographics_crisis }
 add_dynamic_modifier = { modifier = SOV_russian_armed_forces }
 
