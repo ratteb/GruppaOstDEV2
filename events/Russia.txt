@@ -110,6 +110,116 @@ country_event = {
     }
 }
 
+country_event = {
+	id = SOV_sotnik.6
+	title = SOV_sotnik.6.t
+	desc = SOV_sotnik.6.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Lets get going then. 
+		name = SOV_sotnik.6.a
+		ai_chance = { factor = 90 }
+		add_political_power = 5
+		country_event = SOV_sotnik.7
+    }
+}
+
+# Early SMO Feb-March 2022
+country_event = {
+	id = SOV_sotnik.7
+	title = SOV_sotnik.7.t
+	desc = SOV_sotnik.7.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # We succeeded in all objectives. 
+		name = SOV_sotnik.7.a
+		ai_chance = { factor = 60 }
+		add_political_power = 5
+		country_event = SOV_sotnik.8
+    }
+	option = { # Okay Maybe there were some hiccups...
+		name = SOV_sotnik.7.b
+		ai_chance = { factor = 30 }
+		add_political_power = 5
+		country_event = SOV_sotnik.8
+    }
+}
+
+# Mid SMO April 2022 - June 2022 
+country_event = {
+	id = SOV_sotnik.8
+	title = SOV_sotnik.8.t
+	desc = SOV_sotnik.8.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # They were nescessary retreats!!
+		name = SOV_sotnik.8.a
+		ai_chance = { factor = 60 }
+		add_political_power = 5
+		country_event = SOV_sotnik.9
+    }
+	option = { # Logisitcs were at fault...
+		name = SOV_sotnik.8.b
+		ai_chance = { factor = 15 }
+		add_political_power = 5
+		country_event = SOV_sotnik.9
+    }
+	option = { # Commanders were at fault...
+		name = SOV_sotnik.8.c
+		ai_chance = { factor = 15 }
+		add_political_power = 5
+		country_event = SOV_sotnik.9
+    }
+}
+
+# Ukrainian counter offensives September - November 2022
+country_event = {
+	id = SOV_sotnik.9
+	title = SOV_sotnik.9.t
+	desc = SOV_sotnik.9.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # More attak 
+		name = SOV_sotnik.9.a
+		ai_chance = { factor = 50 }
+		add_political_power = 5
+    }
+	option = { # More Defens 
+		name = SOV_sotnik.9.b
+		ai_chance = { factor = 50 }
+		add_political_power = 5
+    }
+}
+
+country_event = {
+	id = SOV_sotnik.10
+	title = SOV_sotnik.10.t
+	desc = SOV_sotnik.10.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # The Old Guard Stuck around 
+		name = SOV_sotnik.10.a
+		ai_chance = { factor = 30 }
+		add_political_power = 5
+    }
+	option = { # Gerasimov turned things around in 2023!
+		name = SOV_sotnik.10.b
+		ai_chance = { factor = 70 }
+		add_political_power = 5
+    }
+}
+
+
 
 
 

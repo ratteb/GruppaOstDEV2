@@ -430,6 +430,13 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {	
+			custom_effect_tooltip = SOV_review_strat_doc_CET
+
+			hidden_effect = {
+				country_event =  {
+				 id = SOV_sotnik.6
+				}
+			}
 		}
 	}
 	focus = {
@@ -486,6 +493,8 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {	
+			custom_effect_tooltip = SOV_scrap_gerasimov_CET
+			custom_effect_tooltip= SOV_support_guard_CET
 		}
 	}
 	# Tank warfare
@@ -1042,6 +1051,8 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {	
+			custom_effect_tooltip = SOV_support_gerasimov_CET
+			custom_effect_tooltip = SOV_scrap_guard_CET
 		}
 	}
 	# Cyber Warfare 
