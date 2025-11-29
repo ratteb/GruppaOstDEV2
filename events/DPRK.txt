@@ -14,9 +14,18 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	option = { # May They Be Saved....
+	option = { # Ask for help 
 		name = DPRK_china.1.a
 		ai_chance = { factor = 90 }
+		CHI = { country_event = {
+			id = CHI_DPRK.1
+			days = 1 
+		}  }
+
+    }
+	option = { # We can do it alone! 
+		name = DPRK_china.1.b
+		ai_chance = { factor = 10 }
     }
 }
 

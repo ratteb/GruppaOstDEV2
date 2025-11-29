@@ -14,12 +14,13 @@ country_event = {
 	
 	option = { #let them rot 
 		name = CHI_DPRK.1.a
-		ai_chance = { factor = 1 }
+		ai_chance = { factor = 50 }
     }
 	option = { # help our allies 
 		name = CHI_DPRK.1.b
-		ai_chance = { factor = 1 }
+		ai_chance = { factor = 50 }
 		set_country_flag = CHI_help_dprk
+		mark_focus_tree_layout_dirty = yes
     }
 }
 

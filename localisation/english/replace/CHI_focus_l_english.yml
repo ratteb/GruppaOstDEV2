@@ -22,4 +22,13 @@
  CHI_five_year_school_plan:0 "A 5 Year School-Plan"
  CHI_xi_legacy_secure:0 "Xi's Legacy is Secure!"
 
+ # North Korea Aid Tree
+ CHI_aid_to_our_korea:0 "Aid For Our Brotherly Nation"
+ CHI_economic_aid:0 "Provide Economic Aid"
+ CHI_military_aid:0 "Provide Military Assistance"
+ CHI_security_aid:0 "Provide Intelligence and Security Advisers"
+ CHI_secure_juche:0 "Juche for A Thousand Years!"
+ CHI_friendship_and_prosperity:0 "A Pact of Friendship and Prosperity"
+
+
  

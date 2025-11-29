@@ -21,7 +21,7 @@ focus_tree = {
 		x = 40
 		y = 1
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -582,7 +582,170 @@ focus_tree = {
 		x = 4
 		y = 1
 
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = CHI_aid_to_our_korea
+		icon = GFX_goal_no_data
+		allow_branch =  { has_country_flag = CHI_help_dprk }
+		x = 55
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = CHI_economic_aid
+		icon = GFX_goal_no_data
+		prerequisite = { focus = CHI_aid_to_our_korea }
+		relative_position_id = CHI_aid_to_our_korea
+		x = -1
+		y = 1
+
 		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = CHI_military_aid
+		icon = GFX_goal_no_data
+		prerequisite = { focus = CHI_aid_to_our_korea }
+		relative_position_id = CHI_aid_to_our_korea
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = CHI_security_aid
+		icon = GFX_goal_no_data
+		prerequisite = { focus = CHI_economic_aid}
+		prerequisite = { focus = CHI_military_aid }
+		relative_position_id = CHI_economic_aid
+		x = 1
+		y = 1
+
+		cost = 2.9
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = CHI_secure_juche
+		icon = GFX_goal_no_data
+		prerequisite = { focus = CHI_security_aid }
+		relative_position_id = CHI_security_aid
+		x = 0
+		y = 1
+
+		cost = 2.2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = CHI_friendship_and_prosperity
+		icon = GFX_goal_no_data
+		prerequisite = { focus = CHI_secure_juche }
+		relative_position_id = CHI_secure_juche
+		x = 0
+		y = 2
+
+		cost = 1.4
 
 		ai_will_do = {
 			factor = 1
