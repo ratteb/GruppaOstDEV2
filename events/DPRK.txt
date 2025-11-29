@@ -1,0 +1,24 @@
+﻿###########################
+# Chinese Events
+###########################
+
+add_namespace = DPRK_china
+add_namespace = DPRK
+
+# Irrelevant for now 
+country_event = {
+	id = DPRK_china.1
+	title = DPRK_china.1.t
+	desc = DPRK_china.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # May They Be Saved....
+		name = DPRK_china.1.a
+		ai_chance = { factor = 90 }
+    }
+}
+
+
+

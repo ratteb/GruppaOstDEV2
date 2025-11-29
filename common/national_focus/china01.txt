@@ -1,0 +1,605 @@
+focus_tree = {
+	id = china_focus01
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = CHI
+		}
+
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1000 }
+
+	focus = {
+		id = CHI_chinese_century
+		icon = GFX_goal_no_data
+		x = 40
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = CHI_xi_eternal_reign
+		prerequisite = { focus = CHI_chinese_century }
+		icon = GFX_goal_no_data
+		relative_position_id = CHI_chinese_century
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = CHI_xi_eternal_legacy
+		prerequisite = { focus = CHI_xi_eternal_reign }
+		icon = GFX_goal_no_data
+		relative_position_id = CHI_xi_eternal_reign
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = CHI_modern_cult_personality
+		prerequisite = { focus = CHI_xi_eternal_legacy }
+		icon = GFX_goal_no_data
+		relative_position_id = CHI_xi_eternal_legacy
+		mutually_exclusive = { focus = CHI_cult_china }
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = CHI_cult_china
+		prerequisite = { focus = CHI_xi_eternal_legacy }
+		icon = GFX_goal_no_data
+		relative_position_id = CHI_xi_eternal_legacy
+		mutually_exclusive = { focus = CHI_modern_cult_personality }
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = CHI_mao_deng_xi
+		prerequisite = { focus = CHI_modern_cult_personality
+		                 focus = CHI_cult_china  }
+		icon = GFX_goal_no_data
+		relative_position_id = CHI_modern_cult_personality
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = CHI_xi_eternal_overwatch
+		prerequisite = { focus = CHI_mao_deng_xi }
+		icon = GFX_goal_no_data
+		relative_position_id = CHI_mao_deng_xi
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = CHI_xi_legacy_secure 
+		prerequisite = { focus = CHI_xi_eternal_overwatch }
+		prerequisite = { focus = CHI_battle_won_no_war }
+		prerequisite = { focus = CHI_not_our_problem_lol }
+		icon = GFX_goal_no_data
+		relative_position_id = CHI_xi_eternal_overwatch
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = CHI_cultural_revolution
+		prerequisite = { focus = CHI_xi_eternal_reign }
+		icon = GFX_goal_no_data
+		relative_position_id = CHI_xi_eternal_reign
+		x = -4
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = CHI_corruption_war
+		prerequisite = { focus = CHI_cultural_revolution }
+		icon = GFX_goal_no_data
+		relative_position_id = CHI_cultural_revolution
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = CHI_sack_unimportant
+		prerequisite = { focus = CHI_corruption_war }
+		icon = GFX_goal_no_data
+		relative_position_id = CHI_corruption_war
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = CHI_sack_unloyal
+		prerequisite = { focus = CHI_corruption_war }
+		icon = GFX_goal_no_data
+		relative_position_id = CHI_corruption_war
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = CHI_loyalty_xi
+		prerequisite = { focus = CHI_sack_unloyal }
+		icon = GFX_goal_no_data
+		relative_position_id = CHI_sack_unloyal
+		mutually_exclusive = { focus = CHI_loyalty_china }
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = CHI_loyalty_china
+		prerequisite = { focus = CHI_sack_unimportant }
+		icon = GFX_goal_no_data
+		relative_position_id = CHI_sack_unimportant
+		mutually_exclusive = { focus = CHI_loyalty_xi }
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = CHI_battle_won_no_war
+		prerequisite = { focus = CHI_loyalty_xi 
+		focus = CHI_loyalty_china }
+		icon = GFX_goal_no_data
+		relative_position_id = CHI_loyalty_xi
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = CHI_fixing_deng
+		prerequisite = { focus = CHI_xi_eternal_reign }
+		icon = GFX_goal_no_data
+		relative_position_id = CHI_xi_eternal_reign
+		x = 4
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = CHI_childbirth_subsidies
+		prerequisite = { focus = CHI_fixing_deng }
+		icon = GFX_goal_no_data
+		relative_position_id = CHI_fixing_deng
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = CHI_childbirth_propaganda
+		prerequisite = { focus = CHI_fixing_deng }
+		icon = GFX_goal_no_data
+		relative_position_id = CHI_fixing_deng
+		x = 2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = CHI_parent_first_priority
+		prerequisite = { focus = CHI_childbirth_subsidies }
+		prerequisite = { focus = CHI_childbirth_propaganda }
+		icon = GFX_goal_no_data
+		relative_position_id = CHI_childbirth_subsidies
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = CHI_not_our_problem_lol
+		prerequisite = { focus = CHI_parent_first_priority }
+		icon = GFX_goal_no_data
+		relative_position_id = CHI_parent_first_priority
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = CHI_five_year_school_plan
+		prerequisite = { focus = CHI_fixing_deng }
+		icon = GFX_goal_no_data
+		relative_position_id = CHI_fixing_deng
+		x = 4
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+}		
