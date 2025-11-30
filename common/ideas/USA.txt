@@ -1,0 +1,33 @@
+ideas = {
+
+    country = { USA_The_Second_Amendment = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = USA
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.03
+				war_support_factor = 0.01
+				stability_factor = -0.01
+			}
+		}
+	}
+}
+
