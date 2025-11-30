@@ -134,6 +134,55 @@ country_event = {
     id = DPRK_china.1
     days = 540
 }
+add_dynamic_modifier = { modifier = KOR_korean_peoples_army }
+set_variable = {
+	var = KOR_manpower_variable
+	value = 0.04
+}
+set_variable = {
+	var = KOR_cold_defense_variable
+	value = 0.25
+}
+set_variable = {
+	var = KOR_attack_bonus_variable
+	value = -0.25
+}
+set_variable = {
+	var = KOR_defense_variable 
+	value = -0.45
+}
+set_variable = {
+	var = KOR_speed_variable
+	value = -0.15
+}
+set_variable = {
+	var = KOR_camouflage_variable
+	value = 0.18
+}
+set_variable = {
+	var = KOR_dig_max_variable
+	value = 0.04
+}
+set_variable = {
+	var = KOR_nightvis_variable
+	value = -0.5
+}
+set_variable = {
+	var = KOR_planning_speed_variable
+	value = -0.8
+}
+set_variable = {
+	var = KOR_planning_variable
+	value = 0.15
+}
+add_ideas = {
+	KOR_juche_policy
+	KOR_songun_policy
+	limited_conscription
+	min_uber_high_bracket
+	60_year_old
+	closed_economy
+}
 
 
 

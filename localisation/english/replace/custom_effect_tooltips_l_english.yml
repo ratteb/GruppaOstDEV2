@@ -15,6 +15,10 @@
   SOV_support_gerasimov_CET: "§GGerasimov Will Be Loyal!§!"
   SOV_scrap_guard_CET: "§RThe Old Guard Will Be Furious!§!"
  # §R§!
+
+ # DPRK
+  KOR_juche_CMT:0 "§RDue to our Juche Policy We Cannot Join Any Factions!§!"
+  KOR_songun_CMT:0 "§RDue to our Songun Policy It is Much Harder to Push Through Economic Reforms!§!"
     
  # Ukraine Political Crisis 
   UKR_political_crisis_info_CET: "§RYou won't know the lore of the crisis§!"
