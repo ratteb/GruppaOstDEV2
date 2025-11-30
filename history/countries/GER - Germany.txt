@@ -111,15 +111,7 @@ create_country_leader = {
 	}
 }
 
-create_country_leader = {
-	name = "Mr Generic"
-	desc = ""
-	picture = GFX_portrait_Mammad_Amin_Rasulzade
-	ideology = western_conservatism
-	traits = {
-		
-	}
-}
+
 
 create_country_leader = {
 	name = "Mr Generic"
