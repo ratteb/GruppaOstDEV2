@@ -133,6 +133,9 @@ ideologies = {
 			civilian_dictatorship = {
 			}
 
+			shia_fundementalism = {
+			}
+
 			absolute_monarchy = {
             }
 
@@ -365,7 +368,7 @@ ideologies = {
 
 	}
 
-		 	salafism = {
+	salafism = {
 
 		types = {
 
@@ -414,6 +417,6 @@ ideologies = {
 		faction_modifiers = {
 
 		}
-		}
+	}
 }
 
