@@ -91,7 +91,7 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
-
+recruit_character = PER_ali_khamenei
 set_popularities = {
 	westernism = 0
 	communism = 0
@@ -131,15 +131,6 @@ create_country_leader = {
 	}
 }
 
-create_country_leader = {
-	name = "Mr Generic"
-	desc = ""
-	picture = GFX_portrait_Gara_Garabeyov
-	ideology = civilian_dictatorship
-	traits = {
-		
-	}
-}
 
 
 

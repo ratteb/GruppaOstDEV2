@@ -1,0 +1,16 @@
+characters={
+	PER_ali_khamenei={
+		name="Ali Khamenei"
+		portraits={
+			civilian={
+				large=GFX_portrait_ali_khamenei
+			}
+		}
+		country_leader={
+			ideology=shia_fundementalism
+			desc = 
+			expire="3000.1.1.1"
+			id=-1
+		}
+	}
+}

@@ -43,7 +43,7 @@ spriteTypes = {
 	# China above this line 
 	spriteType = {
 		name = "GFX_portrait_ali_khamenei"
-		texturefile = "gfx/leaders/IRA/Khamenei.dds"
+		texturefile = "gfx/leaders/PER/Khamenei.dds"
 	}
 
 	# Iran above this line 
