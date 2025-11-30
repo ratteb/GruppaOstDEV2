@@ -41,4 +41,10 @@ spriteTypes = {
 	}
 
 	# China above this line 
+
+	spriteType = {
+		name = "GFX_kim_jong_un"
+		texturefile = "gfx/leaders/KOR/kim_jong_un.dds" 
+	}
+	# Korea above this line 
 }

@@ -91,25 +91,16 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
-
+recruit_character = KOR_kim_jong_un
 set_popularities = {
 	westernism = 0
-	communism = 100
-	neutrality = 0
+	communism = 97
+	neutrality = 1
 	easternism = 0
-	socialism = 0
+	socialism = 2
 	despotism = 0
 }
 
-create_country_leader = {
-	name = "Mr Generic"
-	desc = ""
-	picture = GFX_portrait_Mir_Jafar_Baghirov
-	ideology = juche
-	traits = {
-		
-	}
-}
 
 create_country_leader = {
 	name = "Mr Generic"

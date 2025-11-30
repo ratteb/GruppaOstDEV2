@@ -1,0 +1,18 @@
+characters={
+	KOR_kim_jong_un={
+		name="Kim Jong Un"
+		portraits={
+			civilian={
+				large=GFX_kim_jong_un
+			}
+		}
+		country_leader={
+			ideology=juche
+			desc = KOR_kim_jong_un_desc
+			expire="3000.1.1.1"
+			id=-1
+		}
+	}
+
+	
+}
