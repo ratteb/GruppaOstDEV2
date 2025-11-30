@@ -1,0 +1,18 @@
+characters={
+	GER_friedriech_mertz={
+		name="Friedrich Mertz"
+		portraits={
+			civilian={
+				large=GFX_friedriech_mertz
+			}
+		}
+		country_leader={
+			ideology=juche
+			desc = GER_friedriech_mertz
+			expire="3000.1.1.1"
+			id=-1
+		}
+	}
+
+	
+}
