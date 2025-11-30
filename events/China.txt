@@ -21,6 +21,10 @@ country_event = {
 		ai_chance = { factor = 50 }
 		set_country_flag = CHI_help_dprk
 		mark_focus_tree_layout_dirty = yes
+		ROK = { country_event = {
+			id = ROK_DPRK.1
+			days = 10
+		}  }
     }
 }
 

@@ -30,7 +30,7 @@ country_event = {
 	# yes
 	option = { 
 		name = zakarpattia.1.b
-		ai_chance = { factor = 40 }
+		ai_chance = { factor = 60 }
 		ZAK = { add_political_power = 15 
 		        add_ideas = ZAK_hungary_monitor 
 				set_country_flag = hun_monitor
@@ -50,7 +50,7 @@ country_event = {
 	# yes 
 	option = { 
 		name = zakarpattia.2.a
-		ai_chance = { factor = 40 }
+		ai_chance = { factor = 50 }
 		ZAK = { add_political_power = 15 
 		        add_ideas = ZAK_ukraine_monitor 
 				set_country_flag = ukr_monitor
@@ -60,7 +60,7 @@ country_event = {
 	# no 
 	option = { 
 		name = zakarpattia.2.b
-		ai_chance = { factor = 40 }
+		ai_chance = { factor = 50 }
 		ZAK = { add_political_power = -15 
 		set_country_flag = no_ukr_monitor 
 		country_event =  zakarpattia.10 

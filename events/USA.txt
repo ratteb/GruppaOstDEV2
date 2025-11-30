@@ -3,8 +3,12 @@
 ###########################
 
 add_namespace = USA_trump
+add_namespace = USA_border
+add_namespace = USA_ROK 
 
 # Event Chain for trump
+
+
 
 # The January Rally
 country_event = {
@@ -427,5 +431,21 @@ country_event = {
 		ai_chance = { factor = 90 }
 	}
 }
+country_event = {
+	id = USA_ROK.1
+	title = USA_ROK.1.t
+	desc = USA_ROK.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Help the South 
+		name = USA_ROK.1.a
+		ai_chance = { factor = 60 }
+    }
+	option = { # Meh 
+		name = USA_ROK.1.b
+		ai_chance = { factor = 40 }
+    }
+} 
 
-add_namespace = USA_border

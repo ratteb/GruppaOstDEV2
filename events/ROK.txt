@@ -1,0 +1,33 @@
+﻿###########################
+# Chinese Events
+###########################
+
+add_namespace = ROK_DPRK
+add_namespace = DPRK
+
+# China aids North Korea 
+country_event = {
+	id = ROK_DPRK.1
+	title = ROK_DPRK.1.t
+	desc = ROK_DPRK.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Ask for help 
+		name = ROK_DPRK.1.a
+		ai_chance = { factor = 90 }
+		USA = { country_event = {
+			id = USA_ROK.1
+			days = 90
+		}  }
+
+    }
+	option = { # We can do it alone! 
+		name = ROK_DPRK.1.b
+		ai_chance = { factor = 10 }
+    }
+}
+
+
+

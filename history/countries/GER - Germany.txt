@@ -93,12 +93,12 @@ set_politics = {
 }
 
 set_popularities = {
-	westernism = 100
-	communism = 0
-	neutrality = 0
-	easternism = 0
-	socialism = 0
-	despotism = 0
+	westernism = 48
+	communism = 5
+	neutrality = 12
+	easternism = 21
+	socialism = 9
+	despotism = 5
 }
 recruit_character = GER_friedriech_mertz
 create_country_leader = {
