@@ -5,6 +5,7 @@ tags={
 }
 name="Gruppa Ost[DEV]"
 supported_version="1.17.*"
+replace_path = "music"
 replace_path="history/states"
 replace_path="map/strategicregions"
 replace_path="map"
