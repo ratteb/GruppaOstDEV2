@@ -6,5 +6,12 @@ music = {
 		factor = 1
 	}
 }
+music = {
+	song = "oblivion"
+	
+	chance = {
+		factor = 1
+	}
+}
 
 

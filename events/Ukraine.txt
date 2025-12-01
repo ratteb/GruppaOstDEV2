@@ -84,6 +84,9 @@ country_event = {
 		set_country_flag = UKR_episenter_incident
 		clr_country_flag = UKR_all_is_fine
 		mark_focus_tree_layout_dirty = yes
+		hidden_effect = {
+		scoped_play_song = oblivion
+		}	
     }
 }
 
