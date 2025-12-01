@@ -30,7 +30,6 @@ ideas = {
 				experience_gain_air_factor = -0.15
 				army_morale_factor = -0.05
 				army_org_regain = -0.04
-				CHI_taiwan_crisis_CMT
 			}
 		}
 	}

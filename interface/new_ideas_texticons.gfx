@@ -46,4 +46,9 @@ spriteTypes = {
 		texturefile = "gfx/texticons/banners/korean_peoples_army.dds"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_CHI_taiwan_strait_crisis_texticon"
+		texturefile = "gfx/texticons/banners/CHI_taiwan_strait_crisis.dds"
+		legacy_lazy_load = no
+	}
 }
