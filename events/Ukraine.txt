@@ -86,7 +86,8 @@ country_event = {
 		mark_focus_tree_layout_dirty = yes
 		hidden_effect = {
 		scoped_play_song = oblivion
-		}	
+		}
+		news_event = news_ukraine.6
     }
 }
 
@@ -184,5 +185,19 @@ news_event = {
 	
 	option = {
 		name = news_ukraine.5.a
+	}
+}
+news_event = {
+	id = news_ukraine.6
+	title = news_ukraine.6.t
+	desc = news_ukraine.6.d
+	picture = GFX_news_ukraine_event_005
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news_ukraine.6.a
 	}
 }
