@@ -85,6 +85,15 @@ if = {
 		basic_torpedo = 1
 	}
 }
+add_dynamic_modifier = { modifier = CHI_chinese_century }
+set_variable = {
+	var = CHI_pp 
+	value = 0.05
+}
+set_variable = {
+	var = CHI_ppg
+	value = 0.1
+}
 add_ideas = {
 	CHI_taiwan_crisis01
 }

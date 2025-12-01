@@ -51,4 +51,9 @@ spriteTypes = {
 		texturefile = "gfx/texticons/banners/CHI_taiwan_strait_crisis.dds"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_chinese_century_texticon"
+		texturefile = "gfx/texticons/banners/chinese_century.dds"
+		legacy_lazy_load = no
+	}
 }

@@ -178,6 +178,24 @@ KOR_economic_situation = {
 	
 
 }
+CHI_chinese_century = {
+	icon = "GFX_idea_unknown"
+
+	consumer_goods_factor = CHI_cg 
+	industrial_capacity_factory = CHI_ic 
+	industrial_capacity_dockyard = CHI_icd
+	industry_free_repair_factor = CHI_fr 
+	industry_repair_factor = CHI_rf 
+	production_speed_buildings_factor = CHI_cs 
+	production_speed_industrial_complex_factor = CHI_cfcs 
+	production_speed_arms_factory_factor = CHI_mfcs
+	research_speed_factor = CHI_rs 
+	political_power_cost = CHI_ppc 
+	political_power_gain = CHI_ppg
+	political_power_factor = CHI_pp 
+	
+
+}
 
   UKR_demographics_crisis = {
 	icon = "GFX_idea_unknown"
