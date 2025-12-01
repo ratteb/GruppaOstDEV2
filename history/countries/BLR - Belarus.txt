@@ -85,6 +85,28 @@ if = {
 		basic_torpedo = 1
 	}
 }
+set_variable = {
+	var = BATKA_stability_p 
+	value = 0.09
+}
+set_variable = {
+	var = BATKA_pp_gain
+	value = 0.08
+}
+set_variable = {
+	var = BATKA_cf
+	value = -0.12
+}
+set_variable = {
+	var = BATKA_to
+	value = -0.5
+}
+set_variable = {
+	var = BATKA_cg
+	value = -0.08
+}
+add_dynamic_modifier = { modifier = BLR_batka_support }
+
 
 recruit_character = BLR_alexander_lukashenko
 add_ideas = {

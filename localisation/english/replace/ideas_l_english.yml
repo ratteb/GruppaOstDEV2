@@ -70,6 +70,8 @@
  SOV_CSTO_leader:0 "CSTO Leader"
  # Belarus
  BLR_CSTO_member01:0 "CSTO Member"
+ BLR_batka_support:0 "The Batka"
+ BLR_batka_support_desc:0 "The Batka Desc"
 
  #Novorossiya
  azov_terror_bombing:0 "Azov Terror Bombing"

@@ -242,3 +242,17 @@ SOV_sotnik_program = {
 	political_power_gain = USAF_political_gain_variable
 	war_support_factor = USAF_war_support_variable
 }
+
+BLR_batka_support = {
+	icon = "GFX_idea_unknown"
+
+	custom_modifier_tooltip = BLR_batka_support_CMT
+
+	political_power_gain = BATKA_pp_gain
+	political_power_factor = BATKA_pp_gain_p
+	stability_factor = BATKA_stability_p
+	consumer_goods_factor = BATKA_cg
+	conscription_factor = BATKA_cf
+	trade_opinion_factor = BATKA_to
+	war_support_factor = BATKA_ws
+}

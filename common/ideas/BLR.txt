@@ -28,7 +28,7 @@ ideas = {
 				experience_gain_air = 0.02
 				experience_gain_air_factor = 0.08
 				training_time_army_factor  = 0.05
-				trade_opinion_factor = 0.1
+				faction_trade_opinion_factor  = 0.1
 				political_power_gain  = -0.06
 				BLR_CSTO_member01_CMT
 			}
