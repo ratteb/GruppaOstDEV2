@@ -85,7 +85,7 @@ if = {
 		basic_torpedo = 1
 	}
 }
-add_dynamic_modifier = { modifier = CHI_chinese_century }
+add_dynamic_modifier = { modifier = CHI_chinese_century_idea }
 add_dynamic_modifier = { modifier = CHI_peoples_liberation_army }
 
 # Chinese Century 
