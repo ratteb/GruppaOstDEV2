@@ -41,4 +41,9 @@ spriteTypes = {
 		texturefile = "gfx/texticons/maps/russianmaptexticon.dds"
 		legacy_lazy_load = no 
 	}
+	spriteType = {
+		name = "GFX_korean_peoples_army_texticon"
+		texturefile = "gfx/texticons/banners/korean_peoples_army.dds"
+		legacy_lazy_load = no
+	}
 }

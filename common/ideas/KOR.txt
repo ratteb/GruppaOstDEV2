@@ -5,7 +5,7 @@ ideas = {
 			picture = GFX_placeholder_ideas
 			
 			allowed = {
-				tag = SOV
+				tag = KOR
 			}
 
 			available = {
@@ -36,7 +36,7 @@ ideas = {
 			picture = GFX_placeholder_ideas
 			
 			allowed = {
-				tag = SOV
+				tag = KOR
 			}
 
 			available = {

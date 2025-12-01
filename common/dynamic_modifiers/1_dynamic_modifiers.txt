@@ -163,6 +163,22 @@ SOV_sotnik_program = {
 	land_night_attack = KOR_nightvis_variable
 }
 
+KOR_economic_situation = {
+	icon = "GFX_idea_unknown"
+
+	consumer_goods_factor = KOR_cg 
+	industrial_capacity_factory = KOR_ic 
+	industrial_capacity_dockyard = KOR_icd
+	industry_free_repair_factor = KOR_fr 
+	industry_repair_factor = KOR_rf 
+	production_speed_buildings_factor = KOR_cs 
+	production_speed_industrial_complex_factor = KOR_cfcs 
+	production_speed_arms_factory_factor = KOR_mfcs
+	research_speed_factor = KOR_rs 
+	
+
+}
+
   UKR_demographics_crisis = {
 	icon = "GFX_idea_unknown"
 

@@ -1,0 +1,37 @@
+ideas = {
+
+	country = {
+		CHI_taiwan_crisis01 = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = CHI
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.23
+				stability_factor = -0.05
+				war_support_factor = -0.1
+				experience_gain_navy_factor = -0.15
+				experience_gain_air_factor = -0.15
+				army_morale_factor = -0.05
+				army_org_regain = -0.04
+				CHI_taiwan_crisis_CMT
+			}
+		}
+	}
+}

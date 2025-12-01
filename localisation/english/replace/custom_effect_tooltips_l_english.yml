@@ -21,11 +21,14 @@
   SOV_CSTO_leader_CMT:0 "§RWe Can Only Call in Other CSTO Members In Defensive Wars!§!"
 
   # Belarus
-  BLR_batka_support_CMT!0 "§RThe Batka Must Never Fall.§!"
+  BLR_batka_support_CMT:0 "§RThe Batka Must Never Fall.§!"
 
  # DPRK
   KOR_juche_CMT:0 "§RDue to our Juche Policy We Cannot Join Any Factions!§!"
   KOR_songun_CMT:0 "§RDue to our Songun Policy It is Much Harder to Push Through Economic Reforms!§!"
+
+  # CHINA 
+  CHI_taiwan_crisis_CMT:0 "§ROur Anger Will Not Go Unanswered!\nThe Chinese Century Will Come!\nOur Enemies Will Feel the Burn of our Flaming Sword!\nQianjin Zhonggou!§!"
     
  # Ukraine Political Crisis 
   UKR_political_crisis_info_CET: "§RYou won't know the lore of the crisis§!"

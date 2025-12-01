@@ -85,6 +85,13 @@ if = {
 		basic_torpedo = 1
 	}
 }
+add_ideas = {
+	CHI_taiwan_crisis01
+}
+add_opinion_modifier = {
+	target = KOR 
+	modifier = similair_ideology
+}
 recruit_character = CHI_xi_jinping
 set_politics = {
 	ruling_party = socialism

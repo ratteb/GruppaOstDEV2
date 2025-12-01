@@ -125,7 +125,13 @@ country_event = {
     id = DPRK_china.1
     days = 540
 }
+add_opinion_modifier = {
+	target = CHI
+	modifier = similair_ideology
+}
+add_dynamic_modifier = { modifier = KOR_economic_situation }
 add_dynamic_modifier = { modifier = KOR_korean_peoples_army }
+# KPA 
 set_variable = {
 	var = KOR_manpower_variable
 	value = 0.04
@@ -165,6 +171,35 @@ set_variable = {
 set_variable = {
 	var = KOR_planning_variable
 	value = 0.15
+}
+# economy 
+set_variable = {
+	var = KOR_cg
+	value = 0.4
+}
+set_variable = {
+	var = KOR_ic
+	value = -0.4
+}
+set_variable = {
+	var = KOR_icd
+	value = -0.6
+}
+set_variable = {
+	var = KOR_cs 
+	value = -0.2
+}
+set_variable = {
+	var = KOR_cfcs
+	value = -0.4
+}
+set_variable = {
+	var = KOR_mfcs
+	value = -0.2
+}
+set_variable = {
+	var = KOR_rs
+	value = -0.5
 }
 add_ideas = {
 	KOR_juche_policy
