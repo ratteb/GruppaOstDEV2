@@ -16,6 +16,10 @@
   SOV_scrap_guard_CET: "§RThe Old Guard Will Be Furious!§!"
  # §R§!
 
+ # CSTO
+  BLR_CSTO_member01_CMT:0 "§RWe Can Voluntarily Join Wars of the CSTO!§!"
+  SOV_CSTO_leader_CMT:0 "§RWe Can Only Call in Other CSTO Members In Defensive Wars!§!"
+
  # DPRK
   KOR_juche_CMT:0 "§RDue to our Juche Policy We Cannot Join Any Factions!§!"
   KOR_songun_CMT:0 "§RDue to our Songun Policy It is Much Harder to Push Through Economic Reforms!§!"

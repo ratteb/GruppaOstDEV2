@@ -87,6 +87,9 @@ if = {
 }
 
 recruit_character = BLR_alexander_lukashenko
+add_ideas = {
+	BLR_CSTO_member01
+}
 set_politics = {
 	ruling_party = easternism
 	last_election = "1936.1.1"

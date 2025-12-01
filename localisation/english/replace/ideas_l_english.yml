@@ -67,6 +67,10 @@
  SOV_russian_armed_forces_desc:0 "\n\n\n\n£sotnik1_program_texticon \n\n\n\n\n The Armed Forces of the Russian Federation, formed on the 7th of May 1992 as the direct successor of the Armed Forces of the Union of Soviet Socialist Republics is one of the most powerful military forces on the face of the earth. With major reforms having been initiated around 2014, with the first initiation of the Ratnik Modernization Program. The Armed Forces is tasked with defending Russia from any and all foreign threats, and is under direct command of the Ministry of Defense and the President of the Russian Federation. With old victories in Chechnya and Georgia, and more recent victories in Ukraine, the Russian Armed Forces is one of the strongest forces. But even with that, major issues still persist in the Armed Forces, corruption, nepotism, and unprofessionalism and a highly centralized structure make it difficult for operations to be successfully conducted. "
  SOV_demographics_crisis:0 "Demographics Crisis"
  SOV_demographics_crisis_desc:0 "Years of war, destruction and bad policies have led us to a great demographics crisis of low birth rates, and a dwindeling population. The recent Special Military Operation only made this much worse and drastic actions have to be taken against this major issue, lest we fall into a major labour shortage, and manpower shortage..."
+ SOV_CSTO_leader:0 "CSTO Leader"
+ # Belarus
+ BLR_CSTO_member01:0 "CSTO Member"
+
  #Novorossiya
  azov_terror_bombing:0 "Azov Terror Bombing"
  azov_terror_bombing_desc:0 "The Azov Brigade, situated inside Ukraine has been terrorizing our civilian populations by sending consistent missile attacks on civilian areas, and the only way to stop it is to counter all missiles, complete the focus 'Russian Dome of Freedom' to get rid of this damn bombing!"

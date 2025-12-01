@@ -1,10 +1,11 @@
 ideas = {
 
 	country = {
-		azov_insurgency01 = {
-			picture = usa_great_depression_3
+		BLR_CSTO_member01 = {
+			picture = GFX_placeholder_ideas
 			
 			allowed = {
+				tag = BLR
 			}
 
 			available = {
@@ -22,11 +23,14 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_cost = 1
-				consumer_goods_factor = 0.60
-				conscription_factor = -0.5
-				join_faction_tension = 0.20
-				local_resources_factor = -0.2
+				experience_gain_army = 0.02
+				experience_gain_army_factor = 0.08
+				experience_gain_air = 0.02
+				experience_gain_air_factor = 0.08
+				training_time_army_factor  = 0.05
+				trade_opinion_factor = 0.1
+				political_power_gain  = -0.06
+				BLR_CSTO_member01_CMT
 			}
 		}
 	}

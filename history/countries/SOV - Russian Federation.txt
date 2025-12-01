@@ -212,6 +212,7 @@ add_ideas = {
 	SOV_memories_of_chechnya 
 	min_super_high_bracket
 	44_year_old
+	SOV_CSTO_leader
 }
 
 add_timed_idea = {
