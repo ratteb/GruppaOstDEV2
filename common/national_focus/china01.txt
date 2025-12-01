@@ -38,6 +38,16 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			country_event = CHI_chinese_century.1
+			set_variable = {
+				var = CHI_sf
+				value = 0.01
+			}
+			set_variable = {
+				var = CHI_ppsf
+				value = 0.05
+			}
+			custom_effect_tooltip = CHI_chinese_century_CET
 		}
 	}
 
@@ -66,6 +76,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			country_event = CHI_chinese_century.2
 		}
 	}
 
@@ -264,6 +275,8 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			country_event = CHI_chinese_century.3 
+			custom_effect_tooltip = CHI_cultural_revolution_CET
 		}
 	}
 	focus = {

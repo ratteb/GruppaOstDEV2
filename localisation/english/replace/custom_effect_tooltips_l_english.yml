@@ -29,7 +29,8 @@
 
   # CHINA 
   CHI_taiwan_crisis_CMT:0 "§ROur Anger Will Not Go Unanswered!\nThe Chinese Century Will Come!\nOur Enemies Will Feel the Burn of our Flaming Sword!\nQianjin Zhonggou!§!"
-    
+  CHI_chinese_century_CET:0 "Modify §YThe Chinese Century§! by\nStability: §G+1%§!\nParty Popularity Stability Modifier: §G+5%§!"
+  CHI_cultural_revolution_CET:0 "§RWe will launch a large scale 'Cultural Revolution' to purge corruption and the ones who have been destroying China from within, colloquially known as 'The Rot'§!"  
  # Ukraine Political Crisis 
   UKR_political_crisis_info_CET: "§RYou won't know the lore of the crisis§!"
   UKR_political_crisis_info2_CET: "§0Good Luck in this long winded fight!§!"

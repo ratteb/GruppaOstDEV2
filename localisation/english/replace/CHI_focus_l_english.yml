@@ -1,7 +1,9 @@
 ﻿l_english:
  # Chinese Century Tree
- CHI_chinese_century:0 "The Chinese Century"
+ CHI_chinese_century:0 "§tThe Chinese Century§!"
+ CHI_chinese_century_desc:0 "After a century of humiliation, it is time for §tThe Chinese Century§! to arrive, Xi Jinping and the CPC have laid out the plans to make this a reality. We will begin by forging the legacy of Xi and make sure China remains on a righteous path. Although the choice remains tight, does China go down a §RCult of Personality§!  albeit reformed similar to Mao or does it create a sentiment of §ONationalism with Communist Characteristics?§!  We will also cut the rot from our society and government, followed by fixing the mess Deng Xiaoping and his successors made with the demographics. Once this is guaranteed, it is only a matter of time before the §tChinese Dream§! is realized in §tThe Chinese Century!§!"
  CHI_xi_eternal_reign:0 "Xi's Eternal Reign"
+ CHI_xi_eternal_reign_desc:0 "The Eternal Reign of Xi Jinping is not literal, but metaphorical, it is a means that his legacy, and his ideas will remain etched in China forever, and we must make sure of this by taking the appropriate steps and decisions. The CPC has laid out a clear foundation on how to do this, we must cut the rot from society, etch in Xi's legacy deeply into society, and fix our rapidly worsening demographics. Only then we can begin at truly etching the future of China and our century. The Party has proposed a Second Cultural Revolution as our top priority. "
  CHI_xi_eternal_legacy:0 "Xi's Eternal Legacy"
  CHI_modern_cult_personality:0 "Modern Cult of Personality"
  CHI_cult_china:0 "The Cult of China"

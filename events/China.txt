@@ -3,7 +3,9 @@
 ###########################
 
 add_namespace = CHI_DPRK
+add_namespace = CHI_chinese_century
 
+# DPRK asks for help 
 country_event = {
 	id = CHI_DPRK.1
 	title = CHI_DPRK.1.t
@@ -25,6 +27,105 @@ country_event = {
 			id = ROK_DPRK.1
 			days = 10
 		}  }
+    }
+}
+
+# Chinese Century 
+country_event = {
+	id = CHI_chinese_century.1
+	title = CHI_chinese_century.1.t
+	desc = CHI_chinese_century.1.d
+	picture = GFX_kiev_doomer
+	
+	is_triggered_only = yes
+	
+	option = { # Got it 
+		name = CHI_chinese_century.1.a
+		ai_chance = { factor = 50 }
+    }
+}
+# the future of china 
+country_event = {
+	id = CHI_chinese_century.2
+	title = CHI_chinese_century.2.t
+	desc = CHI_chinese_century.2.d
+	picture = GFX_kiev_doomer
+	
+	is_triggered_only = yes
+	
+	option = { # Got it 
+		name = CHI_chinese_century.2.a
+		ai_chance = { factor = 50 }
+    }
+}
+# the rot 
+country_event = {
+	id = CHI_chinese_century.3
+	title = CHI_chinese_century.3.t
+	desc = CHI_chinese_century.3.d
+	picture = GFX_kiev_doomer
+	
+	is_triggered_only = yes
+	
+	option = { # Got it 
+		name = CHI_chinese_century.3.a
+		ai_chance = { factor = 50 }
+		country_event = {
+			id = CHI_chinese_century.4
+			days = 5
+		}
+    }
+}
+# The Corrupt 
+country_event = {
+	id = CHI_chinese_century.4
+	title = CHI_chinese_century.4.t
+	desc = CHI_chinese_century.4.d
+	picture = GFX_kiev_doomer
+	
+	is_triggered_only = yes
+	
+	option = { # Got it 
+		name = CHI_chinese_century.4.a
+		ai_chance = { factor = 50 }
+		country_event = {
+			id = CHI_chinese_century.5
+			days = 5
+		}
+    }
+}
+
+# The Mischevious 
+country_event = {
+	id = CHI_chinese_century.5
+	title = CHI_chinese_century.5.t
+	desc = CHI_chinese_century.5.d
+	picture = GFX_kiev_doomer
+	
+	is_triggered_only = yes
+	
+	option = { # Got it 
+		name = CHI_chinese_century.5.a
+		ai_chance = { factor = 50 }
+		country_event = {
+			id = CHI_chinese_century.6
+			days = 5
+		}
+    }
+}
+# The one to fix it all 
+country_event = {
+	id = CHI_chinese_century.6
+	title = CHI_chinese_century.6.t
+	desc = CHI_chinese_century.6.d
+	picture = GFX_kiev_doomer
+	
+	is_triggered_only = yes
+	
+	option = { # Got it 
+		name = CHI_chinese_century.6.a
+		ai_chance = { factor = 50 }
+		add_political_power = 5 
     }
 }
 
