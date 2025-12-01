@@ -1,0 +1,10 @@
+music_station = "inaccessible"
+music = {
+	song = "ode_to_motherland"
+	
+	chance = {
+		factor = 1
+	}
+}
+
+

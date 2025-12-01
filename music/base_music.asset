@@ -1,0 +1,8 @@
+
+# Inaccessible 
+music = {
+	name = "ode_to_motherland"
+	file = "inaccessible/ode_to_motherland.ogg"
+	volume = 0.65
+}
+

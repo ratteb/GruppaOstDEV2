@@ -4,7 +4,26 @@
 
 add_namespace = CHI_DPRK
 add_namespace = CHI_chinese_century
+add_namespace = test_music
 
+country_event = {
+	id = test_music.1
+	title = test_music.1.t
+	desc = test_music.1.d
+	picture = GFX_kiev_doomer
+	
+	is_triggered_only = yes
+	
+	option = { #let them rot 
+		name = test_music.1.a
+		ai_chance = { factor = 50 }
+    }
+	option = { # help our allies 
+		name = test_music.1.b
+		ai_chance = { factor = 50 }
+		scoped_play_song = ode_to_motherland	
+    }
+}
 # DPRK asks for help 
 country_event = {
 	id = CHI_DPRK.1

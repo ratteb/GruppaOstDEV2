@@ -1,0 +1,8 @@
+spriteTypes = {
+	spriteType = {	
+		name = "GFX_inaccessible_cover"
+		textureFile = "gfx/inaccessible_station_cover.dds"
+		noOfFrames = 2
+		 alwaystransparent = yes
+	}
+}

@@ -48,6 +48,10 @@ focus_tree = {
 				value = 0.05
 			}
 			custom_effect_tooltip = CHI_chinese_century_CET
+
+			hidden_effect = {
+				scoped_play_song = ode_to_motherland
+			}
 		}
 	}
 
