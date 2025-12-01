@@ -86,6 +86,9 @@ if = {
 	}
 }
 add_dynamic_modifier = { modifier = CHI_chinese_century }
+add_dynamic_modifier = { modifier = CHI_peoples_liberation_army }
+
+# Chinese Century 
 set_variable = {
 	var = CHI_pp 
 	value = 0.05
@@ -94,6 +97,53 @@ set_variable = {
 	var = CHI_ppg
 	value = 0.1
 }
+
+# PLA 
+set_variable = {
+	var = CHI_manpower_factor_variable
+	value = -0.86
+}
+set_variable = {
+	var = CHI_cold_defense_variable 
+	value = 0.08
+}
+set_variable = {
+	var = CHI_attack_bonus_variable 
+	value = -0.14
+}
+set_variable = {
+	var = CHI_defense_variable 
+	value = -0.16
+}
+set_variable = {
+	var = CHI_morale_variable
+	value = 0.03
+}
+set_variable = {
+	var = CHI_org_variable
+	value = 0.14
+}
+set_variable = {
+	var = CHI_camouflage_variable
+	value = -0.04
+}
+set_variable = {
+	var = CHI_planning_variablee
+	value = 0.18
+}
+set_variable = {
+	var = CHI_planning_speed_variable
+	value = 0.06
+}
+set_variable = {
+	var = CHI_xp_protection_variable
+	value = 0.32
+}
+set_variable = {
+	var = CHI_xp_gain_variable
+	value = -0.15
+}
+
 add_ideas = {
 	CHI_taiwan_crisis01
 }

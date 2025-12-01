@@ -56,4 +56,9 @@ spriteTypes = {
 		texturefile = "gfx/texticons/banners/chinese_century.dds"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_peoples_liberation_army_texticon"
+		texturefile = "gfx/texticons/banners/peoples_liberation_army.dds"
+		legacy_lazy_load = no
+	}
 }

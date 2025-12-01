@@ -196,6 +196,33 @@ CHI_chinese_century = {
 	
 
 }
+ CHI_peoples_liberation_army = {
+	icon = "GFX_idea_unknown"
+
+
+	conscription_factor = CHI_manpower_factor_variable
+	conscription  = CHI_manpower_variable 
+	acclimatization_cold_climate_gain_factor = CHI_cold_defense_variable
+	acclimatization_hot_climate_gain_factor = CHI_hot_defense_variable
+	air_superiority_bonus_in_combat = CHI_cas_bonus_variable
+	army_attack_factor = CHI_attack_bonus_variable
+	army_attack_speed_factor = CHI_attack_speed_variable
+	army_defence_factor = CHI_defense_variable 
+	army_speed_factor = CHI_speed_variable
+	army_morale_factor = CHI_morale_variable
+	army_org_factor = CHI_org_variable
+	army_org_regain = CHI_recovery_variable
+	breakthrough_factor = CHI_breakthrough_variable
+	cas_damage_reduction = CHI_camouflage_variable
+	dig_in_speed_factor = CHI_dig_speed_variable
+	max_dig_in_factor = CHI_dig_max_variable
+	max_planning_factor = CHI_planning_variable
+	planning_speed = CHI_planning_speed_variable
+	experience_loss_factor = CHI_xp_protection_variable
+    experience_gain_army_factor = CHI_xp_gain_variable
+	special_forces_min = CHI_special_forces_variable
+	land_night_attack = CHI_nightvis_variable
+}
 
   UKR_demographics_crisis = {
 	icon = "GFX_idea_unknown"
