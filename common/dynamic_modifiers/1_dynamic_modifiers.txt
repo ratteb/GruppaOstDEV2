@@ -178,7 +178,7 @@ KOR_economic_situation = {
 	
 
 }
-CHI_chinese_century = {
+CHI_chinese_century_idea = {
 	icon = "GFX_idea_unknown"
 
 	consumer_goods_factor = CHI_cg 
