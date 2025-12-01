@@ -86,6 +86,12 @@ country_event = {
 		mark_focus_tree_layout_dirty = yes
 		hidden_effect = {
 		scoped_play_song = oblivion
+		USA = { country_event = {
+			id = ukraine.6
+			days = 3 
+
+		           }
+		      }
 		}
 		news_event = news_ukraine.6
     }
@@ -109,6 +115,24 @@ country_event = {
 		name = ukraine.5.b
 		ai_chance = { factor = 1 }
 		custom_effect_tooltip = UKR_bucha_incident4_CET
+    }
+}
+# Ukraine hit by terror attacks 
+country_event = {
+	id = ukraine.6
+	title = ukraine.6.t
+	desc = ukraine.6.d
+	picture = GFX_kiev_doomer
+	
+	is_triggered_only = yes
+	
+	option = { # Blame Russia!
+		name = ukraine.6.a
+		ai_chance = { factor = 1 }
+    }
+	option = { # Stay out of this...
+		name = ukraine.6.b
+		ai_chance = { factor = 1 }
     }
 }
 # Mobilization on the border with Zakarpattia. 
