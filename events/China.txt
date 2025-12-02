@@ -14,10 +14,6 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	option = { #let them rot 
-		name = test_music.1.a
-		ai_chance = { factor = 50 }
-    }
 	option = { # help our allies 
 		name = test_music.1.b
 		ai_chance = { factor = 50 }

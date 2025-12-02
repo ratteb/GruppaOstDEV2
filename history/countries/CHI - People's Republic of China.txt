@@ -146,6 +146,8 @@ set_variable = {
 
 add_ideas = {
 	CHI_taiwan_crisis01
+	min_super_high_bracket
+	max_high_bracket
 }
 add_opinion_modifier = {
 	target = KOR 
