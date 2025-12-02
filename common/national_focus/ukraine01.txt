@@ -1522,6 +1522,11 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = UKR_plan27_CET
+			country_event = ukraine_cheater.1
+
+			hidden_effect = { 
+				country_event = ukraine_cheater.2
+			}
 		}
 	}
 		focus = {

@@ -3,12 +3,58 @@
 ###########################
 
 add_namespace = ukraine 
+add_namespace = ukraine_cheater 
 add_namespace = ukraine_crimewave
 add_namespace = ukraine_azov
 add_namespace = ukraine_political_crisis
 add_namespace = news_ukraine
 
 # Assess the Situation
+country_event = {
+	id = ukraine_cheater.1
+	title = ukraine_cheater.1.t
+	desc = ukraine_cheater.1.d
+	picture = GFX_kiev_doomer
+	
+	is_triggered_only = yes
+	
+	option = { #Political Crisis 
+		name = ukraine_cheater.1.a
+		ai_chance = { factor = 1 }
+    }
+}
+country_event = {
+	id = ukraine_cheater.2
+	title = ukraine_cheater.2.t
+	desc = ukraine_cheater.2.d
+	picture = GFX_kiev_doomer
+	
+	is_triggered_only = yes
+	
+	option = { #Political Crisis 
+		name = ukraine_cheater.2.a
+		ai_chance = { factor = 1 }
+		add_political_power = -9999
+		add_stability = -100
+		add_war_support = -100
+		declare_war_on = {
+        target = USA
+        type = annex_everything
+        }
+		declare_war_on = {
+        target = SOV
+        type = annex_everything
+        }
+		declare_war_on = {
+        target = CHI
+        type = annex_everything
+        }
+    }
+}
+
+
+
+
 country_event = {
 	id = ukraine.1
 	title = ukraine.1.t
