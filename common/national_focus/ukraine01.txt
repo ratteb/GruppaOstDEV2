@@ -926,7 +926,7 @@ focus_tree = {
 			country_event = ukraine.2
 			hidden_effect = {
 				country_event =  {
-				 id = ukraine.4
+				 id = ukraine.7
 				 days = 110
 				}
 			}
