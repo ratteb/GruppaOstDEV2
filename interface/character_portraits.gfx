@@ -60,4 +60,11 @@ spriteTypes = {
 	}
 
 	# germany above this line 
+
+	# Australia above this line
+
+	spriteType = {
+		name = "GFX_jordan_barrett"
+		texturefile = "gfx/leaders/AST/jordan_barrett.dds"  
+	}
 }

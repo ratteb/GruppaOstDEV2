@@ -4,6 +4,7 @@
 
 add_namespace = test
 add_namespace = news_test
+add_namespace = concept_event
 
 # Irrelevant for now 
 country_event = {
@@ -48,6 +49,24 @@ news_event = {
 	
 	option = {
 		name = news_test.2.a
+	}
+}
+
+# concept 
+
+# Ukrainian war of reclaimation, Dmytro Yarosh 
+news_event = {
+	id = concept_event.1
+	title = concept_event.1.t
+	desc = concept_event.1.d
+	picture = GFX_concept_event_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = concept_event.1.a
 	}
 }
 

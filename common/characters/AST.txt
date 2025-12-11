@@ -1,0 +1,16 @@
+characters={
+	AST_jordan_barrett={
+		name="Jordan Barrett"
+		portraits={
+			civilian={
+				large=GFX_jordan_barrett
+			}
+		}
+		country_leader={
+			ideology=western_conservatism
+			desc = 
+			expire="9999.1.1.1"
+			id=-1
+		}
+	}
+}
