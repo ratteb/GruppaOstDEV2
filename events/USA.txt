@@ -5,6 +5,8 @@
 add_namespace = USA_trump
 add_namespace = USA_border
 add_namespace = USA_ROK 
+add_namespace = USA_TWC
+add_namespace = USA_RUW
 
 # Event Chain for trump
 
@@ -448,4 +450,223 @@ country_event = {
 		ai_chance = { factor = 40 }
     }
 } 
+
+# ask taiwan for information about the crisis 
+country_event = {
+	id = USA_TWC.1
+	title = USA_TWC.1.t
+	desc = USA_TWC.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Yes share info  
+		name = USA_TWC.1.a
+		ai_chance = { factor = 60 }
+		USA = { country_event = {
+			id = USA_TWC.2
+			days = 5
+		}  }
+    }
+	option = { # No, dont share info 
+		name = USA_TWC.1.b
+		ai_chance = { factor = 40 }
+		USA = { country_event = {
+			id = USA_TWC.9
+			days = 5
+		}  }
+    }
+}
+
+# they decided to share information 
+country_event = {
+	id = USA_TWC.2
+	title = USA_TWC.2.t
+	desc = USA_TWC.2.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # This will do   
+		name = USA_TWC.2.a
+		ai_chance = { factor = 60 }
+		
+    }
+	option = { # Ask for more 
+		name = USA_TWC.2.b
+		ai_chance = { factor = 40 }
+		ROC = { country_event = {
+			id = USA_TWC.3
+			days = 2
+		}  }
+    }
+}
+# USA asks for more 
+country_event = {
+	id = USA_TWC.3
+	title = USA_TWC.3.t
+	desc = USA_TWC.3.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Sure...  
+		name = USA_TWC.3.a
+		ai_chance = { factor = 60 }
+		USA = { country_event = {
+			id = USA_TWC.4
+			days = 2
+		}  }
+		
+    }
+	option = { # This is a threat to our independence! 
+		name = USA_TWC.3.b
+		ai_chance = { factor = 40 }
+		USA = { country_event = {
+			id = USA_TWC.5
+			days = 2
+		}  }
+    }
+}
+
+# Taiwan sends more information! 
+country_event = {
+	id = USA_TWC.4
+	title = USA_TWC.4.t
+	desc = USA_TWC.4.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Reward them for this  
+		name = USA_TWC.4.a
+		ai_chance = { factor = 60 }
+		ROC = { country_event = {
+			id = USA_TWC.6
+			days = 2
+		}  }
+		
+    }
+	option = { # Send a thank you letter  
+		name = USA_TWC.4.b
+		ai_chance = { factor = 40 }
+		ROC = { country_event = {
+			id = USA_TWC.7
+			days = 2
+		}  }
+    }
+}
+
+# Taiwan refuses to send more information 
+country_event = {
+	id = USA_TWC.5
+	title = USA_TWC.5.t
+	desc = USA_TWC.5.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Punish them.  
+		name = USA_TWC.5.a
+		ai_chance = { factor = 60 }
+		ROC = { country_event = {
+			id = USA_TWC.8
+			days = 2
+		}  }
+		
+    }
+	option = { # We have enough. 
+		name = USA_TWC.5.b
+		ai_chance = { factor = 40 }
+    }
+}
+
+# our reward! 
+country_event = {
+	id = USA_TWC.6
+	title = USA_TWC.6.t
+	desc = USA_TWC.6.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # unexpected! 
+		name = USA_TWC.6.a
+		ai_chance = { factor = 60 }
+		
+    }
+}
+
+# A thank you letter 
+country_event = {
+	id = USA_TWC.7
+	title = USA_TWC.7.t
+	desc = USA_TWC.7.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # No Problem 
+		name = USA_TWC.7.a
+		ai_chance = { factor = 60 }
+		
+    }
+}
+
+# US Sanctions!? 
+country_event = {
+	id = USA_TWC.8
+	title = USA_TWC.8.t
+	desc = USA_TWC.8.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Assholes!  
+		name = USA_TWC.8.a
+		ai_chance = { factor = 60 }
+		
+    }
+}
+
+# Taiwan refuses to send information 
+country_event = {
+	id = USA_TWC.9
+	title = USA_TWC.9.t
+	desc = USA_TWC.9.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Punish them  
+		name = USA_TWC.9.a
+		ai_chance = { factor = 60 }
+		ROC = { country_event = {
+			id = USA_TWC.8
+			days = 2
+		}  }
+		
+    }
+	option = { # We didnt need it anyways! 
+		name = USA_TWC.9.b
+		ai_chance = { factor = 60 }
+		
+    }
+}
+
+country_event = {
+	id = USA_RUW.1
+	title = USA_RUW.1.t
+	desc = USA_RUW.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Rally 
+		name = USA_RUW.1.a
+		ai_chance = { factor = 90 }
+		add_political_power = 5
+		add_stability = 0.02
+    }
+}
 

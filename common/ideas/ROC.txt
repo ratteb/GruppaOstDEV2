@@ -1,0 +1,36 @@
+ideas = {
+
+	country = {
+		ROC_taiwan_crisis01 = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = ROC
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.03
+				war_support_factor = 0.2
+				experience_gain_navy_factor = 0.15
+				experience_gain_air_factor = 0.15
+				static_anti_air_damage_factor = 0.05
+				static_anti_air_hit_chance_factor = 0.05
+			}
+		}
+	}
+}

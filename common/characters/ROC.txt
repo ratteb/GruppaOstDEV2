@@ -1,0 +1,16 @@
+characters={
+	ROC_lai_ching_te ={
+		name="Lai Ching-te"
+		portraits={
+			civilian={
+				large=GFX_portrait_lai_ching_te
+			}
+		}
+		country_leader={
+			ideology=western_liberalism
+			desc = ""
+			expire="3000.1.1.1"
+			id=-1
+		}
+	}
+}
