@@ -199,7 +199,33 @@ ideas = {
 				training_time_army_factor  = 0.05
 				faction_trade_opinion_factor  = 0.3
 				political_power_gain  = -0.1
-				SOV_CSTO_leader_CMT
+				custom_modifier_tooltip = SOV_CSTO_leader_CMT
+			}
+		}
+
+		SOV_SMO = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = SOV
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				air_superiority_efficiency = 0.1 
 			}
 		}
 	}

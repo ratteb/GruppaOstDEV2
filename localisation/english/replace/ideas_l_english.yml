@@ -68,11 +68,15 @@
  SOV_demographics_crisis:0 "Demographics Crisis"
  SOV_demographics_crisis_desc:0 "Years of war, destruction and bad policies have led us to a great demographics crisis of low birth rates, and a dwindeling population. The recent Special Military Operation only made this much worse and drastic actions have to be taken against this major issue, lest we fall into a major labour shortage, and manpower shortage..."
  SOV_CSTO_leader:0 "CSTO Leader"
+ SOV_SMO:0 "Special Anti-Terrorist Operation"
  # Belarus
  BLR_CSTO_member01:0 "CSTO Member"
  BLR_batka_support:0 "The Batka"
  BLR_batka_support_desc:0 "The Batka, or as people outside of Belarus know him, President Lukashenko, the Batka is our founding stone, protecting us from the horrors of privitization in the 90s, and pushing us through the storms of the 2008 economic crisis, foreign agents, and at aiding those in the Russian world in 2014 and 2022. The Batka made a right choice by signing up to the Union State while emphasizing Belarussian independence. He kept our people safe in 2022 while still helping our Russian Brothers, due to his immense political expertise, he was able to avoid a war with the Ukrainians and keep the nation stable. However, the stability of the nation relies on the stability of Batka, if no one supports Batka, the nation falls apart, if Batka is not well, the nation falls apart. At all cost we must keep Batka in a good position, for a strong Belarus. "
-
+ BLR_SVO:0 "Russian Invasion of Belarus"
+ BLR_russian_sanctions:0 "Russian Sanctions"
+ BLR_new_government:0 "New Belarusian Government"
+ BLR_russian_independence:0 "Belarusian Anti Russian Spirit"
  #Novorossiya
  azov_terror_bombing:0 "Azov Terror Bombing"
  azov_terror_bombing_desc:0 "The Azov Brigade, situated inside Ukraine has been terrorizing our civilian populations by sending consistent missile attacks on civilian areas, and the only way to stop it is to counter all missiles, complete the focus 'Russian Dome of Freedom' to get rid of this damn bombing!"

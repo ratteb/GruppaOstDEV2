@@ -36,3 +36,30 @@
  SOV_sotnik.8.b: "Logistics Were At Fault."
  SOV_sotnik.8.c: "Commanders Were At Fault"
 
+ BLR_protest.4.t: "Belarusian Protests Escalate"
+
+ BLR_protest.5.t: "Belarus Asks for Help!"
+ BLR_protest.5.d: "Placeholder"
+ BLR_protest.5.a: "Tanks in Minsk! Now!"
+ BLR_protest.5.b: "Lukashenko is Lost Dammit!"
+
+ BLR_protest.6.t: "Lukashenko Got Ousted!"
+
+
+ BLR_protest.7.t: "Lukashenko Removed From Power!"
+ BLR_protest.7.d: "Placeholder"
+ BLR_protest.7.a: "Conduct a Special Anti Terrorist Operation."
+ BLR_protest.7.b: "Sanction Them."
+
+ news_BLR_protest.5.t: "New Government in Belarus"
+ news_BLR_protest.5.d: "With Belarus being rocked by protests for a couple weeks now, it has finally become public by the new incumbent transitional leader of the Belarusian government that Alexander Lukashenko and many of his cabinet have left the country. Many wonder what will happen now that Lukashenko has left the government and the country is in a fresh chaos of a new government. With many wondering and worrying what the Russian response will be, the transitional leader has said this is not a time to celebrate, but prepare for any possible Russian intervention, or intervention from loyalists of the former administration. The European Union however has already congratulated Belarus, with openly hostile language against the old administration."
+ news_BLR_protest.5.a: "Is it Over?"
+
+ news_BLR_protest.6.t: "Vladimir Putin Announces Special Anti Terrorist Operation"
+ news_BLR_protest.6.d: "After the revolution in Belarus, the Russian Government had been eerily silent on the matter, with Alexander Lukashenko's current whereabouts being unknown and Russian troop movements already being seen near the Belarusian borders, it was only a matter of time before Russia would launch what they called a "Special Anti Terrorist Operation" with Vladimir Putin making a televized address akin to what was seen in 2022 and Ukraine. Many see this as Putin not wanting to repeat what had happened in 2014 and immediately intervening in a neighbour falling to an Anti Russian Government. Many analysts note that the new Belarusian government, still freshly in chaos will not be able to reliably resist a Russian invasion and that even if they had rapid NATO aid, would still fall within weeks.\n\n However only time will tell how this pans out."
+ news_BLR_protest.6.a: "Will This Horror Ever Stop?"
+
+ news_BLR_protest.7.t: "Violent Takeover of Belarus"
+ news_BLR_protest.7.d: "Placeholder"
+ news_BLR_protest.7.a: "Will There be More Violence?"
+

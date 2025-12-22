@@ -30,8 +30,141 @@ ideas = {
 				training_time_army_factor  = 0.05
 				faction_trade_opinion_factor  = 0.1
 				political_power_gain  = -0.06
-				BLR_CSTO_member01_CMT
+				custom_modifier_tooltip = BLR_CSTO_member01_CMT
 			}
+		}
+	
+
+		BLR_russian_sanctions = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = BLR
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.5
+				stability_weekly = -0.001
+				war_support_factor = 0.1
+				easternism_drift = 0.02 
+				consumer_goods_factor = 0.2
+				civilian_factory_use = 2
+				production_speed_buildings_factor = -0.3
+			}
+		}
+	
+
+		BLR_SVO = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = BLR
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				special_forces_out_of_supply_factor = -0.2
+				conscription_factor = -0.5
+				offence = -0.3
+				defence = 0.25
+				air_close_air_support_org_damage_factor = -0.25
+				air_cas_efficiency = -0.15
+				air_superiority_efficiency = -0.25
+
+			}
+		}
+
+		BLR_new_government = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = BLR
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				production_speed_buildings_factor = 0.06
+				custom_modifier_tooltip = BLR_new_government_CMT
+			}
+		}
+
+		BLR_russian_independence = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = BLR
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = -0.05
+				war_support_factor = 0.05
+				army_core_defence_factor = 0.05
+				custom_modifier_tooltip = BLR_russian_independence_CMT
+			}
+			targeted_modifier = {
+					tag = SOV 
+					attack_bonus_against = 0.05
+					defense_bonus_against = 0.06
+				}
 		}
 	}
 }
+	

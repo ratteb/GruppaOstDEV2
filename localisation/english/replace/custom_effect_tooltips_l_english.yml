@@ -23,6 +23,8 @@
 
   # Belarus
   BLR_batka_support_CMT:0 "§RThe Batka Must Never Fall.§!"
+  BLR_new_government_CMT:0 "§GWithout Lukashenko, We Can Grow Closer to the EU!§!"
+  SOV_SATO_BLR_CET:0 "§RWe Will Conduct a Special Anti Terrorist Operation Against Belarus! §!"
 
  # DPRK
   KOR_juche_CMT:0 "§RDue to our Juche Policy We Cannot Join Any Factions!§!"
