@@ -13,6 +13,12 @@ spriteTypes = {
 
 	# Novorossiya above this line
 	spriteType = {
+		name = "GFX_kassym_jomart_tokayev"
+		texturefile = "gfx/leaders/KAZ/kassym_jomart_tokayev.dds"
+	}
+
+	# Kazakhstan above this line 
+	spriteType = {
 		name = "GFX_ihor_palaytsya"
 		texturefile = "gfx/leaders/UKR/ihor_palaytsya.dds"
 	}

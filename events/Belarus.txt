@@ -160,6 +160,7 @@ country_event = {
 		ai_chance = { factor = 90 }
 		puppet = BLR 
 		news_event = news_BLR_protest.3
+		custom_effect_tooltip = BLR_protest_tanks_CET
 
     }
 
@@ -170,6 +171,11 @@ country_event = {
 		BLR = {
 			set_country_flag = SOV_left_belarus
 		}
+		custom_effect_tooltip = BLR_protest_tanks_leave_CET
+		BLR = { country_event = {
+			id = BLR_protest.6
+			days = 4
+		}  }
 
     }
 }

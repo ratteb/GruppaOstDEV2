@@ -36,6 +36,15 @@
  SOV_sotnik.8.b: "Logistics Were At Fault."
  SOV_sotnik.8.c: "Commanders Were At Fault"
 
+ BLR_protest.2.t: "Belarus Asks us For Help With Protests"
+ BLR_protest.2.d: "Placeholder"
+ BLR_protest.2.a: "Send Regular Peacekeepers"
+ BLR_protest.2.b: "Send Spetsnaz"
+ BLR_protest.2.c: "They Can Handle It"
+
+ BLR_protest.3.t: "Order Restored in Minsk"
+ BLR_protest.3.d: "Placeholder"
+
  BLR_protest.4.t: "Belarusian Protests Escalate"
 
  BLR_protest.5.t: "Belarus Asks for Help!"
@@ -50,6 +59,22 @@
  BLR_protest.7.d: "Placeholder"
  BLR_protest.7.a: "Conduct a Special Anti Terrorist Operation."
  BLR_protest.7.b: "Sanction Them."
+
+ news_BLR_protest.1.t: "Order Restored in Belarus"
+ news_BLR_protest.1.d: "Placeholder"
+ news_BLR_protest.1.a: "Thank God..."
+
+ news_BLR_protest.2.t: "Russia Restores Order in Belarus"
+ news_BLR_protest.2.d: "Placeholder"
+ news_BLR_protest.2.a: "Russian Power Displayed Once Again"
+
+ news_BLR_protest.3.t: "Russian Tanks Roll Down in Minsk!"
+ news_BLR_protest.3.d: "Placeholder"
+ news_BLR_protest.3.a: "Chaos!"
+
+ news_BLR_protest.4.t: "Russian Peacekeepers Leave Minsk!"
+ news_BLR_protest.4.d: "Placeholder"
+ news_BLR_protest.4.a: "Will Lukashenko Live?"
 
  news_BLR_protest.5.t: "New Government in Belarus"
  news_BLR_protest.5.d: "With Belarus being rocked by protests for a couple weeks now, it has finally become public by the new incumbent transitional leader of the Belarusian government that Alexander Lukashenko and many of his cabinet have left the country. Many wonder what will happen now that Lukashenko has left the government and the country is in a fresh chaos of a new government. With many wondering and worrying what the Russian response will be, the transitional leader has said this is not a time to celebrate, but prepare for any possible Russian intervention, or intervention from loyalists of the former administration. The European Union however has already congratulated Belarus, with openly hostile language against the old administration."

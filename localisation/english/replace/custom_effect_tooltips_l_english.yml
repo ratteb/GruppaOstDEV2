@@ -25,6 +25,8 @@
   BLR_batka_support_CMT:0 "§RThe Batka Must Never Fall.§!"
   BLR_new_government_CMT:0 "§GWithout Lukashenko, We Can Grow Closer to the EU!§!"
   SOV_SATO_BLR_CET:0 "§RWe Will Conduct a Special Anti Terrorist Operation Against Belarus! §!"
+  BLR_protest_tanks_CET:0 "§GWe Will Ensure the Survival of Lukashenko with Violence!§!"
+  BLR_protest_tanks_leave_CET:0 "§RWe Will Lose Belarus!§!"
 
  # DPRK
   KOR_juche_CMT:0 "§RDue to our Juche Policy We Cannot Join Any Factions!§!"

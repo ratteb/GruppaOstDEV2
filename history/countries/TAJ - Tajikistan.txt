@@ -92,6 +92,10 @@ set_politics = {
 	elections_allowed = yes
 }
 
+add_ideas = {
+	TAJ_CSTO_member01
+}
+
 set_popularities = {
 	westernism = 0
 	communism = 0
