@@ -69,6 +69,8 @@
  SOV_demographics_crisis_desc:0 "Years of war, destruction and bad policies have led us to a great demographics crisis of low birth rates, and a dwindeling population. The recent Special Military Operation only made this much worse and drastic actions have to be taken against this major issue, lest we fall into a major labour shortage, and manpower shortage..."
  SOV_CSTO_leader:0 "CSTO Leader"
  SOV_SMO:0 "Special Anti-Terrorist Operation"
+ SOV_EU_sanction:0 "EU Sanctions"
+ SOV_US_sanction:0 "US Sanctions"
  # Belarus
  BLR_CSTO_member01:0 "CSTO Member"
  BLR_batka_support:0 "The Batka"
@@ -77,6 +79,8 @@
  BLR_russian_sanctions:0 "Russian Sanctions"
  BLR_new_government:0 "New Belarusian Government"
  BLR_russian_independence:0 "Belarusian Anti Russian Spirit"
+ BLR_anti_lukashenko_protests:0 "Anti Administration Protests"
+ BLR_reliant_russia:0 "Russian Reliance"
  #Novorossiya
  azov_terror_bombing:0 "Azov Terror Bombing"
  azov_terror_bombing_desc:0 "The Azov Brigade, situated inside Ukraine has been terrorizing our civilian populations by sending consistent missile attacks on civilian areas, and the only way to stop it is to counter all missiles, complete the focus 'Russian Dome of Freedom' to get rid of this damn bombing!"

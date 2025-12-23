@@ -60,6 +60,23 @@
  BLR_protest.7.a: "Conduct a Special Anti Terrorist Operation."
  BLR_protest.7.b: "Sanction Them."
 
+ BLR_protest.8.t: "Russian Invasion of Belarus"
+ BLR_protest.8.d: "Russia invaded Belarus, evil bitches!"
+ BLR_protest.8.a: "Sanction Them!"
+
+ BLR_protest.9.t: "Russian Invasion of Belarus"
+ BLR_protest.9.d: "Russia invaded Belarus, evil bitches!"
+ BLR_protest.9.a: "Sanction Them!"
+ BLR_protest.9.b: "Not Our Business!"
+
+ BLR_protest.10.t: "The European Union Sanctions Us"
+ BLR_protest.10.d: "Placeholder"
+ BLR_protest.10.a: "Too Bad."
+
+ BLR_protest.11.t: "The United States Sanctions Us"
+ BLR_protest.11.d: "Placeholder"
+ BLR_protest.11.a: "Too Bad."
+
  news_BLR_protest.1.t: "Order Restored in Belarus"
  news_BLR_protest.1.d: "Placeholder"
  news_BLR_protest.1.a: "Thank God..."

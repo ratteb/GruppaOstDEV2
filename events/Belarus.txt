@@ -21,8 +21,9 @@ country_event = {
 		ai_chance = { factor = 90 }
 		SOV = { country_event = {
 			id = BLR_protest.2 
-			days = 1 
+			days = 20
 		}}
+		add_ideas = { BLR_anti_lukashenko_protests }
     }
 }
 
@@ -111,10 +112,16 @@ country_event = {
 			add_ideas = {
 				BLR_reliant_russia
 			}
+			remove_ideas = {
+				BLR_anti_lukashenko_protests
+			}
 			news_event = news_BLR_protest.2
 		}
 		else = {
 			news_event = news_BLR_protest.1 
+			remove_ideas = {
+				BLR_anti_lukashenko_protests
+			}
 		}
     }
 }
@@ -136,7 +143,7 @@ country_event = {
 			limit = { has_country_flag = SOV_helped_belarus }
 			SOV = { country_event = {
 				id = BLR_protest.5
-				days = 3 
+				days = 14 
 			}}
 		}
 		else = {
@@ -161,6 +168,25 @@ country_event = {
 		puppet = BLR 
 		news_event = news_BLR_protest.3
 		custom_effect_tooltip = BLR_protest_tanks_CET
+		BLR = {
+			remove_ideas = {
+				BLR_anti_lukashenko_protests
+			}
+			add_ideas = {
+				BLR_reliant_russia
+			}
+		}
+
+		hidden_effect = {
+			FRA = { country_event = {
+				id = BLR_protest.8
+				days = 3
+			}}
+			USA = { country_event = {
+				id = BLR_protest.9
+				days = 3
+			}}
+		}
 
     }
 
@@ -203,6 +229,9 @@ country_event = {
 		else = {
 			news_event = news_BLR_protest.5  
 		}
+		remove_ideas = {
+				BLR_anti_lukashenko_protests
+			}
 		set_politics = {
     ruling_party = neutrality 
     elections_allowed = yes
@@ -265,6 +294,17 @@ country_event = {
 		add_ideas = BLR_SVO	
 	}
 	add_ideas = SOV_SMO 
+
+	hidden_effect = {
+			FRA = { country_event = {
+				id = BLR_protest.8
+				days = 3
+			}}
+			USA = { country_event = {
+				id = BLR_protest.9
+				days = 3
+			}}
+		}
     }
 
 	option = { # Sanction them!  
@@ -276,6 +316,89 @@ country_event = {
 			}
 		}
 
+    }
+}
+
+# Russian Invasion of Belarus! 
+country_event = {
+	id = BLR_protest.8
+	title = BLR_protest.8.t
+	desc = BLR_protest.8.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # sanction them 
+		name = BLR_protest.8.a
+		ai_chance = { factor = 90 }
+		SOV = {
+			country_event = {
+				id = BLR_protest.10
+				days = 12
+			}
+		}
+    }
+}
+
+# Russian invasion of Belarus! (US)
+country_event = {
+	id = BLR_protest.9
+	title = BLR_protest.9.t
+	desc = BLR_protest.9.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # sanction them 
+		name = BLR_protest.9.a
+		ai_chance = { factor = 90 }
+		SOV = {
+			country_event = {
+				id = BLR_protest.11
+				days = 14
+			}
+		}
+    }
+
+	option = { # not our business 
+		name = BLR_protest.9.b
+		ai_chance = { factor = 10 }
+    }
+}
+
+# EU sanctions 
+country_event = {
+	id = BLR_protest.10
+	title = BLR_protest.10.t
+	desc = BLR_protest.10.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # too bad! 
+		name = BLR_protest.10.a
+		ai_chance = { factor = 90 }
+		add_ideas = {
+			SOV_EU_sanction
+		}
+    }
+}
+
+# US sanctions 
+country_event = {
+	id = BLR_protest.11
+	title = BLR_protest.11.t
+	desc = BLR_protest.11.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # too bad! 
+		name = BLR_protest.11.a
+		ai_chance = { factor = 90 }
+		add_ideas = {
+			SOV_US_sanction
+		}
     }
 }
 

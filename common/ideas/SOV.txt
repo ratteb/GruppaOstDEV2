@@ -228,5 +228,57 @@ ideas = {
 				air_superiority_efficiency = 0.1 
 			}
 		}
+
+		SOV_EU_sanction = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = SOV
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.1
+			}
+		}
+
+		SOV_US_sanction = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = SOV
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.1
+			}
+		}
 	}
 }

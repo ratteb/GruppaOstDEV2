@@ -27,6 +27,7 @@
   SOV_SATO_BLR_CET:0 "§RWe Will Conduct a Special Anti Terrorist Operation Against Belarus! §!"
   BLR_protest_tanks_CET:0 "§GWe Will Ensure the Survival of Lukashenko with Violence!§!"
   BLR_protest_tanks_leave_CET:0 "§RWe Will Lose Belarus!§!"
+  BLR_anti_lukashenko_protests_CMT:0 "§REnsure the Survival of Batka!§!"
 
  # DPRK
   KOR_juche_CMT:0 "§RDue to our Juche Policy We Cannot Join Any Factions!§!"

@@ -66,6 +66,65 @@ ideas = {
 				production_speed_buildings_factor = -0.3
 			}
 		}
+
+		BLR_anti_lukashenko_protests = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = BLR
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.1
+				stability_weekly = -0.001
+				westernism_drift = 0.02 
+				consumer_goods_factor = 0.05
+				custom_modifier_tooltip = BLR_anti_lukashenko_protests_CMT
+			}
+		}
+
+		BLR_reliant_russia = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = BLR
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.05
+				stability_weekly = 0.001
+				easternism_drift = 0.02 
+				consumer_goods_factor = -0.05
+			}
+		}
 	
 
 		BLR_SVO = {
