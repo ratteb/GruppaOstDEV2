@@ -138,6 +138,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			custom_effect_tooltip = CHI_modern_cult_personality_CET
 		}
 	}
 	focus = {
@@ -166,6 +167,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			custom_effect_tooltip = CHI_cult_china_CET
 		}
 	}
 	focus = {
@@ -251,6 +253,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			custom_effect_tooltip = CHI_xi_legacy_secure_CET
 		}
 	}
 
@@ -393,6 +396,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			custom_effect_tooltip = CHI_loyalty_xi_CET
 		}
 	}
 
@@ -422,6 +426,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			custom_effect_tooltip = CHI_loyalty_china_CET
 		}
 	}
 

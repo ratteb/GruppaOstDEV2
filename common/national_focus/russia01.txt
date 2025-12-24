@@ -85,6 +85,7 @@ focus_tree = {
 				var = sotnik_political_power_perc_variable
 				value = -0.03
 			}
+			country_event = SOV_sotnik.11
 			custom_effect_tooltip = SOV_announce_new_equipment_cet	
 		}
 	}

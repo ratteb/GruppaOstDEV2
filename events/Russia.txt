@@ -219,6 +219,21 @@ country_event = {
     }
 }
 
+# Sotnik 1.0 kit 
+country_event = {
+	id = SOV_sotnik.11
+	title = SOV_sotnik.11.t
+	desc = SOV_sotnik.11.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # More attak 
+		name = SOV_sotnik.11.a
+		ai_chance = { factor = 50 }
+		add_political_power = 5
+    }
+}
 
 
 

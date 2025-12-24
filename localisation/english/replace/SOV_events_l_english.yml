@@ -36,6 +36,10 @@
  SOV_sotnik.8.b: "Logistics Were At Fault."
  SOV_sotnik.8.c: "Commanders Were At Fault"
 
+ SOV_sotnik.11.t: "Sotnik 1.0 Kit"
+ SOV_sotnik.11.d: "Placeholder"
+ SOV_sotnik.11.a: "Perfect!"
+
  BLR_protest.2.t: "Belarus Asks us For Help With Protests"
  BLR_protest.2.d: "Placeholder"
  BLR_protest.2.a: "Send Regular Peacekeepers"
