@@ -1,0 +1,60 @@
+scripted_gui = {
+
+	sp_event_window = {
+		window_name = "sp_event_window"
+		context_type = player_context
+
+		visible = {
+			has_global_flag = Super_Event_Visible
+		}
+
+		
+		triggers = {
+			Super_Event_SMO_visible = {
+				has_global_flag = RUS_start_SMO_se
+			}
+		}
+
+		triggers = {
+			Super_Event_HRW_visible = {
+				has_global_flag = UKR_start_HRW_se
+			}
+		}
+
+
+		
+		
+		############
+		###BUTTON###
+		############
+		
+		effects = {
+			sp_event_close_button_click = {
+				clr_global_flag = Super_Event_Visible
+
+				if = {
+					limit = {
+						has_global_flag = UKR_start_HRW_se
+					}
+					clr_global_flag = UKR_start_HRW_se
+				}
+				
+				if = {
+					limit = {
+						has_global_flag = RUS_start_SMO_se
+					}
+					clr_global_flag = RUS_start_SMO_se
+				}
+
+				
+			}
+		}
+		ai_weights = {
+            sp_event_close_button_click = {
+                ai_will_do = {
+                    base = 100
+                }
+            }
+        }
+	}
+}

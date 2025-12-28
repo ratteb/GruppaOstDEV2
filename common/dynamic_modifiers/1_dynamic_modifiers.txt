@@ -320,3 +320,16 @@ BLR_batka_support = {
 	trade_opinion_factor = BATKA_to
 	war_support_factor = BATKA_ws
 }
+
+
+CHI_the_rot = {
+	icon = "GFX_idea_unknown"
+
+	political_power_gain = CHIROT_pp_gain
+	political_power_factor = CHIROT_pp_gain_p
+	stability_factor = CHIROT_stability_p
+	consumer_goods_factor = CHIROT_cg
+	conscription_factor = CHIROT_cf
+	trade_opinion_factor = CHIROT_to
+	war_support_factor = CHIROT_ws
+}

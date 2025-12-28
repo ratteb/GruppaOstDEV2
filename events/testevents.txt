@@ -1,10 +1,11 @@
-﻿###########################
+###########################
 # Chinese Events
 ###########################
 
 add_namespace = test
 add_namespace = news_test
 add_namespace = concept_event
+add_namespace = test_superevent
 
 # Irrelevant for now 
 country_event = {
@@ -59,7 +60,7 @@ news_event = {
 	id = concept_event.1
 	title = concept_event.1.t
 	desc = concept_event.1.d
-	picture = GFX_concept_event_event_001
+	picture = GFX_news_ukraine_event_001
 	
 	major = yes
 	
@@ -69,5 +70,36 @@ news_event = {
 		name = concept_event.1.a
 	}
 }
+
+country_event = {
+	id = test_superevent.1
+	title = test_superevent.1.t
+	desc = test_superevent.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = test_superevent.1.a
+		set_global_flag = Super_Event_Visible
+		set_global_flag = UKR_start_HRW_se
+	}
+}
+
+country_event = {
+	id = test_superevent.2
+	title = test_superevent.2.t
+	desc = test_superevent.2.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = test_superevent.2.a
+		set_global_flag = Super_Event_Visible
+		set_global_flag = RUS_start_SMO_se
+	}
+}
+
 
 

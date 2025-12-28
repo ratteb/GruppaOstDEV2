@@ -118,6 +118,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {	
+			custom_effect_tooltip = SOV_showcase_new_equipments_CET
 		}
 	}
 	focus = {

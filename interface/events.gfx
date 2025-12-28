@@ -28,6 +28,12 @@ spriteTypes = {
 
 	# RUSSIA 
 
+	# BELARUS NEWS 
+	spriteType = {
+		name = "GFX_news_belarus_event_003"
+		texturefile = "gfx/event_pictures/news_belarus_event_003.dds"
+	}
+
 	# country event 
 		spriteType = {
 		name = "GFX_report_daily_briefing_mod"

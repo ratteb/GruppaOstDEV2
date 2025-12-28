@@ -17,9 +17,10 @@
  SOV_sotnik.4.a: "Let Him Bark"
  SOV_sotnik.4.b: "Punish Him for Speaking Out"
 
- SOV_sotnik.5.t: "Gerasimov's Reaction"
- SOV_sotnik.5.d: "He happy boy"
- SOV_sotnik.5.a: "Keep Him Happy"
+ SOV_sotnik.5.t: "Shoigu's Reaction"
+ SOV_sotnik.5.d: "He Angry!"
+ SOV_sotnik.5.a: "Let Him Bark"
+ SOV_sotnik.5.b: "Punish Him for Speaking Out"
 
  SOV_sotnik.6.t: "The Ministry of Defence Discusses The SMO"
  SOV_sotnik.6.d: "It was an early morning in Moscow, all the usual people were there, Gerasimov, Shoigu, Putin, and many other generals and highly powerful people in the Russian system. The meeting started at 08:05 sharply, and as usual Gerasimov started to speak. “Greetings, gentlemen, as a major part of the new Sotnik programme, we have asked us all to sit together and discuss the successes and failures of our Special Military Operation in Ukraine.” Gerasimov corrected his coat, and resumed to speak. “We will go over our early military successes and failures in 2022, what changed in 2023, and our newly found successes in 2024. Any questions?” Shoigu immediately spoke up in an almost disgusted tone. “Will this just be another one of your speeches glorifying yourself? Or will you be honest about your own failures too?” Gerasimov sighed and did not answer his rivals question, so he simply said: “Is that all? No more questions? Let us begin.”\n\nAnd so, this long meeting would finally begin, with this marking the point of no return of a total modernization of the Russian Armed Forces."
@@ -90,7 +91,7 @@
  news_BLR_protest.2.a: "Russian Power Displayed Once Again"
 
  news_BLR_protest.3.t: "Russian Tanks Roll Down in Minsk!"
- news_BLR_protest.3.d: "Placeholder"
+ news_BLR_protest.3.d: "After the Russian peacekeepers arrived in Belarus to help with the protests, but no slowing down being noticed, the Belarusian Government had sent a plea to the Russian Government to re establish order as soon as possible. And within 12 hours, 27 Russian Tanks and Rosvgardiya Units were spotted in the centre of Minsk occupying Police Stations and setting up barriers on the roads, soon, only 1 hour after their arrival the arrest of Protest leaders had been documented. It is safe to say, with the arrest of the protest leaders and prescense of heavy Russian Infantry that the fall of Lukashenko or his regime wont be for any time soon. As soon as this had happened the European Union and United States had condemned the move and promised an "Appropriate Response" for such a Violent takeover.\n\n It is safe to say Alexander Lukashenko will attempt to rapidly advance the Union State Program with the active involvement of Russian FSB and Security Forces in the region, which could once and for all ensure Russian control over the country."
  news_BLR_protest.3.a: "Chaos!"
 
  news_BLR_protest.4.t: "Russian Peacekeepers Leave Minsk!"

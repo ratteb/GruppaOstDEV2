@@ -94,7 +94,7 @@ country_event = {
     }
 }
 
-# Gerasimov responds to NCO 
+# Shoigu responds to NCO 
 country_event = {
 	id = SOV_sotnik.5
 	title = SOV_sotnik.5.t
@@ -103,10 +103,26 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	option = { # A great development
+	option = { # Keep him barking 
 		name = SOV_sotnik.5.a
 		ai_chance = { factor = 90 }
-		add_political_power = 5
+		set_country_flag = SOV_didnt_punish_shoigu
+		add_political_power = -25
+		add_command_power = -50
+		army_experience = 10
+    }
+
+	option = { # Punish him for speaking out 
+		name = SOV_sotnik.5.b
+		ai_chance = { factor = 10 }
+		set_country_flag = SOV_punished_shoigu
+		add_political_power = 25
+		add_command_power = 35
+		army_experience = -5
+		add_timed_idea = {
+			idea = SOV_silence_critics
+			days = 56
+		}
     }
 }
 
