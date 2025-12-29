@@ -27,6 +27,21 @@ spriteTypes = {
 		name = "GFX_Super_Event_HRW"
 		textureFile = "/gfx/SuperEvent/sp_events/Super_Event_HRW.dds"
 	}
+
+	spriteType = {
+		name = "GFX_Super_Event_SEW"
+		textureFile = "/gfx/SuperEvent/sp_events/Super_Event_SEW.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Super_Event_MOST"
+		textureFile = "/gfx/SuperEvent/sp_events/Super_Event_MOST.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Super_Event_NBP"
+		textureFile = "/gfx/SuperEvent/sp_events/Super_Event_NBP.dds"
+	}
 	
 	
 }

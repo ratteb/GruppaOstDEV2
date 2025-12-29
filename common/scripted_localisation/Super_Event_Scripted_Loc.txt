@@ -15,6 +15,27 @@ defined_text = {
         }
         localization_key = "sp_event_HRW"
     }
+
+    text = {
+        trigger = {
+            has_global_flag = CHI_start_SEW_se
+        }
+        localization_key = "sp_event_SEW"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = CHI_start_MOST_se
+        }
+        localization_key = "sp_event_MOST"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = SOV_NBP_se
+        }
+        localization_key = "sp_event_NBP"
+    }
 	
 }
 
@@ -34,6 +55,27 @@ defined_text = {
             has_global_flag = UKR_start_HRW_se
         }
         localization_key = "sp_event_HRW_REMARK"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = CHI_start_SEW_se
+        }
+        localization_key = "sp_event_SEW_REMARK"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = CHI_start_MOST_se
+        }
+        localization_key = "sp_event_MOST_REMARK"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = SOV_NBP_se
+        }
+        localization_key = "sp_event_NBP_REMARK"
     }
 	
 
@@ -55,6 +97,27 @@ defined_text = {
             has_global_flag = UKR_start_HRW_se
         }
         localization_key = "sp_event_HRW_QUOTE"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = CHI_start_SEW_se
+        }
+        localization_key = "sp_event_SEW_QUOTE"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = CHI_start_MOST_se
+        }
+        localization_key = "sp_event_MOST_QUOTE"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = SOV_NBP_se
+        }
+        localization_key = "sp_event_NBP_QUOTE"
     }
 	
 

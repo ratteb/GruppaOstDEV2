@@ -83,6 +83,9 @@ country_event = {
 		name = test_superevent.1.a
 		set_global_flag = Super_Event_Visible
 		set_global_flag = UKR_start_HRW_se
+		hidden_effect = {
+			scoped_play_song = gtu_llb
+		}
 	}
 }
 
@@ -98,6 +101,51 @@ country_event = {
 		name = test_superevent.2.a
 		set_global_flag = Super_Event_Visible
 		set_global_flag = RUS_start_SMO_se
+	}
+}
+
+country_event = {
+	id = test_superevent.3
+	title = test_superevent.3.t
+	desc = test_superevent.3.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = test_superevent.3.a
+		set_global_flag = Super_Event_Visible
+		set_global_flag = CHI_start_SEW_se
+	}
+}
+
+country_event = {
+	id = test_superevent.4
+	title = test_superevent.4.t
+	desc = test_superevent.4.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = test_superevent.4.a
+		set_global_flag = Super_Event_Visible
+		set_global_flag = CHI_start_MOST_se
+	}
+}
+
+country_event = {
+	id = test_superevent.5
+	title = test_superevent.5.t
+	desc = test_superevent.5.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = test_superevent.5.a
+		set_global_flag = Super_Event_Visible
+		set_global_flag = SOV_NBP_se
 	}
 }
 

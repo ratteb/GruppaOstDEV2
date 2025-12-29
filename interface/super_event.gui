@@ -26,6 +26,23 @@ guiTypes = {
 			spriteType = "GFX_Super_Event_HRW"
 			position = {x = 0 y = 0}
 		}
+		iconType = {
+			name = "Super_Event_SEW"
+			spriteType = "GFX_Super_Event_SEW"
+			position = {x = 0 y = 0}
+		}
+
+		iconType = {
+			name = "Super_Event_MOST"
+			spriteType = "GFX_Super_Event_MOST"
+			position = {x = 0 y = 0}
+		}
+
+		iconType = {
+			name = "Super_Event_NBP"
+			spriteType = "GFX_Super_Event_NBP"
+			position = {x = 0 y = 0}
+		}
 
 		
 		

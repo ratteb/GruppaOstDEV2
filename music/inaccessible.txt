@@ -6,6 +6,14 @@ music = {
 		factor = 1
 	}
 }
+
+music = {
+	song = "gtu_llb"
+	
+	chance = {
+		factor = 1
+	}
+}
 music = {
 	song = "oblivion"
 	
