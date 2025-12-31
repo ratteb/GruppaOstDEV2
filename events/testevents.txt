@@ -149,5 +149,20 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = test_superevent.6
+	title = test_superevent.6.t
+	desc = test_superevent.6.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = test_superevent.6.a
+		set_global_flag = Super_Event_Visible
+		set_global_flag = SOV_PTnD_se
+	}
+}
+
 
 

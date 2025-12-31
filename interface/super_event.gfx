@@ -42,6 +42,11 @@ spriteTypes = {
 		name = "GFX_Super_Event_NBP"
 		textureFile = "/gfx/SuperEvent/sp_events/Super_Event_NBP.dds"
 	}
+
+	spriteType = {
+		name = "GFX_Super_Event_PTnD"
+		textureFile = "/gfx/SuperEvent/sp_events/Super_Event_PTnD.dds"
+	}
 	
 	
 }

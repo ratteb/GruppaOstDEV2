@@ -44,6 +44,12 @@ guiTypes = {
 			position = {x = 0 y = 0}
 		}
 
+		iconType = {
+			name = "Super_Event_PTnD"
+			spriteType = "GFX_Super_Event_PTnD"
+			position = {x = 0 y = 0}
+		}
+
 		
 		
 		###############

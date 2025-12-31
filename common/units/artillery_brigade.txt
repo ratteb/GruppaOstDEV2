@@ -322,14 +322,13 @@ sub_units = {
 			category_artillery
 		}		
 
-		combat_width = 3
+		combat_width = 7
 
 		need = {
-			motorized_rocket_equipment = 20
-			motorized_equipment = 15
+			motorized_rocket_equipment = 18
 		}
 		
-		manpower = 500
+		manpower = 150
 		max_organisation = 0
 		default_morale = 0.1
 		max_strength = 0.6

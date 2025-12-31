@@ -36,6 +36,13 @@ defined_text = {
         }
         localization_key = "sp_event_NBP"
     }
+
+    text = {
+        trigger = {
+            has_global_flag = SOV_PTnD_se
+        }
+        localization_key = "sp_event_PTnD"
+    }
 	
 }
 
@@ -76,6 +83,13 @@ defined_text = {
             has_global_flag = SOV_NBP_se
         }
         localization_key = "sp_event_NBP_REMARK"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = SOV_PTnD_se
+        }
+        localization_key = "sp_event_PTnD_REMARK"
     }
 	
 
@@ -118,6 +132,13 @@ defined_text = {
             has_global_flag = SOV_NBP_se
         }
         localization_key = "sp_event_NBP_QUOTE"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = SOV_PTnD_se
+        }
+        localization_key = "sp_event_PTnD_QUOTE"
     }
 	
 

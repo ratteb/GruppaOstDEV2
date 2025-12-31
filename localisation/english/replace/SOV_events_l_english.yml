@@ -83,11 +83,11 @@
  BLR_protest.11.a: "Too Bad."
 
  news_BLR_protest.1.t: "Order Restored in Belarus"
- news_BLR_protest.1.d: "Placeholder"
+ news_BLR_protest.1.d: "With protests in Belarus finally reaching a breaking point, the Belarussian government had sent a plea to the Russian Federation for a "Peacekeeping Operation" However such a proposal was refused by the Russian Government. Namely due to resource constraints and active military reforms being preformed under the "Sotnik-1 Programme" either way, the Belarussian MVD and OMON were able to actively supress these protests and the reign of Lukashenko is likely secure. While public statements by Lukashenko, showing slight disappointment in the Russian resolve, relations have not meaningfully deteriorated between the 2 states. \n\n Lukashenko has however announced that reforms to the liberties of the people, MVD and OMON will commence in the near future."
  news_BLR_protest.1.a: "Thank God..."
 
  news_BLR_protest.2.t: "Russia Restores Order in Belarus"
- news_BLR_protest.2.d: "Placeholder"
+ news_BLR_protest.2.d: "After the protests in Belarus began and the Belarussian government was clearly struggling to maintain these protests they had asked the Russian government for peacekeepers. Soon after Russian Peacekeepers were in all major cities including Minsk, Gomel, and Pinsk. Soon after, the protests were in a contained position and it surely assumed that Lukashenko will remain in power for much longer, albeit with a heavy reliance on Russian military and security prescense. No statements were made publicly about the furthering of the Union State Project, assuming it will continue as it has been. \n\n While Western countries have condemned this move, no public measures were taken against either Belarus or Russia, with the only noticable thing being that the border security between Poland and Belarus has been slightly more active in recent times."
  news_BLR_protest.2.a: "Russian Power Displayed Once Again"
 
  news_BLR_protest.3.t: "Russian Tanks Roll Down in Minsk!"
@@ -109,4 +109,54 @@
  news_BLR_protest.7.t: "Violent Takeover of Belarus"
  news_BLR_protest.7.d: "Placeholder"
  news_BLR_protest.7.a: "Will There be More Violence?"
+
+
+ # Putins Death!
+ SOV_putin_death_event.1.t: "Putin Gets Sick"
+ SOV_putin_death_event.1.d: "Placeholder"
+ SOV_putin_death_event.1.a: "He Will Heal."
+
+ SOV_putin_death_event.2.t: "Putins Health Worsens"
+ SOV_putin_death_event.2.d: "Placeholder"
+ SOV_putin_death_event.2.a: "It'll Get Better..."
+
+ SOV_putin_death_event.3.t: "Putin Shows Improvements"
+ SOV_putin_death_event.3.d: "Placeholder"
+ SOV_putin_death_event.3.a: "Told Ya So!"
+
+ SOV_putin_death_event.4.t: "Putin Reserves From Public Life"
+ SOV_putin_death_event.4.d: "Placeholder"
+ SOV_putin_death_event.4.a: "Oh No..."
+
+ SOV_putin_death_event.5.t: "Putin's Absence"
+ SOV_putin_death_event.5.d: "Placeholder"
+ SOV_putin_death_event.5.a: "Play The Swans!"
+
+ SOV_putin_death_event.6.t: "Putin is Dead!"
+ SOV_putin_death_event.6.d: "Placeholder"
+ SOV_putin_death_event.6.a: "Oh God! The House Has Fallen!"
+
+ SOV_putin_death_event.7.t: "Election Results!"
+ SOV_putin_death_event.7.d: "Placeholder"
+ SOV_putin_death_event.7.a: "Another 6 Years!"
+
+ SOV_putin_death_event.8.t: "Doctors Bring Negative News"
+ SOV_putin_death_event.8.d: "Placeholder"
+ SOV_putin_death_event.8.a: "Oh No..."
+
+ SOV_putin_death_event.9.t: "2030 Presidential Address"
+ SOV_putin_death_event.9.d: "Placeholder"
+ SOV_putin_death_event.9.a: "Fine"
+
+ SOV_putin_death_news_event.1.t: "Swan Lake Appears on Russian State Media"
+ SOV_putin_death_news_event.1.d: "A couple days after re-elected president Vladimir Putin made his 2030 address to the nation, he has not been seen in any public appearances and or government meetings. With some wondering where he had went, the true weight of his absence was felt by the Russian people and the surrounding nations, the last time this broadcast had appeared was in August 1991 during the August Coup by Communist hardliners. This signals great turmoil within the Russian Federation, as every major state TV station is now playing the Dance of the Little Swans with the iconic Swan Lake by Tchaikovsky many outside and internal observers signal that Putin's health and administration may be in jeopardy."
+ SOV_putin_death_news_event.1.a: "Oh God..."
+
+ SOV_putin_death_news_event.2.t: "Putin Re-Elected"
+ SOV_putin_death_news_event.2.d: "Placeholder"
+ SOV_putin_death_news_event.2.a: "Another 6 Years of Putinism."
+
+ SOV_putin_death_news_event.3.t: "Putin is Dead"
+ SOV_putin_death_news_event.3.d: "Placeholder"
+ SOV_putin_death_news_event.3.a: "Will Russia Hold?"
 

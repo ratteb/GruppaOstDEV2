@@ -112,6 +112,8 @@ set_variable = {
 add_dynamic_modifier = { modifier = SOV_demographics_crisis }
 add_dynamic_modifier = { modifier = SOV_russian_armed_forces }
 
+set_country_flag = SOV_putin_alive 
+
 resize_array = { SOV.opening_screen_chapters = 3 }
 
 resize_array = { SOV.opening_screen_chapter_photos_0 = 4 }

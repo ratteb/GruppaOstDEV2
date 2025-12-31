@@ -39,6 +39,12 @@ scripted_gui = {
 			}
 		}
 
+		triggers = {
+			Super_Event_PTnD_visible = {
+				has_global_flag = SOV_PTnD_se
+			}
+		}
+
 
 		
 		
@@ -55,6 +61,13 @@ scripted_gui = {
 						has_global_flag = UKR_start_HRW_se
 					}
 					clr_global_flag = UKR_start_HRW_se
+				}
+
+				if = {
+					limit = {
+						has_global_flag = SOV_PTnD_se
+					}
+					clr_global_flag = SOV_PTnD_se
 				}
 				
 				if = {

@@ -28,7 +28,24 @@ spriteTypes = {
 
 	# RUSSIA 
 
+	# RUSSIA NEWS 
+
+	spriteType = {
+		name = "GFX_news_russia_teaser_event_001"
+		texturefile = "gfx/event_pictures/news_russia_teaser_event_001.dds"
+	}
+
 	# BELARUS NEWS 
+
+	spriteType = {
+		name = "GFX_news_belarus_event_001"
+		texturefile = "gfx/event_pictures/news_belarus_event_001.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_belarus_event_002"
+		texturefile = "gfx/event_pictures/news_belarus_event_002.dds"
+	}
 	spriteType = {
 		name = "GFX_news_belarus_event_003"
 		texturefile = "gfx/event_pictures/news_belarus_event_003.dds"

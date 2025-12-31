@@ -5,6 +5,12 @@
  SOV_chose_install_NCO_ctt: "§CWe Have Decided on Implimenting an NCO System§!"
  SOV_equipments_ctt: "§RWe Have Been Forced to Redirect Efforts Due to Slowdown§!"
 
+ # Putin Election
+ SOV_putin_relected_ctt: "This Focus Is Completed by Event!"
+ SOV_duma_holds_ctt: "§RThe Duma Holds!§!"
+ SOV_duma_falls_ctt: "§RThe Duma Falls!§!"
+ 
+
  #Ukraine Tree
  UKR_chose_focus_azov_ctt: "§RWe Have Chosen To Focus on the Azov Insurgency§!"
  UKR_chose_focus_crimewave_ctt: "§BWe Have Chosen To Focus on the Crimewave§!"

@@ -17,6 +17,12 @@
   SOV_scrap_guard_CET: "§RThe Old Guard Will Be Furious!§!"
 
   SOV_showcase_new_equipments_CET: "§YWe Will Send Invitations To All Our Allies!§!"
+
+  # Putin relection
+  SOV_new_administration_cet: "§YWe Will Assign a New Cabinet!§!"
+  SOV_putin_death_event.5_cet: "Gets event '§YIs It Over?§!'"
+  SOV_putin_absence_cet: "Gets event '§YDoctors Give Positive News!§!'"
+  SOV_putin_death_cet: "Gets event '§YPutin Recovers!§!'\nGets event '§YCrisis in the Duma!§!'"
  # §R§!
 
  # CSTO

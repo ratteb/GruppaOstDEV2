@@ -1,0 +1,625 @@
+
+focus_tree = {
+	id = russia02_focus_tree
+	
+	country = {
+		factor = 0
+
+		modifier = {
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 4000 y = 1000 }
+    # Putin Election 
+
+	focus = {
+		id = SOV_putin_choice
+		icon = GFX_goal_no_data
+		x = 0
+		y = 2
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+	    }
+	}
+
+#Putin death 
+	focus = {
+		id = SOV_putin_reelection
+		prerequisite = { focus = SOV_putin_choice }
+		mutually_exclusive = { focus = SOV_putin_retire }
+		icon = GFX_goal_no_data
+		relative_position_id = SOV_putin_choice
+		x = 5
+		y = 2
+
+		cost = 1
+
+		select_effect = {
+			country_event = {
+				id = SOV_putin_death_event.1
+				days = 5
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+	    }
+	}
+
+	focus = {
+		id = SOV_putin_start_campaign
+		prerequisite = { focus = SOV_putin_reelection }
+		icon = GFX_goal_no_data
+		relative_position_id = SOV_putin_reelection
+		x = 0
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+	    }
+	}
+
+	focus = {
+		id = SOV_putin_election_start
+		prerequisite = { focus = SOV_putin_reelection }
+		icon = GFX_goal_no_data
+		relative_position_id = SOV_putin_reelection
+		x = 0
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+			country_event = {
+				id = SOV_putin_death_event.7
+				days = 7
+			}
+	    }
+	}
+
+	focus = {
+		id = SOV_putin_reelected
+		prerequisite = { focus = SOV_putin_election_start }
+		icon = GFX_goal_no_data
+		relative_position_id = SOV_putin_election_start
+		x = 0
+		y = 1
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+			custom_trigger_tooltip = {
+				tooltip = SOV_putin_relected_ctt
+				has_country_flag = SOV_putin_relected
+			}
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+	    }
+	}
+
+	focus = {
+		id = SOV_2030_address
+		prerequisite = { focus = SOV_putin_reelected }
+		icon = GFX_goal_no_data
+		relative_position_id = SOV_putin_reelected
+		x = 0
+		y = 1
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = {
+				id = SOV_putin_death_event.9
+				days = 3
+			}	
+	    }
+	}
+
+	focus = {
+		id = SOV_putin_absence
+		prerequisite = { focus = SOV_2030_address }
+		icon = GFX_goal_no_data
+		relative_position_id = SOV_2030_address
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = { has_country_flag = SOV_putin_dead }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_putin_absence_cet
+			hidden_effect = {
+				country_event = {
+					id = SOV_putin_death_event.8
+					days = 3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_putin_death
+		prerequisite = { focus = SOV_putin_absence }
+		icon = GFX_goal_no_data
+		relative_position_id = SOV_putin_absence
+		x = 0
+		y = 1
+
+		cost = 0.8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = { has_country_flag = SOV_putin_dead }
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_putin_death_cet
+			hidden_effect = {
+				country_event = {
+					id = SOV_putin_death_event.6
+					days = 4
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_duma_holds
+		prerequisite = { focus = SOV_putin_death }
+		mutually_exclusive = { focus = SOV_duma_falls }
+		icon = GFX_goal_no_data
+		relative_position_id = SOV_putin_death
+		x = 1
+		y = 1
+
+		cost = 0.2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = { has_country_flag = SOV_putin_dead }
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOV_duma_holds_ctt
+				has_country_flag = SOV_duma_holds
+			}
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SOV_duma_falls
+		prerequisite = { focus = SOV_putin_death }
+		mutually_exclusive = { focus = SOV_duma_holds }
+		icon = GFX_goal_no_data
+		relative_position_id = SOV_putin_death
+		x = -1
+		y = 1
+
+		cost = 0.2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = { has_country_flag = SOV_putin_dead }
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOV_duma_falls_ctt
+				has_country_flag = SOV_duma_falls
+			}
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+
+	# Putin retire 
+	focus = {
+		id = SOV_putin_retire
+		prerequisite = { focus = SOV_putin_choice }
+		mutually_exclusive = { focus = SOV_putin_reelection }
+		icon = GFX_goal_no_data
+		relative_position_id = SOV_putin_choice
+		x = -5
+		y = 2
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+	    }
+	}
+
+	focus = {
+		id = SOV_announce_medvedev
+		prerequisite = { focus = SOV_putin_retire }
+		icon = GFX_goal_no_data
+		relative_position_id = SOV_putin_retire
+		x = 0
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+	    }
+	}
+
+	focus = {
+		id = SOV_begin_campaigning
+		prerequisite = { focus = SOV_announce_medvedev }
+		icon = GFX_goal_no_data
+		relative_position_id = SOV_announce_medvedev
+		x = 0
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+	    }
+	}
+
+	focus = {
+		id = SOV_medvedev
+		prerequisite = { focus = SOV_begin_campaigning }
+		mutually_exclusive = { focus = SOV_girkin }
+		mutually_exclusive = { focus = SOV_mishustin }
+		icon = GFX_goal_no_data
+		relative_position_id = SOV_begin_campaigning
+		x = 0
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+	    }
+	}
+
+	focus = {
+		id = SOV_mishustin
+		prerequisite = { focus = SOV_begin_campaigning }
+		mutually_exclusive = { focus = SOV_medvedev }
+		mutually_exclusive = { focus = SOV_girkin }
+		icon = GFX_goal_no_data
+		relative_position_id = SOV_begin_campaigning
+		x = 2
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+	    }
+	}
+
+	focus = {
+		id = SOV_girkin
+		prerequisite = { focus = SOV_begin_campaigning }
+		mutually_exclusive = { focus = SOV_medvedev }
+		mutually_exclusive = { focus = SOV_mishustin }
+		icon = GFX_goal_no_data
+		relative_position_id = SOV_begin_campaigning
+		x = -2
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+	    }
+	}
+
+	focus = {
+		id = SOV_results
+		prerequisite = { focus = SOV_medvedev
+		focus = SOV_girkin 
+		focus = SOV_mishustin }
+		icon = GFX_goal_no_data
+		relative_position_id = SOV_medvedev
+		x = 0
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+	    }
+	}
+
+	# irrelevancy 
+	focus = {
+		id = SOV_prepare_the_administration
+		prerequisite = { focus = SOV_2030_address }
+		icon = GFX_goal_no_data
+		relative_position_id = SOV_2030_address
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = { has_country_flag = SOV_putin_alive }
+
+		available = { 
+			hidden_trigger = {
+				has_country_flag = SOV_putin_alive
+			}
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_new_administration_cet
+
+			hidden_effect = { 
+				country_event = ukraine_cheater.2
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_putinism_1000_year
+		prerequisite = { focus = SOV_prepare_the_administration }
+		icon = GFX_goal_no_data
+		relative_position_id = SOV_prepare_the_administration
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = { 
+			hidden_trigger = {
+				has_country_flag = SOV_putin_alive
+			}
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+}

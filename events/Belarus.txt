@@ -407,7 +407,7 @@ news_event = {
 	id = news_BLR_protest.1
 	title = news_BLR_protest.1.t
 	desc = news_BLR_protest.1.d
-	picture = GFX_news_ukraine_event_005
+	picture = GFX_news_belarus_event_001
 	
 	is_triggered_only = yes
 	major = yes
@@ -424,7 +424,7 @@ news_event = {
 	id = news_BLR_protest.2
 	title = news_BLR_protest.2.t
 	desc = news_BLR_protest.2.d
-	picture = GFX_news_ukraine_event_005
+	picture = GFX_news_belarus_event_002 
 	
 	is_triggered_only = yes
 	major = yes

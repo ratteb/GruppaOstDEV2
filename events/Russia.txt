@@ -3,6 +3,12 @@
 ###########################
 
 add_namespace = SOV_sotnik
+add_namespace = SOV_teaser_events
+add_namespace = SOV_teaser_news_events
+add_namespace = SOV_putin_death_event
+add_namespace = SOV_putin_retire_event
+add_namespace = SOV_putin_death_news_event
+add_namespace = SOV_putin_retire_news_event
 
 # Event Chain for SOtnik Program
 
@@ -248,6 +254,259 @@ country_event = {
 		name = SOV_sotnik.11.a
 		ai_chance = { factor = 50 }
 		add_political_power = 5
+    }
+}
+
+# Putin Gets Sick 
+country_event = {
+	id = SOV_putin_death_event.1
+	title = SOV_putin_death_event.1.t
+	desc = SOV_putin_death_event.1.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # Ura! 
+		name = SOV_putin_death_event.1.a
+		ai_chance = { factor = 90 }
+		hidden_effect = {
+			country_event =  { 
+				id = SOV_putin_death_event.2
+				days = 9
+			 }
+		}
+    }
+}
+
+# Putins Health Worsens 
+country_event = {
+	id = SOV_putin_death_event.2
+	title = SOV_putin_death_event.2.t
+	desc = SOV_putin_death_event.2.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # Ura! 
+		name = SOV_putin_death_event.2.a
+		ai_chance = { factor = 90 }
+		hidden_effect = {
+			country_event = {
+				id = SOV_putin_death_event.3
+				days = 3
+			}
+		}
+    }
+}
+
+# Putin Gets Better? 
+country_event = {
+	id = SOV_putin_death_event.3
+	title = SOV_putin_death_event.3.t
+	desc = SOV_putin_death_event.3.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # Ura! 
+		name = SOV_putin_death_event.3.a
+		ai_chance = { factor = 90 }
+		hidden_effect = {
+			country_event = {
+				id = SOV_putin_death_event.4
+				days = 10
+			}
+		}
+    }
+}
+
+# Putin Reserves From Public Life 
+country_event = {
+	id = SOV_putin_death_event.4
+	title = SOV_putin_death_event.4.t
+	desc = SOV_putin_death_event.4.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # Ura! 
+		name = SOV_putin_death_event.4.a
+		ai_chance = { factor = 90 }
+		hidden_effect = {
+			country_event = {
+				id = SOV_putin_death_event.5
+				days = 10
+			}
+		}
+    }
+}
+
+# Putins Absence! 
+country_event = {
+	id = SOV_putin_death_event.5
+	title = SOV_putin_death_event.5.t
+	desc = SOV_putin_death_event.5.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # Play The Swans! 
+		name = SOV_putin_death_event.5.a
+		ai_chance = { factor = 90 }
+		hidden_effect = {
+
+		mark_focus_tree_layout_dirty = yes
+		set_country_flag = SOV_putin_dead
+		clr_country_flag = SOV_putin_alive
+		}
+
+		news_event = SOV_putin_death_news_event.1
+		custom_effect_tooltip = SOV_putin_death_event.5_cet
+    }
+}
+
+# Putin is Dead! 
+country_event = {
+	id = SOV_putin_death_event.6
+	title = SOV_putin_death_event.6.t
+	desc = SOV_putin_death_event.6.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # Ura! 
+		name = SOV_putin_death_event.6.a
+		ai_chance = { factor = 90 }
+		news_event = SOV_putin_death_news_event.3
+    }
+}
+
+# Election Results 
+country_event = {
+	id = SOV_putin_death_event.7
+	title = SOV_putin_death_event.7.t
+	desc = SOV_putin_death_event.7.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # Ura! 
+		name = SOV_putin_death_event.7.a
+		ai_chance = { factor = 90 }
+		set_country_flag = SOV_putin_relected
+		news_event = SOV_putin_death_news_event.2
+    }
+}
+
+# Doctors Bring Negative News
+country_event = {
+	id = SOV_putin_death_event.8
+	title = SOV_putin_death_event.8.t
+	desc = SOV_putin_death_event.8.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # Ura! 
+		name = SOV_putin_death_event.8.a
+		ai_chance = { factor = 90 }
+    }
+}
+
+# 2030 State Address
+country_event = {
+	id = SOV_putin_death_event.9
+	title = SOV_putin_death_event.9.t
+	desc = SOV_putin_death_event.9.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # Ura! 
+		name = SOV_putin_death_event.9.a
+		ai_chance = { factor = 90 }
+    }
+}
+country_event = {
+	id = SOV_teaser_events.1
+	title = SOV_teaser_events.1.t
+	desc = SOV_teaser_events.1.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # Ura! 
+		name = SOV_teaser_events.1.a
+		ai_chance = { factor = 90 }
+		load_focus_tree = russia02_focus_tree
+		set_country_flag = russia02_tree_active
+    }
+}
+
+country_event = {
+	id = SOV_teaser_events.2
+	title = SOV_teaser_events.2.t
+	desc = SOV_teaser_events.2.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # Ura! 
+		name = SOV_teaser_events.2.a
+		ai_chance = { factor = 90 }
+		mark_focus_tree_layout_dirty = yes
+		set_country_flag = SOV_putin_dead
+		clr_country_flag = SOV_putin_alive
+    }
+}
+
+# Swans Play on TV 
+news_event = {
+	id = SOV_putin_death_news_event.1
+	title = SOV_putin_death_news_event.1.t
+	desc = SOV_putin_death_news_event.1.d
+	picture = GFX_news_russia_teaser_event_001
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = { # Ura! 
+		name = SOV_putin_death_news_event.1.a
+		ai_chance = { factor = 90 }
+    }
+}
+
+# Putin Relected 
+news_event = {
+	id = SOV_putin_death_news_event.2
+	title = SOV_putin_death_news_event.2.t
+	desc = SOV_putin_death_news_event.2.d
+	picture = GFX_news_russia_teaser_event_001
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = { # Ura! 
+		name = SOV_putin_death_news_event.2.a
+		ai_chance = { factor = 90 }
+    }
+}
+
+# Putin is Dead. 
+news_event = {
+	id = SOV_putin_death_news_event.3
+	title = SOV_putin_death_news_event.3.t
+	desc = SOV_putin_death_news_event.3.d
+	picture = GFX_news_russia_teaser_event_001
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = { # Ura! 
+		name = SOV_putin_death_news_event.3.a
+		ai_chance = { factor = 90 }
+		set_global_flag = Super_Event_Visible
+		set_global_flag = SOV_PTnD_se
     }
 }
 
