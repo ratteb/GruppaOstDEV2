@@ -1,0 +1,10 @@
+SOV_csto_decision_cat = {
+	icon = generic_political_actions
+	priority = 50
+	allowed = {
+		tag = SOV 
+	}
+	visible = {
+		has_country_flag = SOV_csto_allowed
+	}
+}

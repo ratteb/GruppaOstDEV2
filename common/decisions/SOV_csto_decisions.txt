@@ -1,0 +1,93 @@
+SOV_csto_decision_cat = {
+	SOV_csto_provide_training = {
+
+		icon = generic_industry
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOV_csto_provide_training_ctt
+			}
+		}
+
+		visible = {
+			always = yes 
+		}
+		days_re_enable = 125
+		days_remove = 120
+
+		fire_only_once = no
+
+
+		custom_cost_trigger = {
+			command_power > 20
+			has_political_power > 25
+		}
+		custom_cost_text = SOV_csto_training_cost
+
+		complete_effect = {
+			custom_effect_tooltip = SOV_csto_provide_training_cet
+			hidden_effect = {
+			add_command_power = -20
+			add_political_power = -25
+				if = {
+			limit = { BLR = { has_country_flag = is_csto_member }  }
+			BLR = { add_ideas = { 
+				CSTO_training
+			        }
+			    }
+		    }
+			if = {
+			limit = { KAZ = { has_country_flag = is_csto_member }  }
+			KAZ = { add_ideas = { 
+				CSTO_training
+			        }
+			    }
+		    }
+			if = {
+			limit = { KYR = { has_country_flag = is_csto_member }  }
+			KYR = { add_ideas = { 
+				CSTO_training
+			        }
+			    }
+		    }
+			if = {
+			limit = { TAJ = { has_country_flag = is_csto_member }  }
+			TAJ = { add_ideas = { 
+				CSTO_training
+			        }
+			    }
+		    }
+			}
+		}
+		remove_effect = { 
+			custom_effect_tooltip = SOV_csto_provide_remove_training_cet
+
+			hidden_effect = {
+			BLR = {
+				remove_ideas = {
+					CSTO_training
+				}
+			}
+			KAZ = {
+				remove_ideas = {
+					CSTO_training
+				}
+			}
+			KYR = {
+				remove_ideas = {
+					CSTO_training
+				}
+			}
+			TAJ = {
+				remove_ideas = {
+					CSTO_training
+				}
+			}
+			}
+		 }
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+}

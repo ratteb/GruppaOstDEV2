@@ -202,6 +202,36 @@ ideas = {
 				custom_modifier_tooltip = SOV_CSTO_leader_CMT
 			}
 		}
+		CSTO_training = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_army = 0.01
+				experience_gain_army_factor = 0.04
+				experience_gain_air = 0.01
+				experience_gain_air_factor = 0.04
+				training_time_army_factor  = 0.05
+				faction_trade_opinion_factor  = 0.3
+				political_power_gain  = -0.1
+			}
+		}
 
 		SOV_SMO = {
 			picture = GFX_placeholder_ideas

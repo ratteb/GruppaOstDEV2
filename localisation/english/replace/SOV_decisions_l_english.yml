@@ -1,0 +1,10 @@
+﻿l_english:
+ # SOV CSTO DECISIONS
+ SOV_csto_provide_training_ctt:0 "£pol_power §Y25§! £command_power §Y20§!"
+ SOV_csto_training_cost:0 "£pol_power §Y25§! £command_power §Y20§!"
+ SOV_csto_training_cost_blocked:0 "£pol_power §R25§! £command_power §R20§!"
+ SOV_csto_training_cost_tooltip:0 "It costs £command_power  §Y20§!, £pol_power §Y25§! to take the decision"
+ SOV_csto_provide_training_cet:0 "(§YAll CSTO Members§!)Add §YCSTO Training§!, which grants"
+ SOV_csto_provide_remove_training_cet:0 "§YTraining Will End But This Decision Can be Repeated!§!"
+ SOV_csto_provide_training:0 "Provide CSTO Training"
+ 

@@ -89,6 +89,7 @@ if = {
 add_ideas = {
 	KAZ_CSTO_member01
 }
+set_country_flag = is_csto_member
 
 recruit_character = KAZ_kassym_jomart_tokayev
 set_politics = {

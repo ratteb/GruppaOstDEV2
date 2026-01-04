@@ -3,6 +3,7 @@
 ###########################
 
 add_namespace = SOV_sotnik
+add_namespace = SOV_csto
 add_namespace = SOV_teaser_events
 add_namespace = SOV_teaser_news_events
 add_namespace = SOV_putin_death_event
@@ -10,6 +11,22 @@ add_namespace = SOV_putin_retire_event
 add_namespace = SOV_putin_death_news_event
 add_namespace = SOV_putin_retire_news_event
 
+
+# CSTO events 
+country_event = {
+	id = SOV_csto.1
+	title = SOV_csto.1.t
+	desc = SOV_csto.1.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # Ura! 
+		name = SOV_csto.1.a
+		ai_chance = { factor = 90 }
+		set_country_flag = SOV_csto_allowed
+    }
+}
 # Event Chain for SOtnik Program
 
 # Announcing of the Sotnik-1 Modernization Program

@@ -95,6 +95,7 @@ set_politics = {
 add_ideas = {
 	TAJ_CSTO_member01
 }
+set_country_flag = is_csto_member
 
 set_popularities = {
 	westernism = 0

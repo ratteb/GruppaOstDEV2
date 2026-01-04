@@ -106,6 +106,7 @@ set_variable = {
 	value = -0.08
 }
 add_dynamic_modifier = { modifier = BLR_batka_support }
+set_country_flag = is_csto_member
 
 
 recruit_character = BLR_alexander_lukashenko
