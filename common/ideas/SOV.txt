@@ -225,11 +225,36 @@ ideas = {
 			modifier = {
 				experience_gain_army = 0.01
 				experience_gain_army_factor = 0.04
-				experience_gain_air = 0.01
-				experience_gain_air_factor = 0.04
-				training_time_army_factor  = 0.05
-				faction_trade_opinion_factor  = 0.3
-				political_power_gain  = -0.1
+				training_time_army_factor  = -0.15
+				conscription_factor = 0.03
+			}
+		}
+		CSTO_production = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_speed_anti_air_building_factor = 0.15
+				production_speed_air_base_factor = 0.15
+				production_speed_radar_station_factor = 0.15
+
 			}
 		}
 

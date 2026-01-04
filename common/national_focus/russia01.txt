@@ -46,6 +46,7 @@ focus_tree = {
 			custom_effect_tooltip = SOV_sotnik1_announcement_cet
 
 			country_event = SOV_sotnik.1
+			set_country_flag = SOV_sotnik_allowed
 	    }
 	}
 	focus = {

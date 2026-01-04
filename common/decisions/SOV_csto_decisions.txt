@@ -29,7 +29,7 @@ SOV_csto_decision_cat = {
 			hidden_effect = {
 			add_command_power = -20
 			add_political_power = -25
-				if = {
+			if = {
 			limit = { BLR = { has_country_flag = is_csto_member }  }
 			BLR = { add_ideas = { 
 				CSTO_training
@@ -61,7 +61,6 @@ SOV_csto_decision_cat = {
 		}
 		remove_effect = { 
 			custom_effect_tooltip = SOV_csto_provide_remove_training_cet
-
 			hidden_effect = {
 			BLR = {
 				remove_ideas = {
@@ -81,6 +80,96 @@ SOV_csto_decision_cat = {
 			TAJ = {
 				remove_ideas = {
 					CSTO_training
+				}
+			}
+			}
+		 }
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	SOV_csto_provide_production = {
+
+		icon = generic_industry
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOV_csto_provide_production_ctt
+			}
+		}
+
+		visible = {
+			always = yes 
+		}
+		days_re_enable = 170
+		days_remove = 150
+
+		fire_only_once = no
+
+
+		custom_cost_trigger = {
+			command_power > 25
+			has_political_power > 50
+		}
+		custom_cost_text = SOV_csto_production_cost
+
+		complete_effect = {
+			custom_effect_tooltip = SOV_csto_provide_production_cet
+			hidden_effect = {
+			add_command_power = -25
+			add_political_power = -50
+			if = {
+			limit = { BLR = { has_country_flag = is_csto_member }  }
+			BLR = { add_ideas = { 
+				CSTO_production
+			        }
+			    }
+		    }
+			if = {
+			limit = { KAZ = { has_country_flag = is_csto_member }  }
+			KAZ = { add_ideas = { 
+				CSTO_production
+			        }
+			    }
+		    }
+			if = {
+			limit = { KYR = { has_country_flag = is_csto_member }  }
+			KYR = { add_ideas = { 
+				CSTO_production
+			        }
+			    }
+		    }
+			if = {
+			limit = { TAJ = { has_country_flag = is_csto_member }  }
+			TAJ = { add_ideas = { 
+				CSTO_production
+			        }
+			    }
+		    }
+			}
+		}
+		remove_effect = { 
+			custom_effect_tooltip = SOV_csto_provide_remove_production_cet
+			hidden_effect = {
+			BLR = {
+				remove_ideas = {
+					CSTO_production
+				}
+			}
+			KAZ = {
+				remove_ideas = {
+					CSTO_production
+				}
+			}
+			KYR = {
+				remove_ideas = {
+					CSTO_production
+				}
+			}
+			TAJ = {
+				remove_ideas = {
+					CSTO_production
 				}
 			}
 			}

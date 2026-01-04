@@ -24,6 +24,7 @@ country_event = {
 	option = { # Ura! 
 		name = SOV_csto.1.a
 		ai_chance = { factor = 90 }
+		custom_effect_tooltip = SOV_csto_1_CET
 		set_country_flag = SOV_csto_allowed
     }
 }

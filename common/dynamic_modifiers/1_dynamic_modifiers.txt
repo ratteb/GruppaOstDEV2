@@ -112,6 +112,7 @@ SOV_sotnik_program = {
 	land_night_attack = sotnik_nightvis_variable
 	political_power_factor = sotnik_political_power_perc_variable
 	research_speed_factor = sotnik_research_speed_variable
+	industrial_capacity_factory = sotnik_production_speed_variable
 }
  SOV_demographics_crisis = {
 	icon = "GFX_idea_unknown"

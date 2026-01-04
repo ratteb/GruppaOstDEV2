@@ -200,7 +200,10 @@ add_opinion_modifier = {
 	target = NOV
 	modifier = federal_republic_SOV
 }
-
+country_event = {
+	id = SOV_csto.1
+	days = 40
+}
 recruit_character = SOV_vladimir_putin
 recruit_character = SOV_dmitry_medvedev
 

@@ -1,0 +1,207 @@
+SOV_sotnik_decision_cat = {
+	SOV_sotnik_boost_production = {
+
+		icon = generic_industry
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOV_csto_provide_training_ctt
+			}
+		}
+
+		visible = {
+			always = yes 
+		}
+		days_re_enable = 75
+		days_remove = 70
+
+		fire_only_once = no
+
+
+		custom_cost_trigger = {
+			command_power > 20
+			has_political_power > 25
+		}
+		custom_cost_text = SOV_csto_training_cost
+
+		complete_effect = {
+			add_to_variable = {
+				var = sotnik_production_speed_variable
+				value = 0.1
+				tooltip = add_10_production_var_tt
+			}
+		}
+		remove_effect = { 
+			subtract_from_variable = {
+				var = sotnik_production_speed_variable
+				value = 0.1
+				tooltip = remove_10_production_var_tt
+			}
+		 }
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	SOV_sotnik_boost_research = {
+
+		icon = generic_industry
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOV_csto_provide_training_ctt
+			}
+		}
+
+		visible = {
+			always = yes 
+		}
+		days_re_enable = 75
+		days_remove = 70
+
+		fire_only_once = no
+
+
+		custom_cost_trigger = {
+			command_power > 20
+			has_political_power > 25
+		}
+		custom_cost_text = SOV_csto_training_cost
+
+		complete_effect = {
+			add_to_variable = {
+				var = sotnik_research_speed_variable
+				value = 0.06
+				tooltip = add_10_research_var_tt
+			}
+		}
+		remove_effect = { 
+			subtract_from_variable = {
+				var = sotnik_research_speed_variable
+				value = 0.06
+				tooltip = remove_10_research_var_tt
+			}
+		 }
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+ # NCO Shit 
+	SOV_sotnik_nco_expansion = {
+
+		icon = generic_industry
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOV_csto_provide_training_ctt
+			}
+		}
+
+		visible = {
+			has_country_flag = SOV_picked_nco_officer
+		}
+
+		fire_only_once = yes
+
+
+		custom_cost_trigger = {
+			command_power > 20
+			has_political_power > 25
+		}
+		custom_cost_text = SOV_csto_training_cost
+
+		complete_effect = {
+			add_to_variable = {
+				var = RAF_morale_variable
+				value = 0.05
+				tooltip = integrate_NCO_sotnik_var_tt
+			}
+			add_to_variable = {
+				var = RAF_org_variable
+				value = -0.05
+			}
+			add_to_variable = {
+				var = RAF_planning_speed_variable
+				value = 0.07
+			}
+		}
+		remove_effect = { 
+		 }
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	SOV_sotnik_nco_training = {
+
+		icon = generic_industry
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOV_csto_provide_training_ctt
+			}
+		}
+
+		visible = {
+			has_country_flag = SOV_picked_nco_officer
+		}
+		days_re_enable = 75
+		days_remove = 45
+
+		fire_only_once = no
+
+
+		custom_cost_trigger = {
+			command_power > 20
+			has_political_power > 25
+		}
+		custom_cost_text = SOV_csto_training_cost
+
+		complete_effect = {
+		}
+		remove_effect = { 
+		 }
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	SOV_sotnik_reserve_officer_expansion = {
+
+		icon = generic_industry
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOV_csto_provide_training_ctt
+			}
+		}
+
+		visible = {
+			has_country_flag = SOV_picked_reserve_officer
+		}
+		days_re_enable = 75
+		days_remove = 70
+
+		fire_only_once = no
+
+
+		custom_cost_trigger = {
+			command_power > 20
+			has_political_power > 25
+		}
+		custom_cost_text = SOV_csto_training_cost
+
+		complete_effect = {
+		}
+		remove_effect = { 
+		 }
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+}
