@@ -1,6 +1,6 @@
 ﻿capital = 812 #Baku
 
-oob = "AZR_1936"
+oob = "EST_2027"
 
 set_research_slots = 2
 
@@ -100,7 +100,7 @@ set_popularities = {
 	socialism = 0
 	despotism = 0
 }
-
+add_manpower = 10000
 create_country_leader = {
 	name = "Mr Generic"
 	desc = ""
