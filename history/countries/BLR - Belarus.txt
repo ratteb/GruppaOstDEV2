@@ -1,6 +1,6 @@
 ﻿capital = 206 #Baku
 
-oob = "AZR_1936"
+oob = "BLR_2027"
 
 set_research_slots = 3
 
@@ -107,6 +107,7 @@ set_variable = {
 }
 add_dynamic_modifier = { modifier = BLR_batka_support }
 set_country_flag = is_csto_member
+add_manpower = 18000
 
 
 recruit_character = BLR_alexander_lukashenko
