@@ -127,6 +127,12 @@
  SOV_prepare_the_administration:0 "The New Cabinet"
  SOV_putinism_1000_year:0 "Putinism For 1000 Years!"
 
+ # Belarus Union State Tree
+ BLR_signing_2027_unionstate_plan:0 "2027 Union State Plan"
+ BLR_unionstate_economic_treaties:0 "Prepare Economic Treaties"
+ BLR_unionstate_military_treaties:0 "Prepare Military Treaties"
+ BLR_sign_unionstate_2035_plan:0 "Sign The 2035 Union State Integration Plan"
+
 
 
  # Russia Ideas and Spirits 

@@ -12,7 +12,7 @@ SOV_sotnik_decision_cat = {
 		visible = {
 			always = yes 
 		}
-		days_re_enable = 75
+		days_re_enable = 5
 		days_remove = 70
 
 		fire_only_once = no
@@ -57,7 +57,7 @@ SOV_sotnik_decision_cat = {
 		visible = {
 			always = yes 
 		}
-		days_re_enable = 75
+		days_re_enable = 5
 		days_remove = 70
 
 		fire_only_once = no
@@ -148,7 +148,7 @@ SOV_sotnik_decision_cat = {
 		visible = {
 			has_country_flag = SOV_picked_nco_officer
 		}
-		days_re_enable = 75
+		days_re_enable = 30
 		days_remove = 45
 
 		fire_only_once = no

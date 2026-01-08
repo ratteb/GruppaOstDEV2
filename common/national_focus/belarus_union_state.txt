@@ -1,0 +1,170 @@
+focus_tree = {
+	id = belarus_union_state_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = BLR
+		}
+
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1000 }
+
+	focus = {
+		id = BLR_signing_2027_unionstate_plan
+		icon = GFX_goal_no_data
+		x = 30
+		y = 1
+
+		cost = 12.2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SOV = {
+				country_event = {
+					id = BLR_unionstate.1
+					days = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BLR_unionstate_economic_treaties
+		prerequisite = { focus = BLR_signing_2027_unionstate_plan }
+		relative_position_id = BLR_signing_2027_unionstate_plan
+		icon = GFX_goal_no_data
+		x = 2
+		y = 1
+
+		cost = 12.2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SOV = {
+				country_event = {
+					id = BLR_unionstate.2
+					days = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BLR_unionstate_military_treaties
+		prerequisite = { focus = BLR_signing_2027_unionstate_plan }
+		relative_position_id = BLR_signing_2027_unionstate_plan
+		icon = GFX_goal_no_data
+		x = -2
+		y = 1
+
+		cost = 12.2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SOV = {
+				country_event = {
+					id = BLR_unionstate.3
+					days = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BLR_sign_unionstate_2035_plan
+		prerequisite = { focus = BLR_unionstate_economic_treaties }
+		prerequisite = { focus = BLR_unionstate_military_treaties }
+		relative_position_id = BLR_unionstate_economic_treaties
+		icon = GFX_goal_no_data
+		x = -2
+		y = 1
+
+		cost = 12.2
+		select_effect = {
+			not = {
+				has_country_flag = BLR_protests_over
+				country_event = {
+				id = BLR_protest.1
+				days = 38
+			}
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+			custom_trigger_tooltip = {
+				tooltip = BLR_2035_plan_interrupted
+				not = {
+					has_idea = BLR_anti_lukashenko_protests
+				}
+			}
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SOV = {
+				country_event = {
+					id = BLR_unionstate.5
+					days = 1
+				}
+			}
+		}
+	}
+
+}		

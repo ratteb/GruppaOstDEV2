@@ -1,0 +1,42 @@
+focus_tree = {
+	id = belarus_european_union_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+		}
+
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1000 }
+
+	focus = {
+		id = CHI_chinese_century
+		icon = GFX_goal_no_data
+		x = 40
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+}		

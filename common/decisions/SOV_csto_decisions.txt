@@ -12,7 +12,7 @@ SOV_csto_decision_cat = {
 		visible = {
 			always = yes 
 		}
-		days_re_enable = 125
+		days_re_enable = 5
 		days_remove = 120
 
 		fire_only_once = no
@@ -25,6 +25,11 @@ SOV_csto_decision_cat = {
 		custom_cost_text = SOV_csto_training_cost
 
 		complete_effect = {
+			add_to_variable = {
+				var = csto_cohesion 
+				value = 2
+				tooltip = SOV_csto_provide_training_cohesion_cet
+			}
 			custom_effect_tooltip = SOV_csto_provide_training_cet
 			hidden_effect = {
 			add_command_power = -20
@@ -102,7 +107,7 @@ SOV_csto_decision_cat = {
 		visible = {
 			always = yes 
 		}
-		days_re_enable = 170
+		days_re_enable = 20
 		days_remove = 150
 
 		fire_only_once = no
@@ -115,6 +120,11 @@ SOV_csto_decision_cat = {
 		custom_cost_text = SOV_csto_production_cost
 
 		complete_effect = {
+			add_to_variable = {
+				var = csto_cohesion 
+				value = 5
+				tooltip = SOV_csto_provide_production_cohesion_cet
+			}
 			custom_effect_tooltip = SOV_csto_provide_production_cet
 			hidden_effect = {
 			add_command_power = -25

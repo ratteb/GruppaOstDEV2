@@ -3,6 +3,7 @@
 ###########################
 
 add_namespace = BLR_protest
+add_namespace = BLR_unionstate
 add_namespace = news_BLR_protest
 
 # Event Chain for SOtnik Program
@@ -23,7 +24,16 @@ country_event = {
 			id = BLR_protest.2 
 			days = 20
 		}}
+
+		SOV = { country_event = {
+			id = BLR_unionstate.4 
+			days = 1
+		}}
 		add_ideas = { BLR_anti_lukashenko_protests }
+		news_event = {
+			id = news_BLR_protest.8
+			days = 1
+		}
     }
 }
 
@@ -107,6 +117,9 @@ country_event = {
 	option = { # Ask the Russians for help! 
 		name = BLR_protest.3.a
 		ai_chance = { factor = 90 }
+		BLR = {
+			set_country_flag = BLR_protests_over
+			}
 		if = {
 			limit = { has_country_flag = SOV_helped_belarus }
 			add_ideas = {
@@ -176,6 +189,9 @@ country_event = {
 				BLR_reliant_russia
 			}
 		}
+		BLR = {
+				set_country_flag = BLR_protests_over
+			}
 
 		hidden_effect = {
 			FRA = { country_event = {
@@ -278,6 +294,9 @@ country_event = {
 		ai_chance = { factor = 90 }
 		custom_effect_tooltip = SOV_SATO_BLR_CET
 		hidden_effect = {
+			BLR = {
+				set_country_flag = BLR_protests_over
+			}
 	declare_war_on = {
     target = BLR 
     type = annex_everything
@@ -402,6 +421,116 @@ country_event = {
     }
 }
 
+
+# Union State 
+# Belarus Signs the 2027 Plan 
+country_event = {
+	id = BLR_unionstate.1
+	title = BLR_unionstate.1.t
+	desc = BLR_unionstate.1.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # Ask the Russians for help! 
+		name = BLR_unionstate.1.a
+		ai_chance = { factor = 90 }
+    }
+	option = { # Ask the Russians for help! 
+		name = BLR_unionstate.1.b
+		ai_chance = { factor = 90 }
+    }
+}
+
+# Belarus Prepares Economic Treaties
+country_event = {
+	id = BLR_unionstate.2
+	title = BLR_unionstate.2.t
+	desc = BLR_unionstate.2.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # Ask the Russians for help! 
+		name = BLR_unionstate.2.a
+		ai_chance = { factor = 90 }
+    }
+	option = { # Ask the Russians for help! 
+		name = BLR_unionstate.2.b
+		ai_chance = { factor = 90 }
+    }
+}
+
+# Belarus Prepares Military Treaties 
+country_event = {
+	id = BLR_unionstate.3
+	title = BLR_unionstate.3.t
+	desc = BLR_unionstate.3.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # Ask the Russians for help! 
+		name = BLR_unionstate.3.a
+		ai_chance = { factor = 90 }
+    }
+	option = { # Ask the Russians for help! 
+		name = BLR_unionstate.3.b
+		ai_chance = { factor = 90 }
+    }
+}
+
+# 2035 Plan Temporarily Cancelled
+country_event = {
+	id = BLR_unionstate.4
+	title = BLR_unionstate.4.t
+	desc = BLR_unionstate.4.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # Ask the Russians for help! 
+		name = BLR_unionstate.4.a
+		ai_chance = { factor = 90 }
+    }
+
+}
+
+# 2035 Plan Ratified 
+country_event = {
+	id = BLR_unionstate.5
+	title = BLR_unionstate.5.t
+	desc = BLR_unionstate.5.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # Ask the Russians for help! 
+		name = BLR_unionstate.5.a
+		ai_chance = { factor = 90 }
+		news_event = {
+			id = BLR_unionstate.6
+			days = 1 
+		}
+    }
+}
+
+# 2035 Plan Ratified 
+news_event = {
+	id = BLR_unionstate.6
+	title = BLR_unionstate.6.t
+	desc = BLR_unionstate.6.d
+	picture = GFX_news_belarus_event_001
+	
+	is_triggered_only = yes
+	major = yes
+	
+		option = { # Invade them!  
+		name = BLR_unionstate.6.a
+		ai_chance = { factor = 90 }
+
+    }
+}
 # Order restored without Russian aid 
 news_event = {
 	id = news_BLR_protest.1
@@ -516,6 +645,23 @@ news_event = {
 	
 		option = { # Invade them!  
 		name = news_BLR_protest.7.a
+		ai_chance = { factor = 90 }
+
+    }
+}
+
+# Protests in Belarus 
+news_event = {
+	id = news_BLR_protest.8
+	title = news_BLR_protest.8.t
+	desc = news_BLR_protest.8.d
+	picture = GFX_news_ukraine_event_005
+	
+	is_triggered_only = yes
+	major = yes
+	
+		option = { # Invade them!  
+		name = news_BLR_protest.8.a
 		ai_chance = { factor = 90 }
 
     }

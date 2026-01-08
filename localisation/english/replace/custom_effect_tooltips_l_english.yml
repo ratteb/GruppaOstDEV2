@@ -29,6 +29,9 @@
   BLR_CSTO_member01_CMT:0 "§RWe Can Voluntarily Join Wars of the CSTO!§!"
   SOV_CSTO_leader_CMT:0 "§RWe Can Only Call in Other CSTO Members In Defensive Wars!§!"
   SOV_csto_1_CET:0 "§YNew Decisions£decision_icon_small Will Be Available§!!"
+  SOV_csto_provide_training_cohesion_cet:0 "§GIncreases CSTO Cohesion By 2%!§!"
+  SOV_csto_provide_production_cohesion_cet:0 "§GIncreases CSTO Cohesion By 5%!§!"
+  csto_cohesion_initial_cohesion_cet:0 "§GThe Initial Cohesion of the CSTO is Set at 34%§!"
 
   # Belarus
   BLR_batka_support_CMT:0 "§RThe Batka Must Never Fall.§!"
