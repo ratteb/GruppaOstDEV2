@@ -1,4 +1,7 @@
 ﻿l_english:
+
+ # INGAME FEATURES! 
+ feature_disabled: "§RThis Feature Has Been Disabled!§!"
  # Sotnik 1 Modernization Programme 
  SOV_officer_corps_reform_ctt: "§RThere Are No Slowdowns in the Review of Our Officer Corps§!"
  SOV_chose_expand_reserve_ctt: "§GWe Have Decided on Expanding the Reserve Officer Corps§!"
