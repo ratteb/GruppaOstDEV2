@@ -1,0 +1,25 @@
+faction_template_nato = {
+	name = north_atlantic_treaty_org
+	manifest = faction_manifest_strength_in_unity
+	can_leader_join_other_factions = no
+	# color = { 179 183 235 } # this should default to faction leader's color
+	icon = GFX_faction_icon_nato
+
+	goals = {
+		# Short term goals
+		# faction_goal_growing_the_faction
+		# faction_goal_military_infrastructure
+
+		# Medium term goals
+		faction_goal_a_military_base
+
+		# Long terms
+		faction_goal_the_atomic_race
+	}
+
+	default_rules = {
+		joining_rule_is_potential_csto_member
+	}
+	
+}
+
