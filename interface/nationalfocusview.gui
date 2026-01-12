@@ -743,7 +743,7 @@ guiTypes = {
 		iconType = {
 			name = "reward_bg"
 			position = { x = 0 y = 545 }
-			spriteType = "GFX_unit_list_header"
+			spriteType = "GFX_focus_reward_header"
 		}		
 		
 		instantTextboxType = {
