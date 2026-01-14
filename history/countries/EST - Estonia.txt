@@ -93,12 +93,12 @@ set_politics = {
 }
 
 set_popularities = {
-	westernism = 100
-	communism = 0
-	neutrality = 0
+	westernism = 59
+	communism = 2
+	neutrality = 21
 	easternism = 0
-	socialism = 0
-	despotism = 0
+	socialism = 6
+	despotism = 12
 }
 add_manpower = 10000
 create_country_leader = {

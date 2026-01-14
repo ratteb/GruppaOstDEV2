@@ -317,7 +317,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_change_template_button"
-		texturefile = "gfx/interface/change_template_button.dds"
+		texturefile = "gfx/interface/unitcontrol/change_template_button.dds"
 	}
 
 	spriteType = {
@@ -468,7 +468,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_unitlist_unassigned_bg"
-		texturefile = "gfx/interface/unitlist_unassigned_bg.dds"
+		texturefile = "gfx/interface/unitcontrol/unitlist_unassigned_bg.dds"
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
 
@@ -970,5 +970,9 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_obsolete_template_overlay"
 		textureFile = "gfx/interface/obsolete_template_overlay.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_btn_delete"
+		texturefile = "gfx/interface/unitcontrol/btn_GF_delete.dds"
 	}
 }

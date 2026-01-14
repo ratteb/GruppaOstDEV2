@@ -783,7 +783,7 @@ guiTypes = {
 			buttonType = {
 				name = "btn_delete"
 				position = { x=9 y=7 }
-				spriteType = "GFX_NV_btn_delete"
+				spriteType = "GFX_GF_btn_delete"
 				clicksound = disband
 			}
 
@@ -1851,7 +1851,7 @@ guiTypes = {
 		buttonType = {
 			name = "btn_delete"
 			position = { x= 560 y = 2 }
-			spriteType = "GFX_NV_btn_delete"
+			spriteType = "GFX_GF_btn_delete"
 			clicksound = disband
 		}
 
@@ -2938,7 +2938,7 @@ guiTypes = {
 		buttonType = {
 			name = "btn_delete"
 			position = { x = 3 y = 3 }
-			spriteType = "GFX_NV_btn_delete"
+			spriteType = "GFX_GF_btn_delete"
 			clicksound = disband
 			Orientation = "UPPER_RIGHT"
 		}
