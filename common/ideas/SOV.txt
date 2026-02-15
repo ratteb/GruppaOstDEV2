@@ -2,7 +2,7 @@ ideas = {
 
 	country = {
 		SOV_economic_stagnation01 = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_SOV_economic_stagnation01
 			
 			allowed = {
 				tag = SOV
@@ -62,7 +62,7 @@ ideas = {
 			}
 		}
 		SOV_memories_of_chechnya = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_SOV_memories_of_chechnya
 			
 			allowed = {
 				tag = SOV

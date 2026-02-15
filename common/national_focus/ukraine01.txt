@@ -17,7 +17,7 @@ focus_tree = {
     # Ukraine Main Tree 
 	focus = {
 		id = UKR_asses_the_situation
-		icon = GFX_goal_no_data
+		icon = GFX_goal_UKR_asses_the_situation
 		x = 40
 		y = 1
 
