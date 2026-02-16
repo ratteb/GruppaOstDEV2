@@ -1,0 +1,16 @@
+characters={
+	KAZ_kassym_jomart_tokayev={
+		name="Kassym-Jomart Tokayev"
+		portraits={
+			civilian={
+				large=GFX_kassym_jomart_tokayev
+			}
+		}
+		country_leader={
+			ideology=right_wing_populism
+			desc = ""
+			expire="3000.1.1.1"
+			id=-1
+		}
+	}
+}

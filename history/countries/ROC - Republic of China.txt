@@ -93,12 +93,17 @@ set_politics = {
 }
 
 set_popularities = {
-	westernism = 100
+	westernism = 40
 	communism = 0
-	neutrality = 0
+	neutrality = 33
 	easternism = 0
-	socialism = 0
-	despotism = 0
+	socialism = 26
+	despotism = 1
+}
+
+recruit_character = ROC_lai_ching_te
+add_ideas = {
+	ROC_taiwan_crisis01
 }
 
 create_country_leader = {
@@ -106,16 +111,6 @@ create_country_leader = {
 	desc = ""
 	picture = GFX_portrait_Mir_Jafar_Baghirov
 	ideology = soviet_stalinism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Mr Generic"
-	desc = ""
-	picture = GFX_portrait_Mammad_Amin_Rasulzade
-	ideology = western_conservatism
 	traits = {
 		
 	}

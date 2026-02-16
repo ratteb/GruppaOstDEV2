@@ -1,0 +1,236 @@
+﻿# 1st Guards Tank Army 
+
+division_template = {
+	name = "Mechanized Brigade"
+
+	division_names_group = SOV_ARM_01
+
+	regiments = {
+		mechanized = { x = 0 y = 0 }
+		mechanized = { x = 0 y = 1 }
+        mechanized = { x = 0 y = 2 }
+		modern_armor = { x = 1 y = 0 }
+		modern_armor = { x = 1 y = 1 }
+		light_sp_artillery_brigade = { x = 2 y = 0 }
+		light_sp_artillery_brigade = { x = 2 y = 1 }
+		motorized_rocket_brigade = { x = 2 y = 2 }
+
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "MOB. Mechanized Brigade"
+
+	division_names_group = SOV_ARM_01
+
+	regiments = {
+		mechanized = { x = 0 y = 0 }
+		mechanized = { x = 0 y = 1 }
+		modern_armor = { x = 1 y = 0 }
+
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Tank Brigade"
+
+	division_names_group = SOV_ARM_01
+
+	regiments = {
+		modern_armor = { x = 0 y = 0 }
+		modern_armor = { x = 0 y = 1 }
+		modern_armor = { x = 0 y = 2 }
+		mechanized = { x = 1 y = 0 }
+		light_sp_artillery_brigade = { x = 2 y = 0 }
+		light_sp_artillery_brigade = { x = 2 y = 1 }
+		motorized_rocket_brigade = { x = 2 y = 2 }
+
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Air Assault Brigade"
+
+	division_names_group = SOV_ARM_01
+
+	regiments = {
+		paratrooper = { x = 0 y = 0 }
+		paratrooper = { x = 0 y = 1 }
+		paratrooper = { x = 0 y = 2 }
+
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Rocket Artillery Brigade"
+
+	division_names_group = SOV_ARM_01
+
+	regiments = {
+		motorized_rocket_brigade = { x = 0 y = 0 }
+		motorized_rocket_brigade = { x = 0 y = 1 }
+		motorized_rocket_brigade = { x = 0 y = 2 }
+
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "Heavy Artillery Brigade"
+
+	division_names_group = SOV_ARM_01
+
+	regiments = {
+		mot_artillery_brigade = { x = 0 y = 0 }
+		mot_artillery_brigade = { x = 0 y = 1 }
+		mot_artillery_brigade = { x = 0 y = 2 }
+		light_sp_artillery_brigade = { x = 1 y = 0 }
+		motorized_rocket_brigade = { x = 1 y = 1 }
+
+
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "Artillery Brigade"
+
+	division_names_group = SOV_ARM_01
+
+	regiments = {
+		mot_artillery_brigade = { x = 0 y = 0 }
+		mot_artillery_brigade = { x = 0 y = 1 }
+		mot_artillery_brigade = { x = 0 y = 2 }
+		light_sp_artillery_brigade = { x = 1 y = 0 }
+		motorized_rocket_brigade = { x = 1 y = 1 }
+
+
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "Light Artillery Brigade"
+
+	division_names_group = SOV_ARM_01
+
+	regiments = {
+		mot_artillery_brigade = { x = 0 y = 0 }
+		light_sp_artillery_brigade = { x = 1 y = 0 }
+
+
+	}
+	support = {
+	}
+}
+
+division_template = {
+	name = "Spetsnaz Brigade"
+
+	division_names_group = SOV_ARM_01
+
+	regiments = {
+		special_operation_forces = { x = 0 y = 0 }
+		special_operation_forces = { x = 0 y = 1 }
+		special_operation_forces = { x = 0 y = 2 }
+
+	}
+	support = {
+	}
+}
+
+
+
+units = {
+	division = {
+		name = "5th Spetsnaz Brigade"
+		location = 216
+		division_template = "Spetsnaz Brigade"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "38th Guards Air Assault Brigade"
+		location = 3392
+		division_template = "Air Assault Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "103rd Guards Airborne Brigade"
+		location = 11241
+		division_template = "Air Assault Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "120th Guards Mechanised Brigade"
+		location = 9323
+		division_template = "Mechanized Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "19th Guards Mechanized Brigade"
+		location = 6220
+		division_template = "MOB. Mechanized Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "6th Guards Kiev-Berlin Mechanised Brigade"
+		location = 3393
+		division_template = "Mechanized Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "11th Guards Berlin-Carpathian Mechanised Brigade"
+		location = 6359
+		division_template = "Mechanized Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "336th Rocket Artillery Brigade"
+		location = 11370
+		division_template = "Rocket Artillery Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "231st Artillery Brigade"
+		location = 3378
+		division_template = "Artillery Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "51st Guards Artillery Brigade"
+		location = 11370
+		division_template = "Light Artillery Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "111th Artillery Brigade"
+		location = 3392
+		division_template = "Heavy Artillery Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	
+	
+}

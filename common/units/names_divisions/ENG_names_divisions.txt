@@ -1026,7 +1026,6 @@ ENG_MNT_02 = {
 			tag = ENG
 			AND = {
 				tag = RAJ
-				has_completed_focus = RAJ_indian_gurkhas
 			}
 		}
 	}
@@ -1153,76 +1152,6 @@ ENG_GAR_01 = {
 		148 = { "%dth Infantry Division" }
 		149 = { "%dth Infantry Division" }
 		150 = { "%dth Infantry Division" }
-	}
-}
-
-ENG_COL_01 = {
-	name = "Colonial Division"
-
-	for_countries = { ENG }
-
-	can_use = {
-		NOT = {
-			has_completed_focus = ENG_decolonization
-		}
-	}
-
-	division_types = { "infantry" }
-
-	# Number reservation system will tie to another group.
-	link_numbering_with = { ENG_INF_01 }
-
-	fallback_name = "%d (Africa) Division"
-
-	# Names with numbers (only one number per entry). 
-	# It's okay to have gaps in numbering.
-	ordered =
-	{
-		11 = { "%dth (East Africa) Division" }				# Actual African divisions
-		812 = { "12th (West Africa) Division" }
-		81 = { "%dst (West Africa) Division" }
-		82 = { "%dnd (West Africa) Division" }
-		501 = { "1st Sudanese Colonials" }					# Ad hoc African forces from regiment to near-division size
-		502 = { "2nd Sudanese Colonials" }
-		503 = { "3rd Sudanese Colonials" }
-		521 = { "1st Ugandan Colonials" }
-		522 = { "2nd Ugandan Colonials" }
-		541 = { "1st Kenyan Colonials" }
-		542 = { "2nd Kenyan Colonials" }
-		561 = { "1st Tanzanian Colonials" }
-		562 = { "2nd Tanzanian Colonials" }
-		581 = { "1st King's African Rifles" }
-		582 = { "2nd King's African Rifles" }
-		583 = { "3rd King's African Rifles" }
-		584 = { "4th King's African Rifles" }
-		585 = { "5th King's African Rifles" }
-		586 = { "6th King's African Rifles" }
-		587 = { "7th King's African Rifles" }
-		588 = { "8th King's African Rifles" }
-		589 = { "9th King's African Rifles" }
-		590 = { "10th King's African Rifles" }
-		83 = { "%drd (Africa) Division" }					# fictional African divisions
-		84 = { "%dth (Africa) Division" }
-		85 = { "%dth (Africa) Division" }
-		86 = { "%dth (Africa) Division" }
-		87 = { "%dth (Africa) Division" }
-		88 = { "%dth (Africa) Division" }
-		89 = { "%dth (Africa) Division" }
-		543 = { "3rd Kenyan Colonials" }					# fictional ad hoc African forces
-		544 = { "4th Kenyan Colonials" }
-		545 = { "5th Kenyan Colonials" }
-		504 = { "3rd Sudanese Colonials" }
-		505 = { "4th Sudanese Colonials" }
-		506 = { "5th Sudanese Colonials" }
-		523 = { "3rd Ugandan Colonials" }
-		524 = { "4th Ugandan Colonials" }
-		563 = { "3rd Tanzanian Colonials" }
-		564 = { "4th Tanzanian Colonials" }
-		591 = { "11th King's African Rifles" }
-		592 = { "12th King's African Rifles" }
-		593 = { "13th King's African Rifles" }
-		594 = { "14th King's African Rifles" }
-		595 = { "15th King's African Rifles" }
 	}
 }
 

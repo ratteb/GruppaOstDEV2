@@ -1,0 +1,33 @@
+﻿# 1st Guards Tank Army 
+
+division_template = {
+	name = "Mechanised Brigade"
+
+	division_names_group = SOV_ARM_01
+
+	regiments = {
+		mechanized = { x = 0 y = 0 }
+		mechanized = { x = 0 y = 1 }
+        motorized = { x = 0 y = 2 }
+		light_sp_artillery_brigade = { x = 1 y = 0 }
+
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+
+
+
+
+units = {
+	division = {
+		name = "Land Forces Mechanized Infantry Brigade"
+		location = 9340
+		division_template = "Mechanised Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	
+	
+}

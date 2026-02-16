@@ -1,4 +1,11 @@
 spriteTypes = {
+
+	# NON IDEA texticons 
+	spriteType = {
+		name = "GFX_csto_small"
+		texturefile = "gfx/texticons/csto.dds"
+		legacy_lazy_load = no
+	}
 	
 	spriteType = {
 		name = "GFX_sotnik1_program_texticon"

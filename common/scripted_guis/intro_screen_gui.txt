@@ -1,14 +1,15 @@
 scripted_gui = {
-  intro_gui = {
-    window_name = "lore_screen"
+
+   lore_buttons_outside = {
+    window_name = "lore_buttons_outside"
     context_type = player_context
 
     visible = {
-		has_country_flag = unique_opening_screen
+		akways = yes 
     }
 
     effects = {
-      close_lore_screen_button_click = { clr_country_flag = unique_opening_screen }
+      lore_button01_click = { set_country_flag = unique_opening_screen }
     }
 
     triggers = {
@@ -36,17 +37,18 @@ scripted_gui = {
     ai_weights = {
     }
   }
-  intro_button_left_gui = {
-    window_name = "lore_open_button"
+
+
+  lore_screen = {
+    window_name = "lore_screen"
     context_type = player_context
-    parent_window_name = lore_screen
 
     visible = {
-		always = yes
+		has_country_flag = unique_opening_screen
     }
 
     effects = {
-      lore_button01_click = { set_country_flag = unique_opening_screen }
+      close_lore_screen_button_click = { clr_country_flag = unique_opening_screen }
     }
 
     triggers = {

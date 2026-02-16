@@ -1,0 +1,94 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "sp_event_window"	
+		position = { x = 0 y = 0 }	
+		size = { width = 600 height = 510 }
+		orientation = center
+		origo = center
+		moveable = no
+		click_to_front = no
+		clipping = no
+
+		background = {
+			name = "Background"	
+			spriteType = "GFX_sp_event_window"
+		}
+		
+		iconType = {
+			name = "Super_Event_SMO"
+			spriteType = "GFX_Super_Event_SMO"
+			position = {x = 0 y = 0}
+		}
+
+		iconType = {
+			name = "Super_Event_HRW"
+			spriteType = "GFX_Super_Event_HRW"
+			position = {x = 0 y = 0}
+		}
+		iconType = {
+			name = "Super_Event_SEW"
+			spriteType = "GFX_Super_Event_SEW"
+			position = {x = 0 y = 0}
+		}
+
+		iconType = {
+			name = "Super_Event_MOST"
+			spriteType = "GFX_Super_Event_MOST"
+			position = {x = 0 y = 0}
+		}
+
+		iconType = {
+			name = "Super_Event_NBP"
+			spriteType = "GFX_Super_Event_NBP"
+			position = {x = 0 y = 0}
+		}
+
+		iconType = {
+			name = "Super_Event_PTnD"
+			spriteType = "GFX_Super_Event_PTnD"
+			position = {x = 0 y = 0}
+		}
+
+		
+		
+		###############
+		###INTERFACE###
+		###############
+		
+		
+		instantTextBoxType = {
+			name = "super_quote"
+			position = { x = 280 y = 424 }
+			font = "TD_event_font_18pt"
+			borderSize = {x = 0 y = 0}
+			text = "[get_super_event_quote]"
+			maxWidth = 450
+			maxHeight = 110
+			fixedsize = yes	
+			format = right
+		}
+		
+		instantTextboxType = {
+			name = "super_title"
+			position = { x = 30 y = 10 }
+			font = "TD_event_font_26pt"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "[get_super_event_title]"
+			maxWidth = 700
+			maxHeight = 50
+			fixedsize = yes
+		}
+		
+		
+		buttonType = {
+			name = "sp_event_close_button"
+			spriteType = "GFX_sp_event_close_button"
+			position = { x = 210 y = 554 }
+			clicksound = click_close
+			buttonText = "[get_super_event_remark]"
+			buttonFont = "TD_event_font_22pt"
+		}
+	}
+}

@@ -1,5 +1,7 @@
-﻿division_template = {
-	name = "15th Guards Motor Rifle Regiment"
+﻿# 1st Guards Tank Army 
+
+division_template = {
+	name = "Guards Motor Rifle Regiment (1st Guards Tank Army)"
 
 	division_names_group = SOV_ARM_01
 
@@ -7,7 +9,8 @@
 		motorized = { x = 0 y = 0 }
 		motorized = { x = 0 y = 1 }
         motorized = { x = 0 y = 2 }
-		motorized = { x = 1 y = 0 }
+		light_sp_artillery_brigade = { x = 1 y = 0 }
+		modern_armor = { x = 2 y = 0 }
 
 	}
 	support = {
@@ -16,7 +19,7 @@
 }
 
 division_template = {
-	name = "1st Guards Tank Regiment"
+	name = "Guards Tank Regiment (1st Guards Tank Army)"
 
 	division_names_group = SOV_ARM_01
 
@@ -32,7 +35,7 @@ division_template = {
 	}
 }
 division_template = {
-	name = "136th Reconnaissance Battalion"
+	name = "Reconnaissance Battalion (1st Guards Tank Army)"
 
 	division_names_group = SOV_ARM_01
 
@@ -42,26 +45,97 @@ division_template = {
 
 	}
 }
+division_template = {
+	name = "Self Propelled Artillery Regiment (1st Guards Tank Army)"
+
+	division_names_group = SOV_ARM_01
+
+	regiments = {
+		light_sp_artillery_brigade = { x = 0 y = 0 }
+		light_sp_artillery_brigade = { x = 0 y = 1 }
+		light_sp_artillery_brigade = { x = 0 y = 2 }
+		motorized_rocket_brigade = { x = 1 y = 0 }
+
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+
+
 
 units = {
+
+	# 2nd Guards Motor Rifle Division
 	division = {
 		name = "1st Guards Tank Regiment"
 		location = 6414
-		division_template = "1st Guards Tank Regiment"
+		division_template = "Guards Tank Regiment (1st Guards Tank Army)"
+		start_experience_factor = 0.87
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "1st Guards Motor Rifle Regiment"
+		location = 401
+		division_template = "Guards Motor Rifle Regiment (1st Guards Tank Army)"
 		start_experience_factor = 0.87
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "15th Guards Motor Rifle Regiment"
 		location = 6414
-		division_template = "15th Guards Motor Rifle Regiment"
+		division_template = "Guards Motor Rifle Regiment (1st Guards Tank Army)"
 		start_experience_factor = 0.87
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "136th Reconnaissance Battalion"
 		location = 6414
-		division_template = "136th Reconnaissance Battalion"
+		division_template = "Reconnaissance Battalion (1st Guards Tank Army)"
+		start_experience_factor = 0.87
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "147th Self-Propelled Artillery Regiment"
+		location = 6414
+		division_template = "Self Propelled Artillery Regiment (1st Guards Tank Army)"
+		start_experience_factor = 0.87
+		start_equipment_factor = 1
+	}
+
+	# 4th Guards Tank Division 
+	division = {
+		name = "12th Guards Tank Regiment"
+		location = 11217
+		division_template = "Guards Tank Regiment (1st Guards Tank Army)"
+		start_experience_factor = 0.87
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "13th Guards Tank Regiment"
+		location = 11217
+		division_template = "Guards Tank Regiment (1st Guards Tank Army)"
+		start_experience_factor = 0.87
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "423rd Guards Motor Rifle Regiment"
+		location = 11217
+		division_template = "Guards Motor Rifle Regiment (1st Guards Tank Army)"
+		start_experience_factor = 0.87
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "137th Reconnaissance Battalion"
+		location = 11217
+		division_template = "Reconnaissance Battalion (1st Guards Tank Army)"
+		start_experience_factor = 0.87
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "275th Self-Propelled Artillery Regiment"
+		location = 11217
+		division_template = "Self Propelled Artillery Regiment (1st Guards Tank Army)"
 		start_experience_factor = 0.87
 		start_equipment_factor = 1
 	}

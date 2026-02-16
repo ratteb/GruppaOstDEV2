@@ -94,7 +94,7 @@ set_politics = {
 	elections_allowed = yes
 }
 
-create_faction = "NORTH_ATLANTIC_TREATY_ORGANIZATION_LOC"
+create_faction_from_template = faction_template_nato
 add_to_faction = FRA 
 add_to_faction = ENG
 add_to_faction = SPR

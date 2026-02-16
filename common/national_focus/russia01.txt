@@ -3,6 +3,7 @@ focus_tree = {
 	id = russia01_focus_tree
 	
 	country = {
+		factor = 0
 		
 		modifier = {
 			add = 10
@@ -45,6 +46,7 @@ focus_tree = {
 			custom_effect_tooltip = SOV_sotnik1_announcement_cet
 
 			country_event = SOV_sotnik.1
+			set_country_flag = SOV_sotnik_allowed
 	    }
 	}
 	focus = {
@@ -85,6 +87,7 @@ focus_tree = {
 				var = sotnik_political_power_perc_variable
 				value = -0.03
 			}
+			country_event = SOV_sotnik.11
 			custom_effect_tooltip = SOV_announce_new_equipment_cet	
 		}
 	}
@@ -117,6 +120,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {	
+			custom_effect_tooltip = SOV_showcase_new_equipments_CET
 		}
 	}
 	focus = {
@@ -464,6 +468,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {	
+			custom_effect_tooltip = SOV_announce_strat_doc_CET
 		}
 	}
 	#Conventional means 

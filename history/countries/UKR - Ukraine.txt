@@ -1,6 +1,6 @@
 ﻿capital = 202 #Baku
 
-oob = "AZR_1936"
+oob = "UKR_2027"
 
 set_research_slots = 4
 
@@ -85,7 +85,7 @@ if = {
 		basic_torpedo = 1
 	}
 }
-
+add_manpower = 50000
 add_opinion_modifier = {
 	target = SOV
 	modifier = hostile_status

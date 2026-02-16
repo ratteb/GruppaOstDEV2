@@ -85,6 +85,13 @@ if = {
 		basic_torpedo = 1
 	}
 }
+
+add_ideas = {
+	KAZ_CSTO_member01
+}
+set_country_flag = is_csto_member
+
+recruit_character = KAZ_kassym_jomart_tokayev
 set_politics = {
 	ruling_party = easternism
 	last_election = "1936.1.1"
@@ -93,11 +100,11 @@ set_politics = {
 }
 
 set_popularities = {
-	westernism = 0
-	communism = 0
-	neutrality = 0
-	easternism = 100
-	socialism = 0
+	westernism = 15
+	communism = 1
+	neutrality = 22
+	easternism = 49
+	socialism = 13
 	despotism = 0
 }
 
@@ -106,16 +113,6 @@ create_country_leader = {
 	desc = ""
 	picture = GFX_portrait_Mir_Jafar_Baghirov
 	ideology = soviet_stalinism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Mr Generic"
-	desc = ""
-	picture = GFX_portrait_Mir_Jafar_Baghirov
-	ideology = right_wing_populism
 	traits = {
 		
 	}

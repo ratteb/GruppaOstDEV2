@@ -92,6 +92,8 @@ set_politics = {
 	elections_allowed = yes
 }
 
+recruit_character = AST_jordan_barrett
+
 set_popularities = {
 	westernism = 100
 	communism = 0
@@ -106,16 +108,6 @@ create_country_leader = {
 	desc = ""
 	picture = GFX_portrait_Mir_Jafar_Baghirov
 	ideology = soviet_stalinism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Mr Generic"
-	desc = ""
-	picture = GFX_portrait_Mammad_Amin_Rasulzade
-	ideology = western_conservatism
 	traits = {
 		
 	}

@@ -17,7 +17,201 @@
  SOV_sotnik.4.a: "Let Him Bark"
  SOV_sotnik.4.b: "Punish Him for Speaking Out"
 
- SOV_sotnik.5.t: "Gerasimov's Reaction"
- SOV_sotnik.5.d: "He happy boy"
- SOV_sotnik.5.a: "Keep Him Happy"
+ SOV_sotnik.5.t: "Shoigu's Reaction"
+ SOV_sotnik.5.d: "He Angry!"
+ SOV_sotnik.5.a: "Let Him Bark"
+ SOV_sotnik.5.b: "Punish Him for Speaking Out"
+
+ SOV_sotnik.6.t: "The Ministry of Defence Discusses The SMO"
+ SOV_sotnik.6.d: "It was an early morning in Moscow, all the usual people were there, Gerasimov, Shoigu, Putin, and many other generals and highly powerful people in the Russian system. The meeting started at 08:05 sharply, and as usual Gerasimov started to speak. “Greetings, gentlemen, as a major part of the new Sotnik programme, we have asked us all to sit together and discuss the successes and failures of our Special Military Operation in Ukraine.” Gerasimov corrected his coat, and resumed to speak. “We will go over our early military successes and failures in 2022, what changed in 2023, and our newly found successes in 2024. Any questions?” Shoigu immediately spoke up in an almost disgusted tone. “Will this just be another one of your speeches glorifying yourself? Or will you be honest about your own failures too?” Gerasimov sighed and did not answer his rivals question, so he simply said: “Is that all? No more questions? Let us begin.”\n\nAnd so, this long meeting would finally begin, with this marking the point of no return of a total modernization of the Russian Armed Forces."
+ SOV_sotnik.6.a: "Let's Get Going Then."
+
+ SOV_sotnik.7.t: "The Early Successes"
+ SOV_sotnik.7.d: "As the meeting began, Gerasimov opened with a graphically animated map of Ukraine and Russian advances ranging from February to March, showing large territorial gains and rapid strikes, and as such he began to speak. “Gentlemen, as you may know early in the Operation, we were able to utilize the element of surprise and combined arms to overwhelm our enemy, however even then, some noticeable strategic errors were made, mainly, the lack of a backup plan if our Air Landings at the Antonov Airport tragically failed. I feel like the early implementation of Hybrid Warfare was effective, utilizing propaganda, combined arms, and psychological operations in order to quickly capture and establish order in the South and East of Ukraine. However due to it only being half implemented, I fear that the Special Military Operation did not go as smoothly as was first expected.”\n\nShoigu immediately rose up in protest: “Scoundrel! It was the Hybrid Warfare that caused the early failures, if we stuck with conventional warfare and pure military prowess we would have had the supply chains, intimidation, and manpower to quickly capitulate the Ukrainians and free the Donbass earlier! You forced us into a 3 year war with your doctrine!” The Old Guard, sitting at Shoigu’s side of the table all silently agreed.\n\nGerasimov’s reformist side quickly countered saying: “All the military objectives in February and March were completed and successfully so! Only due to Hybrid Warfare!” A deadlock was created once again, with the 2 sides not agreeing with each other once more, with only one man being able to make a change in it.\n\nPutin opened his mouth and said:"
+ SOV_sotnik.7.a: "We Succeeded in All Objectives"
+ SOV_sotnik.7.b: "Okay Maybe There Were Some Hiccups"
+
+ SOV_sotnik.8.t: "The Aftermath of Early Success"
+ SOV_sotnik.8.d: "The meeting went on, it leading to 8:45 now and Gerasimov continued to the second phase of the Special Military Operation, from April to June, the retreat from Kiev, operational chaos and the early losses. Gerasimov began by opening once more: “I personally believe the largest fault for the retreats were the commanders with their old ways of thinking, and inability for field officers to apply quick decision making and relying on the reserve officer corps. An enlarged NCO corps would have led to a success in Antonov, and we would have never had to retreat from Kiev.”\n\nShoigu, as usual immediately countered: “The commanders are not at fault it was our lack of investment in large scale logistical networks! We were without ammunition or supplies, our commanders could have easily prevented the catastrophic loss if it weren’t for our lackluster investments in that department!”\n\nGerasimov countered once more: “Do you not understand!? If we had a good command structure and a decentralized NCO system we wouldn’t have had as many logistical issues! Because we would not be reliant on centralized backlogs and bureaucracy for the hell of it! Do you never think!? Throwing money at a problem will not fix it!”\n\nShoigu just sat there in anger, with once again no counter argument, Putin feeling the tension in the room, had to say something, wether that is dismissing them both, or siding with either of them."
+ SOV_sotnik.8.a: "They Were Nescessary Retreats!"
+ SOV_sotnik.8.b: "Logistics Were At Fault."
+ SOV_sotnik.8.c: "Commanders Were At Fault"
+
+ SOV_sotnik.11.t: "Sotnik 1.0 Kit"
+ SOV_sotnik.11.d: "Placeholder"
+ SOV_sotnik.11.a: "Perfect!"
+
+ SOV_sotnik_news.1.t: "Vladimir Putin Announces Sotnik Program"
+ SOV_sotnik_news.1.d: "What came as a surprise to many, on January 26th 2027 the Russian President Vladimir Putin had announced the "Sotnik Modernization Programme" while many thought with the Russian victory in Ukraine they would not bother much with large scale modernization and reform programs, it turns out that they were wrong. Learning from historical mistakes of being too confident and bold in themselves through victory, the Russian Ministry of Defence has written up a plan to reform the Russian Armed Forces beyond Ratnik-2. The reforms are stated to include both material and structural changes with some suspecting Putin will fold to Gerasimov and his reformists, who have gotten increasingly more powerful over the years, while others assume Putin will try to bend back to stabilizing societal norms and side with the Old Guard and Shoigu.\n\nLeonid Volkov and his liberal opposition based in Estonia have already condemned this act as "wasting the resources of the people" on the "Army of the Bear" signifying that while internal support remains high, Liberal opposition to Putin's administration remains firm\n\nWhilst unsure what will happen soon, one thing remains sure, the Russians don't plan on sitting still."
+ SOV_sotnik_news.1.a: "The Russians Don't Sit Still"
+ 
+ # Gerasimov Events
+ SOV_gerasimov.1.t: "The Pragmatic Reformist"
+ SOV_gerasimov.1.d: "It was a calm morning in Moscow, inside a luxurious building one man was sitting, his name? Valery Gerasimov, a well known Russian General, and the current Minister of Defence for the Russian Government, and while he was enjoying his usual large breakfast and luxuries one thing had constantly been piercing his mind. How to get the favour of the president, the Sotnik-1 Reforms have been drafted for a while now, and he was sure Putin would sign it, however one thing was bothering him. Sergei Shoigu and his Old Guardists, they would for sure try to block any attempt at integration of the Gerasimov Doctrine, holding massive political and military weight he had to play this smart. He was convinced he could not let the Russian Army stick in the same mud as the Soviets did, he knew he had widespread support from the VDV and Special Forces generals, however to convince Putin was another story.\n\nAs Gerasimov finished his meal he came to skim the plans for the Sotnik-1 reforms once more, it was perfect, the ideal plan to integrate his doctrine in the Armed Forces. As it reached 8:45 AM, his good friend  Colonel General Andrey Serdyukov came into the room. "General Gerasimov! It is time to get going, we still need to review the 331st Guards Airborne Regiment, it will be a long time traveling so let's get going." Gerasimov looked up at Serdyukov: "Understood Colonel General.""
+ SOV_gerasimov.1.a: "To Kostroma!"
+
+ SOV_gerasimov.2.t: "A Trip to Kostroma"
+ SOV_gerasimov.2.d: "Placeholder"
+ SOV_gerasimov.2.a: "The GRU? Really?"
+
+ # Shoigu Events
+ SOV_shoigu.1.t: "The Traditionalist"
+ SOV_shoigu.1.d: "It was a sunny midday in Yekaterinburg and 3 men, dressed in extravagant military uniforms, with shiny polished shoes and medals were walking among numerous T-90M tanks with the crews standing in upright still positions saluting the 3 men, who were these 3 men? General Sergei Surovikin, Colonel General Alexander Lapin, and General Sergei Shoigu. Arguably the 3 most important men in the 'Old Guard' faction within the Ministry of Defence. As Shoigu was walking by the tanks of the 1st Guards Tank Regiment he became pleased and turned to Surovikin: "You know General, if it was not for Gerasimov and his illogical ideas for the Armed Forces, we could have more grand shows like this, massive armed formations, tanks, and firepower that the United States could never match." Surovikin chuckled and said: "It is a shame he got so much more influential after the Special Military Operation, Vladimirovich has his favour now but i know of a way we can reverse this." Shoigu looked interested and slightly lifted his eyebrows: "How is that?" Surovikin quickly replied "Let's discuss in my office, it will be a bit more private."\n\nAfter some time, they finally reached the office, Surovikin poured out 3 glasses of champagne and handed it to Shoigu and Lapin. "You ask, how can we reverse the favour Gerasimov has received? It is simple, we must make Vladimirovich aware of the political reality, we are a stable support base, we don't challenge him." Shoigu chuckled: "You make good points, I will have my secretary write up a document immediately that we can represent when we go to discuss this 'reform' programme. This may just be a way to further our Russian Doctrine ideals, and we can get rid of Gerasimov just as quick." Surovikin smirked at Shoigu: "You never change General.""
+ SOV_shoigu.1.a: "Schemers Stay Scheming"
+
+# Belarus
+ BLR_protest.2.t: "Belarus Asks us For Help With Protests"
+ BLR_protest.2.d: "Placeholder"
+ BLR_protest.2.a: "Send Regular Peacekeepers"
+ BLR_protest.2.b: "Send Spetsnaz"
+ BLR_protest.2.c: "They Can Handle It"
+
+ BLR_protest.3.t: "Order Restored in Minsk"
+ BLR_protest.3.d: "Placeholder"
+
+ BLR_protest.4.t: "Belarusian Protests Escalate"
+
+ BLR_protest.5.t: "Belarus Asks for Help!"
+ BLR_protest.5.d: "Placeholder"
+ BLR_protest.5.a: "Tanks in Minsk! Now!"
+ BLR_protest.5.b: "Lukashenko is Lost Dammit!"
+
+ BLR_protest.6.t: "Lukashenko Got Ousted!"
+
+
+ BLR_protest.7.t: "Lukashenko Removed From Power!"
+ BLR_protest.7.d: "Placeholder"
+ BLR_protest.7.a: "Conduct a Special Anti Terrorist Operation."
+ BLR_protest.7.b: "Sanction Them."
+
+ BLR_protest.8.t: "Russian Invasion of Belarus"
+ BLR_protest.8.d: "Russia invaded Belarus, evil bitches!"
+ BLR_protest.8.a: "Sanction Them!"
+
+ BLR_protest.9.t: "Russian Invasion of Belarus"
+ BLR_protest.9.d: "Russia invaded Belarus, evil bitches!"
+ BLR_protest.9.a: "Sanction Them!"
+ BLR_protest.9.b: "Not Our Business!"
+
+ BLR_protest.10.t: "The European Union Sanctions Us"
+ BLR_protest.10.d: "Placeholder"
+ BLR_protest.10.a: "Too Bad."
+
+ BLR_protest.11.t: "The United States Sanctions Us"
+ BLR_protest.11.d: "Placeholder"
+ BLR_protest.11.a: "Too Bad."
+
+ BLR_unionstate.1.t: "Belarus Signs The 2027 Union State Plan"
+ BLR_unionstate.1.d: "Placeholder"
+ BLR_unionstate.1.a: "Perfect!"
+ BLR_unionstate.1.b: "Provide Extra Assistance"
+
+ BLR_unionstate.2.t: "Belarus Prepares Economic Treaties"
+ BLR_unionstate.2.d: "Placeholder"
+ BLR_unionstate.2.a: "Perfect!"
+ BLR_unionstate.2.b: "Provide Extra Assistance"
+
+ BLR_unionstate.3.t: "Belarus Prepares Military Treaties"
+ BLR_unionstate.3.d: "Placeholder"
+ BLR_unionstate.3.a: "Perfect!"
+ BLR_unionstate.3.b: "Provide Extra Assistance"
+
+ BLR_unionstate.4.t: "2035 Integration Plan Temporarily Cancelled"
+ BLR_unionstate.4.d: "Placeholder"
+ BLR_unionstate.4.a: "Understood"
+
+ BLR_unionstate.5.t: "2035 Integration Plan Ratified"
+ BLR_unionstate.5.d: "Placeholder"
+ BLR_unionstate.5.a: "Perfect!"
+
+ BLR_unionstate.6.t: "Belarus and Russia Ratify 2035 Union State Integration Plan"
+ BLR_unionstate.6.d: "Placeholder"
+ BLR_unionstate.6.a: "Will Belarus Be Annexed?"
+
+ news_BLR_protest.1.t: "Order Restored in Belarus"
+ news_BLR_protest.1.d: "With protests in Belarus finally reaching a breaking point, the Belarussian government had sent a plea to the Russian Federation for a "Peacekeeping Operation" However such a proposal was refused by the Russian Government. Namely due to resource constraints and active military reforms being preformed under the "Sotnik-1 Programme" either way, the Belarussian MVD and OMON were able to actively supress these protests and the reign of Lukashenko is likely secure. While public statements by Lukashenko, showing slight disappointment in the Russian resolve, relations have not meaningfully deteriorated between the 2 states. \n\n Lukashenko has however announced that reforms to the liberties of the people, MVD and OMON will commence in the near future."
+ news_BLR_protest.1.a: "Thank God..."
+
+ news_BLR_protest.2.t: "Russia Restores Order in Belarus"
+ news_BLR_protest.2.d: "After the protests in Belarus began and the Belarussian government was clearly struggling to maintain these protests they had asked the Russian government for peacekeepers. Soon after Russian Peacekeepers were in all major cities including Minsk, Gomel, and Pinsk. Soon after, the protests were in a contained position and it surely assumed that Lukashenko will remain in power for much longer, albeit with a heavy reliance on Russian military and security prescense. No statements were made publicly about the furthering of the Union State Project, assuming it will continue as it has been. \n\n While Western countries have condemned this move, no public measures were taken against either Belarus or Russia, with the only noticable thing being that the border security between Poland and Belarus has been slightly more active in recent times."
+ news_BLR_protest.2.a: "Russian Power Displayed Once Again"
+
+ news_BLR_protest.3.t: "Russian Tanks Roll Down in Minsk!"
+ news_BLR_protest.3.d: "After the Russian peacekeepers arrived in Belarus to help with the protests, but no slowing down being noticed, the Belarusian Government had sent a plea to the Russian Government to re establish order as soon as possible. And within 12 hours, 27 Russian Tanks and Rosvgardiya Units were spotted in the centre of Minsk occupying Police Stations and setting up barriers on the roads, soon, only 1 hour after their arrival the arrest of Protest leaders had been documented. It is safe to say, with the arrest of the protest leaders and prescense of heavy Russian Infantry that the fall of Lukashenko or his regime wont be for any time soon. As soon as this had happened the European Union and United States had condemned the move and promised an "Appropriate Response" for such a Violent takeover.\n\n It is safe to say Alexander Lukashenko will attempt to rapidly advance the Union State Program with the active involvement of Russian FSB and Security Forces in the region, which could once and for all ensure Russian control over the country."
+ news_BLR_protest.3.a: "Chaos!"
+
+ news_BLR_protest.4.t: "Russian Peacekeepers Leave Minsk!"
+ news_BLR_protest.4.d: "Placeholder"
+ news_BLR_protest.4.a: "Will Lukashenko Live?"
+
+ news_BLR_protest.5.t: "New Government in Belarus"
+ news_BLR_protest.5.d: "With Belarus being rocked by protests for a couple weeks now, it has finally become public by the new incumbent transitional leader of the Belarusian government that Alexander Lukashenko and many of his cabinet have left the country. Many wonder what will happen now that Lukashenko has left the government and the country is in a fresh chaos of a new government. With many wondering and worrying what the Russian response will be, the transitional leader has said this is not a time to celebrate, but prepare for any possible Russian intervention, or intervention from loyalists of the former administration. The European Union however has already congratulated Belarus, with openly hostile language against the old administration."
+ news_BLR_protest.5.a: "Is it Over?"
+
+ news_BLR_protest.6.t: "Vladimir Putin Announces Special Anti Terrorist Operation"
+ news_BLR_protest.6.d: "After the revolution in Belarus, the Russian Government had been eerily silent on the matter, with Alexander Lukashenko's current whereabouts being unknown and Russian troop movements already being seen near the Belarusian borders, it was only a matter of time before Russia would launch what they called a "Special Anti Terrorist Operation" with Vladimir Putin making a televized address akin to what was seen in 2022 and Ukraine. Many see this as Putin not wanting to repeat what had happened in 2014 and immediately intervening in a neighbour falling to an Anti Russian Government. Many analysts note that the new Belarusian government, still freshly in chaos will not be able to reliably resist a Russian invasion and that even if they had rapid NATO aid, would still fall within weeks.\n\n However only time will tell how this pans out."
+ news_BLR_protest.6.a: "Will This Horror Ever Stop?"
+
+ news_BLR_protest.7.t: "Violent Takeover of Belarus"
+ news_BLR_protest.7.d: "Placeholder"
+ news_BLR_protest.7.a: "Will There be More Violence?"
+ 
+ news_BLR_protest.8.t: "Protests in Belarus"
+ news_BLR_protest.8.d: "Placeholder"
+ news_BLR_protest.8.a: "It'll Be Fine"
+
+
+ # Putins Death!
+ SOV_putin_death_event.1.t: "Putin Gets Sick"
+ SOV_putin_death_event.1.d: "Placeholder"
+ SOV_putin_death_event.1.a: "He Will Heal."
+
+ SOV_putin_death_event.2.t: "Putins Health Worsens"
+ SOV_putin_death_event.2.d: "Placeholder"
+ SOV_putin_death_event.2.a: "It'll Get Better..."
+
+ SOV_putin_death_event.3.t: "Putin Shows Improvements"
+ SOV_putin_death_event.3.d: "Placeholder"
+ SOV_putin_death_event.3.a: "Told Ya So!"
+
+ SOV_putin_death_event.4.t: "Putin Reserves From Public Life"
+ SOV_putin_death_event.4.d: "Placeholder"
+ SOV_putin_death_event.4.a: "Oh No..."
+
+ SOV_putin_death_event.5.t: "Putin's Absence"
+ SOV_putin_death_event.5.d: "Placeholder"
+ SOV_putin_death_event.5.a: "Play The Swans!"
+
+ SOV_putin_death_event.6.t: "Putin is Dead!"
+ SOV_putin_death_event.6.d: "Placeholder"
+ SOV_putin_death_event.6.a: "Oh God! The House Has Fallen!"
+
+ SOV_putin_death_event.7.t: "Election Results!"
+ SOV_putin_death_event.7.d: "Placeholder"
+ SOV_putin_death_event.7.a: "Another 6 Years!"
+
+ SOV_putin_death_event.8.t: "Doctors Bring Negative News"
+ SOV_putin_death_event.8.d: "Placeholder"
+ SOV_putin_death_event.8.a: "Oh No..."
+
+ SOV_putin_death_event.9.t: "2030 Presidential Address"
+ SOV_putin_death_event.9.d: "Placeholder"
+ SOV_putin_death_event.9.a: "Fine"
+
+ SOV_putin_death_news_event.1.t: "Swan Lake Appears on Russian State Media"
+ SOV_putin_death_news_event.1.d: "A couple days after re-elected president Vladimir Putin made his 2030 address to the nation, he has not been seen in any public appearances and or government meetings. With some wondering where he had went, the true weight of his absence was felt by the Russian people and the surrounding nations, the last time this broadcast had appeared was in August 1991 during the August Coup by Communist hardliners. This signals great turmoil within the Russian Federation, as every major state TV station is now playing the Dance of the Little Swans with the iconic Swan Lake by Tchaikovsky many outside and internal observers signal that Putin's health and administration may be in jeopardy."
+ SOV_putin_death_news_event.1.a: "Oh God..."
+
+ SOV_putin_death_news_event.2.t: "Putin Re-Elected"
+ SOV_putin_death_news_event.2.d: "Placeholder"
+ SOV_putin_death_news_event.2.a: "Another 6 Years of Putinism."
+
+ SOV_putin_death_news_event.3.t: "Putin is Dead"
+ SOV_putin_death_news_event.3.d: "Placeholder"
+ SOV_putin_death_news_event.3.a: "Will Russia Hold?"
+
+ # CSTO Stuff
+ SOV_csto.1.t: "2027 CSTO Summit"
+ SOV_csto.1.d: "It was a bright day in Astana, Kazakhstan, the Secretary General Tasmagambetov was giving a meeting, a lot of boring talks, numbers, preformance, but what stood out about this meeting is the great emphasis on Cohesion and the Drug Problems in Kazakhstan. Colonel General Andrey Serdyukov came back to Russia, keeping the proposals from the CSTO in mind, so he quickly met with Valery Gerasimov of the Ministry of Defense to discuss these issues.\n\n"General Gerasimov, we may have a problem, the recent statistics of the CSTO and Kazakhstan have not been positive, this alliance is falling apart and we need to do something about this, please inform the president and hand him this document, ive written a constructive plan for how we could increase the cohesion of the CSTO and make our Organization much stronger than before, the risk of Kazakh drug trades and terrorism is too high, and our Western border with NATO could be strengthened to." Gerasimov look at Sidorov and nodded. "Understood Colonel General. You are dismissed." \n\nGerasimov did not hesitate to inform President Putin about this, but kept in mind to use this as an advantage to further his reformist agenda, so Shoigu was not notified of the plans, Sidorov was a member of the Reformist faction in the Ministry of Defense, so this plan aligned quite well with Gerasimov's ideas to reform and modernize not only the Russian Armed Forces, but the whole of the CSTO. \n\nAs Putin read over the documents and plans, he took a quick glance at Gerasimov before signing the documents requested budget. "Make it happen." He said, before handing him the documents back and taking up the phone, he had a president to call."
+ SOV_csto.1.a: "Understood"
 

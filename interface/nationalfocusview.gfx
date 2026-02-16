@@ -468,4 +468,8 @@ spriteTypes = {
 		name = "GFX_FOCUS_FILTER_HISTORICAL"
 		texturefile = "gfx/interface/focusview/filter/historical_focus_filter_icon.dds"
 	}
+	spriteType = {
+		name = "GFX_focus_reward_header"
+		texturefile = "gfx/interface/unitcontrol/focus_reward_header.dds"
+	}
 }

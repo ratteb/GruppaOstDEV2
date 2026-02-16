@@ -112,6 +112,8 @@ set_variable = {
 add_dynamic_modifier = { modifier = SOV_demographics_crisis }
 add_dynamic_modifier = { modifier = SOV_russian_armed_forces }
 
+set_country_flag = SOV_putin_alive 
+
 resize_array = { SOV.opening_screen_chapters = 3 }
 
 resize_array = { SOV.opening_screen_chapter_photos_0 = 4 }
@@ -198,7 +200,14 @@ add_opinion_modifier = {
 	target = NOV
 	modifier = federal_republic_SOV
 }
-
+country_event = {
+	id = SOV_csto.1
+	days = 40
+}
+country_event = {
+	id = SOV_gerasimov.1
+	days = 15
+}
 recruit_character = SOV_vladimir_putin
 recruit_character = SOV_dmitry_medvedev
 
@@ -233,7 +242,7 @@ set_popularities = {
 	despotism = 6
 }
 
-create_faction = "COLLECTIVE_SECURITY_TREATY_ORGANIZATION_LOC"
+create_faction_from_template = faction_template_csto 
 add_to_faction = BLR 
 add_to_faction = KAZ 
 add_to_faction = KYR
@@ -241,7 +250,6 @@ add_to_faction = TAJ
 add_to_faction = ABK 
 add_to_faction = SOT 
 add_to_faction = NOV 
-add_to_faction = SER 
 
 create_country_leader = {
 	name = "Mr Generic"

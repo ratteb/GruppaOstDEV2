@@ -131,7 +131,6 @@ country_event = {
 		clr_country_flag = UKR_all_is_fine
 		mark_focus_tree_layout_dirty = yes
 		hidden_effect = {
-		scoped_play_song = oblivion
 		USA = { country_event = {
 			id = ukraine.6
 			days = 3 
@@ -140,6 +139,28 @@ country_event = {
 		      }
 		}
 		news_event = news_ukraine.6
+    }
+}
+# SBU report 278
+country_event = {
+	id = ukraine.7
+	title = ukraine.7.t
+	desc = ukraine.7.d
+	picture = GFX_kiev_doomer
+	
+	is_triggered_only = yes
+	
+	option = { # I heard enough 
+		name = ukraine.7.b
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+		scoped_play_song = oblivion
+		country_event = {
+			id = ukraine.4
+			days = 4
+		}
+		}
+		
     }
 }
 

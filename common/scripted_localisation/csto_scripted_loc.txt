@@ -1,0 +1,9 @@
+#Titles
+defined_text = {
+    name = get_csto_cohesion_text
+
+    text = {
+        localization_key = "csto_cohesion_loc"
+    }
+
+}

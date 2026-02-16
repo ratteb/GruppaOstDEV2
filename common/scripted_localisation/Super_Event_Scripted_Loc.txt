@@ -1,0 +1,145 @@
+#Titles
+defined_text = {
+    name = get_super_event_title
+
+    text = {
+        trigger = {
+            has_global_flag = RUS_start_SMO_se
+        }
+        localization_key = "sp_event_SMO"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = UKR_start_HRW_se
+        }
+        localization_key = "sp_event_HRW"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = CHI_start_SEW_se
+        }
+        localization_key = "sp_event_SEW"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = CHI_start_MOST_se
+        }
+        localization_key = "sp_event_MOST"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = SOV_NBP_se
+        }
+        localization_key = "sp_event_NBP"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = SOV_PTnD_se
+        }
+        localization_key = "sp_event_PTnD"
+    }
+	
+}
+
+defined_text = {
+    name = get_super_event_remark
+
+    
+	
+	text = {
+        trigger = {
+            has_global_flag = RUS_start_SMO_se
+        }
+        localization_key = "sp_event_SMO_REMARK"
+    }
+    text = {
+        trigger = {
+            has_global_flag = UKR_start_HRW_se
+        }
+        localization_key = "sp_event_HRW_REMARK"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = CHI_start_SEW_se
+        }
+        localization_key = "sp_event_SEW_REMARK"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = CHI_start_MOST_se
+        }
+        localization_key = "sp_event_MOST_REMARK"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = SOV_NBP_se
+        }
+        localization_key = "sp_event_NBP_REMARK"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = SOV_PTnD_se
+        }
+        localization_key = "sp_event_PTnD_REMARK"
+    }
+	
+
+}
+
+defined_text = {
+    name = get_super_event_quote
+
+
+	text = {
+        trigger = {
+            has_global_flag = RUS_start_SMO_se
+        }
+        localization_key = "sp_event_SMO_QUOTE"
+    }
+
+     text = {
+        trigger = {
+            has_global_flag = UKR_start_HRW_se
+        }
+        localization_key = "sp_event_HRW_QUOTE"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = CHI_start_SEW_se
+        }
+        localization_key = "sp_event_SEW_QUOTE"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = CHI_start_MOST_se
+        }
+        localization_key = "sp_event_MOST_QUOTE"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = SOV_NBP_se
+        }
+        localization_key = "sp_event_NBP_QUOTE"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = SOV_PTnD_se
+        }
+        localization_key = "sp_event_PTnD_QUOTE"
+    }
+	
+
+}

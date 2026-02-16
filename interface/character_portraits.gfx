@@ -13,6 +13,12 @@ spriteTypes = {
 
 	# Novorossiya above this line
 	spriteType = {
+		name = "GFX_kassym_jomart_tokayev"
+		texturefile = "gfx/leaders/KAZ/kassym_jomart_tokayev.dds"
+	}
+
+	# Kazakhstan above this line 
+	spriteType = {
 		name = "GFX_ihor_palaytsya"
 		texturefile = "gfx/leaders/UKR/ihor_palaytsya.dds"
 	}
@@ -42,6 +48,12 @@ spriteTypes = {
 
 	# China above this line 
 	spriteType = {
+		name = "GFX_portrait_lai_ching_te"
+		texturefile = "gfx/leaders/ROC/lai_ching_te.dds"
+	}
+
+	# Taiwan above this line 
+	spriteType = {
 		name = "GFX_portrait_ali_khamenei"
 		texturefile = "gfx/leaders/PER/Khamenei.dds"
 	}
@@ -60,4 +72,11 @@ spriteTypes = {
 	}
 
 	# germany above this line 
+
+	# Australia above this line
+
+	spriteType = {
+		name = "GFX_jordan_barrett"
+		texturefile = "gfx/leaders/AST/jordan_barrett.dds"  
+	}
 }

@@ -1,0 +1,188 @@
+guiTypes = {
+
+
+	containerWindowType = {
+		name = "csto_scripted_gui_window"	
+		position = { x = 60 y = 0 }	
+		size = { width = 600 height = 510 }
+		orientation = center
+		origo = center
+		moveable = no
+		click_to_front = no
+		clipping = no
+
+		containerWindowType = {
+		name = "csto_cohesion_screen"	
+		position = { x = 60 y = 0 }	
+		size = { width = 600 height = 510 }
+		orientation = center
+		origo = center
+		moveable = no
+		click_to_front = no
+		clipping = no
+
+		
+
+		instantTextboxType = {
+			name = "csto_cohesion_text"
+			position = { x = 120 y = 450 }
+			font = "TD_event_font_26pt"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "csto_cohesion_loc"
+			maxWidth = 150
+			maxHeight = 140
+			fixedsize = yes
+		}
+
+		instantTextboxType = {
+			name = "csto_cohesion_name"
+			position = { x = 120  y = 100 }
+			font = "TD_event_font_26pt"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "csto_cohesion_name_loc"
+			maxWidth = 150
+			maxHeight = 140
+			fixedsize = yes
+		}
+
+		iconType = {
+			name = "csto_cohesion_meter"
+			spriteType = "GFX_csto_cohesion_meter"
+			position = {x = 64	  y = 195 }
+		}
+	}
+
+	containerWindowType = {
+		name = "csto_cohesion_screen"	
+		position = { x = 60 y = 0 }	
+		size = { width = 600 height = 510 }
+		orientation = center
+		origo = center
+		moveable = no
+		click_to_front = no
+		clipping = no
+
+		
+
+		instantTextboxType = {
+			name = "csto_cohesion_text"
+			position = { x = 120 y = 450 }
+			font = "TD_event_font_26pt"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "csto_cohesion_loc"
+			maxWidth = 150
+			maxHeight = 140
+			fixedsize = yes
+		}
+
+		instantTextboxType = {
+			name = "csto_cohesion_name"
+			position = { x = 120  y = 100 }
+			font = "TD_event_font_26pt"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "csto_cohesion_name_loc"
+			maxWidth = 150
+			maxHeight = 140
+			fixedsize = yes
+		}
+
+		iconType = {
+			name = "csto_cohesion_meter"
+			spriteType = "GFX_csto_cohesion_meter"
+			position = {x = 64	  y = 195 }
+		}
+	}
+
+
+	containerWindowType = {
+		name = "csto_central_asia_screen"	
+		position = { x = 60 y = 0 }	
+		size = { width = 600 height = 510 }
+		orientation = center
+		origo = center
+		moveable = no
+		click_to_front = no
+		clipping = no
+
+		
+
+		instantTextboxType = {
+			name = "csto_central_asia_text"
+			position = { x = 120 y = 450 }
+			font = "TD_event_font_26pt"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "csto_cohesion_loc"
+			maxWidth = 150
+			maxHeight = 140
+			fixedsize = yes
+		}
+
+		instantTextboxType = {
+			name = "csto_central_asia_name"
+			position = { x = 120  y = 100 }
+			font = "TD_event_font_26pt"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "csto_central_asia_name_loc"
+			maxWidth = 150
+			maxHeight = 140
+			fixedsize = yes
+		}
+
+		iconType = {
+			name = "csto_central_asia_meter"
+			spriteType = "GFX_csto_cohesion_meter"
+			position = {x = 64	  y = 195 }
+		}
+	}
+	
+
+		
+
+		containerWindowType = {
+		name = "csto_buttons_window"	
+		position = { x = 60 y = 0 }	
+		size = { width = 600 height = 510 }
+		orientation = center
+		origo = center
+		moveable = no
+		click_to_front = no
+		clipping = no
+
+		buttonType = {
+			name = "csto_page1"
+			spriteType = "GFX_page1_button"
+			position = { x = -40 y = 0 }
+			clicksound = click_close
+			buttonFont = "TD_event_font_22pt"
+			pdx_tooltip = "GUI_CSTO_cohesion_tooltip"
+		}
+
+		buttonType = {
+			name = "csto_page2"
+			spriteType = "GFX_page2_button"
+			position = { x = 10 y = 0 }
+			clicksound = click_close
+			buttonFont = "TD_event_font_22pt"
+			pdx_tooltip = "GUI_CSTO_central_asia_tooltip"
+		}
+
+		buttonType = {
+			name = "csto_page3"
+			spriteType = "GFX_page3_button"
+			position = { x = 60 y = 0 }
+			clicksound = click_close
+			buttonFont = "TD_event_font_22pt"
+			pdx_tooltip = "GUI_CSTO_military_readiness_tooltip"
+		}
+
+	}
+
+		
+	}
+}

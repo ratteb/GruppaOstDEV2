@@ -1,0 +1,274 @@
+﻿# 1st Guards Tank Army 
+
+division_template = {
+	name = "Mechanized Brigade"
+
+	division_names_group = SOV_ARM_01
+
+	regiments = {
+		mechanized = { x = 0 y = 0 }
+		mechanized = { x = 0 y = 1 }
+        mechanized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		modern_armor = { x = 2 y = 0 }
+		light_sp_artillery_brigade = { x = 3 y = 0 }
+		light_sp_artillery_brigade = { x = 3 y = 1 }
+		motorized_rocket_brigade = { x = 3 y = 2 }
+
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Tank Brigade"
+
+	division_names_group = SOV_ARM_01
+
+	regiments = {
+		modern_armor = { x = 0 y = 0 }
+		modern_armor = { x = 0 y = 1 }
+		modern_armor = { x = 0 y = 2 }
+		mechanized = { x = 1 y = 0 }
+		light_sp_artillery_brigade = { x = 2 y = 0 }
+		light_sp_artillery_brigade = { x = 2 y = 1 }
+		motorized_rocket_brigade = { x = 2 y = 2 }
+
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Territorial Defence Brigade"
+
+	division_names_group = SOV_ARM_01
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+
+	}
+}
+division_template = {
+	name = "Air Assault Brigade"
+
+	division_names_group = SOV_ARM_01
+
+	regiments = {
+		paratrooper = { x = 0 y = 0 }
+		paratrooper = { x = 0 y = 1 }
+		paratrooper = { x = 0 y = 2 }
+		light_sp_artillery_brigade = { x = 1 y = 0 }
+		light_sp_artillery_brigade = { x = 1 y = 1 }
+		motorized_rocket_brigade = { x = 1 y = 2 }
+
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Mountain Assault Brigade"
+
+	division_names_group = SOV_ARM_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mot_artillery_brigade = { x = 1 y = 0 }
+		light_sp_artillery_brigade = { x = 1 y = 1 }
+		motorized_rocket_brigade = { x = 1 y = 2 }
+		modern_armor = { x = 2 y = 0 }
+
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Artillery Brigade"
+
+	division_names_group = SOV_ARM_01
+
+	regiments = {
+		mot_artillery_brigade = { x = 0 y = 0 }
+		mot_artillery_brigade = { x = 0 y = 1 }
+		mot_artillery_brigade = { x = 0 y = 2 }
+
+	}
+	support = {
+	}
+}
+
+division_template = {
+	name = "Special Purpose Regiment"
+
+	division_names_group = SOV_ARM_01
+
+	regiments = {
+		special_operation_forces = { x = 0 y = 0 }
+		special_operation_forces = { x = 0 y = 1 }
+		special_operation_forces = { x = 0 y = 2 }
+		special_operation_forces = { x = 1 y = 0 }
+		special_operation_forces = { x = 1 y = 1 }
+		special_operation_forces = { x = 1 y = 2 }
+
+	}
+	support = {
+	}
+}
+
+
+
+units = {
+
+	division = {
+		name = "3rd Separate Special Purpose Regiment"
+		location = 3457
+		division_template = "Special Purpose Regiment"
+		start_experience_factor = 0.87
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "8th Separate Special Purpose Regiment"
+		location = 3457
+		division_template = "Special Purpose Regiment"
+		start_experience_factor = 0.87
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "26th Separate Artillery Brigade “Roman Dashkevych”"
+		location = 6557
+		division_template = "Artillery Brigade"
+		start_experience_factor = 0.87
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "55th Separate Artillery Brigade “Zaporizhian Sich”"
+		location = 577
+		division_template = "Artillery Brigade"
+		start_experience_factor = 0.87
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "10th Separate Mountain Assault Brigade “Edelweiss”"
+		location = 11411
+		division_template = "Mountain Assault Brigade"
+		start_experience_factor = 0.87
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "80th Separate Air Assault Brigade “Halychyna”"
+		location = 11479
+		division_template = "Air Assault Brigade"
+		start_experience_factor = 0.87
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "95th Separate Air Assault Brigade “Polissia”"
+		location = 6593
+		division_template = "Air Assault Brigade"
+		start_experience_factor = 0.87
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "1st Tank Brigade"
+		location = 3568
+		division_template = "Tank Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "14th Mechanized Brigade"
+		location = 422
+		division_template = "Mechanized Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "24th Mechanized Brigade"
+		location = 11479
+		division_template = "Mechanized Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "28th Mechanized Brigade"
+		location = 3457
+		division_template = "Mechanized Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "30th Mechanized Brigade"
+		location = 6557
+		division_template = "Mechanized Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "72nd Mechanized Brigade"
+		location = 3543
+		division_template = "Mechanized Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "100th Seperate Territorial Defence Brigade"
+		location = 422
+		division_template = "Territorial Defence Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "114th Seperate Territorial Defence Brigade"
+		location = 3543
+		division_template = "Territorial Defence Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "112th Seperate Territorial Defence Brigade"
+		location = 525
+		division_template = "Territorial Defence Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "103rd Seperate Territorial Defence Brigade"
+		location = 491
+		division_template = "Territorial Defence Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "101st Seperate Territorial Defence Brigade"
+		location = 11411
+		division_template = "Territorial Defence Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	
+}

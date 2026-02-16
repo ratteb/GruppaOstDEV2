@@ -1,0 +1,81 @@
+scripted_gui = {
+
+
+	csto_scripted_gui_window = {
+    window_name = "csto_scripted_gui_window"
+    context_type = decision_category
+
+    visible = {
+      has_country_flag = SOV_csto_allowed
+    }
+
+    effects = {
+		csto_page1_click = {
+			set_variable = {
+				var = csto_page 
+				value = 1
+			}
+		}
+		csto_page2_click = {
+			set_variable = {
+				var = csto_page 
+				value = 2
+			}
+		}
+		csto_page3_click = {
+			set_variable = {
+				var = csto_page 
+				value = 3
+			}
+		}
+    }
+
+    triggers = {
+		csto_cohesion_text_visible = {
+			check_variable = { csto_page = 1 }
+		}
+		csto_cohesion_name_visible = {
+			check_variable = { csto_page = 1 }
+		}
+		csto_cohesion_meter_visible = {
+			check_variable = { csto_page = 1 }
+		}
+    }
+
+	triggers = {
+		csto_central_asia_text_visible = {
+			check_variable = { csto_page = 2 }
+		}
+		csto_central_asia_name_visible = {
+			check_variable = { csto_page = 2 }
+		}
+		csto_central_asia_meter_visible = {
+			check_variable = { csto_page = 2 }
+		}
+    }
+
+    dynamic_lists = {
+	  }
+
+    properties = {  
+        csto_cohesion_meter = {
+        frame = csto_cohesion
+        }
+	}
+
+    ai_enabled = {
+    }
+
+    ai_test_interval = 290  # The higher, the long it takes the ai to do actions
+	ai_test_variance = 0.5
+
+    ai_check = {
+    }
+
+    ai_check_scope = {
+    }
+
+    ai_weights = {
+    }
+  }
+}

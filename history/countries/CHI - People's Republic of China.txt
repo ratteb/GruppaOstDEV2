@@ -87,6 +87,7 @@ if = {
 }
 add_dynamic_modifier = { modifier = CHI_chinese_century_idea }
 add_dynamic_modifier = { modifier = CHI_peoples_liberation_army }
+add_dynamic_modifier = { modifier = CHI_the_rot }
 
 # Chinese Century 
 set_variable = {

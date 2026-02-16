@@ -1,0 +1,12 @@
+SOV_sotnik_decision_cat = {
+	icon = generic_political_actions
+	picture = GFX_SOV_sotnik_decision_cat_picture
+	priority = 50
+	visible_when_empty = yes
+	allowed = {
+		tag = SOV 
+	}
+	visible = {
+		has_country_flag = SOV_sotnik_allowed
+	}
+}

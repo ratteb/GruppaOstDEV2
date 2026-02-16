@@ -517,6 +517,10 @@ focus_tree = {
 		completion_reward = {
 			country_event = USA_trump.11
 			navy_experience = 10
+			ROC = { country_event = {
+			id = USA_TWC.1
+			days = 10
+		}  }
 		}
 	}
 

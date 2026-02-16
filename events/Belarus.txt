@@ -2,224 +2,669 @@
 # placeholder Events
 ###########################
 
-add_namespace = SOV_sotnik
+add_namespace = BLR_protest
+add_namespace = BLR_unionstate
+add_namespace = news_BLR_protest
 
 # Event Chain for SOtnik Program
 
-# Announcing of the Sotnik-1 Modernization Program
+# Protests on the streets of Minsk 
 country_event = {
-	id = SOV_sotnik.1
-	title = SOV_sotnik.1.t
-	desc = SOV_sotnik.1.d
+	id = BLR_protest.1
+	title = BLR_protest.1.t
+	desc = BLR_protest.1.d
 	picture = GFX_report_daily_briefing_mod
 	
 	is_triggered_only = yes
 	
-	option = { # Ura! 
-		name = SOV_sotnik.1.a
+	option = { # Ask the Russians for help! 
+		name = BLR_protest.1.a
 		ai_chance = { factor = 90 }
-    }
-}
+		SOV = { country_event = {
+			id = BLR_protest.2 
+			days = 20
+		}}
 
-# Purges in the Officer corps dont go as planned
-country_event = {
-	id = SOV_sotnik.2
-	title = SOV_sotnik.2.t
-	desc = SOV_sotnik.2.d
-	picture = GFX_report_event_chinese_soldiers_fighting
-	
-	is_triggered_only = yes
-	
-	option = { # What the hell man!?
-		name = SOV_sotnik.2.a
-		ai_chance = { factor = 90 }
-
-		add_timed_idea = {
-			idea = SOV_idea_suffering_from_purges
-			days = 106
+		SOV = { country_event = {
+			id = BLR_unionstate.4 
+			days = 1
+		}}
+		add_ideas = { BLR_anti_lukashenko_protests }
+		news_event = {
+			id = news_BLR_protest.8
+			days = 1
 		}
     }
 }
 
-# Choice NCO or Reserve officer 
+# Belarus asks us for help in their protests 
 country_event = {
-	id = SOV_sotnik.3
-	title = SOV_sotnik.3.t
-	desc = SOV_sotnik.3.d
-	picture = GFX_report_event_chinese_soldiers_fighting
+	id = BLR_protest.2
+	title = BLR_protest.2.t
+	desc = BLR_protest.2.d
+	picture = GFX_report_daily_briefing_mod
 	
 	is_triggered_only = yes
 	
-	option = { # NCO system 
-		name = SOV_sotnik.3.a
-		ai_chance = { factor = 50 }
-		set_country_flag = SOV_picked_nco_officer
+	option = { # Send regular peacekeepers
+		name = BLR_protest.2.a
+		ai_chance = { factor = 90 }
+
+		random_list = {
+			60 = { BLR = { country_event = {
+			id = BLR_protest.3
+			days = 1 
+		} } }
+		40 = {
+			BLR = { country_event = {
+			id = BLR_protest.4
+			days = 1 
+		} } }
+
+		}
+		set_country_flag = SOV_helped_belarus
+		BLR = { set_country_flag = SOV_helped_belarus }
     }
 
-	option = { # Reserve officer system 
-		name = SOV_sotnik.3.b
-		ai_chance = { factor = 50 }
-		set_country_flag = SOV_picked_reserve_officer
+	option = { # Send spetsnaz 
+		name = BLR_protest.2.b
+		ai_chance = { factor = 90 }
+
+		random_list = {
+			80 = { BLR = { country_event = {
+			id = BLR_protest.3
+			days = 1 
+		} } }
+		20 = {
+			BLR = { country_event = {
+			id = BLR_protest.4
+			days = 1 
+		} } }
+
+		}
+				set_country_flag = SOV_helped_belarus
+		BLR = { set_country_flag = SOV_helped_belarus }
+    }
+
+	option = { # Leave them to their own demise 
+		name = BLR_protest.2.c
+		ai_chance = { factor = 90 }
+
+		random_list = {
+			50 = { BLR = { country_event = {
+			id = BLR_protest.3
+			days = 1 
+		} } }
+		50 = {
+			BLR = { country_event = {
+			id = BLR_protest.4
+			days = 1 
+		} } }
+
+		}
+    }
+}
+
+# Order Restored in Belarus 
+country_event = {
+	id = BLR_protest.3
+	title = BLR_protest.3.t
+	desc = BLR_protest.3.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # Ask the Russians for help! 
+		name = BLR_protest.3.a
+		ai_chance = { factor = 90 }
+		BLR = {
+			set_country_flag = BLR_protests_over
+			}
+		if = {
+			limit = { has_country_flag = SOV_helped_belarus }
+			add_ideas = {
+				BLR_reliant_russia
+			}
+			remove_ideas = {
+				BLR_anti_lukashenko_protests
+			}
+			news_event = news_BLR_protest.2
+		}
+		else = {
+			news_event = news_BLR_protest.1 
+			remove_ideas = {
+				BLR_anti_lukashenko_protests
+			}
+		}
+    }
+}
+
+# Protests escalate 
+country_event = {
+	id = BLR_protest.4
+	title = BLR_protest.4.t
+	desc = BLR_protest.4.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # Ask the Russians for help! 
+		name = BLR_protest.4.a
+		ai_chance = { factor = 90 }
+		ai_chance = { factor = 90 }
+		if = {
+			limit = { has_country_flag = SOV_helped_belarus }
+			SOV = { country_event = {
+				id = BLR_protest.5
+				days = 14 
+			}}
+		}
+		else = {
+			country_event = BLR_protest.6  
+		}
+    }
+}
+
+
+# Belarus needs help now. 
+country_event = {
+	id = BLR_protest.5
+	title = BLR_protest.5.t
+	desc = BLR_protest.5.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+		option = { # Invade them!  
+		name = BLR_protest.5.a
+		ai_chance = { factor = 90 }
+		puppet = BLR 
+		news_event = news_BLR_protest.3
+		custom_effect_tooltip = BLR_protest_tanks_CET
+		BLR = {
+			remove_ideas = {
+				BLR_anti_lukashenko_protests
+			}
+			add_ideas = {
+				BLR_reliant_russia
+			}
+		}
+		BLR = {
+				set_country_flag = BLR_protests_over
+			}
+
+		hidden_effect = {
+			FRA = { country_event = {
+				id = BLR_protest.8
+				days = 3
+			}}
+			USA = { country_event = {
+				id = BLR_protest.9
+				days = 3
+			}}
+		}
+
+    }
+
+	option = { # Its all lost!  
+		name = BLR_protest.5.b
+		ai_chance = { factor = 90 }
+		news_event = news_BLR_protest.4
+		BLR = {
+			set_country_flag = SOV_left_belarus
+		}
+		custom_effect_tooltip = BLR_protest_tanks_leave_CET
+		BLR = { country_event = {
+			id = BLR_protest.6
+			days = 4
+		}  }
+
+    }
+}
+
+# Belarus Lost to Protests! 
+country_event = {
+	id = BLR_protest.6
+	title = BLR_protest.6.t
+	desc = BLR_protest.6.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+		option = { # Invade them!  
+		name = BLR_protest.6.a
+		ai_chance = { factor = 90 }
+
+		if = {
+			limit = { has_country_flag = SOV_left_belarus }
+			news_event = {
+				id = news_BLR_protest.7
+				days = 3 
+			}
+		}
+		else = {
+			news_event = news_BLR_protest.5  
+		}
+		remove_ideas = {
+				BLR_anti_lukashenko_protests
+			}
+		set_politics = {
+    ruling_party = neutrality 
+    elections_allowed = yes
+    last_election = "2027.1.1"
+    election_frequency = 48
+    long_name = TAG_party_long
+    name = TAG_party
+}
+add_ideas = {
+	BLR_new_government
+	BLR_russian_independence
+}
+  leave_faction = yes
+  set_popularities = {
+	westernism = 22
+	communism = 3
+	neutrality = 35
+	easternism = 40
+	socialism = 0
+	despotism = 0
+}
+ remove_ideas = BLR_CSTO_member01
+ remove_dynamic_modifier = { modifier = BLR_batka_support}
+SOV = {
+	country_event = {
+		id = BLR_protest.7
+		days = 20
 	}
 }
 
-# Gerasimov responds to reserve officers 
+    }
+}
+
 country_event = {
-	id = SOV_sotnik.4
-	title = SOV_sotnik.4.t
-	desc = SOV_sotnik.4.d
-	picture = GFX_report_event_chinese_soldiers_fighting
+	id = BLR_protest.7
+	title = BLR_protest.7.t
+	desc = BLR_protest.7.d
+	picture = GFX_report_daily_briefing_mod
 	
 	is_triggered_only = yes
 	
-	option = { # Keep him barking 
-		name = SOV_sotnik.4.a
+		option = { # SVO 2.0   
+		name = BLR_protest.7.a
 		ai_chance = { factor = 90 }
-		set_country_flag = SOV_didnt_punish_gerasimov
-		add_political_power = -25
-		add_command_power = -50
-		army_experience = 10
+		custom_effect_tooltip = SOV_SATO_BLR_CET
+		hidden_effect = {
+			BLR = {
+				set_country_flag = BLR_protests_over
+			}
+	declare_war_on = {
+    target = BLR 
+    type = annex_everything
     }
-	option = { # Punish him for speaking out 
-		name = SOV_sotnik.4.b
-		ai_chance = { factor = 10 }
-		set_country_flag = SOV_punished_gerasimov
-		add_political_power = 25
-		add_command_power = 35
-		army_experience = -5
-		add_timed_idea = {
-			idea = SOV_silence_critics
-			days = 56
+	USA = {
+		country_event = {
+			id = BLR_protest.8
+			days = 5
+		}
+	}
+	news_event = news_BLR_protest.6
+		}
+    BLR = {
+		add_ideas = BLR_SVO	
+	}
+	add_ideas = SOV_SMO 
+
+	hidden_effect = {
+			FRA = { country_event = {
+				id = BLR_protest.8
+				days = 3
+			}}
+			USA = { country_event = {
+				id = BLR_protest.9
+				days = 3
+			}}
+		}
+    }
+
+	option = { # Sanction them!  
+		name = BLR_protest.7.b
+		ai_chance = { factor = 90 }
+		BLR = {
+			add_ideas = {
+				BLR_russian_sanctions
+			}
+		}
+
+    }
+}
+
+# Russian Invasion of Belarus! 
+country_event = {
+	id = BLR_protest.8
+	title = BLR_protest.8.t
+	desc = BLR_protest.8.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # sanction them 
+		name = BLR_protest.8.a
+		ai_chance = { factor = 90 }
+		SOV = {
+			country_event = {
+				id = BLR_protest.10
+				days = 12
+			}
 		}
     }
 }
 
-# Gerasimov responds to NCO 
+# Russian invasion of Belarus! (US)
 country_event = {
-	id = SOV_sotnik.5
-	title = SOV_sotnik.5.t
-	desc = SOV_sotnik.5.d
-	picture = GFX_report_event_chinese_soldiers_fighting
+	id = BLR_protest.9
+	title = BLR_protest.9.t
+	desc = BLR_protest.9.d
+	picture = GFX_report_daily_briefing_mod
 	
 	is_triggered_only = yes
 	
-	option = { # A great development
-		name = SOV_sotnik.5.a
+	option = { # sanction them 
+		name = BLR_protest.9.a
 		ai_chance = { factor = 90 }
-		add_political_power = 5
+		SOV = {
+			country_event = {
+				id = BLR_protest.11
+				days = 14
+			}
+		}
+    }
+
+	option = { # not our business 
+		name = BLR_protest.9.b
+		ai_chance = { factor = 10 }
     }
 }
 
+# EU sanctions 
 country_event = {
-	id = SOV_sotnik.6
-	title = SOV_sotnik.6.t
-	desc = SOV_sotnik.6.d
-	picture = GFX_report_event_chinese_soldiers_fighting
+	id = BLR_protest.10
+	title = BLR_protest.10.t
+	desc = BLR_protest.10.d
+	picture = GFX_report_daily_briefing_mod
 	
 	is_triggered_only = yes
 	
-	option = { # Lets get going then. 
-		name = SOV_sotnik.6.a
+	option = { # too bad! 
+		name = BLR_protest.10.a
 		ai_chance = { factor = 90 }
-		add_political_power = 5
-		country_event = SOV_sotnik.7
+		add_ideas = {
+			SOV_EU_sanction
+		}
     }
 }
 
-# Early SMO Feb-March 2022
+# US sanctions 
 country_event = {
-	id = SOV_sotnik.7
-	title = SOV_sotnik.7.t
-	desc = SOV_sotnik.7.d
-	picture = GFX_report_event_chinese_soldiers_fighting
+	id = BLR_protest.11
+	title = BLR_protest.11.t
+	desc = BLR_protest.11.d
+	picture = GFX_report_daily_briefing_mod
 	
 	is_triggered_only = yes
 	
-	option = { # We succeeded in all objectives. 
-		name = SOV_sotnik.7.a
-		ai_chance = { factor = 60 }
-		add_political_power = 5
-		country_event = SOV_sotnik.8
-    }
-	option = { # Okay Maybe there were some hiccups...
-		name = SOV_sotnik.7.b
-		ai_chance = { factor = 30 }
-		add_political_power = 5
-		country_event = SOV_sotnik.8
+	option = { # too bad! 
+		name = BLR_protest.11.a
+		ai_chance = { factor = 90 }
+		add_ideas = {
+			SOV_US_sanction
+		}
     }
 }
 
-# Mid SMO April 2022 - June 2022 
+
+# Union State 
+# Belarus Signs the 2027 Plan 
 country_event = {
-	id = SOV_sotnik.8
-	title = SOV_sotnik.8.t
-	desc = SOV_sotnik.8.d
-	picture = GFX_report_event_chinese_soldiers_fighting
+	id = BLR_unionstate.1
+	title = BLR_unionstate.1.t
+	desc = BLR_unionstate.1.d
+	picture = GFX_report_daily_briefing_mod
 	
 	is_triggered_only = yes
 	
-	option = { # They were nescessary retreats!!
-		name = SOV_sotnik.8.a
-		ai_chance = { factor = 60 }
-		add_political_power = 5
-		country_event = SOV_sotnik.9
+	option = { # Ask the Russians for help! 
+		name = BLR_unionstate.1.a
+		ai_chance = { factor = 90 }
     }
-	option = { # Logisitcs were at fault...
-		name = SOV_sotnik.8.b
-		ai_chance = { factor = 15 }
-		add_political_power = 5
-		country_event = SOV_sotnik.9
-    }
-	option = { # Commanders were at fault...
-		name = SOV_sotnik.8.c
-		ai_chance = { factor = 15 }
-		add_political_power = 5
-		country_event = SOV_sotnik.9
+	option = { # Ask the Russians for help! 
+		name = BLR_unionstate.1.b
+		ai_chance = { factor = 90 }
     }
 }
 
-# Ukrainian counter offensives September - November 2022
+# Belarus Prepares Economic Treaties
 country_event = {
-	id = SOV_sotnik.9
-	title = SOV_sotnik.9.t
-	desc = SOV_sotnik.9.d
-	picture = GFX_report_event_chinese_soldiers_fighting
+	id = BLR_unionstate.2
+	title = BLR_unionstate.2.t
+	desc = BLR_unionstate.2.d
+	picture = GFX_report_daily_briefing_mod
 	
 	is_triggered_only = yes
 	
-	option = { # More attak 
-		name = SOV_sotnik.9.a
-		ai_chance = { factor = 50 }
-		add_political_power = 5
+	option = { # Ask the Russians for help! 
+		name = BLR_unionstate.2.a
+		ai_chance = { factor = 90 }
     }
-	option = { # More Defens 
-		name = SOV_sotnik.9.b
-		ai_chance = { factor = 50 }
-		add_political_power = 5
+	option = { # Ask the Russians for help! 
+		name = BLR_unionstate.2.b
+		ai_chance = { factor = 90 }
     }
 }
 
+# Belarus Prepares Military Treaties 
 country_event = {
-	id = SOV_sotnik.10
-	title = SOV_sotnik.10.t
-	desc = SOV_sotnik.10.d
-	picture = GFX_report_event_chinese_soldiers_fighting
+	id = BLR_unionstate.3
+	title = BLR_unionstate.3.t
+	desc = BLR_unionstate.3.d
+	picture = GFX_report_daily_briefing_mod
 	
 	is_triggered_only = yes
 	
-	option = { # The Old Guard Stuck around 
-		name = SOV_sotnik.10.a
-		ai_chance = { factor = 30 }
-		add_political_power = 5
+	option = { # Ask the Russians for help! 
+		name = BLR_unionstate.3.a
+		ai_chance = { factor = 90 }
     }
-	option = { # Gerasimov turned things around in 2023!
-		name = SOV_sotnik.10.b
-		ai_chance = { factor = 70 }
-		add_political_power = 5
+	option = { # Ask the Russians for help! 
+		name = BLR_unionstate.3.b
+		ai_chance = { factor = 90 }
     }
 }
 
+# 2035 Plan Temporarily Cancelled
+country_event = {
+	id = BLR_unionstate.4
+	title = BLR_unionstate.4.t
+	desc = BLR_unionstate.4.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # Ask the Russians for help! 
+		name = BLR_unionstate.4.a
+		ai_chance = { factor = 90 }
+    }
 
+}
 
+# 2035 Plan Ratified 
+country_event = {
+	id = BLR_unionstate.5
+	title = BLR_unionstate.5.t
+	desc = BLR_unionstate.5.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # Ask the Russians for help! 
+		name = BLR_unionstate.5.a
+		ai_chance = { factor = 90 }
+		news_event = {
+			id = BLR_unionstate.6
+			days = 1 
+		}
+    }
+}
+
+# 2035 Plan Ratified 
+news_event = {
+	id = BLR_unionstate.6
+	title = BLR_unionstate.6.t
+	desc = BLR_unionstate.6.d
+	picture = GFX_news_belarus_event_001
+	
+	is_triggered_only = yes
+	major = yes
+	
+		option = { # Invade them!  
+		name = BLR_unionstate.6.a
+		ai_chance = { factor = 90 }
+
+    }
+}
+# Order restored without Russian aid 
+news_event = {
+	id = news_BLR_protest.1
+	title = news_BLR_protest.1.t
+	desc = news_BLR_protest.1.d
+	picture = GFX_news_belarus_event_001
+	
+	is_triggered_only = yes
+	major = yes
+	
+		option = { # Invade them!  
+		name = news_BLR_protest.1.a
+		ai_chance = { factor = 90 }
+
+    }
+}
+
+# order restored with russian aid 
+news_event = {
+	id = news_BLR_protest.2
+	title = news_BLR_protest.2.t
+	desc = news_BLR_protest.2.d
+	picture = GFX_news_belarus_event_002 
+	
+	is_triggered_only = yes
+	major = yes
+	
+		option = { # Invade them!  
+		name = news_BLR_protest.2.a
+		ai_chance = { factor = 90 }
+
+    }
+}
+
+#Russian Tanks in Minsk! 
+news_event = {
+	id = news_BLR_protest.3
+	title = news_BLR_protest.3.t
+	desc = news_BLR_protest.3.d
+	picture = GFX_news_belarus_event_003
+	
+	is_triggered_only = yes
+	major = yes
+	
+		option = { # Invade them!  
+		name = news_BLR_protest.3.a
+		ai_chance = { factor = 90 }
+
+    }
+}
+
+# Russia openly leaves minsk 
+news_event = {
+	id = news_BLR_protest.4
+	title = news_BLR_protest.4.t
+	desc = news_BLR_protest.4.d
+	picture = GFX_news_ukraine_event_005
+	
+	is_triggered_only = yes
+	major = yes
+	
+		option = { # Invade them!  
+		name = news_BLR_protest.4.a
+		ai_chance = { factor = 90 }
+
+    }
+}
+
+#New government in Belarus 
+news_event = {
+	id = news_BLR_protest.5
+	title = news_BLR_protest.5.t
+	desc = news_BLR_protest.5.d
+	picture = GFX_news_ukraine_event_005
+	
+	is_triggered_only = yes
+	major = yes
+	
+		option = { # Invade them!  
+		name = news_BLR_protest.5.a
+		ai_chance = { factor = 90 }
+
+    }
+}
+
+#Special Anti Terrorist Operation 
+news_event = {
+	id = news_BLR_protest.6
+	title = news_BLR_protest.6.t
+	desc = news_BLR_protest.6.d
+	picture = GFX_news_belarus_event_006
+	
+	is_triggered_only = yes
+	major = yes
+	
+		option = { # Invade them!  
+		name = news_BLR_protest.6.a
+		ai_chance = { factor = 90 }
+
+    }
+}
+
+# Violent revolution in Belarus 
+news_event = {
+	id = news_BLR_protest.7
+	title = news_BLR_protest.7.t
+	desc = news_BLR_protest.7.d
+	picture = GFX_news_ukraine_event_005
+	
+	is_triggered_only = yes
+	major = yes
+	
+		option = { # Invade them!  
+		name = news_BLR_protest.7.a
+		ai_chance = { factor = 90 }
+
+    }
+}
+
+# Protests in Belarus 
+news_event = {
+	id = news_BLR_protest.8
+	title = news_BLR_protest.8.t
+	desc = news_BLR_protest.8.d
+	picture = GFX_news_ukraine_event_005
+	
+	is_triggered_only = yes
+	major = yes
+	
+		option = { # Invade them!  
+		name = news_BLR_protest.8.a
+		ai_chance = { factor = 90 }
+
+    }
+}
 
 

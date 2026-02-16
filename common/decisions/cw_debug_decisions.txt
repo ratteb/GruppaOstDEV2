@@ -22,4 +22,109 @@ cw_gui_debug_mode = {
 			factor = 0
 		}
 	}
+
+		iw_gui_debug_open_sotnik_dec = {
+
+		icon = generic_industry
+
+		available = {
+			is_ai = no
+		}
+
+		visible = {
+			is_debug = yes
+		}
+
+		fire_only_once = no
+
+		cost = 0
+
+		complete_effect = {
+			set_country_flag = SOV_sotnik_allowed
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	iw_gui_debug_open_csto_dec = {
+
+		icon = generic_industry
+
+		available = {
+			is_ai = no
+		}
+
+		visible = {
+			is_debug = yes
+		}
+
+		fire_only_once = no
+
+		cost = 0
+
+		complete_effect = {
+			set_country_flag = SOV_csto_allowed
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	increase_csto_cohesion = {
+
+		icon = generic_industry
+
+		available = {
+			is_ai = no
+		}
+
+		visible = {
+			is_debug = yes
+		}
+
+		fire_only_once = no
+
+		cost = 0
+
+		complete_effect = {
+			add_to_variable = {
+				var = csto_cohesion 
+				value = 10
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	decrease_csto_cohesion = {
+
+		icon = generic_industry
+
+		available = {
+			is_ai = no
+		}
+
+		visible = {
+			is_debug = yes
+		}
+
+		fire_only_once = no
+
+		cost = 0
+
+		complete_effect = {
+			subtract_from_variable = {
+				var = csto_cohesion 
+				value = 10
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
 }

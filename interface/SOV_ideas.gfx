@@ -1,0 +1,12 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_idea_SOV_economic_stagnation01"
+		texturefile = "gfx/interface/ideas/SOV/SOV_economic_stagnation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SOV_memories_of_chechnya"
+		texturefile = "gfx/interface/ideas/SOV/SOV_chechen_war.dds"
+	}
+}

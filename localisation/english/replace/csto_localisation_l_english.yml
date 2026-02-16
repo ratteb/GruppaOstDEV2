@@ -1,0 +1,7 @@
+﻿l_english:
+ csto_cohesion_loc: "[?csto_cohesion|0%%]"
+ csto_cohesion_name_loc: "CSTO Cohesion Level"
+ GUI_CSTO_cohesion_tooltip: "§CThe CSTO Cohesion Center§!"
+ GUI_CSTO_central_asia_tooltip: "§OThe CSTO CATA Center§!"
+ GUI_CSTO_military_readiness_tooltip: "§GThe CSTO MR Center§!"
+  

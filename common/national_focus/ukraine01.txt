@@ -17,7 +17,7 @@ focus_tree = {
     # Ukraine Main Tree 
 	focus = {
 		id = UKR_asses_the_situation
-		icon = GFX_goal_no_data
+		icon = GFX_goal_UKR_asses_the_situation
 		x = 40
 		y = 1
 
@@ -926,7 +926,7 @@ focus_tree = {
 			country_event = ukraine.2
 			hidden_effect = {
 				country_event =  {
-				 id = ukraine.4
+				 id = ukraine.7
 				 days = 110
 				}
 			}

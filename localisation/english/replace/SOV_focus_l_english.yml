@@ -112,6 +112,28 @@
  SOV_sotnik1_finished:0 "Sotnik-1 Programme Completed."
 
 
+ # Putin Re election Tree
+
+ SOV_putin_choice:0 "Putin's Choice"
+ SOV_putin_reelection:0 "Putin Runs for Re-Election"
+ SOV_putin_start_campaign:0 "Start the Campaigns!"
+ SOV_putin_election_start:0 "Elections Begin"
+ SOV_putin_reelected:0 "Putin Re-Elected"
+ SOV_putin_absence:0 "Putin's Absence"
+ SOV_putin_death:0 "Is it Over?"
+ SOV_duma_holds:0 "The Duma Holds!"
+ SOV_duma_falls:0 "The Duma Falls!"
+ SOV_2030_address:0 "2030 Address"
+ SOV_prepare_the_administration:0 "The New Cabinet"
+ SOV_putinism_1000_year:0 "Putinism For 1000 Years!"
+
+ # Belarus Union State Tree
+ BLR_signing_2027_unionstate_plan:0 "2027 Union State Plan"
+ BLR_unionstate_economic_treaties:0 "Prepare Economic Treaties"
+ BLR_unionstate_military_treaties:0 "Prepare Military Treaties"
+ BLR_sign_unionstate_2035_plan:0 "Sign The 2035 Union State Integration Plan"
+
+
 
  # Russia Ideas and Spirits 
  SOV_memories_of_chechnya:0 "Memories of the Chechen Wars"
