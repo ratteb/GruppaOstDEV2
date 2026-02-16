@@ -14,4 +14,19 @@ spriteTypes = {
 		name = "GFX_goal_UKR_go_hard_or_go_home"
 		texturefile = "gfx/interface/goals/focus_UKR_go_hard_go_home.dds"
 	}
+
+	spriteType = {
+		name = "GFX_goal_UKR_auth_heavy_equip"
+		texturefile = "gfx/interface/goals/focus_UKR_auth_heavy_equipment.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_UKR_ass_their_leaders"
+		texturefile = "gfx/interface/goals/focus_UKR_end_azov_leadership.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_UKR_end_of_the_insurgency"
+		texturefile = "gfx/interface/goals/focus_UKR_end_of_insurgency.dds"
+	}
 }
