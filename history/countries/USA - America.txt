@@ -206,5 +206,5 @@ set_variable = {
 add_dynamic_modifier = { modifier = USA_american_armed_forces }
 
 add_ideas = {
-    USA_The_Second_Amendment
+    USA_the_second_amendment
 }
