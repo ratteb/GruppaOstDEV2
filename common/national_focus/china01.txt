@@ -8,7 +8,7 @@ focus_tree = {
 			add = 10
 			tag = CHI
 		}
-
+ 
 	}
 	
 	default = no

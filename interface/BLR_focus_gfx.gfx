@@ -1,0 +1,8 @@
+spriteTypes = {
+# Trump's icons
+	# January Rally
+	spriteType = {
+		name = "GFX_goal_BLR_signing_2027_unionstate_plan"
+		texturefile = "gfx/interface/goals/focus_BLR_2027_unionstate.dds"
+	}
+}

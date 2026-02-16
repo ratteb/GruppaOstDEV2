@@ -1033,7 +1033,7 @@ focus_tree = {
 	focus = {
 		id = SOV_continue_hybrid_warfare
 		prerequisite = { focus = SOV_announce_strategic_changes }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_SOV_continue_hybrid_warfare
 		relative_position_id = SOV_announce_strategic_changes
 		mutually_exclusive = {focus = SOV_return_to_conventional_means }
 		x = -6
