@@ -17,7 +17,7 @@ focus_tree = {
 
 	focus = {
 		id = BLR_signing_2027_unionstate_plan
-		icon = GFX_goal_no_data
+		icon = GFX_goal_BLR_signing_2027_unionstate_plan
 		x = 30
 		y = 1
 

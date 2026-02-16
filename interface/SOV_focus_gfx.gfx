@@ -4,4 +4,9 @@ spriteTypes = {
 		name = "GFX_goal_no_data"
 		texturefile = "gfx/interface/goals/focus_no_data.dds"
 	}
+
+	spriteType = {
+		name = "GFX_goal_SOV_continue_hybrid_warfare"
+		texturefile = "gfx/interface/goals/focus_SOV_hybrid_warfare.dds"
+	}
 }
