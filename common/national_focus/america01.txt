@@ -252,7 +252,7 @@ focus_tree = {
 	focus = {
 		id = USA_state_of_economy
 		prerequisite = { focus = USA_1_more_year }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_state_of_the_economy
 		relative_position_id = USA_1_more_year
 		x = 6
 		y = 1
@@ -434,7 +434,7 @@ focus_tree = {
 	focus = {
 		id = USA_state_of_troops
 		prerequisite = { focus = USA_1_more_year }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_state_of_troops
 		relative_position_id = USA_1_more_year
 		x = 0
 		y = 1

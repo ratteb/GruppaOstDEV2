@@ -43,6 +43,25 @@ spriteTypes = {
 
 
 
+
+	# State of the Economy
+	spriteType = {
+		name = "GFX_goal_state_of_the_economy"
+		texturefile = "gfx/interface/goals/focus_state_of_the_economy.dds"
+	}
+
+
+
+	# State of the Economy
+	spriteType = {
+		name = "GFX_goal_state_of_troops"
+		texturefile = "gfx/interface/goals/focus_state_of_troops.dds"
+	}
+
+
+
+
+
 	# Don Achieve
 	spriteType = {
 		name = "GFX_goal_don_achieve"
