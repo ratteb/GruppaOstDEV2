@@ -126,15 +126,18 @@ focus_tree = {
 
 		cost = 12.2
 		select_effect = {
-			not = {
-				has_country_flag = BLR_protests_over
-				country_event = {
-				id = BLR_protest.1
-				days = 38
-			}
-			}
-
-		}
+    if = {
+        limit = {
+            not = {
+                has_country_flag = BLR_protests_over
+            }
+        }
+        country_event = {
+            id = BLR_protest.1
+            days = 38
+        }
+    }
+}
 
 		ai_will_do = {
 			factor = 1
