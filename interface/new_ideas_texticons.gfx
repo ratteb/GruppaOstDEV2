@@ -68,4 +68,9 @@ spriteTypes = {
 		texturefile = "gfx/texticons/banners/peoples_liberation_army.dds"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_american_armed_forces_texticon"
+		texturefile = "gfx/texticons/banners/american_armed_forces.dds"
+		legacy_lazy_load = no
+	}
 }
