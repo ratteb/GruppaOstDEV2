@@ -1,15 +1,17 @@
 spriteTypes = {
-	# GENERIC PLACEHOLDER 
-	spriteType = {
-		name = "GFX_goal_no_data"
-		texturefile = "gfx/interface/goals/focus_no_data.dds"
-	}
-
-
-# Trump's icons
-	# January Rally
+# main tree 
+	# situation
 	spriteType = {
 		name = "GFX_goal_UKR_asses_the_situation"
 		texturefile = "gfx/interface/goals/focus_UKR_assess_situation.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_UKR_azov_insurgency"
+		texturefile = "gfx/interface/goals/focus_UKR_azov_insurgency.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_UKR_go_hard_or_go_home"
+		texturefile = "gfx/interface/goals/focus_UKR_go_hard_go_home.dds"
 	}
 }

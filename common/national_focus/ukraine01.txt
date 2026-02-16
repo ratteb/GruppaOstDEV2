@@ -48,7 +48,7 @@ focus_tree = {
 	focus = {
 		id = UKR_azov_insurgency
 		prerequisite = { focus = UKR_asses_the_situation }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_UKR_azov_insurgency
 		relative_position_id = UKR_asses_the_situation
 		x = 0
 		y = 4
@@ -80,7 +80,7 @@ focus_tree = {
 	focus = {
 		id = UKR_go_hard_or_go_home
 		prerequisite = { focus = UKR_azov_insurgency }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_UKR_go_hard_or_go_home
 		relative_position_id = UKR_azov_insurgency
 		mutually_exclusive = { focus = UKR_softer_response }
 		x = -2
