@@ -55,6 +55,43 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/SOV_infantry_equipment_10.dds"
 	}
 
+
+
+
+	SpriteType = {
+		name = "GFX_SOV_anti_tank_weapons_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_0.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOV_anti_tank_weapons2_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_1.dds"
+	}
+
+		SpriteType = {
+		name = "GFX_SOV_anti_tank_weapons3_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOV_anti_tank_weapons4_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_anti_tank_weapons5_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_4.dds"
+	}
+
+		SpriteType = {
+		name = "GFX_SOV_anti_tank_weapons6_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_5.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOV_anti_tank_weapons7_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_6.dds"
+	}
+
 	# UKRAINE 
 
 	SpriteType = {
