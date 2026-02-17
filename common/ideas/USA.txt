@@ -1,7 +1,7 @@
 ideas = {
 
     country = { USA_the_second_amendment = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_USA_the_second_amendment
 			
 			allowed = {
 				tag = USA

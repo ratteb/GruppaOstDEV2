@@ -67,4 +67,52 @@ spriteTypes = {
 		name = "GFX_goal_don_achieve"
 		texturefile = "gfx/interface/goals/focus_don_achieve.dds"
 	}
+
+
+
+
+
+		# Hegseths Achieve
+	spriteType = {
+		name = "GFX_goal_hegseths_achieve"
+		texturefile = "gfx/interface/goals/focus_hegseths_achievement.dds"
+	}
+
+
+
+
+
+			# Bessents Achieve
+	spriteType = {
+		name = "GFX_goal_bessents_achieve"
+		texturefile = "gfx/interface/goals/focus_bessents_achieve.dds"
+	}
+
+
+
+
+				# Study Zelensky(Russo-Ukraine War)
+	spriteType = {
+		name = "GFX_goal_study_zelensky"
+		texturefile = "gfx/interface/goals/focus_study_zelensky.dds"
+	}
+
+
+
+
+
+					# What went wrong and right
+	spriteType = {
+		name = "GFX_goal_wrong_and_right"
+		texturefile = "gfx/interface/goals/focus_wrong_and_right.dds"
+	}
+
+
+
+# Border Crisis
+	# Border Crisis
+	spriteType = {
+		name = "GFX_goal_border_crisis"
+		texturefile = "gfx/interface/goals/focus_border_crisis.dds"
+	}
 }

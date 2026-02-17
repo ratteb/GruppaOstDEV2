@@ -1,0 +1,7 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_idea_USA_the_second_amendment"
+		texturefile = "gfx/interface/ideas/USA/USA_second_amendment.dds"
+	}
+}
