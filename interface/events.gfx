@@ -62,5 +62,13 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/report_event_briefing_mod.dds"
 	}
 
-	
+    # USA NEWS
+
+	# BORDER CRISIS USA
+		spriteType = {
+		name = "GFX_report_event_bortac"
+		texturefile = "gfx/event_pictures/report_event_bortac.dds"
+	}
+
+
 }

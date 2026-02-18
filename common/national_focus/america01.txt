@@ -40,7 +40,6 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = USA_trump.1
-			
 		}
 	}
     
@@ -163,7 +162,7 @@ focus_tree = {
 	focus = {
 		id = USA_keep_america_first
 		prerequisite = { focus = USA_trump_achievement }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_keep_america_first
 		relative_position_id = USA_trump_achievement
 		x = -2
 		y = 1
@@ -310,7 +309,7 @@ focus_tree = {
 	focus = {
 		id = USA_3rd_bank
 		prerequisite = { focus = USA_bess_achievement }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_third_bank
 		relative_position_id = USA_bess_achievement
 		x = 2
 		y = 1
@@ -492,7 +491,7 @@ focus_tree = {
 	focus = {
 		id = USA_study_taiwan_strait
 		prerequisite = { focus = USA_hegseths_achievement }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_study_taiwan_strait
 		relative_position_id = USA_hegseths_achievement
 		mutually_exclusive = {focus = USA_study_zelensky }
 		x = -2
@@ -882,6 +881,7 @@ focus_tree = {
 		}
 	}
 
+	# Border Crisis
     focus = {
 		id = USA_border_crisis
 		icon = GFX_goal_border_crisis
@@ -895,6 +895,10 @@ focus_tree = {
 		}
 
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_border_crisis_ctt
+				has_country_flag = USA_border_crisis_begins
+			}
 		}
 		
 		bypass = {
