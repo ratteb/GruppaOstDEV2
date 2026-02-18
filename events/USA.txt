@@ -670,3 +670,25 @@ country_event = {
     }
 }
 
+# The Border Crisis
+
+country_event = {
+	id = USA_border.1
+	title = USA_border.1.t
+	desc = USA_border.1.d
+	picture = GFX_report_event_bortac
+	
+	trigger = {
+		date = 2027.1.10
+	}
+	
+	option = { # Border Crisis Begins
+		name = USA_border.1.a
+		ai_chance = { factor = 90 }
+		add_political_power = -5
+		add_stability = -0.02
+		set_country_flag = USA_border_crisis_begins
+    }
+}
+
+

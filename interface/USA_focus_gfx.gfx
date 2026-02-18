@@ -109,6 +109,35 @@ spriteTypes = {
 
 
 
+
+						# Keep America First
+	spriteType = {
+		name = "GFX_goal_keep_america_first"
+		texturefile = "gfx/interface/goals/focus_keep_america_first.dds"
+	}
+
+
+
+
+
+							# Study Taiwan Strait Crisis
+	spriteType = {
+		name = "GFX_goal_study_taiwan_strait"
+		texturefile = "gfx/interface/goals/focus_study_taiwan_strait.dds"
+	}
+
+
+
+
+
+							# 3rd bank character
+	spriteType = {
+		name = "GFX_goal_third_bank"
+		texturefile = "gfx/interface/goals/focus_third_bank.dds"
+	}
+
+
+
 # Border Crisis
 	# Border Crisis
 	spriteType = {
