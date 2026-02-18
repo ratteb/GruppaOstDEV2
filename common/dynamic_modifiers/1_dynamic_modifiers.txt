@@ -27,7 +27,7 @@
 #	will only updated daily, unless forced by force_update_dynamic_modifier effect
 
  SOV_russian_armed_forces = {
-	icon = "GFX_idea_unknown"
+	icon = "GFX_idea_SOV_russian_armed_forces"
 
 
 	conscription_factor = RAF_manpower_factor_variable
