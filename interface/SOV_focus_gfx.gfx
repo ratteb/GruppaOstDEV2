@@ -9,4 +9,9 @@ spriteTypes = {
 		name = "GFX_goal_SOV_continue_hybrid_warfare"
 		texturefile = "gfx/interface/goals/focus_SOV_hybrid_warfare.dds"
 	}
+
+	spriteType = {
+		name = "GFX_goal_SOV_sotnik1_announcement"
+		texturefile = "gfx/interface/goals/focus_SOV_sotnik1_announcement.dds"
+	}
 }

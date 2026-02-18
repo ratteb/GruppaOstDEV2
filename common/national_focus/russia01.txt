@@ -18,7 +18,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_sotnik1_announcement
-		icon = GFX_goal_no_data
+		icon = GFX_goal_SOV_sotnik1_announcement
 		x = 20
 		y = 2
 
