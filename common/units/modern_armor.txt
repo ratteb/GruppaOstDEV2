@@ -26,7 +26,7 @@ sub_units = {
 		combat_width = 6
 
 		need = {
-			modern_tank_chassis = 36
+			modern_tank_equipment = 36
 		}
 		manpower = 350
 		max_organisation = 20
