@@ -193,6 +193,349 @@ technologies = {
 		}
 	}
 
+    apc_vehicle = {
+
+		enable_equipments = {
+			apc_equipment_0
+		}
+        path = {
+			leads_to_tech = apc_vehicle1
+			research_cost_coeff = 1
+		}
+
+        path = {
+			leads_to_tech = ifv_vehicle
+			research_cost_coeff = 1
+		}
+
+		enable_subunits = {
+			apc_battalion
+		}
+
+		research_cost = 1.5
+		start_year = 1950
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = @1918 }
+		}
+
+		categories = {
+			armoured_infantry
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    apc_vehicle1 = {
+
+		enable_equipments = {
+			apc_equipment_1
+		}
+        path = {
+			leads_to_tech = apc_vehicle2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1960
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 3 }
+		}
+
+		categories = {
+			armoured_infantry
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    apc_vehicle2 = {
+
+		enable_equipments = {
+			apc_equipment_2
+		}
+        path = {
+			leads_to_tech = apc_vehicle3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1970
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 6 }
+		}
+
+		categories = {
+			armoured_infantry
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    apc_vehicle3 = {
+
+		enable_equipments = {
+			apc_equipment_3
+		}
+        path = {
+			leads_to_tech = apc_vehicle4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1980
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 9 }
+		}
+
+		categories = {
+			armoured_infantry
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    apc_vehicle4 = {
+
+		enable_equipments = {
+			apc_equipment_4
+		}
+        path = {
+			leads_to_tech = apc_vehicle5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1990
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 12 }
+		}
+
+		categories = {
+			armoured_infantry
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    apc_vehicle5 = {
+
+		enable_equipments = {
+			apc_equipment_5
+		}
+        path = {
+			leads_to_tech = apc_vehicle6
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 2000
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 15 }
+		}
+
+		categories = {
+			armoured_infantry
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+     apc_vehicle6 = {
+
+		enable_equipments = {
+			apc_equipment_6
+		}
+
+		research_cost = 1.5
+		start_year = 2010
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 18 }
+		}
+
+		categories = {
+			armoured_infantry
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    ifv_vehicle = {
+
+		enable_equipments = {
+			ifv_equipment_0
+		}
+        path = {
+			leads_to_tech = ifv_vehicle1
+			research_cost_coeff = 1
+		}
+
+        enable_subunits = {
+			ifv_battalion
+		}
+
+		research_cost = 1.5
+		start_year = 1960
+		folder = {
+			name = armour_folder
+			position = { x = 3 y = 3 }
+		}
+
+		categories = {
+			armoured_infantry
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+    ifv_vehicle1 = {
+
+		enable_equipments = {
+			ifv_equipment_1
+		}
+        path = {
+			leads_to_tech = ifv_vehicle2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1970
+		folder = {
+			name = armour_folder
+			position = { x = 3 y = 6 }
+		}
+
+		categories = {
+			armoured_infantry
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    ifv_vehicle2 = {
+
+		enable_equipments = {
+			ifv_equipment_2
+		}
+        path = {
+			leads_to_tech = ifv_vehicle3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1980
+		folder = {
+			name = armour_folder
+			position = { x = 3 y = 9 }
+		}
+
+		categories = {
+			armoured_infantry
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    ifv_vehicle3 = {
+
+		enable_equipments = {
+			ifv_equipment_3
+		}
+        path = {
+			leads_to_tech = ifv_vehicle4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1990
+		folder = {
+			name = armour_folder
+			position = { x = 3 y = 12 }
+		}
+
+		categories = {
+			armoured_infantry
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    ifv_vehicle4 = {
+
+		enable_equipments = {
+			ifv_equipment_4
+		}
+        path = {
+			leads_to_tech = ifv_vehicle5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 2000
+		folder = {
+			name = armour_folder
+			position = { x = 3 y = 15 }
+		}
+
+		categories = {
+			armoured_infantry
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    ifv_vehicle5 = {
+
+		enable_equipments = {
+			ifv_equipment_5
+		}
+
+		research_cost = 1.5
+		start_year = 2010
+		folder = {
+			name = armour_folder
+			position = { x = 3 y = 18 }
+		}
+
+		categories = {
+			armoured_infantry
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
     airland_vehicle = {
 
 		enable_equipments = {
@@ -242,7 +585,7 @@ technologies = {
 		}
 
 		categories = {
-			armor
+			airland_vehicle
 		}
 
 		ai_will_do = {
@@ -267,7 +610,7 @@ technologies = {
 		}
 
 		categories = {
-			armor
+			airland_vehicle
 		}
 
 		ai_will_do = {
@@ -293,7 +636,7 @@ technologies = {
 		}
 
 		categories = {
-			armor
+			airland_vehicle
 		}
 
 		ai_will_do = {
@@ -315,7 +658,7 @@ technologies = {
 		}
 
 		categories = {
-			armor
+			airland_vehicle
 		}
 
 		ai_will_do = {

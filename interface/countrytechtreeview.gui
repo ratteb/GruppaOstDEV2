@@ -1070,7 +1070,7 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "modern_tank_tree"
-				position = { x = 10% y = 172 }
+				position = { x = 20% y = 172 }
 				size = { width = 80% height = 80% }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
@@ -1078,7 +1078,15 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "airland_vehicle_tree"
-				position = { x = 30% y = 590 }
+				position = { x = 40% y = 590 }
+				size = { width = 80% height = 80% }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "apc_vehicle_tree"
+				position = { x = -10% y = 172 }
 				size = { width = 80% height = 80% }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"

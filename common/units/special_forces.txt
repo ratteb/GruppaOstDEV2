@@ -366,6 +366,7 @@ sub_units = {
 		
 		categories = {
 			category_special_forces_GO
+			airland_vehicle
 		}
 		
 		combat_width = 6
