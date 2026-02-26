@@ -55,6 +55,10 @@
  USA_arms_plant: "The New American National Arms Plant"
  USA_arms_plant_desc: "In order to bomb the sh*t out of them, we gotta bring back the old American Military Industrial Complex. Once the best in the world, it would pump out an aircraft carrier every 6 months and over 100,000 guns in a single plant every year. We must bring back how America use to wage war to prepare for the comings wars, and it may cost a lot of taxpayer dollars, but it’s better for us to use them to kick some a*s than give to someone else."
 
- USA_drill_baby_drill: "Drill Baby, Drill!"
+ USA_drill_baby_drill: "Drill Baby Drill!"
+ USA_drill_baby_drill_desc: "Come on, Let's Drill Baby Drill. Were gonna get American oil from American soil!"
 
  USA_america_great_again: "We Made America Great Again! WMAGA!"
+
+ # Border Crisis
+ USA_border_crisis: "The Border Crisis"

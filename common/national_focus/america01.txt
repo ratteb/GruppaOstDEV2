@@ -192,7 +192,7 @@ focus_tree = {
 	focus = {
 		id = USA_border_ice_funding
 		prerequisite = { focus = USA_keep_america_first }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_border_ice_funding
 		relative_position_id = USA_keep_america_first
 		x = 0
 		y = 2
@@ -338,7 +338,7 @@ focus_tree = {
 	focus = {
 		id = USA_arms_plant
 		prerequisite = { focus = USA_3rd_bank }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_arms_plant
 		relative_position_id = USA_3rd_bank
 		x = 0
 		y = 2
@@ -402,7 +402,7 @@ focus_tree = {
 	focus = {
 		id = USA_drill_baby_drill
 		prerequisite = { focus = USA_arms_plant }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_drill_baby_drill
 		relative_position_id = USA_arms_plant
 		x = 0
 		y = 3
@@ -557,7 +557,7 @@ focus_tree = {
 	focus = {
 		id = USA_recruitment_crisis
 		prerequisite = { focus = USA_hegseths_achievement }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_recruitment_crisis
 		relative_position_id = USA_hegseths_achievement
 		x = 0
 		y = 2
@@ -586,7 +586,7 @@ focus_tree = {
 	focus = {
 		id = USA_uncle_sam_ships
 		prerequisite = { focus = USA_study_taiwan_strait }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_uncle_sam_ships
 		relative_position_id = USA_study_taiwan_strait
 		x = -1
 		y = 2
@@ -615,7 +615,7 @@ focus_tree = {
 	focus = {
 		id = USA_and_his_planes
 		prerequisite = { focus = USA_uncle_sam_ships }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_and_his_planes
 		relative_position_id = USA_uncle_sam_ships
 		x = 0
 		y = 1
@@ -704,7 +704,7 @@ focus_tree = {
 	focus = {
 		id = USA_anti_drone
 		prerequisite = { focus = USA_wrong_and_right }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_anti_drone
 		relative_position_id = USA_wrong_and_right
 		x = 0
 		y = 1
@@ -762,7 +762,7 @@ focus_tree = {
 	focus = {
 		id = USA_promote_military
 		prerequisite = { focus = USA_recruitment_crisis }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_promote_military
 		relative_position_id = USA_recruitment_crisis
 		x = 0
 		y = 1
