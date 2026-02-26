@@ -677,8 +677,8 @@ country_event = {
 	title = USA_border.1.t
 	desc = USA_border.1.d
 	picture = GFX_report_event_bortac
-	
-	is_triggered_only = yes
+
+	is_triggered_only = yes 
 	
 	option = { # Border Crisis Begins
 		name = USA_border.1.a

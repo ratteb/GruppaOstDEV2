@@ -6,6 +6,8 @@ technology_categories = {
 	medium_air
 	heavy_air
 	armor
+	armoured_infantry
+	airland_vehicle
 	cat_light_armor
 	cat_medium_armor
 	cat_heavy_armor
@@ -148,17 +150,6 @@ technology_folders = {
 	}
 	armour_folder = {
 		ledger = army
-		available = {
-			NOT = {
-				has_dlc = "No Step Back"
-			}
-		}
-	}
-	nsb_armour_folder = {
-		ledger = army
-		available = {
-			has_dlc = "No Step Back"
-		}
 	}
 	artillery_folder = {
 		ledger = army

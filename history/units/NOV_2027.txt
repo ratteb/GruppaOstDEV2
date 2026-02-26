@@ -4,8 +4,8 @@
 	division_names_group = NOV_ARM_01
 
 	regiments = {
-		motorized = { x = 0 y = 0 }
-		motorized = { x = 0 y = 1 }
+		apc_battalion = { x = 0 y = 0 }
+		apc_battalion = { x = 0 y = 1 }
 		modern_armor = { x = 1 y = 0 }
 	}
 	support = {
@@ -19,9 +19,9 @@ division_template = {
 	division_names_group = NOV_ARM_01
 
 	regiments = {
-		motorized = { x = 0 y = 0 }
-		motorized = { x = 0 y = 1 }
-		motorized = { x = 0 y = 2 }
+		apc_battalion = { x = 0 y = 0 }
+		apc_battalion = { x = 0 y = 1 }
+		apc_battalion = { x = 0 y = 2 }
 		modern_armor = { x = 1 y = 0 }
 	}
 	support = {
@@ -35,9 +35,9 @@ division_template = {
 	division_names_group = NOV_ARM_01
 
 	regiments = {
-		motorized = { x = 0 y = 0 }
-		motorized = { x = 0 y = 1 }
-		motorized = { x = 0 y = 2 }
+		apc_battalion = { x = 0 y = 0 }
+		apc_battalion = { x = 0 y = 1 }
+		apc_battalion = { x = 0 y = 2 }
 	}
 	support = {
 		artillery = { x = 0 y = 0 }

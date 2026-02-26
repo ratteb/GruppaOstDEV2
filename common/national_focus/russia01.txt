@@ -52,7 +52,7 @@ focus_tree = {
 	focus = {
 		id = SOV_announce_new_equipments
 		prerequisite = { focus = SOV_sotnik1_announcement }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_SOV_announce_new_equipments
 		relative_position_id = SOV_sotnik1_announcement
 		x = 3
 		y = 1

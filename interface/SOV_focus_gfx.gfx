@@ -14,4 +14,9 @@ spriteTypes = {
 		name = "GFX_goal_SOV_sotnik1_announcement"
 		texturefile = "gfx/interface/goals/focus_SOV_sotnik1_announcement.dds"
 	}
+
+	spriteType = {
+		name = "GFX_goal_SOV_announce_new_equipments"
+		texturefile = "gfx/interface/goals/focus_SOV_announce_equipment.dds"
+	}
 }
