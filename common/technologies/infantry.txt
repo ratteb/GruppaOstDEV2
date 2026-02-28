@@ -433,7 +433,7 @@ technologies = {
 		start_year = 1990
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = 21 }
+			position = { x = 0 y = 24 }
 		}
 
 		categories = {
@@ -485,7 +485,7 @@ technologies = {
 		start_year = 2000
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = 24 }
+			position = { x = 0 y = 27 }
 		}
 
 		categories = {
@@ -533,7 +533,7 @@ technologies = {
 		start_year = 2010
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = 27 } 
+			position = { x = 0 y = 30 } 
 		}
 
 		categories = {

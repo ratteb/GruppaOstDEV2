@@ -138,6 +138,115 @@ spriteTypes = {
 
 
 
+
+
+								# Recruitment Crisis
+	spriteType = {
+		name = "GFX_goal_recruitment_crisis"
+		texturefile = "gfx/interface/goals/focus_recruitment_crisis.dds"
+	}
+
+
+
+
+									# Uncle Sam's Ships
+	spriteType = {
+		name = "GFX_goal_uncle_sam_ships"
+		texturefile = "gfx/interface/goals/focus_uncle_sam_ships.dds"
+	}
+
+
+
+
+										# Promote the Military
+	spriteType = {
+		name = "GFX_goal_promote_military"
+		texturefile = "gfx/interface/goals/focus_promote_military.dds"
+	}
+
+
+
+
+											# New National Arms Plant
+	spriteType = {
+		name = "GFX_goal_arms_plant"
+		texturefile = "gfx/interface/goals/focus_arms_plant.dds"
+	}
+
+
+
+
+												# New National Arms Plant
+	spriteType = {
+		name = "GFX_goal_border_ice_funding"
+		texturefile = "gfx/interface/goals/focus_border_ice_funding.dds"
+	}
+
+
+
+
+													# Anti-Drone Measures
+	spriteType = {
+		name = "GFX_goal_anti_drone"
+		texturefile = "gfx/interface/goals/focus_anti_drone.dds"
+	}
+
+
+drill_baby_drill
+
+														# and his planes
+	spriteType = {
+		name = "GFX_goal_and_his_planes"
+		texturefile = "gfx/interface/goals/focus_and_his_planes.dds"
+	}
+
+
+
+
+															# Drill Baby Drill
+	spriteType = {
+		name = "GFX_goal_drill_baby_drill"
+		texturefile = "gfx/interface/goals/focus_drill_baby_drill.dds"
+	}
+
+
+
+
+
+																# Increase the Benefits
+	spriteType = {
+		name = "GFX_goal_increase_benefits"
+		texturefile = "gfx/interface/goals/focus_increase_benefits.dds"
+	}
+
+
+
+
+																	# Unite the GOP
+	spriteType = {
+		name = "GFX_goal_unite_the_gop"
+		texturefile = "gfx/interface/goals/focus_unite_the_gop.dds"
+	}
+
+
+
+
+																		# Military Research & Development
+	spriteType = {
+		name = "GFX_goal_military_rd"
+		texturefile = "gfx/interface/goals/focus_military_rd.dds"
+	}
+
+
+
+
+																			# We made America Great Again
+	spriteType = {
+		name = "GFX_goal_america_great_again"
+		texturefile = "gfx/interface/goals/focus_america_great_again.dds"
+	}
+
+
 # Border Crisis
 	# Border Crisis
 	spriteType = {
