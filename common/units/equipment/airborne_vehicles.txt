@@ -11,7 +11,7 @@ equipments = {
 		}
 		group_by = archetype
 
-		interface_category = interface_category_land
+		interface_category = interface_category_armor
 
 		#Misc Abilities
 		maximum_speed = 8
