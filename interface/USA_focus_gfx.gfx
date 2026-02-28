@@ -209,6 +209,44 @@ drill_baby_drill
 		texturefile = "gfx/interface/goals/focus_drill_baby_drill.dds"
 	}
 
+
+
+
+
+																# Increase the Benefits
+	spriteType = {
+		name = "GFX_goal_increase_benefits"
+		texturefile = "gfx/interface/goals/focus_increase_benefits.dds"
+	}
+
+
+
+
+																	# Unite the GOP
+	spriteType = {
+		name = "GFX_goal_unite_the_gop"
+		texturefile = "gfx/interface/goals/focus_unite_the_gop.dds"
+	}
+
+
+
+
+																		# Military Research & Development
+	spriteType = {
+		name = "GFX_goal_military_rd"
+		texturefile = "gfx/interface/goals/focus_military_rd.dds"
+	}
+
+
+
+
+																			# We made America Great Again
+	spriteType = {
+		name = "GFX_goal_america_great_again"
+		texturefile = "gfx/interface/goals/focus_america_great_again.dds"
+	}
+
+
 # Border Crisis
 	# Border Crisis
 	spriteType = {

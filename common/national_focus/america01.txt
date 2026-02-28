@@ -222,7 +222,7 @@ focus_tree = {
 	focus = {
 		id = USA_unite_the_gop
 		prerequisite = { focus = USA_border_ice_funding }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_unite_the_gop
 		relative_position_id = USA_border_ice_funding
 		x = 0
 		y = 3
@@ -733,7 +733,7 @@ focus_tree = {
 	focus = {
 		id = USA_military_rd
 		prerequisite = { focus = USA_anti_drone }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_military_rd
 		relative_position_id = USA_anti_drone
 		x = 0
 		y = 1
@@ -791,7 +791,7 @@ focus_tree = {
 	focus = {
 		id = USA_increase_benefits
 		prerequisite = { focus = USA_promote_military }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_increase_benefits
 		relative_position_id = USA_promote_military
 		x = 0
 		y = 1
@@ -853,7 +853,7 @@ focus_tree = {
 		prerequisite = { focus = USA_semper_supra }
 		prerequisite = { focus = USA_unite_the_gop }
 		prerequisite = { focus = USA_drill_baby_drill }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_america_great_again
 		relative_position_id = USA_semper_supra
 		x = 0
 		y = 2

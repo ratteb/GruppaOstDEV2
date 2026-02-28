@@ -279,7 +279,7 @@ CHI_chinese_century_idea = {
 }
 
   USA_american_armed_forces = {
-	icon = "GFX_idea_unknown"
+	icon = "GFX_idea_USA_american_armed_forces"
 
 
 	conscription_factor = USAF_manpower_factor_variable
