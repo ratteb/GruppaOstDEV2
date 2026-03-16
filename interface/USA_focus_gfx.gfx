@@ -247,6 +247,14 @@ drill_baby_drill
 	}
 
 
+
+																				# Naval Strategems
+	spriteType = {
+		name = "GFX_goal_naval_strat"
+		texturefile = "gfx/interface/goals/focus_naval_strat.dds"
+	}
+
+
 # Border Crisis
 	# Border Crisis
 	spriteType = {

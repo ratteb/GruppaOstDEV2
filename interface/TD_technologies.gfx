@@ -206,61 +206,62 @@ spriteTypes = {
 		name = "GFX_UKR_modern_infantry_weapons6_medium"
 		texturefile = "gfx/interface/technologies/UKR_infantry_equipment_10.dds"
 	}
-	
 
 	# USA
 
-	SpriteType = {
+	# First four Technologies would not work without using the name the base game uses.
+
+		SpriteType = {
 		name = "GFX_USA_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/USA_infantry_equipment_0.dds"
+		texturefile = "gfx/interface/technologies/usa_basic_equipment.dds"
 	}
 
 		SpriteType = {
 		name = "GFX_USA_infantry_weapons1_medium"
-		texturefile = "gfx/interface/technologies/USA_infantry_equipment_1.dds"
+		texturefile = "gfx/interface/technologies/usa_infantry_weapons1.dds"
 	}
 
-			SpriteType = {
+        SpriteType = {
 		name = "GFX_USA_improved_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/USA_infantry_equipment_2.dds"
+		texturefile = "gfx/interface/technologies/usa_improved_infantry_weapons.dds"
 	}
 
-				SpriteType = {
+		SpriteType = {
 		name = "GFX_USA_advanced_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/USA_infantry_equipment_3.dds"
+		texturefile = "gfx/interface/technologies/usa_advanced_infantry_weapons.dds"
 	}
 
-					SpriteType = {
+		SpriteType = {
 		name = "GFX_USA_modernized_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/USA_infantry_equipment_4.dds"
 	}
 
-						SpriteType = {
+		SpriteType = {
 		name = "GFX_USA_modern_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/USA_infantry_equipment_5.dds"
 	}
 
-							SpriteType = {
+		SpriteType = {
 		name = "GFX_USA_modern_infantry_weapons2_medium"
 		texturefile = "gfx/interface/technologies/USA_infantry_equipment_6.dds"
 	}
 
-								SpriteType = {
+		SpriteType = {
 		name = "GFX_USA_modern_infantry_weapons3_medium"
 		texturefile = "gfx/interface/technologies/USA_infantry_equipment_7.dds"
 	}
 
-									SpriteType = {
+		SpriteType = {
 		name = "GFX_USA_modern_infantry_weapons4_medium"
 		texturefile = "gfx/interface/technologies/USA_infantry_equipment_8.dds"
 	}
 
-										SpriteType = {
+		SpriteType = {
 		name = "GFX_USA_modern_infantry_weapons5_medium"
 		texturefile = "gfx/interface/technologies/USA_infantry_equipment_9.dds"
 	}
 
-											SpriteType = {
+		SpriteType = {
 		name = "GFX_USA_modern_infantry_weapons6_medium"
 		texturefile = "gfx/interface/technologies/USA_infantry_equipment_10.dds"
 	}

@@ -645,7 +645,7 @@ focus_tree = {
 	focus = {
 		id = USA_naval_strat
 		prerequisite = { focus = USA_and_his_planes }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_naval_strat
 		relative_position_id = USA_and_his_planes
 		x = 0
 		y = 1
