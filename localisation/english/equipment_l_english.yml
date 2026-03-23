@@ -3318,6 +3318,8 @@
  GER_support_weapons3:0 "MG 42 & 8 cm Granatwerfer 34"
  GER_support_weapons4:0 "MG 45 & 12 cm Granatwerfer 42"
 
+
+ # UKR small arms 
  UKR_infantry_equipment_0:0 "Avtomat Kalashnikova 47"
  UKR_infantry_equipment_0_short:0 "AK-47"
  UKR_infantry_equipment_1:0 "Avtomat Kalashnikova Modernizirovannyy"
@@ -3340,7 +3342,7 @@
  UKR_infantry_equipment_9_short:0 "Vepr"
  UKR_infantry_equipment_10:0 "Fort-221"
  UKR_infantry_equipment_10_short:0 "Fort-221"
-
+ # SOV tanks
  SOV_modern_tank_equipment_0:0 "Tank 54"
  SOV_modern_tank_equipment_0_short:0 "T-54"
  SOV_modern_tank_equipment_1:0 "Tank 62"
@@ -3355,7 +3357,37 @@
  SOV_modern_tank_equipment_5_short:0 "T-90A"
  SOV_modern_tank_equipment_6:0 "Tank 14 Armata"
  SOV_modern_tank_equipment_6_short:0 "T-14"
- # airborne_ifv_0
+ # SOV APC
+ SOV_apc_equipment_0:0 "Bronetransportyor 50"
+ SOV_apc_equipment_0_short:0 "BTR-50"
+ SOV_apc_equipment_1:0 "Bronetransportyor 60"
+ SOV_apc_equipment_1_short:0 "BTR-60"
+ SOV_apc_equipment_2:0 "Bronetransportyor 70"
+ SOV_apc_equipment_2_short:0 "BTR-70"
+ SOV_apc_equipment_3:0 "Bronetransportyor 80"
+ SOV_apc_equipment_3_short:0 "BTR-80"
+ SOV_apc_equipment_4:0 "Bronetransportyor 90"
+ SOV_apc_equipment_4_short:0 "BTR-90"
+ SOV_apc_equipment_5:0 "Bronetransportyor 82"
+ SOV_apc_equipment_5_short:0 "BTR-82"
+ SOV_apc_equipment_6:0 "Kurganets-25"
+
+ # SOV IFV
+ SOV_ifv_equipment_0:0 "Boyevaya Mashina Pekhoty 1"
+ SOV_ifv_equipment_0_short:0 "BMP-1"
+ SOV_ifv_equipment_1:0 "Boyevaya Mashina Pekhoty 1P"
+ SOV_ifv_equipment_1_short:0 "BMP-1P"
+ SOV_ifv_equipment_2_:0 "Boyevaya Mashina Pekhoty 2"
+ SOV_ifv_equipment_2_short:0 "BMP-2"
+ SOV_ifv_equipment_3:0 "Boyevaya Mashina Pekhoty 3"
+ SOV_ifv_equipment_3_short:0 "BMP-3"
+ SOV_ifv_equipment_4:0 "Boyevaya Mashina Pekhoty 3M"
+ SOV_ifv_equipment_4_short:0 "BMP-3M"
+ SOV_ifv_equipment_5:0 "Kurganets-25"
+
+ 
+
+ # SOV airborne IFV
 
  SOV_airborne_ifv_0:0 "Boyevaya Mashina Desanta 1"
  SOV_airborne_ifv_0_short:0 "BMD-1"
@@ -3367,8 +3399,10 @@
  SOV_airborne_ifv_3_short:0 "BMD-4"
  SOV_airborne_ifv_4:0 "Boyevaya Mashina Desanta 4 Modernizirovannyy"
  SOV_airborne_ifv_4_short:0 "BMD-4M"
- 
 
+
+ 
+ # SOV small arms
  SOV_infantry_equipment_0:0 "Avtomat Kalashnikova 47"
  SOV_infantry_equipment_0_short:0 "AK-47"
  SOV_infantry_equipment_1:0 "Avtomat Kalashnikova Modernizirovannyy"
