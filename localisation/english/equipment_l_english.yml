@@ -3400,6 +3400,25 @@
  SOV_airborne_ifv_4:0 "Boyevaya Mashina Desanta 4 Modernizirovannyy"
  SOV_airborne_ifv_4_short:0 "BMD-4M"
 
+ # Infantry Gear
+ SOV_infantry_gear_0:0 "M50 Field Gear"
+ SOV_infantry_gear_1:0 "M69 'Obrazets'"
+ SOV_infantry_gear_2:0 "M73 Field Gear"
+ SOV_infantry_gear_3:0 "Ulej"
+ SOV_infantry_gear_4:0 "Zabralo"
+ SOV_infantry_gear_5:0 "Barmitsa"
+ SOV_infantry_gear_6:0 "Ratnik-1"
+
+ # Infantry Uniforms 
+ SOV_infantry_uniform_0:0 "Gimnasterka"
+ SOV_infantry_uniform_1:0 "M69"
+ SOV_infantry_uniform_2:0 "M73"
+ SOV_infantry_uniform_3:0 "Obr88 'Afghanka'"
+ SOV_infantry_uniform_4:0 "VSR-93 'Barvikha'"
+ SOV_infantry_uniform_5:0 "VSR-98 'Flora'"
+ SOV_infantry_uniform_6:0 "EMR 'Cifra'"
+
+
 
  
  # SOV small arms

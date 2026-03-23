@@ -13,19 +13,23 @@ technologies = {
 	@1945 = 18
 	@1946 = 20
 
-	paratroopers = {
+	paratrooper_equipment = {
 
 		enable_subunits = {
 			paratrooper
 		}
 
+		enable_equipments = {
+			paratrooper_gear_0
+		}
+
 		path = {
-			leads_to_tech = paratroopers2
+			leads_to_tech = paratrooper_equipment1
 			research_cost_coeff = 1
 		}
 
 		research_cost = 2
-		start_year = 1936
+		start_year = 1950
 		folder = {
 			name = special_forces_folder
 			position = { x = 0 y = @1918 }
@@ -87,23 +91,22 @@ technologies = {
 		}
 	}
 
-	paratroopers2 = {
+	paratrooper_equipment1 = {
 
-		paratrooper = {
-			max_organisation = 5
-			soft_attack = 0.05
+		enable_equipments = {
+			paratrooper_gear_1
 		}
 
 		path = {
-			leads_to_tech = paratroopers3
+			leads_to_tech = paratrooper_equipment2
 			research_cost_coeff = 1
 		}
 
 		research_cost = 1.5
-		start_year = 1939
+		start_year = 1960
 		folder = {
 			name = special_forces_folder
-			position = { x = 2 y = @1939 }
+			position = { x = 0 y = 3 }
 		}
 
 		categories = {
@@ -113,41 +116,25 @@ technologies = {
 
 		ai_will_do = {
 			factor = 0.5
-
-			modifier = {
-				factor = 2
-				tag = USA
-			}
-
-			modifier = {
-				factor = 2
-				tag = GER
-			}
-
-			modifier = {
-				factor = 2
-				tag = ENG
-			}
-
-			modifier = {
-				factor = 2
-				tag = GER
-			}
 		}
 	}
 
-	paratroopers3 = {
+	paratrooper_equipment2 = {
 
-		paratrooper = {
-			max_organisation = 5
+		enable_equipments = {
+			paratrooper_gear_2
 		}
 
+		path = {
+			leads_to_tech = paratrooper_equipment3
+			research_cost_coeff = 1
+		}
 
-		research_cost = 2.0
-		start_year = 1943
+		research_cost = 1.5
+		start_year = 1970
 		folder = {
 			name = special_forces_folder
-			position = { x = 2 y = @1943 }
+			position = { x = 0 y = 6 }
 		}
 
 		categories = {
@@ -157,23 +144,117 @@ technologies = {
 
 		ai_will_do = {
 			factor = 0.5
-
-			modifier = {
-				factor = 2
-				tag = USA
-			}
-
-			modifier = {
-				factor = 2
-				tag = GER
-			}
-
-			modifier = {
-				factor = 2
-				tag = ENG
-			}
 		}
 	}
+
+	paratrooper_equipment3 = {
+
+		enable_equipments = {
+			paratrooper_gear_3
+		}
+
+		path = {
+			leads_to_tech = paratrooper_equipment4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1980
+		folder = {
+			name = special_forces_folder
+			position = { x = 0 y = 9 }
+		}
+
+		categories = {
+			para_tech
+			cat_special_forces_generic
+		}
+
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	paratrooper_equipment4 = {
+
+		enable_equipments = {
+			paratrooper_gear_4
+		}
+
+		path = {
+			leads_to_tech = paratrooper_equipment5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1990
+		folder = {
+			name = special_forces_folder
+			position = { x = 0 y = 12 }
+		}
+
+		categories = {
+			para_tech
+			cat_special_forces_generic
+		}
+
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	paratrooper_equipment5 = {
+
+		enable_equipments = {
+			paratrooper_gear_5
+		}
+
+		path = {
+			leads_to_tech = paratrooper_equipment6
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 2000
+		folder = {
+			name = special_forces_folder
+			position = { x = 0 y = 15 }
+		}
+
+		categories = {
+			para_tech
+			cat_special_forces_generic
+		}
+
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	paratrooper_equipment6 = {
+
+		enable_equipments = {
+			paratrooper_gear_6
+		}
+
+		research_cost = 1.5
+		start_year = 2010
+		folder = {
+			name = special_forces_folder
+			position = { x = 0 y = 18 }
+		}
+
+		categories = {
+			para_tech
+			cat_special_forces_generic
+		}
+
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+
 
 	marines = {
 
@@ -245,7 +326,7 @@ technologies = {
 		start_year = 1939
 		folder = {
 			name = special_forces_folder
-			position = { x = 3 y = @1939 }
+			position = { x = 2 y = @1939 }
 		}
 
 		categories = {
@@ -278,7 +359,7 @@ technologies = {
 		start_year = 1943
 		folder = {
 			name = special_forces_folder
-			position = { x = 3 y = @1943 }
+			position = { x = 2 y = @1943 }
 		}
 
 		categories = {
@@ -474,7 +555,7 @@ technologies = {
 		start_year = 1939
 		folder = {
 			name = special_forces_folder
-			position = { x = 4 y = @1939 }
+			position = { x = 6 y = @1939 }
 		}
 		
 		categories = {
@@ -498,7 +579,7 @@ technologies = {
 		start_year = 1943
 		folder = {
 			name = special_forces_folder
-			position = { x = 4 y = @1943 }
+			position = { x = 6 y = @1943 }
 		}
 		
 		categories = {
