@@ -240,12 +240,29 @@ drill_baby_drill
 
 
 
+																					# Naval Strategems
+	spriteType = {
+		name = "GFX_goal_naval_strat"
+		texturefile = "gfx/interface/goals/focus_naval_strat.dds"
+	}
+
+
+
+
+																				# Semper Supra
+	spriteType = {
+		name = "GFX_goal_semper_supra"
+		texturefile = "gfx/interface/goals/focus_semper_supra.dds"
+	}
+
+
+
+
 																			# We made America Great Again
 	spriteType = {
 		name = "GFX_goal_america_great_again"
 		texturefile = "gfx/interface/goals/focus_america_great_again.dds"
 	}
-
 
 # Border Crisis
 	# Border Crisis
