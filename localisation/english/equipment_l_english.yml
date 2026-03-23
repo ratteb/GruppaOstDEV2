@@ -3478,12 +3478,16 @@
  ENG_support_weapons3:0 "Bren Mk. I & ML 3 inch mortar"
  ENG_support_weapons4:0 "Bren Mk. III & ML 4.2 inch Mortar"
 
- # USA Equipment
+ # USA Tank Equipment
 
  USA_modern_tank_equipment_0:0 "M46 Patton"
  USA_modern_tank_equipment_0_short:0 "M46 Patton"
  USA_modern_tank_equipment_1:0 "M47 Patton"
  USA_modern_tank_equipment_1_short:0 "M47 Patton"
+ USA_modern_tank_equipment_2:0 "M48 Patton"
+ USA_modern_tank_equipment_2_short:0 "M48 Patton"
+ USA_modern_tank_equipment_3:0 "Tank, Combat, Full Tracked: 105-mm Gun, M60"
+ USA_modern_tank_equipment_3_short:0 "M60"
 
  USA_infantry_equipment_0:0 "U.S. Rifle, Caliber .30, M1"
  USA_infantry_equipment_0_short:0 "M1 Garand"
