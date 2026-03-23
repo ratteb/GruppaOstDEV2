@@ -3377,7 +3377,7 @@
  SOV_ifv_equipment_0_short:0 "BMP-1"
  SOV_ifv_equipment_1:0 "Boyevaya Mashina Pekhoty 1P"
  SOV_ifv_equipment_1_short:0 "BMP-1P"
- SOV_ifv_equipment_2_:0 "Boyevaya Mashina Pekhoty 2"
+ SOV_ifv_equipment_2:0 "Boyevaya Mashina Pekhoty 2"
  SOV_ifv_equipment_2_short:0 "BMP-2"
  SOV_ifv_equipment_3:0 "Boyevaya Mashina Pekhoty 3"
  SOV_ifv_equipment_3_short:0 "BMP-3"
