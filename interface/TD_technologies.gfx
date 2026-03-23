@@ -128,6 +128,71 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_SOV_apc_vehicle_medium"
+		texturefile = "gfx/interface/technologies/SOV_apc_equipment_0.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_apc_vehicle1_medium"
+		texturefile = "gfx/interface/technologies/SOV_apc_equipment_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_apc_vehicle2_medium"
+		texturefile = "gfx/interface/technologies/SOV_apc_equipment_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_apc_vehicle3_medium"
+		texturefile = "gfx/interface/technologies/SOV_apc_equipment_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_apc_vehicle4_medium"
+		texturefile = "gfx/interface/technologies/SOV_apc_equipment_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_apc_vehicle5_medium"
+		texturefile = "gfx/interface/technologies/SOV_apc_equipment_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_apc_vehicle6_medium"
+		texturefile = "gfx/interface/technologies/SOV_apc_equipment_6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_ifv_vehicle_medium"
+		texturefile = "gfx/interface/technologies/SOV_ifv_equipment_0.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_ifv_vehicle1_medium"
+		texturefile = "gfx/interface/technologies/SOV_ifv_equipment_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_ifv_vehicle2_medium"
+		texturefile = "gfx/interface/technologies/SOV_ifv_equipment_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_ifv_vehicle3_medium"
+		texturefile = "gfx/interface/technologies/SOV_ifv_equipment_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_ifv_vehicle4_medium"
+		texturefile = "gfx/interface/technologies/SOV_ifv_equipment_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_ifv_vehicle5_medium"
+		texturefile = "gfx/interface/technologies/SOV_ifv_equipment_5.dds"
+	}
+
+	SpriteType = {
 		name = "GFX_SOV_airland_vehicle_medium"
 		texturefile = "gfx/interface/technologies/SOV_airborne_ifv_0.dds"
 	}
@@ -213,57 +278,57 @@ spriteTypes = {
 
 	# First four Technologies would not work without using the name the base game uses.
 
-		SpriteType = {
+	SpriteType = {
 		name = "GFX_USA_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/usa_basic_equipment.dds"
 	}
 
-		SpriteType = {
+	SpriteType = {
 		name = "GFX_USA_infantry_weapons1_medium"
 		texturefile = "gfx/interface/technologies/usa_infantry_weapons1.dds"
 	}
 
-        SpriteType = {
+	SpriteType = {
 		name = "GFX_USA_improved_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/usa_improved_infantry_weapons.dds"
 	}
 
-		SpriteType = {
+	SpriteType = {
 		name = "GFX_USA_advanced_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/usa_advanced_infantry_weapons.dds"
 	}
 
-		SpriteType = {
+	SpriteType = {
 		name = "GFX_USA_modernized_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/USA_infantry_equipment_4.dds"
 	}
 
-		SpriteType = {
+	SpriteType = {
 		name = "GFX_USA_modern_infantry_weapons_medium"
 		texturefile = "gfx/interface/technologies/USA_infantry_equipment_5.dds"
 	}
 
-		SpriteType = {
+	SpriteType = {
 		name = "GFX_USA_modern_infantry_weapons2_medium"
 		texturefile = "gfx/interface/technologies/USA_infantry_equipment_6.dds"
 	}
 
-		SpriteType = {
+	SpriteType = {
 		name = "GFX_USA_modern_infantry_weapons3_medium"
 		texturefile = "gfx/interface/technologies/USA_infantry_equipment_7.dds"
 	}
 
-		SpriteType = {
+	SpriteType = {
 		name = "GFX_USA_modern_infantry_weapons4_medium"
 		texturefile = "gfx/interface/technologies/USA_infantry_equipment_8.dds"
 	}
 
-		SpriteType = {
+	SpriteType = {
 		name = "GFX_USA_modern_infantry_weapons5_medium"
 		texturefile = "gfx/interface/technologies/USA_infantry_equipment_9.dds"
 	}
 
-		SpriteType = {
+	SpriteType = {
 		name = "GFX_USA_modern_infantry_weapons6_medium"
 		texturefile = "gfx/interface/technologies/USA_infantry_equipment_10.dds"
 	}
