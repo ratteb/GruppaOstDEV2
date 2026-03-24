@@ -1,0 +1,16 @@
+characters={
+	PMR_vadim_krasnoselsky={
+		name="Vadim Nikolayevich Krasnoselsky"
+		portraits={
+			civilian={
+				large=GFX_vadim_krasnoselsky
+			}
+		}
+		country_leader={
+			ideology=putinism
+			desc = PMR_vadim_krasnoselsky_desc
+			expire="3000.1.1.1"
+			id=-1
+		}
+	}
+}

@@ -4,12 +4,16 @@ state={
 	provinces={
 		13365 13366 13367 13368 13369
 	}
-			history={
-		owner = MOL
-		add_core_of = MOL
+	history={
+		owner = PMR
+		add_core_of = PMR
 		set_demilitarized_zone = no
 	}
-	manpower=0
+
+	victory_points = {
+			13365 1
+		}
+	manpower=367000
 	buildings_max_level_factor=1
 	local_supplies=0
 }

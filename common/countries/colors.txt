@@ -16,6 +16,11 @@ SOV = {
 	color_ui = rgb { 50 93 43 }
 }
 
+PMR = {
+	color = rgb { 145 3 3 }
+	color_ui = rgb { 145 3 3 }
+}
+
 SOT = {
 	color = rgb { 255 248 98 }
 	color_ui = rgb { 255 248 98 }

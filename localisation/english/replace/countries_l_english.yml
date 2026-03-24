@@ -158,6 +158,9 @@
  SOV_DEF:0 "Russia"
  SOV_ADJ:0 "Russian"
 
+ PMR_easternism:0 "Pridnestrovian Moldavian Republic"
+ PMR_easternism_DEF:0 "the Pridnestrovian Moldavian Republic"
+
  SOT_easternism:0 "Republic of South Ossetia State of Alania"
  SOT_easternism_DEF:0 "the Republic of South Ossetia State of Alania"
  SOT:0 "South Ossetia"
