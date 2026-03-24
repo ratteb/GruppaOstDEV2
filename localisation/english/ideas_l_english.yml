@@ -25,8 +25,12 @@
  maximum_age:0 "Maximum Age"
  recruitment_laws:0 "Recruitment Laws"
  economy:0 "Mobilization Law"
- civilian_economy:0 "Civilian Mobilization"
- war_economy:0 "Wartime Mobilization"
+ civilian_economy:0 "Peacetime Economic Mobilization"
+ low_economic_mobilisation:0 "Early Economic Mobilization"
+ partial_economic_mobilisation:0 "Partial Economic Mobilization"
+ tot_economic_mobilisation:0 "Total War Economy"
+  war_economy:0 "Wartime Economic Mobilization"
+
 
 
  society_laws:0 "Social Laws"
