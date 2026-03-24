@@ -1,26 +1,22 @@
-
 state={
-	id=227
-	name="Donetsk"
-	manpower = 900000
+	id=981
+	name="STATE_981" # Lugansk
+	manpower = 1767000
 	
-	state_category = city
+	state_category = town
 
 	history={
 		owner = NOV
 		buildings = {
 			infrastructure = 3 #was: 5
 		}
-		victory_points = {
-			6474 30
-		}
 		add_core_of = NOV
 		add_claim_by = UKR
 	}
 
 	provinces={
-		3421 6474 6493 
+		523 547 570 6519 9476 11487 11513 
 	}
 
-	local_supplies=10.0 
+	local_supplies=0.0 
 }
