@@ -31,6 +31,9 @@
  tot_economic_mobilisation:0 "Total War Economy"
   war_economy:0 "Wartime Economic Mobilization"
 
+  # HOI4 is dumb i have to do this 
+  SOV_war_economy:0 "Wartime Economic Mobilization"
+
 
 
  society_laws:0 "Social Laws"

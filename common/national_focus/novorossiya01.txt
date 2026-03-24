@@ -400,6 +400,8 @@ completion_reward = {
               amount = 2500
               producer = SOV
             }
+
+			custom_effect_tooltip = NOV_russian_surplus_gear_CET
 		}
 	}
 
@@ -451,6 +453,7 @@ completion_reward = {
               amount = 450
               producer = SOV
             }
+			custom_effect_tooltip = NOV_russian_surplus_armour_CET
 		}
 	}
 
@@ -490,6 +493,7 @@ completion_reward = {
               amount = 2500
               producer = SOV
             }
+			custom_effect_tooltip = NOV_russian_surplus_vehicles_CET
 		}
 	}
 
