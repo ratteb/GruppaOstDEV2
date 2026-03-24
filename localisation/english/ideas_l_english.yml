@@ -25,8 +25,12 @@
  maximum_age:0 "Maximum Age"
  recruitment_laws:0 "Recruitment Laws"
  economy:0 "Mobilization Law"
- civilian_economy:0 "Civilian Mobilization"
- war_economy:0 "Wartime Mobilization"
+ civilian_economy:0 "Peacetime Economic Mobilization"
+ low_economic_mobilisation:0 "Early Economic Mobilization"
+ partial_economic_mobilisation:0 "Partial Economic Mobilization"
+ tot_economic_mobilisation:0 "Total War Economy"
+  war_economy:0 "Wartime Economic Mobilization"
+
 
 
  society_laws:0 "Social Laws"
@@ -71,6 +75,10 @@
  SOV_SMO:0 "Special Anti-Terrorist Operation"
  SOV_EU_sanction:0 "EU Sanctions"
  SOV_US_sanction:0 "US Sanctions"
+
+ # Russia laws
+ russia_rosgvardia:0 "Rosgvardiya"
+ russia_rosgvardia_desc:0 "The Rosgvardiya is the federal executive body of the Russian Federation responsible for law enforcement, internal security, counterterrorism, and riot control. It is led by §OViktor Zolotov§! it was created by presidential decree by President Vladimir Putin on the 5th of April 2016 by Presidential Decree, merging the old SOBR and OMON into 1 federal body."
  # Belarus
  BLR_CSTO_member01:0 "CSTO Member"
  BLR_batka_support:0 "The Batka"

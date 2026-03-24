@@ -1,0 +1,91 @@
+ideas = {
+
+	work_hours = {
+		law = yes
+		use_list_view = yes
+
+		8_hours = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			modifier = {
+			}
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}
+		
+
+	9_hours = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			modifier = {
+			}
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}	
+
+	10_hours = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			default = yes
+
+			modifier = {
+			}
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}
+
+	11_hours = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			modifier = {
+			}
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}
+
+	12_hours = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			modifier = {
+			}
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}
+	}	
+}
+
