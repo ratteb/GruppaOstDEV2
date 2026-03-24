@@ -3399,7 +3399,6 @@
  SOV_airborne_ifv_3_short:0 "BMD-4"
  SOV_airborne_ifv_4:0 "Boyevaya Mashina Desanta 4 Modernizirovannyy"
  SOV_airborne_ifv_4_short:0 "BMD-4M"
-<<<<<<< HEAD
 
  # Infantry Gear
  SOV_infantry_gear_0:0 "M50 Field Gear"
@@ -3422,8 +3421,6 @@
 
 
  
-=======
->>>>>>> parent of 408a487 (BIGGG. NEW PROVINCES AND STATES)
 
 
  
