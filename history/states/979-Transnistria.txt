@@ -1,6 +1,7 @@
 state={
 	id=979
 	name="Transnistria"
+	state_category = large_town
 	provinces={
 		13365 13366 13367 13368 13369
 	}
