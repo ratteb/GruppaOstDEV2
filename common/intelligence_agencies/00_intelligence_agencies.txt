@@ -14,8 +14,8 @@ intelligence_agency = {
 
 intelligence_agency = {
 
-	picture = GFX_intelligence_agency_logo_usa
-	names = { "Office of Strategic Services" }
+	picture = GFX_intelligence_agency_logo_cia_usa
+	names = { "Central Intelligence Agency" }
 	
 	default = { tag = USA }
 	available = { original_tag = USA }
