@@ -107,6 +107,9 @@ add_ideas = {
 	limited_conscription
 	min_super_high_bracket
 	max_super_high_bracket
+	PMR_russian_peacekeepers
+	PMR_free_gas
+	PMR_ammo_depot
 }
 
 create_country_leader = {
