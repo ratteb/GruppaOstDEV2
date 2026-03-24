@@ -79,4 +79,11 @@ spriteTypes = {
 		name = "GFX_jordan_barrett"
 		texturefile = "gfx/leaders/AST/jordan_barrett.dds"  
 	}
+
+		spriteType = {
+		name = "GFX_vadim_krasnoselsky"
+		texturefile = "gfx/leaders/PMR/vadim_krasnoselsky.dds"  
+	}
+
+	# Transnistira above this line
 }
