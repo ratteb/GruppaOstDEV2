@@ -1,0 +1,15 @@
+state={
+	id=976
+	name="Sumy BZ"
+	provinces={
+		501 3455
+	}
+			history={
+		owner = UKR
+		add_core_of = UKR
+		set_demilitarized_zone = yes
+	}
+	manpower=0
+	buildings_max_level_factor=1
+	local_supplies=0
+}

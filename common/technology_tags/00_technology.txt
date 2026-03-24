@@ -145,9 +145,6 @@ technology_folders = {
 	infantry_folder = {
 		ledger = army
 	}
-	special_forces_folder = {
-		ledger = army
-	}
 	support_folder = {
 		ledger = army
 	}

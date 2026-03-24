@@ -1,0 +1,15 @@
+state={
+	id=974
+	name="STATE_974"
+	provinces={
+		434 458 3452 6451 6478 11409 
+	}
+			history={
+		owner = UKR
+		add_core_of = UKR
+		set_demilitarized_zone = yes
+	}
+	manpower=0
+	buildings_max_level_factor=1
+	local_supplies=0
+}

@@ -1,0 +1,15 @@
+state={
+	id=979
+	name="Transnistria"
+	provinces={
+		13365 13366 13367 13368 13369
+	}
+			history={
+		owner = MOL
+		add_core_of = MOL
+		set_demilitarized_zone = no
+	}
+	manpower=0
+	buildings_max_level_factor=1
+	local_supplies=0
+}

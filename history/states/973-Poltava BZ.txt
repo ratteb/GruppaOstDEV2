@@ -1,0 +1,39 @@
+state={
+	id=973
+	name="STATE_973"
+
+		history={
+		victory_points = {
+			11504 3
+		}
+		owner = UKR
+		buildings = {
+			infrastructure = 3 #was: 5
+
+			6578 = 
+			{
+				bunker = 10
+			}
+
+			511 = 
+			{
+				bunker = 10
+			}
+
+			6507 = 
+			{
+				bunker = 10
+			}
+		}
+		add_core_of = UKR
+
+		set_demilitarized_zone = yes
+	}
+
+	provinces={
+		511 6507 3557 6578 
+	}
+	manpower=0
+	buildings_max_level_factor=1
+	local_supplies=0
+}

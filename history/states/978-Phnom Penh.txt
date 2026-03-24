@@ -1,0 +1,21 @@
+state={
+	id=978
+	name="Phnom Penh"
+	history = {
+		add_core_of = CAM
+		owner = CAM
+		victory_points = {
+			7376 1
+		}
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces={
+		1353 4251 4359 7319 7376 7404 7432 10134 10177 10289 10317 12191
+	}
+	manpower=1245000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.0 
+}
