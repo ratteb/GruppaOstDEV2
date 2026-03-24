@@ -264,6 +264,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/operatives/agencies/agency_logo_cia_usa.dds"
 		noOfFrames = 2
 	}
+
+	spriteType = {
+		name = "GFX_intelligence_agency_logo_szru_ukr"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_szru_ukr.dds"
+		noOfFrames = 2
+	}
 	
 	
 	

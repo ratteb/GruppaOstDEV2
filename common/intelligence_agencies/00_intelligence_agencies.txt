@@ -23,6 +23,15 @@ intelligence_agency = {
 
 intelligence_agency = {
 
+	picture = GFX_intelligence_agency_logo_szru_ukr
+	names = { "Sluzhba zovnishn’oyi rozvidky Ukrayiny" }
+	
+	default = { tag = UKR }
+	available = { original_tag = UKR }
+}
+
+intelligence_agency = {
+
 	picture = GFX_intelligence_agency_logo_uk
 	names = { "MI6" "SIS" }
 	
