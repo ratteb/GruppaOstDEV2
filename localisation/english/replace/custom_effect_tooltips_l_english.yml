@@ -23,6 +23,10 @@
   SOV_putin_death_event.5_cet: "Gets event '§YIs It Over?§!'"
   SOV_putin_absence_cet: "Gets event '§YDoctors Give Positive News!§!'"
   SOV_putin_death_cet: "Gets event '§YPutin Recovers!§!'\nGets event '§YCrisis in the Duma!§!'"
+
+  # RUssian Ideas 
+
+  SOV_rosgvardiya_CMT:0 "§RWe will get special ways to deal with terrorism and riots§!"
  # §R§!
 
  # CSTO

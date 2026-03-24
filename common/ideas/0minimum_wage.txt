@@ -1,0 +1,91 @@
+ideas = {
+
+	minimum_wage = {
+		law = yes
+		use_list_view = yes
+
+		no_min_wage = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			modifier = {
+			}
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}
+		
+
+	tiny_min_wage = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			modifier = {
+			}
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}	
+
+	small_min_wage = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			modifier = {
+			}
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}
+
+	med_min_wage = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			default = yes
+
+			modifier = {
+			}
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}
+
+	high_min_wage = {
+
+			cost = 150
+			removal_cost = -1
+
+			available = {
+			}
+
+			modifier = {
+			}
+
+			allowed_to_remove = { always = no }
+
+			cancel_if_invalid = no
+		}
+	}	
+}
+
