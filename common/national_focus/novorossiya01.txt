@@ -365,6 +365,135 @@ completion_reward = {
 	}
 
 	focus = {
+		id = NOV_russian_surplus_gear
+		prerequisite = { focus = NOV_the_threat_to_our_army }
+		icon = GFX_goal_no_data
+		relative_position_id = NOV_the_threat_to_our_army
+		x = 3
+		y = 1
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+              type = infantry_equipment_8
+              amount = 5000
+              producer = SOV
+            }
+
+			add_equipment_to_stockpile = {
+              type = anti_tank_weapons_4
+              amount = 2500
+              producer = SOV
+            }
+		}
+	}
+
+	focus = {
+		id = NOV_russian_surplus_armour
+		prerequisite = { focus = NOV_russian_surplus_gear }
+		icon = GFX_goal_no_data
+		relative_position_id = NOV_russian_surplus_gear
+		x = 1
+		y = 1
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+              type = ifv_equipment_3
+              amount = 500
+              producer = SOV
+            }
+
+			add_equipment_to_stockpile = {
+              type = apc_equipment_3
+              amount = 650
+              producer = SOV
+            }
+
+			add_equipment_to_stockpile = {
+              type = modern_tank_equipment_4
+              amount = 250
+              producer = SOV
+            }
+
+			add_equipment_to_stockpile = {
+              type = airborne_ifv_2
+              amount = 450
+              producer = SOV
+            }
+		}
+	}
+
+	focus = {
+		id = NOV_russian_surplus_vehicles
+		prerequisite = { focus = NOV_russian_surplus_gear }
+		icon = GFX_goal_no_data
+		relative_position_id = NOV_russian_surplus_gear
+		x = -1
+		y = 1
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+              type = infantry_equipment_8
+              amount = 5000
+              producer = SOV
+            }
+
+			add_equipment_to_stockpile = {
+              type = anti_tank_weapons_4
+              amount = 2500
+              producer = SOV
+            }
+		}
+	}
+
+	focus = {
 		id = NOV_end_the_insurgency
 		icon = GFX_goal_generic_major_war
 		x = 0
