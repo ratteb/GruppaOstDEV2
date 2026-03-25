@@ -19,4 +19,22 @@ spriteTypes = {
 		name = "GFX_idea_russia_rosgvardia"
 		texturefile = "gfx/interface/ideas/SOV/SOV_rosgvardiya.dds"
 	}
+
+
+	# Transnistria Ideas 
+
+	spriteType = {
+		name = "GFX_idea_PMR_russian_peacekeepers"
+		texturefile = "gfx/interface/ideas/PMR/PMR_russian_peacekeepers.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_PMR_free_gas"
+		texturefile = "gfx/interface/ideas/PMR/PMR_free_gas.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_PMR_ammo_depot"
+		texturefile = "gfx/interface/ideas/PMR/PMR_ammo_depot.dds"
+	}
 }

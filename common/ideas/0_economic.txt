@@ -51,8 +51,11 @@ ideas = {
 				production_speed_arms_factory_factor = -0.3
 				conversion_cost_civ_to_mil_factor= 0.3
 				conversion_cost_mil_to_civ_factor = 0.3
+				industrial_capacity_factory = -0.4
+				industrial_capacity_dockyard = -0.4
 				max_fuel_factor = -0.25
 				fuel_gain_factor = -0.4
+				ammunition_factor = -0.4
 			}
 
 			default = yes
@@ -74,29 +77,13 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = -0.1
 				fuel_gain_factor = -0.25
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				stability_weekly = -0.001
+				ammunition_factor = -0.2
 			}
 
 			cancel_if_invalid = no
-
-			ai_will_do = {
-   				factor = 2
-
-   				modifier = {
-					factor = 20
-
-					is_major = yes
-				}
-				modifier = {
-					has_war_support > 0.25
-					factor = 0 #don't even look at it if you could be taking partial mob
-				}
-				modifier = {
-					tag = ENG
-					has_war = no
-					date < 1937.6.1
-					factor = 0
-				}
-   			}
 		}
 
 		partial_economic_mobilisation = {
@@ -115,30 +102,10 @@ ideas = {
 				conversion_cost_civ_to_mil_factor= -0.1
 				conversion_cost_mil_to_civ_factor = -0.1
 				fuel_gain_factor = -0.1
+				stability_weekly = -0.002
 			}
 
 			cancel_if_invalid = no
-			ai_will_do = {
-   				factor = 2
-
-   				modifier = {
-					factor = 20
-
-					is_major = yes
-				}
-
-				modifier = {
-					factor = 100
-					OR = {
-						original_tag = URG
-						original_tag = PAR
-					}
-					NOT = {
-						has_idea = war_economy
-					}
-					has_completed_focus = GUAY_coup_detat
-				}
-   			}
 		}
 
 		war_economy = {
@@ -155,162 +122,21 @@ ideas = {
 				production_speed_arms_factory_factor = 0.2
 				conversion_cost_civ_to_mil_factor= -0.2
 				conversion_cost_mil_to_civ_factor = -0.2
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2
+				ammunition_factor = 0.2
+				stability_weekly = -0.003
 			}
 
 			cancel_if_invalid = no
-			on_add = {
-				if = {
-					limit = {
-						tag = USA
-						has_completed_focus = USA_limited_intervention
-						has_defensive_war = no
-					}
-					USA_congress_large_opposition = yes
-				}
-			}
-			ai_will_do = {
-   				factor = 3
-
-				modifier = {
-					#High prio on production
-					factor = 20
-					manpower_per_military_factory >  1000
-				}
-
-				modifier = {
-					# If we CAN go for total mobilization and have enough manpower for it, skip war economy, it's only a waste of PP
-					factor = 0
-
-					manpower_per_military_factory > 15000
-					has_war = yes
-					has_war_support > 0.8
-					any_enemy_country = {
-						ic_ratio = {
-							tag = ROOT
-							ratio > 0.5
-						}
-					}
-				}
-
-				modifier = {
-					add = 1800
-
-					# revert from closed_economy if we have large allies
-					has_idea = closed_economy
-				}
-   			}
+	
+		
 		}
 
 		tot_economic_mobilisation = {
-
-
-			available = {
-				has_war = yes
-				has_war_support > 0.8
-				any_enemy_country = {
-					ic_ratio = {
-						tag = ROOT
-						ratio > 0.5
-					}
-				}
-
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-						}
-						NOT = { has_idea = HUN_treaty_of_triannon_aat }
-					}
-					else = {
-						NOT = { has_idea = HUN_treaty_of_triannon }
-					}
-				}
-				if = {
-					limit = {
-						has_completed_focus = USA_limited_intervention
-						has_defensive_war = no
-					}
-					has_war_support > 0.9
-					congress_high_support_trigger = yes
-				}
-				if = {
-					limit = {
-						original_tag = TUR
-						has_dlc = "Battle for the Bosporus"
-					}
-					NOT = {
-						OR = {
-							has_active_mission = TUR_etatism_crisis_1
-							has_active_mission = TUR_etatism_crisis_2
-							has_active_mission = TUR_etatism_crisis_3
-						}
-					}
-				}
+			allowed_to_remove = {
+				always = no
 			}
-			on_add = {
-				if = {
-					limit = {
-						tag = USA
-						has_completed_focus = USA_limited_intervention
-						has_defensive_war = no
-					}
-					USA_congress_large_opposition = yes
-				}
-			}
-			ai_will_do = {
-   				factor = 1
-
-				modifier = {
-					factor = 25
-					#Prio this if nation has a lot of manpower compared to MIC
-					manpower_per_military_factory > 15000
-				}
-
-				modifier = {
-					#Block  unless nation has a lot of manpower
-					factor = 0
-					manpower_per_military_factory <  10000
-				}
-
-
-				modifier = {
-					# never take this if we are on low conscription laws for safety
-					factor = 0
-					OR = {
-						has_idea = volunteer_only
-						has_idea = limited_conscription
-					}
-				}
-
-				# Germany needs to be careful
-				modifier = {
-					factor = 0
-
-					tag = GER
-					NOT = { has_tech = volkssturm }
-					has_war = yes
-					date < 1944.01.01
-				}
-				modifier = {
-					factor = 0
-
-					tag = SOV
-					has_war = yes
-					OR = {
-						has_manpower < 2000000
-						NOT = {
-							OR = {
-								has_idea = all_adults_serve
-								has_idea = service_by_requirement
-							}
-						}
-					}
-				}
-   			}
 
 			cost = 150
 			removal_cost = -1
@@ -321,6 +147,10 @@ ideas = {
 				production_speed_arms_factory_factor = 0.3
 				conversion_cost_civ_to_mil_factor= -0.3
 				conversion_cost_mil_to_civ_factor = -0.3
+				industrial_capacity_factory = 0.4
+				industrial_capacity_dockyard = 0.4
+				ammunition_factor = 0.4
+				stability_weekly = -0.004
 			}
 
 			cancel_if_invalid = no

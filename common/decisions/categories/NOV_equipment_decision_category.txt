@@ -1,0 +1,12 @@
+NOV_equipment_decision_cat = {
+	icon = generic_political_actions
+	picture = GFX_SOV_sotnik_decision_cat_picture
+	priority = 50
+	visible_when_empty = yes
+	allowed = {
+		tag = NOV
+	}
+	visible = {
+		has_country_flag = NOV_buying_russian_gear
+	}
+}

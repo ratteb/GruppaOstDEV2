@@ -3399,7 +3399,6 @@
  SOV_airborne_ifv_3_short:0 "BMD-4"
  SOV_airborne_ifv_4:0 "Boyevaya Mashina Desanta 4 Modernizirovannyy"
  SOV_airborne_ifv_4_short:0 "BMD-4M"
-<<<<<<< HEAD
 
  # Infantry Gear
  SOV_infantry_gear_0:0 "M50 Field Gear"
@@ -3422,8 +3421,6 @@
 
 
  
-=======
->>>>>>> parent of 408a487 (BIGGG. NEW PROVINCES AND STATES)
 
 
  
@@ -3468,6 +3465,127 @@
  SOV_support_weapons2:0 "DP & RM-38"
  SOV_support_weapons3:0 "DS-39 & 82-PM-41"
  SOV_support_weapons4:0 "SG-43 Goryunov & 120-PM-43"
+
+ # NOVOROSSIYA (same as russia)
+
+  NOV_modern_tank_equipment_0:0 "Tank 54"
+ NOV_modern_tank_equipment_0_short:0 "T-54"
+ NOV_modern_tank_equipment_1:0 "Tank 62"
+ NOV_modern_tank_equipment_1_short:0 "T-62"
+ NOV_modern_tank_equipment_2:0 "Tank 72"
+ NOV_modern_tank_equipment_2_short:0 "T-72"
+ NOV_modern_tank_equipment_3:0 "Tank 80"
+ NOV_modern_tank_equipment_3_short:0 "T-80"
+ NOV_modern_tank_equipment_4:0 "Tank 90"
+ NOV_modern_tank_equipment_4_short:0 "T-90"
+ NOV_modern_tank_equipment_5:0 "Tank 90 Annotirovannyy"
+ NOV_modern_tank_equipment_5_short:0 "T-90A"
+ NOV_modern_tank_equipment_6:0 "Tank 14 Armata"
+ NOV_modern_tank_equipment_6_short:0 "T-14"
+ # NOV APC
+ NOV_apc_equipment_0:0 "Bronetransportyor 50"
+ NOV_apc_equipment_0_short:0 "BTR-50"
+ NOV_apc_equipment_1:0 "Bronetransportyor 60"
+ NOV_apc_equipment_1_short:0 "BTR-60"
+ NOV_apc_equipment_2:0 "Bronetransportyor 70"
+ NOV_apc_equipment_2_short:0 "BTR-70"
+ NOV_apc_equipment_3:0 "Bronetransportyor 80"
+ NOV_apc_equipment_3_short:0 "BTR-80"
+ NOV_apc_equipment_4:0 "Bronetransportyor 90"
+ NOV_apc_equipment_4_short:0 "BTR-90"
+ NOV_apc_equipment_5:0 "Bronetransportyor 82"
+ NOV_apc_equipment_5_short:0 "BTR-82"
+ NOV_apc_equipment_6:0 "Kurganets-25"
+
+ # NOV IFV
+ NOV_ifv_equipment_0:0 "Boyevaya Mashina Pekhoty 1"
+ NOV_ifv_equipment_0_short:0 "BMP-1"
+ NOV_ifv_equipment_1:0 "Boyevaya Mashina Pekhoty 1P"
+ NOV_ifv_equipment_1_short:0 "BMP-1P"
+ NOV_ifv_equipment_2:0 "Boyevaya Mashina Pekhoty 2"
+ NOV_ifv_equipment_2_short:0 "BMP-2"
+ NOV_ifv_equipment_3:0 "Boyevaya Mashina Pekhoty 3"
+ NOV_ifv_equipment_3_short:0 "BMP-3"
+ NOV_ifv_equipment_4:0 "Boyevaya Mashina Pekhoty 3M"
+ NOV_ifv_equipment_4_short:0 "BMP-3M"
+ NOV_ifv_equipment_5:0 "Kurganets-25"
+
+ 
+
+ # NOV airborne IFV
+
+ NOV_airborne_ifv_0:0 "Boyevaya Mashina Desanta 1"
+ NOV_airborne_ifv_0_short:0 "BMD-1"
+ NOV_airborne_ifv_1:0 "Boyevaya Mashina Desanta 2"
+ NOV_airborne_ifv_1_short:0 "BMD-2"
+ NOV_airborne_ifv_2:0 "Boyevaya Mashina Desanta 3"
+ NOV_airborne_ifv_2_short:0 "BMD-3"
+ NOV_airborne_ifv_3:0 "Boyevaya Mashina Desanta 4"
+ NOV_airborne_ifv_3_short:0 "BMD-4"
+ NOV_airborne_ifv_4:0 "Boyevaya Mashina Desanta 4 Modernizirovannyy"
+ NOV_airborne_ifv_4_short:0 "BMD-4M"
+
+ # Infantry Gear
+ NOV_infantry_gear_0:0 "M50 Field Gear"
+ NOV_infantry_gear_1:0 "M69 'Obrazets'"
+ NOV_infantry_gear_2:0 "M73 Field Gear"
+ NOV_infantry_gear_3:0 "Ulej"
+ NOV_infantry_gear_4:0 "Zabralo"
+ NOV_infantry_gear_5:0 "Barmitsa"
+ NOV_infantry_gear_6:0 "Ratnik-1"
+
+ # Infantry Uniforms 
+ NOV_infantry_uniform_0:0 "Gimnasterka"
+ NOV_infantry_uniform_1:0 "M69"
+ NOV_infantry_uniform_2:0 "M73"
+ NOV_infantry_uniform_3:0 "Obr88 'Afghanka'"
+ NOV_infantry_uniform_4:0 "VSR-93 'Barvikha'"
+ NOV_infantry_uniform_5:0 "VSR-98 'Flora'"
+ NOV_infantry_uniform_6:0 "EMR 'Cifra'"
+
+
+
+ 
+
+
+ 
+ # NOV small arms
+ NOV_infantry_equipment_0:0 "Avtomat Kalashnikova 47"
+ NOV_infantry_equipment_0_short:0 "AK-47"
+ NOV_infantry_equipment_1:0 "Avtomat Kalashnikova Modernizirovannyy"
+ NOV_infantry_equipment_1_short:0 "AKM"
+ NOV_infantry_equipment_2:0 "Konstantinov SA-006"
+ NOV_infantry_equipment_2_short:0 "SA-006"
+ NOV_infantry_equipment_3:0 "AO-38"
+ NOV_infantry_equipment_3_short:0 "AO-38"
+ NOV_infantry_equipment_4:0 "AL-7"
+ NOV_infantry_equipment_4_short:0 "AL-7"
+ NOV_infantry_equipment_5:0 "Avtomat Kalashnikova obraztsa 1974 goda"
+ NOV_infantry_equipment_5_short:0 "AK-74"
+ NOV_infantry_equipment_6:0 "Avtomat Kalashnikova skladnoy 1974 goda ukorochenny"
+ NOV_infantry_equipment_6_short:0 "AKS-74U"
+ NOV_infantry_equipment_7:0 "Avtomat Nikonova 94"
+ NOV_infantry_equipment_7_short:0 "AN-94"
+ NOV_infantry_equipment_8:0 "Avtomat Kalashnikova obraztsa 1974 goda Modernizírovanny"
+ NOV_infantry_equipment_8_short:0 "AK-74M"
+ NOV_infantry_equipment_9:0 "Avtomat Kalashnikova obraztsa 103"
+ NOV_infantry_equipment_9_short:0 "AK-103"
+ NOV_infantry_equipment_10:0 "Avtomat Kalashnikova obraztsa 2012 goda"
+ NOV_infantry_equipment_10_short:0 "AK-12"
+ NOV_anti_tank_weapons_0:0 "Ruchnoy Protivotankovy Granatomyot 2"
+ NOV_anti_tank_weapons_0_short:0 "RPG-2"
+ NOV_anti_tank_weapons_1:0 "Ruchnoy Protivotankovy Granatomyot 7"
+ NOV_anti_tank_weapons_1_short:0 "RPG-7"
+ NOV_anti_tank_weapons_2:0 "Ruchnoy Protivotankovy Granatomyot 18"
+ NOV_anti_tank_weapons_2_short:0 "RPG-18"
+ NOV_anti_tank_weapons_3:0 "Ruchnoy Protivotankovy Granatomyot 26"
+ NOV_anti_tank_weapons_3_short:0 "RPG-26"
+ NOV_anti_tank_weapons_4:0 "Ruchnoy Protivotankovy Granatomyot 29"
+ NOV_anti_tank_weapons_4_short:0 "RPG-29"
+ NOV_anti_tank_weapons_5:0 "Ruchnoy Protivotankovy Granatomyot 28"
+ NOV_anti_tank_weapons_5_short:0 "RPG-28"
+ NOV_anti_tank_weapons_6:0 "Ruchnoy Protivotankovy Granatomyot 32"
+ NOV_anti_tank_weapons_6_short:0 "RPG-32"
 
  ENG_infantry_equipment_0:0 "Rifle No.1 MkIII"
  ENG_infantry_equipment_0_short:0 "Rifle No.1 MkIII"

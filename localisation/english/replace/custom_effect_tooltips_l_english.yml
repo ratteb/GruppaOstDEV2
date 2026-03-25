@@ -27,6 +27,16 @@
   # RUssian Ideas 
 
   SOV_rosgvardiya_CMT:0 "§RWe will get special ways to deal with terrorism and riots§!"
+
+  # Novorussia
+
+  NOV_russian_surplus_gear_CET: "§0We will now be able to procure Russian Surplus Gear§!\n§YNew Decisions£decision_icon_small Will Be Available§!!"
+  NOV_russian_surplus_armour_CET: "§0We will now be able to procure Russian Surplus Armour§!\n§YNew Decisions£decision_icon_small Will Be Available§!!"
+  NOV_russian_surplus_vehicles_CET: "§0We will now be able to procure Russian Surplus Light Vehicles§!\n§YNew Decisions£decision_icon_small Will Be Available§!!"
+
+  # Transnistrian Ideas 
+  PMR_russian_peacekeepers_CMT:0 "§RAslong as these peacekeepers are present Moldova will not attack us!§!"
+  PMR_ammo_depot_CMT:0 "§RIf Cobasna is captured without us doing something about the plant it will have catastrophic consequences!§!"
  # §R§!
 
  # CSTO

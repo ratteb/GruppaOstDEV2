@@ -217,6 +217,223 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/SOV_airborne_ifv_4.dds"
 	}
 
+	# NOVOROSSIYA 
+
+	SpriteType = {
+		name = "GFX_NOV_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/SOV_infantry_equipment_0.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_NOV_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/SOV_infantry_equipment_1.dds"
+	}
+
+		SpriteType = {
+		name = "GFX_NOV_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/SOV_infantry_equipment_2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_NOV_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/SOV_infantry_equipment_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_modernized_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/SOV_infantry_equipment_4.dds"
+	}
+
+		SpriteType = {
+		name = "GFX_NOV_modern_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/SOV_infantry_equipment_5.dds"
+	}
+	SpriteType = {
+		name = "GFX_NOV_modern_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/SOV_infantry_equipment_6.dds"
+	}
+	SpriteType = {
+		name = "GFX_NOV_modern_infantry_weapons3_medium"
+		texturefile = "gfx/interface/technologies/SOV_infantry_equipment_7.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_modern_infantry_weapons4_medium"
+		texturefile = "gfx/interface/technologies/SOV_infantry_equipment_8.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_modern_infantry_weapons5_medium"
+		texturefile = "gfx/interface/technologies/SOV_infantry_equipment_9.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_modern_infantry_weapons6_medium"
+		texturefile = "gfx/interface/technologies/SOV_infantry_equipment_10.dds"
+	}
+
+
+
+
+	SpriteType = {
+		name = "GFX_NOV_anti_tank_weapons_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_0.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_NOV_anti_tank_weapons2_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_1.dds"
+	}
+
+		SpriteType = {
+		name = "GFX_NOV_anti_tank_weapons3_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_NOV_anti_tank_weapons4_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_anti_tank_weapons5_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_4.dds"
+	}
+
+		SpriteType = {
+		name = "GFX_NOV_anti_tank_weapons6_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_5.dds"
+	}
+	SpriteType = {
+		name = "GFX_NOV_anti_tank_weapons7_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_modern_tank_medium"
+		texturefile = "gfx/interface/technologies/SOV_modern_tank_0.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_modern_tank1_medium"
+		texturefile = "gfx/interface/technologies/SOV_modern_tank_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_modern_tank2_medium"
+		texturefile = "gfx/interface/technologies/SOV_modern_tank_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_modern_tank3_medium"
+		texturefile = "gfx/interface/technologies/SOV_modern_tank_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_modern_tank4_medium"
+		texturefile = "gfx/interface/technologies/SOV_modern_tank_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_modern_tank5_medium"
+		texturefile = "gfx/interface/technologies/SOV_modern_tank_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_modern_tank6_medium"
+		texturefile = "gfx/interface/technologies/SOV_modern_tank_6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_apc_vehicle_medium"
+		texturefile = "gfx/interface/technologies/SOV_apc_equipment_0.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_apc_vehicle1_medium"
+		texturefile = "gfx/interface/technologies/SOV_apc_equipment_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_apc_vehicle2_medium"
+		texturefile = "gfx/interface/technologies/SOV_apc_equipment_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_apc_vehicle3_medium"
+		texturefile = "gfx/interface/technologies/SOV_apc_equipment_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_apc_vehicle4_medium"
+		texturefile = "gfx/interface/technologies/SOV_apc_equipment_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_apc_vehicle5_medium"
+		texturefile = "gfx/interface/technologies/SOV_apc_equipment_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_apc_vehicle6_medium"
+		texturefile = "gfx/interface/technologies/SOV_apc_equipment_6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_ifv_vehicle_medium"
+		texturefile = "gfx/interface/technologies/SOV_ifv_equipment_0.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_ifv_vehicle1_medium"
+		texturefile = "gfx/interface/technologies/SOV_ifv_equipment_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_ifv_vehicle2_medium"
+		texturefile = "gfx/interface/technologies/SOV_ifv_equipment_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_ifv_vehicle3_medium"
+		texturefile = "gfx/interface/technologies/SOV_ifv_equipment_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_ifv_vehicle4_medium"
+		texturefile = "gfx/interface/technologies/SOV_ifv_equipment_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_ifv_vehicle5_medium"
+		texturefile = "gfx/interface/technologies/SOV_ifv_equipment_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_airland_vehicle_medium"
+		texturefile = "gfx/interface/technologies/SOV_airborne_ifv_0.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_airland_vehicle1_medium"
+		texturefile = "gfx/interface/technologies/SOV_airborne_ifv_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_airland_vehicle2_medium"
+		texturefile = "gfx/interface/technologies/SOV_airborne_ifv_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_airland_vehicle3_medium"
+		texturefile = "gfx/interface/technologies/SOV_airborne_ifv_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_airland_vehicle4_medium"
+		texturefile = "gfx/interface/technologies/SOV_airborne_ifv_4.dds"
+	}
+
 	# UKRAINE 
 
 	SpriteType = {
