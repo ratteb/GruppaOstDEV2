@@ -1,0 +1,26 @@
+state={
+	id=983
+	name="STATE_983"
+	manpower = 324110
+	
+	state_category = wasteland
+
+	history={
+		owner = SYR
+		victory_points = {
+			1606 1
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SYR
+		add_core_of = KUR
+	}
+
+
+	provinces={
+		901 1606 1634 6883
+	}
+
+	local_supplies=4.0 
+}

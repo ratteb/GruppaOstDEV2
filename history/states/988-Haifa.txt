@@ -1,0 +1,21 @@
+state={
+	id=988
+	name="STATE_988"
+
+	history={
+		owner = ISR
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ISR
+	}
+
+	provinces={
+		13374
+	}
+	manpower=297000
+	buildings_max_level_factor=1.000
+	state_category=city
+
+	local_supplies=2.0 
+}

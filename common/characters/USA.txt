@@ -8,7 +8,7 @@ characters={
 		}
 		country_leader={
 			ideology=western_conservatism
-			desc = 
+			desc = USA_donald_trump_desc
 			expire="3000.1.1.1"
 			id=-1
 		}

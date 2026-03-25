@@ -1,0 +1,21 @@
+state={
+	id=987
+	name="STATE_987"
+
+	history={
+		owner = LEB
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = LEB
+	}
+
+	provinces={
+		13371 13372
+	}
+	manpower=200000
+	buildings_max_level_factor=1.000
+	state_category=town
+
+	local_supplies=2.0 
+}

@@ -1,0 +1,24 @@
+state={
+	id=991
+	name="STATE_991" #Jerusalem
+	manpower = 1000000
+	
+	state_category = rural
+
+	history={
+		owner = ISR
+		buildings = {
+			infrastructure = 3 #was: 5
+			industrial_complex = 1
+			air_base = 2
+		}
+		add_core_of = ISR
+		add_claim_of = PAL
+	}
+
+	provinces={
+		13380
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,25 @@
+
+	state={
+		id=990
+		name="STATE_990" #Palestine
+		manpower = 933142
+		
+		state_category = rural
+
+		history={
+			owner = PAL
+			buildings = {
+				infrastructure = 3 #was: 5
+				industrial_complex = 1
+				air_base = 2
+			}
+			add_core_of = PAL
+			add_claim_of = ISR
+		}
+
+		provinces={
+			13375 13376 13377 13378 13379 13381
+		}
+
+		local_supplies=0.0 
+	}

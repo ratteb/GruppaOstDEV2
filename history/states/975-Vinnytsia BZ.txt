@@ -1,6 +1,6 @@
 state={
 	id=975
-	name="Vinnytsia BZ"
+	name="STATE_975"
 	provinces={
 		9423 9435 
 	}

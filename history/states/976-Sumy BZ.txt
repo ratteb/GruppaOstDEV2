@@ -1,6 +1,6 @@
 state={
 	id=976
-	name="Sumy BZ"
+	name="STATE_976"
 	provinces={
 		501 3455
 	}

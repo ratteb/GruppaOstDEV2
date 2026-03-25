@@ -1,0 +1,16 @@
+characters={
+    ISR_benjamin_netanyahu={
+		name="Benjamin Netanyahu"
+		portraits={
+			civilian={
+				large=GFX_benjamin_netanyahu
+			}
+		}
+		country_leader={
+			ideology=western_conservatism
+			desc = ISR_benjamin_netanyahu_desc
+			expire="3000.1.1.1"
+			id=-1
+		}
+	}
+}

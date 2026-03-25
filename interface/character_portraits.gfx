@@ -86,4 +86,11 @@ spriteTypes = {
 	}
 
 	# Transnistira above this line
+
+		spriteType = {
+		name = "GFX_benjamin_netanyahu"
+		texturefile = "gfx/leaders/ISR/benjamin_netanyahu.dds"  
+	}
+
+	# Israel above this line
 }
