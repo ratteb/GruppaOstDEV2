@@ -127,6 +127,13 @@
  SOV_prepare_the_administration:0 "The New Cabinet"
  SOV_putinism_1000_year:0 "Putinism For 1000 Years!"
 
+ #USSR 5 YEAR PLAN TREE 
+ SOV_5_year_plan:0 "The 5 Year Plan"
+ SOV_fudge_numbers:0 "Fudge the Numbers"
+ SOV_no_corruption:0 "No to Corruption!"
+ SOV_peoples_plan:0 "The People's Plan"
+ SOV_industry_plan:0 "The Industry Plan"
+
  # Belarus Union State Tree
  BLR_signing_2027_unionstate_plan:0 "2027 Union State Plan"
  BLR_unionstate_economic_treaties:0 "Prepare Economic Treaties"

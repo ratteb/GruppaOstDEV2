@@ -24,6 +24,11 @@
   SOV_putin_absence_cet: "Gets event '§YDoctors Give Positive News!§!'"
   SOV_putin_death_cet: "Gets event '§YPutin Recovers!§!'\nGets event '§YCrisis in the Duma!§!'"
 
+  # USSR 5 Year Plan 
+  SOV_5_year_plan_CET:0 "§YAfter our Economic Reforms we will start a comprehensive§! §R5 Year Plan§! §Yto revitalize and rebuild our economy from the ground up.§!"
+  SOV_fudge_numbers_CET:0 "§YOur Corruption will go up significantly but the goals of the§! §R5 Year Plan§! §Ywill be easier to achieve.§!"
+  SOV_no_corruption_CET:0 "§YOur Corruption will not change however the goals of the§! §R5 Year Plan§! §Ywill be significantly harder to achieve.§!"
+
   # RUssian Ideas 
 
   SOV_rosgvardiya_CMT:0 "§RWe will get special ways to deal with terrorism and riots§!"

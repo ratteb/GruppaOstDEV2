@@ -1,0 +1,171 @@
+
+focus_tree = {
+	id = USSR01_focus_tree
+	
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = SOV
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 4000 y = 1000 }
+    # Putin Election 
+
+	focus = {
+		id = SOV_5_year_plan
+		icon = GFX_goal_SOV_5_year_plan
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_5_year_plan_CET
+	    }
+	}
+
+#Putin death 
+	focus = {
+		id = SOV_fudge_numbers
+		prerequisite = { focus = SOV_5_year_plan }
+		mutually_exclusive = { focus = SOV_no_corruption }
+		icon = GFX_goal_SOV_fudge_numbers
+		relative_position_id = SOV_5_year_plan
+		x = 3
+		y = 2
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_fudge_numbers_CET	
+	    }
+	}
+
+	
+
+	# Putin retire 
+	focus = {
+		id = SOV_no_corruption
+		prerequisite = { focus = SOV_5_year_plan }
+		mutually_exclusive = { focus = SOV_fudge_numbers }
+		icon = GFX_goal_SOV_no_corruption
+		relative_position_id = SOV_5_year_plan
+		x = -3
+		y = 2
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+			custom_effect_tooltip = SOV_no_corruption_CET
+	    }
+	}
+
+	focus = {
+		id = SOV_peoples_plan
+		prerequisite = { focus = SOV_no_corruption 
+		focus = SOV_fudge_numbers }
+
+		mutually_exclusive = { focus = SOV_industry_plan }
+		icon = GFX_goal_SOV_peoples_plan
+		relative_position_id = SOV_fudge_numbers
+		x = -2
+		y = 2
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+	    }
+	}
+
+	focus = {
+		id = SOV_industry_plan
+		prerequisite = { focus = SOV_no_corruption 
+		focus = SOV_fudge_numbers }
+
+		mutually_exclusive = { focus = SOV_peoples_plan }
+		icon = GFX_goal_SOV_industry_plan
+		relative_position_id = SOV_fudge_numbers
+		x = -4
+		y = 2
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+	    }
+	}
+}

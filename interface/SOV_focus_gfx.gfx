@@ -19,4 +19,30 @@ spriteTypes = {
 		name = "GFX_goal_SOV_announce_new_equipments"
 		texturefile = "gfx/interface/goals/focus_SOV_announce_equipment.dds"
 	}
+
+	# Hardliner USSR focus icons 
+
+	spriteType = {
+		name = "GFX_goal_SOV_5_year_plan"
+		texturefile = "gfx/interface/goals/SOV/USSR/focus_SOV_5_year_plan.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SOV_fudge_numbers"
+		texturefile = "gfx/interface/goals/SOV/USSR/focus_SOV_fudge_numbers.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SOV_no_corruption"
+		texturefile = "gfx/interface/goals/SOV/USSR/focus_SOV_no_corruption.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SOV_peoples_plan"
+		texturefile = "gfx/interface/goals/SOV/USSR/focus_SOV_peoples_plan.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_SOV_industry_plan"
+		texturefile = "gfx/interface/goals/SOV/USSR/focus_SOV_industry_plan.dds"
+	}
 }
