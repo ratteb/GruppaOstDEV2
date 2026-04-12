@@ -14,8 +14,8 @@ guiTypes = {
 
 		buttonType ={
 			name ="government_button01"
-			spriteType = "GFX_open_button"
-			position = { x= 51 y = -525 }
+			spriteType = "GFX_government_button"
+			position = { x= 51 y = -425 }
 			Orientation = "UPPER_LEFT"
 		}
     }

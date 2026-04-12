@@ -1,0 +1,9 @@
+spriteTypes = {
+	#Internal Events 
+	spriteType = {
+		name = "GFX_government_button"
+		texturefile = "gfx/interface/topbar/toolkit/open_government_window.dds"
+		noOfFrames = 2	
+	}
+   #news events 
+}
