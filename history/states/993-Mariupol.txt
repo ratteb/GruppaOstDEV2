@@ -1,0 +1,26 @@
+
+state={
+	id=993
+	name="STATE_993"
+	manpower = 400000
+	
+	state_category = city
+
+	history={
+		owner = NOV
+		buildings = {
+			infrastructure = 3 #was: 5
+		}
+		victory_points = {
+			13391 10
+		}
+		add_core_of = NOV
+		add_claim_by = UKR
+	}
+
+	provinces={
+		13389 13390 13391
+	}
+
+	local_supplies=10.0 
+}

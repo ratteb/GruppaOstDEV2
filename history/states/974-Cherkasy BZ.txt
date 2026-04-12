@@ -2,7 +2,7 @@ state={
 	id=974
 	name="STATE_974"
 	provinces={
-		434 458 3452 6451 6478 11409 
+		13401 13402
 	}
 			history={
 		owner = UKR

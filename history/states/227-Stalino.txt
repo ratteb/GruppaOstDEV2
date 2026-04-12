@@ -1,7 +1,7 @@
 
 state={
 	id=227
-	name="Donetsk"
+	name="STATE_227"
 	manpower = 900000
 	
 	state_category = city
@@ -12,14 +12,14 @@ state={
 			infrastructure = 3 #was: 5
 		}
 		victory_points = {
-			6474 30
+			13392 15
 		}
 		add_core_of = NOV
 		add_claim_by = UKR
 	}
 
 	provinces={
-		3421 6474 6493 
+		3421 6474 6493 13388 13392
 	}
 
 	local_supplies=10.0 

@@ -1,4 +1,4 @@
-﻿capital = 227 #Baku
+﻿capital = 994 #Baku
 
 oob = "NOV_2027"
 
