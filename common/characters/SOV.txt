@@ -141,4 +141,34 @@ characters={
 			}
 		}
 	}
+
+	SOV_ivan_melinkov={
+		name="Ivan Melinkov"
+		portraits={
+			civilian={
+				large=GFX_Vladimir_Putin01
+			}
+		}
+		country_leader={
+			ideology=zyuganovism
+			desc = ""
+			expire="3000.1.1.1"
+		}
+	}
+
+	SOV_leonid_slutsky={
+		name="Leonid Slutsky"
+		portraits={
+			civilian={
+				large=GFX_Vladimir_Putin01
+			}
+		}
+		country_leader={
+			ideology=ultranationalist_dictatorship
+			desc = ""
+			expire="3000.1.1.1"
+		}
+	}
+
+
 }

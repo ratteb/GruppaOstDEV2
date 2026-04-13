@@ -72,35 +72,35 @@ units = {
 		location = 6414
 		division_template = "Guards Tank Regiment (1st Guards Tank Army)"
 		start_experience_factor = 0.87
-		start_equipment_factor = 1
+		start_equipment_factor = 0.01
 	}
 	division = {
 		name = "1st Guards Motor Rifle Regiment"
 		location = 401
 		division_template = "Guards Motor Rifle Regiment (1st Guards Tank Army)"
 		start_experience_factor = 0.87
-		start_equipment_factor = 1
+		start_equipment_factor = 0.01
 	}
 	division = {
 		name = "15th Guards Motor Rifle Regiment"
 		location = 6414
 		division_template = "Guards Motor Rifle Regiment (1st Guards Tank Army)"
 		start_experience_factor = 0.87
-		start_equipment_factor = 1
+		start_equipment_factor = 0.01
 	}
 	division = {
 		name = "136th Reconnaissance Battalion"
 		location = 6414
 		division_template = "Reconnaissance Battalion (1st Guards Tank Army)"
 		start_experience_factor = 0.87
-		start_equipment_factor = 1
+		start_equipment_factor = 0.01
 	}
 	division = {
 		name = "147th Self-Propelled Artillery Regiment"
 		location = 6414
 		division_template = "Self Propelled Artillery Regiment (1st Guards Tank Army)"
 		start_experience_factor = 0.87
-		start_equipment_factor = 1
+		start_equipment_factor = 0.01
 	}
 
 	# 4th Guards Tank Division 
@@ -109,34 +109,34 @@ units = {
 		location = 11217
 		division_template = "Guards Tank Regiment (1st Guards Tank Army)"
 		start_experience_factor = 0.87
-		start_equipment_factor = 1
+		start_equipment_factor = 0.01
 	}
 	division = {
 		name = "13th Guards Tank Regiment"
 		location = 11217
 		division_template = "Guards Tank Regiment (1st Guards Tank Army)"
 		start_experience_factor = 0.87
-		start_equipment_factor = 1
+		start_equipment_factor = 0.01
 	}
 	division = {
 		name = "423rd Guards Motor Rifle Regiment"
 		location = 11217
 		division_template = "Guards Motor Rifle Regiment (1st Guards Tank Army)"
 		start_experience_factor = 0.87
-		start_equipment_factor = 1
+		start_equipment_factor = 0.01
 	}
 	division = {
 		name = "137th Reconnaissance Battalion"
 		location = 11217
 		division_template = "Reconnaissance Battalion (1st Guards Tank Army)"
 		start_experience_factor = 0.87
-		start_equipment_factor = 1
+		start_equipment_factor = 0.01
 	}
 	division = {
 		name = "275th Self-Propelled Artillery Regiment"
 		location = 11217
 		division_template = "Self Propelled Artillery Regiment (1st Guards Tank Army)"
 		start_experience_factor = 0.87
-		start_equipment_factor = 1
+		start_equipment_factor = 0.01
 	}
 }

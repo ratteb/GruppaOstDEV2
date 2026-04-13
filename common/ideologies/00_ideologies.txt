@@ -139,6 +139,10 @@ ideologies = {
 			absolute_monarchy = {
             }
 
+			ultranationalist_dictatorship = {
+				
+			}
+
 		}
 
 		dynamic_faction_names = {
