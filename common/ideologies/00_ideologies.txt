@@ -140,7 +140,7 @@ ideologies = {
             }
 
 			ultranationalist_dictatorship = {
-				
+
 			}
 
 		}
@@ -364,6 +364,7 @@ ideologies = {
 			hidden_modifier = { join_faction_tension = -0.1 }
 			embargo_threshold_factor = 0.5
 			lend_lease_tension = 0.50
+			custom_modifier_tooltip = communism_CMT
 		}
 
 		faction_modifiers = {
