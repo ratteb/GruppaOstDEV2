@@ -5,6 +5,12 @@ spriteTypes = {
 		texturefile = "gfx/leaders/SOV/vladimir_putin01.dds"
 	}
 
+	spriteType = {
+		name = "GFX_ivan_melinkov"
+		texturefile = "gfx/leaders/SOV/ivan_melinkov.dds"
+	}
+
+
 	#Russia above this line
 	spriteType = {
 		name = "GFX_denis_pushilin"

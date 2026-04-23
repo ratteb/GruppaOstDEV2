@@ -8,6 +8,29 @@ add_namespace = concept_event
 add_namespace = test_superevent
 
 # Irrelevant for now 
+# Commie Russia 
+country_event = {
+	id = test.1
+	title = test.1.t
+	desc = test.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # May They Be Saved....
+		name = test.1.a
+		ai_chance = { factor = 90 }
+		load_focus_tree = USSR01_focus_tree
+		add_dynamic_modifier = { modifier = SOV_soviet_armed_forces }
+		remove_dynamic_modifier = { modifier = SOV_russian_armed_forces }
+		set_politics = {
+			ruling_party = communism 
+			elections_allowed = no 
+			long_name = SOV_ussr_communism_party_long
+			name = SOV_ussr_communism_party
+		}
+    }
+}
 country_event = {
 	id = ukraine.1
 	title = ukraine.1.t

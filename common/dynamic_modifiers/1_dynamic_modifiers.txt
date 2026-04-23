@@ -54,6 +54,34 @@
 	land_night_attack = RAF_nightvis_variable
 }
 
+SOV_soviet_armed_forces = {
+	icon = "GFX_idea_SOV_soviet_armed_forces"
+
+
+	conscription_factor = RAF_manpower_factor_variable
+	conscription  = RAF_manpower_variable 
+	acclimatization_cold_climate_gain_factor = RAF_cold_defense_variable
+	acclimatization_hot_climate_gain_factor = RAF_hot_defense_variable
+	air_superiority_bonus_in_combat = RAF_cas_bonus_variable
+	army_attack_factor = RAF_attack_bonus_variable
+	army_attack_speed_factor = RAF_attack_speed_variable
+	army_defence_factor = RAF_defense_variable 
+	army_speed_factor = RAF_speed_variable
+	army_morale_factor = RAF_morale_variable
+	army_org_factor = RAF_org_variable
+	army_org_regain = RAF_recovery_variable
+	breakthrough_factor = RAF_breakthrough_variable
+	cas_damage_reduction = RAF_camouflage_variable
+	dig_in_speed_factor = RAF_dig_speed_variable
+	max_dig_in_factor = RAF_dig_max_variable
+	max_planning_factor = RAF_planning_variable
+	planning_speed = RAF_planning_speed_variable
+	experience_loss_factor = RAF_xp_protection_variable
+    experience_gain_army_factor = RAF_xp_gain_variable
+	special_forces_min = RAF_special_forces_variable
+	land_night_attack = RAF_nightvis_variable
+}
+
  SOV_gerasimov_doctrine = {
 	icon = "GFX_idea_unknown"
 

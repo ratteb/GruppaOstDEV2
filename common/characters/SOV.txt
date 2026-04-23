@@ -146,7 +146,7 @@ characters={
 		name="Ivan Melinkov"
 		portraits={
 			civilian={
-				large=GFX_Vladimir_Putin01
+				large=GFX_ivan_melinkov
 			}
 		}
 		country_leader={
