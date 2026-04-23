@@ -13,6 +13,39 @@ spriteTypes = {
 	##################################
 	### Large images for DIVISIONS ###
 
+	spriteType = { 
+     name = "GFX_unit_ifv_battalion_icon_medium"				
+     textureFile = "gfx/interface/counters/divisions_large/ifv_battalion_icon.dds"  ## Thats the paradox shepe, but you can use any path and file naming you want
+     noOfFrames = 2
+   }
+
+   spriteType = { 
+     name = "GFX_unit_ifv_battalion_icon_medium_white" # Do not omit "medium"						
+     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_ifv_battalion_icon.dds" 
+     noOfFrames = 2
+   }
+
+   	spriteType = { 
+     name = "GFX_unit_apc_battalion_icon_medium"				
+     textureFile = "gfx/interface/counters/divisions_large/apc_battalion_icon.dds"  ## Thats the paradox shepe, but you can use any path and file naming you want
+     noOfFrames = 2
+   }
+
+   spriteType = { 
+     name = "GFX_unit_apc_battalion_icon_medium_white" # Do not omit "medium"						
+     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_apc_battalion_icon.dds" 
+     noOfFrames = 2
+   }
+
+   spriteType = {
+     name = "GFX_unit_ifv_battalion_icon_small"
+     texturefile = "gfx/texticons/unit_ifv_battalion_icon_small.dds"
+     legacy_lazy_load = no
+     noOfFrames = 2		
+   }
+
+
+
 	spriteType = { name = "GFX_unit_blackshirt_assault_battalion_icon_medium" 				textureFile = "gfx/interface/counters/divisions_large/unit_blackshirt_assault_battalion_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_unit_militia_icon_medium" 									textureFile = "gfx/interface/counters/divisions_large/unit_militia_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_unit_modern_sp_artillery_brigade_icon_medium" 				textureFile = "gfx/interface/counters/divisions_large/unit_modern_armor_artillery_icon.dds" noOfFrames = 2 }
