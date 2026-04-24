@@ -1,4 +1,55 @@
 ﻿l_english:
+
+ #
+ marxism_leninism:0 "Marxism-Leninist"
+ marxism_leninism_noun:0 "Marxism-Leninism"
+ marxism_leninism_desc:0 "Socialist Regime"
+ #
+ authoritarian_socialism:0 "Authoritarian Socialist"
+ authoritarian_socialism_noun:0 "Authoritarian Socialism"
+ authoritarian_socialism_desc:0 "Socialist Regime"
+ #
+ democratic_socialism:0 "Democratic Socialist"
+ democratic_socialism_noun:0 "Democratic Socialism"
+ democratic_socialism_desc:0 "Socialist Regime"
+ #
+ social_democracy:0 "Social Democrat"
+ social_democracy_noun:0 "Social Democracy"
+ social_democracy_desc:0 "Democratic Regime"
+ #
+ progressivism:0 "Progressive"
+ progressivism_noun:0 "Progressivism"
+ progressivism_desc:0 "Democratic Regime"
+ #
+ centrism:0 "Centrist"
+ centrism_noun:0 "Centrism"
+ centrism_desc:0 "Democratic Regime"
+ #
+ conservatism:0 "Conservative"
+ conservatism_noun:0 "Conservatism"
+ conservatism_desc:0 "Democratic Regime"
+ #
+ paternalism:0 "Paternalist"
+ paternalism_noun:0 "Paternalism"
+ paternalism_desc:0 "Autocratic Regime"
+ #
+ despotism:0 "Despotist"
+ despotism_noun:0 "Despotism"
+ despotism_desc:0 "Autocratic Regime"
+ #
+ salafism:0 "Salafist"
+ salafism_noun:0 "Salafism"
+ salafism_desc:0 "Nationalist Regime"
+ #
+ fascism:0 "Fascist"
+ fascism_noun:0 "Fascism"
+ fascism_desc:0 "Nationalist Regime"
+ #
+ national_socialism:0 "National Socialism"
+ national_socialism_noun:0 "National Socialism"
+ national_socialism_desc:0 "Nationalist Regime"
+
+ # ORIGINAL IDEOLOGIES
  westernism:0 "Western"
  westernism_noun:0 "Westernism"
  westernism_desc:0 "Western Regime"
