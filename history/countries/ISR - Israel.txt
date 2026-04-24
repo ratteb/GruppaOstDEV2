@@ -123,5 +123,14 @@ create_country_leader = {
 	}
 }
 
+ISR = {
+    add_opinion_modifier = {
+        target = USA
+        modifier = USA_aipac_israel
+    }
 
-
+	add_opinion_modifier = {
+        target = USA
+        modifier = USA_aipac_israel_trade
+    }
+}
