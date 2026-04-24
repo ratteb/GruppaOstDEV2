@@ -421,18 +421,21 @@ add_timed_idea = {
 	days = 366
 }
 set_politics = {
-	ruling_party = easternism
+	ruling_party = paternalism
 	last_election = "2024.3.17"
 	election_frequency = 72
 	elections_allowed = yes
 }
 set_popularities = {
-	westernism = 1
-	communism = 10
-	neutrality = 6
-	easternism = 74
-	socialism = 3
-	despotism = 6
+	progressivism = 1
+	marxism_leninism = 5
+	authoritarian_socialism = 5
+	centrism = 6
+	paternalism = 74
+	democratic_socialism = 3
+	fascism = 3
+	national_socialism = 1 
+	despotism = 2
 }
 
 create_faction_from_template = faction_template_csto 

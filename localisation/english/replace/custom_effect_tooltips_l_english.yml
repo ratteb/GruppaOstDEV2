@@ -74,6 +74,9 @@
   CHI_loyalty_xi_CET:0 "§RWe Will Move Greatly Towards Xi'ism§!"
   CHI_loyalty_china_CET:0 "§OWe Will Move Greatly Towards Nationalism§!"  
   CHI_xi_legacy_secure_CET:0 "§RWe Will Decide the Future of China.§!"
+  # USA
+  USA_aipac_cmt:0 "Our opinion of §YState of Israel§!: §G+35§!\n§YState of Israel§! opinion of us: §G+35§!"
+
  # Ukraine Political Crisis 
   UKR_political_crisis_info_CET: "§RYou won't know the lore of the crisis§!"
   UKR_political_crisis_info2_CET: "§0Good Luck in this long winded fight!§!"
