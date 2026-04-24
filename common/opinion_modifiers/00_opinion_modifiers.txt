@@ -1170,5 +1170,14 @@ opinion_modifiers = {
 		value = 10
 		months = 50	
 	}
-	
+
+	# USA AIPAC
+	USA_aipac_israel = {
+	value = 35
+	}
+
+		USA_aipac_israel_trade = {
+	value = 50
+	trade = yes
+	}
 }

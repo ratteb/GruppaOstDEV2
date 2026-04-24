@@ -1,6 +1,7 @@
 ideas = {
 
-    country = { USA_the_second_amendment = {
+    country = { 
+		USA_the_second_amendment = {
 			picture = GFX_idea_USA_the_second_amendment
 			
 			allowed = {
@@ -26,6 +27,36 @@ ideas = {
 				army_core_attack_factor = 0.03
 				war_support_factor = 0.01
 				stability_factor = -0.01
+			}
+		}
+	}
+    # Second Amendment Above this line
+
+	country = { 
+		USA_aipac = {
+			picture = GFX_placeholder_ideas
+			
+			allowed = {
+				tag = USA
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.2
+				stability_factor = -0.02
 			}
 		}
 	}
