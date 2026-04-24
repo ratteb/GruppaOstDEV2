@@ -217,6 +217,76 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/SOV_airborne_ifv_4.dds"
 	}
 
+	# UKRAINE 
+
+	SpriteType = {
+		name = "GFX_UKR_modern_tank_medium"
+		texturefile = "gfx/interface/technologies/SOV_modern_tank_0.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_UKR_modern_tank1_medium"
+		texturefile = "gfx/interface/technologies/SOV_modern_tank_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_UKR_modern_tank2_medium"
+		texturefile = "gfx/interface/technologies/SOV_modern_tank_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_UKR_modern_tank3_medium"
+		texturefile = "gfx/interface/technologies/SOV_modern_tank_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_UKR_modern_tank4_medium"
+		texturefile = "gfx/interface/technologies/UKR_modern_tank_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_UKR_modern_tank5_medium"
+		texturefile = "gfx/interface/technologies/UKR_modern_tank_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_UKR_modern_tank6_medium"
+		texturefile = "gfx/interface/technologies/UKR_modern_tank_6.dds"
+	}
+
+
+
+	SpriteType = {
+		name = "GFX_UKR_ifv_vehicle_medium"
+		texturefile = "gfx/interface/technologies/UKR_ifv_equipment_0.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_UKR_ifv_vehicle1_medium"
+		texturefile = "gfx/interface/technologies/SOV_ifv_equipment_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_UKR_ifv_vehicle2_medium"
+		texturefile = "gfx/interface/technologies/UKR_ifv_equipment_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_UKR_ifv_vehicle3_medium"
+		texturefile = "gfx/interface/technologies/UKR_ifv_equipment_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_UKR_ifv_vehicle4_medium"
+		texturefile = "gfx/interface/technologies/UKR_ifv_equipment_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_UKR_ifv_vehicle5_medium"
+		texturefile = "gfx/interface/technologies/SOV_ifv_equipment_3.dds"
+	}
+
+
 	# NOVOROSSIYA 
 
 	SpriteType = {
