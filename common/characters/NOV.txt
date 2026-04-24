@@ -7,7 +7,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=putinism
+			ideology=paternalism_putinism
 			desc = NOV_denis_pushilin_desc
 			expire="3000.1.1.1"
 			id=-1

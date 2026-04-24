@@ -192,19 +192,21 @@ add_ideas = {
 }
 recruit_character = UKR_ihor_palytsya
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = conservatism
 	last_election = "2025.8.28"
 	election_frequency = 64
 	elections_allowed = yes
 }
 
 set_popularities = {
-	westernism = 27
-	communism = 0
-	neutrality = 32
-	easternism = 0
-	socialism = 19
-	despotism = 22
+	progressivism = 9 
+	centrism = 18
+	conservatism = 32
+	democratic_socialism = 17
+	authoritarian_socialism = 2 
+	despotism = 9
+	fascism = 7
+	national_socialism = 6
 }
 set_country_flag = UKR_all_is_fine
 create_country_leader = {

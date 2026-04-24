@@ -70,7 +70,7 @@
  PMR_easternism_party_long:0 "Respublikanskaya partiya 'Obnovleniye'"
  PMR_communism_party:0 "PKP"
  PMR_communism_party_long:0 "Pridnestrovskaya kommunisticheskaya partiya"
- NOV_easternism_party:0 "Yedinaya Rossiya-Novorossiya"
+ NOV_paternalism_party:0 "Yedinaya Rossiya-Novorossiya"
  AUS_communism_party:0 "KPÖ"
  AUS_communism_party_long:0 "Kommunistische Partei Österreichs"
  AUS_democratic_party:0 "SDAPÖ"
@@ -627,10 +627,12 @@
  MNT_democratic_party:0 "Democracy League"
  MNT_communism_party:0 "Communist Party of Montenegro" #or KPCG
  MNT_neutrality_party:0 "Federalist Party" # Montenegrin ultra nationalists, start democtratic right wing but went full fascist collaboration in 41'
- UKR_despotism_party:0 "Azov Brigada"
+ UKR_despotism_party:0 "Azov Brigade"
+ UKR_fascism_party:0 "Right Sector"
+ UKR_national_socialism_party:0 "Svoboda"
  UKR_democratic_party:0 "Ukrainian National Democratic Alliance" # or UNDO
  UKR_communism_party:0 "Communist Party of Ukraine"
- UKR_neutrality_party:0 "Za Maybutnye"
+ UKR_conservatism_party:0 "Za Maybutnye"
  UKR_military_junta_party:0 "Azov"
  GEO_fascism_party:0 "Tbilisi Council"
  GEO_democratic_party:0 "Social Democratic Party of Georgia"

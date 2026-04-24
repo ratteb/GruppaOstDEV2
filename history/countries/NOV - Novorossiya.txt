@@ -200,7 +200,7 @@ if = {
 	}
 }
 set_politics = {
-	ruling_party = easternism
+	ruling_party = paternalism
 	last_election = "2024.3.17"
 	election_frequency = 72
 	elections_allowed = yes
@@ -215,10 +215,12 @@ add_opinion_modifier = {
 	modifier = federal_republic_SOV
 }
 set_popularities = {
-	westernism = 10
-	communism = 5
-	neutrality = 20
-	easternism = 65
+	progressivism = 2
+	social_democracy = 2
+	conservatism = 6
+	authoritarian_socialism = 5
+	centrism = 20
+	paternalism = 65
 	socialism = 0
 	despotism = 0
 }
