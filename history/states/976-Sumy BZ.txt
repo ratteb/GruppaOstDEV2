@@ -9,7 +9,8 @@ state={
 		add_core_of = UKR
 		set_demilitarized_zone = yes
 	}
-	manpower=0
+	manpower=1130
+	state_category = town
 	buildings_max_level_factor=1
 	local_supplies=0
 }

@@ -2,7 +2,7 @@
 state={
 	id=228
 	name="STATE_228" # Lugansk City
-	manpower = 400000
+	manpower = 1450000
 	
 	state_category = town
 
