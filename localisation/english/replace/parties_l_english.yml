@@ -64,6 +64,8 @@
  SOV_despotism_party:0 "LDPR"
  SOV_despotism_party_long:0 "Liberalno-demokraticheskaya partiya Rossii"
  SOV_paternalism_party:0 "Yedinaya Rossiya"
+ SOV_national_socialism_party:0 "DR"
+ SOV_national_socialism_party_long:0 "Drugaya Rossiya E. V. Limonova"
  PMR_easternism_party:0 "Obnovlenie"
  PMR_easternism_party_long:0 "Respublikanskaya partiya 'Obnovleniye'"
  PMR_communism_party:0 "PKP"
