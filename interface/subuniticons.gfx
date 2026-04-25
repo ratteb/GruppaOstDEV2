@@ -37,6 +37,30 @@ spriteTypes = {
      noOfFrames = 2
    }
 
+   spriteType = { 
+     name = "GFX_unit_spg_battalion_icon_medium"				
+     textureFile = "gfx/interface/counters/divisions_large/spg_battalion_icon.dds"  ## Thats the paradox shepe, but you can use any path and file naming you want
+     noOfFrames = 2
+   }
+
+   spriteType = { 
+     name = "GFX_unit_spg_battalion_icon_medium_white" # Do not omit "medium"						
+     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_spg_battalion_icon.dds" 
+     noOfFrames = 2
+   }
+
+    spriteType = { 
+     name = "GFX_unit_mechanized_airborne_icon_medium"				
+     textureFile = "gfx/interface/counters/divisions_large/mechanized_airborne_icon.dds"  ## Thats the paradox shepe, but you can use any path and file naming you want
+     noOfFrames = 2
+   }
+
+   spriteType = { 
+     name = "GFX_unit_mechanized_airborne_icon_medium_white" # Do not omit "medium"						
+     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_mechanized_airborne_icon.dds" 
+     noOfFrames = 2
+   }
+
    spriteType = {
      name = "GFX_unit_ifv_battalion_icon_small"
      texturefile = "gfx/texticons/unit_ifv_battalion_icon_small.dds"
