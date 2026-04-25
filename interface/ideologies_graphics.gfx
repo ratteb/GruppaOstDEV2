@@ -30,5 +30,12 @@ spriteTypes = {
 		name = "GFX_ideology_salafism_group"
 		texturefile = "gfx/interface/ideologies/salafism_group.dds"
 	}
-
+		spriteType = {
+		name = "GFX_ideology_conservatism_trumpism"
+		texturefile = "gfx/interface/ideologies/conservatism_trumpism.dds"
+	}
+		spriteType = {
+		name = "GFX_ideology_paternalism_putinism"
+		texturefile = "gfx/interface/ideologies/paternalism_putinism.dds"
+	}
 }

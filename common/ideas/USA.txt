@@ -34,7 +34,7 @@ ideas = {
 
 	country = { 
 		USA_aipac = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_USA_aipac
 			
 			allowed = {
 				tag = USA

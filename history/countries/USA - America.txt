@@ -107,7 +107,7 @@ if = {
 	}
 }
 set_politics = {
-	ruling_party = progressivism
+	ruling_party = conservatism
 	last_election = "2024.11.5"
 	election_frequency = 48
 	elections_allowed = yes
@@ -147,12 +147,13 @@ add_to_faction = ALB
 add_to_faction = BOS
 
 set_popularities = {
-	progressivism = 98
-	marxism_leninism = 0
-	centrism = 1
-	paternalism = 0
+	progressivism = 43
+	marxism_leninism = 2
 	authoritarian_socialism = 1
-	despotism = 0
+	centrism = 5
+	conservatism = 45
+	democratic_socialism = 3
+	fascism = 1
 }
 
 create_country_leader = {
