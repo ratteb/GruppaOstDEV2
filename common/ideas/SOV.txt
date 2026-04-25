@@ -34,7 +34,7 @@ ideas = {
         # Economic stagnation above this line 
 
 		SOV_za_rodinu = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = SOV
@@ -89,7 +89,7 @@ ideas = {
 			}
 		}
 		SOV_russkiy_mir01 = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 			}
@@ -115,7 +115,7 @@ ideas = {
 			}
 		}
 	    SOV_idea_suffering_from_purges = {
-		    picture = GFX_placeholder_ideas
+		    picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = SOV
@@ -143,7 +143,7 @@ ideas = {
 		}
 
 	    SOV_silence_critics = {
-		    picture = GFX_placeholder_ideas
+		    picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = SOV
@@ -171,7 +171,7 @@ ideas = {
 			}
 		}
 		SOV_CSTO_leader = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = SOV
@@ -203,7 +203,7 @@ ideas = {
 			}
 		}
 		CSTO_training = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 			}
@@ -230,7 +230,7 @@ ideas = {
 			}
 		}
 		CSTO_production = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 			}
@@ -259,7 +259,7 @@ ideas = {
 		}
 
 		SOV_SMO = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = SOV
@@ -285,7 +285,7 @@ ideas = {
 		}
 
 		SOV_EU_sanction = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = SOV
@@ -311,7 +311,7 @@ ideas = {
 		}
 
 		SOV_US_sanction = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = SOV

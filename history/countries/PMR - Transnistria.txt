@@ -88,18 +88,18 @@ if = {
 
 recruit_character = PMR_vadim_krasnoselsky
 set_politics = {
-	ruling_party = easternism
+	ruling_party = paternalism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	westernism = 2
-	communism = 13
-	neutrality = 6
-	easternism = 42
-	socialism = 24
+	progressivism = 2
+	marxism_leninism = 13
+	centrism = 6
+	paternalism = 42
+	authoritarian_socialism = 24
 	despotism = 13
 }
 

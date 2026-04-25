@@ -2,7 +2,7 @@ ideas = {
 
 	country = {
 		KOR_juche_policy = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = KOR
@@ -33,7 +33,7 @@ ideas = {
 			}
 		}
 		KOR_songun_policy = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = KOR

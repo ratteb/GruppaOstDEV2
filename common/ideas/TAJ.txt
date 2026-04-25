@@ -2,7 +2,7 @@ ideas = {
 
 	country = {
 		TAJ_CSTO_member01 = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = TAJ

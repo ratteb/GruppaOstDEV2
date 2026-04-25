@@ -109,17 +109,17 @@ add_ideas = {
 recruit_character = ZAK_farkas_sandor
 
 set_politics = {
-	ruling_party = westernism
+	ruling_party = progressivism
 	last_election = "2025.11.23"
 	elections_allowed = no
 }
 
 set_popularities = {
-	westernism = 36
-	communism = 3
-	neutrality = 30
-	easternism = 23
-	socialism = 3
+	progressivism = 36
+	marxism_leninism = 3
+	centrism = 30
+	paternalism = 23
+	authoritarian_socialism = 3
 	despotism = 5
 }
 

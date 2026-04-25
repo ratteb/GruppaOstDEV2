@@ -93,11 +93,11 @@ set_politics = {
 }
 
 set_popularities = {
-	westernism = 0
-	communism = 0
-	neutrality = 0
-	easternism = 0
-	socialism = 0
+	progressivism = 0
+	marxism_leninism = 0
+	centrism = 0
+	paternalism = 0
+	authoritarian_socialism = 0
 	despotism = 100
 }
 

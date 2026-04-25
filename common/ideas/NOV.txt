@@ -2,7 +2,7 @@ ideas = {
 
 	country = {
 		NOV_azov_insurgency = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = NOV
@@ -31,7 +31,7 @@ ideas = {
 		}
 
 		azov_terror_bombing = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = NOV
@@ -114,7 +114,7 @@ ideas = {
 		}
 
 		NOV_russian_dome_of_freedom_construction = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = NOV
@@ -143,7 +143,7 @@ ideas = {
 		}
 
 		NOV_strengthen_the_novorossiyan_defense_command = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = NOV
@@ -171,7 +171,7 @@ ideas = {
 		}
 
 		NOV_za_novorossi= {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = NOV
@@ -199,7 +199,7 @@ ideas = {
 			}
 		}
 		NOV_ukrainian_partisans= {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = NOV
@@ -227,7 +227,7 @@ ideas = {
 			}
 		}
 		NOV_civil_governments_idea= {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = NOV
@@ -255,7 +255,7 @@ ideas = {
 			}
 		}
 		NOV_memories_of_donbass = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = NOV
@@ -279,7 +279,7 @@ ideas = {
 			}
 		}
 		NOV_memories_of_svo = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = NOV

@@ -107,7 +107,7 @@ if = {
 	}
 }
 set_politics = {
-	ruling_party = westernism
+	ruling_party = progressivism
 	last_election = "2024.11.5"
 	election_frequency = 48
 	elections_allowed = yes
@@ -147,11 +147,11 @@ add_to_faction = ALB
 add_to_faction = BOS
 
 set_popularities = {
-	westernism = 98
-	communism = 0
-	neutrality = 1
-	easternism = 0
-	socialism = 1
+	progressivism = 98
+	marxism_leninism = 0
+	centrism = 1
+	paternalism = 0
+	authoritarian_socialism = 1
 	despotism = 0
 }
 

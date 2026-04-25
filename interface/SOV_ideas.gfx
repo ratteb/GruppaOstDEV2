@@ -1,4 +1,9 @@
 spriteTypes = {
+
+	spriteType = {
+		name = "GFX_idea_no_data"
+		texturefile = "gfx/interface/ideas/idea_unknown_natspir.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_idea_SOV_economic_stagnation01"

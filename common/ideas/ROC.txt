@@ -2,7 +2,7 @@ ideas = {
 
 	country = {
 		ROC_taiwan_crisis01 = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = ROC

@@ -115,18 +115,18 @@ add_ideas = {
 	BLR_CSTO_member01
 }
 set_politics = {
-	ruling_party = easternism
+	ruling_party = paternalism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	westernism = 20
-	communism = 5
-	neutrality = 7
-	easternism = 68
-	socialism = 0
+	progressivism = 20
+	marxism_leninism = 5
+	centrism = 7
+	paternalism = 68
+	authoritarian_socialism = 0
 	despotism = 0
 }
 

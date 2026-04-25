@@ -2,7 +2,7 @@ ideas = {
 
 	country = {
 		BLR_CSTO_member01 = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = BLR
@@ -36,7 +36,7 @@ ideas = {
 	
 
 		BLR_russian_sanctions = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = BLR
@@ -68,7 +68,7 @@ ideas = {
 		}
 
 		BLR_anti_lukashenko_protests = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = BLR
@@ -98,7 +98,7 @@ ideas = {
 		}
 
 		BLR_reliant_russia = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = BLR
@@ -128,7 +128,7 @@ ideas = {
 	
 
 		BLR_SVO = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = BLR
@@ -161,7 +161,7 @@ ideas = {
 		}
 
 		BLR_new_government = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = BLR
@@ -191,7 +191,7 @@ ideas = {
 		}
 
 		BLR_russian_independence = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
 				tag = BLR

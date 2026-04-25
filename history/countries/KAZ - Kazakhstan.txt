@@ -93,18 +93,18 @@ set_country_flag = is_csto_member
 
 recruit_character = KAZ_kassym_jomart_tokayev
 set_politics = {
-	ruling_party = easternism
+	ruling_party = paternalism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	westernism = 15
-	communism = 1
-	neutrality = 22
-	easternism = 49
-	socialism = 13
+	progressivism = 15
+	marxism_leninism = 1
+	centrism = 22
+	paternalism = 49
+	authoritarian_socialism = 13
 	despotism = 0
 }
 

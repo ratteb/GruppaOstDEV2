@@ -221,7 +221,7 @@ set_popularities = {
 	authoritarian_socialism = 5
 	centrism = 20
 	paternalism = 65
-	socialism = 0
+	authoritarian_socialism = 0
 	despotism = 0
 }
 

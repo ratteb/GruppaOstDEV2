@@ -83,7 +83,7 @@ SOV_soviet_armed_forces = {
 }
 
  SOV_gerasimov_doctrine = {
-	icon = "GFX_idea_unknown"
+	icon = "GFX_idea_no_data"
 
 
 	conscription_factor = GRSD_manpower_factor_variable
@@ -111,7 +111,7 @@ SOV_soviet_armed_forces = {
 }
 
 SOV_sotnik_program = {
-	icon = "GFX_idea_unknown"
+	icon = "GFX_idea_no_data"
 
 	custom_modifier_tooltip = SOV_sotnik_program_cmt
 
@@ -143,7 +143,7 @@ SOV_sotnik_program = {
 	industrial_capacity_factory = sotnik_production_speed_variable
 }
  SOV_demographics_crisis = {
-	icon = "GFX_idea_unknown"
+	icon = "GFX_idea_no_data"
 
 
 	monthly_population = SOV_DC_population_growth_variable
@@ -165,7 +165,7 @@ SOV_sotnik_program = {
  }
 
   KOR_korean_peoples_army = {
-	icon = "GFX_idea_unknown"
+	icon = "GFX_idea_no_data"
 
 
 	conscription_factor = KOR_manpower_factor_variable
@@ -193,7 +193,7 @@ SOV_sotnik_program = {
 }
 
 KOR_economic_situation = {
-	icon = "GFX_idea_unknown"
+	icon = "GFX_idea_no_data"
 
 	consumer_goods_factor = KOR_cg 
 	industrial_capacity_factory = KOR_ic 
@@ -208,7 +208,7 @@ KOR_economic_situation = {
 
 }
 CHI_chinese_century_idea = {
-	icon = "GFX_idea_unknown"
+	icon = "GFX_idea_no_data"
 
 	consumer_goods_factor = CHI_cg 
 	industrial_capacity_factory = CHI_ic 
@@ -229,7 +229,7 @@ CHI_chinese_century_idea = {
 
 }
  CHI_peoples_liberation_army = {
-	icon = "GFX_idea_unknown"
+	icon = "GFX_idea_no_data"
 
 
 	conscription_factor = CHI_manpower_factor_variable
@@ -257,7 +257,7 @@ CHI_chinese_century_idea = {
 }
 
   UKR_demographics_crisis = {
-	icon = "GFX_idea_unknown"
+	icon = "GFX_idea_no_data"
 
 
 	monthly_population = UKR_DC_population_growth_variable
@@ -279,7 +279,7 @@ CHI_chinese_century_idea = {
  }
 
   UKR_ukraine_armed_forces = {
-	icon = "GFX_idea_unknown"
+	icon = "GFX_idea_no_data"
 
 
 	conscription_factor = AFU_manpower_factor_variable
@@ -337,7 +337,7 @@ CHI_chinese_century_idea = {
 }
 
 BLR_batka_support = {
-	icon = "GFX_idea_unknown"
+	icon = "GFX_idea_no_data"
 
 	custom_modifier_tooltip = BLR_batka_support_CMT
 
@@ -352,7 +352,7 @@ BLR_batka_support = {
 
 
 CHI_the_rot = {
-	icon = "GFX_idea_unknown"
+	icon = "GFX_idea_no_data"
 
 	political_power_gain = CHIROT_pp_gain
 	political_power_factor = CHIROT_pp_gain_p

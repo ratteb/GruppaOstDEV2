@@ -156,18 +156,18 @@ add_opinion_modifier = {
 }
 recruit_character = CHI_xi_jinping
 set_politics = {
-	ruling_party = socialism
+	ruling_party = authoritarian_socialism
 	last_election = "1949.10.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 
 set_popularities = {
-	westernism = 3
-	communism = 22
-	neutrality = 4
-	easternism = 3
-	socialism = 57
+	progressivism = 3
+	marxism_leninism = 22
+	centrism = 4
+	paternalism = 3
+	authoritarian_socialism = 57
 	despotism = 11
 }
 

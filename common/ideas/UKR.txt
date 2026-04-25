@@ -2,7 +2,7 @@ ideas = {
 
 	country = {
 		azof_insurgency01 = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
                 tag = UKR
@@ -35,7 +35,7 @@ ideas = {
 
         # AZOV INSURGENCY ABOVE THIS LINE! 
 		ineffective_sbu01 = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
                 tag = UKR
@@ -66,7 +66,7 @@ ideas = {
 	    }
 			# SBU above this line
 		UKR_political_chaos01 = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
                 tag = UKR
@@ -96,7 +96,7 @@ ideas = {
 		
 	    }
 		UKR_political_chaos02 = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
                 tag = UKR
@@ -124,7 +124,7 @@ ideas = {
 		
 	    }
 		UKR_political_chaos03 = {
-			picture = GFX_placeholder_ideas
+			picture = GFX_idea_no_data
 			
 			allowed = {
                 tag = UKR
