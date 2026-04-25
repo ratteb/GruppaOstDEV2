@@ -30,7 +30,7 @@ state={
 		13413 13414 13415 13416 13417 13418 13419
 	}
 	manpower=3300
-	state_category = town
+	state_category = demilitarized_zone
 	buildings_max_level_factor=1
 	local_supplies=0
 }

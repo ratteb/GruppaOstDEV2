@@ -4,4 +4,9 @@ spriteTypes = {
 		name = "GFX_placeholder_ideas"
 		texturefile = "gfx/interface/ideas/placeholder.dds"
 	}
+
+	spriteType = {
+		name = "GFX_idea_UKR_AFU"
+		texturefile = "gfx/interface/ideas/UKR/UKR_ZSU.dds"
+	}
 }

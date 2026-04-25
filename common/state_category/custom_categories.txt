@@ -1,0 +1,9 @@
+state_categories={
+	demilitarized_zone = {
+		local_building_slots = 0
+		local_manpower = -1
+	
+		color = { 0 200 0 }
+
+	}
+}

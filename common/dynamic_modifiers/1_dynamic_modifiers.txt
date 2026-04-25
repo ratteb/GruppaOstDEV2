@@ -279,7 +279,7 @@ CHI_chinese_century_idea = {
  }
 
   UKR_ukraine_armed_forces = {
-	icon = "GFX_idea_no_data"
+	icon = "GFX_idea_UKR_AFU"
 
 
 	conscription_factor = AFU_manpower_factor_variable
