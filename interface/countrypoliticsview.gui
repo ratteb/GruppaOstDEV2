@@ -46,14 +46,14 @@ guiTypes = {
 		iconType ={
 			name ="pol_faction_icon"
 			spriteType = "GFX_pol_factions_strip"
-			position = { x= 19 y = 380 }
+			position = { x= 19 y = 360 }
 			Orientation = "UPPER_LEFT"
 			frame = 1
 		}
 
 		containerWindowType = {
 			name = "chart_explanation"
-			position = { x = 215 y = 285 }
+			position = { x = 140 y = 265 }
 			size = { width = 300 height = 200 }
 			clipping = yes
 			
@@ -70,7 +70,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "political_pie_chart"
-			position = { x= 265 y = 277 }
+			position = { x= 188 y = 260 }
 			size = { width=160 height=160 }
 			clipping = no
 
@@ -89,7 +89,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "ruling_party_info"
-			position = { x = 88 y = 390 }
+			position = { x = 88 y = 360 }
 			size = { width = 255 height = 60 }
 			clipping = no
 					
@@ -162,14 +162,14 @@ guiTypes = {
 				buttonType = {
 					name = "view_factions_button"
 					quadTextureSprite = "GFX_icon_button_32x32"
-					position = { x = -176 y = 298}
+					position = { x = -176 y = 308}
 					pdx_tooltip = "VIEW_FACTION"
 				}
 				
 				iconType = {
 					name = "view_faction_icon"
 					spriteType = "GFX_relation_faction"
-					position = { x = -176  y = 298 }
+					position = { x = -176  y = 308 }
 					alwaystransparent = yes
 				}	
 
@@ -206,7 +206,7 @@ guiTypes = {
 					buttonType = {
 						name = "open_faction_button"
 						quadTextureSprite = "GFX_factions_button"
-						position = { x = -150 y = 285 }
+						position = { x = -150 y = 295 }
 						buttonFont = "hoi_16mbs"
 						Orientation = "UPPER_LEFT"
 						frame = 1
@@ -215,13 +215,13 @@ guiTypes = {
 					iconType = {
 						name = "faction_icon"
 						spriteType = "GFX_faction_logo_generic_democratic"
-						position = { x = -138 y = 297}
+						position = { x = -138 y = 307}
 						alwaystransparent = yes
 					}
 
 					positionType = {
 						name = "faction_name_position" #position y will be - half the height to keep it centered
-						position = { x = -100 y = 310  }
+						position = { x = -100 y = 320  }
 					}
 
 					instantTextboxType = {
@@ -382,7 +382,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "active_goal"
-			position = { x = 169 y = 70 }
+			position = { x = 169 y = 55 }
 			size = { width = 330 height = 50 }
 			clipping = no
 						
@@ -486,7 +486,7 @@ guiTypes = {
 		}
 		containerWindowType = {
 			name = "national_spirit"
-			position = { x = 81 y = 180 }
+			position = { x = 81 y = 160 }
 			size = { width = 360 height = 50 }
 			clipping = no
 						
@@ -532,20 +532,20 @@ guiTypes = {
 		}
 		iconType = {
 			name = "leader"
-			position = { x = 5 y = 120 }
+			position = { x = 5 y = 50 }
 			spriteType = "GFX_leader_unknown"
 		}
 		
 		iconType = {
 			name = "leader_frame2"
 			spriteType = "GFX_pol_leader_frame"
-			position = { x = 1 y = 115}		
+			position = { x = 1 y = 45 }		
 			alwaystransparent = yes
 		}
 
 		instantTextboxType = {
 			name = "leader_name"
-			position = { x = 8 y = 330 }
+			position = { x = 8 y = 260 }
 			font = "hoi_18mbs"
 			text = "leader_name"
 			maxWidth = 155
