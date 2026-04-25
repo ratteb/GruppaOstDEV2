@@ -86,50 +86,28 @@ if = {
 	}
 }
 set_politics = {
-	ruling_party = progressivism
+	ruling_party = paternalism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	progressivism = 100
 	marxism_leninism = 0
-	centrism = 0
-	paternalism = 0
 	authoritarian_socialism = 0
-	despotism = 0
+	democratic_socialism = 15
+	social_democracy = 5
+	progressivism = 15
+	centrism = 5
+	conservatism = 20
+	paternalism = 35
+	despotism = 5
+	fascism = 0 
+	national_socialism = 0
+	salafism = 0
 }
 
-create_country_leader = {
-	name = "Mr Generic"
-	desc = ""
-	picture = GFX_portrait_Mir_Jafar_Baghirov
-	ideology = soviet_stalinism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Mr Generic"
-	desc = ""
-	picture = GFX_portrait_Mammad_Amin_Rasulzade
-	ideology = western_conservatism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Mr Generic"
-	desc = ""
-	picture = GFX_portrait_Gara_Garabeyov
-	ideology = nationalism
-	traits = {
-		
-	}
-}
+recruit_character = ENG_nigel_farage
 
 
 

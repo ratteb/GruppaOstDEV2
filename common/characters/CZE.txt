@@ -1,0 +1,16 @@
+characters = {
+
+	CZE_andrej_babis = {
+		name = CZE_andrej_babis
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CZE/CZE_andrej_babis.dds"
+			}
+		}
+		country_leader = {
+			desc = CZE_andrej_babis_desc
+			ideology = conservatism_right_wing_populism
+		}
+	}
+
+}

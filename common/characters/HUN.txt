@@ -1,0 +1,16 @@
+characters = {
+
+	HUN_viktor_orban = {
+		name = HUN_viktor_orban
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HUN/HUN_viktor_orban.dds"
+			}
+		}
+		country_leader = {
+			desc = HUN_viktor_orban_desc
+			ideology = paternalism_anocracy
+		}
+	}
+
+}

@@ -1,0 +1,16 @@
+characters = {
+
+	SLO_robert_fico = {
+		name = SLO_robert_fico
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SLO/SLO_robert_fico.dds"
+			}
+		}
+		country_leader = {
+			desc = SLO_robert_fico_desc
+			ideology = social_democracy_left_wing_populism
+		}
+	}
+
+}

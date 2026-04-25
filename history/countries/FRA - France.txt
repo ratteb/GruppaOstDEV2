@@ -93,48 +93,18 @@ set_politics = {
 }
 
 set_popularities = {
-	marxism_leninism = 5
-	authoritarian_socialism = 5
+	marxism_leninism = 0
+	authoritarian_socialism = 0
 	democratic_socialism = 10
-	social_democracy = 5
-	progressivism = 10
-	centrism = 40
-	conservatism = 5
-	paternalism = 15
+	social_democracy = 15
+	progressivism = 0
+	centrism = 35
+	conservatism = 10
+	paternalism = 25
 	despotism = 5
 	fascism = 0 
 	national_socialism = 0
+	salafism = 0
 }
 
-create_country_leader = {
-	name = "Mr Generic"
-	desc = ""
-	picture = GFX_portrait_Mir_Jafar_Baghirov
-	ideology = soviet_stalinism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Mr Generic"
-	desc = ""
-	picture = GFX_portrait_Mammad_Amin_Rasulzade
-	ideology = western_conservatism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Mr Generic"
-	desc = ""
-	picture = GFX_portrait_Gara_Garabeyov
-	ideology = nationalism
-	traits = {
-		
-	}
-}
-
-
-
+recruit_character = FRA_emmanuel_macron

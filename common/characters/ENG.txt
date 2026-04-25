@@ -1,0 +1,16 @@
+characters = {
+
+	ENG_nigel_farage = {
+		name = ENG_nigel_farage
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ENG/ENG_nigel_farage.dds"
+			}
+		}
+		country_leader = {
+			desc = ENG_nigel_farage_desc
+			ideology = paternalism_ultraconservatism
+		}
+	}
+
+}

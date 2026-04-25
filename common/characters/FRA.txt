@@ -1,0 +1,16 @@
+characters = {
+
+	FRA_emmanuel_macron = {
+		name = FRA_emmanuel_macron
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/FRA_emmanuel_macron.dds"
+			}
+		}
+		country_leader = {
+			desc = FRA_emmanuel_macron_desc
+			ideology = centrism_classical_liberalism
+		}
+	}
+
+}

@@ -200,25 +200,6 @@ ideologies = {
 		ai_neutral = yes
 	}
 
-	salafism = {
-		types = {
-			salafism_wahhabism = {}
-			salafism_jihadism = {}
-			salafism_islamic_fundamentalism = {}
-		}
-		color = { 15 104 52 }
-		rules = {
-			can_force_government = yes
-			can_puppet = no
-			can_join_factions = no
-			can_create_factions = no
-			can_send_volunteers = yes
-		}
-		can_host_government_in_exile = no
-		can_collaborate = yes
-		ai_neutral = yes
-	}
-
 	fascism = {
 		types = {
 			fascism_classical_fascism = {}
@@ -228,7 +209,7 @@ ideologies = {
 			fascism_right_baathism = {}
 			fascism_fascist_populism = {}
 		}
-		color = { 15 104 80 }
+		color = { 178 138 87 }
 		rules = {
 			can_force_government = yes
 			can_puppet = no
@@ -248,7 +229,26 @@ ideologies = {
 			national_socialism_identitarianism = {}
 			national_socialism_national_bolshevism = {}
 		}
-		color = { 15 104 90 }
+		color = { 75 57 26 }
+		rules = {
+			can_force_government = yes
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		can_host_government_in_exile = no
+		can_collaborate = yes
+		ai_neutral = yes
+	}
+
+	salafism = {
+		types = {
+			salafism_wahhabism = {}
+			salafism_jihadism = {}
+			salafism_islamic_fundamentalism = {}
+		}
+		color = { 33 75 26 }
 		rules = {
 			can_force_government = yes
 			can_puppet = no

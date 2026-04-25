@@ -86,50 +86,30 @@ if = {
 	}
 }
 set_politics = {
-	ruling_party = progressivism
+	ruling_party = conservatism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	progressivism = 100
 	marxism_leninism = 0
-	centrism = 0
-	paternalism = 0
 	authoritarian_socialism = 0
-	despotism = 0
+	democratic_socialism = 0
+	social_democracy = 0
+	progressivism = 10
+	centrism = 30
+	conservatism = 50
+	paternalism = 0
+	despotism = 10
+	fascism = 0 
+	national_socialism = 0
+	salafism = 0
 }
 
-create_country_leader = {
-	name = "Mr Generic"
-	desc = ""
-	picture = GFX_portrait_Mir_Jafar_Baghirov
-	ideology = soviet_stalinism
-	traits = {
-		
-	}
-}
+recruit_character = CZE_andrej_babis
 
-create_country_leader = {
-	name = "Mr Generic"
-	desc = ""
-	picture = GFX_portrait_Mammad_Amin_Rasulzade
-	ideology = western_conservatism
-	traits = {
-		
-	}
-}
 
-create_country_leader = {
-	name = "Mr Generic"
-	desc = ""
-	picture = GFX_portrait_Gara_Garabeyov
-	ideology = nationalism
-	traits = {
-		
-	}
-}
 
 
 

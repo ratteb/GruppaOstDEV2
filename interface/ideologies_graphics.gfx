@@ -30,12 +30,24 @@ spriteTypes = {
 		name = "GFX_ideology_salafism_group"
 		texturefile = "gfx/interface/ideologies/salafism_group.dds"
 	}
-		spriteType = {
+	spriteType = {
 		name = "GFX_ideology_conservatism_trumpism"
 		texturefile = "gfx/interface/ideologies/conservatism_trumpism.dds"
 	}
-		spriteType = {
+	spriteType = {
 		name = "GFX_ideology_paternalism_putinism"
 		texturefile = "gfx/interface/ideologies/paternalism_putinism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_ENG_paternalism_ultraconservatism"
+		texturefile = "gfx/interface/ideologies/ENG_paternalism_ultraconservatism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_FRA_centrism_classical_liberalism"
+		texturefile = "gfx/interface/ideologies/FRA_centrism_classical_liberalism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_HUN_paternalism_anocracy"
+		texturefile = "gfx/interface/ideologies/HUN_paternalism_anocracy.png"
 	}
 }
