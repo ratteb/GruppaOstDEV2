@@ -256,10 +256,26 @@ technologies = {
 
 
 
-	marines = {
+	marine_equipment = {
 
 		enable_subunits = {
 			marine
+		}
+
+		enable_equipments = {
+			marine_gear_0
+		}
+
+		path = {
+			leads_to_tech = marine_equipment1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1950
+		folder = {
+			name = special_forces_folder
+			position = { x = 2 y = @1918 }
 		}
 
 		on_research_complete_limit = {
@@ -272,324 +288,409 @@ technologies = {
 				load_oob = "unlock_marines"
 			}
 			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-		}
 
-		path = {
-			leads_to_tech = marines2
-			research_cost_coeff = 1
-		}
-
-		research_cost = 2
-		start_year = 1936
-		folder = {
-			name = special_forces_folder
-			position = { x = 2 y = @1918 }
+			IF = {
+				limit = { has_dlc = "Gotterdammerung" }
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_RAID
+					RAID_TYPE = raid_type_mine_sabotage_raid
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_RAID
+					RAID_TYPE = raid_type_pathfinder_raid
+				}
+			}
 		}
 
 		categories = {
-			marine_tech
+			para_tech
 			cat_special_forces_generic
 		}
 
 		ai_will_do = {
-			factor = 0.7
-
-			modifier = {
-				factor = 3
-				tag = USA
-			}
-
-			modifier = {
-				factor = 3
-				tag = JAP
-			}
-
-			modifier = {
-				factor = 5
-				tag = ENG
-			}
+			factor = 0.5
 		}
 	}
 
-	marines2 = {
+	marine_equipment1 = {
 
-		marine = {
-			max_organisation = 5
-			soft_attack = 0.05
+		enable_equipments = {
+			marine_gear_1
 		}
+
 		path = {
-			leads_to_tech = marines3
+			leads_to_tech = marine_equipment2
 			research_cost_coeff = 1
 		}
 
 		research_cost = 1.5
-		start_year = 1939
+		start_year = 1960
 		folder = {
 			name = special_forces_folder
-			position = { x = 2 y = @1939 }
+			position = { x = 2 y = 3 }
 		}
 
 		categories = {
-			marine_tech
+			para_tech
 			cat_special_forces_generic
 		}
 
 		ai_will_do = {
-			factor = 0.7
-
-			modifier = {
-				factor = 3
-				tag = USA
-			}
-
-			modifier = {
-				factor = 3
-				tag = JAP
-			}
+			factor = 0.5
 		}
 	}
 
-	marines3 = {
+	marine_equipment2 = {
 
-		marine = {
-			max_organisation = 5
+		enable_equipments = {
+			marine_gear_2
 		}
 
-		research_cost = 2.0
-		start_year = 1943
+		path = {
+			leads_to_tech = marine_equipment3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1970
 		folder = {
 			name = special_forces_folder
-			position = { x = 2 y = @1943 }
+			position = { x = 2 y = 6 }
 		}
 
 		categories = {
-			marine_tech
+			para_tech
 			cat_special_forces_generic
 		}
 
 		ai_will_do = {
-			factor = 0.7
-
-			modifier = {
-				factor = 3
-				tag = USA
-			}
-
-			modifier = {
-				factor = 3
-				tag = JAP
-			}
+			factor = 0.5
 		}
 	}
 
-	tech_mountaineers = {
+	marine_equipment3 = {
+
+		enable_equipments = {
+			marine_gear_3
+		}
+
+		path = {
+			leads_to_tech = marine_equipment4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1980
+		folder = {
+			name = special_forces_folder
+			position = { x = 2 y = 9 }
+		}
+
+		categories = {
+			para_tech
+			cat_special_forces_generic
+		}
+
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	marine_equipment4 = {
+
+		enable_equipments = {
+			marine_gear_4
+		}
+
+		path = {
+			leads_to_tech = marine_equipment5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1990
+		folder = {
+			name = special_forces_folder
+			position = { x = 2 y = 12 }
+		}
+
+		categories = {
+			para_tech
+			cat_special_forces_generic
+		}
+
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	marine_equipment5 = {
+
+		enable_equipments = {
+			marine_gear_5
+		}
+
+		path = {
+			leads_to_tech = marine_equipment6
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 2000
+		folder = {
+			name = special_forces_folder
+			position = { x = 2 y = 15 }
+		}
+
+		categories = {
+			para_tech
+			cat_special_forces_generic
+		}
+
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	marine_equipment6 = {
+
+		enable_equipments = {
+			marine_gear_6
+		}
+
+		research_cost = 1.5
+		start_year = 2010
+		folder = {
+			name = special_forces_folder
+			position = { x = 2 y = 18 }
+		}
+
+		categories = {
+			para_tech
+			cat_special_forces_generic
+		}
+
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	mountaineer_equipment = {
 
 		enable_subunits = {
-			mountaineers
+			mountaineer
+		}
+
+		enable_equipments = {
+			mountaineer_gear_0
+		}
+
+		path = {
+			leads_to_tech = mountaineer_equipment1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1950
+		folder = {
+			name = special_forces_folder
+			position = { x = 4 y = @1918 }
 		}
 
 		on_research_complete_limit = {
 			NOT = {
-				has_template_containing_unit = mountaineers
+				has_template_containing_unit = mountaineer
 			}
 		}
 		on_research_complete = {
 			hidden_effect = {
-				load_oob = "unlock_mountineers"
+				load_oob = "unlock_mountaineers"
 			}
 			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-		}
 
-		path = {
-			leads_to_tech = tech_mountaineers2
-			research_cost_coeff = 1
-		}
-
-		research_cost = 2
-		start_year = 1936
-		folder = {
-			name = special_forces_folder
-			position = { x = 5 y = @1918 }
+			IF = {
+				limit = { has_dlc = "Gotterdammerung" }
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_RAID
+					RAID_TYPE = raid_type_mine_sabotage_raid
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_RAID
+					RAID_TYPE = raid_type_pathfinder_raid
+				}
+			}
 		}
 
 		categories = {
-			infantry_tech
-			mountaineers_tech
+			para_tech
 			cat_special_forces_generic
 		}
 
 		ai_will_do = {
-			factor = 0.7
+			factor = 0.5
 		}
 	}
 
-	tech_mountaineers2 = {
+	mountaineer_equipment1 = {
 
-		mountaineers = {
-			max_organisation = 5
-			soft_attack = 0.05
-		}
-		path = {
-			leads_to_tech = tech_mountaineers3
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.5
-		start_year = 1939
-		folder = {
-			name = special_forces_folder
-			position = { x = 5 y = @1939 }
-		}
-
-		categories = {
-			infantry_tech
-			mountaineers_tech
-			cat_special_forces_generic
-		}
-
-		ai_will_do = {
-			factor = 0.7
-		}
-	}
-
-	tech_mountaineers3 = {
-		mountaineers = {
-			max_organisation = 5
-		}
-
-		research_cost = 2.0
-		start_year = 1943
-		folder = {
-			name = special_forces_folder
-			position = { x = 5 y = @1943 }
-		}
-
-		categories = {
-			infantry_tech
-			mountaineers_tech
-			cat_special_forces_generic
-		}
-
-		ai_will_do = {
-			factor = 0.7
-		}
-	}
-
-	rangers_tech = {
-
-		allow_branch = {
-			has_dlc = "No Compromise, No Surrender"
-		}
-
-		enable_subunits = {
-			ranger_battalion
-		}
-		
-		on_research_complete_limit = {
-			NOT = {
-				has_template_containing_unit = ranger_battalion
-			}
-		}
-		on_research_complete = {
-			hidden_effect = {
-				load_oob = "unlock_rangers"
-			}			
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		enable_equipments = {
+			mountaineer_gear_1
 		}
 
 		path = {
-			leads_to_tech = rangers_tech2
-			research_cost_coeff = 1
-		}
-
-		research_cost = 2
-		start_year = 1936
-		folder = {
-			name = special_forces_folder
-			position = { x = 6 y = @1918 }
-		}
-		
-		categories = {
-			infantry_tech
-			rangers_tech_cat
-			cat_special_forces_generic
-		}
-		
-		ai_will_do = {
-			factor = 0.7
-			
-			modifier = {
-				factor = 2
-				tag = USA
-			}
-			
-			modifier = {
-				factor = 5
-				tag = JAP
-			}
-
-			modifier = {
-				factor = 5
-				tag = BRA
-			}
-			
-			modifier = {
-				factor = 2
-				tag = ENG
-			}
-		}
-	}
-
-	rangers_tech2 = {
-
-		ranger_battalion = {
-			max_organisation = 5
-			soft_attack = 0.05
-		}
-		path = {
-			leads_to_tech = rangers_tech3
+			leads_to_tech = mountaineer_equipment2
 			research_cost_coeff = 1
 		}
 
 		research_cost = 1.5
-		start_year = 1939
+		start_year = 1960
 		folder = {
 			name = special_forces_folder
-			position = { x = 6 y = @1939 }
+			position = { x = 4 y = 3 }
 		}
-		
+
 		categories = {
-			infantry_tech
-			rangers_tech_cat
+			para_tech
 			cat_special_forces_generic
 		}
-		
+
 		ai_will_do = {
-			factor = 0.7
+			factor = 0.5
 		}
 	}
 
-	rangers_tech3 = {
+	mountaineer_equipment2 = {
 
-		ranger_battalion = {
-			max_organisation = 5
+		enable_equipments = {
+			mountaineer_gear_2
 		}
-		
+
+		path = {
+			leads_to_tech = mountaineer_equipment3
+			research_cost_coeff = 1
+		}
+
 		research_cost = 1.5
-		start_year = 1943
+		start_year = 1970
 		folder = {
 			name = special_forces_folder
-			position = { x = 6 y = @1943 }
+			position = { x = 4 y = 6 }
 		}
-		
+
 		categories = {
-			infantry_tech
-			rangers_tech_cat
+			para_tech
 			cat_special_forces_generic
 		}
-		
+
 		ai_will_do = {
-			factor = 0.7
+			factor = 0.5
+		}
+	}
+
+	mountaineer_equipment3 = {
+
+		enable_equipments = {
+			mountaineer_gear_3
+		}
+
+		path = {
+			leads_to_tech = mountaineer_equipment4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1980
+		folder = {
+			name = special_forces_folder
+			position = { x = 4 y = 9 }
+		}
+
+		categories = {
+			para_tech
+			cat_special_forces_generic
+		}
+
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	mountaineer_equipment4 = {
+
+		enable_equipments = {
+			mountaineer_gear_4
+		}
+
+		path = {
+			leads_to_tech = mountaineer_equipment5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1990
+		folder = {
+			name = special_forces_folder
+			position = { x = 4 y = 12 }
+		}
+
+		categories = {
+			para_tech
+			cat_special_forces_generic
+		}
+
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	mountaineer_equipment5 = {
+
+		enable_equipments = {
+			mountaineer_gear_5
+		}
+
+		path = {
+			leads_to_tech = mountaineer_equipment6
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 2000
+		folder = {
+			name = special_forces_folder
+			position = { x = 4 y = 15 }
+		}
+
+		categories = {
+			para_tech
+			cat_special_forces_generic
+		}
+
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	mountaineer_equipment6 = {
+
+		enable_equipments = {
+			mountaineer_gear_6
+		}
+
+		research_cost = 1.5
+		start_year = 2010
+		folder = {
+			name = special_forces_folder
+			position = { x = 4 y = 18 }
+		}
+
+		categories = {
+			para_tech
+			cat_special_forces_generic
+		}
+
+		ai_will_do = {
+			factor = 0.5
 		}
 	}
 
