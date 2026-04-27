@@ -4451,4 +4451,8 @@
  JAN: "Jan Mayen"
  JAN_DEF: "the Island of Jan Mayen"
  JAN_ADJ: "Polar"
+
+ HTS_salafism:0 "Hay'at Tahrir al-Sham"
+ HTS_salafism_DEF:0 "Hay'at Tahrir al-Sham"
+ HTS_salafism_ADJ:0 "HTS"
  

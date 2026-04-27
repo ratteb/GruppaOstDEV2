@@ -941,3 +941,7 @@ GRN = {
 	color = rgb { 255 80 80 }
 	color_ui = rgb { 179 0 0 }
 }
+HTS = {
+	color = rgb { 49 140 70 }
+	color_ui = rgb { 49 140 70 }
+}

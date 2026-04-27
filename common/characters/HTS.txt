@@ -1,0 +1,16 @@
+characters={
+	HTS_Ahmed_Sharaa={
+		name="Ahmed al-Sharaa"
+		portraits={
+			civilian={
+				large=GFX_ahmed_sharaa
+			}
+		}
+		country_leader={
+			ideology=salafism_jihadism
+			desc = HTS_ahmed_sharaa_desc
+			expire="3000.1.1.1"
+			id=-1
+		}
+	}
+}
