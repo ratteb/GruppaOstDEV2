@@ -1010,3 +1010,8 @@
  STATE_992:1 "Occupied West Bank"
  STATE_993:1 "Mariupol"
  STATE_994:1 "Donetsk City"
+ STATE_995:1 "Idlib"
+ STATE_996:1 "Aleppo City"
+ STATE_997:1 "West Turkish Controlled Syria"
+ STATE_998:1 "Kurdish Aleppo"
+ STATE_999:1 "East Turkish Controlled Syria"

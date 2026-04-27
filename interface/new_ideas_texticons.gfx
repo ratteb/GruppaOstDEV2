@@ -73,4 +73,9 @@ spriteTypes = {
 		texturefile = "gfx/texticons/banners/american_armed_forces.dds"
 		legacy_lazy_load = no
 	}
+		spriteType = {
+		name = "GFX_aipac_texticon"
+		texturefile = "gfx/texticons/banners/aipac.dds"
+		legacy_lazy_load = no
+	}
 }

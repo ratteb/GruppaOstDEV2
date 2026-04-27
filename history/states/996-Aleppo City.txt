@@ -1,0 +1,29 @@
+state={
+	id=996
+	name="STATE_996"
+
+	history={
+		owner = SYR
+		victory_points = {
+			13426 10
+		}
+		victory_points = {
+			13427 10
+		}
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = SYR
+
+	}
+
+	provinces={
+		13426 13427
+	}
+	manpower=730000
+	buildings_max_level_factor=1.000
+	state_category=city
+
+	local_supplies=2.0 
+}
