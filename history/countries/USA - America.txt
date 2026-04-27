@@ -246,3 +246,7 @@ country_event = {
 	id = USA_border.1
 	days = 15
 }
+country_event = {
+	id = USA_aipac.1
+	days = 7
+}

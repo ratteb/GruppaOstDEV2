@@ -34,4 +34,18 @@ equipments = {
 		priority = 20	
 	}
 
+	communication_equipment_1 = {
+		year = 1918
+
+		archetype = support_equipment
+		priority = 20	
+	}
+
+	medical_equipment_1 = {
+		year = 1918
+
+		archetype = support_equipment
+		priority = 20	
+	}
+
 }

@@ -23,33 +23,28 @@ technologies = {
 			support_equipment_1
 		}
 
+		path = {
+			leads_to_tech = medical_equipment
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = communication_equipment
+			research_cost_coeff = 1
+		}
+
 
 		path = {
 			leads_to_tech = tech_engineers
 			research_cost_coeff = 1
 		}
 
-		path = {
-			leads_to_tech = tech_recon
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = tech_field_hospital
-			research_cost_coeff = 1
-		}
 
 		path = {
 			leads_to_tech = tech_logistics_company
 			research_cost_coeff = 1
 		}
-		path = {
-			leads_to_tech = tech_military_police
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = tech_signal_company
-			research_cost_coeff = 1
-		}
+
 		path = {
 			leads_to_tech = tech_maintenance_company
 			research_cost_coeff = 1
@@ -58,7 +53,7 @@ technologies = {
 		start_year = 1918
 		folder = {
 			name = support_folder
-			position = { x = 0 y = @1918 }
+			position = { x = -2 y = @1918 }
 		}
 
 		categories = {
@@ -68,31 +63,90 @@ technologies = {
 		ai_will_do = {
 			base = 2
 
-			modifier = {
-				factor = 4
-				date > "1937.1.1"
-			}
+		}
+	}
 
-			modifier = {
-				factor = 4
-				date > "1938.1.1"
-			}
+	communication_equipment = {
 
-			modifier = {
-				factor = 4
-				date > "1939.1.1"
-			}
+		enable_equipments = {
+			communication_equipment_1
+		}
 
-			modifier = {
-				factor = 6
-				original_tag = CHI
-				NOT = {
-					has_dlc = "No Compromise, No Surrender"
-				}
-			}
+		
+
+
+
+
+		path = {
+			leads_to_tech = tech_recon
+			research_cost_coeff = 1
+		}
+
+
+
+		path = {
+			leads_to_tech = tech_military_police
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tech_signal_company
+			research_cost_coeff = 1
+		}
+		research_cost = 1.0
+		start_year = 1918
+		folder = {
+			name = support_folder
+			position = { x = -2 y = 3 }
+		}
+
+		categories = {
+			support_tech
+		}
+
+		ai_will_do = {
+			base = 2
 
 		}
 	}
+
+	medical_equipment = {
+
+		enable_equipments = {
+			medical_equipment_1
+		}
+
+		
+
+
+	
+		path = {
+			leads_to_tech = tech_field_hospital
+			research_cost_coeff = 1
+		}
+
+		
+		path = {
+			leads_to_tech = tech_military_police
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.0
+		start_year = 1918
+		folder = {
+			name = support_folder
+			position = { x = -2 y = -3 }
+		}
+
+		categories = {
+			support_tech
+		}
+
+		ai_will_do = {
+			base = 2
+
+		}
+	}
+
 
 
 	tech_engineers = {

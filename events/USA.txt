@@ -7,6 +7,7 @@ add_namespace = USA_border
 add_namespace = USA_ROK 
 add_namespace = USA_TWC
 add_namespace = USA_RUW
+add_namespace = USA_aipac 
 
 # Event Chain for trump
 
@@ -450,6 +451,43 @@ country_event = {
 		ai_chance = { factor = 40 }
     }
 } 
+
+# AIPAC event chains 
+
+country_event = {
+	id = USA_aipac.1
+	title = USA_aipac.1.t
+	desc = USA_aipac.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # OK. 
+		name = USA_aipac.1.a
+		ai_chance = { factor = 90 }
+		add_stability = -0.01 
+		hidden_effect = {
+			country_event = {
+				id = USA_aipac.2
+				days = 25
+			}
+		}
+    }
+}
+
+country_event = {
+	id = USA_aipac.2
+	title = USA_aipac.2.t
+	desc = USA_aipac.2.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Worrying.
+		name = USA_aipac.2.a
+		ai_chance = { factor = 90 } 
+    }
+}
 
 # ask taiwan for information about the crisis 
 country_event = {

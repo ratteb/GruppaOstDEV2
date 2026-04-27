@@ -57,6 +57,8 @@ ideas = {
 			modifier = {
 				political_power_gain = 0.2
 				stability_factor = -0.02
+				conservatism_drift = 0.02
+				progressivism_drift = 0.02
 				custom_modifier_tooltip = USA_aipac_cmt
 			}
 		}

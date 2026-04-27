@@ -101,6 +101,15 @@
  USA_trump.25.d: "Trump Dub, ez"
  USA_trump.25.a: "WMAGA!"
 
+ USA_aipac.1.t: "Track AIPAC"
+ USA_aipac.1.d: "Track AIPAC is a grassroots movement, established in April 2024 to track and counter the influence of AIPAC by documenting funding and advocating for transparency in the elections. They have used the Federal Election Commission's data to track and expose senators, representatives, and even larger political figures for accepting AIPAC money.\n\nBeing exposed for accepting AIPAC Lobbies is seen as a net negativity for the popularity of the candidate, however luckily for us they track the democrats as much as they track the republicans. However this group could become a liability to the status quo if not dealt with appropriately. The NSA and the DOJ will keep this organization under watchful eye for the safety and stability of the United States of America."
+ USA_aipac.1.a: "OK."
+ 
+ USA_aipac.2.t: "Conspiracy in the DOJ?"
+ USA_aipac.2.d: "Report from the NSA: [GetDate]\n\nGreetings Mr. President.\n\nIn this report I have documented numerous findings that may lead to a 'Track AIPAC' or affiliated group conspirancy inside of the DOJ. Although no conclusive evidence has been drawn so far I wish to report this to you as it may bring complications in the future for National Security and National Stability.\n\nSo far we have only found numerous communication links through the encrypted Telegram channels to confirmed Track AIPAC channels/accounts. This has led us to believe certain mid ranking members of the DOJ with access to the [Redacted] may be in communication or collaborating with 'Track AIPAC' or affiliated movements.\n\nGreetings - Josh Rudd"
+ USA_aipac.2.a: "Worrying."
+
+
  USA_TWC.1.t: "The United State Asks Us For Information on the Crisis"
  USA_TWC.1.d: "Placeholdershi"
 
