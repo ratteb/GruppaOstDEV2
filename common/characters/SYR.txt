@@ -1,0 +1,16 @@
+characters={
+	SYR_bashar_assad={
+		name="Bashar al-Assad"
+		portraits={
+			civilian={
+				large=GFX_bashar_assad
+			}
+		}
+		country_leader={
+			ideology=authoritarian_socialism_left_baathism
+			desc = SYR_bashar_assad_desc
+			expire="3000.1.1.1"
+			id=-1
+		}
+	}
+}

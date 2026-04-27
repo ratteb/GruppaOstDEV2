@@ -4,6 +4,8 @@ oob = "AZR_1936"
 
 set_research_slots = 2
 
+recruit_character = SYR_bashar_assad
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -86,19 +88,20 @@ if = {
 	}
 }
 set_politics = {
-	ruling_party = paternalism
-	last_election = "1936.1.1"
+	ruling_party = authoritarian_socialism
+	last_election = "2024.7.15"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	progressivism = 0
-	marxism_leninism = 0
-	centrism = 0
-	paternalism = 100
-	authoritarian_socialism = 0
-	despotism = 0
+	progressivism = 3
+	marxism_leninism = 6
+	centrism = 1
+	paternalism = 3
+	authoritarian_socialism = 83
+	despotism = 1
+	fascism = 3
 }
 
 create_country_leader = {

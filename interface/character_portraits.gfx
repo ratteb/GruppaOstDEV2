@@ -99,4 +99,11 @@ spriteTypes = {
 	}
 
 	# Israel above this line
+
+		spriteType = {
+		name = "GFX_bashar_assad"
+		texturefile = "gfx/leaders/SYR/bashar_assad.dds"  
+	}
+
+	# Syria above this line
 }

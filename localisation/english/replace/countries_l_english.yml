@@ -176,19 +176,12 @@
  USA_easternism_DEF:0 "the Free American Empire"
  USA_conservatism:0 "United States of America"
  USA_conservatism_DEF:0 "the United States of America"
-<<<<<<< Updated upstream
  USA_centrism:2 "United States of America"
  USA_centrism_DEF:2 "the United States of America"
  USA_progressivism:0 "United States of America"
  USA_progressivism_DEF:0 "the United States of America"
  USA_communism:0 "Communist States of America"
  USA_communism_DEF:0 "the Communist States of America"
-=======
- USA_neutrality:2 "United States of America"
- USA_neutrality_DEF:2 "the United States of America"
- USA_marxism_leninist:0 "Communist States of America"
- USA_marxism_leninist_DEF:0 "the Communist States of America"
->>>>>>> Stashed changes
  USA_easternism_ADJ:0 "American"
  USA_conservatism_ADJ:0 "American"
  USA_neutrality_ADJ:0 "American"
