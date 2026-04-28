@@ -83,6 +83,9 @@ SYR_civil_war_cat = {
 			NOT = {
 				has_country_flag = SYR_CW_focus_diplomatic 
 			}
+			NOT = {
+				has_country_flag = SYR_CW_forced_negotiations
+			}
 		}
 
 		visible = {
@@ -144,6 +147,14 @@ SYR_civil_war_cat = {
 			NOT = {
 				has_country_flag = SYR_CW_focus_diplomatic 
 			}
+
+			
+				check_variable = {
+					var = global.SYR_civil_war_progress
+					value = 75
+					compare = greater_than_or_equals_than_or_equals
+				}
+			
 		}
 
 		visible = {
@@ -203,6 +214,14 @@ SYR_civil_war_cat = {
 			NOT = {
 				has_country_flag = SYR_CW_focus_neutral
 			}
+
+			
+				check_variable = {
+					var = global.SYR_civil_war_progress
+					value = 75
+					compare = greater_than_or_equals_than_or_equals
+				}
+			
 		}
 
 		visible = {

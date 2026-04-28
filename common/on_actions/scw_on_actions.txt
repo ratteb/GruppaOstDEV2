@@ -50,6 +50,35 @@ on_actions = {
 
 		}
 	}
+	on_daily_SYR = {
+		effect = {
+			if = {
+				limit = {
+					check_variable = {	
+						var = global.SYR_civil_war_progress
+						value = 75
+						compare = greater_than_or_equals
+					}
+
+					NOT = {
+						has_country_flag = SYR_civil_war_boiling_point
+					}
+	
+				}
+				SYR = {
+					country_event = {
+						id = SYR_scw.1
+						days = 1 
+					}
+				}
+					log = "global.SYR_civil_war_progress: [?global.SYR_civil_war_progress]"
+			}
+			else = {
+				always = no 
+				log = "global.SYR_civil_war_progress: [?global.SYR_civil_war_progress]"
+			}
+		}
+	}
 }
 
 
