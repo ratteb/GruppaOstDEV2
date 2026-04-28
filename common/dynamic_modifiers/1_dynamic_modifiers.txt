@@ -362,3 +362,12 @@ CHI_the_rot = {
 	trade_opinion_factor = CHIROT_to
 	war_support_factor = CHIROT_ws
 }
+
+syrian_civil_war = {
+	icon = "GFX_idea_no_data"
+
+	custom_modifier_tooltip = [get_SYR_CW_escalation_stage]
+	
+	custom_modifier_tooltip = [get_SYR_CW_escalation_perc]
+
+ }

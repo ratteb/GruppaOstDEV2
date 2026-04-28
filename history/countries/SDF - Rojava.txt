@@ -85,6 +85,7 @@ if = {
 		basic_torpedo = 1
 	}
 }
+add_dynamic_modifier = { modifier = syrian_civil_war }
 set_politics = {
 	ruling_party = authoritarian_socialism
 	last_election = "2024.7.15"

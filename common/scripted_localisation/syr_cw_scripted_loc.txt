@@ -1,0 +1,138 @@
+#Titles
+defined_text = {
+    name = get_SYR_CW_escalation_stage
+    text = {
+        trigger = {
+            check_variable = {
+               var = global.SYR_civil_war_progress
+               value = 10
+               compare = less_than_or_equals
+            }
+        }
+        localization_key = SYR_CW_escalation_stage_peace_cmt
+    }
+
+    text = {
+        trigger = {
+            check_variable = {
+               var = global.SYR_civil_war_progress
+               value = 24
+               compare = less_than_or_equals
+            }
+        }
+        localization_key = SYR_CW_escalation_stage_truce_cmt
+    }
+
+     text = {
+        trigger = {
+            check_variable = {
+               var = global.SYR_civil_war_progress
+               value = 49
+               compare = less_than_or_equals
+            }
+        }
+        localization_key = SYR_CW_escalation_stage_skirmish_cmt
+    }
+
+    text = {
+        trigger = {
+            check_variable = {
+               var = global.SYR_civil_war_progress
+               value = 74
+               compare = less_than_or_equals
+            }
+        }
+        localization_key = SYR_CW_escalation_stage_hostilities_cmt
+    }
+
+    text = {
+        trigger = {
+            check_variable = {
+               var = global.SYR_civil_war_progress
+               value = 89
+               compare = less_than_or_equals
+            }
+        }
+        localization_key = SYR_CW_escalation_stage_boiling_cmt
+    }
+
+    text = {
+        trigger = {
+            check_variable = {
+               var = global.SYR_civil_war_progress
+               value = 100
+               compare = less_than_or_equals
+            }
+        }
+        localization_key = SYR_CW_escalation_stage_war_cmt
+    }
+}
+
+defined_text = {
+    name = get_SYR_CW_escalation_perc
+    text = {
+        trigger = {
+            check_variable = {
+               var = global.SYR_civil_war_progress
+               value = 10
+               compare = less_than_or_equals
+            }
+        }
+        localization_key = SYR_CW_escalation_stage_peace_perc_cmt
+    }
+
+        text = {
+        trigger = {
+            check_variable = {
+               var = global.SYR_civil_war_progress
+               value = 24
+               compare = less_than_or_equals
+            }
+        }
+        localization_key = SYR_CW_escalation_stage_truce_perc_cmt
+    }
+
+     text = {
+        trigger = {
+            check_variable = {
+               var = global.SYR_civil_war_progress
+               value = 49
+               compare = less_than_or_equals
+            }
+        }
+        localization_key = SYR_CW_escalation_stage_skirmish_perc_cmt
+    }
+
+    text = {
+        trigger = {
+            check_variable = {
+               var = global.SYR_civil_war_progress
+               value = 74
+               compare = less_than_or_equals
+            }
+        }
+        localization_key = SYR_CW_escalation_stage_hostilities_perc_cmt
+    }
+
+    text = {
+        trigger = {
+            check_variable = {
+               var = global.SYR_civil_war_progress
+               value = 89
+               compare = less_than_or_equals
+            }
+        }
+        localization_key = SYR_CW_escalation_stage_boiling_perc_cmt
+    }
+
+    text = {
+        trigger = {
+            check_variable = {
+               var = global.SYR_civil_war_progress
+               value = 100
+               compare = less_than_or_equals
+            }
+        }
+        localization_key = SYR_CW_escalation_stage_war_perc_cmt
+    }
+}

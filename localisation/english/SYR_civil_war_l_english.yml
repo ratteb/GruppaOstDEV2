@@ -1,0 +1,17 @@
+﻿l_english:
+
+ syrian_civil_war: "The Syrian Civil War"
+ syrian_civil_war_desc: "Placeholder"
+ SYR_CW_escalation_stage_peace_cmt: "Stage: §1Peace§!"
+ SYR_CW_escalation_stage_truce_cmt: "Stage: §4Truce§!"
+ SYR_CW_escalation_stage_skirmish_cmt: "Stage: §9Skirmishes§!"
+ SYR_CW_escalation_stage_hostilities_cmt: "Stage: §OFrozen Front§!"
+ SYR_CW_escalation_stage_boiling_cmt: "Stage: §RBoiling Point§!"
+ SYR_CW_escalation_stage_war_cmt: "Stage: §RWAR§!"
+
+ SYR_CW_escalation_stage_peace_perc_cmt: "Escalation Meter: §1[?global.SYR_civil_war_progress|0%%]§!"
+ SYR_CW_escalation_stage_truce_perc_cmt: "Escalation Meter: §4[?global.SYR_civil_war_progress|0%%]§!"
+ SYR_CW_escalation_stage_skirmish_perc_cmt: "Escalation Meter: §9[?global.SYR_civil_war_progress|0%%]§!"
+ SYR_CW_escalation_stage_hostilities_perc_cmt: "Escalation Meter: §O[?global.SYR_civil_war_progress|0%%]§!"
+ SYR_CW_escalation_stage_boiling_perc_cmt: "Escalation Meter: §R[?global.SYR_civil_war_progress|0%%]§!"
+ SYR_CW_escalation_stage_war_perc_cmt: "Escalation Meter: §R[?global.SYR_civil_war_progress|0%%]§!"
