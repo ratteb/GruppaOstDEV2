@@ -65,4 +65,185 @@ SYR_civil_war_cat = {
 			factor = 5
 		}
 	}
+
+	SYR_switch_hostile = {
+
+		icon = generic_industry
+
+		available = {
+			OR = {
+				tag = SYR 
+				tag = HTS 
+				tag = SDF 
+				tag = SNA 
+			}
+			NOT = {
+				has_country_flag = SYR_CW_focus_hostile
+			}
+			NOT = {
+				has_country_flag = SYR_CW_focus_diplomatic 
+			}
+		}
+
+		visible = {
+			OR = {
+				tag = SYR 
+				tag = HTS 
+				tag = SDF 
+				tag = SNA 
+			} 
+			NOT = {
+				has_country_flag = SYR_CW_focus_hostile
+			}
+			NOT = {
+				has_country_flag = SYR_CW_focus_diplomatic 
+			}
+		}
+		days_re_enable = 50 
+
+		fire_only_once = no
+
+
+		custom_cost_trigger = {
+			command_power > 20
+			has_political_power > 25
+		}
+		custom_cost_text = SOV_csto_training_cost
+
+		complete_effect = {
+	        add_to_variable = {
+                var = global.SYR_civil_war_progress
+                value = 8
+                tooltip = add_8_to_scw_tt
+            }
+			clr_country_flag = SYR_CW_focus_neutral 
+			set_country_flag = SYR_CW_focus_hostile
+		}
+		remove_effect = {  
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	SYR_switch_diplomatic = {
+
+		icon = generic_industry
+
+		available = {
+			OR = {
+				tag = SYR 
+				tag = HTS 
+				tag = SDF 
+				tag = SNA 
+			}
+			NOT = {
+				has_country_flag = SYR_CW_focus_hostile
+			}
+			NOT = {
+				has_country_flag = SYR_CW_focus_diplomatic 
+			}
+		}
+
+		visible = {
+			OR = {
+				tag = SYR 
+				tag = HTS 
+				tag = SDF 
+				tag = SNA 
+			} 
+			NOT = {
+				has_country_flag = SYR_CW_focus_hostile
+			}
+			NOT = {
+				has_country_flag = SYR_CW_focus_diplomatic 
+			}
+		}
+		days_re_enable = 50 
+
+		fire_only_once = no
+
+
+		custom_cost_trigger = {
+			command_power > 20
+			has_political_power > 25
+		}
+		custom_cost_text = SOV_csto_training_cost
+
+		complete_effect = {
+	        add_to_variable = {
+                var = global.SYR_civil_war_progress
+                value = -8
+                tooltip = remove_8_to_scw_tt
+            }
+			clr_country_flag = SYR_CW_focus_neutral 
+			set_country_flag = SYR_CW_focus_diplomatic
+		}
+		remove_effect = {  
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+
+	SYR_switch_neutral = {
+
+		icon = generic_industry
+
+		available = {
+			OR = {
+				tag = SYR 
+				tag = HTS 
+				tag = SDF 
+				tag = SNA 
+			}
+			NOT = {
+				has_country_flag = SYR_CW_focus_neutral
+			}
+		}
+
+		visible = {
+			OR = {
+				tag = SYR 
+				tag = HTS 
+				tag = SDF 
+				tag = SNA 
+			} 
+			NOT = {
+				has_country_flag = SYR_CW_focus_neutral
+			}
+		}
+		days_re_enable = 50 
+
+		fire_only_once = no
+
+
+		custom_cost_trigger = {
+			command_power > 20
+			has_political_power > 25
+		}
+		custom_cost_text = SOV_csto_training_cost
+
+		complete_effect = {
+	        add_to_variable = {
+                var = global.SYR_civil_war_progress
+                value = -2
+                tooltip = remove_2_to_scw_tt
+            }
+			clr_country_flag = SYR_CW_focus_diplomatic
+			clr_country_flag = SYR_CW_focus_hostile
+			set_country_flag = SYR_CW_focus_neutral
+		}
+		remove_effect = {  
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+
 }

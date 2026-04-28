@@ -18,6 +18,24 @@
  SYR_CW_escalation_stage_boiling_perc_cmt: "Escalation Meter: §R[?global.SYR_civil_war_progress|0%%]§!"
  SYR_CW_escalation_stage_war_perc_cmt: "Escalation Meter: §R[?global.SYR_civil_war_progress|0%%]§!"
 
+ SYR_CW_escalation_stage_focus_neutral: "[SYR.GetName]'s Strategy: §4Neutral§!"
+ HTS_CW_escalation_stage_focus_neutral: "[HTS.GetName]'s Strategy: §4Neutral§!"
+ SDF_CW_escalation_stage_focus_neutral: "[SDF.GetName]'s Strategy: §4Neutral§!"
+ SNA_CW_escalation_stage_focus_neutral: "[SNA.GetName]'s Strategy: §4Neutral§!"
+
+ SYR_CW_escalation_stage_focus_hostile: "[SYR.GetName]'s Strategy: §9Hostile§!"
+ HTS_CW_escalation_stage_focus_hostile: "[HTS.GetName]'s Strategy: §9Hostile§!"
+ SDF_CW_escalation_stage_focus_hostile: "[SDF.GetName]'s Strategy: §9Hostile§!"
+ SNA_CW_escalation_stage_focus_hostile: "[SNA.GetName]'s Strategy: §9Hostile§!"
+
+ SYR_CW_escalation_stage_focus_diplomatic: "[SYR.GetName]'s Strategy: §1Diplomatic§!"
+ HTS_CW_escalation_stage_focus_diplomatic: "[HTS.GetName]'s Strategy: §1Diplomatic§!"
+ SDF_CW_escalation_stage_focus_diplomatic: "[SDF.GetName]'s Strategy: §1Diplomatic§!"
+ SNA_CW_escalation_stage_focus_diplomatic: "[SNA.GetName]'s Strategy: §1Diplomatic§!"
+
  add_2_to_scw_tt: "Escalation Increases by §Y2%§!"
+ add_8_to_scw_tt: "Escalation Increases by §Y8%§!"
+ remove_2_to_scw_tt: "Escalation Decreases by §Y2%§!"
+ remove_8_to_scw_tt: "Escalation Decreases by §Y8%§!"
 
  SYR_assad_fort_aleppo: "Fortify Aleppo"

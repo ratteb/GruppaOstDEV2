@@ -93,6 +93,7 @@ set_politics = {
 }
 
 add_dynamic_modifier = { modifier = syrian_civil_war }
+set_country_flag = SYR_CW_focus_neutral
 
 set_popularities = {
 	progressivism = 3

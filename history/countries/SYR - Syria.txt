@@ -91,6 +91,8 @@ set_variable = {
 	var = global.SYR_civil_war_progress 
 	value = 13
 }
+
+set_country_flag = SYR_CW_focus_neutral
 add_dynamic_modifier = { modifier = syrian_civil_war }
 add_ideas = {
 	SYR_SFA

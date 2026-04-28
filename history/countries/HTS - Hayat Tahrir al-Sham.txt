@@ -86,6 +86,7 @@ if = {
 	}
 }
 add_dynamic_modifier = { modifier = syrian_civil_war }
+set_country_flag = SYR_CW_focus_neutral
 set_politics = {
 	ruling_party = salafism
 	last_election = "2017.1.1"

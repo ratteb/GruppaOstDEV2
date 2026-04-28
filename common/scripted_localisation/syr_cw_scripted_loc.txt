@@ -136,3 +136,100 @@ defined_text = {
         localization_key = SYR_CW_escalation_stage_war_perc_cmt
     }
 }
+
+defined_text = {
+    name = get_SYR_CW_escalation_focus
+    text = {
+        trigger = {
+            has_country_flag = SYR_CW_focus_neutral
+            tag =  SYR 
+        }
+        localization_key = SYR_CW_escalation_stage_focus_neutral
+    }
+
+    text = {
+        trigger = {
+            has_country_flag = SYR_CW_focus_neutral
+            tag =  HTS 
+        }
+        localization_key = HTS_CW_escalation_stage_focus_neutral
+    }
+
+    text = {
+        trigger = {
+            has_country_flag = SYR_CW_focus_neutral
+            tag =  SDF 
+        }
+        localization_key = SDF_CW_escalation_stage_focus_neutral
+    }
+
+    text = {
+        trigger = {
+            has_country_flag = SYR_CW_focus_neutral
+            tag =  SNA 
+        }
+        localization_key = SNA_CW_escalation_stage_focus_neutral
+    }
+
+
+    text = {
+        trigger = {
+            has_country_flag = SYR_CW_focus_hostile
+            tag =  SYR 
+        }
+        localization_key = SYR_CW_escalation_stage_focus_hostile
+    }
+    text = {
+        trigger = {
+            has_country_flag = SYR_CW_focus_hostile
+            tag =  HTS
+        }
+        localization_key = HTS_CW_escalation_stage_focus_hostile
+    }
+    text = {
+        trigger = {
+            has_country_flag = SYR_CW_focus_hostile
+            tag = SDF
+        }
+        localization_key = SDF_CW_escalation_stage_focus_hostile
+    }
+    text = {
+        trigger = {
+            has_country_flag = SYR_CW_focus_hostile
+            tag = SNA
+        }
+        localization_key = SNA_CW_escalation_stage_focus_hostile
+    }
+
+    text = {
+        trigger = {
+            has_country_flag = SYR_CW_focus_diplomatic
+            tag =  SYR 
+        }
+        localization_key = SYR_CW_escalation_stage_focus_diplomatic
+    }
+
+    text = {
+        trigger = {
+            has_country_flag = SYR_CW_focus_diplomatic
+            tag =  HTS
+        }
+        localization_key = HTS_CW_escalation_stage_focus_diplomatic
+    }
+
+    text = {
+        trigger = {
+            has_country_flag = SYR_CW_focus_diplomatic
+            tag =  SDF 
+        }
+        localization_key = SDF_CW_escalation_stage_focus_diplomatic
+    }
+
+    text = {
+        trigger = {
+            has_country_flag = SYR_CW_focus_diplomatic
+            tag =  SNA
+        }
+        localization_key = SNA_CW_escalation_stage_focus_diplomatic
+    }
+}
