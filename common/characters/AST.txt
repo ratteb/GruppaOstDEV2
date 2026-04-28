@@ -7,10 +7,13 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=western_conservatism
-			desc = 
+			ideology=national_socialism_esoteric_nazism
+			desc = AST_jordan_barret_desc
 			expire="9999.1.1.1"
 			id=-1
+			traits = {
+				agarthan
+			}
 		}
 	}
 }
