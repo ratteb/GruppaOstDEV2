@@ -17,3 +17,7 @@
  SYR_CW_escalation_stage_hostilities_perc_cmt: "Escalation Meter: §O[?global.SYR_civil_war_progress|0%%]§!"
  SYR_CW_escalation_stage_boiling_perc_cmt: "Escalation Meter: §R[?global.SYR_civil_war_progress|0%%]§!"
  SYR_CW_escalation_stage_war_perc_cmt: "Escalation Meter: §R[?global.SYR_civil_war_progress|0%%]§!"
+
+ add_2_to_scw_tt: "Escalation Increases by §Y2%§!"
+
+ SYR_assad_fort_aleppo: "Fortify Aleppo"
