@@ -46,7 +46,7 @@ guiTypes = {
 		iconType ={
 			name ="pol_faction_icon"
 			spriteType = "GFX_pol_factions_strip"
-			position = { x= 19 y = 360 }
+			position = { x= 260 y = 260 }
 			Orientation = "UPPER_LEFT"
 			frame = 1
 		}
@@ -60,8 +60,8 @@ guiTypes = {
 			
 			gridBoxType = {
 				name = "parties_grid"
-				position = { x = 60 y = -5 }
-				size = { width = 300 height = 200 }
+				position = { x = 60 y = 40 }
+				size = { width = 300 height = 500 }
 				slotsize = { width = 230 height = 15 }
 				format = "UPPER_LEFT"
 			}
@@ -70,7 +70,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "political_pie_chart"
-			position = { x= 188 y = 260 }
+			position = { x= 188 y = 250 }
 			size = { width=160 height=160 }
 			clipping = no
 
@@ -89,7 +89,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "ruling_party_info"
-			position = { x = 88 y = 360 }
+			position = { x = 320 y = 260 }
 			size = { width = 255 height = 60 }
 			clipping = no
 					
@@ -113,7 +113,7 @@ guiTypes = {
 			
 			instantTextboxType = {
 				name = "elections"
-				position = { x = 9 y = 29 }
+				position = { x = 9 y = 16 }
 				font = "hoi_16mbs"
 				text = "elections"
 				maxWidth = 155
@@ -180,7 +180,7 @@ guiTypes = {
 					instantTextboxType = {
 						name = "faction_name"
 						#position = { x = 105 y = -45 }
-						position = { x = 2 y = 5 }
+						position = { x = 2000 y = 5 }
 						font = "hoi_18mbs"
 						text = "faction"
 						maxWidth = 195
@@ -431,7 +431,7 @@ guiTypes = {
 			
 			iconType = {
 				name = "goal_icon"
-				position = { x = 47 y = 46 }
+				position = { x = 60 y = 46 }
 				centerposition = yes			
 				spriteType = "GFX_goal_unknown"
 			}
@@ -486,13 +486,13 @@ guiTypes = {
 		}
 		containerWindowType = {
 			name = "national_spirit"
-			position = { x = 81 y = 160 }
+			position = { x = 81 y = 140 }
 			size = { width = 360 height = 50 }
 			clipping = no
 						
 			instantTextboxType = {
 				name = "title"
-				position = { x = 110 y = -6 }
+				position = { x = 110 y = 8 }
 				font = "hoi_18mbs"
 				text = "POLITICS_NATIONAL_SPIRIT"
 				maxWidth = 200
@@ -503,7 +503,7 @@ guiTypes = {
 			
 			containerWindowType = {
 				name = "national_spirit_container"
-				position = { x = 99 y = 16 }
+				position = { x = 110 y = 26 }
 				size = { width = 364 height = 74 }
 				verticalScrollbar = "right_vertical_slider"
 				
@@ -532,20 +532,20 @@ guiTypes = {
 		}
 		iconType = {
 			name = "leader"
-			position = { x = 5 y = 50 }
+			position = { x = 15 y = 50 }
 			spriteType = "GFX_leader_unknown"
 		}
 		
 		iconType = {
 			name = "leader_frame2"
 			spriteType = "GFX_pol_leader_frame"
-			position = { x = 1 y = 45 }		
+			position = { x = 1 y = 40 }		
 			alwaystransparent = yes
 		}
 
 		instantTextboxType = {
 			name = "leader_name"
-			position = { x = 8 y = 260 }
+			position = { x = 18 y = 265 }
 			font = "hoi_18mbs"
 			text = "leader_name"
 			maxWidth = 155
@@ -1083,7 +1083,7 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "political_party_info_entry"
-		size = { width = 330 height = 18 }
+		size = { width = 400 height = 18 }
 		clipping = no
 
 		iconType = {
