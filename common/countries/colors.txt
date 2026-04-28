@@ -945,3 +945,14 @@ HTS = {
 	color = rgb { 201 201 201 }
 	color_ui = rgb { 201 201 201 }
 }
+
+SDF = {
+	color = rgb { 166 163 5 }
+	color_ui = rgb { 166 163 5 }
+}
+
+SNA = {
+	color = rgb { 23 90 24 }
+	color_ui = rgb { 23 90 24 }
+}
+

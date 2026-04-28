@@ -1638,7 +1638,7 @@
  SYR_westernism_ADJ:0 "Syrian"
  SYR_neutrality_ADJ:0 "Syrian"
  SYR_communism_ADJ:0 "Syrian"
- SYR:0 "Syria"
+ SYR:0 "Syrian Arab Republic"
  SYR_DEF:0 "Syria"
  SYR_ADJ:0 "Syrian"
  LEB_easternism:0 "Lebanon Free State"
@@ -4455,4 +4455,7 @@
  HTS_salafism:0 "Hay'at Tahrir al-Sham"
  HTS_salafism_DEF:0 "Hay'at Tahrir al-Sham"
  HTS_salafism_ADJ:0 "HTS"
- 
+
+ SDF: "Rojava"
+ SDF_DEF: "The Autonomous Administration of North and East Syria"
+ SDF_ADJ: "Rojava"
