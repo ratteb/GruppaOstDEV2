@@ -66,16 +66,38 @@ on_actions = {
 	
 				}
 				SYR = {
-					country_event = {
-						id = SYR_scw.1
-						days = 1 
-					}
+					country_event = { id = SYR_scw.1 }
 				}
 					log = "global.SYR_civil_war_progress: [?global.SYR_civil_war_progress]"
 			}
 			else = {
 				always = no 
 				log = "global.SYR_civil_war_progress: [?global.SYR_civil_war_progress]"
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					check_variable = {	
+						var = global.SYR_civil_war_progress
+						value = 90
+						compare = greater_than_or_equals
+					}
+
+					NOT = {
+						has_country_flag = SYR_civil_war_total_war
+					}
+	
+				}
+				SYR = {
+					country_event =  SYR_scw.2 
+				}
+					log = "global.SYR_civil_war_progress: [?global.SYR_civil_war_progress] WAR"
+			}
+			else = {
+				always = no 
+				log = "global.SYR_civil_war_progress: [?global.SYR_civil_war_progress]NOWAR"
 			}
 		}
 	}

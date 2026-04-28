@@ -148,12 +148,13 @@ SYR_civil_war_cat = {
 				has_country_flag = SYR_CW_focus_diplomatic 
 			}
 
-			
+			NOT = {
 				check_variable = {
 					var = global.SYR_civil_war_progress
 					value = 75
 					compare = greater_than_or_equals_than_or_equals
 				}
+			}
 			
 		}
 
@@ -215,12 +216,13 @@ SYR_civil_war_cat = {
 				has_country_flag = SYR_CW_focus_neutral
 			}
 
-			
+			NOT = {
 				check_variable = {
 					var = global.SYR_civil_war_progress
 					value = 75
 					compare = greater_than_or_equals_than_or_equals
 				}
+			}
 			
 		}
 

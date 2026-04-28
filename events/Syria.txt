@@ -24,6 +24,37 @@ country_event = {
     }
 }
 
+country_event = {
+	id = SYR_scw.2
+	title = SYR_scw.2.t
+	desc = SYR_scw.2.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # Ura! 
+		name = SYR_scw.2.a 
+		ai_chance = { factor = 90 }
+		news_event = {
+			id = SYR_scw_news.2 
+			days = 1
+		}
+		set_country_flag = SYR_civil_war_total_war
+		declare_war_on = {
+			target = HTS 
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = SDF
+			type = puppet_wargoal_focus
+		}
+		declare_war_on = {
+			target = SNA
+			type = annex_everything
+		}
+    }
+}
+
 news_event = {
 	id = SYR_scw_news.1
 	title = SYR_scw_news.1.t
@@ -35,6 +66,21 @@ news_event = {
 	
 	option = { # Ura! 
 		name = SYR_scw_news.1.a
+		ai_chance = { factor = 90 }
+    }
+}
+
+news_event = {
+	id = SYR_scw_news.2
+	title = SYR_scw_news.2.t
+	desc = SYR_scw_news.2.d
+	picture = GFX_news_russia_teaser_event_001
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = { # Ura! 
+		name = SYR_scw_news.2.a
 		ai_chance = { factor = 90 }
     }
 }
