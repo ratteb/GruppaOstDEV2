@@ -13,6 +13,7 @@ add_namespace = SOV_putin_death_news_event
 add_namespace = SOV_putin_retire_news_event
 add_namespace = SOV_gerasimov
 add_namespace = SOV_shoigu
+add_namespace = SOV_SCW 
 
 
 # CSTO events 
@@ -627,6 +628,36 @@ news_event = {
 		ai_chance = { factor = 90 }
 		set_global_flag = Super_Event_Visible
 		set_global_flag = SOV_PTnD_se
+    }
+}
+
+news_event = {
+	id = SOV_SCW.1
+	title = SOV_SCW.1.t
+	desc = SOV_SCW.1.d
+	picture = GFX_news_russia_teaser_event_001
+	
+	is_triggered_only = yes
+	
+	option = { # Ura! 
+		name = SOV_SCW.1.a
+		ai_chance = { factor = 90 }
+		set_country_flag = FP_SCW_involvement
+    }
+}
+
+news_event = {
+	id = SOV_SCW.2
+	title = SOV_SCW.2.t
+	desc = SOV_SCW.2.d
+	picture = GFX_news_russia_teaser_event_001
+	
+	is_triggered_only = yes
+	
+	option = { # Ura! 
+		name = SOV_SCW.2.a
+		ai_chance = { factor = 90 }
+		clr_country_flag = FP_SCW_involvement
     }
 }
 

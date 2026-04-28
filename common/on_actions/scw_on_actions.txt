@@ -1,0 +1,57 @@
+on_actions = {
+
+	on_daily_SOV = {
+		effect = {
+			if = {
+				limit = {
+					check_variable = {
+						var = global.SYR_civil_war_progress
+						value = 49
+						compare = less_than_or_equals 
+					}
+					has_country_flag = FP_SCW_involvement
+
+				}
+				SOV = {
+					news_event = {
+					id = SOV_SCW.2
+				    } 
+				}
+			}
+			else = {
+				always = no 
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					check_variable = {
+						var = global.SYR_civil_war_progress
+						value = 50
+						compare = greater_than_or_equals 
+					}
+					NOT = {
+						SOV = {
+							has_country_flag = FP_SCW_involvement
+						}
+					}
+				}
+				SOV = {
+					news_event = {
+					id = SOV_SCW.1
+				    } 
+				}
+			}
+
+			else = {
+				always = no 
+			}
+
+		}
+	}
+}
+
+
+
+
