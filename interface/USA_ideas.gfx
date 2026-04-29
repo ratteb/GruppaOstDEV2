@@ -12,5 +12,9 @@ spriteTypes = {
 		name = "GFX_idea_USA_aipac"
 		texturefile = "gfx/interface/ideas/USA/USA_aipac.dds"
 	}
+		spriteType = {
+		name = "GFX_idea_USA_ice"
+		texturefile = "gfx/interface/ideas/USA/USA_ice.dds"
+	}
 }
 
