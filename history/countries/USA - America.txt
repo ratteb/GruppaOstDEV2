@@ -131,7 +131,7 @@ set_popularities = {
 	authoritarian_socialism = 1
 	centrism = 5
 	conservatism = 45
-	progressivism_socialism = 3
+	democratic_socialism = 3
 	fascism = 1
 }
 

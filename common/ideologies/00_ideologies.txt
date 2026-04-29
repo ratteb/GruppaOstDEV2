@@ -40,14 +40,14 @@ ideologies = {
 		ai_neutral = yes
 	}
 
-	progressivism_socialism = {
+	democratic_socialism = {
 		types = {
-			progressivism_socialism_progressivism_socialism = {}
-			progressivism_socialism_eco_socialism = {}
-			progressivism_socialism_popular_front = {}
-			progressivism_socialism_liberal_socialism = {}
-			progressivism_socialism_christian_socialism = {}
-			progressivism_socialism_reformist_socialism = {}
+			democratic_socialism_democratic_socialism = {}
+			democratic_socialism_eco_socialism = {}
+			democratic_socialism_popular_front = {}
+			democratic_socialism_liberal_socialism = {}
+			democratic_socialism_christian_socialism = {}
+			democratic_socialism_reformist_socialism = {}
 		}
 		color = { 226 50 6 }
 		rules = {
