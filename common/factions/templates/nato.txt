@@ -1,6 +1,6 @@
 faction_template_nato = {
 	name = north_atlantic_treaty_org
-	manifest = faction_manifest_strength_in_unity
+	manifest = faction_manifest_defense_of_democracy
 	can_leader_join_other_factions = no
 	# color = { 179 183 235 } # this should default to faction leader's color
 	icon = GFX_faction_icon_nato
