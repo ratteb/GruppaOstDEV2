@@ -1,0 +1,10 @@
+USA_build_wall_cat = {
+	icon = generic_political_actions
+	picture = GFX_SOV_sotnik_decision_cat_picture
+	priority = 50
+	visible_when_empty = yes
+	allowed = {
+		has_country_flag = USA_building_wall
+	}
+	scripted_gui = USA_building_wall_gui
+}

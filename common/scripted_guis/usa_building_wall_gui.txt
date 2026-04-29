@@ -1,0 +1,43 @@
+scripted_gui = {
+
+
+	USA_building_wall_gui = {
+    window_name = "USA_building_wall_gui_window"
+    context_type = decision_category
+
+    visible = {
+      has_country_flag = USA_building_wall
+    }
+
+    effects = {
+    }
+
+    triggers = {
+    }
+
+
+    dynamic_lists = {
+	  }
+
+    properties = {  
+        csto_cohesion_meter = {
+        frame = csto_cohesion
+        }
+	}
+
+    ai_enabled = {
+    }
+
+    ai_test_interval = 290  # The higher, the long it takes the ai to do actions
+	ai_test_variance = 0.5
+
+    ai_check = {
+    }
+
+    ai_check_scope = {
+    }
+
+    ai_weights = {
+    }
+  }
+}

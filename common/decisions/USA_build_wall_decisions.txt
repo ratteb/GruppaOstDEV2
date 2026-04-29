@@ -1,0 +1,51 @@
+USA_build_wall_cat = {
+	USA_build_wall_mission = {
+
+		icon = generic_industry
+
+		available = {
+			has_country_flag = USA_finished_wall
+		}
+		activation = {
+        has_country_flag = USA_building_wall
+        }
+
+		visible = {
+			has_country_flag = USA_building_wall  
+		}
+		days_mission_timeout = 260
+
+		fire_only_once = yes
+		is_good = no
+
+
+		custom_cost_trigger = {
+			command_power > 20
+			has_political_power > 25
+		}
+		custom_cost_text = SOV_csto_training_cost
+
+		complete_effect = { 
+			add_popularity = {
+				ideology = conservatism 
+				popularity = 0.05
+			}
+		}
+		
+		remove_effect = { 
+			add_popularity = {
+				ideology = conservatism 
+				popularity = -0.05
+			}
+		 
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	
+
+
+}

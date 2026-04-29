@@ -44,10 +44,8 @@ technologies = {
 		research_cost = 2.25
 		
 		allow = {
-			AND = {
-				has_tech = tech_mountaineers
 				can_unlock_new_special_forces_tree = yes
-			}
+			
 		}
 		
 		on_research_complete = {
@@ -445,10 +443,8 @@ technologies = {
 		force_use_small_tech_layout = yes
 		
 		allow = { 
-			AND = {
-				has_tech = marines
+
 				can_unlock_new_special_forces_tree = yes
-			}
 		}
 		
 		on_research_complete = {
@@ -496,7 +492,6 @@ technologies = {
 			modifier = {
 				factor = 0
 				tag = USA
-				NOT = { has_tech = special_forces_paratroopers }
 			}
 		}
 		
@@ -960,10 +955,9 @@ technologies = {
 		}
 		
 		allow = { 
-			AND = {
-				has_tech = paratroopers 
+
 				can_unlock_new_special_forces_tree = yes
-			}
+			
 		}
 		
 		on_research_complete = {
@@ -1428,10 +1422,10 @@ technologies = {
 		
 
 		allow = {
-			AND = {
-				has_tech = rangers_tech
+			
+
 				can_unlock_new_special_forces_tree = yes
-			}
+	
 		}
 		
 		folder = {

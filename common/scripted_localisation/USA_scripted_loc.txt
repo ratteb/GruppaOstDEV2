@@ -1,0 +1,9 @@
+#Titles
+defined_text = {
+    name = get_USA_build_wall_progress
+    text = {
+        localization_key = USA_build_wall_progress_loc
+    }
+
+  
+}

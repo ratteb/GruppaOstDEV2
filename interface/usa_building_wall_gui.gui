@@ -1,0 +1,54 @@
+guiTypes = {
+
+
+	containerWindowType = {
+		name = "USA_building_wall_gui_window"	
+		position = { x = 60 y = 0 }	
+		size = { width = 600 height = 510 }
+		orientation = center
+		origo = center
+		moveable = no
+		click_to_front = no
+		clipping = no
+
+		containerWindowType = {
+		name = "USA_building_wall_screen"	
+		position = { x = 60 y = 0 }	
+		size = { width = 600 height = 510 }
+		orientation = center
+		origo = center
+		moveable = no
+		click_to_front = no
+		clipping = no
+
+		
+
+		instantTextboxType = {
+			name = "USA_wall_progress_text"
+			position = { x = 120 y = 450 }
+			font = "TD_event_font_26pt"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "[get_USA_build_wall_progress]"
+			maxWidth = 150
+			maxHeight = 140
+			fixedsize = yes
+		}
+
+		instantTextboxType = {
+			name = "The Wall"
+			position = { x = 120  y = 100 }
+			font = "TD_event_font_26pt"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "USA_the_wall_loc"
+			maxWidth = 150
+			maxHeight = 140
+			fixedsize = yes
+		}
+	}
+
+	}
+
+		
+}
