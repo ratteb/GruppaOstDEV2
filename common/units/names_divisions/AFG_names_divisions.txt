@@ -145,7 +145,7 @@ AFG_MOT_01 =
 
 	can_use = { always = yes }
 
-	division_types = { "motorized" }
+	division_types = { "apc_battalion" }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { AFG_INF_01 }
@@ -251,7 +251,7 @@ AFG_MEC_01 =
 
 	can_use = { always = yes }
 
-	division_types = { "mechanized"  }
+	division_types = { "ifv_battalion"  }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { AFG_INF_01 }

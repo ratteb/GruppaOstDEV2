@@ -106,13 +106,13 @@ LUX_CAV_01 =
 
 LUX_MOT_01 = 
 {
-	name = "Motorized Division"
+	name = "apc_battalion Division"
 
 	for_countries = { LUX }
 
 	can_use = { always = yes }
 
-	division_types = { "motorized" }
+	division_types = { "apc_battalion" }
 
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { LUX_INF_01 }
@@ -138,13 +138,13 @@ LUX_MOT_01 =
 
 LUX_MEC_01 = 
 {
-	name = "Mechanized Division"
+	name = "ifv_battalion Division"
 
 	for_countries = { LUX }
 
 	can_use = { always = yes }
 
-	division_types = { "mechanized" }
+	division_types = { "ifv_battalion" }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { LUX_CAV_01 }

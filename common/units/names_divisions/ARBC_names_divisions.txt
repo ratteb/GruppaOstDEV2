@@ -119,7 +119,7 @@ EGY_MOT_01 =
 
 	can_use = { always = yes }
 
-	division_types = { "motorized" }
+	division_types = { "apc_battalion" }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { EGY_INF_01 }
@@ -199,7 +199,7 @@ EGY_MEC_01 =
 
 	can_use = { always = yes }
 
-	division_types = { "mechanized"  }
+	division_types = { "ifv_battalion"  }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { EGY_INF_01 }

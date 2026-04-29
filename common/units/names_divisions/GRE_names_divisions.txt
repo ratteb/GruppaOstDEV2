@@ -116,13 +116,13 @@ GRE_CAV_01 =
 
 GRE_MOT_01 = 
 {
-	name = "Motorized Infantry Division"
+	name = "apc_battalion Infantry Division"
 
 	for_countries = { GRE }
 
 	can_use = { always = yes }
 
-	division_types = { "motorized" }
+	division_types = { "apc_battalion" }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { GRE_INF_01 }
@@ -149,13 +149,13 @@ GRE_MOT_01 =
 
 GRE_MEC_01 = 
 {
-	name = "Mechanized Division"
+	name = "ifv_battalion Division"
 
 	for_countries = { GRE }
 
 	can_use = { always = yes }
 
-	division_types = { "mechanized" }
+	division_types = { "ifv_battalion" }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { GRE_INF_01 }

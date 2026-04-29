@@ -111,13 +111,13 @@ POR_CAV_01 =
 
 POR_MOT_01 = 
 {
-	name = "Motorized Division"
+	name = "apc_battalion Division"
 
 	for_countries = { POR }
 
 	can_use = { always = yes }
 
-	division_types = { "motorized" }
+	division_types = { "apc_battalion" }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { POR_INF_01 }
@@ -143,13 +143,13 @@ POR_MOT_01 =
 
 POR_MEC_01 = 
 {
-	name = "Mechanized Division"
+	name = "ifv_battalion Division"
 
 	for_countries = { POR }
 
 	can_use = { always = yes }
 
-	division_types = { "mechanized" }
+	division_types = { "ifv_battalion" }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { POR_INF_01 }

@@ -160,10 +160,6 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		path = {
-			leads_to_tech = sp_armored_engineer_tech
-			research_cost_coeff = 1
-		}
 
 		research_cost = 1.25
 		start_year = 1936
@@ -179,71 +175,9 @@ technologies = {
 
 		ai_will_do = {
 			base = 4
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-
-			modifier = {
-				factor = 2
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1939.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "1940.1.1"
-			}
-
-			modifier = {
-				factor = 6
-				original_tag = CHI
-				NOT = {
-					has_dlc = "No Compromise, No Surrender"
-				}
-			}
 			
 		}
 
-		on_research_complete = {
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_land_flamethrower_tank
-				}
-			}
-
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
-				PROJECT = sp_land_military_engineering_vehicles
-			}
-
-			if = {
-				limit = {
-					original_tag = AFG
-					has_dlc = "Graveyard of Empires"
-					has_completed_focus = AFG_expand_quami_template
-				}
-				add_units_to_division_template = {
-					template_name = "Pashtun Levy" 
-					support = {
-						engineer = 0 
-					}
-				}
-			}
-		}
 	}
 
 	tech_engineers2 = {
@@ -253,20 +187,6 @@ technologies = {
 			fort = {
 				defence = 0.10
 				attack = 0.10
-			}
-		}
-
-		assault_engineer = {
-			breakthrough = 0.1
-			fort = {
-				attack = 0.15
-			}
-		}
-
-		armored_engineer = {
-			entrenchment = 1
-			fort = {
-				defence = 0.15
 			}
 		}
 
@@ -350,46 +270,7 @@ technologies = {
 			}
 		}
 
-		assault_engineer = {
-			breakthrough = 0.1
-			river = {
-				attack = 0.1
-			}
-		}
 
-		armored_engineer = {
-			entrenchment = 1
-			river = {
-				attack = 0.05
-				defence = 0.05
-				movement = 0.15
-			}
-		}
-
-		light_flame_tank = {
-			urban = {
-				attack = 0.1
-			}
-			fort = {
-				attack = 0.10
-			}
-		}
-		medium_flame_tank = {
-			urban = {
-				attack = 0.1
-			}
-			fort = {
-				attack = 0.10
-			}
-		}
-		heavy_flame_tank = {
-			urban = {
-				attack = 0.1
-			}
-			fort = {
-				attack = 0.10
-			}
-		}
 		path = {
 			leads_to_tech = tech_engineers4
 			research_cost_coeff = 1
@@ -409,26 +290,6 @@ technologies = {
 
 		ai_will_do = {
 			base = 4
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-
-			modifier = {
-				factor = 2
-				date > "1943.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1944.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1945.1.1"
-			}
 		}
 	}
 
@@ -439,46 +300,6 @@ technologies = {
 			urban = {
 				attack = 0.1
 				defence = 0.1
-			}
-		}
-
-		assault_engineer = {
-			breakthrough = 0.1
-			urban = {
-				attack = 0.15
-			}
-		}
-
-		armored_engineer = {
-			entrenchment = 1
-			urban = {
-				defence = 0.15
-				movement = 0.15
-			}
-		}
-
-		light_flame_tank = {
-			urban = {
-				attack = 0.1
-			}
-			fort = {
-				attack = 0.10
-			}
-		}
-		medium_flame_tank = {
-			urban = {
-				attack = 0.1
-			}
-			fort = {
-				attack = 0.10
-			}
-		}
-		heavy_flame_tank = {
-			urban = {
-				attack = 0.1
-			}
-			fort = {
-				attack = 0.10
 			}
 		}
 		research_cost = 2.0
@@ -495,26 +316,6 @@ technologies = {
 
 		ai_will_do = {
 			base = 4
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-
-			modifier = {
-				factor = 2
-				date > "1946.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1947.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1948.1.1"
-			}
 		}
 	}
 
@@ -524,16 +325,10 @@ technologies = {
 			recon
 			mot_recon
 			armored_car_recon
-			light_tank_recon
 		}
 
 		path = {
 			leads_to_tech = tech_recon2
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = sp_helicopter_artillery_observers_tech
 			research_cost_coeff = 1
 		}
 
@@ -551,30 +346,6 @@ technologies = {
 
 		ai_will_do = {
 			base = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1937.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1938.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1939.1.1"
-			}
-			modifier = {
-				factor = 10
-				date > "1940.1.1"
-			}
 		}
 	}
 
@@ -582,10 +353,6 @@ technologies = {
 
 		category_recon = {
 			recon = 2
-		}
-
-		helicopter_recon = {
-			recon = 1
 		}
 
 		path = {
@@ -607,35 +374,12 @@ technologies = {
 
 		ai_will_do = {
 			base = 1
-
-			modifier = {
-				factor = 1.2
-				date > "1940.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1941.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1942.1.1"
-			}
 		}
 	}
 
 	tech_recon3 = {
 
 		category_recon = {
-			recon = 2
-		}
-
-		helicopter_recon = {
-			recon = 1
-		}
-
-		helicopter_brigade = {
 			recon = 2
 		}
 
@@ -658,30 +402,11 @@ technologies = {
 
 		ai_will_do = {
 			base = 1
-
-			modifier = {
-				factor = 1.2
-				date > "1943.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1944.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1945.1.1"
-			}
 		}
 	}
 	tech_recon4 = {
 
 		category_recon = {
-			recon = 2
-		}
-
-		helicopter_recon = {
 			recon = 2
 		}
 
@@ -699,21 +424,6 @@ technologies = {
 
 		ai_will_do = {
 			base = 1
-
-			modifier = {
-				factor = 1.2
-				date > "1946.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1947.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1948.1.1"
-			}
 		}
 	}
 
@@ -725,11 +435,6 @@ technologies = {
 
 		path = {
 			leads_to_tech = tech_military_police2
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = sp_armored_motorized_military_police_tech
 			research_cost_coeff = 1
 		}
 
@@ -747,60 +452,6 @@ technologies = {
 
 		ai_will_do = {
 			base = 0.5
-
-			modifier = {
-				factor = 5
-				tag = GER
-			}
-
-			modifier = {
-				factor = 10
-				tag = GER
-
-				POL = { has_capitulated = yes }
-				GER = { has_war = yes }
-			}
-
-			modifier = {
-				factor = 5
-				tag = JAP
-			}
-
-			modifier = {
-				factor = 2
-				tag = ITA
-			}
-
-			modifier = {
-				factor = 2
-				tag = ENG
-			}
-
-			modifier = {
-				factor = 2
-				tag = USA
-			}
-
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-		}
-
-		on_research_complete = {
-			if = {
-				limit = {
-					original_tag = AFG
-					has_dlc = "Graveyard of Empires"
-					has_completed_focus = AFG_expand_quami_template
-				}
-				add_units_to_division_template = {
-					template_name = "Pashtun Levy" 
-					support = {
-						military_police = 0 
-					}
-				}
-			}
 		}
 	}
 
@@ -810,13 +461,6 @@ technologies = {
 			suppression_factor = 0.1
 		}
 
-		motorized_military_police = {
-			suppression_factor = 0.1
-			battalion_mult = {
-				category = category_vehicle_infantry
-				default_morale = 0.05
-			}
-		}
 
 		path = {
 			leads_to_tech = tech_military_police3
@@ -837,11 +481,6 @@ technologies = {
 
 		ai_will_do = {
 			base = 0.5
-
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
 		}
 	}
 
@@ -851,13 +490,7 @@ technologies = {
 			suppression_factor = 0.1
 		}
 
-		motorized_military_police = {
-			suppression_factor = 0.1
-			battalion_mult = {
-				category = category_vehicle_infantry
-				default_morale = 0.05
-			}
-		}
+	
 
 		path = {
 			leads_to_tech = tech_military_police4
@@ -878,25 +511,12 @@ technologies = {
 
 		ai_will_do = {
 			base = 0.5
-
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
 		}
 	}
 	tech_military_police4 = {
 
 		military_police = {
 			suppression_factor = 0.1
-		}
-
-		motorized_military_police = {
-			suppression_factor = 0.1
-			battalion_mult = {
-				category = category_vehicle_infantry
-				default_morale = 0.05
-			}
 		}
 
 		research_cost = 2.0
@@ -913,11 +533,6 @@ technologies = {
 
 		ai_will_do = {
 			base = 0.5
-
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
 		}
 	}
 

@@ -120,7 +120,7 @@ BLR_MOT_01 =
 
 	can_use = { always = yes }
 
-	division_types = { "motorized" }
+	division_types = { "apc_battalion" }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { BLR_INF_01 }
@@ -195,13 +195,13 @@ BLR_BLR_01 =
 
 BLR_MEC_01 = 
 {
-	name = "Mechanized Divisions"
+	name = "ifv_battalion Divisions"
 
 	for_countries = { BLR }
 
 	can_use = { always = yes }
 
-	division_types = { "mechanized"  }
+	division_types = { "ifv_battalion"  }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { BLR_INF_01 }

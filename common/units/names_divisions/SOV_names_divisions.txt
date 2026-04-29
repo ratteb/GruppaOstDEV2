@@ -610,7 +610,7 @@ SOV_MOT_01 =
 
 	can_use = { always = yes }
 
-	division_types = { "motorized" }
+	division_types = { "apc_battalion" }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { SOV_INF_01 }
@@ -669,13 +669,13 @@ SOV_MOT_01 =
 
 SOV_MEC_01 = 
 {
-	name = "Mechanized Division"
+	name = "ifv_battalion Division"
 
 	for_countries = { SOV }
 
 	can_use = { always = yes }
 
-	division_types = { "mechanized" "motorized" }
+	division_types = { "ifv_battalion" "apc_battalion" }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { SOV_INF_01 }
@@ -1480,13 +1480,13 @@ SOV_GRD_01 =
 
 SOV_GMC_01 = 
 {
-	name = "Guards Mechanized"
+	name = "Guards ifv_battalion"
 
 	for_countries = { SOV }
 
 	can_use = { always = yes }
 
-	division_types = { "mechanized" "motorized" }
+	division_types = { "ifv_battalion" "apc_battalion" }
 
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { SOV_INF_01 }

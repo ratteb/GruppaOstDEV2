@@ -183,18 +183,18 @@ CSA_CAV_01 =
 
 CSA_MOT_01 = 
 {
-	name = "Motorized Division"
+	name = "apc_battalion Division"
 
 	for_countries = { CSA }
 
 	can_use = { always = yes }
 
-	division_types = { "motorized" }
+	division_types = { "apc_battalion" }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { CSA_INF_01 }
 
-	fallback_name = "%d Motorized Division"
+	fallback_name = "%d apc_battalion Division"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
@@ -298,18 +298,18 @@ CSA_MOT_01 =
 
 CSA_MEC_01 = 
 {
-	name = "Mechanized Division"
+	name = "ifv_battalion Division"
 
 	for_countries = { CSA }
 
 	can_use = { always = yes }
 
-	division_types = { "mechanized" }
+	division_types = { "ifv_battalion" }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { CSA_INF_01 }
 
-	fallback_name = "%d Mechanized Division"
+	fallback_name = "%d ifv_battalion Division"
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.

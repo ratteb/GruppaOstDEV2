@@ -151,13 +151,13 @@ FREN_CAV_01 =
 
 FREN_MOT_01 = 
 {
-	name = "Motorized Division"
+	name = "apc_battalion Division"
 
 	for_countries = { BRD CAM CAR CAY CHA CMR COG DAH GAB GDL GNA HAI IVO LAO MAD MLI NGR RCG RWA SEN TOG VOL } 
 
 	can_use = { always = yes }
 
-	division_types = { "motorized" }
+	division_types = { "apc_battalion" }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { FREN_INF_01 }
@@ -183,13 +183,13 @@ FREN_MOT_01 =
 
 FREN_MEC_01 = 
 {
-	name = "Mechanized Division"
+	name = "ifv_battalion Division"
 
 	for_countries = { BRD CAM CAR CAY CHA CMR COG DAH GAB GDL GNA HAI IVO LAO MAD MLI NGR RCG RWA SEN TOG VOL } 
 
 	can_use = { always = yes }
 
-	division_types = { "light_armor" "medium_armor" "mechanized" }
+	division_types = { "light_armor" "medium_armor" "ifv_battalion" }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { FREN_INF_01 }

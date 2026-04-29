@@ -225,7 +225,7 @@ ENG_INF_03 = {
 
 	can_use = { always = yes }
 
-	division_types = { "infantry" "mechanized" } 
+	division_types = { "infantry" "ifv_battalion" } 
 
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { ENG_INF_03 } 
@@ -377,7 +377,7 @@ ENG_MOT_01 = {
 
 	can_use = { always = yes }
 
-	division_types = { "motorized" }
+	division_types = { "apc_battalion" }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { ENG_INF_01 }
@@ -388,13 +388,13 @@ ENG_MOT_01 = {
 	# It's okay to have gaps in numbering.
 	ordered =
 	{
-		50 = { "%dth (Northumbrian) Infantry Division" }			# actual motorized divisions
+		50 = { "%dth (Northumbrian) Infantry Division" }			# actual apc_battalion divisions
 		55 = { "%dth (West Lancashire) Infantry Division" }
 		59 = { "%dth (Staffordshire) Infantry Division" }
 		23 = { "%drd (Northumbrian) Infantry Division" }
 		47 = { "%dth (London) Infantry Division" }
 		56 = { "%dth (London) Infantry Division" }
-		7 = { "%dth Infantry Division" }				# potentially motorized divisions
+		7 = { "%dth Infantry Division" }				# potentially apc_battalion divisions
 		8 = { "%dth Infantry Division" }
 		1 = { "%dst Infantry Division" }
 		2 = { "%dnd Infantry Division" }
@@ -487,7 +487,7 @@ ENG_MOT_02 = {
 
 	can_use = { always = yes }
 
-	division_types = { "motorized" }
+	division_types = { "apc_battalion" }
 
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { ENG_MOT_01 }
@@ -538,7 +538,7 @@ ENG_MEC_01 = {
 
 	can_use = { always = yes }
 
-	division_types = { "mechanized" }
+	division_types = { "ifv_battalion" }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { ENG_INF_01 }
@@ -549,13 +549,13 @@ ENG_MEC_01 = {
 	# It's okay to have gaps in numbering.
 	ordered =
 	{
-		50 = { "%dth (Northumbrian) Infantry Division" }			# actual motorized divisions
+		50 = { "%dth (Northumbrian) Infantry Division" }			# actual apc_battalion divisions
 		55 = { "%dth (West Lancashire) Infantry Division" }
 		59 = { "%dth (Staffordshire) Infantry Division" }
 		23 = { "%drd (Northumbrian) Infantry Division" }
 		47 = { "%dth (London) Infantry Division" }
 		56 = { "%dth (London) Infantry Division" }
-		7 = { "%dth Infantry Division" }				# potentially motorized divisions
+		7 = { "%dth Infantry Division" }				# potentially apc_battalion divisions
 		8 = { "%dth Infantry Division" }
 		1 = { "%dst Infantry Division" }
 		2 = { "%dnd Infantry Division" }

@@ -243,13 +243,13 @@ FRA_CAV_01 =
 
 FRA_MOT_01 = 
 {
-	name = "Motorized Division"
+	name = "apc_battalion Division"
 
 	for_countries = { FRA }
 
 	can_use = { always = yes }
 
-	division_types = { "motorized" }
+	division_types = { "apc_battalion" }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { FRA_INF_01 }
@@ -302,13 +302,13 @@ FRA_MOT_01 =
 
 FRA_MEC_01 = 
 {
-	name = "Light Mechanized Division"
+	name = "Light ifv_battalion Division"
 
 	for_countries = { FRA }
 
 	can_use = { always = yes }
 
-	division_types = { "light_armor" "medium_armor" "mechanized" }
+	division_types = { "light_armor" "medium_armor" "ifv_battalion" }
 
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { FRA_INF_01 }
@@ -360,7 +360,7 @@ FRA_DLC_01 =
 
 	can_use = { always = yes }
 
-	division_types = { "motorized" "cavalry" "mechanized" }
+	division_types = { "apc_battalion" "cavalry" "ifv_battalion" }
 
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { FRA_INF_01 }
