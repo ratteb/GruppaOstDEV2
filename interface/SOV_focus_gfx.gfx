@@ -20,6 +20,13 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_SOV_announce_equipment.dds"
 	}
 
+	spriteType = {
+		name = "GFX_goal_SOV_new_os"
+		texturefile = "gfx/interface/goals/focus_SOV_russian_os.dds"
+	}
+
+	
+
 	# Hardliner USSR focus icons 
 
 	spriteType = {

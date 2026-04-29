@@ -7,7 +7,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=juche
+			ideology=marxism_leninism_juche
 			desc = KOR_kim_jong_un_desc
 			expire="3000.1.1.1"
 			id=-1

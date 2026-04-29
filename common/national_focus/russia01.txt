@@ -1093,7 +1093,7 @@ focus_tree = {
 	focus = {
 		id = SOV_new_os
 		prerequisite = { focus = SOV_emphasis_cyber_warfare }
-		icon = GFX_goal_no_data
+		icon = GFX_goal_SOV_new_os
 		relative_position_id = SOV_emphasis_cyber_warfare
 		x = 1
 		y = 1

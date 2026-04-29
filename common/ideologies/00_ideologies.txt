@@ -18,7 +18,7 @@ ideologies = {
 		can_host_government_in_exile = no
 		can_collaborate = yes
 		ai_neutral = yes
-	}
+	} 
 
 	authoritarian_socialism = {
 		types = {
