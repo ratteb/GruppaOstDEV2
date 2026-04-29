@@ -23,6 +23,8 @@ replace_path = "common/scripted_effects"
 replace_path = "common/scripted_triggers"
 replace_path = "events"
 replace_path = "common/scripted_localisation"
+replace_path = "common/units"
+
 replace_path = "common/decisions"
 replace_path = "common/decisions/categories"
 replace_path = "common/bookmarks"

@@ -10,7 +10,7 @@ division_template = {
 		ifv_battalion = { x = 0 y = 1 }
         ifv_battalion = { x = 0 y = 2 }
 		ifv_battalion = { x = 0 y = 3 }
-		light_sp_artillery_brigade = { x = 1 y = 0 }
+		spg_battalion = { x = 1 y = 0 }
 
 	}
 	support = {
@@ -26,7 +26,7 @@ division_template = {
 		apc_battalion = { x = 0 y = 0 }
 		apc_battalion = { x = 0 y = 1 }
 		apc_battalion = { x = 0 y = 2 }
-		light_sp_artillery_brigade = { x = 1 y = 0 }
+		spg_battalion = { x = 1 y = 0 }
 
 	}
 	support = {

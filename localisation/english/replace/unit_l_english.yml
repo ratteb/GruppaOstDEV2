@@ -342,6 +342,7 @@
  mechanized:0 "Mechanized Infantry"
  mechanized_desc:0 "Lightly armored infantry transportation."
  apc_battalion:0 "APC Battalion"
+ spg_battalion:0 "SPH Battalion"
  ifv_battalion:0 "IFV Battalion"
  modern_armor:0 "Tank Battalion"
  modern_armor_desc:0 "Modern Tanks have evolved to deal with most battlefield situations. Powerful guns and sloped armor have eliminated the need for specialized tanks."

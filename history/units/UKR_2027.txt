@@ -11,8 +11,8 @@ division_template = {
         ifv_battalion = { x = 0 y = 2 }
 		apc_battalion = { x = 1 y = 0 }
 		modern_armor = { x = 2 y = 0 }
-		light_sp_artillery_brigade = { x = 3 y = 0 }
-		light_sp_artillery_brigade = { x = 3 y = 1 }
+		spg_battalion = { x = 3 y = 0 }
+		spg_battalion = { x = 3 y = 1 }
 		motorized_rocket_brigade = { x = 3 y = 2 }
 
 	}
@@ -31,8 +31,8 @@ division_template = {
 		modern_armor = { x = 0 y = 1 }
 		modern_armor = { x = 0 y = 2 }
 		ifv_battalion = { x = 1 y = 0 }
-		light_sp_artillery_brigade = { x = 2 y = 0 }
-		light_sp_artillery_brigade = { x = 2 y = 1 }
+		spg_battalion = { x = 2 y = 0 }
+		spg_battalion = { x = 2 y = 1 }
 		motorized_rocket_brigade = { x = 2 y = 2 }
 
 	}
@@ -64,8 +64,8 @@ division_template = {
 		paratrooper = { x = 0 y = 0 }
 		paratrooper = { x = 0 y = 1 }
 		paratrooper = { x = 0 y = 2 }
-		light_sp_artillery_brigade = { x = 1 y = 0 }
-		light_sp_artillery_brigade = { x = 1 y = 1 }
+		spg_battalion = { x = 1 y = 0 }
+		spg_battalion = { x = 1 y = 1 }
 		motorized_rocket_brigade = { x = 1 y = 2 }
 
 	}
@@ -84,7 +84,7 @@ division_template = {
 		mountaineers = { x = 0 y = 1 }
 		mountaineers = { x = 0 y = 2 }
 		mot_artillery_brigade = { x = 1 y = 0 }
-		light_sp_artillery_brigade = { x = 1 y = 1 }
+		spg_battalion = { x = 1 y = 1 }
 		motorized_rocket_brigade = { x = 1 y = 2 }
 		modern_armor = { x = 2 y = 0 }
 
