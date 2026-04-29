@@ -1,16 +1,5 @@
 armor_generic = {
 
-	blocked_for = {
-		GER
-		JAP
-		ENG
-		USA
-		ITA
-		SOV
-		HUN
-		SIA
-	}
-
 	role = armor
 
 # TODO reintroduce a fortress buster role maybe?
@@ -105,7 +94,6 @@ armor_generic = {
 			
 			support = {
 				engineer = 1
-				light_tank_recon = 1
 				maintenance_company = 1
 				logistics_company = 1
 				signal_company = 1
@@ -114,24 +102,13 @@ armor_generic = {
 			regiments = {
 				modern_armor = 6
 				ifv_battalion = 4
-				modern_sp_artillery_brigade = 1
+				spg_battalion = 1
 			}
 		}
 	}
 }
 
 garrison_generic = {
-
-	blocked_for = {
-		GER
-		JAP
-		ENG
-		USA
-		ITA
-		SOV
-		HUN
-		SIA
-	}
 	
 	role = garrison
 	
@@ -226,25 +203,7 @@ suppression_generic = {
 
 infantry_generic = {
 
-	blocked_for = {
-		GER
-		JAP
-		ENG
-		USA
-		ITA
-		SOV
-		HUN
-		CHI
-		PRC
-		GXC
-		YUN
-		SHX
-		XSM
-		SIK
-		MEN
-		MAN
-		SIA
-	}
+
 
 	role = infantry
 	
@@ -314,15 +273,7 @@ infantry_generic = {
 
 mountaineers_generic = {
 
-	blocked_for = {
-		GER
-		JAP
-		ENG
-		USA
-		ITA
-		SOV
-		SIA
-	}
+
 
 	role = mountaineers
 	
@@ -332,7 +283,7 @@ mountaineers_generic = {
 		modifier = {
 			factor = 0
 			NOT = {
-				has_tech = tech_mountaineers
+				has_tech = mountaineer_equipment
 			}
 		}
 	}
@@ -366,14 +317,6 @@ mountaineers_generic = {
 
 marines_generic = {
 
-	blocked_for = {
-		GER
-		JAP
-		ENG
-		USA
-		ITA
-		SOV
-	}
 
 	role = marines
 	
@@ -383,7 +326,7 @@ marines_generic = {
 		modifier = {
 			factor = 0
 			NOT = {
-				has_tech = marines
+				has_tech = marine_equipment
 			}
 		}
 	}
@@ -410,61 +353,11 @@ marines_generic = {
 			}
 		}
 	}
-	marine_armored = {
-	
-		upgrade_prio = {
-			base = 3
-
-			modifier = {
-				factor = 0
-
-				# disable if we are missing either of amph mech inf or amph tank
-				OR = {
-					NOT = {
-						has_tech = amphibious_mechanized_infantry
-					}
-					NOT = {
-						OR = {
-							has_tech = amphibious_tank
-							has_tech = amphibious_tank_chassis
-						}
-					}
-				}
-
-			}
-			modifier = {
-				is_major = no
-				factor = 0
-			}
-		}
-
-		target_template = {
-			
-			support = {
-				recon = 1
-				logistics_company = 1
-				engineer = 1
-			}
-			
-			regiments = {
-				amphibious_armor = 4
-				amphibious_mechanized = 6
-			}
-		}
-	}
 }
 
 
 paratrooper_generic = {
 
-	blocked_for = {
-		GER
-		JAP
-		ENG
-		USA
-		ITA
-		SOV
-	}
 
 	role = paratroopers
 	
@@ -474,7 +367,7 @@ paratrooper_generic = {
 		modifier = {
 			factor = 0
 			NOT = {
-				has_tech = paratroopers
+				has_tech = paratrooper_equipment
 			}
 		}
 	}
@@ -504,88 +397,6 @@ paratrooper_generic = {
 	}
 }
 
-rangers_generic = {
-
-	role = rangers_role
-	
-	upgrade_prio = {
-		base = 2
-
-		modifier = {
-			factor = 0
-			NOT = {
-				has_tech = rangers_tech
-			}
-		}
-	}
-
-	rangers_default = {
-	
-		upgrade_prio = {
-			base = 1
-
-			modifier = {
-				factor = 1
-			}
-		}
-
-		target_template = {
-			
-			support = {
-				engineer = 1
-				artillery = 1
-				recon = 1
-				logistics_company = 1
-			}
-			
-			regiments = {
-				ranger_battalion = 8
-				artillery_brigade = 2
-			}
-		}
-	}
-}
-
-landcruiser_generic = {
-
-
-	role = mega_heavy_breakthrough_role
-	
-	upgrade_prio = {
-		base = 2
-
-		modifier = {
-			factor = 0
-			NOT = { is_special_project_completed = sp:sp_land_land_cruiser }
-		}
-	}
-	 
-	landcruiser_default = {
-	
-		upgrade_prio = {
-			base = 1
-
-			modifier = {
-				factor = 1
-			}
-		}
-
-		target_template = {
-			
-			support = {
-				engineer = 1
-				land_cruiser = 1
-				anti_air = 1
-			}
-			
-			regiments = {
-				medium_armor = 2
-				heavy_armor = 1
-				motorized = 6
-			}
-		}
-	}
-}
 
 
 

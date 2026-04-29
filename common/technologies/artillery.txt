@@ -65,17 +65,6 @@ technologies = {
 			secondary_turret_small_cannon
 		}
 
-		on_research_complete = {
-			if = {
-				limit = {
-					has_dlc = "Gotterdammerung"
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_land_super_heavy_howitzer
-				}
-			}
-		}
 
 		research_cost = 1.5
 
@@ -195,24 +184,12 @@ technologies = {
 		}
 
 		enable_equipment_modules = {
-			tank_medium_howitzer
-			tank_medium_cannon
 			lc_medium_cannon_turret #Module for Land Cruiser
 			lc_assault_gun #Module for Land Cruiser
 		}
 
 		path = {
 			leads_to_tech = artillery2
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = sp_artillery_rocket_assisted_projectiles_tech
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = sp_artillery_purpose_built_gun_motor_carriages_tech
 			research_cost_coeff = 1
 		}
 
@@ -1501,26 +1478,6 @@ technologies = {
 			ap_attack = 0.1
 		}
 		mot_anti_tank_brigade = {
-			hard_attack = 0.1
-			ap_attack = 0.1
-		}
-		light_tank_destroyer_brigade = {
-			hard_attack = 0.1
-			ap_attack = 0.1
-		}
-		medium_tank_destroyer_brigade = {
-			hard_attack = 0.1
-			ap_attack = 0.1
-		}
-		heavy_tank_destroyer_brigade = {
-			hard_attack = 0.1
-			ap_attack = 0.1
-		}
-		super_heavy_tank_destroyer_brigade = {
-			hard_attack = 0.1
-			ap_attack = 0.1
-		}
-		modern_tank_destroyer_brigade = {
 			hard_attack = 0.1
 			ap_attack = 0.1
 		}
