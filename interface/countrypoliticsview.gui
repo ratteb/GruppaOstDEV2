@@ -46,7 +46,7 @@ guiTypes = {
 		iconType ={
 			name ="pol_faction_icon"
 			spriteType = "GFX_pol_factions_strip"
-			position = { x= 260 y = 260 }
+			position = { x= 260 y = 250 }
 			Orientation = "UPPER_LEFT"
 			frame = 1
 		}
@@ -54,7 +54,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "chart_explanation"
 			position = { x = 140 y = 265 }
-			size = { width = 300 height = 200 }
+			size = { width = 300 height = 240}
 			clipping = yes
 			
 			
@@ -104,7 +104,7 @@ guiTypes = {
 			
 			instantTextboxType = {
 				name = "ideology"
-				position = { x = 9 y = 6 }
+				position = { x = 9 y = -2 }
 				font = "hoi_18mbs"
 				text = "ideology"
 				maxWidth = 155
@@ -113,7 +113,7 @@ guiTypes = {
 			
 			instantTextboxType = {
 				name = "elections"
-				position = { x = 9 y = 16 }
+				position = { x = 9 y = 5 }
 				font = "hoi_16mbs"
 				text = "elections"
 				maxWidth = 155
@@ -162,14 +162,14 @@ guiTypes = {
 				buttonType = {
 					name = "view_factions_button"
 					quadTextureSprite = "GFX_icon_button_32x32"
-					position = { x = -176 y = 308}
+					position = { x = -410 y = 377}
 					pdx_tooltip = "VIEW_FACTION"
 				}
 				
 				iconType = {
 					name = "view_faction_icon"
 					spriteType = "GFX_relation_faction"
-					position = { x = -176  y = 308 }
+					position = { x = -410  y = 377 }
 					alwaystransparent = yes
 				}	
 
@@ -206,7 +206,7 @@ guiTypes = {
 					buttonType = {
 						name = "open_faction_button"
 						quadTextureSprite = "GFX_factions_button"
-						position = { x = -150 y = 295 }
+						position = { x = -390 y = 370 }
 						buttonFont = "hoi_16mbs"
 						Orientation = "UPPER_LEFT"
 						frame = 1
@@ -215,13 +215,13 @@ guiTypes = {
 					iconType = {
 						name = "faction_icon"
 						spriteType = "GFX_faction_logo_generic_democratic"
-						position = { x = -138 y = 307}
+						position = { x = -378 y = 382}
 						alwaystransparent = yes
 					}
 
 					positionType = {
 						name = "faction_name_position" #position y will be - half the height to keep it centered
-						position = { x = -100 y = 320  }
+						position = { x = -345 y = 397  }
 					}
 
 					instantTextboxType = {
