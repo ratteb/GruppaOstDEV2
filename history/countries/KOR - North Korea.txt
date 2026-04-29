@@ -16,8 +16,7 @@ set_technology = {
 	motorised_infantry = 1
 	paratrooper_equipment = 1
 	gw_artillery = 1
-	mass_assault = 1
-	fleet_in_being = 1
+
 }
 
 if = {
@@ -96,7 +95,7 @@ create_country_leader = {
 	name = "Mr Generic"
 	desc = ""
 	picture = GFX_portrait_Gara_Garabeyov
-	ideology = nationalism
+	ideology = despotism_radical_nationalism
 	traits = {
 		
 	}
