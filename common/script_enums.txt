@@ -147,6 +147,7 @@ script_enum_equipment_category = {
 	rocket
 	flame
 	land_cruiser
+	apc_equipment
 }
 
 script_enum_equipment_bonus_type = {
@@ -202,8 +203,6 @@ script_enum_equipment_bonus_type = {
 	super_heavy_artillery_equipment_1
 	armored_support_vehicle
 	armored_support_vehicle_1
-	helicopter_equipment
-	helicopter_equipment_1
 	mothership_equipment
 	mothership_equipment_0
 	strat_bomber_intercontinental_equipment
@@ -270,10 +269,6 @@ script_enum_equipment_bonus_type = {
 	infantry_equipment_1
 	infantry_equipment_2
 	infantry_equipment_3
-	mechanized_equipment
-	mechanized_equipment_1
-	mechanized_equipment_2
-	mechanized_equipment_3
 	motorized_equipment
 	motorized_equipment_0
 	motorized_equipment_1
@@ -505,6 +500,7 @@ script_enum_equipment_bonus_type = {
 	strat_bomber_equipment_3
 	jet_strat_bomber_equipment_1
 	supersonic_fighter_equipment_1
+	odern_tank_equipment
 	modern_tank_equipment_0
 	modern_tank_equipment_1
 	modern_tank_equipment_2
@@ -512,6 +508,7 @@ script_enum_equipment_bonus_type = {
 	modern_tank_equipment_4
 	modern_tank_equipment_5
 	modern_tank_equipment_6
+	apc_equipment
 	apc_equipment_0
 	apc_equipment_1
 	apc_equipment_2
@@ -519,15 +516,39 @@ script_enum_equipment_bonus_type = {
 	apc_equipment_4
 	apc_equipment_5
 	apc_equipment_6
+	ifv_equipment
 	ifv_equipment_0
 	ifv_equipment_1
 	ifv_equipment_2
 	ifv_equipment_3
 	ifv_equipment_4
 	ifv_equipment_5
+	airborne_ifv
 	airborne_ifv_0
 	airborne_ifv_1
 	airborne_ifv_2
 	airborne_ifv_3
 	airborne_ifv_4
+	spg_equipment
+	spg_equipment_0
+	spg_equipment_1
+	infantry_equipment_0
+	infantry_equipment_1
+	infantry_equipment_2
+	infantry_equipment_3
+	infantry_equipment_4
+	infantry_equipment_5
+	infantry_equipment_6
+	infantry_equipment_7
+	infantry_equipment_8
+	infantry_equipment_9
+	infantry_equipment_10
+	anti_tank_weapons
+	anti_tank_weapons_0
+	anti_tank_weapons_1
+	anti_tank_weapons_2
+	anti_tank_weapons_3
+	anti_tank_weapons_4
+	anti_tank_weapons_5
+	anti_tank_weapons_6
 }

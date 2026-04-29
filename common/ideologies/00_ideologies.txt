@@ -137,7 +137,6 @@ ideologies = {
 			conservatism_classical_conservatism = {}
 			conservatism_neoconservatism = {}
 			conservatism_islamic_conservatism = {}
-			conservatism_classical_conservatism = {}
 			conservatism_social_conservatism = {}
 		}
 		color = { 14 79 147 }
