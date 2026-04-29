@@ -171,11 +171,11 @@ sub_units = {
 		# needed since we give so much bonus to infantry even with no mech equipment
 		essential = {
 			infantry_equipment
-			mechanized_equipment
+			ifv_equipment
 		}
 
 		# this is what moves us and sets speed
-		transport = mechanized_equipment
+		transport = ifv_equipment
 
 		need = {
 			ifv_equipment = 40
@@ -229,7 +229,7 @@ sub_units = {
 			category_front_line
 			category_all_infantry
 			category_army
-			armoured_infantry
+			category_armoured_infantry
 		}
 		
 		combat_width = 4
