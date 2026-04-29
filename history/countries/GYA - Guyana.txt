@@ -12,9 +12,9 @@ set_technology = {
 	tech_support = 1		
 	tech_engineers = 1
 	tech_military_police = 1
-	tech_mountaineers = 1
+	mountaineer_equipment = 1
 	motorised_infantry = 1
-	paratroopers = 1
+	paratrooper_equipment = 1
 	gw_artillery = 1
 	mass_assault = 1
 	fleet_in_being = 1
@@ -33,28 +33,8 @@ if = {
 	}
 }
 
-if = {
-	limit = {
-		NOT = {
-			has_dlc = "No Step Back"
-		}
-	}
-	set_technology = {
-		basic_light_tank = 1
-		gwtank = 1
-	}
-}
-if = {
-	limit = {
-		
-		has_dlc = "No Step Back"
-		
-	}
-	set_technology = {
-		basic_light_tank_chassis = 1
-		gwtank_chassis = 1
-	}
-}
+#
+#
 if = {
 	limit = {
 		not = { has_dlc = "Man the Guns" }
