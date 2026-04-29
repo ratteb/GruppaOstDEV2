@@ -26,6 +26,8 @@ replace_path = "common/scripted_localisation"
 replace_path = "common/units"
 replace_path = "common/bop"
 replace_path = "common/factions"
+replace_path = "common/ai_templates"
+replace_path = "common/ai_equipment"
 
 replace_path = "common/decisions"
 replace_path = "common/decisions/categories"
