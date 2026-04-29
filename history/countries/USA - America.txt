@@ -152,7 +152,7 @@ set_popularities = {
 	authoritarian_socialism = 1
 	centrism = 5
 	conservatism = 45
-	democratic_socialism = 3
+	progressivism_socialism = 3
 	fascism = 1
 }
 
@@ -160,7 +160,7 @@ create_country_leader = {
 	name = "Mr Generic"
 	desc = ""
 	picture = GFX_portrait_Mir_Jafar_Baghirov
-	ideology = soviet_stalinism
+	ideology = marxism_leninism_neo_stalinism
 	traits = {
 		
 	}

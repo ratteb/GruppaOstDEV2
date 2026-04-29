@@ -25,7 +25,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				JAP = { has_government = communism }
+				JAP = { has_government = marxism_leninism }
 				factor = 0
 			}
 		}
@@ -60,7 +60,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				JAP = { has_government = communism }
+				JAP = { has_government = marxism_leninism }
 				factor = 0
 			}
 		}
@@ -147,7 +147,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				JAP = { has_government = communism }
+				JAP = { has_government = marxism_leninism }
 				factor = 0
 			}
 		}
@@ -188,7 +188,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				JAP = { has_government = communism }
+				JAP = { has_government = marxism_leninism }
 				factor = 0
 			}
 		}
@@ -229,7 +229,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				JAP = { has_government = communism }
+				JAP = { has_government = marxism_leninism }
 				factor = 0
 			}
 		}

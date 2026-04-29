@@ -4,7 +4,7 @@ ideas = {
 		law = yes
 		use_list_view = yes
 
-		enforced_neutrality = {
+		enforced_centrism = {
 
 			allowed_to_remove = {
 				always = no
@@ -166,7 +166,7 @@ ideas = {
 			allowed_to_remove = {
 				OR = {
 					surrender_progress > 0.75
-					NOT = { has_government = communism }
+					NOT = { has_government = marxism_leninism }
 				}
 			}
 
@@ -195,7 +195,7 @@ ideas = {
 			allowed_to_remove = {
 				OR = {
 					surrender_progress > 0.75
-					NOT = { has_government = communism }
+					NOT = { has_government = marxism_leninism }
 				}
 			}
 
@@ -418,7 +418,7 @@ ideas = {
 			available = {
 				OR = {
 					AND = {
-						has_government = westernism
+						has_government = progressivism
 						has_war = yes
 						any_enemy_country = {
 							ic_ratio = {
@@ -428,7 +428,7 @@ ideas = {
 						}
 					}
 					AND = {
-						NOT = { has_government = westernism }
+						NOT = { has_government = progressivism }
 						OR = {
 							has_idea = partial_economic_mobilisation
 							has_idea = war_economy
@@ -491,7 +491,7 @@ ideas = {
 				}
 				modifier = {
 					factor = 200
-					NOT = { has_government = easternism }
+					NOT = { has_government = paternalism }
 					NOT = { has_idea = closed_economy }
 					has_war = yes
 					is_major = yes
@@ -511,8 +511,8 @@ ideas = {
 			available = {
 				has_war = yes
 				OR = {
-					has_government = easternism
-					has_government = communism
+					has_government = paternalism
+					has_government = marxism_leninism
 				}
 				OR = {
 					has_idea = war_economy

@@ -86,7 +86,7 @@ ideas = {
 			
 			modifier = {
 				political_power_cost = 0.7
-				neutrality_drift = -0.17
+				centrism_drift = -0.17
 				stability_factor = -0.4
 			}
 
@@ -116,7 +116,7 @@ ideas = {
 			
 			modifier = {
 				political_power_cost = 0.65
-				neutrality_drift = -0.15
+				centrism_drift = -0.15
 				stability_factor = -0.37
 			}
 
@@ -144,7 +144,7 @@ ideas = {
 			
 			modifier = {
 				political_power_cost = 0.60
-				neutrality_drift = -0.13
+				centrism_drift = -0.13
 				stability_factor = -0.35
 			}
 

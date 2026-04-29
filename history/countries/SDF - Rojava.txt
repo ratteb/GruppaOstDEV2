@@ -108,7 +108,7 @@ create_country_leader = {
 	name = "Mr Generic"
 	desc = ""
 	picture = GFX_portrait_Mir_Jafar_Baghirov
-	ideology = soviet_stalinism
+	ideology = marxism_leninism_neo_stalinism
 	traits = {
 		
 	}
@@ -128,7 +128,7 @@ create_country_leader = {
 	name = "Mr Generic"
 	desc = ""
 	picture = GFX_portrait_Mammad_Amin_Rasulzade
-	ideology = western_conservatism
+	ideology = progressivism_social_liberalism
 	traits = {
 		
 	}

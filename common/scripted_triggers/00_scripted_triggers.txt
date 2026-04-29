@@ -194,10 +194,10 @@ USA_is_on_historical_plan_trigger = {
 				option = DEFAULT
 			}
 		}
-		has_country_flag = USA_AI_DEMOCRATIC_HISTORICAL
+		has_country_flag = USA_AI_progressivism_HISTORICAL
 		has_game_rule = {
 			rule = USA_ai_behavior
-			option = DEMOCRATIC_HISTORICAL
+			option = progressivism_HISTORICAL
 		}
 	}
 }
@@ -261,10 +261,10 @@ ENG_is_on_historical_plan_trigger = {
 				option = DEFAULT
 			}
 		}
-		has_country_flag = ENG_AI_DEMOCRATIC_HISTORICAL
+		has_country_flag = ENG_AI_progressivism_HISTORICAL
 		has_game_rule = {
 			rule = eng_ai_behavior
-			option = DEMOCRATIC_HISTORICAL
+			option = progressivism_HISTORICAL
 		}
 	}
 }
@@ -341,11 +341,11 @@ should_USA_invade_europe_or_africa = {
 		USA = {
 			OR = {
 				AND = {
-					has_government = democratic
-					ENG = { has_government = democratic }
+					has_government = progressivism
+					ENG = { has_government = progressivism }
 					OR = {
-						GER = { has_government = easternism }
-						ITA = { has_government = easternism }
+						GER = { has_government = paternalism }
+						ITA = { has_government = paternalism }
 					}
 				}
 				is_in_array = { potential_and_current_enemies = GER }
@@ -512,10 +512,10 @@ is_core_or_compliance_60 = {
 has_any_byz_cosmetic_tag = {
 	OR = {
 		has_cosmetic_tag = BYZ_UNIFIED
-		has_cosmetic_tag = BYZ_UNIFIED_communism
-		has_cosmetic_tag = BYZ_UNIFIED_democratic
-		has_cosmetic_tag = BYZ_UNIFIED_easternism
-		has_cosmetic_tag = BYZ_UNIFIED_neutrality
+		has_cosmetic_tag = BYZ_UNIFIED_marxism_leninism
+		has_cosmetic_tag = BYZ_UNIFIED_progressivism
+		has_cosmetic_tag = BYZ_UNIFIED_paternalism
+		has_cosmetic_tag = BYZ_UNIFIED_centrism
 	}
 }
 
@@ -524,20 +524,20 @@ has_same_ideology = {
 		tooltip = has_same_ideology_tt
 		OR = {
 			AND = {
-				has_government = democratic
-				ROOT = { has_government = democratic }
+				has_government = progressivism
+				ROOT = { has_government = progressivism }
 			}
 			AND = {
-				has_government = easternism
-				ROOT = { has_government = easternism }
+				has_government = paternalism
+				ROOT = { has_government = paternalism }
 			}
 			AND = {
-				has_government = communism
-				ROOT = { has_government = communism }
+				has_government = marxism_leninism
+				ROOT = { has_government = marxism_leninism }
 			}
 			AND = {
-				has_government = neutrality
-				ROOT = { has_government = neutrality }
+				has_government = centrism
+				ROOT = { has_government = centrism }
 			}
 		}
 	}
@@ -965,7 +965,7 @@ is_unlikely_country_tag = {
 big_communist_exists = {
 	any_other_country = {
 		is_major = yes 
-		has_government = communism
+		has_government = marxism_leninism
 		has_capitulated = no 
 		exists = yes 
 	}
@@ -974,7 +974,7 @@ big_communist_exists = {
 big_fascist_exists = {
 	any_other_country = {
 		is_major = yes 
-		has_government = easternism
+		has_government = paternalism
 		has_capitulated = no 
 		exists = yes 
 	}
@@ -1023,8 +1023,8 @@ is_aat_sweden = {
 
 is_trotsky_valid_for_mexico = {
 	OR = {
-		has_government = communism
-		has_government = neutrality
+		has_government = marxism_leninism
+		has_government = centrism
 	}
 	has_global_flag = flag_mexico_invited_trotsky_to_government
 	NOT = {
@@ -1227,7 +1227,7 @@ FROM_is_twice_as_weak = {
 	}
 }
 
-### Neutrality Act - only trade with countries at peace 
+### centrism Act - only trade with countries at peace 
 trade_partner_not_at_war = {
 	custom_trigger_tooltip = {
 		tooltip = trade_partner_not_at_war_tt
@@ -1237,11 +1237,11 @@ trade_partner_not_at_war = {
 	}
 }
 
-is_democratic_seller_trigger = {
+is_progressivism_seller_trigger = {
 	custom_trigger_tooltip = {
-		tooltip = "Democratic Countries"
+		tooltip = "progressivism Countries"
 		FROM = {
-			has_government = democratic
+			has_government = progressivism
 		}
 	}
 }
@@ -1249,17 +1249,17 @@ is_democratic_seller_trigger = {
 #Subsidy Seller Triggers
 is_fascist_seller_trigger = {
 	NOT = { has_war_with = ROOT	}
-	has_government = easternism 
+	has_government = paternalism 
 }
 
 is_democracy_seller_trigger = {
 	NOT = { has_war_with = ROOT	}
-	has_government = democratic 
+	has_government = progressivism 
 }
 
 is_communist_seller_trigger = {
 	NOT = { has_war_with = ROOT }
-	has_government = communism
+	has_government = marxism_leninism
 }
 
 is_allied_seller_trigger = {

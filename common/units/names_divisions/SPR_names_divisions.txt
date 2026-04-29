@@ -37,7 +37,7 @@ SPR_INF_01 =
 	for_countries = { SPR }
 
 	can_use = { 
-		NOT = { has_government = easternism } 
+		NOT = { has_government = paternalism } 
 	}
 
 	division_types = { "infantry" }
@@ -346,7 +346,7 @@ SPA_INF_01 =
 
 	can_use = { 
 		OR = {
-			has_government = easternism 
+			has_government = paternalism 
 		}
 	}
 

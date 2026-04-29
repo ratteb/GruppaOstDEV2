@@ -18,11 +18,11 @@ rule_group_manpower = {
 rule_group_ideology = {
 	rules = {
 		joining_rule_non_fascist
-		joining_rule_non_democratic
+		joining_rule_non_progressivism
 		joining_rule_non_communist
 		joining_rule_same_ideology
 		joining_rule_fascist_only
-		joining_rule_democratic_non_aligned
+		joining_rule_progressivism_non_aligned
 		joining_rule_puppets_only
 		joining_rule_communist_only
 		joining_rule_support_percentage
@@ -66,11 +66,11 @@ rule_group_war_relation = {
 # Ideology rules 
 rule_group_dismissal_ideology = {
 	rules = {
-		dismissal_rule_ideology_not_democratic
+		dismissal_rule_ideology_not_progressivism
 		dismissal_rule_ideology_communist
 		dismissal_rule_ideology_fascist
-		dismissal_rule_ideology_democratic
-		dismissal_rule_ideology_not_communism
+		dismissal_rule_ideology_progressivism
+		dismissal_rule_ideology_not_marxism_leninism
 	}
 }
 

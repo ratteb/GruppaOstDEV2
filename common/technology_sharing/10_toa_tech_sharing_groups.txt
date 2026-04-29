@@ -7,7 +7,7 @@ technology_sharing_group = {
 	research_sharing_per_country_bonus = 0.2
 
 	available = {
-		has_government = communism	
+		has_government = marxism_leninism	
 		NOT = { has_war_with = CHL }
 	}
 }
@@ -50,7 +50,7 @@ technology_sharing_group = {
 	research_sharing_per_country_bonus = 0.15
 
 	available = {
-		has_government = democratic	
+		has_government = progressivism	
 		NOT = { has_war_with = USA }
 	}
 }
@@ -78,8 +78,8 @@ technology_sharing_group = {
 
 	available = {
 		OR = {
-			has_government = neutrality
-			has_government = democratic	
+			has_government = centrism
+			has_government = progressivism	
 		}
 		is_in_faction_with = BRA
 	}

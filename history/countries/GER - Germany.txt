@@ -83,7 +83,7 @@ create_country_leader = {
 	name = "Mr Generic"
 	desc = ""
 	picture = GFX_portrait_Mir_Jafar_Baghirov
-	ideology = soviet_stalinism
+	ideology = marxism_leninism_neo_stalinism
 	traits = {
 		
 	}

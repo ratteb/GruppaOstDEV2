@@ -106,7 +106,7 @@ create_country_leader = {
 	name = "Mr Generic"
 	desc = ""
 	picture = GFX_portrait_Mammad_Amin_Rasulzade
-	ideology = western_conservatism
+	ideology = progressivism_social_liberalism
 	traits = {
 		
 	}

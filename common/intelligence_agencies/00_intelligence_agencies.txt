@@ -55,11 +55,11 @@ intelligence_agency = {
 	
 	default = { 
 		tag = GER 
-		NOT = { has_government = communism }
+		NOT = { has_government = marxism_leninism }
 	}
 	available = { 
 		original_tag = GER 
-		NOT = { has_government = communism }
+		NOT = { has_government = marxism_leninism }
 	}
 }
 
@@ -70,11 +70,11 @@ intelligence_agency = {
 	
 	default = { 
 		tag = GER 
-		has_government = communism 
+		has_government = marxism_leninism 
 	}
 	available = { 
 		original_tag = GER 
-		has_government = communism 
+		has_government = marxism_leninism 
 	}
 }
 
@@ -104,7 +104,7 @@ intelligence_agency = {
 	available = { 
 		original_tag = JAP 
 		OR = {
-			has_government = neutrality
+			has_government = centrism
 			has_government = fascism
 		}
 	}
@@ -252,7 +252,7 @@ intelligence_agency = {
 			original_tag = PRC
 		}
 		NOT = {
-			has_government = communism
+			has_government = marxism_leninism
 		}
 	}
 	available = { 
@@ -262,7 +262,7 @@ intelligence_agency = {
 			original_tag = PRC
 		}
 		NOT = {
-			has_government = communism
+			has_government = marxism_leninism
 		}
 	}
 }
@@ -278,7 +278,7 @@ intelligence_agency = {
 			original_tag = CHI
 			original_tag = PRC
 		}
-		has_government = communism
+		has_government = marxism_leninism
 	}
 	available = {
 		is_literally_china = yes
@@ -286,7 +286,7 @@ intelligence_agency = {
 			original_tag = CHI
 			original_tag = PRC
 		}
-		has_government = communism
+		has_government = marxism_leninism
 	}
 }
 
@@ -419,12 +419,12 @@ intelligence_agency = {
 	
 	default = { 
 		tag = ETH 
-		NOT = { has_government = communism }
+		NOT = { has_government = marxism_leninism }
 		NOT = { is_subject_of = ITA }
 	} 
 	available = { 
 		original_tag = ETH 
-		NOT = { has_government = communism }
+		NOT = { has_government = marxism_leninism }
 		NOT = { is_subject_of = ITA }
 	}
 }
@@ -436,11 +436,11 @@ intelligence_agency = {
 	
 	default = { 
 		tag = ETH 
-		has_government = communism
+		has_government = marxism_leninism
 	} 
 	available = { 
 		original_tag = ETH 
-		has_government = communism
+		has_government = marxism_leninism
 	}
 }
 
@@ -541,12 +541,12 @@ intelligence_agency = {
 	
 	default = { 
 		tag = HUN 
-		NOT = { has_government = communism }
+		NOT = { has_government = marxism_leninism }
 		NOT = { has_completed_focus = wuw_HUN_the_lands_of_the_crown_of_saint_stephen }
 	} 
 	available = { 
 		original_tag = HUN 
-		NOT = { has_government = communism }
+		NOT = { has_government = marxism_leninism }
 	}
 }
 
@@ -557,11 +557,11 @@ intelligence_agency = {
 	
 	default = { 
 		tag = HUN 
-		has_government = communism
+		has_government = marxism_leninism
 	} 
 	available = { 
 		original_tag = HUN 
-		has_government = communism
+		has_government = marxism_leninism
 	}
 }
 
@@ -587,12 +587,12 @@ intelligence_agency = {
 	
 	available = { 
 		tag = BRA
-		has_government = communism
+		has_government = marxism_leninism
 	}
 	
 	default = { 		
 		tag = BRA
-		has_government = communism
+		has_government = marxism_leninism
 	}
 }
 
@@ -611,17 +611,17 @@ intelligence_agency = {
 
 intelligence_agency = {
 
-	picture = GFX_intelligence_agency_logo_BRA_neutrality
+	picture = GFX_intelligence_agency_logo_BRA_centrism
 	names = { "Departamento de Ordem" }
 	
 	available = { 
 		tag = BRA
-		NOT = { has_government = communism }
+		NOT = { has_government = marxism_leninism }
 	}
 	
 	default = { 		
 		tag = BRA
-		NOT = { has_government = communism }
+		NOT = { has_government = marxism_leninism }
 	} 
 }
 
@@ -692,20 +692,20 @@ intelligence_agency = {
 
 intelligence_agency = {
 
-	picture = GFX_intelligence_agency_logo_AFG_neutrality
+	picture = GFX_intelligence_agency_logo_AFG_centrism
 	names = { "Istikhbarat" } 
 	
 	default = { 
 		tag = AFG 
 		OR = {
-			has_government = neutrality
+			has_government = centrism
 			has_government = fascism
 		}
 	} 
 	available = { 
 		original_tag = AFG 
 		OR = {
-			has_government = neutrality
+			has_government = centrism
 			has_government = fascism
 		}
 	}
@@ -713,31 +713,31 @@ intelligence_agency = {
 
 intelligence_agency = {
 
-	picture = GFX_intelligence_agency_logo_AFG_communism
+	picture = GFX_intelligence_agency_logo_AFG_marxism_leninism
 	names = { "KHAD" } 
 	
 	default = { 
 		tag = AFG 
-		has_government = communism
+		has_government = marxism_leninism
 	} 
 	available = { 
 		original_tag = AFG 
-		has_government = communism
+		has_government = marxism_leninism
 	}
 }
 
 intelligence_agency = {
 
-	picture = GFX_intelligence_agency_logo_AFG_democratic
+	picture = GFX_intelligence_agency_logo_AFG_progressivism
 	names = { "National Directorate of Security" } 
 	
 	default = { 
 		tag = AFG 
-		has_government = democratic
+		has_government = progressivism
 	} 
 	available = { 
 		original_tag = AFG 
-		has_government = democratic
+		has_government = progressivism
 	}
 }
 
@@ -751,7 +751,7 @@ intelligence_agency = {
 	} 
 	available = { 
 		original_tag = PER 
-		NOT = { has_government = communism }
+		NOT = { has_government = marxism_leninism }
 	}
 }
 
@@ -873,7 +873,7 @@ intelligence_agency = {
 	names = { "Hammer and Sickle" }
 	
 	available = { 
-		has_government = communism
+		has_government = marxism_leninism
 	}
 	
 	default = { always = yes } 

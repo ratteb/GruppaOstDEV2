@@ -333,9 +333,9 @@ faction_goal_align_china = {
 	}
 }
 
-faction_goal_war_on_communism_in_asia = {
-	name = war_on_communism_in_asia_goal_name
-	description = war_on_communism_in_asia_goal_desc
+faction_goal_war_on_marxism_leninism_in_asia = {
+	name = war_on_marxism_leninism_in_asia_goal_name
+	description = war_on_marxism_leninism_in_asia_goal_desc
 	category = long_term
 	group = FOCUS_FILTER_POLITICAL_CHARACTER
 	allowed = {
@@ -648,24 +648,24 @@ faction_goal_disarm_aggression_central_powers = {
 				original_tag = FRA
 				original_tag = CZE
 			}
-			has_government = democratic
+			has_government = progressivism
 		}
 		OR = {
 			any_country_with_original_tag = {
 				original_tag_to_check = GER
-				NOT = { has_government = democratic }
+				NOT = { has_government = progressivism }
 			}
 			any_country_with_original_tag = {
 				original_tag_to_check = HUN
-				NOT = { has_government = democratic }
+				NOT = { has_government = progressivism }
 			}
 			any_country_with_original_tag = {
 				original_tag_to_check = AUS
-				NOT = { has_government = democratic }
+				NOT = { has_government = progressivism }
 			}
 			any_country_with_original_tag = {
 				original_tag_to_check = BUL
-				NOT = { has_government = democratic }
+				NOT = { has_government = progressivism }
 			}
 		}
 	}
@@ -673,28 +673,28 @@ faction_goal_disarm_aggression_central_powers = {
 		OR = {
 			any_country_with_original_tag = {
 				original_tag_to_check = GER
-				has_government = democratic
+				has_government = progressivism
 			}
 			GER = { exists = no }
 		}
 		OR = {
 			any_country_with_original_tag = {
 				original_tag_to_check = HUN
-				has_government = democratic
+				has_government = progressivism
 			}
 			HUN = { exists = no }
 		}
 		OR = {
 			any_country_with_original_tag = {
 				original_tag_to_check = AUS
-				has_government = democratic
+				has_government = progressivism
 			}
 			AUS = { exists = no }
 		}
 		OR = {
 			any_country_with_original_tag = {
 				original_tag_to_check = BUL
-				has_government = democratic
+				has_government = progressivism
 			}
 			BUL = { exists = no }
 		}
@@ -744,7 +744,7 @@ faction_goal_rule_the_waves = {
 	available = {
 		FROM = {
 			OR = {
-				NOT = { has_government = democratic }
+				NOT = { has_government = progressivism }
 				NOT = { has_idea = MTG_naval_treaty_adherent }
 			}
 		}
@@ -1248,10 +1248,10 @@ faction_goal_the_atomic_race = {
 
 ### Ideology based
 
-# Defeat of Communism 
-faction_goal_defeat_of_communism = {
-	name = defeat_of_communism_goal_name
-	description = defeat_of_communism_goal_desc
+# Defeat of marxism_leninism 
+faction_goal_defeat_of_marxism_leninism = {
+	name = defeat_of_marxism_leninism_goal_name
+	description = defeat_of_marxism_leninism_goal_desc
 	group = FOCUS_FILTER_CONSOLIDATION
 	category = long_term
 	visible = {
@@ -1261,7 +1261,7 @@ faction_goal_defeat_of_communism = {
 				operators = {
 					faction_members
 					limit = {
-						has_government = communism
+						has_government = marxism_leninism
 					}
 				}
 				name = FACTION
@@ -1292,7 +1292,7 @@ faction_goal_defeat_of_communism = {
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
 			add_popularity = {
-				ideology = communism
+				ideology = marxism_leninism
 				popularity = -0.15
 			}
 			add_political_power = 100
@@ -1365,8 +1365,8 @@ faction_goal_defeat_of_anti_fascists = {
 					faction_members
 					limit = {
 						OR = {
-							has_government = communism
-							has_government = democratic
+							has_government = marxism_leninism
+							has_government = progressivism
 						}
 					}
 				}
@@ -1382,7 +1382,7 @@ faction_goal_defeat_of_anti_fascists = {
 		collection_size = {
 			input = {
 				input = collection:anti_fascist_controlled_states_my_continent
-				name = COLLECTION_STATES_MY_CONTINENT_CONTROLLED_DEMOCRATIC_COMMUNIST
+				name = COLLECTION_STATES_MY_CONTINENT_CONTROLLED_progressivism_COMMUNIST
 			}
 			value < 1
 		}
@@ -1408,7 +1408,7 @@ faction_goal_defeat_of_anti_fascists = {
 		modifier = { 
 			add = 1 # If war with communists you probably hate them
 			any_enemy_country = {
-				has_government = communism
+				has_government = marxism_leninism
 			}
 		}
 	}
@@ -1429,7 +1429,7 @@ faction_goal_defeat_of_anti_communists = {
 					limit = {
 						OR = {
 							has_government = fascism
-							has_government = democratic
+							has_government = progressivism
 						}
 					}
 				}
@@ -1445,7 +1445,7 @@ faction_goal_defeat_of_anti_communists = {
 		collection_size = {
 			input = {
 				input = collection:anti_communist_controlled_states_my_continent
-				name = COLLECTION_STATES_MY_CONTINENT_CONTROLLED_DEMOCRATIC_FASCIST
+				name = COLLECTION_STATES_MY_CONTINENT_CONTROLLED_progressivism_FASCIST
 			}
 			value < 1
 		}
@@ -1460,7 +1460,7 @@ faction_goal_defeat_of_anti_communists = {
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
 			add_popularity = {
-				ideology = communism
+				ideology = marxism_leninism
 				popularity = 0.2
 			}
 			add_political_power = 100
@@ -1489,7 +1489,7 @@ faction_goal_the_red_tide = {
 	visible = {
 		FROM = {
 			is_major = yes
-			has_government = communism
+			has_government = marxism_leninism
 		}
 	}
 	completed = {

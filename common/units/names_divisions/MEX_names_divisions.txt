@@ -88,7 +88,7 @@ MEX_INF_03 = {
 
 	can_use = {
 		OR = {
-			has_government = communism
+			has_government = marxism_leninism
 		}
 	}
 

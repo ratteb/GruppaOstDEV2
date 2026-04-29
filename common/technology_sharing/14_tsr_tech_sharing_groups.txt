@@ -11,14 +11,14 @@ technology_sharing_group = {
 		OR = {
 			AND = {
 				original_tag = MAN
-				has_government = communism
+				has_government = marxism_leninism
 				NOT = {
 					has_war_with = PRC
 				}
 			}
 			AND = {
 				original_tag = PRC
-				has_government = communism
+				has_government = marxism_leninism
 				NOT = {
 					has_war_with = MAN
 				}

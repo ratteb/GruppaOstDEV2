@@ -502,8 +502,8 @@ GER_MOT_01 =
 
 	can_use = {
 		OR = {
-			has_government = neutrality 
-			has_government = westernism 
+			has_government = centrism 
+			has_government = progressivism 
 		}
 	}
 
@@ -545,7 +545,7 @@ GER_MOT_02 =
 
 	for_countries = { GER }
 
-	can_use = { has_government = easternism }
+	can_use = { has_government = paternalism }
 
 	division_types = { "apc_battalion"  }
 
@@ -948,7 +948,7 @@ GER_SS_01 =
 	for_countries = { GER }
 
 	can_use = { 
-		has_government = easternism
+		has_government = paternalism
 	}
 
 	division_types = { "infantry" "apc_battalion" "medium_armor" "ifv_battalion" }
@@ -1005,8 +1005,8 @@ GER_MONINF_01 =
 
 	can_use = { 
 		OR = {
-			has_government = neutrality 
-			has_government = westernism 
+			has_government = centrism 
+			has_government = progressivism 
 		}
 	}
 
@@ -1241,8 +1241,8 @@ GER_MONMOB_01 =
 
 	can_use = { 
 		OR = {
-			has_government = neutrality 
-			has_government = westernism 
+			has_government = centrism 
+			has_government = progressivism 
 		}
 	}
 

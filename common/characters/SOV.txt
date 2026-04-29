@@ -150,7 +150,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=marxism_leninism_national_communism
+			ideology=marxism_leninism_national_marxism_leninism
 			desc = ""
 			expire="3000.1.1.1"
 		}

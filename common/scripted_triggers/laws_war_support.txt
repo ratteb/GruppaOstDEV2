@@ -53,8 +53,8 @@ has_unsupported_manpower_law = {
 		}
 			has_idea = extensive_conscription
 			has_war_support < 0.2
-			NOT = { has_government = communism }
-			NOT = { has_government = easternism }
+			NOT = { has_government = marxism_leninism }
+			NOT = { has_government = paternalism }
 	}
 	else_if = {
 		limit = {
@@ -62,8 +62,8 @@ has_unsupported_manpower_law = {
 		}
 			has_idea = service_by_requirement
 			has_war_support < 0.6
-			NOT = { has_government = communism }
-			NOT = { has_government = easternism }
+			NOT = { has_government = marxism_leninism }
+			NOT = { has_government = paternalism }
 	}
 	else_if = {
 		limit = {
@@ -94,7 +94,7 @@ has_excessive_army_size = { #not currently used due to AI concerns
 				TAG = CHI
 			}
 			NOT = {
-				has_government = communism
+				has_government = marxism_leninism
 			}
 		}
 		AND = {
@@ -108,7 +108,7 @@ has_excessive_army_size = { #not currently used due to AI concerns
 				TAG = CHI
 			}
 			NOT = {
-				has_government = communism
+				has_government = marxism_leninism
 			}
 		}
 		AND = {
@@ -122,7 +122,7 @@ has_excessive_army_size = { #not currently used due to AI concerns
 				TAG = CHI
 			}
 			NOT = {
-				has_government = communism
+				has_government = marxism_leninism
 			}
 		}
 		AND = {
@@ -136,18 +136,18 @@ has_excessive_army_size = { #not currently used due to AI concerns
 				TAG = CHI
 			}
 			NOT = {
-				has_government = communism
+				has_government = marxism_leninism
 			}
 		}
 		AND = {
 			has_army_manpower = { size = 2500000 }
 			has_manpower < 1
-			has_government = democratic
+			has_government = progressivism
 		}
 		AND = {
 			has_army_manpower = { size = 3000000 }
 			has_manpower < 1
-			has_government = easternism
+			has_government = paternalism
 		}
 	}
 }

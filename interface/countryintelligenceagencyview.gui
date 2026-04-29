@@ -1034,7 +1034,7 @@ guiTypes = {
 		
 		iconType = {
 			name = "faction_icon"
-			spriteType = "GFX_faction_logo_generic_democratic"
+			spriteType = "GFX_faction_logo_generic_progressivism"
 			position = { x = 5 y = 5}
 			hide = yes
 		}

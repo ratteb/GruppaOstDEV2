@@ -2,29 +2,29 @@
 is_enemy_ideology = {
 	OR = {
 		AND = {
-			has_government = communism
+			has_government = marxism_leninism
 			ROOT = {
 				OR = {
-					has_government = easternism
-					has_government = democratic
+					has_government = paternalism
+					has_government = progressivism
 				}
 			}
 		}
 		AND = {
-			has_government = democratic
+			has_government = progressivism
 			ROOT = {
 				OR = {
-					has_government = communism
-					has_government = easternism
+					has_government = marxism_leninism
+					has_government = paternalism
 				}
 			}
 		}
 		AND = {
-			has_government = easternism
+			has_government = paternalism
 			ROOT = {
 				OR = {
-					has_government = democratic
-					has_government = communism
+					has_government = progressivism
+					has_government = marxism_leninism
 				}
 			}
 		}

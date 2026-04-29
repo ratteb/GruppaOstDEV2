@@ -92,11 +92,11 @@ faction_goal_id = {
 		#
 		# For example:
 		#    total_amount_collection = game:all_countries # all countries in the game
-		#    completed_amount_collection = democratic_countries # countries with democratic government
+		#    completed_amount_collection = progressivism_countries # countries with progressivism government
 		#
-		# In the example above, the progress is defined as a ratio between the number of democratic countries in the world
-		# and the total number of countries in the world, the progress will be 100% if all countries become democratic and
-		# it will be 0% if none of the countries is democratic.
+		# In the example above, the progress is defined as a ratio between the number of progressivism countries in the world
+		# and the total number of countries in the world, the progress will be 100% if all countries become progressivism and
+		# it will be 0% if none of the countries is progressivism.
 		#
 		# For both collections: SCOPE = faction leader: COUNTRY
 		#

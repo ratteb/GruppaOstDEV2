@@ -1569,7 +1569,7 @@ JAP_naval_capital_super_heavy = {
 	priority = {
 		factor = 25
 		modifier = {
-			has_government = westernism
+			has_government = progressivism
 			factor = 0
 		}
 	}
@@ -1579,7 +1579,7 @@ JAP_naval_capital_super_heavy = {
 		priority = {
 			factor = 10
 			modifier = {
-				has_government = westernism
+				has_government = progressivism
 				factor = 0
 			}
 		}

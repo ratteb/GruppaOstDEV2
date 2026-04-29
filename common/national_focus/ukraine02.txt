@@ -24,13 +24,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				JAP = { has_government = communism }
+				JAP = { has_government = marxism_leninism }
 				factor = 0
 			}
 		}
 
 		available = {
-			NOT = {has_government = easternism }
+			NOT = {has_government = paternalism }
 		}
 		
 		bypass = {
@@ -43,7 +43,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 120
 			add_popularity = {
-				ideology = neutrality
+				ideology = centrism
 				popularity = 0.1
 			}
 			set_country_flag = UKR_political_crisis_over

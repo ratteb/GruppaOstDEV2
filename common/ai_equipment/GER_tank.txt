@@ -2201,7 +2201,7 @@ GER_super_heavy_tanks = {
 		priority = {
 			factor = 10
 			modifier = { 
-				has_government = easternism
+				has_government = paternalism
 				factor = 5
 			}
 			modifier = {

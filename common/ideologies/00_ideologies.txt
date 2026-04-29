@@ -4,7 +4,7 @@ ideologies = {
 			marxism_leninism_marxism = {}
 			marxism_leninism_juche = {}
 			marxism_leninism_mao_zedong_thought = {}
-			marxism_leninism_national_communism = {}
+			marxism_leninism_national_marxism_leninism = {}
 			marxism_leninism_neo_stalinism = {}
 		}
 		color = { 135 33 20 }
@@ -40,14 +40,14 @@ ideologies = {
 		ai_neutral = yes
 	}
 
-	democratic_socialism = {
+	progressivism_socialism = {
 		types = {
-			democratic_socialism_democratic_socialism = {}
-			democratic_socialism_eco_socialism = {}
-			democratic_socialism_popular_front = {}
-			democratic_socialism_liberal_socialism = {}
-			democratic_socialism_christian_socialism = {}
-			democratic_socialism_reformist_socialism = {}
+			progressivism_socialism_progressivism_socialism = {}
+			progressivism_socialism_eco_socialism = {}
+			progressivism_socialism_popular_front = {}
+			progressivism_socialism_liberal_socialism = {}
+			progressivism_socialism_christian_socialism = {}
+			progressivism_socialism_reformist_socialism = {}
 		}
 		color = { 226 50 6 }
 		rules = {

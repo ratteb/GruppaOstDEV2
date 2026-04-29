@@ -214,7 +214,7 @@ guiTypes = {
 
 					iconType = {
 						name = "faction_icon"
-						spriteType = "GFX_faction_logo_generic_democratic"
+						spriteType = "GFX_faction_logo_generic_progressivism"
 						position = { x = -378 y = 382}
 						alwaystransparent = yes
 					}

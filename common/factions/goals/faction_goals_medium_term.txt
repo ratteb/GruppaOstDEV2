@@ -444,7 +444,7 @@ faction_goal_guardians_of_peace = {
 		date < 1939.1.1
 		FROM = {
 			NOT = { has_government = fascism }
-			NOT = { has_government = communism }
+			NOT = { has_government = marxism_leninism }
 			NOT = { has_country_flag = guardians_of_peace_been_at_war_flag }
 		}
 	}
@@ -475,7 +475,7 @@ faction_goal_guardians_of_peace = {
 		base = 0
 		modifier = {
 			add = 1
-			has_government = democratic
+			has_government = progressivism
 		}
 	}
 }
@@ -960,7 +960,7 @@ faction_goal_indifference_is_a_threat = {
 		every_faction_member = {
 			add_political_power = 50
 			add_popularity = {
-				ideology = communism
+				ideology = marxism_leninism
 				popularity = 0.05
 			}
 		}

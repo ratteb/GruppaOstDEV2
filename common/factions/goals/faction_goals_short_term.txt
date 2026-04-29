@@ -1279,19 +1279,19 @@ faction_goal_preemptive_strike_on_fascism = {
 }
 
 
-faction_goal_war_on_communism = {
-	name = war_on_communism_goal_name
-	description = war_on_communism_goal_desc
+faction_goal_war_on_marxism_leninism = {
+	name = war_on_marxism_leninism_goal_name
+	description = war_on_marxism_leninism_goal_desc
 	category = short_term
 	group = FOCUS_FILTER_WAR_SUPPORT
 	visible = {
 		FROM = {
 			NOT = {
-				has_government = communism
+				has_government = marxism_leninism
 			}
 		}
 		any_country = {
-			has_government = communism
+			has_government = marxism_leninism
 			is_on_same_continent_as = FROM
 		}
 		NOT = { original_tag = JAP } # they have their own goal 
@@ -1299,12 +1299,12 @@ faction_goal_war_on_communism = {
 	completed = {
 		OR = {
 			any_enemy_country = {
-				has_government = communism
+				has_government = marxism_leninism
 				is_on_same_continent_as = ROOT
 			}
 			any_allied_country = {
 				any_enemy_country = {
-					has_government = communism
+					has_government = marxism_leninism
 					is_on_same_continent_as = PREV
 				}
 			}
@@ -1334,26 +1334,26 @@ faction_goal_war_on_democracy = {
 	visible = {
 		FROM = {
 			NOT = {
-				has_government = democratic
+				has_government = progressivism
 			}
 			faction_leader = {
-				NOT = { has_government = democratic }
+				NOT = { has_government = progressivism }
 			}
 		}
 		any_country = {
-			has_government = democratic
+			has_government = progressivism
 			is_on_same_continent_as = FROM
 		}
 	}
 	completed = {
 		OR = {
 			any_enemy_country = {
-				has_government = democratic
+				has_government = progressivism
 				is_on_same_continent_as = ROOT
 			}
 			any_allied_country = {
 				any_enemy_country = {
-					has_government = democratic
+					has_government = progressivism
 					is_on_same_continent_as = PREV
 				}
 			}

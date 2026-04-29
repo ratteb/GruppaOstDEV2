@@ -201,7 +201,7 @@ operation_test = {
 	outcome_potential = {
 		FROM = {
 			set_popularities = {
-				democratic = 100
+				progressivism = 100
 			}
 			
 			ROOT = {
@@ -236,7 +236,7 @@ operation_test = {
 	outcome_execute = {
 		FROM = {
 			set_popularities = {
-				democratic = 100
+				progressivism = 100
 			}
 		}
 		

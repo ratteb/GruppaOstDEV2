@@ -394,16 +394,16 @@ opinion_modifiers = {
 	war_plan_orange = {
 		value = -50
 	}
-	democratic_leanings_good = {
+	progressivism_leanings_good = {
 		value = 15
 	}
-	democratic_leanings_bad = {
+	progressivism_leanings_bad = {
 		value = -30
 	}
-	communism_leanings_good = {
+	marxism_leninism_leanings_good = {
 		value = 15
 	}
-	communism_leanings_bad = {
+	marxism_leninism_leanings_bad = {
 		value = -30
 	}
 	fascism_leanings_good = {
@@ -412,10 +412,10 @@ opinion_modifiers = {
 	fascism_leanings_bad = {
 		value = -30
 	}
-	neutrality_leanings_good = {
+	centrism_leanings_good = {
 		value = 15
 	}
-	neutrality_leanings_bad = {
+	centrism_leanings_bad = {
 		value = -30
 	}
 	tizard_relations = {
@@ -533,10 +533,10 @@ opinion_modifiers = {
 
 	### FRENCH FOCUS TREE ###
 
-	FRA_leftist_rhetoric_communism = {
+	FRA_leftist_rhetoric_marxism_leninism = {
 		value = 15
 	}
-	FRA_leftist_rhetoric_democratic = {
+	FRA_leftist_rhetoric_progressivism = {
 		value = -10
 	}
 	FRA_leftist_rhetoric_fascism = {
@@ -555,10 +555,10 @@ opinion_modifiers = {
 	FRA_right_wing_rhetoric_fascism = {
 		value = 15
 	}
-	FRA_right_wing_rhetoric_democratic = {
+	FRA_right_wing_rhetoric_progressivism = {
 		value = -10
 	}
-	FRA_right_wing_rhetoric_communism = {
+	FRA_right_wing_rhetoric_marxism_leninism = {
 		value = -50
 	}
 
@@ -599,7 +599,7 @@ opinion_modifiers = {
 
 	### END FRENCH FOCUS TREE ###
 
-	FRA_ban_communism = {
+	FRA_ban_marxism_leninism = {
 		value = -25
 	}
 
@@ -1007,7 +1007,7 @@ opinion_modifiers = {
 		value = -50
 	}
 
-	HOL_maintained_trade_neutrality = {
+	HOL_maintained_trade_centrism = {
 		value = -25
 	}
 
@@ -1091,20 +1091,20 @@ opinion_modifiers = {
 		value = 25
 	}
 
-	POR_neutrality_opinion_trade = {
+	POR_centrism_opinion_trade = {
 		value = 25
 		trade = yes	
 	}
 
-	POR_neutrality_opinion_democratic = {
+	POR_centrism_opinion_progressivism = {
 		value = 25
 	}
 
-	POR_neutrality_opinion_communism = {
+	POR_centrism_opinion_marxism_leninism = {
 		value = 25
 	}
 
-	POR_election_opinion_democratic = {
+	POR_election_opinion_progressivism = {
 		value = 20
 	}
 
@@ -1142,11 +1142,11 @@ opinion_modifiers = {
 		value = -100
 	}
 
-	POR_iberian_communism = {
+	POR_iberian_marxism_leninism = {
 		value = 30
 	}
 	
-	SOV_chose_NATO_neutrality = { 
+	SOV_chose_NATO_centrism = { 
 		value = 30
 		decay = 1
 	}

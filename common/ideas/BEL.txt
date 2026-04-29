@@ -24,7 +24,7 @@ ideas = {
 			
 			modifier = {
 				political_power_cost = 0.5
-				neutrality_drift = 0.06
+				centrism_drift = 0.06
 				stability_weekly = -0.005
 				army_org = -20
 				required_garrison_factor = 0.6

@@ -7,7 +7,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=western_conservatism
+			ideology=progressivism_social_liberalism
 			desc = ISR_benjamin_netanyahu_desc
 			expire="3000.1.1.1"
 			id=-1

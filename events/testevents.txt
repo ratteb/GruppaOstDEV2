@@ -24,10 +24,10 @@ country_event = {
 		add_dynamic_modifier = { modifier = SOV_soviet_armed_forces }
 		remove_dynamic_modifier = { modifier = SOV_russian_armed_forces }
 		set_politics = {
-			ruling_party = communism 
+			ruling_party = marxism_leninism 
 			elections_allowed = no 
-			long_name = SOV_ussr_communism_party_long
-			name = SOV_ussr_communism_party
+			long_name = SOV_ussr_marxism_leninism_party_long
+			name = SOV_ussr_marxism_leninism_party
 		}
     }
 }

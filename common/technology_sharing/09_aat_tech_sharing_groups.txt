@@ -20,7 +20,7 @@ technology_sharing_group = {
 	research_sharing_per_country_bonus = 0.05
 
 	available = {
-		has_government = communism	
+		has_government = marxism_leninism	
 		NOT = { has_war_with = ICE }
 	}
 }

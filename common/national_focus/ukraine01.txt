@@ -28,7 +28,7 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = {has_government = easternism }
+			NOT = {has_government = paternalism }
 		}
 		
 		bypass = {

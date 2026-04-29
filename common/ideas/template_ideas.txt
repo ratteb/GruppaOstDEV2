@@ -21,7 +21,7 @@ ideas = {
 				#salafism_drift = 0.08
 				#stability_factor = 0.05
 				#war_support_factor = 0.05
-				#westernism_drift = -0.09
+				#progressivism_drift = -0.09
 			#}
 
 			#allowed_to_remove = { always = no }

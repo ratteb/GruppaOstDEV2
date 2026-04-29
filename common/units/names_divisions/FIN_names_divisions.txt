@@ -288,8 +288,8 @@ FIN_MIL_01 = {
 
 	#can_use = { #TODO_Manu: Broken
 	#	NOT = {
-	#		has_government = communism
-	#		has_government = democratic
+	#		has_government = marxism_leninism
+	#		has_government = progressivism
 	#	}
 	#}
 
@@ -305,7 +305,7 @@ FIN_MIL_02 = {
 
 	for_countries = { FIN } 
 
-	#can_use = { has_government = communism } #TODO_Manu: Broken
+	#can_use = { has_government = marxism_leninism } #TODO_Manu: Broken
 
 	can_use = { has_dlc = "Arms Against Tyranny" }
 

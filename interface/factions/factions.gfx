@@ -57,8 +57,8 @@ spriteTypes = {
 		noOfFrames = 2
 	}
 	spriteType = {
-		name = "GFX_faction_logo_generic_democratic"
-		texturefile = "gfx/interface/factions/faction_logos/faction_logo_generic_democratic.dds"
+		name = "GFX_faction_logo_generic_progressivism"
+		texturefile = "gfx/interface/factions/faction_logos/faction_logo_generic_progressivism.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
@@ -190,8 +190,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/factions/faction_logos/faction_logo_chinese_united_front_miniature.dds"
 	}
 		spriteType = {
-		name = "GFX_faction_logo_generic_democratic_miniature"
-		texturefile = "gfx/interface/factions/faction_logos/faction_logo_generic_democratic_miniature.dds"
+		name = "GFX_faction_logo_generic_progressivism_miniature"
+		texturefile = "gfx/interface/factions/faction_logos/faction_logo_generic_progressivism_miniature.dds"
 	}
 		spriteType = {
 		name = "GFX_faction_logo_generic_fascist_miniature"
@@ -337,7 +337,7 @@ spriteTypes = {
 
 	# Rule Icons #
 	spriteType = {
-		name = "GFX_dismissal_rule_ideology_not_democratic"
+		name = "GFX_dismissal_rule_ideology_not_progressivism"
 		texturefile = "gfx/interface/ideas/idea_generic_democracy_banned.dds"
 	}
 	spriteType = {
@@ -398,7 +398,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_joining_rule_non_communist"
-		texturefile = "gfx/interface/ideas/idea_generic_communism_banned.dds"
+		texturefile = "gfx/interface/ideas/idea_generic_marxism_leninism_banned.dds"
 	}
 	spriteType = {
 		name = "GFX_joining_rule_fascist_only"
@@ -417,8 +417,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_PER_unification_initiative_idea.dds"
 	}
 	spriteType = {
-		name = "GFX_joining_rule_democratic_non_aligned"
-		texturefile = "gfx/interface/ideas/joining_rule_democratic_non_aligned.dds"
+		name = "GFX_joining_rule_progressivism_non_aligned"
+		texturefile = "gfx/interface/ideas/joining_rule_progressivism_non_aligned.dds"
 	}
 	spriteType = {
 		name = "GFX_joining_rule_communist_only"
@@ -454,7 +454,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_faction_peace_rule_ideology_focus"
-		texturefile = "gfx/interface/ideas/idea_GER_limited_democratic_principles.dds"
+		texturefile = "gfx/interface/ideas/idea_GER_limited_progressivism_principles.dds"
 	}
 	spriteType = {
 		name = "GFX_faction_peace_rule_conquest_focus"
@@ -529,7 +529,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/joining_rule_all_the_world.dds"
 	}
 	spriteType = {
-		name = "GFX_joining_rule_non_democratic"
+		name = "GFX_joining_rule_non_progressivism"
 		texturefile = "gfx/interface/ideas/idea_generic_democracy_banned.dds"
 	}
 	spriteType = {
@@ -597,12 +597,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_chi_forced_conscription.dds"
 	}
 	spriteType = {
-		name = "GFX_dismissal_rule_ideology_not_communism"
+		name = "GFX_dismissal_rule_ideology_not_marxism_leninism"
 		texturefile = "gfx/interface/ideas/idea_generic_communist_army.dds"
 	}
 	spriteType = {
-		name = "GFX_dismissal_rule_ideology_democratic"
-		texturefile = "gfx/interface/ideas/generic_democratic_drift_bonus.dds"
+		name = "GFX_dismissal_rule_ideology_progressivism"
+		texturefile = "gfx/interface/ideas/generic_progressivism_drift_bonus.dds"
 	}
 	
 	# Upgrades #

@@ -8,7 +8,7 @@ bookmarks = {
 	
 		FRA = {
 			history = FRA_BLITZKRIEG_DESC
-			ideology = westernism
+			ideology = progressivism
 			ideas={
 			}
 			focuses = {
@@ -16,7 +16,7 @@ bookmarks = {
 		}
 		USA = {
 			history = USA_BLITZKRIEG_DESC
-			ideology = westernism
+			ideology = progressivism
 			ideas = {
 			}
 			focuses = {
@@ -24,7 +24,7 @@ bookmarks = {
 		}
 		ENG = {
 			history = ENG_BLITZKRIEG_DESC
-			ideology = westernism
+			ideology = progressivism
 			ideas = {
 			}
 			focuses = {
@@ -33,7 +33,7 @@ bookmarks = {
 		}
 		GER = {
 			history = GER_BLITZKRIEG_DESC
-			ideology = easternism
+			ideology = paternalism
 			ideas = {
 			}
 			focuses = {
@@ -41,7 +41,7 @@ bookmarks = {
 		}
 		ITA = {
 			history = ITA_BLITZKRIEG_DESC
-			ideology = easternism
+			ideology = paternalism
 			ideas={
 			}
 			focuses = {
@@ -49,7 +49,7 @@ bookmarks = {
 		}
 		JAP = {
 			history = JAP_BLITZKRIEG_DESC
-			ideology = easternism
+			ideology = paternalism
 			ideas={
 			}	
 			focuses = {
@@ -57,7 +57,7 @@ bookmarks = {
 		}
 		SOV = {
 			history = SOV_2027_DESC
-			ideology = communism
+			ideology = marxism_leninism
 			ideas = {
 			}
 			focuses = {

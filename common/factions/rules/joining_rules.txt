@@ -35,7 +35,7 @@ joining_rule_non_fascist = {
 		}
 		modifier = {
 			add = 1
-			has_government = communism
+			has_government = marxism_leninism
 		}
 	}
 	trigger = {
@@ -49,16 +49,16 @@ joining_rule_non_fascist = {
 	}
 }
 
-joining_rule_non_democratic = {
+joining_rule_non_progressivism = {
 	type = joining_rules
 	visible = {
-		NOT = { has_government = democratic }
+		NOT = { has_government = progressivism }
 	}
 	ai_will_do = {
 		base = 0
 		modifier = {
 			add = 1
-			NOT = { has_government = democratic }
+			NOT = { has_government = progressivism }
 		}
 		modifier = {
 			add = 1
@@ -67,7 +67,7 @@ joining_rule_non_democratic = {
 	}
 	trigger = {
 		NOT = {
-			has_government = democratic 
+			has_government = progressivism 
 		}
 		IF = {
 			limit = { NOT = { has_rule = can_join_opposite_factions } }
@@ -79,13 +79,13 @@ joining_rule_non_democratic = {
 joining_rule_non_communist = {
 	type = joining_rules
 	visible = {
-		NOT = { has_government = communism }
+		NOT = { has_government = marxism_leninism }
 	}
 	ai_will_do = {
 		base = 0
 		modifier = {
 			add = 1
-			NOT = { has_government = communism }
+			NOT = { has_government = marxism_leninism }
 		}
 		modifier = {
 			add = 1
@@ -119,7 +119,7 @@ joining_rule_non_communist = {
 	}
 	trigger = {
 		NOT = {
-			has_government = communism 
+			has_government = marxism_leninism 
 		}
 		IF = {
 			limit = { NOT = { has_rule = can_join_opposite_factions } }
@@ -145,18 +145,18 @@ joining_rule_fascist_only = {
 	}
 }
 
-joining_rule_democratic_non_aligned = {
+joining_rule_progressivism_non_aligned = {
 	type = joining_rules
 	ai_will_do = {
 		base = 0
 	}
 	available = {
-		has_government = democratic
+		has_government = progressivism
 	}
 	trigger = {
 		OR = {
-			has_government = democratic
-			has_government = neutrality
+			has_government = progressivism
+			has_government = centrism
 		}
 		IF = {
 			limit = { NOT = { has_rule = can_join_opposite_factions } }
@@ -181,10 +181,10 @@ joining_rule_communist_only = {
 		base = 0
 	}
 	available = {
-		has_government = communism
+		has_government = marxism_leninism
 	}
 	trigger = {
-		has_government = communism
+		has_government = marxism_leninism
 		IF = {
 			limit = { NOT = { has_rule = can_join_opposite_factions } }
 			has_government = FROM
@@ -249,7 +249,7 @@ joining_rule_has_no_war = {
 		base = 0
 		modifier = {
 			add = 3
-			has_government = neutrality
+			has_government = centrism
 			has_war = no 
 		}
 	}
@@ -270,8 +270,8 @@ joining_rule_has_no_offensive_war = {
 			NOT = { tag = ENG }
 			NOT = { tag = USA }
 			OR = {
-				has_government = democratic
-				has_government = neutrality
+				has_government = progressivism
+				has_government = centrism
 			}
 		}
 	}
@@ -299,7 +299,7 @@ joining_rule_neighbors_only = {
 		base = 0
 		modifier = {
 			add = 1
-			has_government = neutrality
+			has_government = centrism
 			has_war = no 
 		}
 	}

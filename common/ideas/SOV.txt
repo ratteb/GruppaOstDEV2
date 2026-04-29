@@ -109,7 +109,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				easternism_drift = 0.04
+				paternalism_drift = 0.04
 				war_support_factor = 0.05
 				stability_factor = 0.05
 			}
@@ -167,7 +167,7 @@ ideas = {
 				political_power_cost = -0.15
 				stability_factor = -0.05
 				war_support_factor = 0.1
-				easternism_drift = 0.02
+				paternalism_drift = 0.02
 			}
 		}
 		SOV_CSTO_leader = {

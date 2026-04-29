@@ -8,7 +8,7 @@ bookmarks = {
 	
 		USA = {
 			history = USA_BLITZKRIEG_DESC
-			ideology = westernism
+			ideology = progressivism
 			ideas = {
 			}
 			focuses = {
@@ -16,7 +16,7 @@ bookmarks = {
 		}
 		SOV = {
 			history = SOV_2027_DESC
-			ideology = communism
+			ideology = marxism_leninism
 			ideas = {
 			}
 			focuses = {
@@ -33,7 +33,7 @@ bookmarks = {
 		}
 		FRA = {
 			history = FRA_BLITZKRIEG_DESC
-			ideology = westernism
+			ideology = progressivism
 			ideas={
 			}
 			focuses = {

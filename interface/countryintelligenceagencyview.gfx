@@ -497,8 +497,8 @@ spriteTypes = {
 		noOfFrames = 2
 	}
 	spriteType = {
-		name = "GFX_intelligence_agency_logo_BRA_neutrality"
-		texturefile = "gfx/interface/operatives/agencies/intelligence_agency_logo_BRA_neutrality.dds"
+		name = "GFX_intelligence_agency_logo_BRA_centrism"
+		texturefile = "gfx/interface/operatives/agencies/intelligence_agency_logo_BRA_centrism.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
@@ -512,8 +512,8 @@ spriteTypes = {
 		noOfFrames = 2
 	}
 	spriteType = {
-		name = "GFX_intelligence_agency_logo_AUS_evidenzbureau_democratic"
-		texturefile = "gfx/interface/operatives/agencies/intelligence_agency_logo_AUS_evidenzbureau_democratic.dds"
+		name = "GFX_intelligence_agency_logo_AUS_evidenzbureau_progressivism"
+		texturefile = "gfx/interface/operatives/agencies/intelligence_agency_logo_AUS_evidenzbureau_progressivism.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
@@ -557,18 +557,18 @@ spriteTypes = {
 		noOfFrames = 2
 	}
 	spriteType = {
-		name = "GFX_intelligence_agency_logo_AFG_democratic"
-		texturefile = "gfx/interface/operatives/agencies/intelligence_agency_logo_AFG_democratic.dds"
+		name = "GFX_intelligence_agency_logo_AFG_progressivism"
+		texturefile = "gfx/interface/operatives/agencies/intelligence_agency_logo_AFG_progressivism.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
-		name = "GFX_intelligence_agency_logo_AFG_communism"
-		texturefile = "gfx/interface/operatives/agencies/intelligence_agency_logo_AFG_communism.dds"
+		name = "GFX_intelligence_agency_logo_AFG_marxism_leninism"
+		texturefile = "gfx/interface/operatives/agencies/intelligence_agency_logo_AFG_marxism_leninism.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
-		name = "GFX_intelligence_agency_logo_AFG_neutrality"
-		texturefile = "gfx/interface/operatives/agencies/intelligence_agency_logo_AFG_neutrality.dds"
+		name = "GFX_intelligence_agency_logo_AFG_centrism"
+		texturefile = "gfx/interface/operatives/agencies/intelligence_agency_logo_AFG_centrism.dds"
 		noOfFrames = 2
 	}
 	spriteType = {

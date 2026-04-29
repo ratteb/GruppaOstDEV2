@@ -186,7 +186,7 @@ add_ideas = {
 	azof_insurgency01
 	ineffective_sbu01
 	UKR_political_chaos01 
-	enforced_neutrality
+	enforced_centrism
 	min_super_high_bracket 
 	max_super_high_bracket
 }
@@ -202,7 +202,7 @@ set_popularities = {
 	progressivism = 9 
 	centrism = 18
 	conservatism = 32
-	democratic_socialism = 17
+	progressivism_socialism = 17
 	authoritarian_socialism = 2 
 	despotism = 9
 	fascism = 7
@@ -213,7 +213,7 @@ create_country_leader = {
 	name = "Mr Generic"
 	desc = ""
 	picture = GFX_portrait_Mir_Jafar_Baghirov
-	ideology = soviet_stalinism
+	ideology = marxism_leninism_neo_stalinism
 	traits = {
 		
 	}
@@ -223,7 +223,7 @@ create_country_leader = {
 	name = "Mr Generic"
 	desc = ""
 	picture = GFX_portrait_Mammad_Amin_Rasulzade
-	ideology = western_conservatism
+	ideology = progressivism_social_liberalism
 	traits = {
 		
 	}

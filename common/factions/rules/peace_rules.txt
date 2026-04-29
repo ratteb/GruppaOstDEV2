@@ -5,7 +5,7 @@ faction_peace_rule_puppeting_focus = {
 		base = 0
 		modifier = {
 			add = 1
-			has_government = communism
+			has_government = marxism_leninism
 		}
 	}
 	peace_action_modifiers = {
@@ -34,7 +34,7 @@ faction_peace_rule_liberation_focus = {
 		base = 0
 		modifier = {
 			add = 1
-			has_government = democratic
+			has_government = progressivism
 		}
 	}
 	peace_action_modifiers = {
@@ -88,7 +88,7 @@ faction_peace_take_claimed_focus = {
 		base = 0
 		modifier = {
 			add = 1
-			has_government = neutrality 
+			has_government = centrism 
 		}
 	}
 	peace_action_modifiers = {
