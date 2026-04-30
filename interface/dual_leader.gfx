@@ -20,4 +20,9 @@ spriteTypes = {
 		name = "GFX_portrait_SOV_mikhail_mishustin"
 		texturefile = "gfx/leaders/SOV/second_leader/mikhail_mishustin.dds"
 	}
+
+        spriteType = {
+		name = "GFX_portrait_SOV_prigozhin"
+		texturefile = "gfx/leaders/SOV/second_leader/prigozhin_leader.dds"
+	}
 }

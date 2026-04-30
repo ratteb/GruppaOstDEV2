@@ -11,5 +11,8 @@
  SECOND_LEADER_TOOLTIP_KEY:0 "§Y[Root.GetSecondLeaderName]§!\n[Root.GetSecondLeaderTitle]"
 
  # Nation Specific Localisation
- SOV_LEADER_NAME_KEY:0 "Mikhail Mishustin"
- SOV_LEADER_TITLE_KEY:0 "Prime Minister"
+ SOV_MM_LEADER_NAME_KEY:0 "Mikhail Mishustin"
+ SOV_EP_LEADER_NAME_KEY:0 "Evgeniy Prigozhin"
+
+ SOV_MM_LEADER_TITLE_KEY:0 "Prime Minister"
+ SOV_EP_LEADER_TITLE_KEY:0 "Big Boss"

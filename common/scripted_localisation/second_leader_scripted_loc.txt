@@ -2,11 +2,14 @@
 defined_text = {
     name = GetSecondLeaderName
     text = {
-        trigger = {
-            tag = SOV
-            # ... other conditions like ideology or ideas
-        }
-        localization_key = "SOV_LEADER_NAME_KEY"
+        trigger = { tag = SOV
+        has_country_flag = SOV_has_MM }
+        localization_key = "SOV_MM_LEADER_NAME_KEY"
+    }
+     text = {
+        trigger = { tag = SOV
+        has_country_flag = SOV_has_EP }
+        localization_key = "SOV_EP_LEADER_NAME_KEY"
     }
     text = { localization_key = "DEFAULT_NAME_KEY" } # Fallback
 }
@@ -15,8 +18,15 @@ defined_text = {
 defined_text = {
     name = GetSecondLeaderTitle
     text = {
-        trigger = { tag = SOV }
+        trigger = { tag = SOV
+        has_country_flag = SOV_has_MM }
         localization_key = "SOV_MM_LEADER_TITLE_KEY"
+    }
+
+    text = {
+        trigger = { tag = SOV
+        has_country_flag = SOV_has_EP }
+        localization_key = "SOV_EP_LEADER_TITLE_KEY"
     }
     text = { localization_key = "DEFAULT_TITLE_KEY" } # Fallback
 }
@@ -25,8 +35,15 @@ defined_text = {
 defined_text = {
     name = GetSecondLeaderPortrait
     text = {
-        trigger = { tag = SOV }
+        trigger = { tag = SOV
+        has_country_flag = SOV_has_MM }
         localization_key = "GFX_portrait_SOV_mikhail_mishustin"
+    }
+
+    text = {
+        trigger = { tag = SOV
+        has_country_flag = SOV_has_EP }
+        localization_key = "GFX_portrait_SOV_prigozhin"
     }
     # The fallback should be a blank portrait background.
     text = { localization_key = "GFX_portrait_bg_blank" }

@@ -8,7 +8,8 @@ on_actions = {
 		}
 
 		effect = {
-			SOV = { set_country_flag = second_leader }
+			SOV = { set_country_flag = second_leader
+			set_country_flag = SOV_has_MM }
 			FRA = { set_country_flag = second_leader }
 		}
 	}
