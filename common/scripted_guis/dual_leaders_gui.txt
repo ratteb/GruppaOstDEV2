@@ -1,0 +1,37 @@
+scripted_gui = {
+	# The Button that toggles the second portrait
+	dual_leader_button = {
+		window_name = "dual_leader_button" # Links to GUI container name in Step 6
+		parent_window_token = politics_tab
+		visible = {
+			is_ai = no
+			uses_dual_leader_gui = yes # Uses our trigger from Step 4
+		}
+		effects = {
+			dual_leader_button_click = { # Links to button name in Step 6
+				if = {
+					limit = { NOT = { has_country_flag = dual_leader_is_visible_flag } }
+					set_country_flag = dual_leader_is_visible_flag
+				}
+				else = {
+					clr_country_flag = dual_leader_is_visible_flag
+				}
+			}
+		}
+	}
+
+	# The Screen that actually shows the portrait
+	dual_leader_screen_container = {
+		window_name = "dual_leader_screen" # Links to GUI container name in Step 6
+		parent_window_token = politics_tab
+		properties = {
+			"second_leader_portrait" = { # Links to iconType name in Step 6
+				image = "[Root.GetSecondLeaderPortrait]" # Links to defined_text in Step 3
+			}
+		}
+		visible = {
+			is_ai = no
+			has_country_flag = dual_leader_is_visible_flag
+		}
+	}
+}

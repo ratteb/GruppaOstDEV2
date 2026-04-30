@@ -1,0 +1,14 @@
+TAG_has_dual_leader_gui = {
+	OR = {
+		has_country_flag = second_leader 
+		# ... other conditions ...
+	}
+}
+
+# The main trigger used by the GUI to check if the button should be visible
+uses_dual_leader_gui = {
+	OR = {
+		TAG_has_dual_leader_gui = yes
+		# ... add other countries here ...
+	}
+}

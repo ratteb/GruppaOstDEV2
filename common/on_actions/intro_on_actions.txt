@@ -6,5 +6,10 @@ on_actions = {
             GER = { set_country_flag = unique_opening_screen }
             SOV = { set_country_flag = unique_opening_screen }
 		}
+
+		effect = {
+			SOV = { set_country_flag = second_leader }
+			FRA = { set_country_flag = second_leader }
+		}
 	}
 }

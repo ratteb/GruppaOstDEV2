@@ -1,0 +1,23 @@
+spriteTypes = {
+	# Backgrounds and Frames (These are usually kept as-is)
+	spriteType = {
+		name = "GFX_portrait_bg_blank"
+		texturefile = "gfx/interface/portrait_bg_blank.dds"
+	}
+	spriteType = {
+		name = "GFX_diplo_leader_frame_2"
+		texturefile = "gfx/interface/pol_leader_frame.dds"
+	}
+
+	# Your custom button sprite
+	spriteType = {
+		name = "GFX_leader_button"
+		texturefile = "gfx/interface/leader_button.dds"
+	}
+
+	# Add your new leader portraits here
+	spriteType = {
+		name = "GFX_portrait_SOV_mikhail_mishustin"
+		texturefile = "gfx/leaders/SOV/second_leader/mikhail_mishustin.dds"
+	}
+}

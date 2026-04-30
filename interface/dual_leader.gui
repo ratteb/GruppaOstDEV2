@@ -1,0 +1,40 @@
+guiTypes = {
+	# 1. The Button Container
+	containerWindowType = {
+		name = "dual_leader_button" # Used in scripted_gui window_name
+		position = { x = 150 y = 320 } # Adjust as needed
+		
+		buttonType = {
+			name = "dual_leader_button" # Used for the effect name in Step 5
+			spriteType = "GFX_leader_button" # From Step 2
+			pdx_tooltip = "BUTTON_TOOLTIP_KEY"
+		}
+	}
+
+	# 2. The Portrait Screen Container
+	containerWindowType = {
+		name = "dual_leader_screen" # Used in scripted_gui window_name
+		position = { x = 18 y = 58 } # Adjust to cover the default portrait
+		
+		# The Second Portrait
+		iconType = {
+			name = "second_leader_portrait" # Used in scripted_gui properties
+			spriteType = "GFX_portrait_bg_blank" # A default sprite
+			pdx_tooltip = "SECOND_LEADER_TOOLTIP_KEY"
+		}
+
+		iconType = {
+			name = "second_leader_frame"
+			spriteType = "GFX_diplo_leader_frame_2"
+			alwaystransparent = yes
+			position = { x = -17 y = -17 }
+		}
+
+		# The Name Text Box
+		instantTextboxType = {
+			name = "second_leader_name_text"
+			text = "second_leader_name_loc_key" # From Step 7
+			position = { x = 23 y = 215 }
+		}
+	}
+}

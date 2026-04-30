@@ -1,0 +1,15 @@
+﻿l_english:
+ # GUI Localisation Keys (linking to defined_text functions from Step 3)
+ second_leader_name_loc_key:0 "[Root.GetSecondLeaderName]"
+ 
+ # Default/Fallback Text
+ DEFAULT_NAME_KEY:0 "Vacant"
+ DEFAULT_TITLE_KEY:0 "Second Leader"
+ 
+ # Tooltips
+ BUTTON_TOOLTIP_KEY:0 "Click to view Head of State"
+ SECOND_LEADER_TOOLTIP_KEY:0 "§Y[Root.GetSecondLeaderName]§!\n[Root.GetSecondLeaderTitle]"
+
+ # Nation Specific Localisation
+ SOV_LEADER_NAME_KEY:0 "Mikhail Mishustin"
+ SOV_LEADER_TITLE_KEY:0 "Prime Minister"

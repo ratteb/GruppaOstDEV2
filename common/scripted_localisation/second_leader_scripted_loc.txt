@@ -1,0 +1,33 @@
+#Titles
+defined_text = {
+    name = GetSecondLeaderName
+    text = {
+        trigger = {
+            tag = SOV
+            # ... other conditions like ideology or ideas
+        }
+        localization_key = "SOV_LEADER_NAME_KEY"
+    }
+    text = { localization_key = "DEFAULT_NAME_KEY" } # Fallback
+}
+
+# Determines the Title of the 2nd Leader
+defined_text = {
+    name = GetSecondLeaderTitle
+    text = {
+        trigger = { tag = SOV }
+        localization_key = "SOV_MM_LEADER_TITLE_KEY"
+    }
+    text = { localization_key = "DEFAULT_TITLE_KEY" } # Fallback
+}
+
+# Determines WHICH portrait GFX to show
+defined_text = {
+    name = GetSecondLeaderPortrait
+    text = {
+        trigger = { tag = SOV }
+        localization_key = "GFX_portrait_SOV_mikhail_mishustin"
+    }
+    # The fallback should be a blank portrait background.
+    text = { localization_key = "GFX_portrait_bg_blank" }
+}
