@@ -500,7 +500,8 @@ script_enum_equipment_bonus_type = {
 	strat_bomber_equipment_3
 	jet_strat_bomber_equipment_1
 	supersonic_fighter_equipment_1
-	odern_tank_equipment
+	
+	modern_tank_equipment
 	modern_tank_equipment_0
 	modern_tank_equipment_1
 	modern_tank_equipment_2
@@ -508,6 +509,7 @@ script_enum_equipment_bonus_type = {
 	modern_tank_equipment_4
 	modern_tank_equipment_5
 	modern_tank_equipment_6
+
 	apc_equipment
 	apc_equipment_0
 	apc_equipment_1
@@ -516,6 +518,7 @@ script_enum_equipment_bonus_type = {
 	apc_equipment_4
 	apc_equipment_5
 	apc_equipment_6
+
 	ifv_equipment
 	ifv_equipment_0
 	ifv_equipment_1
@@ -523,15 +526,18 @@ script_enum_equipment_bonus_type = {
 	ifv_equipment_3
 	ifv_equipment_4
 	ifv_equipment_5
+
 	airborne_ifv
 	airborne_ifv_0
 	airborne_ifv_1
 	airborne_ifv_2
 	airborne_ifv_3
 	airborne_ifv_4
+
 	spg_equipment
 	spg_equipment_0
 	spg_equipment_1
+
 	infantry_equipment_0
 	infantry_equipment_1
 	infantry_equipment_2
@@ -543,6 +549,7 @@ script_enum_equipment_bonus_type = {
 	infantry_equipment_8
 	infantry_equipment_9
 	infantry_equipment_10
+
 	anti_tank_weapons
 	anti_tank_weapons_0
 	anti_tank_weapons_1
@@ -551,4 +558,53 @@ script_enum_equipment_bonus_type = {
 	anti_tank_weapons_4
 	anti_tank_weapons_5
 	anti_tank_weapons_6
+
+	infantry_gear
+	infantry_gear_0
+	infantry_gear_1
+	infantry_gear_2
+	infantry_gear_3
+	infantry_gear_4
+	infantry_gear_5
+	infantry_gear_6
+
+	infantry_uniform
+	infantry_uniform_0
+	infantry_uniform_1
+	infantry_uniform_2
+	infantry_uniform_3
+	infantry_uniform_4
+	infantry_uniform_5
+	infantry_uniform_6
+
+	paratrooper_gear
+	paratrooper_gear_0
+	paratrooper_gear_1
+	paratrooper_gear_2
+	paratrooper_gear_3
+	paratrooper_gear_4
+	paratrooper_gear_5
+	paratrooper_gear_6
+	paratrooper_gear_7
+
+	marine_gear
+	marine_gear_0
+	marine_gear_1
+	marine_gear_2
+	marine_gear_3
+	marine_gear_4
+	marine_gear_5
+	marine_gear_6
+	marine_gear_7
+
+	mountaineer_gear
+	mountaineer_gear_0
+	mountaineer_gear_1
+	mountaineer_gear_2
+	mountaineer_gear_3
+	mountaineer_gear_4
+	mountaineer_gear_5
+	mountaineer_gear_6
+	mountaineer_gear_7
+
 }

@@ -1,0 +1,12 @@
+SCW_hostile_war = {
+	OR = {
+		has_country_flag = foreign_power_offensive
+		check_variable = {
+					var = global.SYR_civil_war_progress
+					value = 75
+					compare = greater_than_or_equals
+				}
+	}
+}
+
+# The main trigger used by the GUI to check if the button should be visible

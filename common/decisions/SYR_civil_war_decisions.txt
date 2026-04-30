@@ -149,11 +149,7 @@ SYR_civil_war_cat = {
 			}
 
 			NOT = {
-				check_variable = {
-					var = global.SYR_civil_war_progress
-					value = 75
-					compare = greater_than_or_equals_than_or_equals
-				}
+				SCW_hostile_war = yes 
 			}
 			
 		}
@@ -217,11 +213,7 @@ SYR_civil_war_cat = {
 			}
 
 			NOT = {
-				check_variable = {
-					var = global.SYR_civil_war_progress
-					value = 75
-					compare = greater_than_or_equals_than_or_equals
-				}
+				SCW_hostile_war = yes 
 			}
 			
 		}
