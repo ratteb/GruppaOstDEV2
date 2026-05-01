@@ -72,15 +72,15 @@ set_politics = {
 }
 
 set_popularities = {
-	marxism_leninism = 0
+	marxism_leninism = 5
 	authoritarian_socialism = 0
 	democratic_socialism = 0
-	social_democracy = 0
-	progressivism = 10
-	centrism = 30
-	conservatism = 50
-	paternalism = 0
-	despotism = 10
+	social_democracy = 5
+	progressivism = 13
+	centrism = 24
+	conservatism = 40
+	paternalism = 5
+	despotism = 8
 	fascism = 0 
 	national_socialism = 0
 	salafism = 0

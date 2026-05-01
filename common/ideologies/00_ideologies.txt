@@ -7,7 +7,7 @@ ideologies = {
 			marxism_leninism_national_marxism_leninism = {}
 			marxism_leninism_neo_stalinism = {}
 		}
-		color = { 135 33 20 }
+		color = { 100 0 0 }
 		rules = {
 			can_force_government = yes
 			can_puppet = no
@@ -27,7 +27,7 @@ ideologies = {
 			authoritarian_socialism_left_wing_nationalism = {}
 			authoritarian_socialism_market_socialism = {}
 		}
-		color = { 188 45 45 }
+		color = { 153 0 0 }
 		rules = {
 			can_force_government = yes
 			can_puppet = no
@@ -49,7 +49,7 @@ ideologies = {
 			democratic_socialism_christian_socialism = {}
 			democratic_socialism_reformist_socialism = {}
 		}
-		color = { 226 50 6 }
+		color = { 189 54 67 }
 		rules = {
 			can_force_government = yes
 			can_puppet = no
@@ -71,7 +71,7 @@ ideologies = {
 			social_democracy_left_wing_agrarianism = {}
 			social_democracy_social_nationalism = {}
 		}
-		color = { 198 15 107 }
+		color = { 255 10 102 }
 		rules = {
 			can_force_government = yes
 			can_puppet = no
@@ -93,7 +93,7 @@ ideologies = {
 			progressivism_cosmopolitanism = {}
 			progressivism_left_libertarianism = {}
 		}
-		color = { 224 134 0 }
+		color = { 255 170 30 }
 		rules = {
 			can_force_government = yes
 			can_puppet = no
@@ -116,7 +116,7 @@ ideologies = {
 			centrism_national_liberalism = {}
 			centrism_libertarianism = {}
 		}
-		color = { 226 220 43 }
+		color = { 225 215 0 }
 		rules = {
 			can_force_government = yes
 			can_puppet = no
@@ -139,7 +139,7 @@ ideologies = {
 			conservatism_islamic_conservatism = {}
 			conservatism_social_conservatism = {}
 		}
-		color = { 14 79 147 }
+		color = { 10 15 255 }
 		rules = {
 			can_force_government = yes
 			can_puppet = no
@@ -162,8 +162,9 @@ ideologies = {
 			paternalism_putinism = {}
 			paternalism_sharia_democracy = {}
 			paternalism_ultraconservatism = {}
+			paternalism_national_conservatism = {}
 		}
-		color = { 99 99 99 }
+		color = { 124 124 124 }
 		rules = {
 			can_force_government = yes
 			can_puppet = no
@@ -186,7 +187,7 @@ ideologies = {
 			despotism_christian_fundamentalism = {}
 			despotism_zionist_fundamentalism = {}
 		}
-		color = { 40 40 38 }
+		color = { 5 5 5 }
 		rules = {
 			can_force_government = yes
 			can_puppet = no
@@ -208,7 +209,7 @@ ideologies = {
 			fascism_right_baathism = {}
 			fascism_fascist_populism = {}
 		}
-		color = { 178 138 87 }
+		color = { 123 84 46 }
 		rules = {
 			can_force_government = yes
 			can_puppet = no
@@ -228,7 +229,7 @@ ideologies = {
 			national_socialism_identitarianism = {}
 			national_socialism_national_bolshevism = {}
 		}
-		color = { 75 57 26 }
+		color = { 78 57 57 }
 		rules = {
 			can_force_government = yes
 			can_puppet = no
@@ -247,7 +248,7 @@ ideologies = {
 			salafism_jihadism = {}
 			salafism_islamic_fundamentalism = {}
 		}
-		color = { 33 75 26 }
+		color = { 58 80 59 }
 		rules = {
 			can_force_government = yes
 			can_puppet = no
