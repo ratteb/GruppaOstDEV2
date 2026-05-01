@@ -1,4 +1,0 @@
-﻿# Infantry
-AFA_INF_01 = {
-}
-
