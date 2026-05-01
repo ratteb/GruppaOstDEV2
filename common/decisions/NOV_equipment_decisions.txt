@@ -14,6 +14,10 @@ NOV_equipment_decision_cat = {
 		}
 		days_re_enable = 5
 		days_remove = 30
+		modifier = {
+			civilian_factory_use = 1
+			consumer_goods_factor = 0.08
+			}
 
 		fire_only_once = no
 
@@ -21,15 +25,11 @@ NOV_equipment_decision_cat = {
 		custom_cost_trigger = {
 			command_power > 20
 			has_political_power > 25
-			industrial_complex > 1
+			num_of_civilian_factories_available_for_projects > 1
 		}
 		custom_cost_text = SOV_csto_training_cost
 
 		complete_effect = {
-			modifier = {
-			civilian_factory_use = 1
-			consumer_goods_factor = 0.08
-			}
 		}
 		remove_effect = { 
 			add_equipment_to_stockpile = {
@@ -59,6 +59,10 @@ NOV_equipment_decision_cat = {
 		}
 		days_re_enable = 5
 		days_remove = 30
+		modifier = {
+			civilian_factory_use = 2
+			consumer_goods_factor = 0.08
+			}
 
 		fire_only_once = no
 
@@ -66,15 +70,11 @@ NOV_equipment_decision_cat = {
 		custom_cost_trigger = {
 			command_power > 20
 			has_political_power > 25
-			industrial_complex > 2
+			num_of_civilian_factories_available_for_projects > 2
 		}
 		custom_cost_text = SOV_csto_training_cost
 
 		complete_effect = {
-			modifier = {
-			civilian_factory_use = 2
-			consumer_goods_factor = 0.08
-			}
 		}
 		remove_effect = { 
 			add_equipment_to_stockpile = {
@@ -104,6 +104,10 @@ NOV_equipment_decision_cat = {
 		}
 		days_re_enable = 5
 		days_remove = 30
+		modifier = {
+			civilian_factory_use = 2
+			consumer_goods_factor = 0.08
+			}
 
 		fire_only_once = no
 
@@ -111,15 +115,11 @@ NOV_equipment_decision_cat = {
 		custom_cost_trigger = {
 			command_power > 20
 			has_political_power > 25
-			industrial_complex > 2
+			num_of_civilian_factories_available_for_projects > 2
 		}
 		custom_cost_text = SOV_csto_training_cost
 
 		complete_effect = {
-			modifier = {
-			civilian_factory_use = 2
-			consumer_goods_factor = 0.08
-			}
 		}
 		remove_effect = { 
 			add_equipment_to_stockpile = {
@@ -149,6 +149,10 @@ NOV_equipment_decision_cat = {
 		}
 		days_re_enable = 5
 		days_remove = 30
+		modifier = {
+			civilian_factory_use = 3
+			consumer_goods_factor = 0.08
+			}
 
 		fire_only_once = no
 
@@ -156,15 +160,11 @@ NOV_equipment_decision_cat = {
 		custom_cost_trigger = {
 			command_power > 20
 			has_political_power > 25
-			industrial_complex > 3
+			num_of_civilian_factories_available_for_projects > 3
 		}
 		custom_cost_text = SOV_csto_training_cost
 
 		complete_effect = {
-			modifier = {
-			civilian_factory_use = 3
-			consumer_goods_factor = 0.08
-			}
 		}
 		remove_effect = { 
 			add_equipment_to_stockpile = {
@@ -194,6 +194,10 @@ NOV_equipment_decision_cat = {
 		}
 		days_re_enable = 5
 		days_remove = 30
+		modifier = {
+			civilian_factory_use = 2
+			consumer_goods_factor = 0.08
+			}
 
 		fire_only_once = no
 
@@ -201,15 +205,11 @@ NOV_equipment_decision_cat = {
 		custom_cost_trigger = {
 			command_power > 20
 			has_political_power > 25
-			industrial_complex > 2
+			num_of_civilian_factories_available_for_projects > 2
 		}
 		custom_cost_text = SOV_csto_training_cost
 
 		complete_effect = {
-			modifier = {
-			civilian_factory_use = 2
-			consumer_goods_factor = 0.08
-			}
 		}
 		remove_effect = { 
 			add_equipment_to_stockpile = {
@@ -239,6 +239,10 @@ NOV_equipment_decision_cat = {
 		}
 		days_re_enable = 5
 		days_remove = 30
+		modifier = {
+			civilian_factory_use = 3
+			consumer_goods_factor = 0.08
+			}
 
 		fire_only_once = no
 
@@ -246,15 +250,11 @@ NOV_equipment_decision_cat = {
 		custom_cost_trigger = {
 			command_power > 20
 			has_political_power > 25
-			industrial_complex > 2
+			num_of_civilian_factories_available_for_projects > 2
 		}
 		custom_cost_text = SOV_csto_training_cost
 
 		complete_effect = {
-			modifier = {
-			civilian_factory_use = 3
-			consumer_goods_factor = 0.08
-			}
 		}
 		remove_effect = { 
 			add_equipment_to_stockpile = {
@@ -284,6 +284,10 @@ NOV_equipment_decision_cat = {
 		}
 		days_re_enable = 5
 		days_remove = 30
+		modifier = {
+			civilian_factory_use = 3
+			consumer_goods_factor = 0.08
+			}
 
 		fire_only_once = no
 
@@ -291,15 +295,11 @@ NOV_equipment_decision_cat = {
 		custom_cost_trigger = {
 			command_power > 20
 			has_political_power > 25
-			industrial_complex > 2
+			num_of_civilian_factories_available_for_projects > 2
 		}
 		custom_cost_text = SOV_csto_training_cost
 
 		complete_effect = {
-			modifier = {
-			civilian_factory_use = 3
-			consumer_goods_factor = 0.08
-			}
 		}
 		remove_effect = { 
 			add_equipment_to_stockpile = {
@@ -328,6 +328,10 @@ NOV_equipment_decision_cat = {
 		}
 		days_re_enable = 5
 		days_remove = 30
+		modifier = {
+			civilian_factory_use = 3
+			consumer_goods_factor = 0.08
+			}
 
 		fire_only_once = no
 
@@ -335,15 +339,11 @@ NOV_equipment_decision_cat = {
 		custom_cost_trigger = {
 			command_power > 20
 			has_political_power > 25
-			industrial_complex > 2
+			num_of_civilian_factories_available_for_projects > 2
 		}
 		custom_cost_text = SOV_csto_training_cost
 
 		complete_effect = {
-			modifier = {
-			civilian_factory_use = 3
-			consumer_goods_factor = 0.08
-			}
 		}
 		remove_effect = { 
 			add_equipment_to_stockpile = {
