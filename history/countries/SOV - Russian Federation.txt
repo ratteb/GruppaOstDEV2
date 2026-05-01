@@ -370,6 +370,11 @@ add_opinion_modifier = {
 	target = NOV
 	modifier = federal_republic_SOV
 }
+
+add_opinion_modifier = {
+	target = SYR
+	modifier = SOV_SYR_military_mission
+}
 country_event = {
 	id = SOV_csto.1
 	days = 40

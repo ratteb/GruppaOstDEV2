@@ -29,6 +29,17 @@ opinion_modifiers = {
 	unstable_alliance = {
 		value = -10
 	}
+	pro_russians_in_government = {
+		value = 15
+	}
+
+	federal_republic_SOV = {
+		value = 90
+	}
+
+	SOV_SYR_military_mission = {
+		value = 65
+	}
 
 	holds_our_cores = {
 		value = -30
@@ -48,34 +59,6 @@ opinion_modifiers = {
 		min_trust = -10
 		days = 10
 		decay = 1
-	}
-
-	anti_comintern_pact_opinion = {
-		value = 25
-	}
-
-	refused_anti_comintern_pact_opinion= {
-		value = -50
-	}
-
-	anti_soviet_pact_call_refused = {
-		value = -50
-	}
-
-	tripartite_pact_opinion = {
-		value = 35
-	}
-
-	refused_tripartite_pact_opinion = {
-		value = -25
-	}
-
-	pact_against_us= {
-		value = -50
-	}
-
-	worse_pact_against_us= {
-		value = -75
 	}
 
 	protest_action_light = {
@@ -204,14 +187,6 @@ opinion_modifiers = {
 	
 	non_aggression_pact = {
 		value = 25
-	}
-
-	pro_russians_in_government = {
-		value = 15
-	}
-
-	federal_republic_SOV = {
-		value = 90
 	}
 
 	communists_in_government = {
