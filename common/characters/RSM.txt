@@ -1,0 +1,20 @@
+characters={
+	RSM_sergey_kisel={
+		name="Lt. Gen Sergey Kisel"
+		portraits={
+			civilian={
+				large=GFX_sergey_kisel
+			}
+		}
+		country_leader={
+			ideology=despotism_military_junta
+			desc = 
+			expire="3000.1.1.1"
+			id=-1
+			traits = {
+				inefficient_general
+			}
+		}
+	}
+
+}

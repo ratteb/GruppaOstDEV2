@@ -158,6 +158,10 @@
  SOV_DEF:0 "Russia"
  SOV_ADJ:0 "Russian"
 
+ RSM_despotism:0 "Russian Forces in Syria"
+ RSM_despotism_DEF:0 "the Russian Forces in Syria"
+ RSM_ADJ:0 "Russian"
+
  PMR_paternalism:0 "Pridnestrovian Moldavian Republic"
  PMR_paternalism_DEF:0 "the Pridnestrovian Moldavian Republic"
  PMR_ADJ:0 "Russian"

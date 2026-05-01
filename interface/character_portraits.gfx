@@ -10,6 +10,11 @@ spriteTypes = {
 		texturefile = "gfx/leaders/SOV/ivan_melinkov.dds"
 	}
 
+	spriteType = {
+		name = "GFX_sergey_kisel"
+		texturefile = "gfx/leaders/RSM/sergey_kisel.dds"
+	}
+
 
 	#Russia above this line
 	spriteType = {

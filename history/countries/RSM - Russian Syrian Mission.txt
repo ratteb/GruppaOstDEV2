@@ -1,0 +1,183 @@
+﻿
+capital = 1001 #Baku
+
+oob = "AZR_2027"
+
+set_research_slots = 5
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	improved_infantry_weapons = 1
+	advanced_infantry_weapons = 1 
+	modernized_infantry_weapons = 1 
+	modern_infantry_weapons = 1
+	modern_infantry_weapons2 = 1
+	modern_infantry_weapons3 = 1
+	modern_infantry_weapons4 = 1
+	modern_infantry_weapons5 = 1
+	modern_infantry_weapons6 = 1
+	infantry_uniform = 1
+	infantry_uniform1 = 1
+	infantry_uniform2 = 1
+	infantry_uniform3 = 1
+	infantry_uniform4 = 1
+	infantry_uniform5 = 1
+	infantry_uniform6 = 1
+	infantry_gear = 1
+	infantry_gear1 = 1
+	infantry_gear2 = 1
+	infantry_gear3 = 1
+	infantry_gear4 = 1
+	infantry_gear5 = 1
+	infantry_gear6 = 1
+	anti_tank_weapons = 1
+	anti_tank_weapons2 = 1
+	anti_tank_weapons3 = 1
+	anti_tank_weapons4 = 1
+	anti_tank_weapons5 = 1
+	anti_tank_weapons6 = 1
+	anti_tank_weapons7 = 1
+	modern_tank = 1
+	modern_tank1 = 1
+	modern_tank2 = 1
+	modern_tank3 = 1
+	modern_tank4 = 1
+	modern_tank5 = 1
+	modern_tank6 = 1
+    ifv_vehicle = 1
+	ifv_vehicle1 = 1
+	ifv_vehicle2 = 1
+	ifv_vehicle3 = 1
+	ifv_vehicle4 = 1
+	ifv_vehicle5 = 1
+	airland_vehicle = 1
+	airland_vehicle1 = 1
+	airland_vehicle2 = 1
+	airland_vehicle3 = 1
+	airland_vehicle4 = 1
+	apc_vehicle = 1
+	apc_vehicle1 = 1
+	apc_vehicle2 = 1
+	apc_vehicle3 = 1
+	apc_vehicle4 = 1
+	apc_vehicle5 = 1
+	apc_vehicle6 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	mountaineer_equipment = 1
+	motorised_infantry = 1
+	paratrooper_equipment = 1
+	gw_artillery = 1
+
+}
+
+
+#intel agency 
+
+create_intelligence_agency = yes
+
+
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	set_technology = {
+		early_fighter = 1
+		fighter1 = 1
+		early_bomber = 1
+		strategic_bomber1 = 1
+		naval_bomber1 = 1
+	}
+}
+
+#
+#
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		mtg_transport = 1
+		basic_battery = 1
+		basic_torpedo = 1
+	}
+}
+
+add_opinion_modifier = {
+	target = UKR
+	modifier = hostile_status
+}
+
+add_opinion_modifier = {
+	target = NOV
+	modifier = pro_russians_in_government
+}
+
+add_opinion_modifier = {
+	target = NOV
+	modifier = federal_republic_SOV
+}
+
+add_opinion_modifier = {
+	target = SYR
+	modifier = SOV_SYR_military_mission
+}
+
+recruit_character = RSM_sergey_kisel
+
+add_ideas = {
+	contract_service
+	murder_semi_legal
+	lgbt_semi_ban
+	44_year_old
+}
+
+add_timed_idea = {
+	idea = SOV_za_rodinu
+	days = 366
+}
+set_politics = {
+	ruling_party = despotism
+	last_election = "2024.3.17"
+	election_frequency = 72
+}
+set_popularities = {
+
+	despotism = 93
+	
+	fascism = 3
+
+	paternalism = 4
+}
+
+
+
+
+
+
+
+
