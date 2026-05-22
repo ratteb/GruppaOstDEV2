@@ -117,7 +117,9 @@ ideas = {
 			
 			modifier = {
 				political_power_gain = 0.5
-				stability_factor = -0.03
+				political_power_factor = 0.1
+				stability_factor = -0.06
+				war_support_factor = 0.03
 				custom_modifier_tooltip = "USA_build_wall_ICE_invest_points_tooltip_loc"
 			}
 		}

@@ -71,6 +71,7 @@ focus_tree = {
 			country_event = USA_trump.2
 			set_country_flag = USA_building_wall
 			custom_effect_tooltip = USA_wall_start
+			custom_effect_tooltip = new_decision_cmt
 			set_variable = {
 				var = USA_build_wall_investment_points
 				value = 1
@@ -257,6 +258,7 @@ focus_tree = {
 				var = USA_ICE_wall_investment_points
 				value = 1 
 			}
+			custom_effect_tooltip = new_decision_cmt
 		}
 	}
 
@@ -661,7 +663,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 0.5
+		cost = 4.3
 
 		ai_will_do = {
 			factor = 1
@@ -739,6 +741,11 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = USA_trump.18
+			add_tech_bonus = {
+                bonus = -0.25
+                uses = 3
+                category = armor
+                }
 		}
 	}
 

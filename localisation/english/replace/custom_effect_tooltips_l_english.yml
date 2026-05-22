@@ -1,4 +1,7 @@
 ﻿l_english:
+
+ # GENERIC 
+  new_decision_cmt: "§YNew Decisions£decision_icon_small Will Be Available§!!"
  # Sotnik 1 Modernization Programme 
   SOV_sotnik1_announcement_cet: "\n\nWe will begin the proccess of completely reforming and modernizing the §RArmed Forces of the Russian Federation§! After learning our mistakes in the §0Special Military Operation§!\n§YNew Decisions£decision_icon_small Will Be Available§!!"
   SOV_sotnik_program_cmt: "§RDue to the major reforms being implemented, the Ministry of Defense has ordered a stop to all new formations of brigades!§!"
@@ -77,7 +80,7 @@
   # USA
   USA_aipac_cmt:0 "Our opinion of §YState of Israel§!: §G+35§!\n§YState of Israel§! opinion of us: §G+35§!"
   USA_wall_start:0 "Add §YThe U.S-Mexican Border Wall Construction§! which grants:\nPolitical Power Gain: §R-5%§!\nMonthly Border Wall Funds: §G$50M§!\n\n§1We will have 260 days to complete the wall project as Trump promised...§!"
-
+  USA_aipac_funding_CET:0 "Modify §YThe U.S-Mexican Border Wall Construction§! by\nMonthly Border Wall Funds: §G$75M§!\n\nOur corruption increases by: §R30§!"
  # Ukraine Political Crisis 
   UKR_political_crisis_info_CET: "§RYou won't know the lore of the crisis§!"
   UKR_political_crisis_info2_CET: "§0Good Luck in this long winded fight!§!"

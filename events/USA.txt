@@ -727,6 +727,7 @@ country_event = {
     }
 }
 
+# Failure of the wall 
 country_event = {
 	id = USA_border.2
 	title = USA_border.2.t
@@ -738,9 +739,56 @@ country_event = {
 	option = { # Border Crisis Begins
 		name = USA_border.2.a
 		ai_chance = { factor = 90 }
-		add_political_power = -5
+    }
+}
+
+# Success of the wall 
+country_event = {
+	id = USA_border.3
+	title = USA_border.3.t
+	desc = USA_border.3.d
+	picture = GFX_report_event_bortac
+
+	is_triggered_only = yes 
+	
+	option = { # Border Crisis Begins
+		name = USA_border.3.a
+		ai_chance = { factor = 90 }
+    }
+}
+
+# Patriot Front March following AIPAC 
+country_event = {
+	id = USA_border.4
+	title = USA_border.4.t
+	desc = USA_border.4.d
+	picture = GFX_report_event_bortac
+
+	is_triggered_only = yes 
+	
+	option = { # Border Crisis Begins
+		name = USA_border.4.a
+		ai_chance = { factor = 90 }
 		add_stability = -0.02
-		set_country_flag = USA_border_crisis_begins
+		add_popularity = {
+			ideology = fascism 
+			popularity = 0.02
+		}
+    }
+}
+
+# Far Left March following AIPAC 
+country_event = {
+	id = USA_border.5
+	title = USA_border.5.t
+	desc = USA_border.5.d
+	picture = GFX_report_event_bortac
+
+	is_triggered_only = yes 
+	
+	option = { # Border Crisis Begins
+		name = USA_border.5.a
+		ai_chance = { factor = 90 }
     }
 }
 
