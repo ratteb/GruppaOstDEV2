@@ -30,7 +30,7 @@ guiTypes = {
 			format = center
 			borderSize = {x = 0 y = 0}
 			text = "[get_USA_build_wall_progress]"
-			pdx_tooltip = "[get_USA_build_wall_progress_tooltip]"
+			pdx_tooltip = "USA_build_wall_progress_tooltip_loc"
 			maxWidth = 150
 			maxHeight = 140
 			fixedsize = yes
@@ -38,12 +38,25 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "USA_wall_invest_point_text"
-			position = { x = 120 y = 350 }
+			position = { x = 0 y = 250 }
 			font = "TD_event_font_26pt"
 			format = center
 			borderSize = {x = 0 y = 0}
 			text = "[get_USA_build_wall_invest_points]"
-			maxWidth = 150
+			pdx_tooltip = "USA_build_wall_invest_points_tooltip_loc"
+			maxWidth = 50
+			maxHeight = 140
+			fixedsize = yes
+		}
+
+		instantTextboxType = {
+			name = "USA_wall_funds_text"
+			position = { x = 0 y = 230 }
+			font = "TDHEHWText_font_18pt"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "USA_build_wall_ifunds_points_loc"
+			maxWidth = 50
 			maxHeight = 140
 			fixedsize = yes
 		}
