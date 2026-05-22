@@ -70,7 +70,7 @@ focus_tree = {
 		completion_reward = {
 			country_event = USA_trump.2
 			set_country_flag = USA_building_wall
-				activate_mission = USA_build_wall_mission
+			custom_effect_tooltip = USA_wall_start
 			set_variable = {
 				var = USA_build_wall_investment_points
 				value = 1
@@ -79,6 +79,22 @@ focus_tree = {
 			set_variable = {
 				var = USA_build_wall_corruption
 				value = 22
+			}
+
+			add_to_variable = {
+				var = USA_monthly_funds
+				value = 50
+			}
+
+			add_to_variable = {
+				var = USA_wall_pp_gain
+				value = -0.05
+			}
+			hidden_effect = {
+				activate_mission = USA_build_wall_mission
+				add_dynamic_modifier = {
+				modifier = USA_wall_modifier
+			}
 			}
 		}
 	}
@@ -227,6 +243,20 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = -5
 		    add_stability = 0.01
+
+			swap_ideas = {
+				remove_idea = USA_ice
+				add_idea = USA_ice_increased_funds
+			}
+			add_to_variable = {
+				var = USA_build_wall_funds
+				value = 120
+				tooltip = USA_build_wall_funds_120_tt
+			}
+			add_to_variable = {
+				var = USA_ICE_wall_investment_points
+				value = 1 
+			}
 		}
 	}
 

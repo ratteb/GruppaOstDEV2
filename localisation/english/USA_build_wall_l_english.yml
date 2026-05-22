@@ -1,12 +1,17 @@
 ﻿l_english:
-
  USA_build_wall_progress_loc: "Progress: §1[?USA_build_wall_progress|0%%]§!"
  USA_build_wall_invest_points_loc: "IP\n§G[?USA_build_wall_investment_points|0]§!"
- USA_build_wall_ifunds_points_loc: "§G[?USA_build_wall_funds|0]M§!"
+ USA_build_wall_ifunds_points_loc: "§G$[?USA_build_wall_funds|0]M§!"
+ USA_build_wall_monthly_funds_loc: "§G$[?USA_monthly_funds]M§! Is our Monthly Income"
+ USA_build_wall_monthly_funds_idea_loc: "Border Wall Funds: Adds §G$[?USA_monthly_funds]M§! Per Month"
+
+ USA_build_wall_monthly_funds_idea_loc: "§YMonthly Border Wall Funds:§! §G$[?USA_monthly_funds]M§!"
  USA_build_wall_invest_points_tooltip_loc: "Our Uncorrupted Progress is: §G[?USA_text_wall_investment_points|0%%]§!"
+ USA_build_wall_ICE_invest_points_tooltip_loc: "ICE Adds: §G[?USA_ICE_wall_investment_points|0%%]§! Wall Progress Every Month"
  USA_build_wall_corruption_loc: "Corruption: §R[?USA_build_wall_corruption|0%%]§!"
  USA_build_wall_progress_tooltip_loc: "Our Monthly Progress Increases by: §G[?USA_build_wall_progress_points|0%%]§! every month"
  USA_the_wall_loc: "The Wall"
+ USA_build_wall_funds_120_tt: "§YBorder Wall Funds:§! Adds §G$120M§!"
 
 
 

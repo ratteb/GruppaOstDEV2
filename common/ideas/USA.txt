@@ -93,6 +93,34 @@ ideas = {
 				stability_factor = -0.03
 			}
 		}
+
+		USA_ice_increased_funds = {
+			picture = GFX_idea_USA_ice
+			
+			allowed = {
+				tag = USA
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.5
+				stability_factor = -0.03
+				custom_modifier_tooltip = "USA_build_wall_ICE_invest_points_tooltip_loc"
+			}
+		}
 	}
 
 #ICE Above this line

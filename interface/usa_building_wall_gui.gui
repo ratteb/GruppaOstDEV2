@@ -51,13 +51,14 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "USA_wall_funds_text"
-			position = { x = 0 y = 230 }
+			position = { x = 0 y = 200 }
 			font = "TDHEHWText_font_18pt"
 			format = center
 			borderSize = {x = 0 y = 0}
 			text = "USA_build_wall_ifunds_points_loc"
+			pdx_tooltip = "USA_build_wall_monthly_funds_loc"
 			maxWidth = 50
-			maxHeight = 140
+			maxHeight = 50
 			fixedsize = yes
 		}
 

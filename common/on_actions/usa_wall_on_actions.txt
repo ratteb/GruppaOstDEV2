@@ -36,6 +36,12 @@ on_actions = {
 	log = "corruption after division [?temp_USA_build_wall_corruption]"
 
 
+	add_to_temp_variable = {
+		var = temp_USA_build_wall_investment_points
+		value = USA_ICE_wall_investment_points
+	}
+	log = "ICE ADDED [?USA_ICE_wall_investment_points]"
+
 	set_variable = {
 		USA_build_wall_progress_points =  temp_USA_build_wall_investment_points
 	}
@@ -67,7 +73,15 @@ on_actions = {
 		var = USA_build_wall_progress
 		value = USA_build_wall_progress_points
 	}
+
 	log = "[?USA_build_wall_progress_points] was added to [?USA_build_wall_progress]"
+
+	add_to_variable = {
+		var = USA_build_wall_funds
+		value = USA_monthly_funds
+	}
+
+	log = "[?USA_monthly_funds] was added to [?USA_build_wall_funds]"
          }
  }
 }

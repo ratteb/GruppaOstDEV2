@@ -1,0 +1,38 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#       attacker_modifier = no  # if yes this modifier will also be read in combat for 
+#                               # people engaging in the combat even if not in the state
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+USA_wall_modifier = {
+	icon = "GFX_idea_no_data"
+
+	political_power_gain = USA_wall_pp_gain
+	political_power_factor = USA_wall_pp_gain_p
+	stability_factor = USA_wall_stability_p
+	consumer_goods_factor = USA_wall_cg
+	civilian_factory_use = USA_wall_factory
+	custom_modifier_tooltip = USA_build_wall_monthly_funds_idea_loc
+}
