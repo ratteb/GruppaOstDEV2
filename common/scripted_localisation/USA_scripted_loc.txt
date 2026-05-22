@@ -7,3 +7,24 @@ defined_text = {
 
   
 }
+
+defined_text = {
+    name = get_USA_build_wall_invest_points
+    text = {
+        localization_key = USA_build_wall_invest_points_loc
+    }
+}
+
+defined_text = {
+    name = get_USA_build_wall_corruption
+    text = {
+        localization_key = USA_build_wall_corruption_loc
+    }
+}
+
+defined_text = {
+    name = get_USA_build_wall_progress_tooltip
+    text = {
+        localization_key = USA_build_wall_progress_tooltip_loc
+    }
+}

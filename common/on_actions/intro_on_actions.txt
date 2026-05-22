@@ -8,6 +8,12 @@ on_actions = {
 		}
 
 		effect = {
+			USA = { set_country_flag = SYR_CW_involved }
+            TUR = { set_country_flag = SYR_CW_involved }
+            SOV = { set_country_flag = SYR_CW_involved }
+		}
+
+		effect = {
 			SOV = { set_country_flag = second_leader
 			set_country_flag = SOV_has_MM }
 			FRA = { set_country_flag = second_leader }

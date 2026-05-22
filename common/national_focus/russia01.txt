@@ -557,6 +557,9 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {	
+			set_technology = {
+				 modern_tank6RU = 1
+			}
 		}
 	}
 	focus = {
@@ -1115,6 +1118,9 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {	
+			add_ideas = {
+				SOV_yanperskey
+			}
 		}
 	}
 	focus = {
@@ -1142,6 +1148,14 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {	
+			swap_ideas = {
+				remove_idea = SOV_yanperskey
+				add_idea = SOV_yanperskey2
+			}
+			add_timed_idea = {
+				idea = SOV_windows_flight
+				days = 365
+			}
 		}
 	}
 	focus = {

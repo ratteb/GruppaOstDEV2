@@ -30,6 +30,31 @@ guiTypes = {
 			format = center
 			borderSize = {x = 0 y = 0}
 			text = "[get_USA_build_wall_progress]"
+			pdx_tooltip = "[get_USA_build_wall_progress_tooltip]"
+			maxWidth = 150
+			maxHeight = 140
+			fixedsize = yes
+		}
+
+		instantTextboxType = {
+			name = "USA_wall_invest_point_text"
+			position = { x = 120 y = 350 }
+			font = "TD_event_font_26pt"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "[get_USA_build_wall_invest_points]"
+			maxWidth = 150
+			maxHeight = 140
+			fixedsize = yes
+		}
+
+		instantTextboxType = {
+			name = "USA_wall_corruption_text"
+			position = { x = 120 y = 250 }
+			font = "TD_event_font_26pt"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "[get_USA_build_wall_corruption]"
 			maxWidth = 150
 			maxHeight = 140
 			fixedsize = yes

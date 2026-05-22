@@ -55,6 +55,21 @@ country_event = {
     }
 }
 
+# Syria Turned Hostile 
+country_event = {
+	id = SYR_scw.3
+	title = SYR_scw.3.t
+	desc = SYR_scw.3.d
+	picture = GFX_report_daily_briefing_mod
+	
+	is_triggered_only = yes
+	
+	option = { # Ura! 
+		name = SYR_scw.3.a 
+		ai_chance = { factor = 90 }
+    }
+}
+
 news_event = {
 	id = SYR_scw_news.1
 	title = SYR_scw_news.1.t

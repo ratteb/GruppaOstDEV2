@@ -233,3 +233,17 @@ defined_text = {
         localization_key = SNA_CW_escalation_stage_focus_diplomatic
     }
 }
+
+defined_text = {
+    name = get_SYR_CW_syr_hostile
+    text = {
+        trigger = {
+            tag =  SOV
+        }
+        localization_key = SYR_CW_syr_hostile_SOV
+    }
+
+    text =  {
+        localization_key = SYR_CW_syr_hostile
+    }
+}

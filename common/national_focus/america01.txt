@@ -70,6 +70,16 @@ focus_tree = {
 		completion_reward = {
 			country_event = USA_trump.2
 			set_country_flag = USA_building_wall
+				activate_mission = USA_build_wall_mission
+			set_variable = {
+				var = USA_build_wall_investment_points
+				value = 1
+			}
+
+			set_variable = {
+				var = USA_build_wall_corruption
+				value = 22
+			}
 		}
 	}
 	

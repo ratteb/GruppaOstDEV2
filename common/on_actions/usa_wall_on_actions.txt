@@ -1,0 +1,53 @@
+on_actions = {
+
+ on_monthly_USA = {
+
+	effect = {
+
+	set_temp_variable = {
+		temp_USA_build_wall_investment_points = USA_build_wall_investment_points
+	}
+	log = "[?USA_build_wall_investment_points] is = to [?temp_USA_build_wall_investment_points]"
+
+	set_temp_variable = {
+		temp_USA_build_wall_corruption = USA_build_wall_corruption
+	}
+	log = "[?USA_build_wall_corruption] is = to [?temp_USA_build_wall_corruption]"
+	multiply_temp_variable = {
+    var = temp_USA_build_wall_investment_points
+    value = 5
+         }
+		log = "invest before corruptiopn [?temp_USA_build_wall_investment_points]"
+	
+
+	divide_temp_variable = {
+		var = temp_USA_build_wall_corruption
+		value = 100
+	}
+	log = "corruption after division [?temp_USA_build_wall_corruption]"
+
+	
+
+	set_variable = {
+		USA_build_wall_progress_points =  temp_USA_build_wall_investment_points
+	}
+	log = "invest before corruptiopn [?USA_build_wall_progress_points]"
+
+	multiply_variable = {
+    var = USA_build_wall_progress_points
+    value = temp_USA_build_wall_corruption
+         }
+	log = "invest after corruptiopn [?USA_build_wall_progress_points]"
+
+	add_to_variable = {
+		var = USA_build_wall_progress
+		value = USA_build_wall_progress_points
+	}
+	log = "[?USA_build_wall_progress_points] was added to [?USA_build_wall_progress]"
+         }
+ }
+}
+
+
+
+

@@ -61,6 +61,94 @@ ideas = {
 				paternalism_drift = 0.04 
 			}
 		}
+
+		SOV_yanperskey = {
+			picture = GFX_idea_no_data
+			
+			allowed = {
+				tag = SOV
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.05
+				war_support_factor = 0.1
+				crypto_strength = 1
+			}
+		}
+
+		SOV_yanperskey2 = {
+			picture = GFX_idea_no_data
+			
+			allowed = {
+				tag = SOV
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.05
+				war_support_factor = 0.1
+				crypto_strength = 1
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		SOV_windows_flight = {
+			picture = GFX_idea_no_data
+			
+			allowed = {
+				tag = SOV
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.05
+				stability_weekly = -0.001
+				war_support_weekly = -0.001
+			}
+		}
 		SOV_memories_of_chechnya = {
 			picture = GFX_SOV_memories_of_chechnya
 			

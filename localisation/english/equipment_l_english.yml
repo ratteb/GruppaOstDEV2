@@ -3405,6 +3405,9 @@
  SOV_modern_tank_equipment_5_short:0 "T-90A"
  SOV_modern_tank_equipment_6:0 "Tank 14 Armata"
  SOV_modern_tank_equipment_6_short:0 "T-14"
+ SOV_modern_tank_equipment_6RU:0 "Tank 14 Annotirovanny Armata"
+  SOV_modern_tank6RU:0 "T-14A"
+ SOV_modern_tank_equipment_6RU_short:0 "T-14A"
  # SOV APC
  SOV_apc_equipment_0:0 "Bronetransportyor 50"
  SOV_apc_equipment_0_short:0 "BTR-50"

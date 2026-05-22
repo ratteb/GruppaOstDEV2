@@ -20,9 +20,6 @@ scripted_gui = {
 	  }
 
     properties = {  
-        csto_cohesion_meter = {
-        frame = csto_cohesion
-        }
 	}
 
     ai_enabled = {

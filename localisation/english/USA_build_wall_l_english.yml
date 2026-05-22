@@ -1,6 +1,9 @@
 ﻿l_english:
 
  USA_build_wall_progress_loc: "Progress: §1[?USA_build_wall_progress|0%%]§!"
+ USA_build_wall_invest_points_loc: "Investment Points: §G[?USA_build_wall_investment_points|0]§!"
+ USA_build_wall_corruption_loc: "Corruption: §R[?USA_build_wall_corruption|0%%]§!"
+ USA_build_wall_progress_tooltip_loc: "Our Monthly Progress is: §G[?USA_build_wall_progress_points|0%%]§!"
  USA_the_wall_loc: "The Wall"
 
 

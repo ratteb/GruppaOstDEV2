@@ -121,6 +121,20 @@ SYR_civil_war_cat = {
             }
 			clr_country_flag = SYR_CW_focus_neutral 
 			set_country_flag = SYR_CW_focus_hostile
+			if = {
+				limit = {
+					tag = SYR
+				}
+				every_country = {
+					limit = {
+						has_country_flag = SYR_CW_involved
+					}
+					country_event = { 
+						id = SYR_scw.3
+					}
+				}
+				
+			}
 		}
 		remove_effect = {  
 		}

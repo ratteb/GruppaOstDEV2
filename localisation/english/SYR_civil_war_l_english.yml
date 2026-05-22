@@ -39,3 +39,9 @@
  remove_8_to_scw_tt: "Escalation Decreases by §Y8%§!"
 
  SYR_assad_fort_aleppo: "Fortify Aleppo"
+
+ SYR_scw.3.t: "Syria Enacts Offensive Doctrine"
+ SYR_scw.3.d: "[Root.get_SYR_CW_syr_hostile]"
+ SYR_CW_syr_hostile_SOV: "Report from Tartus Naval Base\n\nGreetings,\n\nThe Russian Armed Forces Command in Syria wishes to notify you that Assad has adopted an offensive policy against the breakaway governments. We wish to urge that this will definetly lead to escalations within the conflict and that other adversary powers such as Turkey, the United States, and Israel may get involved soon.\n\nWe suspect the Iranians may have urged Assad to turn to an offensive doctrine to counter a peaceful resolve that may strengthen the Israeli regime near its borders. We still have the ability to force Assad to stand down using economic and military means however if this is in our benifit  is for you to decide."
+ SYR_CW_syr_hostile: "Non Russian Version"
+ SYR_scw.3.a: "damn"

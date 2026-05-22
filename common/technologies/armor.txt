@@ -193,6 +193,33 @@ technologies = {
 		}
 	}
 
+	 modern_tank6RU = {
+
+		enable_equipments = {
+			modern_tank_equipment_6RU
+		}
+		allow = {
+            always = no
+        }
+
+		research_cost = 1.5
+		start_year = 2010
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 18 }
+		}
+
+		categories = {
+			armor
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	
+
     apc_vehicle = {
 
 		enable_equipments = {
