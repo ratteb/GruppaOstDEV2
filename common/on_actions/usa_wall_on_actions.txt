@@ -26,18 +26,26 @@ on_actions = {
 	}
 	log = "corruption after division [?temp_USA_build_wall_corruption]"
 
-	
 
 	set_variable = {
 		USA_build_wall_progress_points =  temp_USA_build_wall_investment_points
 	}
 	log = "invest before corruptiopn [?USA_build_wall_progress_points]"
 
-	multiply_variable = {
-    var = USA_build_wall_progress_points
+
+	multiply_temp_variable = {
+    var = temp_USA_build_wall_investment_points
     value = temp_USA_build_wall_corruption
          }
 	log = "invest after corruptiopn [?USA_build_wall_progress_points]"
+
+	subtract_from_variable = {
+		var = USA_build_wall_progress_points
+		value = temp_USA_build_wall_investment_points
+	}
+
+	log = "invest after corruptio [?USA_build_wall_progress_points]"
+
 
 	add_to_variable = {
 		var = USA_build_wall_progress

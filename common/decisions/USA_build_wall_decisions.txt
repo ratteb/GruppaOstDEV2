@@ -32,10 +32,19 @@ USA_build_wall_cat = {
 			}
 		}
 		
-		remove_effect = { 
+		timeout_effect = { 
 			add_popularity = {
 				ideology = conservatism 
 				popularity = -0.05
+			}
+
+			country_event = USA_border.2
+
+			hidden_effect = {
+				country_event = {
+	            id = USA_border.1
+	            days = 25
+                }
 			}
 		 
 		}
