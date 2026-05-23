@@ -10,9 +10,55 @@ scripted_gui = {
     }
 
     effects = {
+
+      increase_button_click = {
+			subtract_from_variable = {
+        var = USA_build_wall_funds
+        value = 500
+      }
+      add_to_variable = {
+        var = USA_build_wall_investment_points
+        value = 1 
+      }
+		}
+
+    decrease_button_click = {
+			add_to_variable = {
+        var = USA_build_wall_funds
+        value = 500
+      }
+      subtract_from_variable = {
+        var = USA_build_wall_investment_points
+        value = 1 
+      }
+		}
     }
 
     triggers = {
+      increase_button_click_enabled = {
+        check_variable = {
+          var = USA_build_wall_funds 
+          value = 500
+          compare = greater_than_or_equals
+        }
+        NOT = {
+          check_variable = {
+            var = USA_build_wall_investment_points
+            value = 10 
+            compare = greater_than_or_equals 
+          }
+        }
+      }
+
+      decrease_button_click_enabled = {
+        
+          check_variable = {
+            var = USA_build_wall_investment_points
+            value = 1 
+            compare = lesser_than_or_equals 
+          }
+        
+      }
     }
 
 
@@ -20,6 +66,9 @@ scripted_gui = {
 	  }
 
     properties = {  
+      usa_wall_progress_0_25_meter = {
+        frame = USA_build_wall_progress
+        }
 	}
 
     ai_enabled = {

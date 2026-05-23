@@ -1,7 +1,7 @@
 spriteTypes = {
 	 progressbartype = {
         name = "GFX_csto_cohesion_meter"
-        textureFile1 = "/gfx/csto/csto_symbol.dds"
+        textureFile1 = "/gfx/scripted_gui/csto/csto_symbol.dds"
         textureFile2 = "/gfx/csto/csto_symbol_background.dds"
         color = { 0.0 0.0 0.0 }
         colortwo = {  0.0 0.0 0.0 }
@@ -12,14 +12,14 @@ spriteTypes = {
 
 	spriteType = {
         name = "GFX_page1_button"
-        texturefile = "/gfx/csto/page1_button.dds"
+        texturefile = "/gfx/scripted_gui/csto/page1_button.dds"
 	}
 	spriteType = {
         name = "GFX_page2_button"
-        texturefile = "/gfx/csto/page2_button.dds"
+        texturefile = "/gfx/scripted_gui/csto/page2_button.dds"
 	}
 	spriteType = {
         name = "GFX_page3_button"
-        texturefile = "/gfx/csto/page3_button.dds"
+        texturefile = "/gfx/scripted_gui/csto/page3_button.dds"
 	}
 }

@@ -75,7 +75,6 @@ USA_build_wall_cat = {
 
 
 		custom_cost_trigger = {
-			command_power > 20
 			has_political_power > 25
 		}
 		custom_cost_text = SOV_csto_training_cost
@@ -99,6 +98,159 @@ USA_build_wall_cat = {
 					days = 17
 				}
 			}
+			set_country_flag = USA_wall_aipac_funding
+		}
+		remove_effect = {  
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	USA_wall_no_aipac = {
+
+		icon = generic_industry
+
+		available = {
+			has_ideas = {
+				USA_aipac 
+			}
+			
+		}
+
+		visible = {
+			
+		has_country_flag = USA_wall_aipac_funding
+			
+		}
+		days_re_enable = 50 
+
+		fire_only_once = no
+
+
+		custom_cost_trigger = {
+			has_political_power > 25
+		}
+		custom_cost_text = SOV_csto_training_cost
+
+		complete_effect = {
+			subtract_from_variable = {
+				var = USA_monthly_funds
+				value = 75
+			}
+
+			subtract_from_variable = {
+				var = USA_build_wall_corruption
+				value = 30
+			}
+
+			custom_effect_tooltip = USA_no_aipac_funding_CET
+
+			clr_country_flag = USA_wall_aipac_funding
+		}
+		remove_effect = {  
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	USA_wall_border_tax = {
+
+		icon = generic_industry
+
+		available = {
+			
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = USA_wall_border_tax
+			}
+			has_completed_focus = USA_3rd_bank
+		}
+		days_re_enable = 60
+
+		fire_only_once = no
+
+
+		custom_cost_trigger = {
+			has_political_power > 25
+		}
+		custom_cost_text = SOV_csto_training_cost
+
+		complete_effect = {
+				add_to_variable = {
+				var = USA_monthly_funds
+				value = 65
+			}
+
+			add_to_variable = {
+				var = USA_wall_cg
+				value = 0.08
+			}
+
+			add_to_variable = {
+				var = USA_wall_stability_p
+				value = -0.05
+			}
+
+			custom_effect_tooltip = USA_no_border_tax_CET
+			set_country_flag = USA_wall_border_tax
+		}
+		remove_effect = {  
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	USA_wall_no_border_tax = {
+
+		icon = generic_industry
+
+		available = {
+			
+		}
+
+		visible = {
+			
+		has_country_flag = USA_wall_border_tax
+		has_completed_focus = USA_3rd_bank
+			
+		}
+		days_re_enable = 60
+
+		fire_only_once = no
+
+
+		custom_cost_trigger = {
+			has_political_power > 25
+		}
+		custom_cost_text = SOV_csto_training_cost
+
+		complete_effect = {
+			subtract_from_variable = {
+				var = USA_monthly_funds
+				value = 65
+			}
+
+			subtract_from_variable = {
+				var = USA_wall_cg
+				value = 0.08
+			}
+
+			add_to_variable = {
+				var = USA_wall_stability_p
+				value = 0.05
+			}
+
+			custom_effect_tooltip = USA_no_border_tax_CET
+
+			clr_country_flag = USA_wall_border_tax
 		}
 		remove_effect = {  
 		}

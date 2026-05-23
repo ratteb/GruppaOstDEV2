@@ -36,6 +36,12 @@ guiTypes = {
 			fixedsize = yes
 		}
 
+		iconType = {
+			name = "usa_wall_progress_0_25_meter"
+			spriteType = "GFX_usa_wall_0_25_bar"
+			position = {x = 60  y = 400 }
+		}
+
 		instantTextboxType = {
 			name = "USA_wall_invest_point_text"
 			position = { x = 0 y = 250 }
@@ -57,7 +63,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			text = "USA_build_wall_ifunds_points_loc"
 			pdx_tooltip = "USA_build_wall_monthly_funds_loc"
-			maxWidth = 50
+			maxWidth = 70
 			maxHeight = 50
 			fixedsize = yes
 		}
@@ -84,6 +90,24 @@ guiTypes = {
 			maxWidth = 150
 			maxHeight = 140
 			fixedsize = yes
+		}
+
+		buttonType = {
+			name = "increase_button"
+			spriteType = "GFX_increase_yes_button"
+			position = { x = -50 y = 250 }
+			clicksound = click_close
+			buttonFont = "TD_event_font_22pt"
+			pdx_tooltip = "USA_increase_IP_tooltip"
+		}
+
+		buttonType = {
+			name = "decrease_button"
+			spriteType = "GFX_decrease_yes_button"
+			position = { x = 45 y = 250 }
+			clicksound = click_close
+			buttonFont = "TD_event_font_22pt"
+			pdx_tooltip = "USA_decrease_IP_tooltip"
 		}
 	}
 

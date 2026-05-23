@@ -1,0 +1,31 @@
+spriteTypes = {
+
+        progressbartype = {
+        name = "GFX_usa_wall_0_25_bar"
+        textureFile1 = "/gfx/scripted_gui/usa_wall/wall_bar_25.dds"
+        textureFile2 = "/gfx/scripted_gui/usa_wall/wall_bar_0.dds"
+        color = { 0.0 0.0 0.0 }
+        colortwo = {  0.0 0.0 0.0 }
+        size = { x = 276  y = 34 }
+        effectFile = "gfx/FX/progress.lua"
+        steps = 100
+    }
+
+	spriteType = {
+        name = "GFX_increase_yes_button"
+        texturefile = "/gfx/scripted_gui/usa_wall/increase_yes.dds"
+	}
+	spriteType = {
+        name = "GFX_increase_no_button"
+        texturefile = "/gfx/scripted_gui/usa_wall/increase_no.dds"
+	}
+	spriteType = {
+        name = "GFX_decrease_yes_button"
+        texturefile = "/gfx/scripted_gui/usa_wall/decrease_yes.dds"
+	}
+
+        spriteType = {
+        name = "GFX_decrease_no_button"
+        texturefile = "/gfx/scripted_gui/usa_wall/decrease_no.dds"
+	}
+}
