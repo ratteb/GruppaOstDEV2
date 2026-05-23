@@ -14,6 +14,12 @@
  USA_build_wall_funds_120_tt: "§YBorder Wall Funds:§! Adds §G$120M§!"
 
 
+ USA_wall_no_border_tax: "End the Border tax"
+ USA_wall_border_tax: "Enact the Border Tax"
+ USA_wall_no_aipac: "Stop Utilizing AIPAC Donations"
+ USA_wall_aipac: "Utilize AIPAC Donations"
+
+
 
  add_2_to_scw_tt: "Escalation Increases by §Y2%§!"
 

@@ -84,8 +84,8 @@
   USA_no_aipac_funding_CET:0 "Modify §YThe U.S-Mexican Border Wall Construction§! by\nMonthly Border Wall Funds: §R-$75M§!\n\nOur corruption decreases by: §G-30§!"
   USA_increase_IP_tooltip:0 "We Will Spend:§R-$500M§!\nWe Will Gain:§G+1 IP§!"
   USA_decrease_IP_tooltip:0 "We Will Spend:§R-1 IP§!\nWe Will Gain:§G+$500M§!"
-  USA_wall_border_tax_CET:0 "Modify §YThe U.S-Mexican Border Wall Construction§! by\nMonthly Border Wall Funds: §G+$65M§!\nStability By: §R-5%§!\nConsumer Goods By: §Y+8.0%§!"
-  USA_wall_no_border_tax_CET:0 ""Modify §YThe U.S-Mexican Border Wall Construction§! by\nMonthly Border Wall Funds: §R-$65M§!\nStability By: §G+5%§!\nConsumer Goods By: §-Y8.0%§!""
+  USA_wall_border_tax_CET:0 "Modify §YThe U.S-Mexican Border Wall Construction§! by\nMonthly Border Wall Funds: §G+$65M§!\nStability: §R-5%§!\nConsumer Goods: §Y+8.0%§!"
+  USA_wall_no_border_tax_CET:0 ""Modify §YThe U.S-Mexican Border Wall Construction§! by\nMonthly Border Wall Funds: §R-$65M§!\nStability: §G+5%§!\nConsumer Goods: §Y-8.0%§!"
  # Ukraine Political Crisis 
   UKR_political_crisis_info_CET: "§RYou won't know the lore of the crisis§!"
   UKR_political_crisis_info2_CET: "§0Good Luck in this long winded fight!§!"

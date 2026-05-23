@@ -197,7 +197,7 @@ USA_build_wall_cat = {
 				value = -0.05
 			}
 
-			custom_effect_tooltip = USA_no_border_tax_CET
+			custom_effect_tooltip = USA_wall_border_tax_CET
 			set_country_flag = USA_wall_border_tax
 		}
 		remove_effect = {  
@@ -248,9 +248,50 @@ USA_build_wall_cat = {
 				value = 0.05
 			}
 
-			custom_effect_tooltip = USA_no_border_tax_CET
+			custom_effect_tooltip = USA_wall_no_border_tax_CET
 
 			clr_country_flag = USA_wall_border_tax
+		}
+		remove_effect = {  
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	USA_wall_extend = {
+
+		icon = generic_industry
+
+		available = {
+			
+		}
+
+		visible = {
+
+			has_completed_focus = USA_unite_the_gop
+		}
+
+		fire_only_once = yes
+
+
+		custom_cost_trigger = {
+			has_political_power > 25
+		}
+		custom_cost_text = SOV_csto_training_cost
+
+		complete_effect = {
+			add_days_mission_timeout = {
+				mission = USA_build_wall_mission 
+				days = 50
+			}
+
+			
+
+			hidden_effect = {
+			}
+			set_country_flag = USA_wall_aipac_funding
 		}
 		remove_effect = {  
 		}
