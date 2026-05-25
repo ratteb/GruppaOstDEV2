@@ -1,12 +1,12 @@
 
 focus_tree = {
-	id = zakarpatia_focus_tree
+	id = rok_focus_tree
 	
 	country = {
 		
 		modifier = {
 			add = 10
-			tag = ZAK 
+			tag = ROK
 		}
 	}
 	
@@ -15,23 +15,21 @@ focus_tree = {
 	continuous_focus_position = { x = 1700 y = 1000 }
 
 	focus = {
-		id = ZAK_the_occupation
+		id = ROK_northern_threat
 		icon = GFX_goal_no_data
 		x = 6
 		y = 2
 
-		cost = 4.3
+		cost = 1
 
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				JAP = { has_government = marxism_leninism }
-				factor = 0
-			}
 		}
 
 		available = {
-			NOT = { is_in_faction_with = UKR }
+			KOR = {
+				has_completed_focus = KOR_onwards
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -39,53 +37,23 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_political_power = 150
-			add_stability = 0.05
-			add_war_support = 0.15
-			add_command_power = 100
-			army_experience = 45
+			USA = {
+				country_event = {
+					id = ROK_USA.1 
+					days = 1 
+				}
+			}
 		}
 	}
 
 	focus = {
-		id = ZAK_rebuild_karpatia
-		prerequisite = { focus = ZAK_the_occupation }
+		id = ROK_harness_atom
+		prerequisite = { focus = ROK_northern_threat }
+		mutually_exclusive = {
+			focus = ROK_pragmatic_militarism
+		}
 		icon = GFX_goal_no_data
-		relative_position_id = ZAK_the_occupation
-		x = 1
-		y = 1
-
-		cost = 4.3
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				JAP = { has_government = marxism_leninism }
-				factor = 0
-			}
-		}
-
-		available = {
-			NOT = { is_in_faction_with = UKR }
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_offsite_building = { type = industrial_complex 
-			level = 4 }
-			73 = {
-			add_extra_state_shared_building_slots = 4
-			}
-		}
-	}
-	focus = {
-		id = ZAK_contact_hungary
-		prerequisite = { focus = ZAK_the_occupation }
-		icon = GFX_goal_no_data
-		relative_position_id = ZAK_the_occupation
+		relative_position_id = ROK_northern_threat
 		x = -1
 		y = 1
 
@@ -96,8 +64,7 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = { is_in_faction_with = UKR }
-			is_puppet_of = HUN
+			has_country_flag = ROK_nuke 
 		}
 
 		cancel_if_invalid = yes
@@ -105,108 +72,34 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			HUN = { country_event = zakarpattia.1 }
-		}
-	}
-	focus = {
-		id = ZAK_contact_ukraine
-		prerequisite = { focus = ZAK_contact_hungary }
-		icon = GFX_goal_no_data
-		relative_position_id = ZAK_contact_hungary
-		x = 0
-		y = 1
-
-		cost = 4.3
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			NOT = { is_in_faction_with = UKR }
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			UKR = { country_event = zakarpattia.2 }
-		}
-	}
-	focus = {
-		id = ZAK_increase_5th_brigade
-		prerequisite = { focus = ZAK_rebuild_karpatia }
-		icon = GFX_goal_no_data
-		relative_position_id = ZAK_rebuild_karpatia
-		x = 0
-		y = 1
-
-		cost = 4.3
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				JAP = { has_government = marxism_leninism }
-				factor = 0
-			}
-		}
-
-		available = {
-			NOT = { is_in_faction_with = UKR }
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = ZAK_5th_brigade
-				add_idea = ZAK_5th_brigade2
-			}
-			add_offsite_building = { type = arms_factory
-			level = 2 }
-			custom_effect_tooltip = "ZAK_tooltip_1_tt"
-			hidden_effect = {
-				HUN = { country_event = hungary.1}
+			KOR = {
+				country_event = {
+					id = ROK_DPRK.1
+					days = 1 
+				}
 			}
 		}
 	}
 
 	focus = {
-		id = ZAK_prepare_referendum
-		prerequisite = { focus = ZAK_increase_5th_brigade }
-		prerequisite = { focus = ZAK_contact_ukraine }
+		id = ROK_pragmatic_militarism
+		prerequisite = { focus = ROK_northern_threat }
+		mutually_exclusive = {
+			focus = ROK_harness_atom
+		}
 		icon = GFX_goal_no_data
-		relative_position_id = ZAK_contact_ukraine
+		relative_position_id = ROK_northern_threat
 		x = 1
 		y = 1
 
-		cost = 24.3
+		cost = 4.3
 
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				JAP = { has_government = marxism_leninism }
-				factor = 0
-			}
-		}
-		select_effect = {
-			country_event = { id = zakarpattia.3 
-			                  days = 1 } 
-			country_event = { id = zakarpattia.4
-			                  days = 1 }
-			country_event = { id = zakarpattia.5
-			                  days = 1 }
-			country_event = { id = zakarpattia.6
-			                  days = 1 }
 		}
 
 		available = {
-			NOT = { is_in_faction_with = UKR }
-			NOT = { is_puppet_of = UKR }
-			NOT = { has_war_with = UKR }
+			has_country_flag = ROK_no_nuke
 		}
 
 		cancel_if_invalid = yes
@@ -214,38 +107,32 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			KOR = {
+				country_event = {
+					id = ROK_DPRK.2
+					days = 1 
+				}
+			}
 		}
 	}
+
 	focus = {
-		id = ZAK_hold_referendum
-		prerequisite = { focus = ZAK_prepare_referendum}
+		id = ROK_self_reliant_army
+		prerequisite = { focus = ROK_pragmatic_militarism}
+		mutually_exclusive = { focus = ROK_foreign_army }
 		icon = GFX_goal_no_data
-		relative_position_id = ZAK_prepare_referendum
+		relative_position_id = ROK_pragmatic_militarism
 		x = 0
 		y = 1
 
-		cost = 3
+		cost = 1
 
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				JAP = { has_government = marxism_leninism }
-				factor = 0
-			}
 		}
-	available = {
 
-		custom_trigger_tooltip = {
-				tooltip = ZAK_referendum_requirements_ctt
-				UKR = { has_country_flag = UKR_political_crisis_over }
-			}
-			custom_trigger_tooltip = {
-				tooltip = ZAK_referendum_requirements02_ctt
-				NOT = { is_in_faction_with = UKR }
-			    NOT = { is_puppet_of = UKR }
-			    NOT = { has_war_with = UKR }
-			}
-	}
+		available = {
+		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -254,4 +141,57 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
+
+	focus = {
+		id = ROK_foreign_army
+		prerequisite = { focus = ROK_pragmatic_militarism}
+		mutually_exclusive = { focus = ROK_self_reliant_army }
+		icon = GFX_goal_no_data
+		relative_position_id = ROK_pragmatic_militarism
+		x = 4
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ROK_improve_conscription
+		prerequisite = { focus = ROK_self_reliant_army 
+		focus = ROK_foreign_army }
+		icon = GFX_goal_no_data
+		relative_position_id = ROK_pragmatic_militarism
+		x = 2
+		y = 2
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
 }

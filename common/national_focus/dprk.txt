@@ -89,6 +89,12 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			SOV = {
+				country_event = {
+					id = DPRK_russia.1
+					days = 2
+				}
+			}
 		}
 	}
 	focus = {
@@ -107,6 +113,29 @@ focus_tree = {
 		}
 
 		available = {
+			OR = {
+				AND = {
+				has_country_flag = SOV_help_completed 
+				has_country_flag = CHI_no_help_completed 
+				}
+			
+
+				AND = {
+				has_country_flag = SOV_no_help_completed
+				has_country_flag = CHI_help_completed 
+				}
+
+				AND = {
+				has_country_flag = SOV_help_completed 
+				has_country_flag = CHI_help_completed
+				}
+
+				AND = {
+					has_country_flag = SOV_no_help_completed
+					has_country_flag = CHI_no_help_completed
+				}
+			}
+
 		}
 
 		cancel_if_invalid = yes
@@ -134,6 +163,7 @@ focus_tree = {
 		}
 
 		available = {
+			has_country_flag = ROK_nuke
 		}
 
 		cancel_if_invalid = yes
@@ -236,6 +266,7 @@ focus_tree = {
 		}
 
 		available = {
+			has_country_flag = ROK_stand_down
 		}
 
 		cancel_if_invalid = yes
@@ -287,6 +318,9 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = {
+				has_country_flag = ROK_stand_down
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -319,6 +353,10 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			declare_war_on = {
+				target = ROK 
+				type = annex_everything
+			}
 		}
 	}
 
@@ -504,7 +542,7 @@ focus_tree = {
 		id = KOR_true_colours
 		prerequisite = { focus = KOR_reunification }
 		mutually_exclusive = { focus = KOR_pride_joy }
-		#allow_branch = { SOV = { has_country_flag = SOV_nazbols }}
+		allow_branch = { SOV = { has_country_flag = SOV_nazbols }}
 		icon = GFX_goal_no_data
 		relative_position_id = KOR_reunification
 		x = -3
@@ -648,6 +686,7 @@ focus_tree = {
 		}
 
 		available = {
+			has_country_flag = ROK_no_nuke
 		}
 
 		cancel_if_invalid = yes

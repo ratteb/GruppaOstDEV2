@@ -3,6 +3,8 @@
 ###########################
 
 add_namespace = DPRK_china
+add_namespace = DPRK_russia
+add_namespace = DPRK_foreign
 add_namespace = DPRK
 
 # Irrelevant for now 
@@ -27,6 +29,54 @@ country_event = {
 		name = DPRK_china.1.b
 		ai_chance = { factor = 10 }
     }
+}
+
+country_event = {
+	id = DPRK_russia.1
+	title = DPRK_russia.1.t
+	desc = DPRK_russia.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Ask for help 
+		name = DPRK_russia.1.a
+		ai_chance = { factor = 90 }
+		set_country_flag = SOV_help_NK50
+    }
+
+	option = { # Ask for help 
+		name = DPRK_russia.1.b
+		ai_chance = { factor = 90 }
+		KOR = {
+			set_country_flag = SOV_no_help_completed
+		}
+    }
+
+}
+
+country_event = {
+	id = DPRK_foreign.1
+	title = DPRK_foreign.1.t
+	desc = DPRK_foreign.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Ask for help 
+		name = DPRK_foreign.1.a
+		ai_chance = { factor = 90 }
+		set_country_flag = SOV_help_NK50
+    }
+
+	option = { # Ask for help 
+		name = DPRK_foreign.1.b
+		ai_chance = { factor = 90 }
+		KOR = {
+			set_country_flag = SOV_no_help_completed
+		}
+    }
+
 }
 
 

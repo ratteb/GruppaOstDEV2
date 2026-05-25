@@ -32,6 +32,9 @@ country_event = {
 	option = { #let them rot 
 		name = CHI_DPRK.1.a
 		ai_chance = { factor = 50 }
+		KOR = {
+			set_country_flag = CHI_no_help_completed
+		}
     }
 	option = { # help our allies 
 		name = CHI_DPRK.1.b
