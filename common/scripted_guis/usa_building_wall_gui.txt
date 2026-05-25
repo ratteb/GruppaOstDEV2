@@ -72,6 +72,7 @@ scripted_gui = {
 	}
 
     ai_enabled = {
+      always = yes 
     }
 
     ai_test_interval = 290  # The higher, the long it takes the ai to do actions
@@ -84,6 +85,33 @@ scripted_gui = {
     }
 
     ai_weights = {
+      increase_button_click = {
+      ai_will_do = {
+			base = 10
+			modifer = {
+				check_variable = {
+					var = USA_build_wall_investment_points
+					value = 10
+					compare = equals
+				}
+				add = -10
+			}
+		}
+      }
+
+      decrease_button_click_button_click = {
+      ai_will_do = {
+			base = 0
+			modifer = {
+				check_variable = {
+					var = USA_build_wall_investment_points
+					value = 10
+					compare = equals
+				}
+				add = 10
+			}
+		}
+      }
     }
   }
 }

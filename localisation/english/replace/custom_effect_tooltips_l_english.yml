@@ -66,6 +66,8 @@
  # DPRK
   KOR_juche_CMT:0 "§RDue to our Juche Policy We Cannot Join Any Factions!§!"
   KOR_songun_CMT:0 "§RDue to our Songun Policy It is Much Harder to Push Through Economic Reforms!§!"
+  KOR_reform_juche_CET:0 "§3Our Restrictions on Joining Alliances Are Lifted§!"
+  KOR_eternal_juche_CET:0 "§OWe Will Go Deeper Into Self Reliance§!"
 
   # CHINA 
   CHI_taiwan_crisis_CMT:0 "§ROur Anger Will Not Go Unanswered!\nThe Chinese Century Will Come!\nOur Enemies Will Feel the Burn of our Flaming Sword!\nQianjin Zhonggou!§!"

@@ -299,6 +299,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			unlock_national_focus = KOR_eternal_juche 
 		}
 	}
 
@@ -719,6 +720,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			custom_effect_tooltip = KOR_eternal_juche_CET
 		}
 	}
 
@@ -822,6 +824,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			custom_effect_tooltip = KOR_reform_juche_CET
 		}
 	}
 

@@ -2,7 +2,7 @@ spriteTypes = {
 	 progressbartype = {
         name = "GFX_csto_cohesion_meter"
         textureFile1 = "/gfx/scripted_gui/csto/csto_symbol.dds"
-        textureFile2 = "/gfx/csto/csto_symbol_background.dds"
+        textureFile2 = "/gfx/scripted_gui/csto/csto_symbol_background.dds"
         color = { 0.0 0.0 0.0 }
         colortwo = {  0.0 0.0 0.0 }
         size = { x = 256 y = 256 }

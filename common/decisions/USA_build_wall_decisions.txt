@@ -104,7 +104,15 @@ USA_build_wall_cat = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			base = 10
+			modifer = {
+				check_variable = {
+					var = USA_monthly_funds
+					value = 500
+					compare = greater_than
+				}
+				add = -10
+			}
 		}
 	}
 
@@ -153,7 +161,15 @@ USA_build_wall_cat = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			base = 10
+			modifer = {
+				check_variable = {
+					var = USA_monthly_funds
+					value = 500
+					compare = less_than
+				}
+				add = -10
+			}
 		}
 	}
 
@@ -204,7 +220,17 @@ USA_build_wall_cat = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			
+			base = 10
+			modifer = {
+				check_variable = {
+					var = USA_monthly_funds
+					value = 500
+					compare = greater_than
+				}
+				add = -10
+			}
+		
 		}
 	}
 
@@ -256,7 +282,15 @@ USA_build_wall_cat = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			base = 10
+			modifer = {
+				check_variable = {
+					var = USA_monthly_funds
+					value = 500
+					compare = less_than
+				}
+				add = -10
+			}
 		}
 	}
 
@@ -297,7 +331,15 @@ USA_build_wall_cat = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			base = 0
+			modifer = {
+				check_variable = {
+					var = USA_build_wall_progress
+					value = 40
+					compare = less_than_or_equals
+				}
+				add = 20
+			}
 		}
 	}
 
