@@ -1,0 +1,692 @@
+
+focus_tree = {
+	id = dprk_focus_tree
+	
+	country = {
+		
+		modifier = {
+			add = 10
+			tag = KOR 
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 1700 y = 1000 }
+
+	focus = {
+		id = KOR_broken_juche
+		icon = GFX_goal_no_data
+		x = 6
+		y = 2
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_chinese_aid
+		prerequisite = { focus = KOR_broken_juche }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_broken_juche
+		x = 1
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = KOR_russian_aid
+		prerequisite = { focus = KOR_broken_juche }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_broken_juche
+		x = -1
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = KOR_onwards
+		prerequisite = { focus = KOR_chinese_aid  }
+		prerequisite = { focus = KOR_russian_aid }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_chinese_aid
+		x = -1
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = KOR_south_korea_nuke
+		prerequisite = { focus = KOR_onwards }
+		mutually_exclusive = {
+			focus = KOR_no_southern_nuke
+		}
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_onwards
+		x = -1
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_alert_kpa
+		prerequisite = { focus = KOR_south_korea_nuke }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_south_korea_nuke
+		x = -2
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_operation_pongae
+		prerequisite = { focus = KOR_south_korea_nuke }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_south_korea_nuke
+		x = 0
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_the_warno
+		prerequisite = { focus = KOR_alert_kpa }
+		prerequisite = { focus = KOR_operation_pongae }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_operation_pongae
+		x = -1
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_they_stand_down
+		prerequisite = { focus = KOR_the_warno }
+		mutually_exclusive = { focus = KOR_no_return }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_the_warno
+		x = -1
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_ready_military
+		prerequisite = { focus = KOR_they_stand_down }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_they_stand_down
+		x = 0
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_no_return
+		prerequisite = { focus = KOR_the_warno }
+		mutually_exclusive = { focus = KOR_they_stand_down }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_the_warno
+		x = 1
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_korean_war
+		prerequisite = { focus = KOR_no_return }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_no_return
+		x = 0
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_disaster
+		prerequisite = { focus = KOR_korean_war }
+		mutually_exclusive = { focus = KOR_reunification }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_korean_war
+		x = 1
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_chinese_troops
+		prerequisite = { focus = KOR_disaster }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_disaster
+		x = 0
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_a_second_peace
+		prerequisite = { focus = KOR_chinese_troops }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_chinese_troops
+		x = 0
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_chinese_bases
+		prerequisite = { focus = KOR_a_second_peace }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_a_second_peace
+		x = -1
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_no_dream
+		prerequisite = { focus = KOR_a_second_peace }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_a_second_peace
+		x = 1
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_reunification
+		prerequisite = { focus = KOR_korean_war }
+		mutually_exclusive = { focus = KOR_disaster }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_korean_war
+		x = -1
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_pride_joy
+		prerequisite = { focus = KOR_reunification }
+		mutually_exclusive = { focus = KOR_true_colours }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_reunification
+		x = 0
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_true_colours
+		prerequisite = { focus = KOR_reunification }
+		mutually_exclusive = { focus = KOR_pride_joy }
+		#allow_branch = { SOV = { has_country_flag = SOV_nazbols }}
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_reunification
+		x = -3
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_pure_race
+		prerequisite = { focus = KOR_true_colours }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_true_colours
+		x = -1
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_red_brown_alliance
+		prerequisite = { focus = KOR_true_colours }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_true_colours
+		x = 1
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_honour_heroes
+		prerequisite = { focus = KOR_pure_race  }
+		prerequisite = { focus = KOR_red_brown_alliance  }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_pure_race
+		x = 1
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_new_juche
+		prerequisite = { focus = KOR_pride_joy }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_pride_joy
+		x = 0
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_no_southern_nuke
+		prerequisite = { focus = KOR_onwards }
+		mutually_exclusive = {
+			focus = KOR_south_korea_nuke
+		}
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_onwards
+		x = 1
+		y = 1
+
+		cost = 24.3
+
+		ai_will_do = {
+			factor = 1
+		}
+		select_effect = {
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ZAK_hold_referendum
+		prerequisite = { focus = ZAK_prepare_referendum}
+		icon = GFX_goal_no_data
+		relative_position_id = ZAK_prepare_referendum
+		x = 0
+		y = 1
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = marxism_leninism }
+				factor = 0
+			}
+		}
+	available = {
+
+		custom_trigger_tooltip = {
+				tooltip = ZAK_referendum_requirements_ctt
+				UKR = { has_country_flag = UKR_political_crisis_over }
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZAK_referendum_requirements02_ctt
+				NOT = { is_in_faction_with = UKR }
+			    NOT = { is_puppet_of = UKR }
+			    NOT = { has_war_with = UKR }
+			}
+	}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+}
