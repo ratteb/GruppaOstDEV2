@@ -20,7 +20,7 @@ focus_tree = {
 		x = 6
 		y = 2
 
-		cost = 4.3
+		cost = 11.5
 
 		ai_will_do = {
 			factor = 1
@@ -59,6 +59,12 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			CHI = {
+				country_event = {
+					id = CHI_DPRK.1 
+					days = 2 
+				}
+			}
 		}
 	}
 	focus = {
@@ -652,35 +658,253 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ZAK_hold_referendum
-		prerequisite = { focus = ZAK_prepare_referendum}
+		id = KOR_eternal_juche
+		prerequisite = { focus = KOR_no_southern_nuke }
+		mutually_exclusive = { focus = KOR_reform_juche }
 		icon = GFX_goal_no_data
-		relative_position_id = ZAK_prepare_referendum
+		relative_position_id = KOR_no_southern_nuke
 		x = 0
 		y = 1
 
-		cost = 3
+		cost = 4.3
 
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				JAP = { has_government = marxism_leninism }
-				factor = 0
-			}
 		}
-	available = {
 
-		custom_trigger_tooltip = {
-				tooltip = ZAK_referendum_requirements_ctt
-				UKR = { has_country_flag = UKR_political_crisis_over }
-			}
-			custom_trigger_tooltip = {
-				tooltip = ZAK_referendum_requirements02_ctt
-				NOT = { is_in_faction_with = UKR }
-			    NOT = { is_puppet_of = UKR }
-			    NOT = { has_war_with = UKR }
-			}
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
 	}
+
+	focus = {
+		id = KOR_5_year_plan
+		prerequisite = { focus = KOR_eternal_juche }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_eternal_juche
+		x = 0
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_korean_mic
+		prerequisite = { focus = KOR_5_year_plan }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_5_year_plan
+		x = 0
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_songun_primacy
+		prerequisite = { focus = KOR_korean_mic }
+		prerequisite =  { focus = KOR_foreign_army_backing }
+		mutually_exclusive = { focus = KOR_reduce_budget }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_korean_mic
+		x = 1
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_reform_juche
+		prerequisite = { focus = KOR_no_southern_nuke }
+		mutually_exclusive = { focus = KOR_eternal_juche }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_no_southern_nuke
+		x = 4
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_market_reform
+		prerequisite = { focus = KOR_reform_juche }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_reform_juche
+		x = 0
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_economic_alliance
+		prerequisite = { focus = KOR_market_reform }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_market_reform
+		x = 0
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_reduce_budget
+		prerequisite = { focus = KOR_economic_alliance }
+		prerequisite = { focus = KOR_foreign_army_backing }
+		mutually_exclusive = { focus = KOR_songun_primacy }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_economic_alliance
+		x = -1
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_new_kpa
+		prerequisite = { focus = KOR_eternal_juche 
+		focus = KOR_reform_juche }
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_eternal_juche
+		x = 2
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KOR_foreign_army_backing
+		prerequisite = { focus = KOR_new_kpa}
+		icon = GFX_goal_no_data
+		relative_position_id = KOR_new_kpa
+		x = 0
+		y = 1
+
+		cost = 4.3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no

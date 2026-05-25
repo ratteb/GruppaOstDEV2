@@ -100,10 +100,6 @@ create_country_leader = {
 		
 	}
 }
-country_event = {
-    id = DPRK_china.1
-    days = 540
-}
 add_opinion_modifier = {
 	target = CHI
 	modifier = similair_ideology
