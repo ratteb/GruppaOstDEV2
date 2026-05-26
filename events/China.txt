@@ -31,15 +31,17 @@ country_event = {
 	
 	option = { #let them rot 
 		name = CHI_DPRK.1.a
-		ai_chance = { factor = 50 }
+		ai_chance = { factor = 10 }
 		KOR = {
 			set_country_flag = CHI_no_help_completed
 		}
+		log = "china no help north korea"
     }
 	option = { # help our allies 
 		name = CHI_DPRK.1.b
-		ai_chance = { factor = 50 }
+		ai_chance = { factor = 90 }
 		set_country_flag = CHI_helping_NK50
+		log = "china help north korea" 
     }
 }
 

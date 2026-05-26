@@ -8,28 +8,7 @@ add_namespace = DPRK_foreign
 add_namespace = DPRK
 
 # Irrelevant for now 
-country_event = {
-	id = DPRK_china.1
-	title = DPRK_china.1.t
-	desc = DPRK_china.1.d
-	picture = GFX_report_event_chinese_soldiers_fighting
-	
-	is_triggered_only = yes
-	
-	option = { # Ask for help 
-		name = DPRK_china.1.a
-		ai_chance = { factor = 90 }
-		CHI = { country_event = {
-			id = CHI_DPRK.1
-			days = 1 
-		}  }
 
-    }
-	option = { # We can do it alone! 
-		name = DPRK_china.1.b
-		ai_chance = { factor = 10 }
-    }
-}
 
 country_event = {
 	id = DPRK_russia.1
@@ -41,16 +20,18 @@ country_event = {
 	
 	option = { # Ask for help 
 		name = DPRK_russia.1.a
-		ai_chance = { factor = 90 }
+		ai_chance = { factor = 70 }
 		set_country_flag = SOV_help_NK50
+		log = "russia help north korea"
     }
 
 	option = { # Ask for help 
 		name = DPRK_russia.1.b
-		ai_chance = { factor = 90 }
+		ai_chance = { factor = 30 }
 		KOR = {
 			set_country_flag = SOV_no_help_completed
 		}
+		log = "Russia no help north korea" 
     }
 
 }

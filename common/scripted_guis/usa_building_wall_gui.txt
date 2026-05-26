@@ -20,6 +20,7 @@ scripted_gui = {
         var = USA_build_wall_investment_points
         value = 1 
       }
+      log = "USA bought IP" 
 		}
 
     decrease_button_click = {
@@ -31,6 +32,7 @@ scripted_gui = {
         var = USA_build_wall_investment_points
         value = 1 
       }
+      log = "USA sold IP" 
 		}
     }
 
@@ -75,7 +77,7 @@ scripted_gui = {
       always = yes 
     }
 
-    ai_test_interval = 290  # The higher, the long it takes the ai to do actions
+    ai_test_interval = 24  # The higher, the long it takes the ai to do actions
 	ai_test_variance = 0.5
 
     ai_check = {
