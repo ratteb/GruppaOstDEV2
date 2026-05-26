@@ -18,5 +18,18 @@ on_actions = {
 			set_country_flag = SOV_has_MM }
 			FRA = { set_country_flag = second_leader }
 		}
+
+		effect = {
+			CHI = {
+				set_variable = {
+					var = CHI_xi_loyalty 
+					value = 25
+				}
+				set_variable = {
+					var = CHI_nationalism_loyalty
+					value = 20
+				}
+			}
+		}
 	}
 }

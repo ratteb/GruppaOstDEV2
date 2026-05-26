@@ -142,3 +142,48 @@ country_event = {
     }
 }
 
+country_event = {
+	id = CHI_chinese_century.7
+	title = CHI_chinese_century.7.t
+	desc = CHI_chinese_century.7.d
+	picture = GFX_kiev_doomer
+	
+	is_triggered_only = yes
+	
+	option = { # Got it 
+		name = CHI_chinese_century.7.a
+		ai_chance = { factor = 50 }
+		set_country_flag = CHI_xi_loyal_gov
+    }
+}
+
+country_event = {
+	id = CHI_chinese_century.8
+	title = CHI_chinese_century.8.t
+	desc = CHI_chinese_century.8.d
+	picture = GFX_kiev_doomer
+	
+	is_triggered_only = yes
+	
+	option = { # Got it 
+		name = CHI_chinese_century.8.a
+		ai_chance = { factor = 50 }
+		set_country_flag = CHI_nationalism_loyal_gov
+    }
+}
+
+country_event = {
+	id = CHI_chinese_century.9
+	title = CHI_chinese_century.9.t
+	desc = CHI_chinese_century.9.d
+	picture = GFX_kiev_doomer
+	
+	is_triggered_only = yes
+	
+	option = { # Got it 
+		name = CHI_chinese_century.9.a
+		ai_chance = { factor = 50 }
+		set_country_flag = CHI_deadlock_gov
+    }
+}
+

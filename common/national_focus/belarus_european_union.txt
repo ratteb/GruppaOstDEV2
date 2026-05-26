@@ -14,7 +14,7 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 1000 }
 
 	focus = {
-		id = CHI_chinese_century
+		id = BLR_belarus
 		icon = GFX_goal_no_data
 		x = 40
 		y = 1

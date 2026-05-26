@@ -226,36 +226,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = CHI_xi_legacy_secure 
-		prerequisite = { focus = CHI_xi_eternal_overwatch }
-		prerequisite = { focus = CHI_battle_won_no_war }
-		prerequisite = { focus = CHI_not_our_problem_lol }
-		icon = GFX_goal_no_data
-		relative_position_id = CHI_xi_eternal_overwatch
-		x = 0
-		y = 2
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-		
-		bypass = {
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			custom_effect_tooltip = CHI_xi_legacy_secure_CET
-		}
-	}
+	
 
 	focus = {
 		id = CHI_cultural_revolution
@@ -621,6 +592,67 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+		}
+	}
+	focus = {
+		id = CHI_xi_legacy_secure 
+		prerequisite = { focus = CHI_xi_eternal_overwatch }
+		prerequisite = { focus = CHI_battle_won_no_war }
+		prerequisite = { focus = CHI_not_our_problem_lol }
+		icon = GFX_goal_no_data
+		relative_position_id = CHI_xi_eternal_overwatch
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = CHI_xi_legacy_secure_CET
+			if = {
+				limit = {
+					check_variable = {
+						var = CHI_xi_loyalty 
+						value = CHI_nationalism_loyalty
+						compare = greater_than
+					}
+				}
+				country_event = CHI_chinese_century.7
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						var = CHI_xi_loyalty 
+						value = CHI_nationalism_loyalty
+						compare = less_than
+					}
+				}
+				country_event = CHI_chinese_century.8
+			}
+
+			else_if = {
+				limit = {
+					check_variable = {
+						var = CHI_xi_loyalty 
+						value = CHI_nationalism_loyalty
+						compare = equals
+					}
+				}
+				country_event = CHI_chinese_century.9
+			}
 		}
 	}
 	focus = {
