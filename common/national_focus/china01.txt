@@ -139,6 +139,10 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = CHI_modern_cult_personality_CET
+			add_to_variable = {
+				var = CHI_xi_loyalty
+				value = 15
+			}
 		}
 	}
 	focus = {
@@ -196,6 +200,10 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_to_variable = {
+				var = CHI_nationalism_loyalty
+				value = 15
+			}
 		}
 	}
 	focus = {
