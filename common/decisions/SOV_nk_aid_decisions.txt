@@ -4,7 +4,10 @@ SOV_nk_aid_decision_cat = {
 		icon = generic_industry
 
 		available = {
-			SOV_korean_cap = no 
+			custom_trigger_tooltip = {
+				tooltip = SOV_nk_economic_aid_ctt
+				SOV_korean_cap = no
+			} 
 		}
 
 		visible = {
@@ -66,11 +69,13 @@ SOV_nk_aid_decision_cat = {
 		}
 
 		available = {
-			custom_trigger_tooltip = SOV_nk_forfeit_ctt
-			check_variable ={
+			custom_trigger_tooltip = {
+				tooltip = SOV_nk_forfeit_ctt 
+				check_variable ={
 				var = SOV_NK_aid
 				value = 50
 				compare = greater_than_or_equals
+			}
 			}
 		}
 

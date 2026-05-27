@@ -928,6 +928,12 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			remove_dynamic_modifier = {
+				modifier = KOR_korean_peoples_army
+			}
+			add_dynamic_modifier = {
+				modifier = KOR_new_korean_peoples_army
+			}
 		}
 	}
 
