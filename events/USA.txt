@@ -792,6 +792,21 @@ country_event = {
     }
 }
 
+# Border Crisis Report
+country_event = {
+	id = USA_border.6
+	title = USA_border.6.t
+	desc = USA_border.6.d
+	picture = GFX_report_event_bortac
+
+	is_triggered_only = yes 
+	
+	option = { # Border Crisis Begins
+		name = USA_border.6.a
+		ai_chance = { factor = 90 }
+    }
+}
+
 
 # Border Wall Report 
 country_event = {

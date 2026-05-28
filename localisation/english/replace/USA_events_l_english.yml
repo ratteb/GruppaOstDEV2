@@ -142,7 +142,7 @@
  USA_TWC.9.b: "We Didn't Need it Anyways!"
 
  USA_border.1.t: "A Border Crisis has begun!"
- USA_border.1.d: "Placeholdershi"
+ USA_border.1.d: "At"
  USA_border.1.a: "We should have built the wall higher."
  
  USA_border.2.t: "Failure of the Wall Project"
@@ -151,6 +151,10 @@
  USA_border.4.d: "Following our decision to use AIPAC donations to fund the construction of the wall (which if completed in turns helps the GOP's political campaign) Far Right Anti Israeli Group, Patriot Front. Has decided to organize a march and protest against the decision. Statements from Thomas Rousseau mention that: "A project meant to protect the American people from illegal immigrants is being actively funded by the nation state orchestrating a majority of these migrant waves."\n\nAlthough their claims remain largely unfounded, the march got heavy news coverage and it has significantly boosted the visibility of the Patriot Front, especially in the Deep South and Texas. The march was attended by atleast 30 confirmed Patriot Front members, but there were hundreds not officially affiliated with the group attending and participating in the march.\n\nNo casualties fell despite the large crowds and inflammatory statements, the group also does not pose a threat to the project as of now. The NSA will continue monitoring and assessing the situation to see if a need for strategical redirection is needed."
  USA_border.4.a: "Noted."
 
- USA_border.7.t: "Review of the Already Built Sections of the Wall"
- USA_border.7.d: "Reviews found those parts need rebuilding cuz they suck or whatev."
- USA_border.7.a: "Damn."
+USA_border.6.t: "Incident Report on the Situation in Eagle Pass"
+USA_border.6.d: "Following an investigation into the incident at the border by a joint FBI and DHS task force, it has been concluded that the drone strike was indeed an attack by Narco-Terrorist Elements orignating from Mexico. At Approximately 10:00 AM CST, a group of U.S. Border Patrol agents patrolling a section of Del Rio Sector, specifically near Eagle Pass spotted a group of unknown subjects emerging from thick brush. Upon being spotted the Subjects immeditently began fleeing the Area. The Agents radioed in the Situation began attempting to apprehend the Subjects, upon entering the brush where the Illegal Aliens were spotted, Agent Russell, found an unknown Subterranean Conveyance. Russell then recieved fire from within the tunnel and returned fire upon finding cover. He retreated after reporting shots fired. The other USBP Agents provided support and entered viable cover, maintaining their positions and observering the tunnel entrance. At Approximately 10:10 AM CST, the agents were struck by an Unknown UAS from the direction of Mexico. Multiple agents were killed in the intial strike and others wounded. The Joint Task Force has concluded that the UAS was an 'FPV Drone' operated by members of an Transnational Criminal Organization. The President has been informed of the situation and is currently forming a response after the ending of his Press Conference."
+USA_border.6.a: "Narco-Terrorism."
+
+USA_border.7.t: "Review of the Already Built Sections of the Wall"
+USA_border.7.d: "Reviews found those parts need rebuilding cuz they suck or whatev."
+USA_border.7.a: "Damn."
