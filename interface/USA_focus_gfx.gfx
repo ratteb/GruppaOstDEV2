@@ -270,4 +270,9 @@ spriteTypes = {
 		name = "GFX_goal_border_crisis"
 		texturefile = "gfx/interface/goals/focus_border_crisis.dds"
 	}
+
+		spriteType = {
+		name = "GFX_goal_mexico_trump_call"
+		texturefile = "gfx/interface/goals/focus_mexico_trump_call.dds"
+	}
 }

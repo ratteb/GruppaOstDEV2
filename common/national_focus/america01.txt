@@ -1125,7 +1125,7 @@ focus_tree = {
 		}
 		mutually_exclusive = { focus = USA_tragedy_but }
 		relative_position_id =  USA_border_crisis
-		icon = GFX_goal_no_data
+		icon = GFX_goal_mexico_trump_call
 		x = -3
 		y = 1
 

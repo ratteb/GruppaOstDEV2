@@ -50,4 +50,8 @@ spriteTypes = {
 		name = "GFX_ideology_HUN_paternalism_anocracy"
 		texturefile = "gfx/interface/ideologies/HUN_paternalism_anocracy.png"
 	}
+		spriteType = {
+		name = "GFX_ideology_KOR_marxism_leninism_juche"
+		texturefile = "gfx/interface/ideologies/KOR_marxism_leninism_juche.dds"
+	}
 }
