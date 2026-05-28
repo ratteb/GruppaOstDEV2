@@ -91,6 +91,10 @@
   USA_wall_border_tax_CET:0 "Modify §YThe U.S-Mexican Border Wall Construction§! by\nMonthly Border Wall Funds: §G+$65M§!\nStability: §R-5%§!\nConsumer Goods: §Y+8.0%§!"
   USA_wall_no_border_tax_CET:0 ""Modify §YThe U.S-Mexican Border Wall Construction§! by\nMonthly Border Wall Funds: §R-$65M§!\nStability: §G+5%§!\nConsumer Goods: §Y-8.0%§!"
   USA_mexico_trump_call_cet:0 "§5Mexico has 10 days to respond§!"
+  USA_mexico_dea_1_c_cet:0 "§RBecause of 1 concession, decisions cost 50% more!§"
+  USA_mexico_dea_2_c_cet:0 "§RBecause of 2 concessions, decisions cost 100% more!§"
+  USA_mexico_dea_3_c_cet:0 "§RBecause of 3 concessions, decisions cost 200% more!§"
+  USA_mexico_dea_0_c_cet:0 "§GBecause we didn't give any concessions, decisions cost the base amount!§!"
  # Ukraine Political Crisis 
   UKR_political_crisis_info_CET: "§RYou won't know the lore of the crisis§!"
   UKR_political_crisis_info2_CET: "§0Good Luck in this long winded fight!§!"

@@ -160,7 +160,9 @@
  USA_border.7.a: "Damn."
 
  USA_border.16.t: "Operation SOUTHERN ANCHOR: Success"
+ USA_border_P2P.16.t: "Operation SOUTHERN ANCHOR: Success"
 
  USA_border.17.t: "Operation SOUTHERN ANCHOR: Failure"
+ USA_border_P2P.17.t: "Operation SOUTHERN ANCHOR: Failure"
 
 

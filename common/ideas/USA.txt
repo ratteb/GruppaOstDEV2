@@ -123,6 +123,35 @@ ideas = {
 				custom_modifier_tooltip = "USA_build_wall_ICE_invest_points_tooltip_loc"
 			}
 		}
+
+		USA_cia_planning = {
+			picture = GFX_idea_USA_the_second_amendment
+			
+			allowed = {
+				tag = USA
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				command_power_gain = 0.35
+				command_power_gain_mult = 0.2
+				max_command_power_mult = 0.5
+				political_power_gain = -0.25
+			}
+		}
 	}
 
 #ICE Above this line

@@ -1,5 +1,6 @@
 sub_unit_categories = {
 	category_special_forces_GO
+	category_police
 	category_tanks
 	category_apc 
 	category_airland_vehicle

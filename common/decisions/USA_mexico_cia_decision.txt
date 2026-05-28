@@ -30,7 +30,30 @@ USA_mexico_decision_cat = {
 		}
 		
 		timeout_effect = { 
-			random_list = {
+			if = {
+				limit = {
+					has_country_flag = USA_mexico_cia_popular_uprising 
+				}
+				random_list = {
+				var:USA_mexico_success_points = {
+					country_event = {
+						id = USA_border_P2P.16
+						days = 1
+					}
+				}
+				var:USA_mexico_fail_points = {
+					country_event = {
+						id = USA_border_P2P.17
+						days = 1
+					}
+				}
+			}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = USA_mexico_cia_military_uprising
+				}
+				random_list = {
 				var:USA_mexico_success_points = {
 					country_event = {
 						id = USA_border.16
@@ -44,13 +67,32 @@ USA_mexico_decision_cat = {
 					}
 				}
 			}
+			}
+			else = {
+				random_list = {
+				var:USA_mexico_success_points = {
+					country_event = {
+						id = USA_border.16
+						days = 1
+					}
+				}
+				var:USA_mexico_fail_points = {
+					country_event = {
+						id = USA_border.17
+						days = 1
+					}
+				}
+			}
+			}
+			
 		}
 		
 		ai_will_do = {
 			factor = 5
 		}
 	}
-	USA_mexico_placeholder = {
+
+	USA_mexico_sow_chaos = {
 
 		icon = generic_industry
 
@@ -65,13 +107,231 @@ USA_mexico_decision_cat = {
 
 
 		custom_cost_trigger = {
-			has_political_power > 25
+			command_power > 50
 		}
 		custom_cost_text = SOV_csto_training_cost
 
 		complete_effect = {
+			subtract_from_variable = {
+				var = mexico_USA_cia_secrecy
+				value = 6
+			}
+
+			add_to_variable = {
+				var = mexico_USA_cia_effectiveness
+				value = 10
+			}
+
+			MEX = {
+				add_stability = -0.1
+				set_country_flag = MEX_cartel_foothold
+			}
+			set_country_flag = USA_mexico_popular_uprising_escape_route
+			hidden_effect = {
+				news_event = {
+					id = USA_border.18
+					days = 3
+				}
+			}
 		}
-		remove_effect = {  
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+	USA_mexico_popular_uprising = {
+
+		icon = generic_industry
+
+		available = {
+		}
+
+		visible = {
+			has_country_flag = USA_mexico_cia_operation
+			NOT = {
+				has_country_flag = USA_mexico_cia_military_uprising
+				has_country_flag = USA_mexico_cia_popular_uprising
+			}
+		}
+
+		fire_only_once = yes
+
+
+		custom_cost_trigger = {
+			command_power > 20
+		}
+		custom_cost_text = SOV_csto_training_cost
+
+		complete_effect = {
+			subtract_from_variable = {
+				var = mexico_USA_cia_secrecy
+				value = 5
+			}
+
+			subtract_from_variable = {
+				var = mexico_USA_cia_effectiveness
+				value = 10
+			}
+			set_country_flag = USA_mexico_cia_popular_uprising
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	USA_mexico_form_demoratic_council = {
+
+		icon = generic_industry
+
+		available = {
+		}
+
+		visible = {
+			has_country_flag = USA_mexico_cia_operation
+			has_country_flag = USA_mexico_cia_popular_uprising
+		}
+
+		fire_only_once = yes
+
+
+		custom_cost_trigger = {
+			command_power > 20
+		}
+		custom_cost_text = SOV_csto_training_cost
+
+		complete_effect = {
+			subtract_from_variable = {
+				var = mexico_USA_cia_secrecy
+				value = 5
+			}
+
+			add_to_variable = {
+				var = mexico_USA_cia_effectiveness
+				value = 3
+			}
+			MEX = {
+				add_popularity = {
+					ideology = conservatism
+					popularity = 0.05
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	USA_mexico_popular_form_escape_routes = {
+
+		icon = generic_industry
+
+		available = {
+		}
+
+		visible = {
+			has_country_flag = USA_mexico_cia_operation
+			has_country_flag = USA_mexico_cia_popular_uprising
+		}
+
+		fire_only_once = yes
+
+
+		custom_cost_trigger = {
+			command_power > 20
+		}
+		custom_cost_text = SOV_csto_training_cost
+
+		complete_effect = {
+			add_to_variable = {
+				var = mexico_USA_cia_secrecy
+				value = 5
+			}
+
+			add_to_variable = {
+				var = mexico_USA_cia_effectiveness
+				value = 4
+			}
+			set_country_flag = USA_mexico_popular_uprising_escape_route
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	USA_mexico_military_uprising = {
+
+		icon = generic_industry
+
+		available = {
+		}
+
+		visible = {
+			has_country_flag = USA_mexico_cia_operation
+			NOT = {
+				has_country_flag = USA_mexico_cia_popular_uprising
+				has_country_flag = USA_mexico_cia_military_uprising
+			}
+		}
+
+		fire_only_once = yes
+
+
+		custom_cost_trigger = {
+			command_power > 20
+		}
+		custom_cost_text = SOV_csto_training_cost
+
+		complete_effect = {
+			set_country_flag = USA_mexico_cia_military_uprising
+			add_to_variable = {
+				var = mexico_USA_cia_secrecy
+				value = 5
+			}
+
+			add_to_variable = {
+				var = mexico_USA_cia_effectiveness
+				value = 10
+			}
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	USA_mexico_train_salvation_leauge = {
+
+		icon = generic_industry
+
+		available = {
+		}
+
+		visible = {
+			has_country_flag = USA_mexico_cia_operation
+			has_country_flag = USA_mexico_cia_military_uprising
+		}
+
+		fire_only_once = yes
+
+
+		custom_cost_trigger = {
+			command_power > 20
+		}
+		custom_cost_text = SOV_csto_training_cost
+
+		complete_effect = {
+			add_to_variable = {
+				var = mexico_USA_cia_secrecy
+				value = 2
+			}
+
+			add_to_variable = {
+				var = mexico_USA_cia_effectiveness
+				value = 5
+			}
 		}
 		
 		ai_will_do = {
