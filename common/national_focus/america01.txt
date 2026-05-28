@@ -936,8 +936,8 @@ focus_tree = {
     focus = {
 		id = USA_border_crisis
 		icon = GFX_goal_border_crisis
-		x = 35
-		y = 3
+		x = 34
+		y = 9
 
 		cost = 0.5
 
@@ -960,8 +960,8 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
-			
+			country_event = USA_border.6
+			stability = -0.05			
 		}
 	}
 }	
