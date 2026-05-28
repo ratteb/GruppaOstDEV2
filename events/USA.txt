@@ -724,6 +724,16 @@ country_event = {
 		add_political_power = -5
 		add_stability = -0.02
 		set_country_flag = USA_border_crisis_begins
+		MEX = {
+			add_opinion_modifier = {
+				target = USA 
+				modifier = USA_mexico_border_crisis
+			}
+		}
+		add_opinion_modifier = {
+			target = MEX 
+			modifier = USA_mexico_border_crisis
+		}
     }
 }
 
@@ -935,6 +945,212 @@ country_event = {
 	
 	option = { # Border Crisis Begins
 		name = USA_border.10.a
+		ai_chance = { factor = 90 }
+    }
+}
+
+# diplomatic envoy to mexico 
+country_event = {
+	id = USA_border.11
+	title = USA_border.11.t
+	desc = USA_border.11.d
+	picture = GFX_report_event_bortac
+
+	is_triggered_only = yes 
+	
+	option = { # yes
+		name = USA_border.11.a
+		ai_chance = { base = 50 }
+		MEX = {
+			add_opinion_modifier = {
+				target = USA 
+				modifier = USA_mexico_diplomatic_envoy
+			}
+		}
+		add_opinion_modifier = {
+			target = MEX
+			modifier = USA_mexico_diplomatic_envoy
+		}
+		country_event = {
+			id = USA_border.12
+			days = 1
+		}
+    }
+
+	option = { # yes
+		name = USA_border.11.b
+		ai_chance = { base = 50 }
+    }
+}
+
+# Fair negotiations with Mexico
+country_event = {
+	id = USA_border.12
+	title = USA_border.12.t
+	desc = USA_border.12.d
+	picture = GFX_report_event_bortac
+
+	is_triggered_only = yes 
+	
+	option = { # yes
+		name = USA_border.12.a
+		ai_chance = { base = 50 }
+		MEX = {
+			add_opinion_modifier = {
+				target = USA 
+				modifier = USA_mexico_fair_negotiations
+			}
+		}
+		add_opinion_modifier = {
+			target = MEX
+			modifier = USA_mexico_fair_negotiations
+		}
+		country_event = {
+			id = USA_border.13
+			days = 1
+		}
+    }
+
+	option = { # yes
+		name = USA_border.12.b
+		ai_chance = { base = 50 }
+    }
+}
+
+# Mexico First Concession (makes results of focuses worse) 
+country_event = {
+	id = USA_border.13
+	title = USA_border.13.t
+	desc = USA_border.13.d
+	picture = GFX_report_event_bortac
+
+	is_triggered_only = yes 
+	
+	option = { # yes
+		name = USA_border.13.a
+		ai_chance = { base = 50 }
+		MEX = {
+			add_opinion_modifier = {
+				target = USA 
+				modifier = USA_mexico_negotiations_concession_1
+			}
+		}
+		add_opinion_modifier = {
+			target = MEX
+			modifier = USA_mexico_negotiations_concession_1
+		}
+		country_event = {
+			id = USA_border.14
+			days = 1
+		}
+		set_variable = {
+			var = USA_mexico_concessions 
+			value = 1
+		}
+    }
+
+	option = { # NO
+		name = USA_border.13.b
+		ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+	id = USA_border.14
+	title = USA_border.14.t
+	desc = USA_border.14.d
+	picture = GFX_report_event_bortac
+
+	is_triggered_only = yes 
+	
+	option = { # yes
+		name = USA_border.14.a
+		ai_chance = { base = 50 }
+		MEX = {
+			add_opinion_modifier = {
+				target = USA 
+				modifier = USA_mexico_negotiations_concession_2
+			}
+		}
+		add_opinion_modifier = {
+			target = MEX
+			modifier = USA_mexico_negotiations_concession_2
+		}
+		country_event = {
+			id = USA_border.15
+			days = 1
+		}
+		set_variable = {
+			var = USA_mexico_concessions 
+			value = 2
+		}
+    }
+
+	option = { # NO
+		name = USA_border.14.b
+		ai_chance = { base = 50 }
+    }
+}
+
+country_event = {
+	id = USA_border.15
+	title = USA_border.15.t
+	desc = USA_border.15.d
+	picture = GFX_report_event_bortac
+
+	is_triggered_only = yes 
+	
+	option = { # yes
+		name = USA_border.15.a
+		ai_chance = { base = 50 }
+		MEX = {
+			add_opinion_modifier = {
+				target = USA 
+				modifier = USA_mexico_negotiations_concession_3
+			}
+		}
+		add_opinion_modifier = {
+			target = MEX
+			modifier = USA_mexico_negotiations_concession_3
+		}
+		set_variable = {
+			var = USA_mexico_concessions 
+			value = 1
+		}
+    }
+
+	option = { # NO
+		name = USA_border.15.b
+		ai_chance = { base = 50 }
+    }
+}
+
+# cia operation success
+country_event = {
+	id = USA_border.16
+	title = USA_border.16.t
+	desc = USA_border.16.d
+	picture = GFX_report_event_bortac
+
+	is_triggered_only = yes 
+	
+	option = { # Border Crisis Begins
+		name = USA_border.16.a
+		ai_chance = { factor = 90 }
+    }
+}
+
+# CIA operation fail 
+country_event = {
+	id = USA_border.17
+	title = USA_border.17.t
+	desc = USA_border.17.d
+	picture = GFX_report_event_bortac
+
+	is_triggered_only = yes 
+	
+	option = { # Border Crisis Begins
+		name = USA_border.17.a
 		ai_chance = { factor = 90 }
     }
 }

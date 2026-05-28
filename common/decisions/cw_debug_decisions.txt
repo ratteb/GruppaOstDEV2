@@ -336,4 +336,120 @@ cw_gui_debug_mode = {
 			factor = 0
 		}
 	}
+
+	increase_cia_effectiveness = {
+
+		icon = generic_industry
+
+		available = {
+			is_ai = no
+		}
+
+		visible = {
+			is_debug = yes
+			tag = USA
+		}
+
+		fire_only_once = no
+
+		cost = 0
+
+		complete_effect = {
+			add_to_variable = {
+				var = mexico_USA_cia_effectiveness
+				value = 5
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	decrease_cia_effectiveness = {
+
+		icon = generic_industry
+
+		available = {
+			is_ai = no
+		}
+
+		visible = {
+			is_debug = yes
+			tag = USA
+		}
+
+		fire_only_once = no
+
+		cost = 0
+
+		complete_effect = {
+			subtract_from_variable = {
+				var = mexico_USA_cia_effectiveness
+				value = 5
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	increase_cia_secrecy = {
+
+		icon = generic_industry
+
+		available = {
+			is_ai = no
+		}
+
+		visible = {
+			is_debug = yes
+			tag = USA
+		}
+
+		fire_only_once = no
+
+		cost = 0
+
+		complete_effect = {
+			add_to_variable = {
+				var = mexico_USA_cia_secrecy
+				value = 5
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	decrease_cia_secrecy = {
+
+		icon = generic_industry
+
+		available = {
+			is_ai = no
+		}
+
+		visible = {
+			is_debug = yes
+			tag = USA
+		}
+
+		fire_only_once = no
+
+		cost = 0
+
+		complete_effect = {
+			subtract_from_variable = {
+				var = mexico_USA_cia_secrecy
+				value = 5
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
 }

@@ -1154,8 +1154,15 @@ focus_tree = {
 					id = USA_border.8
 					days = 10 
 				}
-				custom_effect_tooltip = USA_mexico_trump_call_cet
 			}
+				custom_effect_tooltip = USA_mexico_trump_call_cet
+				hidden_effect = {
+					country_event = {
+						id = USA_border.11
+						hours = 3
+					}
+				}
+			
 		}
 	}
 
@@ -1224,8 +1231,16 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
-			
+			set_country_flag = USA_mexico_cia_operation
+			set_variable = {
+				var = mexico_USA_cia_secrecy
+				value = 25
+			}
+
+			set_variable = {
+				var = mexico_USA_cia_effectiveness
+				value = 30
+			}
 		}
 	}
 
