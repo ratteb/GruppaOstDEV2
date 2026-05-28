@@ -32,6 +32,126 @@ ideas = {
 				custom_modifier_tooltip = KOR_juche_CMT
 			}
 		}
+
+		KOR_seperatist_problem = {
+			picture = GFX_idea_no_data
+			
+			allowed = {
+				tag = KOR
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				surrender_limit = 1
+				offensive_war_stability_factor = 0.3
+				war_stability_factor = 0.3
+			}
+			targeted_modifier = {
+                    tag = ROK    
+                    attack_bonus_against = 0.04
+                    defense_bonus_against = 0.04
+                }
+		}
+
+		KOR_chollima = {
+			picture = GFX_idea_no_data
+			
+			allowed = {
+				tag = KOR
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				industrial_capacity_factory = 0.05 
+			}
+		}
+
+		KOR_kpa_high_alert = {
+			picture = GFX_idea_no_data
+			
+			allowed = {
+				tag = KOR
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.15
+				land_reinforce_rate = 0.06
+				training_time_army_factor = -0.5
+				mobilization_speed = 0.3
+			}
+		}
+
+		KOR_operation_pongae = {
+			picture = GFX_idea_no_data
+			
+			allowed = {
+				tag = KOR
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.05
+				army_speed_factor = 0.5
+				army_org_factor  = 0.25
+				breakthrough_factor = 0.1
+			}
+		}
 		KOR_songun_policy = {
 			picture = GFX_idea_no_data
 			

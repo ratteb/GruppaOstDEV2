@@ -34,6 +34,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_ideas =  { KOR_seperatist_problem }
 		}
 	}
 
@@ -143,6 +144,9 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_ideas = {
+				KOR_chollima
+			}
 		}
 	}
 	focus = {
@@ -182,7 +186,7 @@ focus_tree = {
 		x = -2
 		y = 1
 
-		cost = 4.3
+		cost = 1.5
 
 		ai_will_do = {
 			factor = 1
@@ -196,6 +200,10 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_timed_idea = {
+				idea = KOR_kpa_high_alert
+				days = 80
+			}
 		}
 	}
 
@@ -207,7 +215,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 4.3
+		cost = 1.8
 
 		ai_will_do = {
 			factor = 1
@@ -233,7 +241,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 4.3
+		cost = 0.5
 
 		ai_will_do = {
 			factor = 1
@@ -259,7 +267,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 4.3
+		cost = 0.2
 
 		ai_will_do = {
 			factor = 1
@@ -312,7 +320,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 4.3
+		cost = 0.2
 
 		ai_will_do = {
 			factor = 1
@@ -340,7 +348,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 4.3
+		cost = 0.4
 
 		ai_will_do = {
 			factor = 1
@@ -357,6 +365,9 @@ focus_tree = {
 			declare_war_on = {
 				target = ROK 
 				type = annex_everything
+			}
+			add_ideas = {
+				KOR_operation_pongae
 			}
 		}
 	}
