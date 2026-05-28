@@ -1,21 +1,20 @@
-SOV_nk_aid_decision_cat = {
-	SOV_nk_economic_aid = {
+CHI_nk_aid_decision_cat = {
+	CHI_nk_economic_aid = {
 
 		icon = generic_industry
 
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = SOV_nk_economic_aid_ctt
-				SOV_korean_cap = no
+				CHI_korean_cap = no
 			} 
 		}
 
 		visible = {
-			has_country_flag = SOV_help_NK50
+			has_country_flag = CHI_help_NK50
 		}
 		days_re_enable = 50 
 		days_remove = 45
-
 		modifier = {
 			civilian_factory_use = 5
 			consumer_goods_factor = 0.05
@@ -31,7 +30,7 @@ SOV_nk_aid_decision_cat = {
 
 		complete_effect = {
 			add_to_variable = {
-				var = SOV_NK_aid
+				var = CHI_NK_aid
 				value = 2
 			}
 
@@ -72,14 +71,14 @@ SOV_nk_aid_decision_cat = {
 		}
 	}
 
-	SOV_nk_forfeit = {
+	CHI_nk_forfeit = {
 
 		icon = generic_industry
 
 		visible = {
-				has_country_flag = SOV_help_NK50
+				has_country_flag = CHI_help_NK50
 			NOT = {
-				has_country_flag = SOV_help_NK100
+				has_country_flag = CHI_help_NK100
 			}
 		}
 
@@ -87,7 +86,7 @@ SOV_nk_aid_decision_cat = {
 			custom_trigger_tooltip = {
 				tooltip = SOV_nk_forfeit_ctt 
 				check_variable ={
-				var = SOV_NK_aid
+				var = CHI_NK_aid
 				value = 50
 				compare = greater_than_or_equals
 			}

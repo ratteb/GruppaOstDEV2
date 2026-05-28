@@ -2,6 +2,7 @@
 
  # GENERIC 
   new_decision_cmt: "§YNew Decisions£decision_icon_small Will Be Available§!!"
+  nk_economic_aid_cet: "Modify §YNorth Korean Economy§! by\nConsumer Goods: §Y-0.5%§!\nResearch Speed: §G+1.00%§!\nConstruction Speed: §G+1.00%§!\n§YCivillian Factory§! Construction Speed: §G+1.00%§!"
  # Sotnik 1 Modernization Programme 
   SOV_sotnik1_announcement_cet: "\n\nWe will begin the proccess of completely reforming and modernizing the §RArmed Forces of the Russian Federation§! After learning our mistakes in the §0Special Military Operation§!\n§YNew Decisions£decision_icon_small Will Be Available§!!"
   SOV_sotnik_program_cmt: "§RDue to the major reforms being implemented, the Ministry of Defense has ordered a stop to all new formations of brigades!§!"

@@ -9,4 +9,15 @@ SOV_korean_cap = {
 	}
 }
 
+CHI_korean_cap = {
+	AND = {
+		has_country_flag = CHI_help_NK50
+		check_variable = {
+					var = CHI_NK_aid
+					value = 50
+					compare = greater_than_or_equals
+				}
+	}
+}
+
 # The main trigger used by the GUI to check if the button should be visible
