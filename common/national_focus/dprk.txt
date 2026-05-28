@@ -3,6 +3,7 @@ focus_tree = {
 	id = dprk_focus_tree
 	
 	country = {
+		factor = 0
 		
 		modifier = {
 			add = 10

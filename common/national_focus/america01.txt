@@ -1137,8 +1137,7 @@ focus_tree = {
 
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = USA_border_crisis_ctt
-				has_country_flag = USA_border_crisis_begins
+				tooltip = USA_border_trump_call_ctt
 			}
 		}
 		
@@ -1150,8 +1149,13 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
-			
+			MEX = {
+				country_event = {
+					id = USA_border.8
+					days = 10 
+				}
+				custom_effect_tooltip = USA_mexico_trump_call_cet
+			}
 		}
 	}
 
@@ -1173,10 +1177,7 @@ focus_tree = {
 		}
 
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = USA_border_crisis_ctt
-				has_country_flag = USA_border_crisis_begins
-			}
+			has_country_flag = USA_mexico_disagrees
 		}
 		
 		bypass = {
@@ -1572,10 +1573,7 @@ focus_tree = {
 		}
 
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = USA_border_crisis_ctt
-				has_country_flag = USA_border_crisis_begins
-			}
+			has_country_flag = USA_mexico_agrees
 		}
 		
 		bypass = {
@@ -1586,8 +1584,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
-			
 		}
 	}
 

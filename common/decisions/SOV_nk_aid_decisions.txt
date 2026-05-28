@@ -8,12 +8,17 @@ SOV_nk_aid_decision_cat = {
 				tooltip = SOV_nk_economic_aid_ctt
 				SOV_korean_cap = no
 			} 
+			check_variable = {
+					var = SOV_nk_economic_aid_timer
+					value = 10
+					compare = less_than
+				}
 		}
 
 		visible = {
 			has_country_flag = SOV_help_NK50
 		}
-		days_re_enable = 50 
+		days_re_enable = 0
 		days_remove = 45
 
 		modifier = {
@@ -33,6 +38,11 @@ SOV_nk_aid_decision_cat = {
 			add_to_variable = {
 				var = SOV_NK_aid
 				value = 2
+			}
+
+			add_to_variable = {
+				var = SOV_nk_economic_aid_timer
+				value = 1
 			}
 
 			custom_effect_tooltip = nk_economic_aid_cet

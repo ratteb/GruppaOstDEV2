@@ -828,4 +828,115 @@ country_event = {
     }
 }
 
+# Trump calls Mexico
+country_event = {
+	id = USA_border.8
+	title = USA_border.8.t
+	desc = USA_border.8.d
+	picture = GFX_report_event_bortac
+
+	is_triggered_only = yes 
+	
+	option = { # Border Crisis Begins
+		name = USA_border.8.a
+		ai_chance = { base = 60
+		modifier = {
+			has_opinion = {
+				target = USA 
+				value > 50
+			}
+			add = -50
+		}
+
+		modifier = {
+			has_opinion = {
+				target = USA 
+				value > 20
+			}
+			add = 20
+		}
+
+		modifier = {
+			has_opinion = {
+				target = USA 
+				value < 0
+			}
+			add = 50
+		}
+
+	    }
+		set_country_flag = USA_mexico_disagrees
+		USA = {
+			complete_national_focus = USA_negotiations_fail
+
+			country_event = USA_border.9
+		}
+    }
+
+	option = { # Border Crisis Begins
+		name = USA_border.8.b
+		ai_chance = { base = 40
+		modifier = {
+			has_opinion = {
+				target = USA 
+				value > 50
+			}
+			add = 50
+		}
+
+		modifier = {
+			has_opinion = {
+				target = USA 
+				value > 20
+			}
+			add = 20
+		}
+
+		modifier = {
+			has_opinion = {
+				target = USA 
+				value < 0
+			}
+			add = -50
+		}
+	    }
+		set_country_flag = USA_mexico_agrees
+		USA = {
+			complete_national_focus = USA_mexico_agrees
+
+			country_event = USA_border.10
+		}
+    }
+}
+
+# Mexico Disagrees
+country_event = {
+	id = USA_border.9
+	title = USA_border.9.t
+	desc = USA_border.9.d
+	picture = GFX_report_event_bortac
+
+	is_triggered_only = yes 
+	
+	option = { # Border Crisis Begins
+		name = USA_border.9.a
+		ai_chance = { factor = 90 }
+    }
+}
+
+# Mexico Agrees
+country_event = {
+	id = USA_border.10
+	title = USA_border.10.t
+	desc = USA_border.10.d
+	picture = GFX_report_event_bortac
+
+	is_triggered_only = yes 
+	
+	option = { # Border Crisis Begins
+		name = USA_border.10.a
+		ai_chance = { factor = 90 }
+    }
+}
+
 
