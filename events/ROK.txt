@@ -65,6 +65,8 @@ country_event = {
 			set_country_flag = ROK_nuke
 		}
 
+		set_country_flag = USA_help_SK_nuke
+
     }
 	option = { # No Nuke 
 		name = ROK_USA.1.b
@@ -83,6 +85,8 @@ country_event = {
 		 ROK = {
 			set_country_flag = ROK_no_nuke
 		 }
+		 
+		 set_country_flag = USA_help_SK_no_nuke
     }
 }
 

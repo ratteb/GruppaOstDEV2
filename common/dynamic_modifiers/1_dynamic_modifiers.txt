@@ -235,6 +235,15 @@ KOR_economic_situation = {
 	
 
 }
+
+ROK_nuclear_state = {
+	icon = "GFX_idea_no_data"
+
+	custom_modifier_tooltip = ROK_nuclear_progress_CMT
+
+	
+
+}
 CHI_chinese_century_idea = {
 	icon = "GFX_idea_no_data"
 

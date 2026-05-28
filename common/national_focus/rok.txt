@@ -78,6 +78,9 @@ focus_tree = {
 					days = 1 
 				}
 			}
+			add_dynamic_modifier = {
+				modifier = ROK_nuclear_state
+			}
 		}
 	}
 

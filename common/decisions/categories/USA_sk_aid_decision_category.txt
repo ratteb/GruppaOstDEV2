@@ -1,0 +1,15 @@
+USA_sk_aid_decision_cat = {
+	icon = generic_political_actions
+	picture = GFX_CHI_nk_aid_decision_cat_picture
+	priority = 50
+	visible_when_empty = yes
+	allowed = {
+		tag = USA
+	}
+	visible = {
+		OR = {
+			has_country_flag = USA_help_SK_nuke
+			has_country_flag = USA_help_SK_no_nuke
+		}
+	}
+}

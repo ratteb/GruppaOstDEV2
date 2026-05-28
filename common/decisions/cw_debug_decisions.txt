@@ -294,7 +294,7 @@ cw_gui_debug_mode = {
 		}
 	}
 
-	iw_gui_debug_open_nk_aid = {
+	iw_gui_debug_open_korean_aid = {
 
 		icon = generic_industry
 
@@ -322,6 +322,13 @@ cw_gui_debug_mode = {
 					tag = CHI 
 				}
 				set_country_flag = CHI_help_NK50
+			}
+
+			else_if = {
+				limit = {
+					tag = USA
+				}
+				set_country_flag = USA_help_SK_nuke
 			}
 		}
 		
