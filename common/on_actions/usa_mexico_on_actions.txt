@@ -1,0 +1,73 @@
+on_actions = {
+
+	on_daily_USA = {
+		effect = {
+
+	set_temp_variable = {
+		temp_mexico_USA_cia_secrecy = mexico_USA_cia_secrecy
+	}
+	log = "[?mexico_USA_cia_secrecy] is = to [?temp_mexico_USA_cia_secrecy]"
+
+	set_temp_variable = {
+		temp_mexico_USA_cia_effectiveness = mexico_USA_cia_effectiveness
+	}
+	log = "[?mexico_USA_cia_effectiveness] is = to [?temp_mexico_USA_cia_effectiveness]"
+	multiply_temp_variable = {
+    var = temp_mexico_USA_cia_effectiveness
+    value = 2
+         }
+		log = "[?temp_mexico_USA_cia_effectiveness]"
+	
+
+	divide_temp_variable = {
+		var = temp_mexico_USA_cia_secrecy
+		value = 100
+	}
+	log = "decimal cia [?temp_mexico_USA_cia_secrecy]"
+
+	multiply_temp_variable = {
+    var = temp_mexico_USA_cia_secrecy
+    value = temp_mexico_USA_cia_effectiveness
+         }
+	log = "leftover [?temp_mexico_USA_cia_secrecy]"
+
+	subtract_from_temp_variable = {
+		var = temp_mexico_USA_cia_effectiveness
+		value = temp_mexico_USA_cia_secrecy
+	}
+	log = "[?temp_mexico_USA_cia_effectiveness] got reduced by [?temp_mexico_usa_cia_secrecy]"
+
+
+	set_variable = {
+		var = USA_mexico_success_points
+		value = temp_mexico_USA_cia_effectiveness
+	}
+
+	log = "success chance [?USA_mexico_success_points]"
+
+	set_variable = {
+		var = USA_mexico_100
+		value = 100
+	}
+
+	subtract_from_variable = {
+		var = USA_mexico_100
+		value =  temp_mexico_USA_cia_effectiveness
+	}
+
+	log = "[temp_mexico_USA_cia_effectiveness] - 100 = [?USA_mexico_fail_points]"
+
+	set_variable = {
+		var = USA_mexico_fail_points
+		value = USA_mexico_100
+	}
+
+	log = "fail chance [?USA_mexico_fail_points]"
+
+		}
+	}
+}
+
+
+
+

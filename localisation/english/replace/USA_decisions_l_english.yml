@@ -1,3 +1,6 @@
 ﻿l_english:
  USA_sk_aid_decision_cat: "South Korea is our Asian ally, however it is currently under direct threat of the North. The Republic has asked us for aid in military matters"
  ROK_nuclear_progress_CMT: "Our Current Progress Is: [?SK_nuke_progress|0%%]"
+ USA_mexico_decision_cat: "Operation SOUTHERN ANCHOR"
+ USA_mexico_decision_cat_desc: "Our Operational Exposure is: [?mexico_USA_cia_secrecy|0%%]\nOur Operational Effectiveness is: [?mexico_USA_cia_effectiveness|0%%]"
+ USA_mexico_cia_operation_mission: "Operation SOUTHERN ANCHOR: Result..."

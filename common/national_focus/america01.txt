@@ -1154,8 +1154,15 @@ focus_tree = {
 					id = USA_border.8
 					days = 10 
 				}
-				custom_effect_tooltip = USA_mexico_trump_call_cet
 			}
+				custom_effect_tooltip = USA_mexico_trump_call_cet
+				hidden_effect = {
+					country_event = {
+						id = USA_border.11
+						hours = 3
+					}
+				}
+			
 		}
 	}
 
@@ -1224,8 +1231,24 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			
-			
+			custom_effect_tooltip = new_decision_cmt
+			set_country_flag = USA_mexico_cia_operation
+			set_variable = {
+				var = mexico_USA_cia_secrecy
+				value = 25
+			}
+
+			set_variable = {
+				var = mexico_USA_cia_effectiveness
+				value = 30
+			}
+			add_command_power = 50
+
+			add_timed_idea = {
+				idea = USA_cia_planning
+				days = 40
+			}
+
 		}
 	}
 
@@ -1584,6 +1607,9 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			MEX = {
+				give_military_access = USA
+			}
 		}
 	}
 
@@ -1618,6 +1644,43 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			if = {
+				limit = {
+					check_variable = {
+						var = USA_mexico_concessions
+						value = 1
+						compare = equals 
+					}
+				}
+				custom_effect_tooltip = USA_mexico_dea_1_c_cet
+			}
+			else_if = {
+				limit = {
+				check_variable = {
+						var = USA_mexico_concessions
+						value = 2
+						compare = equals 
+					}
+			}
+			custom_effect_tooltip = USA_mexico_dea_2_c_cet
+		}
+
+		else_if = {
+				limit = {
+				check_variable = {
+						var = USA_mexico_concessions
+						value = 3
+						compare = equals 
+					}
+			}
+			custom_effect_tooltip = USA_mexico_dea_3_c_cet
+		}
+
+		else = {
+			custom_effect_tooltip = USA_mexico_dea_0_c_cet
+
+		}
+			
 			
 			
 		}

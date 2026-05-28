@@ -18,6 +18,30 @@ opinion_modifiers = {
 		value = 30
 	}
 
+	USA_mexico_border_crisis = {
+		value = -30
+	}
+
+	USA_mexico_diplomatic_envoy = {
+		value = 5
+	}
+
+	USA_mexico_fair_negotiations = {
+		value = 5
+	}
+
+	USA_mexico_negotiations_concession_1 = {
+		value = 15
+	}
+
+	USA_mexico_negotiations_concession_2 = {
+		value = 15
+	}
+
+	USA_mexico_negotiations_concession_3 = {
+		value = 25
+	}
+
 	cheat_opinion_modifier_good = {
 		value = 200
 	}
