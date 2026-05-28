@@ -1,0 +1,15 @@
+SOV_nk_aid_decision_cat = {
+	icon = generic_political_actions
+	picture = GFX_SOV_nk_aid_decision_cat_picture
+	priority = 50
+	visible_when_empty = yes
+	allowed = {
+		tag = SOV 
+	}
+	visible = {
+		OR = {
+			has_country_flag = SOV_help_NK50
+			has_country_flag = SOV_help_NK100
+		}
+	}
+}

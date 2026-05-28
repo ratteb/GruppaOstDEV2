@@ -808,3 +808,24 @@ country_event = {
 }
 
 
+# Border Wall Report 
+country_event = {
+	id = USA_border.7
+	title = USA_border.7.t
+	desc = USA_border.7.d
+	picture = GFX_report_event_bortac
+
+	is_triggered_only = yes 
+	
+	option = { # Border Crisis Begins
+		name = USA_border.7.a
+		ai_chance = { factor = 90 }
+		set_variable = {
+			var = USA_build_wall_progress
+			value = 0
+			tooltip = USA_wall_fail_beg_tt
+		}
+    }
+}
+
+

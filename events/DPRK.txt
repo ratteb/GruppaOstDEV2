@@ -37,6 +37,22 @@ country_event = {
 }
 
 country_event = {
+	id = DPRK_russia.2
+	title = DPRK_russia.2.t
+	desc = DPRK_russia.2.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Ask for help 
+		name = DPRK_russia.2.a
+		ai_chance = { factor = 70 }
+		set_country_flag = SOV_help_completed
+    }
+
+}
+
+country_event = {
 	id = DPRK_foreign.1
 	title = DPRK_foreign.1.t
 	desc = DPRK_foreign.1.d

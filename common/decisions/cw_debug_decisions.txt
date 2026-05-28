@@ -33,6 +33,7 @@ cw_gui_debug_mode = {
 
 		visible = {
 			is_debug = yes
+			tag = SOV 
 		}
 
 		fire_only_once = no
@@ -58,6 +59,7 @@ cw_gui_debug_mode = {
 
 		visible = {
 			is_debug = yes
+			tag = SOV 
 		}
 
 		fire_only_once = no
@@ -135,6 +137,7 @@ cw_gui_debug_mode = {
 		visible = {
 			is_debug = yes
 			has_country_flag = NOV_buying_russian_gear
+			tag = NOV
 		}
 
 		fire_only_once = no
@@ -160,6 +163,7 @@ cw_gui_debug_mode = {
 
 		visible = {
 			is_debug = yes
+			tag = SOV 
 		}
 
 		fire_only_once = no
@@ -187,6 +191,7 @@ cw_gui_debug_mode = {
 
 		visible = {
 			is_debug = yes
+			tag = SOV 
 		}
 
 		fire_only_once = no
@@ -281,6 +286,42 @@ cw_gui_debug_mode = {
 			subtract_from_variable = {
 				var = global.SYR_civil_war_progress 
 				value = 5
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	iw_gui_debug_open_nk_aid = {
+
+		icon = generic_industry
+
+		available = {
+			is_ai = no
+		}
+
+		visible = {
+			is_debug = yes
+		}
+
+		fire_only_once = no
+
+		cost = 0
+
+		complete_effect = {
+			if = {
+				limit = {
+					tag = SOV
+				}
+				set_country_flag = SOV_help_NK50
+			}
+			else_if = {
+				limit = {
+					tag = CHI 
+				}
+				set_country_flag = CHI_help_NK50
 			}
 		}
 		

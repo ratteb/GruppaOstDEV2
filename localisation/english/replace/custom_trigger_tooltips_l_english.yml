@@ -13,6 +13,10 @@
  SOV_duma_holds_ctt: "§RThe Duma Holds!§!"
  SOV_duma_falls_ctt: "§RThe Duma Falls!§!"
 
+ # Russia 
+ SOV_nk_forfeit_ctt: "§GWe Have Sufficiently Aided North Korea§!"
+ SOV_nk_economic_aid_ctt: "§GWe Haven't Pushed The Limit§!"
+
  # Belarus
  BLR_2035_plan_interrupted: "§RUnion State Integration Plan - 2035 Has Not Been Interrupted§!"
  

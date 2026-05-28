@@ -81,7 +81,8 @@
   CHI_xi_legacy_secure_CET:0 "§RWe Will Decide the Future of China.§!"
   # USA
   USA_aipac_cmt:0 "Our opinion of §YState of Israel§!: §G+35§!\n§YState of Israel§! opinion of us: §G+35§!"
-  USA_wall_start:0 "Add §YThe U.S-Mexican Border Wall Construction§! which grants:\nPolitical Power Gain: §R-5%§!\nMonthly Border Wall Funds: §G+$50M§!\n\n§1We will have 260 days to complete the wall project as Trump promised...§!"
+  USA_wall_start:0 "Add §YThe U.S-Mexican Border Wall Construction§! which grants:\nPolitical Power Gain: §R-5%§!\nMonthly Border Wall Funds: §G+$50M§!\n\n§1We will have 260 days to complete the wall project as Trump promised...§!\n\n§GDue to the previously built sections our progress bings at 15%!§!"
+  USA_wall_fail_beg_tt:0 "§ROur progress has been set back to 0.§!"
   USA_aipac_funding_CET:0 "Modify §YThe U.S-Mexican Border Wall Construction§! by\nMonthly Border Wall Funds: §G+$75M§!\n\nOur corruption increases by: §R+30§!"
   USA_no_aipac_funding_CET:0 "Modify §YThe U.S-Mexican Border Wall Construction§! by\nMonthly Border Wall Funds: §R-$75M§!\n\nOur corruption decreases by: §G-30§!"
   USA_increase_IP_tooltip:0 "We Will Spend:§R-$500M§!\nWe Will Gain:§G+1 IP§!"

@@ -26,3 +26,5 @@
  SOV_sotnik_nco_expansion:0 "Integrate NCO System For Conscripts"
  SOV_sotnik_nco_training:0 "Provide NCO Training"
  integrate_NCO_sotnik_var_tt:0 "Modify §RArmed Forces of the Russian Federation§! by\nArmy Organization Regain: §G+5.00%§!\nDivision Organization: §R-5.00%§!\nPlanning Speed: §G+7.00%§!"
+
+ SOV_nk_aid_decision_cat_desc:0 "§RNote to Player: This Does Not Have to be Rushed! Take your time and see where it leads!\n\n§!Ever since 1945, the Korean Peninsula has been split apart in 2 distinct states. The South, under a U.S backed capitalist dictatorship, and the North, under a Soviet backed communist dictatorship. Ever since 1950 the 2 countries have been in a state of war. While we may not share ideological values with the North, they have requested us for help and aid against their Southern neighbour. Therefore the Russian Federation sees it as imperative that we aid and support the Kim Regime to counter the West.\n\nOur current level of support to the DPRK is: [?SOV_NK_aid|0%%]"

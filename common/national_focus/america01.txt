@@ -91,10 +91,18 @@ focus_tree = {
 				var = USA_wall_pp_gain
 				value = -0.05
 			}
+			set_variable = {
+				var = USA_build_wall_progress
+				value = 15
+			}
 			hidden_effect = {
 				activate_mission = USA_build_wall_mission
 				add_dynamic_modifier = {
 				modifier = USA_wall_modifier
+			}
+			country_event = {
+				id = USA_border.7
+				days = 5
 			}
 			}
 		}
@@ -935,9 +943,10 @@ focus_tree = {
 	# Border Crisis
     focus = {
 		id = USA_border_crisis
+		#allow_branch = { has_country_flag = USA_border_crisis_begins }
 		icon = GFX_goal_border_crisis
-		x = 34
-		y = 9
+		x = 36
+		y = 3
 
 		cost = 0.5
 
@@ -962,6 +971,731 @@ focus_tree = {
 		completion_reward = {
 			country_event = USA_border.6
 			stability = -0.05			
+		}
+	}
+
+	focus = {
+		id = USA_tragedy_but
+		prerequisite = {
+			focus = USA_border_crisis
+		}
+		mutually_exclusive = { focus = USA_mexico_trump_call }
+		relative_position_id =  USA_border_crisis
+		icon = GFX_goal_no_data
+		x = 3
+		y = 1
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_border_crisis_ctt
+				has_country_flag = USA_border_crisis_begins
+			}
+		}
+		
+		bypass = {
+        }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			
+		}
+	}
+
+	focus = {
+		id = USA_strengthen_ice_bp
+		prerequisite = {
+			focus = USA_tragedy_but
+		}
+		relative_position_id =  USA_tragedy_but
+		icon = GFX_goal_no_data
+		x = 0
+		y = 1
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_border_crisis_ctt
+				has_country_flag = USA_border_crisis_begins
+			}
+		}
+		
+		bypass = {
+        }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			
+		}
+	}
+
+	focus = {
+		id = USA_restore_mexican_relations
+		prerequisite = {
+			focus = USA_strengthen_ice_bp
+		}
+		relative_position_id =  USA_strengthen_ice_bp
+		icon = GFX_goal_no_data
+		x = 0
+		y = 1
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_border_crisis_ctt
+				has_country_flag = USA_border_crisis_begins
+			}
+		}
+		
+		bypass = {
+        }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			
+		}
+	}
+
+	focus = {
+		id = USA_patch_wall
+		prerequisite = {
+			focus = USA_restore_mexican_relations
+		}
+		relative_position_id =  USA_restore_mexican_relations
+		icon = GFX_goal_no_data
+		x = 0
+		y = 1
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_border_crisis_ctt
+				has_country_flag = USA_border_crisis_begins
+			}
+		}
+		
+		bypass = {
+        }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			
+		}
+	}
+	focus = {
+		id = USA_mexico_trump_call
+		prerequisite = {
+			focus = USA_border_crisis
+		}
+		mutually_exclusive = { focus = USA_tragedy_but }
+		relative_position_id =  USA_border_crisis
+		icon = GFX_goal_no_data
+		x = -3
+		y = 1
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_border_crisis_ctt
+				has_country_flag = USA_border_crisis_begins
+			}
+		}
+		
+		bypass = {
+        }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			
+		}
+	}
+
+	focus = {
+		id = USA_negotiations_fail
+		prerequisite = {
+			focus = USA_mexico_trump_call
+		}
+		mutually_exclusive = { focus = USA_mexico_agrees }
+		relative_position_id =  USA_mexico_trump_call
+		icon = GFX_goal_no_data
+		x = -1
+		y = 1
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_border_crisis_ctt
+				has_country_flag = USA_border_crisis_begins
+			}
+		}
+		
+		bypass = {
+        }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			
+		}
+	}
+
+	focus = {
+		id = USA_cia_operation
+		prerequisite = {
+			focus = USA_negotiations_fail
+		}
+		relative_position_id =  USA_negotiations_fail
+		icon = GFX_goal_no_data
+		x = 0
+		y = 1
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_border_crisis_ctt
+				has_country_flag = USA_border_crisis_begins
+			}
+		}
+		
+		bypass = {
+        }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			
+		}
+	}
+
+	focus = {
+		id = USA_mexico_succumbs
+		prerequisite = {
+			focus = USA_cia_operation
+		}
+		mutually_exclusive = { focus = USA_mexico_holds }
+		relative_position_id =  USA_cia_operation
+		icon = GFX_goal_no_data
+		x = -1
+		y = 1
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_border_crisis_ctt
+				has_country_flag = USA_border_crisis_begins
+			}
+		}
+		
+		bypass = {
+        }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			
+		}
+	}
+
+	focus = {
+		id = USA_send_in_seal
+		prerequisite = {
+			focus = USA_mexico_succumbs
+		}
+		relative_position_id =  USA_mexico_succumbs
+		icon = GFX_goal_no_data
+		x = 0
+		y = 1
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_border_crisis_ctt
+				has_country_flag = USA_border_crisis_begins
+			}
+		}
+		
+		bypass = {
+        }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			
+		}
+	}
+
+	focus = {
+		id = USA_operational_beheading
+		prerequisite = {
+			focus = USA_send_in_seal
+		}
+		relative_position_id =  USA_send_in_seal
+		icon = GFX_goal_no_data
+		x = 0
+		y = 1
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_border_crisis_ctt
+				has_country_flag = USA_border_crisis_begins
+			}
+		}
+		
+		bypass = {
+        }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			
+		}
+	}
+
+	focus = {
+		id = USA_air_dominance
+		prerequisite = {
+			focus = USA_operational_beheading
+		}
+		relative_position_id =  USA_operational_beheading
+		icon = GFX_goal_no_data
+		x = 0
+		y = 1
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_border_crisis_ctt
+				has_country_flag = USA_border_crisis_begins
+			}
+		}
+		
+		bypass = {
+        }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			
+		}
+	}
+
+	focus = {
+		id = USA_final_cleanup
+		prerequisite = {
+			focus = USA_air_dominance
+		}
+		relative_position_id =  USA_air_dominance
+		icon = GFX_goal_no_data
+		x = 0
+		y = 1
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_border_crisis_ctt
+				has_country_flag = USA_border_crisis_begins
+			}
+		}
+		
+		bypass = {
+        }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			
+		}
+	}
+
+	focus = {
+		id = USA_mexico_holds
+		prerequisite = {
+			focus = USA_cia_operation
+		}
+		mutually_exclusive = { focus = USA_mexico_succumbs }
+		relative_position_id =  USA_cia_operation
+		icon = GFX_goal_no_data
+		x = 1
+		y = 1
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_border_crisis_ctt
+				has_country_flag = USA_border_crisis_begins
+			}
+		}
+		
+		bypass = {
+        }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			
+		}
+	}
+
+	focus = {
+		id = USA_del_rio_res
+		prerequisite = {
+			focus = USA_mexico_holds
+		}
+		relative_position_id =  USA_mexico_holds
+		icon = GFX_goal_no_data
+		x = 0
+		y = 1
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_border_crisis_ctt
+				has_country_flag = USA_border_crisis_begins
+			}
+		}
+		
+		bypass = {
+        }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			
+		}
+	}
+
+	focus = {
+		id = USA_op_van_jus
+		prerequisite = {
+			focus = USA_del_rio_res
+		}
+		relative_position_id =  USA_del_rio_res
+		icon = GFX_goal_no_data
+		x = 0
+		y = 1
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_border_crisis_ctt
+				has_country_flag = USA_border_crisis_begins
+			}
+		}
+		
+		bypass = {
+        }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			
+		}
+	}
+
+	focus = {
+		id = USA_its_a_go
+		prerequisite = {
+			focus = USA_op_van_jus
+		}
+		relative_position_id =  USA_op_van_jus
+		icon = GFX_goal_no_data
+		x = 0
+		y = 1
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_border_crisis_ctt
+				has_country_flag = USA_border_crisis_begins
+			}
+		}
+		
+		bypass = {
+        }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			
+		}
+	}
+
+	focus = {
+		id = USA_mexico_agrees
+		prerequisite = {
+			focus = USA_mexico_trump_call
+		}
+		mutually_exclusive = { focus = USA_negotiations_fail }
+		relative_position_id =  USA_mexico_trump_call
+		icon = GFX_goal_no_data
+		x = 2
+		y = 1
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_border_crisis_ctt
+				has_country_flag = USA_border_crisis_begins
+			}
+		}
+		
+		bypass = {
+        }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			
+		}
+	}
+
+	focus = {
+		id = USA_mexico_dea
+		prerequisite = {
+			focus = USA_mexico_agrees
+		}
+		relative_position_id =  USA_mexico_agrees
+		icon = GFX_goal_no_data
+		x = 0
+		y = 1
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_border_crisis_ctt
+				has_country_flag = USA_border_crisis_begins
+			}
+		}
+		
+		bypass = {
+        }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			
+		}
+	}
+
+	focus = {
+		id = USA_US_army_contingent
+		prerequisite = {
+			focus = USA_mexico_dea
+		}
+		relative_position_id =  USA_mexico_dea
+		icon = GFX_goal_no_data
+		x = 0
+		y = 1
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_border_crisis_ctt
+				has_country_flag = USA_border_crisis_begins
+			}
+		}
+		
+		bypass = {
+        }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			
+		}
+	}
+
+	focus = {
+		id = USA_mexico_stable
+		prerequisite = {
+			focus = USA_US_army_contingent
+		}
+		relative_position_id =  USA_US_army_contingent
+		icon = GFX_goal_no_data
+		x = 0
+		y = 1
+
+		cost = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_border_crisis_ctt
+				has_country_flag = USA_border_crisis_begins
+			}
+		}
+		
+		bypass = {
+        }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+			
 		}
 	}
 }	

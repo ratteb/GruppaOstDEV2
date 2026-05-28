@@ -192,6 +192,34 @@ SOV_sotnik_program = {
 	land_night_attack = KOR_nightvis_variable
 }
 
+KOR_new_korean_peoples_army = {
+	icon = "GFX_idea_no_data"
+
+
+	conscription_factor = KOR_manpower_factor_variable
+	conscription  = KOR_manpower_variable 
+	acclimatization_cold_climate_gain_factor = KOR_cold_defense_variable
+	acclimatization_hot_climate_gain_factor = KOR_hot_defense_variable
+	air_superiority_bonus_in_combat = KOR_cas_bonus_variable
+	army_attack_factor = KOR_attack_bonus_variable
+	army_attack_speed_factor = KOR_attack_speed_variable
+	army_defence_factor = KOR_defense_variable 
+	army_speed_factor = KOR_speed_variable
+	army_morale_factor = KOR_morale_variable
+	army_org_factor = KOR_org_variable
+	army_org_regain = KOR_recovery_variable
+	breakthrough_factor = KOR_breakthrough_variable
+	cas_damage_reduction = KOR_camouflage_variable
+	dig_in_speed_factor = KOR_dig_speed_variable
+	max_dig_in_factor = KOR_dig_max_variable
+	max_planning_factor = KOR_planning_variable
+	planning_speed = KOR_planning_speed_variable
+	experience_loss_factor = KOR_xp_protection_variable
+    experience_gain_army_factor = KOR_xp_gain_variable
+	special_forces_min = KOR_special_forces_variable
+	land_night_attack = KOR_nightvis_variable
+}
+
 KOR_economic_situation = {
 	icon = "GFX_idea_no_data"
 

@@ -1,0 +1,107 @@
+SOV_nk_aid_decision_cat = {
+	SOV_nk_economic_aid = {
+
+		icon = generic_industry
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOV_nk_economic_aid_ctt
+				SOV_korean_cap = no
+			} 
+		}
+
+		visible = {
+			has_country_flag = SOV_help_NK50
+		}
+		days_re_enable = 50 
+		days_remove = 45
+
+		fire_only_once = no
+
+
+		custom_cost_trigger = {
+			has_political_power > 25
+		}
+		custom_cost_text = SOV_csto_training_cost
+
+		complete_effect = {
+			add_to_variable = {
+				var = SOV_NK_aid
+				value = 2
+			}
+
+			KOR = {
+				subtract_from_variable = {
+					var = KOR_cg
+					value = 0.005
+				}
+				add_to_variable = {
+					var = KOR_rs
+					value = 0.01
+				}
+			}
+		}
+		remove_effect = {  
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				add = -10
+				has_opinion = {
+					target = KOR 
+					value < 10
+				}
+				
+			}
+		}
+	}
+
+	SOV_nk_forfeit = {
+
+		icon = generic_industry
+
+		visible = {
+				has_country_flag = SOV_help_NK50
+			NOT = {
+				has_country_flag = SOV_help_NK100
+			}
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOV_nk_forfeit_ctt 
+				check_variable ={
+				var = SOV_NK_aid
+				value = 50
+				compare = greater_than_or_equals
+			}
+			}
+		}
+
+		fire_only_once = yes
+
+
+		custom_cost_trigger = {
+			has_political_power > 25
+		}
+		custom_cost_text = SOV_csto_training_cost
+
+		complete_effect = {
+			KOR = {
+				country_event = {
+					id = DPRK_russia.2
+					days = 5
+				}
+			}
+		}
+		remove_effect = {  
+		}
+		
+		ai_will_do = {
+			factor = 0 
+		}
+	}
+
+
+}
