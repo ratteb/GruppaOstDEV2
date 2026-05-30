@@ -9,4 +9,5 @@ SOV_sotnik_decision_cat = {
 	visible = {
 		has_country_flag = SOV_sotnik_allowed
 	}
+	scripted_gui = SOV_sotnik_programme_gui
 }

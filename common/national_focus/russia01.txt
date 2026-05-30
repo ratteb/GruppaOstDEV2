@@ -47,6 +47,25 @@ focus_tree = {
 
 			country_event = SOV_sotnik.1
 			set_country_flag = SOV_sotnik_allowed
+			set_variable = {
+				var = SOV_shoigu_support
+				value = 60
+			}
+
+			set_variable = {
+				var = SOV_shoigu_influence
+				value = 55
+			}
+
+			set_variable = {
+				var = SOV_gerasimov_support
+				value = 40
+			}
+
+			set_variable = {
+				var = SOV_gerasimov_influence
+				value = 45
+			}
 	    }
 	}
 	focus = {
@@ -339,6 +358,26 @@ focus_tree = {
 			add_to_variable = {
 				var = RAF_org_variable
 				value = -0.15
+			}
+
+			add_to_variable = {
+				var = SOV_gerasimov_support
+				value = 3
+			}
+
+			add_to_variable = {
+				var = SOV_gerasimov_influence
+				value = 5
+			}
+
+			subtract_from_variable = {
+				var = SOV_shoigu_support
+				value = 3
+			}
+
+			subtract_from_variable = {
+				var = SOV_shoigu_influence
+				value = 5
 			}
 
 			add_manpower = 2750
@@ -1617,6 +1656,23 @@ focus_tree = {
 		}
 
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOV_sotnik1_finished_ctt
+			AND = {
+			OR = {
+				SOV_gerasimov_failure = yes 
+				SOV_gerasimov_success = yes 
+				SOV_shoigu_success = yes
+				SOV_shoigu_failure = yes  
+			}
+			check_var = {
+				var = SOV_sotnik_progress
+				value = 100
+				compare = equals 
+			}
+		}
+	}
+
 		}
 		
 		bypass = {
@@ -1713,6 +1769,7 @@ focus_tree = {
 				}
 			}
 
+			# Shoigu failed support
 			else_if = {
 				limit = {
 					has_country_flag = SOV_shoigu_doctrine

@@ -1,3 +1,13 @@
 ﻿l_english:
  sotnik_tooltip_1_tt:0 "§GStrengthens the Officer Corps§!"
+ sotnik_shoigu_support_loc:0 "§GThe Old Guard§! Has: [?SOV_shoigu_support|0%%] Support"
+ sotnik_shoigu_influence_loc:0 "§GThe Old Guard§! Has: [?SOV_shoigu_influence|0%%] Influence"
+ sotnik_gerasimov_support_loc:0 "§CThe Reformist Clique§! Has: [?SOV_gerasimov_support|0%%] Support"
+ sotnik_gerasimov_influence_loc:0 "§CThe Reformist Clique§! Has: [?SOV_gerasimov_influence|0%%] Influence"
+ SOV_sotnik_chose_gerasimov:0 "Our Future Military Doctrine: §CThe Gerasimov Doctrine§!"
+ SOV_sotnik_chose_shoigu:0 "Our Future Military Doctrine: §GThe Shoigu Doctrine§!"
+ SOV_sotnik_chose_nobody:0 "Our Future Military Doctrine: To Be Determined"*
+ SOV_shoigu_dominance:0 "§GThe Old Guard§! Is Currently Dominating"
+ SOV_gerasimov_dominance:0 "§CThe Reformist Clique§! Is Currently Dominating"
+ SOV_no_dominance:0 "Nobody is Currently Dominating"
  

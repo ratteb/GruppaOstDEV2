@@ -1,0 +1,42 @@
+scripted_gui = {
+
+
+	SOV_sotnik_programme_gui = {
+    window_name = "sotnik_scripted_gui_window"
+    context_type = decision_category
+
+    visible = {
+      has_country_flag = SOV_sotnik_allowed
+    }
+
+    effects = {
+    }
+
+    triggers = {
+    }
+
+	triggers = {
+    }
+
+    dynamic_lists = {
+	  }
+
+    properties = {  
+	}
+
+    ai_enabled = {
+    }
+
+    ai_test_interval = 290  # The higher, the long it takes the ai to do actions
+	ai_test_variance = 0.5
+
+    ai_check = {
+    }
+
+    ai_check_scope = {
+    }
+
+    ai_weights = {
+    }
+  }
+}

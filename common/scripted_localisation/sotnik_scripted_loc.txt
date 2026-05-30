@@ -1,0 +1,65 @@
+#Titles
+defined_text = {
+    name = get_faction_sotnik_support
+
+    text = {
+        trigger = {
+           has_country_flag = SOV_gerasimov_doctrine
+        }
+           localization_key = SOV_sotnik_chose_gerasimov
+        }
+    text = {
+        trigger = {
+            has_country_flag = SOV_shoigu_doctrine
+        }
+        localization_key = SOV_sotnik_chose_shoigu
+    }
+
+   text = {
+    trigger = {
+        NOT = {
+            has_country_flag = SOV_shoigu_doctrine
+            has_country_flag = SOV_gerasimov_doctrine
+        }
+    }
+        localization_key = SOV_sotnik_chose_nobody
+    }
+
+}
+
+defined_text = {
+    name = get_faction_sotnik_dominance
+
+    text = {
+        trigger = {
+           check_var = {
+            var = SOV_shoigu_power
+            value = SOV_gerasimov_power
+            compare = less_than 
+           }
+        }
+           localization_key = SOV_shoigu_dominance
+        }
+    text = {
+        trigger = {
+           check_var = {
+            var = SOV_shoigu_power
+            value = SOV_gerasimov_power
+            compare = greater_than
+           }
+        }
+           localization_key = SOV_gerasimov_dominance
+        }
+
+  text = {
+        trigger = {
+           check_var = {
+            var = SOV_shoigu_power
+            value = SOV_gerasimov_power
+            compare = equals
+           }
+        }
+           localization_key = SOV_no_dominance
+        }
+
+}

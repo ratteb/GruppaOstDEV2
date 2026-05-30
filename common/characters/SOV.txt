@@ -191,5 +191,26 @@ characters={
 		
 	}
 
+	SOV_valery_gerasimov ={
+		name="Valery Gerasimov"
+		portraits={
+			civilian={
+				large=GFX_valery_gerasimov_01
+			}
+			army = {
+				large=GFX_valery_gerasimov_army_01
+			}
+		}
+
+			corps_commander = {
+			skill = 5
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 5
+		}
+		
+	}
+
 
 }
