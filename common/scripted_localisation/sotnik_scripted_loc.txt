@@ -32,20 +32,20 @@ defined_text = {
 
     text = {
         trigger = {
-           check_var = {
+           check_variable = {
             var = SOV_shoigu_power
             value = SOV_gerasimov_power
-            compare = less_than 
+            compare = greater_than
            }
         }
            localization_key = SOV_shoigu_dominance
         }
     text = {
         trigger = {
-           check_var = {
+           check_variable = {
             var = SOV_shoigu_power
             value = SOV_gerasimov_power
-            compare = greater_than
+            compare = less_than
            }
         }
            localization_key = SOV_gerasimov_dominance
@@ -53,7 +53,7 @@ defined_text = {
 
   text = {
         trigger = {
-           check_var = {
+           check_variable = {
             var = SOV_shoigu_power
             value = SOV_gerasimov_power
             compare = equals

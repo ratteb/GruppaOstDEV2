@@ -37,11 +37,26 @@ on_actions = {
 				var = temp_SOV_gerasimov_support
 				value = temp_SOV_gerasimov_influence
 			}
-			log = "total shoigu power: [?temp_SOV_shoigu_support]"
+			log = "total gerasimov power: [?temp_SOV_gerasimov_support]"
 
 			set_variable = {
 				var = SOV_gerasimov_power
 				value = temp_SOV_gerasimov_support
+			}
+
+			if = {
+				limit = {
+					check_variable = {
+            var = SOV_shoigu_power
+            value = SOV_gerasimov_power
+            compare = equals
+           }
+				}
+				log = "no one dominates"
+			}
+
+			else_if = {
+				log = "someone dominates"
 			}
 		}
 	}

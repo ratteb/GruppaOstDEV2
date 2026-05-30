@@ -35,7 +35,7 @@ guiTypes = {
 		
 			instantTextBoxType = {
 				name = "Title"
-				position = { x = 34 y = 14 }
+				position = { x = 68 y = 14 }
 				font = "TD_event_font_26pt"
 				borderSize = {x = 0 y = 0}
 				text = "Title text here!"	
@@ -68,12 +68,12 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "Description"
-				position = { x = 32 y = 0 }
+				position = { x = 32 y = 5 }
 				font = "TD_event_font_12pt"
 				borderSize = {x = 0 y = 0}
 				text = "Long text here!"
 				clipping = yes 
-				maxWidth = 512%%
+				maxWidth = 610%%
 				maxHeight = 512%%
 				format = left
 			}	
@@ -564,8 +564,8 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name = "Name"
-			position = { x = 0 y = 0 }
-			font = "TD_event_font_22pt"
+			position = { x = -70 y = -8 }
+			font = "TD_event_font_18pt"
 			maxWidth = 340
 			maxHeight = 40
 			format = center
