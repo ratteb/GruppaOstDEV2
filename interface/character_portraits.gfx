@@ -6,6 +6,16 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_sergei_shoigu_01"
+		texturefile = "gfx/leaders/SOV/sergei_shoigu01.dds"
+	}
+
+	spriteType = {
+		name = "GFX_sergei_shoigu_army_01"
+		texturefile = "gfx/leaders/SOV/sergei_shoigu_army01.dds"
+	}
+
+	spriteType = {
 		name = "GFX_ivan_melinkov"
 		texturefile = "gfx/leaders/SOV/ivan_melinkov.dds"
 	}

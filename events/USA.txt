@@ -455,6 +455,7 @@ country_event = {
 
 # AIPAC event chains 
 
+# Aipac intro 
 country_event = {
 	id = USA_aipac.1
 	title = USA_aipac.1.t
@@ -468,7 +469,7 @@ country_event = {
 		ai_chance = { factor = 90 }
 		add_stability = -0.01 
 		hidden_effect = {
-			country_event = {
+			operative_leader_event = {
 				id = USA_aipac.2
 				days = 25
 			}
@@ -476,7 +477,8 @@ country_event = {
     }
 }
 
-country_event = {
+# potential conspirators? 
+operative_leader_event = {
 	id = USA_aipac.2
 	title = USA_aipac.2.t
 	desc = USA_aipac.2.d

@@ -152,6 +152,34 @@ ideas = {
 				political_power_gain = -0.25
 			}
 		}
+
+		USA_technological_deadlock = {
+			picture = GFX_idea_USA_the_second_amendment
+			
+			allowed = {
+				tag = USA
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+					research_bonus = { armor = -0.10 }
+					research_bonus =  { cat_special_forces_generic = -0.10 }
+					research_bonus = { armoured_infantry = -0.10 }
+			}
+		}
 	}
 
 #ICE Above this line

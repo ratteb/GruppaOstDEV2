@@ -1627,6 +1627,123 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {	
+			# shoigu ideal support
+			if = {
+				limit = {
+					has_country_flag = SOV_shoigu_doctrine
+					check_var = {
+						var = SOV_shoigu_influence
+						value = 50
+						compare = greater_than_or_equals
+					}
+					check_var = {
+						var = SOV_gerasimov_influence
+						value = 50
+						compare = less_than
+					}
+					check_var = {
+						var = SOV_gerasimov_support
+						value = 50
+						compare = less_than
+					}
+
+					check_var = {
+						var = SOV_shoigu_support
+						value = 50
+						compare = greater_than_or_equals
+					}
+					add_stability = 0.05
+				}
+			}
+
+			# Gerasimov not enoguh support
+			else_if = {
+				limit = {
+					has_country_flag = SOV_gerasimov_doctrine
+					check_var = {
+						var = SOV_shoigu_influence
+						value = 50
+						compare = greater_than_or_equals
+					}
+					check_var = {
+						var = SOV_gerasimov_influence
+						value = 50
+						compare = less_than
+					}
+					check_var = {
+						var = SOV_gerasimov_support
+						value = 50
+						compare = less_than
+					}
+
+					check_var = {
+						var = SOV_shoigu_support
+						value = 50
+						compare = greater_than_or_equals
+					}
+					add_stability = -0.05
+				}
+			}
+			#Gerasimov ideal support
+			else_if = {
+				limit = {
+					has_country_flag = SOV_gerasimov_doctrine
+					check_var = {
+						var = SOV_shoigu_influence
+						value = 50
+						compare = less_than
+					}
+					check_var = {
+						var = SOV_gerasimov_influence
+						value = 50
+						compare = greater_than_or_equals
+					}
+					check_var = {
+						var = SOV_gerasimov_support
+						value = 50
+						compare = greater_than_or_equals
+					}
+
+					check_var = {
+						var = SOV_shoigu_support
+						value = 50
+						compare = less_than
+					}
+					add_stability = 0.05
+				}
+			}
+
+			else_if = {
+				limit = {
+					has_country_flag = SOV_shoigu_doctrine
+					check_var = {
+						var = SOV_shoigu_influence
+						value = 50
+						compare = less_than
+					}
+					check_var = {
+						var = SOV_gerasimov_influence
+						value = 50
+						compare = greater_than_or_equals
+					}
+					check_var = {
+						var = SOV_gerasimov_support
+						value = 50
+						compare = greater_than_or_equals
+					}
+
+					check_var = {
+						var = SOV_shoigu_support
+						value = 50
+						compare = less_than
+					}
+					add_stability = -0.05
+				}
+			}
+
+			else = {
+				add_stability = 0.1
+			}
 		}
 	}
 }

@@ -170,5 +170,26 @@ characters={
 		}
 	}
 
+	SOV_sergei_shoigu ={
+		name="Sergei Shoigu"
+		portraits={
+			civilian={
+				large=GFX_sergei_shoigu_01
+			}
+			army = {
+				large=GFX_sergei_shoigu_army_01
+			}
+		}
+
+			corps_commander = {
+			skill = 5
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 5
+		}
+		
+	}
+
 
 }
