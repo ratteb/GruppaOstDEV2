@@ -1,2 +1,11 @@
 spriteTypes = {
+        spriteType = {
+		name = "GFX_sotnik_gerasimov_frame"
+		texturefile = "gfx/scripted_gui/sotnik/gerasimov_frame.dds"
+	}
+
+        spriteType = {
+		name = "GFX_sotnik_shoigu_frame"
+		texturefile = "gfx/scripted_gui/sotnik/shoigu_frame.dds"
+	}
 }

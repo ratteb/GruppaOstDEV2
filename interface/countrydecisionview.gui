@@ -155,7 +155,7 @@ guiTypes = {
 			name = "full_text"
 			position = { x = 14 y = 6 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "TDHEHWText_font_bold_outline_14pt"
 			borderSize = { x = 0 y = 0 }
 			text = ""
 			maxWidth = 470
@@ -165,7 +165,7 @@ guiTypes = {
 			name = "short_text"
 			position = { x = 125 y = 9 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "TDHEHWText_font_bold_outline_14pt"
 			borderSize = { x = 0 y = 0 }
 			text = ""
 			maxWidth = 380
@@ -427,7 +427,7 @@ guiTypes = {
 			name = "name_text"
 			position = { x = 63 y = 2 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "TDHEHWText_font_bold_outline_14pt"
 			borderSize = { x = 0 y = 0 }
 			text = ""
 			maxWidth = 330

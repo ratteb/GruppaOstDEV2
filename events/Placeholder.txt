@@ -34,6 +34,21 @@ country_event = {
 }
 
 
+country_event = {
+	id = placeholder.3
+	title = placeholder.3.t
+	desc = placeholder.3.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # May They Be Saved....
+		name = placeholder.3.a
+		ai_chance = { factor = 90 }
+    }
+}
+
+
 
 
 

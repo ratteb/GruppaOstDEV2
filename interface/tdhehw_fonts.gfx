@@ -35,6 +35,26 @@ bitmapfonts = {
             G = { 86 172 91 }
         }
     }
+
+    bitmapfont = {
+        name = "TDHEHWText_font_outline_14pt"
+		path = "gfx/fonts/TDHEHWText_font_outline_14pt"
+        color = 0xffffffff
+
+        textcolors = {
+            G = { 86 172 91 }
+        }
+    }
+
+    bitmapfont = {
+        name = "TDHEHWText_font_bold_outline_14pt"
+		path = "gfx/fonts/TDHEHWText_font_bold_outline_14pt"
+        color = 0xffffffff
+
+        textcolors = {
+            G = { 204 204 204 }
+        }
+    }
     bitmapfont = {
         name = "TDHEHWText_font_22pt_outline"
 		path = "gfx/fonts/TDHEHWText_font_22pt_outline"
@@ -77,7 +97,18 @@ bitmapfonts = {
         color = 0xfff8f1e4
 
         textcolors = {
-            G = { 86 172 91 }
+            G = { 255 244 224 }
+        }
+    }
+
+    bitmapfont = {
+        name = "TD_event_font_12pt"
+		path = "gfx/fonts/TD_event_font_12pt"
+        color = 0xFFCFD8DC
+
+
+        textcolors = {
+            G = { 255 244 224 }
         }
     }
     bitmapfont = {

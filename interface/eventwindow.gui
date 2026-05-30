@@ -9,7 +9,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "EventWindow"
 		position = { x=-282 y=-310 }	
-		size = { width = 581 height =427 }
+		size = { width = 800 height =427 }
 		moveable = yes
 		Orientation = CENTER		
 		
@@ -24,7 +24,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "top_Window"
 			position = { x=0 y=0 }	
-			size = { width = 581 height =121 }
+			size = { width = 682 height = 93 }
 			moveable = yes
 			Orientation = UPPER_LEFT
 
@@ -35,7 +35,7 @@ guiTypes = {
 		
 			instantTextBoxType = {
 				name = "Title"
-				position = { x = 14 y = 70 }
+				position = { x = 34 y = 14 }
 				font = "TD_event_font_26pt"
 				borderSize = {x = 0 y = 0}
 				text = "Title text here!"	
@@ -55,8 +55,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "midsection"
-			position = { x=0 y=121 }	
-			size = { width = 580 height = 100 }
+			position = { x=13 y=90 }	
+			size = { width = 656 height = 0 }
 			moveable = yes
 			clipping = yes
 			Orientation = UPPER_LEFT
@@ -69,7 +69,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "Description"
 				position = { x = 32 y = 0 }
-				font = "TD_event_font_16pt"
+				font = "TD_event_font_12pt"
 				borderSize = {x = 0 y = 0}
 				text = "Long text here!"
 				clipping = yes 
@@ -81,8 +81,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "bottom_Window"
-			position = { x=0 y=221 }	
-			size = { width = 581 height = 206 }
+			position = { x=13 y=0 }	
+			size = { width = 661 height = 308 }
 			moveable = yes
 			clipping = no
 			Orientation = UPPER_LEFT
@@ -100,7 +100,7 @@ guiTypes = {
 			iconType = {
 				name ="event_picture"
 				spriteType = "GFX_report_event_001"
-				position = { x = 41 y = 17 }
+				position = { x = 16 y = 2 }
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = yes				
 			}
@@ -108,7 +108,7 @@ guiTypes = {
 
 			gridBoxType = {
 				name = "options_grid"
-				position = { x = 215 y = -1 }
+				position = { x = 453 y = 5 }
 				size = { width = 300 height = 30 }
 				slotsize = { width = 300 height = 47 }
 				max_slots_horizontal = 1
@@ -554,7 +554,7 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "event_option_entry"
-		size = { width = 352 height = 48 }
+		size = { width = 352 height = 100 }
 		clipping = no
 		
 		background = {
