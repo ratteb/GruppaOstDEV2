@@ -9,4 +9,8 @@ spriteTypes = {
 		name = "GFX_idea_UKR_AFU"
 		texturefile = "gfx/interface/ideas/UKR/UKR_ZSU.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_civilian_economy"
+		texturefile = "gfx/interface/ideas/laws/idea_civilian_economy.dds"
+	}
 }

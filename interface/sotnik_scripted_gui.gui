@@ -105,6 +105,7 @@ guiTypes = {
 			name = "sergei_shoigu_m"
 			spriteType = "GFX_sergei_shoigu_01"
 			position = {x = 272	  y = 10 }
+			pdx_tooltip = sergei_shoigu_m_tt
 		}
 
 		iconType = {
@@ -117,6 +118,7 @@ guiTypes = {
 			name = "valery_gerasimov_m"
 			spriteType = "GFX_valery_gerasimov_01"
 			position = {x = -38	  y = 10 }
+			pdx_tooltip = valery_gerasimov_m_tt
 		}
 
 		

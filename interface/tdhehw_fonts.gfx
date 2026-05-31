@@ -91,6 +91,16 @@ bitmapfonts = {
             G = { 86 172 91 }
         }
     }
+
+    bitmapfont = {
+        name = "td_tooltip_font14"
+		path = "gfx/fonts/td_tooltip_font14"
+        color = 0xfff8f1e4
+        
+        textcolors = {
+            L = { 204 204 204 }
+        }
+    }
     bitmapfont = {
         name = "TD_event_font_16pt"
 		path = "gfx/fonts/TD_event_font_16pt"
