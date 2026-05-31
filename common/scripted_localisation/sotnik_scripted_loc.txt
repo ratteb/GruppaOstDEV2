@@ -63,3 +63,21 @@ defined_text = {
         }
 
 }
+
+defined_text = {
+    name = get_gerasimov_tooltip
+
+    text = {
+           localization_key = valery_gerasimov_st_tt
+        }
+
+}
+
+defined_text = {
+    name = get_shoigu_tooltip
+
+    text = {
+           localization_key = sergei_shoigu_st_tt
+        }
+
+}

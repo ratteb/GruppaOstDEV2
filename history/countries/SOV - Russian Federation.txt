@@ -301,6 +301,8 @@ set_variable = {
 
 add_dynamic_modifier = { modifier = SOV_demographics_crisis }
 add_dynamic_modifier = { modifier = SOV_russian_armed_forces }
+add_dynamic_modifier = { modifier = SOV_gerasimov_help }
+add_dynamic_modifier = { modifier = SOV_shoigu_help }
 
 set_country_flag = SOV_putin_alive 
 

@@ -60,7 +60,347 @@ on_actions = {
 			}
 		}
 	}
-}
+
+		on_daily_SOV = {
+
+		effect = {
+
+			if = {
+				limit = {
+					check_variable = {
+						var = SOV_shoigu_support
+						value = 51
+						compare = greater_than_or_equals
+					}
+				}
+
+			set_temp_variable = {
+				var = temp_SOV_shoigu_support
+				value = SOV_shoigu_support
+			}
+			divide_temp_variable = {
+				var = temp_SOV_shoigu_support
+				value = 1000
+			}
+			set_variable = {
+				var = shoigu_pp_gain
+				value = temp_SOV_shoigu_support
+			}
+			}
+
+			else_if = {
+				limit = {
+					check_variable = {
+						var = SOV_shoigu_support
+						value = 49
+						compare = less_than_or_equals
+					}
+				}
+
+				set_temp_variable = {
+				var = temp_SOV_shoigu_support
+				value = SOV_shoigu_support
+			}
+			divide_temp_variable = {
+				var = temp_SOV_shoigu_support
+				value = 1000
+			}
+
+			multiply_temp_variable = {
+				var = temp_sov_shoigu_support 
+				value = -1
+			}
+			set_variable = {
+				var = shoigu_pp_gain
+				value = temp_SOV_shoigu_support
+			}
+			}
+
+			else_if = {
+				limit = {
+					check_variable = {
+						var = SOV_shoigu_support
+						value = 50
+						compare = equals
+					}
+				}
+				set_temp_variable = {
+				var = temp_SOV_shoigu_support
+				value = SOV_shoigu_support
+			}
+
+			subtract_from_temp_variable = {
+				var = temp_SOV_shoigu_support
+				value = 50
+			}
+			set_variable = {
+				var = shoigu_pp_gain
+				value = temp_SOV_shoigu_support
+			}
+
+
+
+			}
+
+			
+
+
+
+
+
+
+
+			if = {
+				limit = {
+					check_variable = {
+						var = SOV_gerasimov_support
+						value = 51
+						compare = greater_than_or_equals
+					}
+				}
+
+			set_temp_variable = {
+				var = temp_SOV_gerasimov_support
+				value = SOV_gerasimov_support
+			}
+			divide_temp_variable = {
+				var = temp_SOV_gerasimov_support
+				value = 1000
+			}
+			set_variable = {
+				var = gerasimov_cp_gain
+				value = temp_SOV_gerasimov_support
+			}
+			}
+
+			else_if = {
+				limit = {
+					check_variable = {
+						var = SOV_gerasimov_support
+						value = 49
+						compare = less_than_or_equals
+					}
+				}
+
+				set_temp_variable = {
+				var = temp_SOV_gerasimov_support
+				value = SOV_gerasimov_support
+			}
+			divide_temp_variable = {
+				var = temp_SOV_gerasimov_support
+				value = 1000
+			}
+
+			multiply_temp_variable = {
+				var = temp_SOV_gerasimov_support 
+				value = -1
+			}
+			set_variable = {
+				var = gerasimov_cp_gain
+				value = temp_SOV_gerasimov_support
+			}
+			}
+
+			else_if = {
+				limit = {
+					check_variable = {
+						var = SOV_gerasimov_support
+						value = 50
+						compare = equals
+					}
+				}
+				set_temp_variable = {
+				var = temp_SOV_gerasimov_support
+				value = SOV_gerasimov_support
+			}
+
+			subtract_from_temp_variable = {
+				var = temp_SOV_gerasimov_support
+				value = 50
+			}
+			set_variable = {
+				var = gerasimov_cp_gain
+				value = temp_SOV_gerasimov_support
+			}
+
+
+
+			}
+
+			
+		}
+		}
+
+		on_daily_SOV = {
+
+		effect = {
+
+			if = {
+				limit = {
+					check_variable = {
+						var = SOV_shoigu_influence
+						value = 51
+						compare = greater_than_or_equals
+					}
+				}
+
+					set_temp_variable = {
+				var = temp_SOV_shoigu_influence
+				value = SOV_shoigu_influence
+			}
+			divide_temp_variable = {
+				var = temp_SOV_shoigu_influence
+				value = 1200
+			}
+
+			multiply_temp_variable = {
+				var = temp_sov_shoigu_influence
+				value = -1
+			}
+			set_variable = {
+				var = shoigu_cp_gain
+				value = temp_SOV_shoigu_influence
+			}
+			}
+
+			else_if = {
+				limit = {
+					check_variable = {
+						var = SOV_shoigu_influence
+						value = 49
+						compare = less_than_or_equals
+					}
+				}
+
+				set_temp_variable = {
+				var = temp_SOV_shoigu_influence
+				value = SOV_shoigu_influence
+			}
+			divide_temp_variable = {
+				var = temp_SOV_shoigu_influence
+				value = 1200
+			}
+			set_variable = {
+				var = shoigu_cp_gain
+				value = temp_SOV_shoigu_influence
+			}
+			}
+
+			else_if = {
+				limit = {
+					check_variable = {
+						var = SOV_shoigu_influence
+						value = 50
+						compare = equals
+					}
+				}
+				set_temp_variable = {
+				var = temp_SOV_shoigu_influence
+				value = SOV_shoigu_influence
+			}
+
+			subtract_from_temp_variable = {
+				var = temp_SOV_shoigu_influence
+				value = 50
+			}
+			set_variable = {
+				var = shoigu_cp_gain
+				value = temp_SOV_shoigu_influence
+			}
+
+
+
+			}
+
+			
+
+
+
+
+
+
+				if = {
+				limit = {
+					check_variable = {
+						var = SOV_gerasimov_influence
+						value = 51
+						compare = greater_than_or_equals
+					}
+				}
+
+					set_temp_variable = {
+				var = temp_SOV_gerasimov_influence
+				value = SOV_gerasimov_influence
+			}
+			divide_temp_variable = {
+				var = temp_SOV_gerasimov_influence
+				value = 1200
+			}
+			multiply_temp_variable = {
+				var = temp_sov_gerasimov_influence
+				value = -1
+			}
+			set_variable = {
+				var = gerasimov_pp_gain
+				value = temp_SOV_gerasimov_influence
+			}
+			}
+
+			else_if = {
+				limit = {
+					check_variable = {
+						var = SOV_gerasimov_influence
+						value = 49
+						compare = less_than_or_equals
+					}
+				}
+
+				set_temp_variable = {
+				var = temp_SOV_gerasimov_influence
+				value = SOV_gerasimov_influence
+			}
+			divide_temp_variable = {
+				var = temp_SOV_gerasimov_influence
+				value = 1200
+			}
+			
+			set_variable = {
+				var = gerasimov_pp_gain
+				value = temp_SOV_gerasimov_influence
+			}
+			}
+
+			else_if = {
+				limit = {
+					check_variable = {
+						var = SOV_gerasimov_influence
+						value = 50
+						compare = equals
+					}
+				}
+				set_temp_variable = {
+				var = temp_SOV_gerasimov_influence
+				value = SOV_gerasimov_influence
+			}
+
+			subtract_from_temp_variable = {
+				var = temp_SOV_gerasimov_influence
+				value = 50
+			}
+			set_variable = {
+				var = gerasimov_pp_gain
+				value = temp_SOV_gerasimov_influence
+			}
+
+
+
+			}
+
+			
+		}
+		}
+	}
+
 
 
 

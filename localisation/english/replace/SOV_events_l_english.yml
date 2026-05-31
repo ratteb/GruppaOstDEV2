@@ -37,6 +37,16 @@
  SOV_sotnik.8.b: "Logistics Were At Fault."
  SOV_sotnik.8.c: "Commanders Were At Fault"
 
+ SOV_sotnik.9.t: "Ukrainian Counter Offensives September - November 2022"
+ SOV_sotnik.9.d: "10 minutes later after the bickering had silenced Gerasimov continued to the next topic of debate. The early counter offensives by the AFU. Gerasimov opened up by saying: "While I understand the reasoning behind retreating to more defensible positions after the AFU started to fight back, it came with a widespread PR loss and forced us into a 3 year long war of attrition. In my opinion, if my ideas and visions had been implemented earlier, we could have sustained the offensives even after the catastrophic losses around Antonov and other sectors. By utilizing decentralized strategical command structures individuals units would have been able to act quickly against enemy movements."\n\nShoigu scoffed, and slowly glared at Gerasimov. "What do you think this is? America? Do you think we are fighting peasants in sandals? When facing a strong enemy, such as Ukraine and the collective NATO, you need a strong centralized command structure to make sure the front goes exactly as planned by those who know best. Individual units may outsmart peasants in sandals, but our enemies are not dumb, they are just as intelligent as us."\n\nGerasimov replied back "Oh come on, are you trying to say I am trying to americanize our forces? No I am simply trusting that the training and experience of our NCO's are adequate enough to make quick decisions in combat to ensure the completion of all the objectives, even if alternative routes take longer."\n\nShoigu "You're just delusional, you don't understand warfare! I trace my lineage back to the Soviet times! Excuse me." Shoigu caught himself as he let his emotions slip. Putin sighed and said..."
+ SOV_sotnik.9.a: "Gerasimov is Right"
+ SOV_sotnik.9.b: "Shoigu is Right"
+
+ SOV_sotnik.10.t: "Post Wagner Mutiny Situation"
+ SOV_sotnik.10.d: "The clock was nearing 9:30 at this point, and now the true point of debate came. The post 2023 mutiny situation, where the frontline situation appeared to be turning around. "My methods prove, it can do one thing the centralized model can't do as quickly. Adapt. As we decided to accept my doctrine more and more during the war, my decentralized assymetric methods had caused large attritional damage against the AFU. Individual units made decisions as we encircled Avdeevka in 2024, as there were communication hiccups."\n\n"However, it was the strategic reserve officers that planned everything out, which is the only reason we made any progress in the Donbass sector, detailed, centralized, strategic plans." Shoigu smirked, glancing over at his watch he stated "I suggest we move things along, I think we all have other appointments soon."\n\nGerasimov had much to say, but he knew Shoigu was right, things had to move along, so the decision was put back to Putin, which of the 2 actually turned things around."
+ SOV_sotnik.10.a: "The Old Guard turned the tide"
+ SOV_sotnik.10.b: "The Reformists turned it around"
+
  SOV_sotnik.11.t: "Sotnik 1.0 Kit"
  SOV_sotnik.11.d: "Placeholder"
  SOV_sotnik.11.a: "Perfect!"

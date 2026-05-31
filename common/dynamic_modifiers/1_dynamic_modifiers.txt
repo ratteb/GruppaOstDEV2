@@ -110,6 +110,18 @@ SOV_soviet_armed_forces = {
 	land_night_attack = GRSD_nightvis_variable
 }
 
+SOV_gerasimov_help= {
+
+	political_power_factor = gerasimov_pp_gain
+	command_power_gain = gerasimov_cp_gain
+}
+
+SOV_shoigu_help = {
+
+	political_power_factor = shoigu_pp_gain
+	command_power_gain = shoigu_cp_gain
+}
+
 SOV_sotnik_program = {
 	icon = "GFX_idea_no_data"
 

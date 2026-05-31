@@ -24,6 +24,10 @@ scripted_gui = {
       gerasimov_progress_text_visible = {
         has_country_flag = SOV_gerasimov_doctrine
       }
+
+      shoigu_progress_text_visible = {
+        has_country_flag = SOV_shoigu_doctrine
+      }
     }
 
     dynamic_lists = {

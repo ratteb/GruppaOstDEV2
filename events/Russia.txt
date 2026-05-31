@@ -251,10 +251,29 @@ country_event = {
 	option = { # We succeeded in all objectives. 
 		name = SOV_sotnik.7.a
 		ai_chance = { factor = 60 }
-		add_political_power = 5
+		add_command_power = 5
 		country_event = {
 			id = SOV_sotnik.8
 			days = 1
+		}
+		custom_effect_tooltip = sotnik_7_gerasimov_cet
+		add_to_variable = {
+			var = SOV_gerasimov_support
+			value = 3
+		}
+		add_to_variable = {
+			var = SOV_gerasimov_influence
+			value = 2
+		}
+
+		subtract_from_variable = {
+			var = SOV_shoigu_support 
+			value = 3
+		}
+
+		subtract_from_variable = {
+			var = SOV_shoigu_influence
+			value = 2 
 		}
     }
 	option = { # Okay Maybe there were some hiccups...
@@ -264,6 +283,26 @@ country_event = {
 		country_event = {
 			id = SOV_sotnik.8
 			days = 1
+		}
+
+		custom_effect_tooltip = sotnik_7_shoigu_cet
+		add_to_variable = {
+			var = SOV_shoigu_support
+			value = 3
+		}
+		add_to_variable = {
+			var = SOV_shoigu_influence
+			value = 2
+		}
+
+		subtract_from_variable = {
+			var = SOV_gerasimov_support 
+			value = 3
+		}
+
+		subtract_from_variable = {
+			var = SOV_gerasimov_influence
+			value = 2 
 		}
     }
 }
@@ -280,11 +319,11 @@ country_event = {
 	option = { # They were nescessary retreats!!
 		name = SOV_sotnik.8.a
 		ai_chance = { factor = 60 }
-		add_political_power = 5
 		country_event = {
 			id = SOV_sotnik.9
 			days = 1
 		}
+		custom_effect_tooltip = sotnik_8_putin_cet
     }
 	option = { # Logisitcs were at fault...
 		name = SOV_sotnik.8.b
@@ -294,14 +333,54 @@ country_event = {
 			id = SOV_sotnik.9
 			days = 1
 		}
+		custom_effect_tooltip = sotnik_8_shoigu_cet
+		add_to_variable = {
+			var = SOV_shoigu_support
+			value = 4
+		}
+		add_to_variable = {
+			var = SOV_shoigu_influence
+			value = 4
+		}
+
+		subtract_from_variable = {
+			var = SOV_gerasimov_support 
+			value = 4
+		}
+
+		subtract_from_variable = {
+			var = SOV_gerasimov_influence
+			value = 4
+		}
     }
 	option = { # Commanders were at fault...
 		name = SOV_sotnik.8.c
 		ai_chance = { factor = 15 }
-		add_political_power = 5
+		add_command_power = 5
 		country_event = {
 			id = SOV_sotnik.9
 			days = 1
+		}
+
+		custom_effect_tooltip = sotnik_8_gerasimov_cet
+
+		add_to_variable = {
+			var = SOV_gerasimov_support
+			value = 5
+		}
+		add_to_variable = {
+			var = SOV_gerasimov_influence
+			value = 4
+		}
+
+		subtract_from_variable = {
+			var = SOV_shoigu_support 
+			value = 5
+		}
+
+		subtract_from_variable = {
+			var = SOV_shoigu_influence
+			value = 4
 		}
     }
 }
@@ -315,18 +394,66 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	option = { # More attak 
+	option = { # Gerasimov is right  
 		name = SOV_sotnik.9.a
 		ai_chance = { factor = 50 }
-		add_political_power = 5
+		add_command_power = 5
+		country_event = {
+			id = SOV_sotnik.10
+			days = 1
+		}
+		custom_effect_tooltip = sotnik_9_gerasimov_cet
+		add_to_variable = {
+			var = SOV_gerasimov_support
+			value = 3
+		}
+		add_to_variable = {
+			var = SOV_gerasimov_influence
+			value = 3
+		}
+
+		subtract_from_variable = {
+			var = SOV_shoigu_support 
+			value = 3
+		}
+
+		subtract_from_variable = {
+			var = SOV_shoigu_influence
+			value = 3
+		}
     }
-	option = { # More Defens 
+	option = { # Shoigu is Right  
 		name = SOV_sotnik.9.b
 		ai_chance = { factor = 50 }
 		add_political_power = 5
+		country_event = {
+			id = SOV_sotnik.10
+			days = 1 
+		}
+		custom_effect_tooltip = sotnik_9_shoigu_cet
+
+		add_to_variable = {
+			var = SOV_shoigu_support
+			value = 6
+		}
+		add_to_variable = {
+			var = SOV_shoigu_influence
+			value = 6
+		}
+
+		subtract_from_variable = {
+			var = SOV_gerasimov_support 
+			value = 6
+		}
+
+		subtract_from_variable = {
+			var = SOV_gerasimov_influence
+			value = 6
+		}
     }
 }
 
+# the wagner uprising 
 country_event = {
 	id = SOV_sotnik.10
 	title = SOV_sotnik.10.t
@@ -339,11 +466,52 @@ country_event = {
 		name = SOV_sotnik.10.a
 		ai_chance = { factor = 30 }
 		add_political_power = 5
+
+		custom_effect_tooltip = sotnik_10_shoigu_cet
+		add_to_variable = {
+			var = SOV_shoigu_support
+			value = 10
+		}
+		add_to_variable = {
+			var = SOV_shoigu_influence
+			value = 5
+		}
+
+		subtract_from_variable = {
+			var = SOV_gerasimov_support 
+			value = 10
+		}
+
+		subtract_from_variable = {
+			var = SOV_gerasimov_influence
+			value = 5
+		}
+		
     }
 	option = { # Gerasimov turned things around in 2023!
 		name = SOV_sotnik.10.b
 		ai_chance = { factor = 70 }
-		add_political_power = 5
+		add_command_power = 5
+
+		custom_effect_tooltip = sotnik_10_gerasimov_cet
+		add_to_variable = {
+			var = SOV_gerasimov_support
+			value = 8
+		}
+		add_to_variable = {
+			var = SOV_gerasimov_influence
+			value = 4
+		}
+
+		subtract_from_variable = {
+			var = SOV_shoigu_support 
+			value = 8
+		}
+
+		subtract_from_variable = {
+			var = SOV_shoigu_influence
+			value = 4
+		}
     }
 }
 
