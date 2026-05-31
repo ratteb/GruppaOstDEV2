@@ -95,6 +95,60 @@ guiTypes = {
 			fixedsize = yes
 		}
 
+		instantTextboxType = {
+			name = "sotnik_progress"
+			position = { x = 0  y = 440 }
+			font = "TD_event_font_16pt"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "sotnik_progress_loc"
+			maxWidth = 410
+			maxHeight = 140
+			fixedsize = yes
+		}
+
+		iconType = {
+			name = "sotnik_progress_bar"
+			spriteType = "GFX_sotnik_progress_bar"
+			position = {x = 0	  y = 460 }
+		}
+
+		instantTextboxType = {
+			name = "shoigu_progress_text"
+			position = { x = 0  y = 340 }
+			font = "TD_event_font_16pt"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "shoigu_progress_loc"
+			maxWidth = 410
+			maxHeight = 140
+			fixedsize = yes
+		}
+
+		iconType = {
+			name = "shoigu_progress_bar"
+			spriteType = "GFX_shoigu_progress_bar"
+			position = {x = 0	  y =  360 }
+		}
+
+		instantTextboxType = {
+			name = "gerasimov_progress_text"
+			position = { x = 0  y = 340 }
+			font = "TD_event_font_16pt"
+			format = center
+			borderSize = {x = 0 y = 0}
+			text = "gerasimov_progress_loc"
+			maxWidth = 410
+			maxHeight = 140
+			fixedsize = yes
+		}
+
+		iconType = {
+			name = "gerasimov_progress_bar"
+			spriteType = "GFX_gerasimov_progress_bar"
+			position = {x = 0	  y = 360 }
+		}
+
 		iconType = {
 			name = "sergei_shoigu_frame"
 			spriteType = "GFX_sotnik_shoigu_frame"
@@ -120,6 +174,9 @@ guiTypes = {
 			position = {x = -38	  y = 10 }
 			pdx_tooltip = valery_gerasimov_m_tt
 		}
+		
+
+		
 
 		
 	}

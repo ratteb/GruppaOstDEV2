@@ -85,7 +85,7 @@ bitmapfonts = {
     bitmapfont = {
         name = "TD_event_font_14pt"
 		path = "gfx/fonts/TD_event_font_14pt"
-        color = 0xffffffff
+        color = 0xfff8f1e4
 
         textcolors = {
             G = { 86 172 91 }
@@ -133,7 +133,7 @@ bitmapfonts = {
     bitmapfont = {
         name = "TD_event_font_22pt"
 		path = "gfx/fonts/TD_event_font_22pt"
-        color = 0xffffffff
+        color = 0xfff8f1e4
 
         textcolors = {
             G = { 86 172 91 }

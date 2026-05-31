@@ -680,7 +680,7 @@ guiTypes = {
 			name = "name"
 			position = { x = 30 y = 12 }
 			textureFile = ""
-			font = "TD_event_font_26pt"
+			font = "TD_event_font_22pt"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 450
@@ -732,12 +732,13 @@ guiTypes = {
 			name = "desc"
 			position = { x = 34 y = 250 }
 			textureFile = ""
-			font = "TD_event_font_18pt"
+			font = "TD_event_font_14pt"
 			borderSize = {x = 5 y = 0}
 			text = "Description"
 			maxWidth = 480
 			maxHeight = 600
 			format = left
+			scrollbarType = standardtext_slider
 		}
 
 		iconType = {
@@ -904,6 +905,7 @@ guiTypes = {
 			maxWidth = 485
 			maxHeight = 70
 			format = center
+			scrollbarType = standardtext_slider
 		}
 
 		iconType = {

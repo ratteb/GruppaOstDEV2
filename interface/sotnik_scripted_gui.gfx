@@ -8,4 +8,37 @@ spriteTypes = {
 		name = "GFX_sotnik_shoigu_frame"
 		texturefile = "gfx/scripted_gui/sotnik/shoigu_frame.dds"
 	}
+
+	progressbartype = {
+        name = "GFX_sotnik_progress_bar"
+        textureFile1 = "/gfx/scripted_gui/sotnik/sotnik_progress_bar.dds"
+        textureFile2 = "/gfx/scripted_gui/sotnik/sotnik_progress_bar_background.dds"
+        color = { 61 61 61 }
+        colortwo = {  0 75 152 }
+        size = { x = 410 y = 30 }
+		effectFile = "gfx/FX/progress.lua"
+        steps = 100
+    }
+
+	progressbartype = {
+        name = "GFX_shoigu_progress_bar"
+        textureFile1 = "/gfx/scripted_gui/sotnik/shoigu_progress_bar.dds"
+        textureFile2 = "/gfx/scripted_gui/sotnik/shoigu_progress_bar_background.dds"
+        color = { 61 61 61 }
+        colortwo = {  0.0 149 7 }
+        size = { x = 410 y = 30 }
+		effectFile = "gfx/FX/progress.lua"
+        steps = 100
+    }
+
+	progressbartype = {
+        name = "GFX_gerasimov_progress_bar"
+        textureFile1 = "/gfx/scripted_gui/sotnik/gerasimov_progress_bar.dds"
+        textureFile2 = "/gfx/scripted_gui/sotnik/gerasimov_progress_bar_background.dds"
+        color = { 61 61 61 }
+        colortwo = {  0.0 166 207 }
+        size = { x = 410 y = 30 }
+		effectFile = "gfx/FX/progress.lua"
+        steps = 100
+    }
 }

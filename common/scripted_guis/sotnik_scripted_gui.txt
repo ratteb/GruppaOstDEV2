@@ -13,15 +13,34 @@ scripted_gui = {
     }
 
     triggers = {
-    }
+        shoigu_progress_bar_visible = {
+        has_country_flag = SOV_shoigu_doctrine
+      }
 
-	triggers = {
+      gerasimov_progress_bar_visible = {
+        has_country_flag = SOV_gerasimov_doctrine
+      }
+
+      gerasimov_progress_text_visible = {
+        has_country_flag = SOV_gerasimov_doctrine
+      }
     }
 
     dynamic_lists = {
 	  }
 
     properties = {  
+        sotnik_progress_bar = {
+        frame = sotnik_progress
+        }
+
+        shoigu_progress_bar = {
+        frame = shoigu_progress
+        }
+
+        gerasimov_progress_bar = {
+        frame = gerasimov_progress
+        }
 	}
 
     ai_enabled = {

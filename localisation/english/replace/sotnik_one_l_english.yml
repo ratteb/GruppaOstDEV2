@@ -12,3 +12,6 @@
  SOV_no_dominance:0 "Nobody is Currently Dominating"
  valery_gerasimov_m_tt: "§CValery Gerasimov§!"
  sergei_shoigu_m_tt: "§GSergei Shoigu§!"
+ sotnik_progress_loc: "The Sotnik Programme is §2[?sotnik_progress|0%%]§! Completed"
+ gerasimov_progress_loc: "The Gerasimov Doctrine is §C[?gerasimov_progress|0%%]§! Completed"
+ shoigu_progress_loc: "The Gerasimov Doctrine is §G[?shoigu_progress|0%%]§! Completed"
