@@ -74,6 +74,54 @@ defined_text = {
 }
 
 defined_text = {
+    name = get_gerasimov_xp_tooltip
+
+    text = {
+        trigger = {
+            check_variable = {
+                var = gerasimov_xp_gain
+                value = 0.01
+                compare = equals 
+            }
+        }
+           localization_key = valery_gerasimov_xp_tt
+        }
+
+}
+
+defined_text = {
+    name = get_gerasimov_cp_tooltip
+
+    text = {
+        trigger = {
+            check_variable = {
+                var = gerasimov_max_cp
+                value = 0.01
+                compare = equals 
+            }
+        }
+           localization_key = valery_gerasimov_cp_tt
+        }
+
+}
+
+defined_text = {
+    name = get_gerasimov_rs_tooltip
+
+    text = {
+        trigger = {
+            check_variable = {
+                var = gerasimov_rs
+                value = 0.01
+                compare = equals 
+            }
+        }
+           localization_key = valery_gerasimov_rs_tt
+        }
+
+}
+
+defined_text = {
     name = get_shoigu_tooltip
 
     text = {

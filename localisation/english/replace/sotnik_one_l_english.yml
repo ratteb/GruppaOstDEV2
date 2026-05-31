@@ -11,9 +11,15 @@
  SOV_gerasimov_dominance:0 "§CThe Reformist Clique§! Is Currently Dominating"
  SOV_no_dominance:0 "Nobody is Currently Dominating"
  valery_gerasimov_m_tt: "[get_gerasimov_tooltip]"
- valery_gerasimov_st_tt: "§CValery Gerasimov§!\n--------------\nPolitical Power Gain: [?gerasimov_pp_gain|+%]\nDaily Command Power Gain: [?gerasimov_cp_gain|+]\nDaily Doctrine Progress: [?gerasimov_doctrine_gain|+%]"
+ valery_gerasimov_st_tt: "§CValery Gerasimov§!\n--------------\nPolitical Power Gain: [?gerasimov_pp_gain|+%]\nDaily Command Power Gain: [?gerasimov_cp_gain|+]\nDaily Doctrine Progress: [?gerasimov_doctrine_gain|+%][get_gerasimov_xp_tooltip][get_gerasimov_cp_tooltip][get_gerasimov_rs_tooltip]"
  sergei_shoigu_st_tt: "§GSergei Shoigu§!\n--------------\nPolitical Power Gain: [?shoigu_pp_gain|+%]\nDaily Command Power Gain: [?shoigu_cp_gain|+]\nDaily Doctrine Progress: [?shoigu_doctrine_gain|+%]"
  sergei_shoigu_m_tt: "[get_shoigu_tooltip]"
+ valery_gerasimov_xp_tt: "\nArmy Experience Gain: [?gerasimov_xp_gain|+%]"
+ valery_gerasimov_cp_tt: "\nMaximum Command Power Increase: [?gerasimov_max_cp|+%]"
+ valery_gerasimov_rs_tt: "\nResearch Speed: [?gerasimov_rs|+%]"
+
+
+
  sotnik_7_gerasimov_cet: "Increase §CReformist§! Support by: §C+3.00%§!\nIncrease §CReformist§! Influence by: §C+2.00%§!\nDecrease §GOld Guard§! Support by: §G-3.00%§!\nDecrease §GOld Guard§! Influence by: §G-2.00%§!"
  sotnik_7_shoigu_cet: "Increase §GOld Guard§! Support by: §G+3.00%§!\nIncrease §GOld Guard§! Influence by: §G+2.00%§!\nDecrease §CReformist§! Support by: §C-3.00%§!\nDecrease §CReformist§! Influence by: §C-2.00%§!"
  sotnik_8_putin_cet: "§RPutin can't stay idle forever.§!"

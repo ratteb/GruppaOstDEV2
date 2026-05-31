@@ -67,6 +67,12 @@ on_actions = {
 
 			if = {
 				limit = {
+					has_country_flag = SOV_sotnik_allowed
+				}
+			
+
+			if = {
+				limit = {
 					check_variable = {
 						var = SOV_shoigu_support
 						value = 51
@@ -227,13 +233,30 @@ on_actions = {
 
 			}
 
+			log = "sotnik baby"
+
 			
 		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_country_flag = SOV_sotnik_allowed 
+				}
+			}
+			log = "no sotnik baby"
+		}
+	}
 		}
 
 		on_daily_SOV = {
 
 		effect = {
+
+			if = {
+				limit = {
+					has_country_flag = SOV_sotnik_allowed
+				}
+			
 
 			if = {
 				limit = {
@@ -396,8 +419,19 @@ on_actions = {
 
 			}
 
+			log = "sotnik baby"
+
 			
 		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_country_flag = SOV_sotnik_allowed 
+				}
+			}
+			log = "no sotnik baby"
+		}
+	}
 		}
 	}
 

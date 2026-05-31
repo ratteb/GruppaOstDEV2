@@ -114,12 +114,18 @@ SOV_gerasimov_help= {
 
 	political_power_factor = gerasimov_pp_gain
 	command_power_gain = gerasimov_cp_gain
+	experience_gain_army_factor = gerasimov_xp_gain
+	max_command_power = gerasimov_max_cp
+	research_speed_factor = gerasimov_rs
 }
 
 SOV_shoigu_help = {
 
 	political_power_factor = shoigu_pp_gain
 	command_power_gain = shoigu_cp_gain
+	production_speed_arms_factory_factor = shoigu_mf_speed
+	political_power_gain = shoigu_pp_power
+	industrial_capacity_factory = shoigu_f_output
 }
 
 SOV_sotnik_program = {
