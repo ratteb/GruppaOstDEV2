@@ -43,14 +43,30 @@ scripted_gui = {
     }
 
 	triggers = {
-		csto_central_asia_text_visible = {
+		csto_cata_text_visible = {
 			check_variable = { csto_page = 2 }
 		}
-		csto_central_asia_name_visible = {
+		csto_cata_name_visible = {
 			check_variable = { csto_page = 2 }
 		}
-		csto_central_asia_meter_visible = {
+		csto_cata_threat_progress_bar_visible = {
 			check_variable = { csto_page = 2 }
+		}
+
+		csto_cata_danger_progress_bar_visible = {
+			check_variable = { csto_page = 2 }
+		}
+    }
+
+	triggers = {
+		csto_mr_text_visible = {
+			check_variable = { csto_page = 3 }
+		}
+		csto_mr_name_visible = {
+			check_variable = { csto_page = 3 }
+		}
+		csto_mr_meter_visible = {
+			check_variable = { csto_page = 3 }
 		}
     }
 
@@ -61,6 +77,14 @@ scripted_gui = {
         csto_cohesion_meter = {
         frame = csto_cohesion
         }
+
+		csto_cata_threat_progress_bar = {
+			frame = cata_threat
+		}
+
+		csto_cata_danger_progress_bar = {
+			frame = cata_danger
+		}
 	}
 
     ai_enabled = {

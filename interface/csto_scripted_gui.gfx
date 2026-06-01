@@ -10,6 +10,28 @@ spriteTypes = {
         steps = 100
     }
 
+    progressbartype = {
+        name = "GFX_csto_cata_danger_progress_bar"
+        textureFile1 = "/gfx/scripted_gui/csto/csto_cata_danger_progress_bar.dds"
+        textureFile2 = "/gfx/scripted_gui/csto/csto_cata_danger_progress_bar_background.dds"
+        color = { 0.0 0.0 0.0 }
+        colortwo = {  0.0 0.0 0.0 }
+        size = { x = 410 y = 30 }
+		effectFile = "gfx/FX/progress.lua"
+        steps = 100
+    }
+
+    progressbartype = {
+        name = "GFX_csto_cata_threat_progress_bar"
+        textureFile1 = "/gfx/scripted_gui/csto/csto_cata_threat_progress_bar.dds"
+        textureFile2 = "/gfx/scripted_gui/csto/csto_cata_threat_progress_bar_background.dds"
+        color = { 0.0 0.0 0.0 }
+        colortwo = {  0.0 0.0 0.0 }
+        size = { x = 410 y = 30 }
+		effectFile = "gfx/FX/progress.lua"
+        steps = 100
+    }
+
 	spriteType = {
         name = "GFX_page1_button"
         texturefile = "/gfx/scripted_gui/csto/page1_button.dds"

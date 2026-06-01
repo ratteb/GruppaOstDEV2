@@ -275,6 +275,15 @@ country_event = {
 			var = SOV_shoigu_influence
 			value = 2 
 		}
+
+		subtract_from_variable = {
+			var = gerasimov_xp_gain
+			value = -0.02
+		}
+		add_to_variable = {
+			var = gerasimov_max_cp
+			value = 0.02
+		}
     }
 	option = { # Okay Maybe there were some hiccups...
 		name = SOV_sotnik.7.b

@@ -81,10 +81,21 @@ defined_text = {
             check_variable = {
                 var = gerasimov_xp_gain
                 value = 0.01
-                compare = equals 
+                compare = greater_than_or_equals
             }
         }
-           localization_key = valery_gerasimov_xp_tt
+           localization_key = valery_gerasimov_xpp_tt
+        }
+
+        text = {
+        trigger = {
+            check_variable = {
+                var = gerasimov_xp_gain
+                value = -0.01
+                compare = less_than_or_equals
+            }
+        }
+           localization_key = valery_gerasimov_xpm_tt
         }
 
 }
@@ -97,10 +108,21 @@ defined_text = {
             check_variable = {
                 var = gerasimov_max_cp
                 value = 0.01
-                compare = equals 
+                compare = greater_than_or_equals 
             }
         }
-           localization_key = valery_gerasimov_cp_tt
+           localization_key = valery_gerasimov_cpp_tt
+        }
+
+        text = {
+        trigger = {
+            check_variable = {
+                var = gerasimov_max_cp
+                value = -0.01
+                compare = less_than_or_equals
+            }
+        }
+           localization_key = valery_gerasimov_cpm_tt
         }
 
 }
@@ -113,10 +135,21 @@ defined_text = {
             check_variable = {
                 var = gerasimov_rs
                 value = 0.01
-                compare = equals 
+                compare = greater_than_or_equals
             }
         }
-           localization_key = valery_gerasimov_rs_tt
+           localization_key = valery_gerasimov_rsp_tt
+        }
+
+        text = {
+        trigger = {
+            check_variable = {
+                var = gerasimov_rs
+                value = -0.01
+                compare = less_than_or_equals
+            }
+        }
+           localization_key = valery_gerasimov_rsm_tt
         }
 
 }

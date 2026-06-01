@@ -111,7 +111,7 @@ guiTypes = {
 		
 
 		instantTextboxType = {
-			name = "csto_central_asia_text"
+			name = "csto_cata_text"
 			position = { x = 120 y = 450 }
 			font = "TD_event_font_26pt"
 			format = center
@@ -123,7 +123,7 @@ guiTypes = {
 		}
 
 		instantTextboxType = {
-			name = "csto_central_asia_name"
+			name = "csto_cata_name"
 			position = { x = 120  y = 100 }
 			font = "TD_event_font_26pt"
 			format = center
@@ -135,8 +135,14 @@ guiTypes = {
 		}
 
 		iconType = {
-			name = "csto_central_asia_meter"
-			spriteType = "GFX_csto_cohesion_meter"
+			name = "csto_cata_threat_progress_bar"
+			spriteType = "GFX_csto_cata_threat_progress_bar"
+			position = {x = 64	  y = 80 }
+		}
+
+		iconType = {
+			name = "csto_cata_danger_progress_bar"
+			spriteType = "GFX_csto_cata_danger_progress_bar"
 			position = {x = 64	  y = 195 }
 		}
 	}
