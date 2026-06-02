@@ -1,2 +1,10 @@
 ﻿l_english:
  LORE_BUTTON_LOC: "LORE"
+ lore_loc: "[get_chapter_lore_text]"
+ SOV_opening_screen_chapterC1_0_desc: "This is the First Screen of chapter 1 yo."
+ SOV_opening_screen_chapterC2_0_desc: "This is the First Screen of chapter 2 yo"
+ SOV_opening_screen_chapterC3_0_desc: "This is the First Screen of chapter 3 yo"
+ SOV_opening_screen_chapterC4_0_desc: "This is the first screen of chapter 4 yo"
+ SOV_opening_screen_chapter_1_desc: "This is screen 1 Yo..."
+ SOV_opening_screen_chapter_2_desc: "This is screen 2 Yo..."
+ generic_opening_screen_chapter_0_desc: "Select a Chapter Please!"

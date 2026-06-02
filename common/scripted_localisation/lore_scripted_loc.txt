@@ -1,0 +1,48 @@
+#Titles
+defined_text = {
+    name = get_chapter_lore_text
+
+    text = {
+        trigger = {
+           set_temp_variable = { temp = i }
+            add_to_temp_variable = { temp = 1 }
+            has_country_flag = unique_opening_screen
+        }
+          localization_key = "[THIS.GetTag]_opening_screen_chapterC1_[?selected_chapterC1]_desc"
+        }
+
+        text = {
+        trigger = {
+           set_temp_variable = { temp = b }
+            add_to_temp_variable = { temp = 1 }
+            has_country_flag = unique_opening_screen
+        }
+          localization_key = "[THIS.GetTag]_opening_screen_chapterC2_[?selected_chapterC2]_desc"
+        }
+
+        text = {
+        trigger = {
+           set_temp_variable = { temp = c }
+            add_to_temp_variable = { temp = 1 }
+            has_country_flag = unique_opening_screen
+        }
+          localization_key = "[THIS.GetTag]_opening_screen_chapter_[?selected_chapterC3]_desc"
+        }
+
+        text = {
+        trigger = {
+           set_temp_variable = { temp = a }
+            add_to_temp_variable = { temp = 1 }
+            has_country_flag = unique_opening_screen
+        }
+          localization_key = "[THIS.GetTag]_opening_screen_chapter_[?selected_chapterC4]_desc"
+        }
+        text = {
+            trigger = {
+                has_country_flag = unique_opening_screen 
+            }
+        localization_key = "generic_opening_screen_chapter_[?selected_chapter]_name"
+    }
+}
+
+

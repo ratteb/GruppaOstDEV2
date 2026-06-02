@@ -1,43 +1,5 @@
 scripted_gui = {
 
-   lore_buttons_outside = {
-    window_name = "lore_buttons_outside"
-    context_type = player_context
-
-    visible = {
-		akways = yes 
-    }
-
-    effects = {
-      lore_button01_click = { set_country_flag = unique_opening_screen }
-    }
-
-    triggers = {
-    }
-
-    dynamic_lists = {
-	}
-
-    properties = {
-    }
-
-    ai_enabled = {
-		always = no
-    }
-
-    ai_test_interval = 290  # The higher, the long it takes the ai to do actions
-	ai_test_variance = 0.5
-
-    ai_check = {
-    }
-
-    ai_check_scope = {
-    }
-
-    ai_weights = {
-    }
-  }
-
 
   lore_screen = {
     window_name = "lore_screen"
@@ -49,15 +11,47 @@ scripted_gui = {
 
     effects = {
       close_lore_screen_button_click = { clr_country_flag = unique_opening_screen }
+      chapter_1_button_click = {
+        set_variable = { selected_chapterC1 = i }
+        log = "button clicked\n Page of Chapter 1 is [?selected_chapter_C1] [?i]"
+      }
+
+      chapter_2_button_click = {
+        set_variable = { selected_chapterC2 = i }
+
+        log = "button clicked\n Page of Chapter 2 is [?selected_chapter_C2] [?b]"
+      }
+
+      chapter_3_button_click = {
+        set_variable = { selected_chapterC3 = c }
+
+        log = "button clicked\n Page of Chapter 3 is [?selected_chapter_C3] [?c]"
+      }
+
+      chapter_4_button_click = {
+        set_variable = { selected_chapterC4 = a }
+
+        log = "\n Page of Chapter 4 is [?selected_chapter_C4]  [?a]"
+      }
+
+      lore_button01_click = { set_country_flag = unique_opening_screen }
     }
 
     triggers = {
     }
 
     dynamic_lists = {
+
+       chapter_1_gridbox = {
+					array = intro_screen_c1_array
+					change_scope = no
+					entry_container = chapter_1_button
+          index = i
+			}
 	}
 
     properties = {
+
     }
 
     ai_enabled = {

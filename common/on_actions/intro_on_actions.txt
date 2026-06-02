@@ -2,10 +2,13 @@ on_actions = {
 
 	on_startup = {
 		effect = {
+
+			resize_array = { SOV.intro_screen_c1_array = 10 }
 			USA = { set_country_flag = unique_opening_screen }
             GER = { set_country_flag = unique_opening_screen }
             SOV = { set_country_flag = unique_opening_screen }
-		}
+			USA = { add_to_array = { intro_screen_c1_array = 2 }}
+		
 
 		effect = {
 			USA = { set_country_flag = SYR_CW_involved }
@@ -32,4 +35,5 @@ on_actions = {
 			}
 		}
 	}
+}
 }

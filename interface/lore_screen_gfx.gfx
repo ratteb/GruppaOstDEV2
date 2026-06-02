@@ -1,7 +1,0 @@
-spriteTypes = {
-
-	spriteType = {
-		name = "GFX_lore_open_button"
-		textureFile = "/gfx/interface/lore_screen_graphics/lore_open_button.dds"
-	}
-}
