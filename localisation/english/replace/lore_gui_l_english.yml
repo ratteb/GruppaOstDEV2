@@ -4,6 +4,7 @@
  mod_screen_button_loc: "Mod Information"
  country_screen_button_loc: "Country Information"
  lore_loc: "[get_chapter_lore_text]"
+ mod_loc: "§2Gruppa Ost: Pobeda Za Nami:§! Version 0.1 §9"The Double Headed Eagle"§!\n\nHello and thank you for trying our BETA mod! Please feel free to take a look and try out the mod. As we've worked long and tirelessly to develop this mod for its first BETA release, i'd like to share what me and my team so far have created for you to enjoy.\n\nYears of playable custom content for:\nRussian Federation\nUnited States of America\nPeople's Republic of China\nUkraine\nFrance\nNovorossiya\n\nWith multiple paths and storylines, we've also reworked the entire tech tree, the map, and the way combat works! However since this is our first BETA release, a lot of our planned content has been stalled to later releases, if you wish to see these sooner, please apply to become a developer!"
  lore_title: "[get_chapter_lore_title]"
 
  # column headers (from the GUI)
@@ -24,21 +25,29 @@
 
  # ---- 2000 column ----
  SOV_opening_screen_2000_chapter_0_button: "The Looting of Russia"
+ SOV_opening_screen_2000_chapter_1_button: "The Rise of Putinism"
+ SOV_opening_screen_2000_chapter_2_button: "Medvedev and the Wars in the Caucasus"
  SOV_opening_screen_2000_chapter_0_title:  "The Looting of Russia"
  SOV_opening_screen_2000_chapter_0_desc:   "This is the First Screen of chapter 1 yo."
 
  # ---- 2010 column ----
  SOV_opening_screen_2010_chapter_0_button: "The Silicon Taiga"
+ SOV_opening_screen_2010_chapter_1_button: "Ukrainian Crisis"
  SOV_opening_screen_2010_chapter_0_title:  "The Silicon Taiga"
  SOV_opening_screen_2010_chapter_0_desc:   "This is the First Screen of chapter 2 yo"
 
  # ---- 2020 column ----
- SOV_opening_screen_2020_chapter_0_button: "The Special Military Operation"
+ SOV_opening_screen_2020_chapter_0_button: "The Covid Lockdowns"
+ SOV_opening_screen_2020_chapter_1_button: "Turning Point"
+ SOV_opening_screen_2020_chapter_2_button: "The Special Military Operation"
  SOV_opening_screen_2020_chapter_0_title:  "The Special Military Operation"
  SOV_opening_screen_2020_chapter_0_desc:   "This is the First Screen of chapter 3 yo"
 
  # ---- 2025 column ----
  SOV_opening_screen_2025_chapter_0_button: "For You! My Motherland!"
+ SOV_opening_screen_2025_chapter_1_button: "The Aftermath"
+ SOV_opening_screen_2025_chapter_2_button: "The Future"
+ SOV_opening_screen_2025_chapter_3_button: "Our Options"
  SOV_opening_screen_2025_chapter_0_title:  "For You! My Motherland!"
  SOV_opening_screen_2025_chapter_0_desc:   "This is the first screen of chapter 4 yo"
 

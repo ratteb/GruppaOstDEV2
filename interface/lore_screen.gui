@@ -77,8 +77,8 @@ guiTypes = {
 		buttonType = {
 			name = "lore_screen_button"
 			quadTextureSprite = "GFX_chapter_button"
-			size = { width = 102 height = 32 }
-			position = { x = 106 y = 0 }
+			size = { width = 115 height = 22 }
+			position = { x = 110 y = 0 }
 			buttonText = "lore_screen_button_loc"
 			buttonFont = "TD_event_font_16p"
 		}
@@ -86,8 +86,8 @@ guiTypes = {
 		buttonType = {
 			name = "mod_screen_button"
 			quadTextureSprite = "GFX_chapter_button"
-			size = { width = 102 height = 32 }
-			position = { x = 206 y = 0 }
+			size = { width = 115 height = 22 }
+			position = { x = 226 y = 0 }
 			buttonText = "mod_screen_button_loc"
 			buttonFont = "TD_event_font_16p"
 		}
@@ -95,8 +95,8 @@ guiTypes = {
 		buttonType = {
 			name = "country_screen_button"
 			quadTextureSprite = "GFX_chapter_button"
-			size = { width = 102 height = 32 }
-			position = { x = 306 y = 0 }
+			size = { width = 115 height = 22 }
+			position = { x = 326 y = 0 }
 			buttonText = "country_screen_button_loc"
 			buttonFont = "TD_event_font_16p"
 		}
@@ -125,7 +125,7 @@ guiTypes = {
 			# ---------- 2000 category ----------
 			instantTextBoxType = {
 				name = "year_2000_header"
-				position = { x = 65 y = -10 }
+				position = { x = 56 y = 0 }
 				font = "TD_event_font_16p"
 				borderSize = { x = 0 y = 0 }
 				text = "YEAR_2000_HEADER"
@@ -135,10 +135,10 @@ guiTypes = {
 			}
 			gridBoxType = {
 				name = "chapter_2000_gridbox"
-				position = { x = 65 y = 0 }
+				position = { x = 58 y = 18 }
 				size = { width = 100%% height = 100%% }
 				Orientation = upper_left
-				slotsize = { width = 110 height = 44 }
+				slotsize = { width = 110 height = 36 }
 				format = "UPPER_LEFT"
 				max_slots_horizontal = 1
 				max_slots_vertical = 3
@@ -148,7 +148,7 @@ guiTypes = {
 			# ---------- 2010 category ----------
 			instantTextBoxType = {
 				name = "year_2010_header"
-				position = { x = 65 y = 120 }
+				position = { x = 56 y = 126 }
 				font = "TD_event_font_16p"
 				borderSize = { x = 0 y = 0 }
 				text = "YEAR_2010_HEADER"
@@ -158,10 +158,10 @@ guiTypes = {
 			}
 			gridBoxType = {
 				name = "chapter_2010_gridbox"
-				position = { x = 65 y = 130 }
+				position = { x = 58 y = 146 }
 				size = { width = 100%% height = 100%% }
 				Orientation = upper_left
-				slotsize = { width = 110 height = 44 }
+				slotsize = { width = 110 height = 36 }
 				format = "UPPER_LEFT"
 				max_slots_horizontal = 1
 				max_slots_vertical = 3
@@ -171,7 +171,7 @@ guiTypes = {
 			# ---------- 2020 category ----------
 			instantTextBoxType = {
 				name = "year_2020_header"
-				position = { x = 65 y = 240 }
+				position = { x = 56 y = 256 }
 				font = "TD_event_font_16p"
 				borderSize = { x = 0 y = 0 }
 				text = "YEAR_2020_HEADER"
@@ -181,10 +181,10 @@ guiTypes = {
 			}
 			gridBoxType = {
 				name = "chapter_2020_gridbox"
-				position = { x = 65 y = 256 }
+				position = { x = 58 y = 272 }
 				size = { width = 100%% height = 100%% }
 				Orientation = upper_left
-				slotsize = { width = 110 height = 44 }
+				slotsize = { width = 110 height = 36 }
 				format = "UPPER_LEFT"
 				max_slots_horizontal = 1
 				max_slots_vertical = 3
@@ -194,7 +194,7 @@ guiTypes = {
 			# ---------- 2025 category ----------
 			instantTextBoxType = {
 				name = "year_2025_header"
-				position = { x = 65 y = 376 }
+				position = { x = 56 y = 376 }
 				font = "TD_event_font_16p"
 				borderSize = { x = 0 y = 0 }
 				text = "YEAR_2025_HEADER"
@@ -204,10 +204,10 @@ guiTypes = {
 			}
 			gridBoxType = {
 				name = "chapter_2025_gridbox"
-				position = { x = 65 y = 386	 }
+				position = { x = 58 y = 398	 }
 				size = { width = 100%% height = 100%% }
 				Orientation = upper_left
-				slotsize = { width = 110 height = 44 }
+				slotsize = { width = 110 height = 36 }
 				format = "UPPER_LEFT"
 				max_slots_horizontal = 1
 				max_slots_vertical = 5
@@ -223,10 +223,10 @@ guiTypes = {
 	buttonType = {
 		name = "chapter_2000_button"
 		quadTextureSprite = "GFX_chapter_button"
-		size = { width = 102 height = 32 }
+		size = { width = 115 height = 22 }
 		position = { x = 0 y = 0 }
 		buttonText = "chapter_2000_button_loc"
-		buttonFont = "TD_event_font_16pt"
+		buttonFont = "TD_interface_font_8pt"
 	}
 }
 
@@ -236,10 +236,10 @@ containerWindowType = {
 	buttonType = {
 		name = "chapter_2010_button"
 		quadTextureSprite = "GFX_chapter_button"
-		size = { width = 102 height = 32 }
+		size = { width = 115 height = 22 }
 		position = { x = 0 y = 0 }
 		buttonText = "chapter_2010_button_loc"
-		buttonFont = "TD_event_font_16pt"
+		buttonFont = "TD_interface_font_8pt"
 	}
 }
 
@@ -249,10 +249,10 @@ containerWindowType = {
 	buttonType = {
 		name = "chapter_2020_button"
 		quadTextureSprite = "GFX_chapter_button"
-		size = { width = 102 height = 32 }
+		size = { width = 115 height = 22 }
 		position = { x = 0 y = 0 }
 		buttonText = "chapter_2020_button_loc"
-		buttonFont = "TD_event_font_16pt"
+		buttonFont = "TD_interface_font_8pt"
 	}
 }
 
@@ -262,10 +262,10 @@ containerWindowType = {
 	buttonType = {
 		name = "chapter_2025_button"
 		quadTextureSprite = "GFX_chapter_button"
-		size = { width = 102 height = 32 }
+		size = { width = 115 height = 22 }
 		position = { x = 0 y = 0 }
 		buttonText = "chapter_2025_button_loc"
-		buttonFont = "TD_event_font_16pt"
+		buttonFont = "TD_interface_font_8pt"
 	}
 }
 

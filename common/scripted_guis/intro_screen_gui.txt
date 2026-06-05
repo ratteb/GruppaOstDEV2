@@ -1,109 +1,96 @@
 scripted_gui = {
 
-	lore_screen = {
+    lore_buttons_outside = {
+        window_name = "lore_buttons_outside"
+        context_type = player_context
 
-		window_name = "lore_screen"
-		context_type = player_context
+        visible = {
+            NOT = { has_country_flag = unique_opening_screen }
+        }
 
-		visible = {
-			has_country_flag = unique_opening_screen
-		}
+        effects = {
+            lore_button01_click = {
+                set_country_flag = unique_opening_screen
+                set_variable = { intro_screen_s = 1 }
+            }
+        }
 
-		effects = {
-			close_lore_screen_button_click = { clr_country_flag = unique_opening_screen }
+        ai_enabled = { always = no }
+    }
 
-			# Each category stores BOTH the year and the clicked index
-			chapter_2000_button_click = {
-				set_variable = { selected_year = 2000 }
-				set_variable = { selected_chapter_index = i }
-				log = "Clicked 2000 / index [?selected_chapter_index]"
-			}
-			chapter_2010_button_click = {
-				set_variable = { selected_year = 2010 }
-				set_variable = { selected_chapter_index = i }
-				log = "Clicked 2010 / index [?selected_chapter_index]"
-			}
-			chapter_2020_button_click = {
-				set_variable = { selected_year = 2020 }
-				set_variable = { selected_chapter_index = i }
-				log = "Clicked 2020 / index [?selected_chapter_index]"
-			}
-			chapter_2025_button_click = {
-				set_variable = { selected_year = 2025 }
-				set_variable = { selected_chapter_index = i }
-				log = "Clicked 2025 / index [?selected_chapter_index]"
-			}
+    lore_screen = {
+        window_name = "lore_screen"
+        context_type = player_context
 
-			lore_screen_button_click = {
-				set_variable = { var = intro_screen_s value = 1 }
-			}
-			mod_screen_button_click = {
-				set_variable = { var = intro_screen_s value = 2 }
-			}
-			country_screen_button_click = {
-				set_variable = { var = intro_screen_s value = 3 }
-			}
+        visible = {
+            has_country_flag = unique_opening_screen
+        }
 
-			lore_button01_click = { set_country_flag = unique_opening_screen }
-		}
+        effects = {
+            close_lore_screen_button_click = { clr_country_flag = unique_opening_screen }
 
-		triggers = {
-			# Show all four category buttons only on the lore tab
-			chapter_2000_button_visible = { check_variable = { intro_screen_s = 1 } }
-			chapter_2010_button_visible = { check_variable = { intro_screen_s = 1 } }
-			chapter_2020_button_visible = { check_variable = { intro_screen_s = 1 } }
-			chapter_2025_button_visible = { check_variable = { intro_screen_s = 1 } }
+            chapter_2000_button_click = {
+                set_variable = { selected_year = 2000 }
+                set_variable = { selected_chapter_index = i }
+                log = "Clicked 2000 / index [?selected_chapter_index]"
+            }
+            chapter_2010_button_click = {
+                set_variable = { selected_year = 2010 }
+                set_variable = { selected_chapter_index = i }
+                log = "Clicked 2010 / index [?selected_chapter_index]"
+            }
+            chapter_2020_button_click = {
+                set_variable = { selected_year = 2020 }
+                set_variable = { selected_chapter_index = i }
+                log = "Clicked 2020 / index [?selected_chapter_index]"
+            }
+            chapter_2025_button_click = {
+                set_variable = { selected_year = 2025 }
+                set_variable = { selected_chapter_index = i }
+                log = "Clicked 2025 / index [?selected_chapter_index]"
+            }
 
-			year_2000_header_visible = { check_variable = { intro_screen_s = 1 } }
-			year_2010_header_visible = { check_variable = { intro_screen_s = 1 } }
-			year_2020_header_visible = { check_variable = { intro_screen_s = 1 } }
-			year_2025_header_visible = { check_variable = { intro_screen_s = 1 } }
+            lore_screen_button_click   = { set_variable = { intro_screen_s = 1 } }
+            mod_screen_button_click    = { set_variable = { intro_screen_s = 2 } }
+            country_screen_button_click= { set_variable = { intro_screen_s = 3 } }
+        }
 
-      lore_title_visible = {check_variable = {intro_screen_s = 1 }}
-			lore_description_visible = { check_variable = { intro_screen_s = 1 } }
-			mod_description_visible  = { check_variable = { intro_screen_s = 2 } }
+        triggers = {
+            chapter_2000_button_visible = { check_variable = { intro_screen_s = 1 } }
+            chapter_2010_button_visible = { check_variable = { intro_screen_s = 1 } }
+            chapter_2020_button_visible = { check_variable = { intro_screen_s = 1 } }
+            chapter_2025_button_visible = { check_variable = { intro_screen_s = 1 } }
 
-			lore_pic_1_visible = { check_variable = { intro_screen_s = 1 } }
-			lore_pic_2_visible = { check_variable = { intro_screen_s = 1 } }
-		}
+            year_2000_header_visible = { check_variable = { intro_screen_s = 1 } }
+            year_2010_header_visible = { check_variable = { intro_screen_s = 1 } }
+            year_2020_header_visible = { check_variable = { intro_screen_s = 1 } }
+            year_2025_header_visible = { check_variable = { intro_screen_s = 1 } }
 
-		dynamic_lists = {
-			chapter_2000_gridbox = {
-				array = intro_screen_2000_array
-				change_scope = no
-				entry_container = chapter_2000_entry
-				index = i
-			}
-			chapter_2010_gridbox = {
-				array = intro_screen_2010_array
-				change_scope = no
-				entry_container = chapter_2010_entry
-				index = i
-			}
-			chapter_2020_gridbox = {
-				array = intro_screen_2020_array
-				change_scope = no
-				entry_container = chapter_2020_entry
-				index = i
-			}
-			chapter_2025_gridbox = {
-				array = intro_screen_2025_array
-				change_scope = no
-				entry_container = chapter_2025_entry
-				index = i
-			}
-		}
+            lore_title_visible       = { check_variable = { intro_screen_s = 1 } }
+            lore_description_visible = { check_variable = { intro_screen_s = 1 } }
+            mod_description_visible  = { check_variable = { intro_screen_s = 2 } }
 
-		properties = {
-			lore_pic_1 = { image = "[get_chapter_lore_picture_01]" }
-			lore_pic_2 = { image = "[get_chapter_lore_picture_02]" }
-		}
+            lore_pic_1_visible = { check_variable = { intro_screen_s = 1 } }
+            lore_pic_2_visible = { check_variable = { intro_screen_s = 1 } }
+        }
 
-		ai_enabled = { always = no }
-		ai_test_interval = 290
-		ai_test_variance = 0.5
-		ai_check = {}
-		ai_check_scope = {}
-		ai_weights = {}
-	}
+        dynamic_lists = {
+            chapter_2000_gridbox = { array = intro_screen_2000_array  change_scope = no  entry_container = chapter_2000_entry  index = i }
+            chapter_2010_gridbox = { array = intro_screen_2010_array  change_scope = no  entry_container = chapter_2010_entry  index = i }
+            chapter_2020_gridbox = { array = intro_screen_2020_array  change_scope = no  entry_container = chapter_2020_entry  index = i }
+            chapter_2025_gridbox = { array = intro_screen_2025_array  change_scope = no  entry_container = chapter_2025_entry  index = i }
+        }
+
+        properties = {
+            lore_pic_1 = { image = "[get_chapter_lore_picture_01]" }
+            lore_pic_2 = { image = "[get_chapter_lore_picture_02]" }
+        }
+
+        ai_enabled = { always = no }
+        ai_test_interval = 290
+        ai_test_variance = 0.5
+        ai_check = {}
+        ai_check_scope = {}
+        ai_weights = {}
+    }
 }

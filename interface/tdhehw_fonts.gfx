@@ -107,6 +107,14 @@ bitmapfonts = {
         }
     }
 
+
+     bitmapfont = {
+        name = "TD_interface_font_8pt"
+		path = "gfx/fonts/TD_interface_font_8pt"
+        color = 0xFFEAEAEA
+
+    }
+
     bitmapfont = {
         name = "TD_event_font_12pt"
 		path = "gfx/fonts/TD_event_font_12pt"
