@@ -1077,36 +1077,22 @@ default_market_convoy_purchases = {
 	}
 }
 
-dont_build_capitals_if_on_treaty = {
-	enable = {
-		has_idea = MTG_naval_treaty_adherent
-	}
-
-	abort = {
-		OR = {
-				original_tag = ITA
-				original_tag = ENG
-				NOT = { has_idea = MTG_naval_treaty_adherent }
-			}
-	}
-
-	ai_strategy = {
-		type = unit_ratio
-		id = capital_ship
-		value = -2		 #1 to 2
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = naval_capital_bb
-		value = -100
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_capital_bc
-		value = -100
-	}
-}
+d# Disabled: MTG_naval_treaty_adherent idea no longer exists in this mod.
+# dont_build_capitals_if_on_treaty = {
+# 	enable = {
+# 		has_idea = MTG_naval_treaty_adherent
+# 	}
+# 	abort = {
+# 		OR = {
+# 			original_tag = ITA
+# 			original_tag = ENG
+# 			NOT = { has_idea = MTG_naval_treaty_adherent }
+# 		}
+# 	}
+# 	ai_strategy = { type = unit_ratio   id = capital_ship      value = -2 }
+# 	ai_strategy = { type = role_ratio   id = naval_capital_bb  value = -100 }
+# 	ai_strategy = { type = role_ratio   id = naval_capital_bc  value = -100 }
+# }
 
 DEFAULT_early_template_design = {
 	enable = {
@@ -1542,26 +1528,7 @@ default_build_a_nav_facility = {
 	}
 }
 
-# TODO MANU or THOMAS
-default_build_a_gun_emplacement = {
-	enable = {
-		is_major = yes
-		has_tech = land_multi_charge_large_caliber_gun_tech
-		num_of_military_factories > 50
-		mega_gun_emplacement < 1
-		NOT = {
-			any_controlled_state = {
-				mega_gun_emplacement > 0
-			}
-		}
-	}
-	abort_when_not_enabled = yes
-	ai_strategy = {
-		type = build_building
-		id = mega_gun_emplacement
-		value = 10
-	}
-}
+
 
 default_build_a_lw_facility = {
 	enable = {

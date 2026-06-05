@@ -226,7 +226,7 @@ guiTypes = {
 		size = { width = 102 height = 32 }
 		position = { x = 0 y = 0 }
 		buttonText = "chapter_2000_button_loc"
-		buttonFont = "TD_event_font_16p"
+		buttonFont = "TD_event_font_16pt"
 	}
 }
 
@@ -239,7 +239,7 @@ containerWindowType = {
 		size = { width = 102 height = 32 }
 		position = { x = 0 y = 0 }
 		buttonText = "chapter_2010_button_loc"
-		buttonFont = "TD_event_font_16p"
+		buttonFont = "TD_event_font_16pt"
 	}
 }
 
@@ -252,7 +252,7 @@ containerWindowType = {
 		size = { width = 102 height = 32 }
 		position = { x = 0 y = 0 }
 		buttonText = "chapter_2020_button_loc"
-		buttonFont = "TD_event_font_16p"
+		buttonFont = "TD_event_font_16pt"
 	}
 }
 
@@ -265,7 +265,7 @@ containerWindowType = {
 		size = { width = 102 height = 32 }
 		position = { x = 0 y = 0 }
 		buttonText = "chapter_2025_button_loc"
-		buttonFont = "TD_event_font_16p"
+		buttonFont = "TD_event_font_16pt"
 	}
 }
 

@@ -1,33 +1,28 @@
-﻿# 1st Guards Tank Army 
+﻿# 1st Guards Tank Army
 
 division_template = {
 	name = "Heavy Mechanised Brigade"
-
 	division_names_group = SOV_ARM_01
-
 	regiments = {
 		ifv_battalion = { x = 0 y = 0 }
 		ifv_battalion = { x = 0 y = 1 }
-        ifv_battalion = { x = 0 y = 2 }
+		ifv_battalion = { x = 0 y = 2 }
 		ifv_battalion = { x = 0 y = 3 }
 		spg_battalion = { x = 1 y = 0 }
-
 	}
 	support = {
 		artillery = { x = 0 y = 0 }
 	}
 }
+
 division_template = {
 	name = "Light Mechanised Brigade"
-
 	division_names_group = SOV_ARM_01
-
 	regiments = {
 		apc_battalion = { x = 0 y = 0 }
 		apc_battalion = { x = 0 y = 1 }
 		apc_battalion = { x = 0 y = 2 }
 		spg_battalion = { x = 1 y = 0 }
-
 	}
 	support = {
 		artillery = { x = 0 y = 0 }
@@ -36,44 +31,37 @@ division_template = {
 
 division_template = {
 	name = "Light Motorized Brigade"
-
 	division_names_group = SOV_ARM_01
-
 	regiments = {
 		apc_battalion = { x = 0 y = 0 }
 		apc_battalion = { x = 0 y = 1 }
 		apc_battalion = { x = 0 y = 2 }
-
 	}
 	support = {
 		artillery = { x = 0 y = 0 }
 	}
 }
 
-
-
 units = {
 	division = {
-		name = "Infantry Brigade "Iron Wolf""
+		name = "Infantry Brigade Iron Wolf"
 		location = 11312
 		division_template = "Heavy Mechanised Brigade"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "Infantry Brigade "Žemaitija""
+		name = "Infantry Brigade Žemaitija"
 		location = 3288
 		division_template = "Light Mechanised Brigade"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "Infantry Brigade "Aukštaitija""
+		name = "Infantry Brigade Aukštaitija"
 		location = 3320
 		division_template = "Light Motorized Brigade"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
-	
-	
 }
