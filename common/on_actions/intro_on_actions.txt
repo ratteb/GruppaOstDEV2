@@ -3,7 +3,10 @@ on_actions = {
 	on_startup = {
 		effect = {
 
-			resize_array = { SOV.intro_screen_c1_array = 10 }
+			resize_array = { SOV.intro_screen_2000_array = 3 }
+			resize_array = { SOV.intro_screen_2010_array = 2 }
+			resize_array = { SOV.intro_screen_2020_array = 3 }
+			resize_array = { SOV.intro_screen_2025_array = 4 }
 			USA = { set_country_flag = unique_opening_screen }
             GER = { set_country_flag = unique_opening_screen }
             SOV = { set_country_flag = unique_opening_screen }

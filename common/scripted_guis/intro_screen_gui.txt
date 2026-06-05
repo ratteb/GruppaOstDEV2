@@ -1,74 +1,108 @@
 scripted_gui = {
 
+	lore_screen = {
 
-  lore_screen = {
-    window_name = "lore_screen"
-    context_type = player_context
+		window_name = "lore_screen"
+		context_type = player_context
 
-    visible = {
-		has_country_flag = unique_opening_screen
-    }
+		visible = {
+			has_country_flag = unique_opening_screen
+		}
 
-    effects = {
-      close_lore_screen_button_click = { clr_country_flag = unique_opening_screen }
-      chapter_1_button_click = {
-        set_variable = { selected_chapterC1 = i }
-        log = "button clicked\n Page of Chapter 1 is [?selected_chapter_C1] [?i]"
-      }
+		effects = {
+			close_lore_screen_button_click = { clr_country_flag = unique_opening_screen }
 
-      chapter_2_button_click = {
-        set_variable = { selected_chapterC2 = i }
-
-        log = "button clicked\n Page of Chapter 2 is [?selected_chapter_C2] [?b]"
-      }
-
-      chapter_3_button_click = {
-        set_variable = { selected_chapterC3 = c }
-
-        log = "button clicked\n Page of Chapter 3 is [?selected_chapter_C3] [?c]"
-      }
-
-      chapter_4_button_click = {
-        set_variable = { selected_chapterC4 = a }
-
-        log = "\n Page of Chapter 4 is [?selected_chapter_C4]  [?a]"
-      }
-
-      lore_button01_click = { set_country_flag = unique_opening_screen }
-    }
-
-    triggers = {
-    }
-
-    dynamic_lists = {
-
-       chapter_1_gridbox = {
-					array = intro_screen_c1_array
-					change_scope = no
-					entry_container = chapter_1_button
-          index = i
+			# Each category stores BOTH the year and the clicked index
+			chapter_2000_button_click = {
+				set_variable = { selected_year = 2000 }
+				set_variable = { selected_chapter_index = i }
+				log = "Clicked 2000 / index [?selected_chapter_index]"
 			}
+			chapter_2010_button_click = {
+				set_variable = { selected_year = 2010 }
+				set_variable = { selected_chapter_index = i }
+				log = "Clicked 2010 / index [?selected_chapter_index]"
+			}
+			chapter_2020_button_click = {
+				set_variable = { selected_year = 2020 }
+				set_variable = { selected_chapter_index = i }
+				log = "Clicked 2020 / index [?selected_chapter_index]"
+			}
+			chapter_2025_button_click = {
+				set_variable = { selected_year = 2025 }
+				set_variable = { selected_chapter_index = i }
+				log = "Clicked 2025 / index [?selected_chapter_index]"
+			}
+
+			lore_screen_button_click = {
+				set_variable = { var = intro_screen_s value = 1 }
+			}
+			mod_screen_button_click = {
+				set_variable = { var = intro_screen_s value = 2 }
+			}
+			country_screen_button_click = {
+				set_variable = { var = intro_screen_s value = 3 }
+			}
+
+			lore_button01_click = { set_country_flag = unique_opening_screen }
+		}
+
+		triggers = {
+			# Show all four category buttons only on the lore tab
+			chapter_2000_button_visible = { check_variable = { intro_screen_s = 1 } }
+			chapter_2010_button_visible = { check_variable = { intro_screen_s = 1 } }
+			chapter_2020_button_visible = { check_variable = { intro_screen_s = 1 } }
+			chapter_2025_button_visible = { check_variable = { intro_screen_s = 1 } }
+
+			year_2000_header_visible = { check_variable = { intro_screen_s = 1 } }
+			year_2010_header_visible = { check_variable = { intro_screen_s = 1 } }
+			year_2020_header_visible = { check_variable = { intro_screen_s = 1 } }
+			year_2025_header_visible = { check_variable = { intro_screen_s = 1 } }
+
+			lore_description_visible = { check_variable = { intro_screen_s = 1 } }
+			mod_description_visible  = { check_variable = { intro_screen_s = 2 } }
+
+			lore_pic_1_visible = { check_variable = { intro_screen_s = 1 } }
+			lore_pic_2_visible = { check_variable = { intro_screen_s = 1 } }
+		}
+
+		dynamic_lists = {
+			chapter_2000_gridbox = {
+				array = intro_screen_2000_array
+				change_scope = no
+				entry_container = chapter_2000_entry
+				index = i
+			}
+			chapter_2010_gridbox = {
+				array = intro_screen_2010_array
+				change_scope = no
+				entry_container = chapter_2010_entry
+				index = i
+			}
+			chapter_2020_gridbox = {
+				array = intro_screen_2020_array
+				change_scope = no
+				entry_container = chapter_2020_entry
+				index = i
+			}
+			chapter_2025_gridbox = {
+				array = intro_screen_2025_array
+				change_scope = no
+				entry_container = chapter_2025_entry
+				index = i
+			}
+		}
+
+		properties = {
+			lore_pic_1 = { image = "[get_chapter_lore_picture_01]" }
+			lore_pic_2 = { image = "[get_chapter_lore_picture_02]" }
+		}
+
+		ai_enabled = { always = no }
+		ai_test_interval = 290
+		ai_test_variance = 0.5
+		ai_check = {}
+		ai_check_scope = {}
+		ai_weights = {}
 	}
-
-    properties = {
-
-    }
-
-    ai_enabled = {
-		always = no
-    }
-
-    ai_test_interval = 290  # The higher, the long it takes the ai to do actions
-	ai_test_variance = 0.5
-
-    ai_check = {
-    }
-
-    ai_check_scope = {
-    }
-
-    ai_weights = {
-    }
-  }
-  
 }

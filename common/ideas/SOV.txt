@@ -34,7 +34,7 @@ ideas = {
         # Economic stagnation above this line 
 
 		SOV_za_rodinu = {
-			picture = GFX_idea_no_data
+			picture = GFX_idea_SOV_za_rodinu
 			
 			allowed = {
 				tag = SOV

@@ -1,10 +1,41 @@
 ﻿l_english:
  LORE_BUTTON_LOC: "LORE"
+ lore_screen_button_loc: "Country History"
+ mod_screen_button_loc: "Mod Information"
+ country_screen_button_loc: "Country Information"
  lore_loc: "[get_chapter_lore_text]"
- SOV_opening_screen_chapterC1_0_desc: "This is the First Screen of chapter 1 yo."
- SOV_opening_screen_chapterC2_0_desc: "This is the First Screen of chapter 2 yo"
- SOV_opening_screen_chapterC3_0_desc: "This is the First Screen of chapter 3 yo"
- SOV_opening_screen_chapterC4_0_desc: "This is the first screen of chapter 4 yo"
- SOV_opening_screen_chapter_1_desc: "This is screen 1 Yo..."
- SOV_opening_screen_chapter_2_desc: "This is screen 2 Yo..."
+ lore_title: "[get_chapter_lore_title]"
+
+ # column headers (from the GUI)
+ YEAR_2000_HEADER: "2000s"
+ YEAR_2010_HEADER: "2010s"
+ YEAR_2020_HEADER: "2020s"
+ YEAR_2025_HEADER: "2025+"
+
+ # button text wrappers — each calls its column's helper
+ chapter_2000_button_loc: "[get_button_name_2000]"
+ chapter_2010_button_loc: "[get_button_name_2010]"
+ chapter_2020_button_loc: "[get_button_name_2020]"
+ chapter_2025_button_loc: "[get_button_name_2025]"
+
+ # ---- 2000 column ----
+ SOV_opening_screen_2000_chapter_0_button: "The Looting of Russia"
+ SOV_opening_screen_2000_chapter_0_title:  "The Looting of Russia"
+ SOV_opening_screen_2000_chapter_0_desc:   "This is the First Screen of chapter 1 yo."
+
+ # ---- 2010 column ----
+ SOV_opening_screen_2010_chapter_0_button: "The Silicon Taiga"
+ SOV_opening_screen_2010_chapter_0_title:  "The Silicon Taiga"
+ SOV_opening_screen_2010_chapter_0_desc:   "This is the First Screen of chapter 2 yo"
+
+ # ---- 2020 column ----
+ SOV_opening_screen_2020_chapter_0_button: "The Special Military Operation"
+ SOV_opening_screen_2020_chapter_0_title:  "The Special Military Operation"
+ SOV_opening_screen_2020_chapter_0_desc:   "This is the First Screen of chapter 3 yo"
+
+ # ---- 2025 column ----
+ SOV_opening_screen_2025_chapter_0_button: "For You! My Motherland!"
+ SOV_opening_screen_2025_chapter_0_title:  "For You! My Motherland!"
+ SOV_opening_screen_2025_chapter_0_desc:   "This is the first screen of chapter 4 yo"
+
  generic_opening_screen_chapter_0_desc: "Select a Chapter Please!"

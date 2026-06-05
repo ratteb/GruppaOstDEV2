@@ -183,7 +183,7 @@ SOV_sotnik_program = {
  }
 
   KOR_korean_peoples_army = {
-	icon = "GFX_idea_no_data"
+	icon = "GFX_idea_korean_peoples_army"
 
 
 	conscription_factor = KOR_manpower_factor_variable
@@ -239,7 +239,7 @@ KOR_new_korean_peoples_army = {
 }
 
 KOR_economic_situation = {
-	icon = "GFX_idea_no_data"
+	icon = "GFX_idea_economic_situation"
 
 	consumer_goods_factor = KOR_cg 
 	industrial_capacity_factory = KOR_ic 

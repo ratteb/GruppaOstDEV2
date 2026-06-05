@@ -12,5 +12,15 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_civilian_economy"
 		texturefile = "gfx/interface/ideas/laws/idea_civilian_economy.dds"
+	} 
+
+	spriteType = {
+		name = "GFX_idea_korean_peoples_army"
+		texturefile = "gfx/interface/ideas/KOR/KOR_korean_peoples_army.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_economic_situation"
+		texturefile = "gfx/interface/ideas/KOR/KOR_korean_economy.dds"
 	}
 }

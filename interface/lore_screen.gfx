@@ -9,14 +9,34 @@ spriteTypes = {
 		name = "GFX_chapter_button"
 		texturefile = "/gfx/scripted_gui/lore_screen/chapter_button.dds"
 	}
-	
+
 	spriteType = {
 		name = "lore_screen_bg_gfx"
 		texturefile = "gfx/scripted_gui/lore_screen/lore_screen_main_screen.dds"
 	}
 
 	spriteType = {
-		name = "GFX_sov_screen_pic_1"
-		texturefile = "gfx/scripted_gui/lore_screen/SOV/sov_screen_1.dds"
+		name = "GFX_fallback_screen"
+		texturefile = "gfx/scripted_gui/lore_screen/fallback_screen.dds"
 	}
+
+	# ===================== SOV — 2000 (max 3) =====================
+	spriteType = { name = "GFX_sov_screen_pic_1_2000_0" texturefile = "gfx/scripted_gui/lore_screen/SOV/sov_screen_2000_0_1.dds" }
+	spriteType = { name = "GFX_sov_screen_pic_2_2000_0" texturefile = "gfx/scripted_gui/lore_screen/SOV/sov_screen_2000_0_2.dds" }
+
+	# ===================== SOV — 2010 (max 3) =====================
+	spriteType = { name = "GFX_sov_screen_pic_1_2010_0" texturefile = "gfx/scripted_gui/lore_screen/SOV/sov_screen_2010_0_1.dds" }
+	spriteType = { name = "GFX_sov_screen_pic_2_2010_0" texturefile = "gfx/scripted_gui/lore_screen/SOV/sov_screen_2010_0_2.dds" }
+
+	
+
+	# ===================== SOV — 2020 (max 3) =====================
+	spriteType = { name = "GFX_sov_screen_pic_1_2020_0" texturefile = "gfx/scripted_gui/lore_screen/SOV/sov_screen_2020_0_1.dds" }
+	spriteType = { name = "GFX_sov_screen_pic_2_2020_0" texturefile = "gfx/scripted_gui/lore_screen/SOV/sov_screen_2020_0_2.dds" }
+
+	# ===================== SOV — 2025 (max 5) =====================
+	spriteType = { name = "GFX_sov_screen_pic_1_2025_0" texturefile = "gfx/scripted_gui/lore_screen/SOV/sov_screen_2025_0_1.dds" }
+	spriteType = { name = "GFX_sov_screen_pic_2_2025_0" texturefile = "gfx/scripted_gui/lore_screen/SOV/sov_screen_2025_0_2.dds" }
+
+
 }

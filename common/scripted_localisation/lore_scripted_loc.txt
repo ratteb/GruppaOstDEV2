@@ -1,48 +1,110 @@
 #Titles
+
 defined_text = {
-    name = get_chapter_lore_text
+	name = get_chapter_lore_title
 
-    text = {
-        trigger = {
-           set_temp_variable = { temp = i }
-            add_to_temp_variable = { temp = 1 }
-            has_country_flag = unique_opening_screen
-        }
-          localization_key = "[THIS.GetTag]_opening_screen_chapterC1_[?selected_chapterC1]_desc"
-        }
+	# Country-specific override (uses the tag)
+	text = {
+		trigger = {
+			has_country_flag = unique_opening_screen
+		}
+		localization_key = "[THIS.GetTag]_opening_screen_[?selected_year]_chapter_[?selected_chapter_index]_title"
+	}
+}
+#Buttons 
+defined_text = {
+	name = get_button_name_2000
+	text = {
+		trigger = { has_country_flag = unique_opening_screen }
+		localization_key = "[THIS.GetTag]_opening_screen_2000_chapter_[?i]_button"
+	}
+}
 
-        text = {
-        trigger = {
-           set_temp_variable = { temp = b }
-            add_to_temp_variable = { temp = 1 }
-            has_country_flag = unique_opening_screen
-        }
-          localization_key = "[THIS.GetTag]_opening_screen_chapterC2_[?selected_chapterC2]_desc"
-        }
+defined_text = {
+	name = get_button_name_2010
+	text = {
+		trigger = { has_country_flag = unique_opening_screen }
+		localization_key = "[THIS.GetTag]_opening_screen_2010_chapter_[?i]_button"
+	}
+}
 
-        text = {
-        trigger = {
-           set_temp_variable = { temp = c }
-            add_to_temp_variable = { temp = 1 }
-            has_country_flag = unique_opening_screen
-        }
-          localization_key = "[THIS.GetTag]_opening_screen_chapter_[?selected_chapterC3]_desc"
-        }
+defined_text = {
+	name = get_button_name_2020
+	text = {
+		trigger = { has_country_flag = unique_opening_screen }
+		localization_key = "[THIS.GetTag]_opening_screen_2020_chapter_[?i]_button"
+	}
+}
 
-        text = {
-        trigger = {
-           set_temp_variable = { temp = a }
-            add_to_temp_variable = { temp = 1 }
-            has_country_flag = unique_opening_screen
-        }
-          localization_key = "[THIS.GetTag]_opening_screen_chapter_[?selected_chapterC4]_desc"
-        }
-        text = {
-            trigger = {
-                has_country_flag = unique_opening_screen 
-            }
-        localization_key = "generic_opening_screen_chapter_[?selected_chapter]_name"
-    }
+defined_text = {
+	name = get_button_name_2025
+	text = {
+		trigger = { has_country_flag = unique_opening_screen }
+		localization_key = "[THIS.GetTag]_opening_screen_2025_chapter_[?i]_button"
+	}
+}
+# Descriptions
+defined_text = {
+	name = get_chapter_lore_text
+
+	# Country-specific override (uses the tag)
+	text = {
+		trigger = {
+			has_country_flag = unique_opening_screen
+		}
+		localization_key = "[THIS.GetTag]_opening_screen_[?selected_year]_chapter_[?selected_chapter_index]_desc"
+	}
+
+	# Generic fallback
+	text = {
+		trigger = {
+			has_country_flag = unique_opening_screen
+		}
+		localization_key = "generic_opening_screen_[?selected_year]_chapter_[?selected_chapter_index]_name"
+	}
+}
+# Pictures
+defined_text = {
+	name = get_chapter_lore_picture_01
+
+	text = {
+		trigger = {
+			has_country_flag = unique_opening_screen
+			tag = SOV
+      check_variable = {
+        var = selected_year 
+        value = 1
+        compare = greater_than
+      }
+		}
+		localization_key = "GFX_sov_screen_pic_1_[?selected_year]_[?selected_chapter_index]"
+	}
+
+	# fallback if no tag-specific art exists
+	text = {
+		localization_key = "GFX_fallback_screen"
+	}
+}
+
+defined_text = {
+	name = get_chapter_lore_picture_02
+
+	text = {
+		trigger = {
+			has_country_flag = unique_opening_screen
+			tag = SOV
+      check_variable = {
+        var = selected_year 
+        value = 1
+        compare = greater_than
+      }
+		}
+		localization_key = "GFX_sov_screen_pic_2_[?selected_year]_[?selected_chapter_index]"
+	}
+
+	text = {
+		localization_key = "GFX_fallback_screen"
+	}
 }
 
 
