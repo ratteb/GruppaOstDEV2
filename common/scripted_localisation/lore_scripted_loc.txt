@@ -7,8 +7,20 @@ defined_text = {
 	text = {
 		trigger = {
 			has_country_flag = unique_opening_screen
+      check_variable = {
+        var = selected_year 
+        value = 1
+        compare = greater_than
+      }
 		}
 		localization_key = "[THIS.GetTag]_opening_screen_[?selected_year]_chapter_[?selected_chapter_index]_title"
+	}
+
+  text = {
+		trigger = {
+			has_country_flag = unique_opening_screen
+		}
+		localization_key = "generic_opening_screen_[?selected_year]_chapter_[?selected_chapter_index]_name"
 	}
 }
 #Buttons 
@@ -51,6 +63,11 @@ defined_text = {
 	text = {
 		trigger = {
 			has_country_flag = unique_opening_screen
+      check_variable = {
+        var = selected_year 
+        value = 1
+        compare = greater_than
+      }
 		}
 		localization_key = "[THIS.GetTag]_opening_screen_[?selected_year]_chapter_[?selected_chapter_index]_desc"
 	}

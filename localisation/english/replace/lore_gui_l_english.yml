@@ -18,6 +18,10 @@
  chapter_2020_button_loc: "[get_button_name_2020]"
  chapter_2025_button_loc: "[get_button_name_2025]"
 
+ # Intro fallback
+ generic_opening_screen_0_chapter_0_name:  "Please Select an Entry"
+ generic_opening_screen_0_chapter_0_desc:   "Please Choose an Entry on the Left (for you)"
+
  # ---- 2000 column ----
  SOV_opening_screen_2000_chapter_0_button: "The Looting of Russia"
  SOV_opening_screen_2000_chapter_0_title:  "The Looting of Russia"

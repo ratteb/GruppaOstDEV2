@@ -59,6 +59,7 @@ scripted_gui = {
 			year_2020_header_visible = { check_variable = { intro_screen_s = 1 } }
 			year_2025_header_visible = { check_variable = { intro_screen_s = 1 } }
 
+      lore_title_visible = {check_variable = {intro_screen_s = 1 }}
 			lore_description_visible = { check_variable = { intro_screen_s = 1 } }
 			mod_description_visible  = { check_variable = { intro_screen_s = 2 } }
 
