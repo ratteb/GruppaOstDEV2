@@ -1,0 +1,10 @@
+on_actions = {
+    on_weekly = {
+        effect = {
+            every_country = {
+                limit = { exists = yes }
+                calculate_gdp = yes
+            }
+        }
+    }
+}

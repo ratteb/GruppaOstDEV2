@@ -1,0 +1,12 @@
+# in a scripted_effect, recalc when effectiveness changes
+recalc_mandatory_service = {
+    set_variable = {
+        var = mandatory_service_conscription
+        value = mandatory_service_effectiveness
+    }
+    subtract_from_variable = { mandatory_service_conscription = 0.5 }
+    divide_variable = { mandatory_service_conscription = 0.5 }   # normalize 0..1
+    multiply_variable = { mandatory_service_conscription = 0.004 } # the range span
+    add_to_variable = { mandatory_service_conscription = 0.008 }  # the floor
+	log = "calculated [?mandatory_service_conscription] conscription"
+}

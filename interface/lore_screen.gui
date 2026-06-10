@@ -43,7 +43,7 @@ guiTypes = {
 				font = "TD_event_font_14pt"
 				borderSize = { x = 0 y = 0 }
 				text = "lore_loc"
-				maxWidth = 100
+				maxWidth = 650
 				maxHeight = 100
 				format = left
 			}

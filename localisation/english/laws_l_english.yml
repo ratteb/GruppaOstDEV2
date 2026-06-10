@@ -1,0 +1,3 @@
+﻿l_english:
+ mandatory_service_loc: "[get_mandatory_service_loc]"
+ mandatory_service_effect: "Recruitable population: §Y[?mandatory_service_conscription|%]§!\nEffectiveness: §G[?mandatory_service_effectiveness|+0%]§!"

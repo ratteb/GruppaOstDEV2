@@ -1,0 +1,5 @@
+
+mandatory_service_dyn = {
+    enable = { always = yes }
+    conscription = mandatory_service_conscription
+}

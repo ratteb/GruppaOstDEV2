@@ -112,7 +112,6 @@ ideas = {
 				training_time_factor = -0.3
 			}
 
-			default = yes
 
 			cancel_if_invalid = no
 		}
@@ -123,58 +122,27 @@ ideas = {
 			removal_cost = -1
 			level = 1
 
-			available = {
-			}
-			allowed_to_remove = { always = no }
 			modifier = {
-				conscription = 0.025
-				training_time_factor = -0.1
-				army_attack_factor = -0.05
-				army_defence_factor = -0.05
+			 custom_modifier_tooltip = mandatory_service_loc
 			}
+
+	on_add = { 
+		hidden_effect = {
+		recalc_mandatory_service = yes
+        add_dynamic_modifier = { modifier = mandatory_service_dyn }
+        }  
+	}
+        on_remove = {
+			hidden_effect = {
+			    remove_dynamic_modifier = { modifier = mandatory_service_dyn }
+			}
+        }
 
 			ai_will_do = {
    				factor = 1
-				modifier = {
-					# Ignore if high on manpower
-					factor = 0.5
-					manpower_per_military_factory > 5000
-				}
-				modifier = {
-					#Prio if low on manpower
-					factor = 20
-					manpower_per_military_factory < 2000
-				}
-				modifier = {
-					tag = ENG
-					has_idea_with_trait = military_theorist
-					factor = 20
-				}
-				modifier = {
-					tag = ENG
-					AND = {
-						is_historical_focus_on = yes
-						has_game_rule = {
-							rule = ENG_ai_behavior
-							option = DEFAULT
-						}
-					}
-					date > 1939.1.1
-					date < 1939.9.1
-					has_war = no
-					NOT = { has_guaranteed = POL }
-					factor = 0
-				}
-				modifier = {
-					tag = SOV
-					threat > 0.8
-					factor = 3
-				}
-				modifier = {
-					factor = 0
-					NOT = { has_idea = volunteer_only }
-				}
 			}
+
+			default = yes
 
 			cancel_if_invalid = no
 		}

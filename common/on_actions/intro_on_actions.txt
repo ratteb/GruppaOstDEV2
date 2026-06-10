@@ -3,6 +3,8 @@ on_actions = {
 	on_startup = {
 		effect = {
 
+
+
 			resize_array = { SOV.intro_screen_2000_array = 3 }
 			resize_array = { SOV.intro_screen_2010_array = 2 }
 			resize_array = { SOV.intro_screen_2020_array = 3 }
@@ -11,6 +13,15 @@ on_actions = {
             GER = { set_country_flag = unique_opening_screen }
             SOV = { set_country_flag = unique_opening_screen }
 			USA = { add_to_array = { intro_screen_c1_array = 2 }}
+		}
+
+			effect = {
+            every_country = {
+                set_variable = { mandatory_service_effectiveness = 0.5 }
+				add_dynamic_modifier = { modifier = mandatory_service_dyn }
+                recalc_mandatory_service = yes
+            }
+		}
 		
 
 		effect = {
@@ -37,6 +48,6 @@ on_actions = {
 				}
 			}
 		}
-	}
+	
 }
 }

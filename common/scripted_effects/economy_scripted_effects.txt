@@ -1,0 +1,19 @@
+calculate_gdp = {
+    set_temp_variable = { gdp_temp = 0 }
+
+    # Factories
+    set_temp_variable = { tmp = num_of_civilian_factories }
+    multiply_temp_variable = { tmp = 550 }
+    add_to_temp_variable = { gdp_temp = tmp }
+
+    set_temp_variable = { tmp = num_of_military_factories }
+    multiply_temp_variable = { tmp = 300 }
+    add_to_temp_variable = { gdp_temp = tmp }
+
+    set_temp_variable = { tmp = num_of_naval_factories }
+    multiply_temp_variable = { tmp = 400 }
+    add_to_temp_variable = { gdp_temp = tmp }
+
+	
+    set_variable = { gdp = gdp_temp }
+}

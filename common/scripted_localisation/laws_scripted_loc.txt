@@ -1,0 +1,7 @@
+# common/customizable_localization/mandatory_service_loc.txt
+defined_text = {
+    name = get_mandatory_service_loc
+    text = {
+        localization_key = mandatory_service_effect
+    }
+}
