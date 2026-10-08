@@ -7,8 +7,8 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=shia_fundementalism
-			desc = 
+			ideology=paternalism_sharia_democracy
+			desc = Aura
 			expire="3000.1.1.1"
 			id=-1
 		}
