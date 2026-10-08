@@ -1,0 +1,178 @@
+[
+  {
+    "path": "gfx/interface/tiles/tiled_army_view.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      190,
+      190
+    ],
+    "fingerprint": {
+      "source_sha256": "e4ce36b40e362a66a5fff5b4b18d95ce4146df2aa82f291a521d004e63cde497",
+      "recipe_sha256": "8c54ee37db574ec95395c2f55ced0e7a649c4188c31a71097dde583b992ba827",
+      "dependencies": {
+        "original_custom.py": "78c6477a831786679f0828d6fbde136e42f231d6fef3f7fad5c1240ff133d7a5",
+        "original_custom_renderer.py": "ab93a8d2680395d820c1668f192613eef35d9c2df6878dbe09e4aa6e33d0687d",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "67189617bb53c3de0e44518767d42d3ccde4b6c77920434f649ae42c8d275608"
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_main_menu.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      192,
+      192
+    ],
+    "fingerprint": {
+      "source_sha256": "adc3f2eb180f52ac6a2907a1be4957cda9ad8235a585e2f29c2ee76452ce61db",
+      "recipe_sha256": "8c54ee37db574ec95395c2f55ced0e7a649c4188c31a71097dde583b992ba827",
+      "dependencies": {
+        "original_custom.py": "78c6477a831786679f0828d6fbde136e42f231d6fef3f7fad5c1240ff133d7a5",
+        "original_custom_renderer.py": "ab93a8d2680395d820c1668f192613eef35d9c2df6878dbe09e4aa6e33d0687d",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "dabcd942955ce83dd4a90b90fbb3bd905f149f0c20ec6877d3142f1e01fb5822"
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_paper_bg2.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      192,
+      192
+    ],
+    "fingerprint": {
+      "source_sha256": "4c35e8bc7e90f145fe57c2bb84774bdda24c1d58e68ab79be4b177afd878f73d",
+      "recipe_sha256": "2cbf4ea93eb439770ecb33ffb5da1dad36aa01b78a7cabafd068a76f93d3cf7e",
+      "dependencies": {
+        "original_custom.py": "78c6477a831786679f0828d6fbde136e42f231d6fef3f7fad5c1240ff133d7a5",
+        "original_custom_renderer.py": "ab93a8d2680395d820c1668f192613eef35d9c2df6878dbe09e4aa6e33d0687d",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "e1c6cb399204ab8d2b12cc9de1b7ffa227dd17c7f37ec0b1c36b2b647a4d8ee8"
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_window.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      192,
+      192
+    ],
+    "fingerprint": {
+      "source_sha256": "0259e81626398f3c04aaed65c4275c18c2a77eaee0e6e0e857fc1b6f250bd89f",
+      "recipe_sha256": "8c54ee37db574ec95395c2f55ced0e7a649c4188c31a71097dde583b992ba827",
+      "dependencies": {
+        "original_custom.py": "78c6477a831786679f0828d6fbde136e42f231d6fef3f7fad5c1240ff133d7a5",
+        "original_custom_renderer.py": "ab93a8d2680395d820c1668f192613eef35d9c2df6878dbe09e4aa6e33d0687d",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "1f3de226766a4e96fbc44a077715e885c51a42864e8b63a1ff314988613e399e"
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_window2_2b_border.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      190,
+      190
+    ],
+    "fingerprint": {
+      "source_sha256": "0c1f12e7f2264bfa88a08868ed0a1a1f7519eaa09f74c4e2da6bd49d3d645694",
+      "recipe_sha256": "8c54ee37db574ec95395c2f55ced0e7a649c4188c31a71097dde583b992ba827",
+      "dependencies": {
+        "original_custom.py": "78c6477a831786679f0828d6fbde136e42f231d6fef3f7fad5c1240ff133d7a5",
+        "original_custom_renderer.py": "ab93a8d2680395d820c1668f192613eef35d9c2df6878dbe09e4aa6e33d0687d",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "67f1adc5ee0184b1f2eb59c28d68f95b801de3a915f3ae1dc2a56ef4216740e9"
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_window_pol_goal.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      382,
+      382
+    ],
+    "fingerprint": {
+      "source_sha256": "c7ac6acc76db5222b33ffbd61cbeb958fba67e029e5d49f029ebdf7b69aabd74",
+      "recipe_sha256": "b2c0733ea27d90001a2c30412e2457313bb9e6660ca7f5791134291c1c1f63a4",
+      "dependencies": {
+        "original_custom.py": "78c6477a831786679f0828d6fbde136e42f231d6fef3f7fad5c1240ff133d7a5",
+        "original_custom_renderer.py": "ab93a8d2680395d820c1668f192613eef35d9c2df6878dbe09e4aa6e33d0687d",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "c6417bcd2dc855672c48064f5de206927daff2c8ee3a6aeaabbd04916abe0956"
+  },
+  {
+    "path": "gfx/interface/tiles/tiles_dialog.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      96,
+      96
+    ],
+    "fingerprint": {
+      "source_sha256": "ee11ce901712d4c480a71b385de46dfbddfe82e345772b7a10b1e55aaa4ef499",
+      "recipe_sha256": "8c54ee37db574ec95395c2f55ced0e7a649c4188c31a71097dde583b992ba827",
+      "dependencies": {
+        "original_custom.py": "78c6477a831786679f0828d6fbde136e42f231d6fef3f7fad5c1240ff133d7a5",
+        "original_custom_renderer.py": "ab93a8d2680395d820c1668f192613eef35d9c2df6878dbe09e4aa6e33d0687d",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "57308ce881156b48bf26057d64f1280c26274583b6828e2fd3d9dda59625d270"
+  },
+  {
+    "path": "gfx/template_border.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      295,
+      293
+    ],
+    "fingerprint": {
+      "source_sha256": "57b160bbc5832f4555dcf77d5462f9fb5cfce4bafcb04de1123b9bb0b219026f",
+      "recipe_sha256": "5b8de4128323d15d32277344597c475ddc8476c9eea6e5f531706781c564d986",
+      "dependencies": {
+        "original_custom.py": "78c6477a831786679f0828d6fbde136e42f231d6fef3f7fad5c1240ff133d7a5",
+        "original_custom_renderer.py": "ab93a8d2680395d820c1668f192613eef35d9c2df6878dbe09e4aa6e33d0687d",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "b523aa1a5e973409659bde9a094aa7cf30050d73bb432b9634d3cecc5ee81d52"
+  }
+]

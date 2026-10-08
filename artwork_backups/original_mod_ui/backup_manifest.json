@@ -1,0 +1,1757 @@
+[
+  {
+    "path": "gfx/interface/LoadingScreen_Progress_1.dds",
+    "sha256": "bb94dee51660e8cff605262aca3c6bb6afecd1fdf5c7e0ec1d33e85fd65398e5",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/LoadingScreen_Progress_2.dds",
+    "sha256": "83caffee016746fffe3efa1a062840d427a31454c2b9729cdd155c25dd78b521",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/Loadingscreen_loadingstatus.dds",
+    "sha256": "a357bae1d47a1852d33b5121d8729d6d5069e454c5528ab513286216d148d0e9",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/Loadingscreen_loadingtip.dds",
+    "sha256": "145b9e77b8ef5be2e18944c67145e9ecde0311c7b1ead2dcb52c56b8e6070ebc",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/add_national_goal_button.dds",
+    "sha256": "919e99da9cd4186fbdaa045a6226aa9969f36066d43790c3f50dd67a96fed5db",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/ammunition/ammo_bar_bg.dds",
+    "sha256": "64f6f6ea3867a619466add3f0fda6bb68e3ebf959bbb54faebc950ba669c41c3",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/bookmark_entry_bg.dds",
+    "sha256": "109d75e55a1c251f684a0f3b0f2ff9202f37019fde5b818a07865c4d2507e997",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/button_123x34.dds",
+    "sha256": "7fe6695b272053f82146ef873b1bfc7673f116642725e57cc9fc36a276de1cc0",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/button_148x34.dds",
+    "sha256": "c5cb81cd7f178c4a82ac99586996a12ca981181d2f7313f26cb97a6c8beb553f",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/button_221x34.dds",
+    "sha256": "48a8dc457724126c454431d7656e7342c9940caf6baf57ddbab60846c989a5fc",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/category_header.dds",
+    "sha256": "e454fe67f6978020938646b3684d5a8ebc79e724f7a1755961815f59109d55ff",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/construction_header_bg.dds",
+    "sha256": "622cac175dc6682d0fa7b6d8ef7625fbe6c34ace9bf5c3020e61d9eae857609e",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/constructions_bg4.dds",
+    "sha256": "7948c7d2484cdc15de2945a8c8954182e92dfd51ca73025b8d5ed3cdf3ae3093",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/country_selection_bg.dds",
+    "sha256": "22078043fa2376cb44c6c0823b6c20ec6d1908f009bb92b195a3282e7585d7fd",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/country_selection_entry.dds",
+    "sha256": "eeeae6e240fb9ab5bb35ad691a83144e517c0afd88c37f06207ed4297b569b6e",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/decisionview/category_header_bg.dds",
+    "sha256": "2978f3b27f92743711b4ad77ef9b1d9b0c8b9e17df0c33009549df953be761dc",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/decisionview/decision_AI_item_bg.dds",
+    "sha256": "bb0bbc4de9bed6afd47a7ec522a230357b16ca011e8ee56904604451499e0b43",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/decisionview/decision_description_bg.dds",
+    "sha256": "df2c36939200a85e852d8b309c31baf33f27736385a98473859bfe289eacc067",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/decisionview/decision_item_bg.dds",
+    "sha256": "48a74c83e23ae926556021e08af01a484e72317a639e9f16ed5d7cb43ae62d9f",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/decisionview/decision_item_bg_single.dds",
+    "sha256": "535ceb07ac539614b7834e41c51155866af02b42cfcb60661239704c051da481",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/decisionview/decision_progress_bad.dds",
+    "sha256": "db32e02525708b83dcced1491c2697fb958b131a53928285e6e2ff8814a8dfae",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/decisionview/decision_progress_bg.dds",
+    "sha256": "4fe0ce699845f2718130335b4bed7c65f46e984ae5b9fe533653bdf125fd9218",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/decisionview/decision_progress_good.dds",
+    "sha256": "2b4148a0b7353859a4e9278052958d02bf23233f1f3c72b1b03195a1ed294d32",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/decisionview/decision_progress_neutral.dds",
+    "sha256": "cb6a1968b5e7f6020194038f497fba79a93c6c0da7e655b99588b0fd53d8000e",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/decisionview/event_header_bg.dds",
+    "sha256": "a5558108e95265991f9ccb4920d69d98c378c9bde1c0705a8e97456298bd1d71",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/decisionview/event_item_bg.dds",
+    "sha256": "58ec14c01091605837c04b4ddefbfe7e939e997989162080af9b0e21166aa8c3",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/decisionview/on_map_cost_bg.dds",
+    "sha256": "056ee24a225725514f14aa2ed8005d8043c1980b2c15a2e226cb90fb5a4310f9",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/decisionview/on_map_decision_bg.dds",
+    "sha256": "3246b06d560b6cc154aad7296f7aa6c6058c9619f50832cd3927e89011a45ecc",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/decisionview/on_map_progress_bar_bg.dds",
+    "sha256": "bb57e97a78ae4f638ba5114acef1a34db321c24558dae53a1b4df45071168691",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/decisionview/on_map_progress_bar_bg_old.dds",
+    "sha256": "c9a944aa2ecb628e75879e1725341ef2567c3ae5f04d3f9c20efecc3cb718767",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_flag_frame.dds",
+    "sha256": "2adb0ad7ebcbca4233f25a8968c69ef54d8325368f97491874fb0d3a04347a7a",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/diplo_goal_button.dds",
+    "sha256": "f09ab37df9883ec5686d59c1f994437e5be968d8d96a153a974e57b0ddca45f6",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/diplo_leader_frame.dds",
+    "sha256": "7814211b215a52c95e8cc712150a34909419fc4de213298e342acd76e926bf1b",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/diplo_nat_spirits_bg.dds",
+    "sha256": "6aac176eda71cb6bbf0d38bc3a49c3e8303f00e7a4e235a918a0003779ee582c",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/diplo_relations_bg.dds",
+    "sha256": "79fe9a3a13fc60778cba9b3b40182b7dcc553cd46517048849a45adc7f1344dd",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_top_bg_diplo_tab.dds",
+    "sha256": "6602fb6f61301a3f153d4682a6160afa940474d554114d2ddd6bb37c7a4bc8cb",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/diplo_upper_win_bg.dds",
+    "sha256": "23d3ff8a60a8637abcd38b22eac8f03c0597df8054f81d527c12954c682b204a",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/event_news_bg.dds",
+    "sha256": "3a135afff1cf01631ed8642993ad9261613112bbca23aa32f95c0bfdd134213d",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/event_option_entry.dds",
+    "sha256": "22e0321d46d64a35bb4d0b5b236ce0bd3571ccbc97d7d01b2cf5e708f744703f",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/event_report_bottom_win.dds",
+    "sha256": "cb2564276c1b9724d04cd0c95988094898d77ab2308093f36407e442256b0e68",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/event_report_bottom_win_2.dds",
+    "sha256": "5fe23d678ffb0ee52113bcadbf2b6d290e31f302f886426e5a34494c8ed3aacd",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/event_report_tileable_midsection.dds",
+    "sha256": "e27cd71fd4231d2a46288b671f0092f3c30547f6fdfe954ddd4de8630186e50c",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/event_report_top_win.dds",
+    "sha256": "586f695679709afe06f8f13129ae8e8ea183ed688bea544e457805ef9fc1651e",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/focusview/titlebar/focus_can_start_bg.dds",
+    "sha256": "314db7883af3718181e2675a58b93f90c784badfe8e5fb39563b65129e0e7d12",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/focusview/titlebar/focus_completed_bg.dds",
+    "sha256": "977eb395330a01dd61d811b514f96bf86c81fbed812330875f5667766f9dcb74",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/focusview/titlebar/focus_unavailable_bg.dds",
+    "sha256": "ed88b2da0c4fc681214941e3c8a8a10199c59c80fcf13b6771ef8c629aaed64d",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/generic_bg.dds",
+    "sha256": "14a484bc8d14ab83e50b5962422d0ab903c37d632c4344e527dc8f6937708cc5",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_bg_307x113.dds",
+    "sha256": "b8626c1e501c2f25a290bb85c2c4a66822dcefe36cca3226354ba5629020211e",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_box_80.dds",
+    "sha256": "035b25b67996f54ccaed7d89d63d823a53c3cfcb77be9a67c5602020398b8d85",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_box_96.dds",
+    "sha256": "60551b8040a9edb12ffbbb3aed137cfcdadb2ca0c8b36dc38ce4f6acfa00d24a",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_box_smallest.dds",
+    "sha256": "5c7771dc4b881978ae40ff911adb0e4764b8718515944fe6de3bca8bf1623ea7",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_text_bg_108.dds",
+    "sha256": "53dfbb8004e630bed3da3454f8780a3eb758abfd6db555cfda08b97382ebca7d",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_text_bg_154.dds",
+    "sha256": "9842e9cda832f664a274210d662fdfbb4ff00d261569ebf595deaf3bc742b626",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_text_bg_203.dds",
+    "sha256": "e942649a4e5a924844f7022cf73ab2b91debcfc03bf61f8ff385148fb3e4aacd",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_text_bg_60.dds",
+    "sha256": "6dae67ab27b9cd8636c6213ffbf6f941f31176c350b0ac4c087bcad40b3b9735",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_text_bg_88.dds",
+    "sha256": "48dd3eaa8c34e615293acf771b4ab479ac1b1ae548f7c041bc61844cb34032d3",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_w_box.dds",
+    "sha256": "50a372b11c72f18503d3ca1e27aeced1f90ea0e9b0102fd97cf6800379ca0508",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/government_button.dds",
+    "sha256": "98a20279848f3fbda90b6581eae48fcc01666036fbc1e18c6ea714265cce6e94",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/guimore/tiled_bg_1_scrollbar.dds",
+    "sha256": "6cf97e8e5738e2d0e84d60ffeb5163d2752f89d643d7bf73c4ef33c285a3107c",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/header_bg.dds",
+    "sha256": "0b8975e56fba3d48b07a38f8b56369bb6be02607d2fe0c9cc1c1d0069c86f4de",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/intel_ledger/tab.dds",
+    "sha256": "c7d97d1716ffb5effc0a8f50bdb441ef7cc7c3fa90dbb030cb2a4216c70b83f8",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/intel_tab_large.dds",
+    "sha256": "8b265b8736ad48f60eb57e1d763bce1cc35df6a8a7d914d9774895f3277fd726",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/main_lobby_button.dds",
+    "sha256": "dd1dd24855538f81889beecf75edfd4d5b74a93c1e82910cf2d320340939bfe6",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/main_lobby_divider.dds",
+    "sha256": "2d1d4b8d8c447f6fa13f3e9aa5b0de48098ae073cc031267e6dd4cef793f8b50",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/minor_portrait_overlay.dds",
+    "sha256": "444c30185615ee79ab5967977642922a2a22216423c66ad51aa3f8dd79208016",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/pol_goal_bg.dds",
+    "sha256": "19c3068516bf162d2036e7bec769b21f4c1f9846242f817b810cd61615ca2901",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/pol_leader_frame.dds",
+    "sha256": "4ba953ea52ceb325cbceb2ccb4b5a57d06584b9d147497583829b7fe228766b9",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/pol_view_bg.dds",
+    "sha256": "0270b91542eb2073ded697b2c709962b3b13f2f79cce4ea56cbc6bad8486aa2d",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/research_line_bg.dds",
+    "sha256": "7429681c40b39e60922dd6ba0482882f064b71cddfe4f38c3f25f694f423028b",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/scripted_gui_graphics/SOV_UR_ruling_party_gov_gui_background.dds",
+    "sha256": "b03070f23ccf50dd1a6080eee8501eb07d9e01158dc08eb4010229b10d035d67",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/scripted_gui_graphics/government_gui_background.dds",
+    "sha256": "9230282d3d79c21a80a785f07ebb9a6c9b3147c5f7ca7350fd2392d45cedb2b9",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/scripted_gui_graphics/intro_screen_background.dds",
+    "sha256": "9f137d2fbd596c4f919b7a3e4ff55a26f389ed29d7b61e97ac63c312646b0d81",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/scripted_gui_graphics/military_gov_gui_background.dds",
+    "sha256": "a99cbbb1b6726f44dd78335747eace57c75b606073caa86a3bbac738d79b7cf9",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/scripted_gui_graphics/opposition_gov_gui_background.dds",
+    "sha256": "642f72d9744b0d8ab3c6063d6ccc9e24877439b8f2cef1b662790e0701295a01",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/scripted_gui_graphics/scripted_gui_background.dds",
+    "sha256": "cf38271f5735e47ffeee1ce2901951515b5aa59a1dd8839ad3fce31fe1e5af74",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/scrollbar_horisontal_bg.dds",
+    "sha256": "63098f014d440b921badb23890b05ce0946a08011a4c9130efa75dde4efa0d8a",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/scrollbar_vertical_bg.dds",
+    "sha256": "ac4b1fea070b80cce2f2bbf5bdbbd5db1269f34be6fc59f80941744a5a81dc36",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/select_date_bg.dds",
+    "sha256": "7ed7434942113c4acae147cbbdcc39c267cab6de0a66c1dfc1c6847491c1ce30",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/stateview/generic_text_bg_48.dds",
+    "sha256": "361459d025c4a96880c3bbad428893f0e1ddc18e68d8e72683ba8cba91a5d95b",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/techtree/tech_info_top_win.dds",
+    "sha256": "5744893e81697fb43b334619ee7d4fb4a2dc9d41ec640ca863a0d0484397045e",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/templatestuff.dds",
+    "sha256": "cf38271f5735e47ffeee1ce2901951515b5aa59a1dd8839ad3fce31fe1e5af74",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/black_bg_tile.dds",
+    "sha256": "6e024c0716da59c391f44e54d3e3cdab9797f87e8ada4f30eab8a0d700c1d56f",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/dark_area_cut_8.dds",
+    "sha256": "f201d9368ec3ef3d9eef012e69c2bfd895ca4ece9e95e7d60b54f5518cefc787",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/green_frame_tile.dds",
+    "sha256": "f7c95e642c7bbfcfc7762754ea53ec58a60b5b722528e24037548e4c9843c05b",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/marble_tiled_bg.dds",
+    "sha256": "d456d3b11a469e779fd39098e8e364142b7df016863dc86a7334be94bb870378",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/marble_tiled_bg_edges.dds",
+    "sha256": "6f4fdcf3097aba8aab0b7a5ec2092813f511571144e15332539f54ce0d88f83f",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/outliner_tile.dds",
+    "sha256": "bb0972e2fc863d24627701d4141d4566f579216623cbbbb97284ef5aaad10142",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/raids_filter_tiled_bg.dds",
+    "sha256": "72d7a015610d96ce97b19fe85327ff74a6ebed8eb4bb225dab04214ab55cae25",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_army_badge_view.dds",
+    "sha256": "f25207c86dd9afa64d97da8863598eda5fb4790d90a54ae1457ddfd9b5949cc9",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_army_view.dds",
+    "sha256": "e4ce36b40e362a66a5fff5b4b18d95ce4146df2aa82f291a521d004e63cde497",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_bg.dds",
+    "sha256": "9d88457dc645656feecee72b06800f8b7527465eb0507aedd92001d219619d4f",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_bg_1_scrollbar.dds",
+    "sha256": "6cf97e8e5738e2d0e84d60ffeb5163d2752f89d643d7bf73c4ef33c285a3107c",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_bg_noframe.dds",
+    "sha256": "e9e20488142630bf7a060be6ba13da635a90e158efcaee0dd834168b53ac6646",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_decisions_bg_small.dds",
+    "sha256": "e4ad3884eb633bf422bbe7f85d62aaebcefafa54cbcda8b70e635657be970409",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_focus_bg.dds",
+    "sha256": "adf0d7741fcaffa1c1a09ace5b0ea6bdd6015516bb334cdfcbd0ea3459b4ef6d",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_frontend_lower_bar.dds",
+    "sha256": "4b6ea584b9f2bdeaa8da3fa9dfe10224fe5b17140f34a5714d0ce9f9c24c62a5",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_frontend_upper_bar.dds",
+    "sha256": "f32f38805f5815068a42ae5eedb9b37a77aaa8b5d40dd6e0c231b467eaebd676",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_generic_bg_1.dds",
+    "sha256": "99ccc0ed1cb57e4b51e75b7f399100f4266e5796528c3752241d42aa0ba05dcf",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_generic_overlay_bg1.dds",
+    "sha256": "9808057f1c4c64eac24e2e79ba5f021f7d3e3f068263410ee8cb4c2cbc2c4f89",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_generic_overlay_bg1_small.dds",
+    "sha256": "ffd7f46e8fcbdc6a1e62514c3ae60ca21728b0d92e228b1b6508fe2ae5ddde12",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_header_1.dds",
+    "sha256": "79574d003d61b06283b16f60bbc50797cb6bd3b53b4050710e8f457364781fb7",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_insignia_window.dds",
+    "sha256": "7d5215b13d5ca117d0e314911a7d5f7d9b496fd9f9b965cbae4ab84657d55ea1",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_main_menu.dds",
+    "sha256": "adc3f2eb180f52ac6a2907a1be4957cda9ad8235a585e2f29c2ee76452ce61db",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_mini_dialog.dds",
+    "sha256": "81ee2c88a5608d48ed95e11fcc3b34a188e6066b0f480021d01ebdd6a132521f",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_mini_dialog_grey.dds",
+    "sha256": "6c781f23818f0dbd43baaa33ba0257e5df105b3a32ac64bac0d30cc048fffc03",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_mini_dialog_with_header.dds",
+    "sha256": "47d373dbe671f1002fde7012a35b0d03ecdec34ac0eb6c75686b5a6308984a80",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_paper_bg.dds",
+    "sha256": "b927dc3e3724277c8fb950a22b17ab9b974e27247067ecd3324e21225783075e",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_paper_bg2.dds",
+    "sha256": "4c35e8bc7e90f145fe57c2bb84774bdda24c1d58e68ab79be4b177afd878f73d",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_paper_flat_bg.dds",
+    "sha256": "51ef968e450bea20c9de26230126ae3307b842d9e9e6939b7584a94ef77541d9",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_paper_w_frame_bg.dds",
+    "sha256": "8819fe91f6b9e3dc23ea925dbdd9649c8cd1fa41b6cb506f29c52b1a1bd448c5",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_paper_w_frame_one_border.dds",
+    "sha256": "a88b833ab8338327b51cb170486966be0edcbecd0e43eae86c0429761316a9eb",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_peace_upper_bar.dds",
+    "sha256": "7ca4ed6e0ae5b123edf00949c4b57b2b5725d82bb126daf607183d181911cc6f",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_plain_bg.dds",
+    "sha256": "6bc8382dee40ba810309201e96c86f7980b45ff47eaf46db97ed59dab03d9542",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_plain_bg2.dds",
+    "sha256": "62f830c5ca5b25db88d55921bb2e6c52ad4641f6e8283ce61a1939e83e64fa92",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_plain_bg_small.dds",
+    "sha256": "766eb80926f5e8d16dd8bb352c461404ef9c34dfe78f52263f885da5b5a00362",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_progress_bar.dds",
+    "sha256": "bcaf9348a950101fbaa2b9f75b265a8b0fc0013c08e930e6b370fb6438cd7263",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_progress_bar_color.dds",
+    "sha256": "7bc7ed04eff3a8b1f281afc240a3e6e8b985b2bf75bab29ee3c1712354bc8c18",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_research_bg.dds",
+    "sha256": "4d0fe6d3ed2d2a3198acf2a2787f7e38a647a89b412aaab551be650f97db4279",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_selection.dds",
+    "sha256": "4a7c365d18e9486a346ef327e84608a7b6652d1b2cd76a8213dacf682c2dbe3b",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_selection_bold.dds",
+    "sha256": "aa3cea1377db2961bd532c87e071438f6ea4dacb5cbced1bddf20ac511b6902d",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_special_cut_bg.dds",
+    "sha256": "5a5e78f724a33309a7ec6f68e271330ef08e78b415057c7f332a97238324f1d6",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_window.dds",
+    "sha256": "0259e81626398f3c04aaed65c4275c18c2a77eaee0e6e0e857fc1b6f250bd89f",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_window2_1b_border.dds",
+    "sha256": "7f0cd939fde5b4a8177dfe50fdb3ca48aef16a867ab47d815ea288b3dc1ab4e2",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_window2_2b_border.dds",
+    "sha256": "0c1f12e7f2264bfa88a08868ed0a1a1f7519eaa09f74c4e2da6bd49d3d645694",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_window_1_scrollbar.dds",
+    "sha256": "4735404e4b5e4c00acaf062e2ac79883e7abd44b4d0cecaf16a59cd6ba7f0cea",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_window_1_scrollbar_glow.dds",
+    "sha256": "013a89259c5ae95727410c17deed5ebe1873637e302b72c33cd4d93442cbda17",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_window_1b_border.dds",
+    "sha256": "4393c5d15fdd0c4c300db8cd785f173aca38a5d442ed769c85b2d31af7dc197f",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_window_1b_thin_border.dds",
+    "sha256": "d2976223ab68c94233f7c554d950a5b09418a97b87385cffc27d2f280d0d0d09",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_window_2_scrollbars.dds",
+    "sha256": "a2dd051013fb284e4535e105e3adf0611a4cf3a796bded786452eb95db3a4ce4",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_window_2b_border.dds",
+    "sha256": "97c3bc6c2fb7caf93931d23693faa39bdb8d803ea8434010d705d50d60d2cfca",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_window_color_picker.dds",
+    "sha256": "db8a2f7e8fb6e3933028593a379e3562b713eba51834cc4b5d3eb9ba3b438af6",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_window_pol_goal.dds",
+    "sha256": "c7ac6acc76db5222b33ffbd61cbeb958fba67e029e5d49f029ebdf7b69aabd74",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_window_small.dds",
+    "sha256": "75a8ba04928042bcd820789c1053008ab9664659fe208854242bbcb7dbcc50a1",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_window_small_selectable.dds",
+    "sha256": "424f231bfd0c0185ba1eb730623f6c9b70a628644b766e60f3b8429c3ff2f71f",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_window_small_small.dds",
+    "sha256": "9c63c8b1200f08f3182d44ef9e9f3f923b1c12e7bacd66c4c1100a3003521a91",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_window_thin_border.dds",
+    "sha256": "df300f9d76f3b19c124cd515432ce3221bd619293312ad784f33647bbcbacb5f",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_window_thin_border2.dds",
+    "sha256": "e911ec82532b7a92f6c89f91f910e71839cd3708affa6ef754eab922e4aed8fd",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_window_transparent.dds",
+    "sha256": "f25207c86dd9afa64d97da8863598eda5fb4790d90a54ae1457ddfd9b5949cc9",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiled_window_w_close.dds",
+    "sha256": "de0bf52a34949bee9d61779900f43a2239fae30636cb22abf1ed748697dcbcd1",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiles_dialog.dds",
+    "sha256": "ee11ce901712d4c480a71b385de46dfbddfe82e345772b7a10b1e55aaa4ef499",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/tiles/tiling_sort_button.dds",
+    "sha256": "a4a2823f37bb5dcd0d26161f3e4d28c9f91637b09f8f663cf3ebdbb06dc5b994",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiling_sort_button_2frames.dds",
+    "sha256": "b1fe8a712aa414102783ee56ba0dc7904509098db145ef6f5934705d4b45216c",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tiles/tiling_sort_button_thin.dds",
+    "sha256": "3d6b8c0a6b82f32603b5a0af3ba16f03f3f0078726f98b38f68f911a1ce2c30e",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/topbar/armyoverview_buttons_bg.dds",
+    "sha256": "c1d0b861bb3bed35e45d39707d25a4b20a05f49cc26c64fd7cff45f8d99ad293",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/topbar/background.dds",
+    "sha256": "513b5f6825afbad6a748bb561fd41546df4e635b5ea0895ef8fbf9b3bc4df7cc",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/topbar/background_extended.dds",
+    "sha256": "5f6cf65e751e119cc0b0bf9eae995bf4a6397ff372a7b0289e6ba52db09d0101",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/topbar/musicplayer/disabled_song.dds",
+    "sha256": "aaf0e971648d8bdfb5ed70fff0b24c843c817eaf504b24438be4c52c819d8611",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/topbar/musicplayer/music_player_entry_bg.dds",
+    "sha256": "737da8fc1836af82ec5062c027f0533392e8161f7aa42289b597527ca70d62d0",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/topbar/musicplayer/music_vol_progress_bg.dds",
+    "sha256": "04e85b94e699e0a7ef6018b9c14356cfc89b4d124bab85aee005841ced51eee3",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/topbar/musicplayer/musicplayer_bar.dds",
+    "sha256": "bcd2a5ef33c0e43b8e868a0d9272db13505c378a812763936da46b596c197507",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/topbar/musicplayer/musicplayer_bottom_bar.dds",
+    "sha256": "9b8a7778e2245ab4d1a05b34cfa27a77d1bd8b2f6f7ae9ecacf45c93a72cbd88",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/topbar/musicplayer/musicplayer_header_bg.dds",
+    "sha256": "fa1cf1db57fb67ab665bfe704c6ef6fe24b4d001700fd9486566a1241a32bc76",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/topbar/musicplayer/musicplayer_list_bg.dds",
+    "sha256": "339354713bf395f9472e17614b256a8eb1f6c9e60935b0dd4b830d8922dd24ad",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/topbar/musicplayer/musicplayer_list_bg2.dds",
+    "sha256": "974b517976cdf316210ffd2d48d07fda4af52cdda0d2bacf1e0aa23920a1935f",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/topbar/musicplayer/playlist_bg.dds",
+    "sha256": "79166a366661322e725e0ae8e7f6973b1026a2375994bd6ee180b500ef175fed",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/topbar/musicplayer/selected_song.dds",
+    "sha256": "056c7f6e71025fbdd4145ad6bf55f0e3cc39faf195d31318e2b6dd62d7f22447",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/topbar/toolbar/button_depressed.dds",
+    "sha256": "7168635bc3ba78de2c287cce0b58cbf0b813f062371be4e04ff5819cf993518f",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/topbar/toolbar/button_pressed.dds",
+    "sha256": "894678b487736749823b714f0de24ac8cbc1b1323e9b9c5a76eb5b5ae9d9453e",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/topbar/topbar_date_overlay.dds",
+    "sha256": "06ff847df46afcbfa529ab178be577298f6196cae4f247d670b806a782505ca2",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/unitcontrol/focus_reward_header.dds",
+    "sha256": "3277e15b16d3383711de506877b50b146378f242d58b8d025cf924fccab925e4",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/unitcontrol/unit_entry_bg.dds",
+    "sha256": "894a10c8c5f502b829640ec3b714a42a4d2f29c51218bc98531d84a85c500236",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/unitcontrol/unit_list_header.dds",
+    "sha256": "607b8c9f7c67cdf50d04c84ce8ab61118fd98f8e0f09cf1f7a27492dec0d76d6",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/unitcontrol/unitlist_unassigned_bg.dds",
+    "sha256": "a4bf60e64fff26c2283074c1e91521b845b70c48d2abfe956d7cfa0edc33a9c2",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/scripted_gui/csto/csto_cata_danger_progress_bar_background.dds",
+    "sha256": "ff5d232bdca5da1dbb5e1ff8075e4505f905096f51214e2325b24160954164b9",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/scripted_gui/csto/csto_cata_threat_progress_bar_background.dds",
+    "sha256": "ff5d232bdca5da1dbb5e1ff8075e4505f905096f51214e2325b24160954164b9",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/scripted_gui/lore_screen/chapter_button.dds",
+    "sha256": "1ac86028bca08b2f07af45c7671aa9de6164ed270a96f010f675d9d349ed6a92",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/scripted_gui/lore_screen/chapterbutton.dds",
+    "sha256": "b4ffa576982a4700b5c1a6799600179edbfb927e91c30664d276527bb3f50fb0",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/scripted_gui/lore_screen/lore_open_button.dds",
+    "sha256": "05dd7ea77dab1629f57d641313078bb308f3b8b90b398ce0195e296321dba6b8",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/scripted_gui/lore_screen/lore_screen_main_screen.dds",
+    "sha256": "f1ddbfd8dfd98d518527dc7443d871ab9d7fd2c86f7dc09d83bd917cfef03bb8",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/scripted_gui/sotnik/gerasimov_frame.dds",
+    "sha256": "17afcd6e2726b55c7029b44138014b0f8b7472a3e914be7e028f23221045dfa5",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/scripted_gui/sotnik/gerasimov_progress_bar_background.dds",
+    "sha256": "6d4846da83336f8ebab6be5dd9d4cdf481d0bd2c3164df978e406dcb690a3068",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/scripted_gui/sotnik/shoigu_frame.dds",
+    "sha256": "beb08263b622021f933c31de752c96a452eba1aa73bdc1d9d5363627c1c445d0",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/scripted_gui/sotnik/shoigu_progress_bar_background.dds",
+    "sha256": "6d4846da83336f8ebab6be5dd9d4cdf481d0bd2c3164df978e406dcb690a3068",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/scripted_gui/sotnik/sotnik_progress_bar_background.dds",
+    "sha256": "6d4846da83336f8ebab6be5dd9d4cdf481d0bd2c3164df978e406dcb690a3068",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/template_border.dds",
+    "sha256": "57b160bbc5832f4555dcf77d5462f9fb5cfce4bafcb04de1123b9bb0b219026f",
+    "original_custom_reference": true
+  },
+  {
+    "path": "gfx/interface/subview_header_bg_375x101.dds",
+    "sha256": "cc404fd592925da1ceb82d06c8ddf73208cd05d3489e921c4a490c69f64f49b0",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/modifiers/MODIFIER_bg.dds",
+    "sha256": "7cc2a89ad700c7b4a413e2b75979af16a1d28ca60758797ef7c983b48eefce66",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/armyoverview_naval_leader_frame.dds",
+    "sha256": "1b0c1b91c7fe827f29ee57de177b91521cf2f1ddcbad30095159c563d32cd80b",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/armyoverview_entry_bg.dds",
+    "sha256": "b5ca0276f5e5c241f89fbc5811e080968c507e1b652e7909d6df758321956382",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/armyoverview_naval_entry_bg.dds",
+    "sha256": "15029b5af6138d98de9c424461a1d6e672cd9996dd47a4fa3a1a77aec2899e60",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/armyoverview_air_entry_bg.dds",
+    "sha256": "7627672529dca3ed4564ab9c70379addc7d0b4904645e59822eccb837be3432c",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/constructions_bg2.dds",
+    "sha256": "5c15bdf52da7c680b65ca7d73c63a646af5e1ebb33b7b25d679fda3997329251",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/constructions_bg1.dds",
+    "sha256": "87463b05ccbe2517be14ff81dbcc5bc0d8f06a151782d3f9e5972a10ffe2486a",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/construction_special_entry_bg.dds",
+    "sha256": "95a1f635a2175f71730a1a5d9553f3556c2403007391573d5d7480b6cc6383b4",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/construction_entry_bg.dds",
+    "sha256": "278e49bec619e4a5218bca13cf29305b507bd7f9d34265fb51651b97a05c4d0f",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/construction_progressbar_bg.dds",
+    "sha256": "c1359fcaa5f8302d7f4c59991571e2c57856aa22ca77258134bcad5b4a03d24d",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/deploy_priority_icon_bg.dds",
+    "sha256": "963e3be762efdb9fc7009f710133190f87607b67cfb4d599b0da7bca7dcc918d",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/deploy_priority_title_bg.dds",
+    "sha256": "9e54cede03de02d678088ee6f640375d33c5518ef4ef216d05bf0389a6f26adb",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/deploy_priority_equipment_meter_bg.dds",
+    "sha256": "ee1573d874774c9c7c343bb1d34f6f04f069e6b0a140502f89879067cf3cf6dc",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/deployment_named_division_bg.dds",
+    "sha256": "efcb91e6cb3d8abc79843cb0667a4367d2a8b6a01ab401464cfb4fb7d70423e0",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/deployment_named_division_obsolete_bg.dds",
+    "sha256": "62fbb19617770848c8d8cb1f4267fddb3e6e8861d3bee207b463373e56e48a16",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/military_deployment_add_line_bg.dds",
+    "sha256": "be067bcdc19cff9898d4fde62ec448d73c9feee253046e3c956e95b3bd74df7e",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/military_deployment_line_bg.dds",
+    "sha256": "80d959bbd020236a4aeb5f37320be8e198016a06752a068771f555717cd35198",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/military_deployment_conveyor_bg.dds",
+    "sha256": "5d1aad9f95c6df829ed97322d5ce0f72964c28b274255ed3a419f0fe776a26ee",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/conveyor_group_btn_frame.dds",
+    "sha256": "9ef3b352bf753794e8a25bac47ec781b3380c2f3fb597e0318c051453c58a3d8",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/add_limit_bg.dds",
+    "sha256": "2c67d25442bdc51da2b8b1131c0735bb4be53b921598962b33dff921fc854c10",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/deployment_entry_progressbar_bg.dds",
+    "sha256": "9d1e353f81efa7dcd32b431ec6cdcd19dd1bef151642d7edca015efe27bd6eff",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/deployment_progressbar_bg.dds",
+    "sha256": "c426f9503bab8b42977a9663d954845ac7993d71cad0af912808019c5cc08a61",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_action_request_forces_bg.dds",
+    "sha256": "92f179400a092aa08e6c8073306db8a48a7174443c56c6a221917c2b04f84488",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_action_expeditionary_force_bg.dds",
+    "sha256": "8f7bc6d558a8680c0048c8dcba0477c7977dce646548b7026dc767179dbdd403",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_action_call_allies_bg.dds",
+    "sha256": "cb05aba227a52c1883cfd327cdf16072d0f6693267a7eaa39d0794029fd62101",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_action_join_allies_bg.dds",
+    "sha256": "fdb8cafea02c5870d39e6e5da8103e374c35f09febcda110f6fbaa3094b49935",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_action_stage_coup_bg.dds",
+    "sha256": "b25658d6033136d9a3f589e7c00859adf3632636f8f9aefd44675b543d040808",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_action_boost_party_bg.dds",
+    "sha256": "d4f03519a6764e01adc5d20dc69f7b010a882755ed82d427bc2644406e265279",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_action_volunteers_bg.dds",
+    "sha256": "8f46db069b1c92b9de7450553ec5608aaf9e69e5a4b9fd072630b1889958f5a7",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_action_lend_lease_bg.dds",
+    "sha256": "e5798fe26fc73d9f8968493801ac98130e21aa9f533fd1654dbc5d0dea78fa5b",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_action_send_attache_bg.dds",
+    "sha256": "a1335efc6fff30a471fc5df087f65ea0ab553fd5c0ff99776a77d17a57ecd925",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_action_invite_to_faction_bg.dds",
+    "sha256": "3511ac3a2a52774da5efd4015e5305dd37de5745a57026c24ac78b95a2c37f54",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_action_guarantee_independence_bg.dds",
+    "sha256": "76e920e21e16d7b55012b1446ec72ed346ab16546e9ad8381fc8127f9e1076e3",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_diplo_action_bg.dds",
+    "sha256": "3c4d0b3c0812bc58e2d3fb1891388af52da31bdca9994caa842d9c19674806c7",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_action_justify_wargoals_bg.dds",
+    "sha256": "89fdba617b9760a48cd1a01efbbab4ad75054b0899621a0f0b20b4c8579b0bf9",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_action_declare_war_bg.dds",
+    "sha256": "12e62e50faeac95213a8beeccaef67a6dbce854471c24b6f08a0783281cf44aa",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_filter_area_bg.dds",
+    "sha256": "e3c3a45d04ec4df19df9d14f783b6c4fbe7a50d9e7c7bfb37d4a93df1ba552d7",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_action_license_production_bg.dds",
+    "sha256": "61adb1e42c9fdb06b5b417c68f9cb550b857195d7ffcf78a8ca45c84c60b18b0",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/request_lendlease_big_bg.dds",
+    "sha256": "7e4bbdf09568c746889187dea8605679346b142878c2ea04dd73b3abc4cafab3",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/lendlease_big_bg.dds",
+    "sha256": "0c3ffa9f3e202493eb23ff70cda6dbee5e36bb1a9998d3e099047bf512b2f206",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/lendlease_small_bg.dds",
+    "sha256": "c9bde7e3886874b3a5a6228fed223ed8ebdf0d2f262f42bdecb58c9b4b905922",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_unity_bg.dds",
+    "sha256": "b8af2130ef5cee4f7c159958c9e09960e1f3bf647a4138fd8689f4f541f8046d",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_details_header.dds",
+    "sha256": "62d1cbfc1423c1b52c0cdf626c6721108b30920c4865d0c469e35538e7874bc4",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/send_units_entry_bg.dds",
+    "sha256": "f03162c79ba468d782a58681d0c49ad77d829b5487defa27431f14773c509627",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/lend_lease_equip_header.dds",
+    "sha256": "d45a8f8f69111656b68cb8cc706da7b810e4c79fcf2958c6f066a51e8960e58f",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_action_justify_wargoals_top_bg.dds",
+    "sha256": "07c1bb06f30b6aa31738137e1d11f0d8de8950e203b7af6ad724fb4a79a5670b",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_countrylist_flag_frame.dds",
+    "sha256": "666f364a5ebcf96a210dc9431bebf092cdcf7f7abb0029077c65860b09ebbf20",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/opinion_bg.dds",
+    "sha256": "272883a892100f2d1bd3b2b3d568cddd780debdceb79dea723b9afcdbf2cdaee",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_opinion_bg.dds",
+    "sha256": "22f3b1ae1e9798ec2d62946d44ec25011cee49fe74a1ca30084c9ac869a0bbb9",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tradeview/diplo_trade_entry_bg.dds",
+    "sha256": "8540ef5a84c74ad7bc92a2efcbf4cc57940ede7d20b3995ff86e0d887375c918",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_actions_bg.dds",
+    "sha256": "365c833b4dde0f07f93267c7952f351ab8f5fd0456f01abc6ace0cd42d73e901",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/win_header_short.dds",
+    "sha256": "916086b5c2bab11ecc9c6a5710c68e0b013f4937773106d072e2cdf6dcd74b30",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/intel_ledger/tab_bg.dds",
+    "sha256": "1e73bde01a906f9e1ea7b37d9346f44a7feb36521673df5c350f197210de3966",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/operatives/upgrade_background.dds",
+    "sha256": "8649ebbdd81470a5d50080e79d72ec3a05ae08a611e8f0835cc399fd213cd003",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/operatives/agency_upgrades_popup_bg.dds",
+    "sha256": "075aa081179013ddf3a0846ecd792b2371f6b7099001419ae9e38f19bd4746b5",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/operatives/agency_header.dds",
+    "sha256": "85c5c37318885177768390decdee83010b95010693ca2ece98c80393a6adb2b5",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/operatives/operatives_bg.dds",
+    "sha256": "c373f0ee263edf759aea0bba9de1827308a1561cc99524eff3e6cfca38a9bbb5",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/operatives/create agency_bg.dds",
+    "sha256": "af6a22201ebe9c1665093c4d8a2fd20d196e40e73a86fe04aa1206bf200e0191",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/army_insignia_selection_bg.dds",
+    "sha256": "3048046b1189ef3fb7f14a1a93b7fd56f0e903f4248d23f38ea1c30e54eaf291",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/operatives/agencies/agency_logo_bg.dds",
+    "sha256": "45fd731d1fb5a0ed53969c2fe52916633ed4df7fb2101a776daf2de578a492a5",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/operatives/upgrade_frame_1_unavailable.dds",
+    "sha256": "998eb462ee33eb2e9c0b4d382daf205174db7d7b2e60ab098cb2158f94e1eb6c",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/linechart_frame.dds",
+    "sha256": "1bc854a185c671a5bad2d829a95eadc5db0c13bb7b15f086250bd2a0321e816a",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/logistics_status_progressbar_bg.dds",
+    "sha256": "dd710cf0901e43d5ea0417f7c01ed651b4c3192fc767d1a8c806b93c1ca33dbe",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/logistics_status_fuel_bar_bg.dds",
+    "sha256": "cfcb77de97db179a0b8e5bad692c6cc906b4b12015642943c015e527847cb422",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/logistics_other_entry_bg.dds",
+    "sha256": "d809217dc86cc72547a5b703bf7c905ba8125ffd73ca56574b0ed745426caee4",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/logistics_naval_equipment_entry_bg.dds",
+    "sha256": "8aa29caec61a7e8e0fece47c448a4ec8dec8b2a9c3b4a72fab1aa77bdbe7d52b",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/logistics_air_equipment_entry_bg.dds",
+    "sha256": "7bfe5def06206159e16469523ab1c56126c77c9c31effb74392399adf0454805",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/logistics_equipment_entry_bg.dds",
+    "sha256": "bd15471c80c60e5eeb316064fadb2eb14ea67979097c52c23a69f67d1ad3306a",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/logistics_entry_bg.dds",
+    "sha256": "4d79cc82533a86cf6cdc6db4e250c9c2e632110d3f679479e4d9960ab7acedab",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/occupation/occupation_header_bg.dds",
+    "sha256": "8f777d0ca5302d4b0c2c6b115ac2cd6893c366bbfa9d250f48cddbe88e5001a4",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/occupation/occupation_country_entry_bg_top.dds",
+    "sha256": "14f8742605620354f24d6f1d18676fc63fcc5a7f6320a18fcc8f9d10a5982f6d",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/occupation/occupation_country_entry_bg_top_locked.dds",
+    "sha256": "46fc7db2525bb1d328bc8726d0fbb608c43ad79c8f9f2b6d4289522ea54dd4ef",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/occupation/occupation_country_entry_bg_mid.dds",
+    "sha256": "98d79c99244ccb5e900763fc7afe7dfad56ba5d1c2e759a8416ef58af6bf97de",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/occupation/collaboration_entry_bg.dds",
+    "sha256": "ab64856a1bdf96c71c714407e6101a5a3f42f744041a8acc7a90419b37d3a7b8",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/occupation/occupation_state_entry_bg.dds",
+    "sha256": "3650caecd84e50594fd6d06e4ae4866b6f1ab2218293caa121fe3cfc5e3b74d2",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/occupation/occupation_state_entry_bg_no_resistance.dds",
+    "sha256": "ee3a47f488e2dc55f663bf333de9872a3c2df5a4b58297cf2d99da9123d9acbc",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/occupation/occupation_country_entry_bg_bottom.dds",
+    "sha256": "4765c9fbc335a705af7d6996912a37212155dfb27e09de880d0f812c9df0d512",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/occupation/compliance_bar_large_bg.dds",
+    "sha256": "8f10417ab71141b744fa653ebbaf922fbf52348248bb84ed23e6fc2c6387e892",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/occupation/resistance_bar_large_bg.dds",
+    "sha256": "4d6dd3dcd22a8060be8f84e388b7b1179c7ac1af1f7e7af85dfaec96ff12ef8b",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/occupation/collaboration_bar_large_bg.dds",
+    "sha256": "e786f0a71e9a42a85cd05eae3d52c6361b97c7c19e5951a29c04466b251fa320",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/occupation/compliance_bar_state_bg.dds",
+    "sha256": "8e202873e9ebef846f208e9d3afad61a385e9e6fdc87083a22e5db4387d2703e",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/occupation/resistance_bar_state_bg.dds",
+    "sha256": "190668d80d587decb024132fd1036d26eff6621bcd20e02e078abdda1d2a5e4c",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/occupation/compliance_bar_tiny_bg.dds",
+    "sha256": "0d809842ecfd7425945b6a764237c30d2f84e51d8200ed4557980309a4deb1a2",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/occupation/resistance_bar_medium_bg.dds",
+    "sha256": "e40eeed0c22eb02fe87ba2f125775d9165c748ed63acbc296d296ea9c0353805",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/occupation/modifier_icon_bg.dds",
+    "sha256": "91e16ccc4854f18f577b4c2179bb49c0a9f3ad6a4393badd4114d72c9d5d3934",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/officer_corp/officer_corp_bg_army.dds",
+    "sha256": "f22bd9f44ee7a9a81a6a7efa22388351a65b6c0cf6922221c63b8e411dcc1b87",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/officer_corp/officer_corp_bg_navy.dds",
+    "sha256": "bbfb41e98b712a150e61205e028a230b7fd38cab538b87922c33e2f7625a127b",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/officer_corp/officer_corp_bg_air.dds",
+    "sha256": "fd57f1d750994a55baba1145ab6c11bb133661b45929b5864fc5c7501e43deb0",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/officer_corp/officer_corp_spirit_bg_enabled.dds",
+    "sha256": "a751c0d798e3704b0a13f7130410c7108f3ab5ceaec140608d620c7f37add70c",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/officer_corp/spirit_entry_bg_strip.dds",
+    "sha256": "ff72c135ffb4c48ef59480903ded4b92d1784279bacafe34911213f5b4ef631e",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/government_in_exile/government_in_exile_entry_bg.dds",
+    "sha256": "490dbd8fb85fc34b2b787cad55e545657e255a0185c121bfc86e8277a0b29a7c",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/government_in_exile/government_in_exile_progressbar_bg.dds",
+    "sha256": "870e74775e9a261259eebbf351758d265a2e850e75be3b2955158805f06c900c",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/government_in_exile/legitimacy_progress_bar_long_bg.dds",
+    "sha256": "ac8b02be3f44e48e3a95f52788d055c37741c15587287e20a978e22ad179bc59",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/autonomy/subject_progress_bar_bg.dds",
+    "sha256": "cdf41ad710f24a2ae48ed13f9ab73b4808b020c830b2aad03adac0274a59f2e0",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/autonomy/subjects_entry_bg.dds",
+    "sha256": "0bb86792ffdaf874f0c2f788a0dbcb312124fe8c6ac00955d85f1bc74a2f3845",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/idea_group_header.dds",
+    "sha256": "f87c3171e41593a9433f23d45018bce42cbd8dcc0119a92768520383c2414073",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/idea_entry_bg_2.dds",
+    "sha256": "884b0c4c4f6c9250537ad75e233aa2791ceefc9e51f71b7214ddd84ad801b413",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/idea_entry_bg_3.dds",
+    "sha256": "52021980f932dd6fd02343b924f1b31802dd6a28dd64b6bafc23bf1d55f30323",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/small_pol_piechart_frame.dds",
+    "sha256": "e4c8a4c1591f1ad98a76209b8beb324e57f9dc911ad0c80cd4528c507ce29f6c",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/event_leader_frame.dds",
+    "sha256": "92b36d78ed25eafe99181cdb3c8c3fc2f40bb64d9f92f8ec5b185dc51d0c0765",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/pol_goal_progress_frame.dds",
+    "sha256": "61d9c3240cf25dd9db607b5928c83a9d518c6f98f95d58cb54db4cbfddfcf367",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_bg2.dds",
+    "sha256": "4e82c86c8fe013064f4db0e2ae5365262da50711485dca77c549d07c32678985",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/ship_name_list_item_bg.dds",
+    "sha256": "28c6519c9d334c0a7b4c83ebc5958fdbd9c5950a064559f4369d7d741ebe1c9f",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/deploy_port_fleet_bg.dds",
+    "sha256": "93db131b94717ddb4accf51a3b5d29d8a23954d90bbb4480c3df86f02eb00f1d",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/efficiency_progressbar_frame.dds",
+    "sha256": "cb97decf580b9e66d3197d5fb49242abd6e5ab549b1c3f40cd66de18c55303ad",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/production_progressbar_frame2.dds",
+    "sha256": "fc5a746be9a0ca7b0bae7404b1797096892cd7859e6043f1255d9fa5fc4e71f0",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/prod_progress_bar3_bg.dds",
+    "sha256": "06ea58d09a96ce539e9a84e98b05e9c576fba05d51f0a3fe5b0cbfb577534873",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/prod_progress_bar2_bg.dds",
+    "sha256": "c8c8cfca02146c60d73bd38ec5936562733f0e13c6cdaa667bdefbb28f78e048",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/factory_item_bg.dds",
+    "sha256": "07578156cd36ea399f9c4c1480fc38c1dc5e5424a07ced944e9fbcc5fe187e56",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/victorypoint_stateview_bg.dds",
+    "sha256": "81a3ee1ac1b9174cd0d581f5af21aa5464a940166fc9465d9ce91ac4de5626e9",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/stateview/ww_stateview_bg.dds",
+    "sha256": "1950ca1a258a5679d413d3c564f64c919707e3cf6533af975af17d128d524f92",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/stateview/province_landmark_bg.dds",
+    "sha256": "abef99c9b110460a7c4c1b951352828948b25979ccf663fd65aa9c572ea42733",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/buildings/build_slot_bg.dds",
+    "sha256": "8296d030e650e5be0e6c51925e6c946830d42371729a5cef0acc2da417283083",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/fullborder_tiled.dds",
+    "sha256": "49a052c7b0f7c0f8610f5214cff8f2e15721f46085e6724937fc9445f7d8c624",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/research_progressbar_frame.dds",
+    "sha256": "bc764eef785c21b41e5cfb9356d88d8c040aa5e91c3ba537b98cca368b71b8fb",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/techtree/techtree_details_progress_bar_frame.dds",
+    "sha256": "d1b3b745ecbd739b190d3432611e61662b3eec059463381456ce03b4ba9cee16",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/techtree/technology_unavailable_item_bg.dds",
+    "sha256": "425d83a6d9b0947b3bfc15a9b1c1956b3e40ad282b6f06bc46f8d4d7cd711e2d",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/subtech_carrier_plane_bg.dds",
+    "sha256": "64e36675a681b8a68328168f6da78e5d2d2c1207b3b11c9f9dc32266a68eb62b",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/subtechnology_unavailable_item_bg.dds",
+    "sha256": "8bbefac2614e388467b689c60dfd3cedd23b0bb8c6a5a628c1983ff7c659f82e",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/stats_entry_bg.dds",
+    "sha256": "e0ca4d344e87331be7043d7d067edc3b283a654c5cdeaa358d04ad964d218a56",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/stats_entry_long_bg.dds",
+    "sha256": "d3030f579ae8deb6c67d24642038db0c7476d5ecd9dd33a8d17e39c8361078c9",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/techtree/tech_doctrine_available_item_bg.dds",
+    "sha256": "c1c61d19a502847a8544289051c18dcf7f3141bd707a4204098aa437913d2b89",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tradeview/trade_header.dds",
+    "sha256": "9af17442a056b2296ff89d76d933db86b9cb1e72a79edc2221e69a988f948f02",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/slider_bg.dds",
+    "sha256": "5eb43f89d63075825482f9b5d6add109aaf20ac062e9e7484d9afe41b988b326",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tradeview/trade_filter_bg.dds",
+    "sha256": "708880dbea633314aceb4e35e267162831d107c3c6aa08682d73c708dcd71905",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tradeview/country_trade_entry_bg_wide.dds",
+    "sha256": "2c5a298be5cb0f95faa224e1599940d618492d90eae5c30822c32b206f8d5ad0",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/game_settings_bg.dds",
+    "sha256": "3425c82fc3bae72805fff09953cca256111ae3018dccefcb623b98e6aa5c77be",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/lobby_lower_right_sidepanel_bg.dds",
+    "sha256": "7f835057aefa70c2bac65c59be1bd18f454f34b26924b86777e660d8812c411c",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/lobby_right_sidepanel_bg.dds",
+    "sha256": "bb936954243547f38e9568414669f24a574a74871ccc85fe5beba81f419ab91e",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/menu_top_bg.dds",
+    "sha256": "c8884ccc9cbbbde19abc2561c9b844f4797096494442ed26d5fd971eca383813",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/custom_difficulty_slider_bg.dds",
+    "sha256": "6d79becc49c3420968d466ca4335d2d8a8d4f4d46cf2bc511e2b09ca28312699",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/diplo_countrylist_flag_frame_mini.dds",
+    "sha256": "476fd2353aa74f29a676694bce45856e8d2d9b8321191608155930b0e584b5b7",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/resource_item_bg.dds",
+    "sha256": "41bd75d88a34d6b07adafaa7095f6275e4f0729563153f4eba3fdbb26b76544d",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/large_flag_frame.dds",
+    "sha256": "fa6aad994fec556cfa133e8c83044829cc05ef7758fd91284d522ac1d575a759",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/focusview/filter/icon_bg.dds",
+    "sha256": "483531201d374d995d7575e69e1e19ad79063f776651f6835f4f581d86c9f204",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/date_pause_button_bg.dds",
+    "sha256": "cd3c896d6782de54a8835d00afee6c047f6852916e3b0e585df1f1cec175a235",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/leader_selection_entry_bg.dds",
+    "sha256": "3798e960349133b8f9109fafe58827540a8cb57c5d0d657b0a3408cad2c195a2",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/naval_leader_selection_entry_bg.dds",
+    "sha256": "64901016af0e35965fc02907b6ef83ac672da3743cd30f57b5728360d2794797",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/leader_selection_bg.dds",
+    "sha256": "c4082ebd96175b4ce2a4c9714a9eabd31216b4bf88b1fffc9fa08410ba09d646",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/group_name_bg.dds",
+    "sha256": "fd548f35f510850e08dc9bc329523df7bbddba11ef06c0a7818ba820700fa16b",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/flag_small_golden_frame.dds",
+    "sha256": "ece7fcbda19b00706e1ca95ce9f3ffe67654d853d5addf7b1677d1a35ce5ff7b",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/request_expeditionaries_total_bg.dds",
+    "sha256": "27ed5427988d7d02404c888a1eff2cda8fc18bd1105c4bec11a12e103a28e80e",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/unitcontrol/color_picker_bg.dds",
+    "sha256": "218b38e3e406ac73676e53d9bac228685e3ebe201a4bfe71508c47c52abe3533",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/ship_history_bg.dds",
+    "sha256": "56884fbecc74c71b9d265f2aaef710121508a526c529dc6c8fd11d49aca433e0",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/div_count_bg.dds",
+    "sha256": "25fedf721ded9668913db1637e02128384ac2c76eac1d9f5279d7a2f6e79f605",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/group_div_count_bg.dds",
+    "sha256": "d9e00196e9d47a6ecc7f6ca130cc4a6afc2ac52e0cb64eabd3085c79a2ce90b0",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_mini_bg.dds",
+    "sha256": "b63e9e946ff2241a2bc214d281e0728a6d4337520c4e146d4809ad66fdfd43f2",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/unitcontrol/unit_leader_portrait_frame_badge.dds",
+    "sha256": "d445b2ed56155139807af5ccf52627f9a194a5fde525dc251e1a4e82d59117e4",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/unitcontrol/army_group_bg.dds",
+    "sha256": "804eb4d9cf1af7f077cda666ff9a6c9cc20b64e76b81325d6f70ffef87cf17e0",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/unitcontrol/army_group_group_bg.dds",
+    "sha256": "cbcda1a47bceab73c292f59ff624ee46ebea8b8e36cd2ee7a1c0923d517c4d4f",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/unit_stats_bg.dds",
+    "sha256": "0eb6b15ef3ba751b0211ddd4f069f1a4f66f382485591493b7cf3d0064e1dd88",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/unit_stats_template_tab_bg.dds",
+    "sha256": "39e913f0f87af3f706ec7685eb572359cf072f1dedc3234fd6918bd2f9deba02",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/naval_unit_stats_bg.dds",
+    "sha256": "6045ef91ae8e69bdcaaffd15332a2e5ec6858fe1ddf159f6ebc9763a8741b346",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/unitcontrol/expeditionary_force_country_bg.dds",
+    "sha256": "bc708111bda151cf861ff8231b828d01f98c6f2ba2b16d53cc33da19f375d835",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/unitcontrol/expeditionary_force_button_bg.dds",
+    "sha256": "73e7658971b76baf4f6cd1601d0b163675cd080f413e6b36f0a6499bdeab078e",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/unitcontrol/expeditionary_force_request_header_bg.dds",
+    "sha256": "de0cb111f99fc4b5cec0842611f905ddbbebe1ed4a56ea7975268a0ccb595b10",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/occupation/select_law_header_bg.dds",
+    "sha256": "a5cb57c3498e92287cf3f023e80e96b8ae7d3ee7258db9500e4347d806a17a46",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/occupation/occupation_garrison_select_entry_bg.dds",
+    "sha256": "a00bb90a657c3e42ebe24674e80473d8894e954681747fd801ee221634b19be1",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/button_148x34_light.dds",
+    "sha256": "b3d111da8d82388350352c9e1d703c0f68a4e0f9ee82c2697536fd4bb32c6cf3",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/construction_title_bg.dds",
+    "sha256": "c26a3cacc20f8b17ad8eebbcaccd2587a9b9e7e96a8509eadc577d6fd3c65007",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_bg_417.dds",
+    "sha256": "fc81f08f0d19cfb043e74b26bfb8e9f265a2ae777595e122d8e45343af703a36",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_box.dds",
+    "sha256": "866ef492232b7b6a85b705b46e612dbd38657b2a9d5591dcd6a7186669b05e40",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_box_125.dds",
+    "sha256": "7b4f17f003accddfa936a71ffc4b3cac5ff3c7bba56d7c59df51617ee88f8587",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_box_small.dds",
+    "sha256": "f620aec98740d3df78b6e04dd5a036704c2cdf72c526de76073ea0ef7156e219",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_popup_win.dds",
+    "sha256": "a9b87a570e513ed6eb36bb66f2896bc225b820f98ac367bb34dcf299bac26dfb",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_text_bg_258.dds",
+    "sha256": "c3563606326007a71db7472eee0fac40ce0275019b95da9841cf824ef8d96ce0",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_text_bg_325.dds",
+    "sha256": "ecef20eed9d273fcd5e74f0c8d3417a0eb1bce7172a50d69d25bf134f2025f60",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_text_bg_325_transp.dds",
+    "sha256": "ab6d4cfae138425dd33471107423d48d5ee785411e60b066a81f0a5be6e73651",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_w_box_125.dds",
+    "sha256": "9d9cb59470bfb6cc805aecd134a5b1a1f1096e16d9bc3a8f8afac4253982e1dc",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_w_box_small.dds",
+    "sha256": "2bc3e5a9b9eb387232347211b6832abcdab3953c01425c907e7cf1e563bc32ac",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/generic_w_box_smallest.dds",
+    "sha256": "1a48f2c45fa0e0addcdf08fc165bc74bda632bf205a7864c7d69d97d2c788f5b",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/small_tiles_dialog.dds",
+    "sha256": "81ee2c88a5608d48ed95e11fcc3b34a188e6066b0f480021d01ebdd6a132521f",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/sort_button_202x29_3_frames.dds",
+    "sha256": "4ac7e01e4464b679eac83ae12244f45f789affcbe09695debbf2744dba774ca9",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/tooltip_tile.dds",
+    "sha256": "da6ad0a2ff0f4e4eb3add531181d08e865c639fdc7bc630f6527de18fd9de863",
+    "original_custom_reference": false
+  },
+  {
+    "path": "gfx/interface/portrait_bg_blank.dds",
+    "sha256": "d072108c57f96b0737d2d932d08a09d963e2212bfb030848bf848720b2fff4fb",
+    "original_custom_reference": false
+  }
+]

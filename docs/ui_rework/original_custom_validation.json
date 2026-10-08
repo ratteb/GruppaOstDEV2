@@ -1,0 +1,673 @@
+{
+  "original_custom_resources": 75,
+  "redesigned_in_this_custom_pass": 65,
+  "already_individually_redesigned": 9,
+  "functional_operand_retained": 1,
+  "checks": [
+    {
+      "path": "gfx/interface/LoadingScreen_Progress_1.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        934,
+        40
+      ]
+    },
+    {
+      "path": "gfx/interface/Loadingscreen_loadingstatus.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        1400,
+        92
+      ]
+    },
+    {
+      "path": "gfx/interface/bookmark_entry_bg.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 2,
+      "dimensions": [
+        383,
+        650
+      ]
+    },
+    {
+      "path": "gfx/interface/button_123x34.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        123,
+        36
+      ]
+    },
+    {
+      "path": "gfx/interface/button_221x34.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        221,
+        36
+      ]
+    },
+    {
+      "path": "gfx/interface/country_selection_bg.dds",
+      "errors": [],
+      "protected_pixels": 81190,
+      "frames": 1,
+      "dimensions": [
+        1225,
+        848
+      ]
+    },
+    {
+      "path": "gfx/interface/country_selection_entry.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 2,
+      "dimensions": [
+        290,
+        70
+      ]
+    },
+    {
+      "path": "gfx/interface/decisionview/category_header_bg.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        516,
+        53
+      ]
+    },
+    {
+      "path": "gfx/interface/decisionview/decision_item_bg.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 3,
+      "dimensions": [
+        1536,
+        40
+      ]
+    },
+    {
+      "path": "gfx/interface/decisionview/event_header_bg.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        515,
+        83
+      ]
+    },
+    {
+      "path": "gfx/interface/diplo_flag_frame.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        134,
+        80
+      ]
+    },
+    {
+      "path": "gfx/interface/diplo_goal_button.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 3,
+      "dimensions": [
+        855,
+        64
+      ]
+    },
+    {
+      "path": "gfx/interface/diplo_leader_frame.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        134,
+        175
+      ]
+    },
+    {
+      "path": "gfx/interface/diplo_nat_spirits_bg.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        520,
+        92
+      ]
+    },
+    {
+      "path": "gfx/interface/diplo_top_bg_diplo_tab.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        399,
+        167
+      ]
+    },
+    {
+      "path": "gfx/interface/event_news_bg.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        628,
+        1022
+      ]
+    },
+    {
+      "path": "gfx/interface/event_option_entry.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        196,
+        30
+      ]
+    },
+    {
+      "path": "gfx/interface/event_report_bottom_win.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        657,
+        308
+      ]
+    },
+    {
+      "path": "gfx/interface/event_report_bottom_win_2.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        581,
+        59
+      ]
+    },
+    {
+      "path": "gfx/interface/event_report_tileable_midsection.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        653,
+        77
+      ]
+    },
+    {
+      "path": "gfx/interface/event_report_top_win.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        682,
+        93
+      ]
+    },
+    {
+      "path": "gfx/interface/focusview/titlebar/focus_can_start_bg.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        164,
+        50
+      ]
+    },
+    {
+      "path": "gfx/interface/focusview/titlebar/focus_completed_bg.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        164,
+        50
+      ]
+    },
+    {
+      "path": "gfx/interface/focusview/titlebar/focus_unavailable_bg.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        164,
+        50
+      ]
+    },
+    {
+      "path": "gfx/interface/intel_ledger/tab.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 2,
+      "dimensions": [
+        520,
+        42
+      ]
+    },
+    {
+      "path": "gfx/interface/main_lobby_button.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 3,
+      "dimensions": [
+        864,
+        36
+      ]
+    },
+    {
+      "path": "gfx/interface/main_lobby_divider.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        312,
+        15
+      ]
+    },
+    {
+      "path": "gfx/interface/research_line_bg.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        508,
+        99
+      ]
+    },
+    {
+      "path": "gfx/interface/scripted_gui_graphics/SOV_UR_ruling_party_gov_gui_background.dds",
+      "errors": [],
+      "protected_pixels": 1364200,
+      "frames": 1,
+      "dimensions": [
+        1452,
+        966
+      ]
+    },
+    {
+      "path": "gfx/interface/scripted_gui_graphics/government_gui_background.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        1452,
+        966
+      ]
+    },
+    {
+      "path": "gfx/interface/scripted_gui_graphics/intro_screen_background.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        2034,
+        2020
+      ]
+    },
+    {
+      "path": "gfx/interface/scripted_gui_graphics/military_gov_gui_background.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        1452,
+        966
+      ]
+    },
+    {
+      "path": "gfx/interface/scripted_gui_graphics/opposition_gov_gui_background.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        1452,
+        966
+      ]
+    },
+    {
+      "path": "gfx/interface/select_date_bg.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        779,
+        712
+      ]
+    },
+    {
+      "path": "gfx/interface/techtree/tech_info_top_win.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        548,
+        220
+      ]
+    },
+    {
+      "path": "gfx/interface/tiles/tiled_army_view.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        190,
+        190
+      ]
+    },
+    {
+      "path": "gfx/interface/tiles/tiled_main_menu.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        192,
+        192
+      ]
+    },
+    {
+      "path": "gfx/interface/tiles/tiled_paper_bg2.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        192,
+        192
+      ]
+    },
+    {
+      "path": "gfx/interface/tiles/tiled_window.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        192,
+        192
+      ]
+    },
+    {
+      "path": "gfx/interface/tiles/tiled_window2_2b_border.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        190,
+        190
+      ]
+    },
+    {
+      "path": "gfx/interface/tiles/tiled_window_pol_goal.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        382,
+        382
+      ]
+    },
+    {
+      "path": "gfx/interface/tiles/tiles_dialog.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        96,
+        96
+      ]
+    },
+    {
+      "path": "gfx/interface/unitcontrol/focus_reward_header.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        552,
+        35
+      ]
+    },
+    {
+      "path": "gfx/interface/unitcontrol/unit_entry_bg.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 2,
+      "dimensions": [
+        780,
+        33
+      ]
+    },
+    {
+      "path": "gfx/interface/unitcontrol/unit_list_header.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        392,
+        35
+      ]
+    },
+    {
+      "path": "gfx/interface/unitcontrol/unitlist_unassigned_bg.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        396,
+        54
+      ]
+    },
+    {
+      "path": "gfx/scripted_gui/csto/csto_cata_danger_progress_bar_background.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        410,
+        30
+      ]
+    },
+    {
+      "path": "gfx/scripted_gui/csto/csto_cata_threat_progress_bar_background.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        410,
+        30
+      ]
+    },
+    {
+      "path": "gfx/scripted_gui/lore_screen/chapter_button.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        115,
+        21
+      ]
+    },
+    {
+      "path": "gfx/scripted_gui/lore_screen/chapterbutton.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        208,
+        34
+      ]
+    },
+    {
+      "path": "gfx/scripted_gui/lore_screen/lore_open_button.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        104,
+        34
+      ]
+    },
+    {
+      "path": "gfx/scripted_gui/lore_screen/lore_screen_main_screen.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        1226,
+        956
+      ]
+    },
+    {
+      "path": "gfx/scripted_gui/sotnik/gerasimov_frame.dds",
+      "errors": [],
+      "protected_pixels": 3781,
+      "frames": 1,
+      "dimensions": [
+        196,
+        250
+      ]
+    },
+    {
+      "path": "gfx/scripted_gui/sotnik/gerasimov_progress_bar_background.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        410,
+        30
+      ]
+    },
+    {
+      "path": "gfx/scripted_gui/sotnik/shoigu_frame.dds",
+      "errors": [],
+      "protected_pixels": 3906,
+      "frames": 1,
+      "dimensions": [
+        196,
+        250
+      ]
+    },
+    {
+      "path": "gfx/scripted_gui/sotnik/shoigu_progress_bar_background.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        410,
+        30
+      ]
+    },
+    {
+      "path": "gfx/scripted_gui/sotnik/sotnik_progress_bar_background.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        410,
+        30
+      ]
+    },
+    {
+      "path": "gfx/template_border.dds",
+      "errors": [],
+      "protected_pixels": 0,
+      "frames": 1,
+      "dimensions": [
+        295,
+        293
+      ]
+    },
+    {
+      "path": "gfx/scripted_gui/csto/page1_button.dds",
+      "errors": [],
+      "protected_pixels": 100,
+      "frames": 1,
+      "dimensions": [
+        52,
+        52
+      ]
+    },
+    {
+      "path": "gfx/scripted_gui/csto/page2_button.dds",
+      "errors": [],
+      "protected_pixels": 189,
+      "frames": 1,
+      "dimensions": [
+        52,
+        52
+      ]
+    },
+    {
+      "path": "gfx/scripted_gui/csto/page3_button.dds",
+      "errors": [],
+      "protected_pixels": 189,
+      "frames": 1,
+      "dimensions": [
+        52,
+        52
+      ]
+    },
+    {
+      "path": "gfx/scripted_gui/usa_wall/decrease_no.dds",
+      "errors": [],
+      "protected_pixels": 627,
+      "frames": 1,
+      "dimensions": [
+        118,
+        118
+      ]
+    },
+    {
+      "path": "gfx/scripted_gui/usa_wall/decrease_yes.dds",
+      "errors": [],
+      "protected_pixels": 208,
+      "frames": 1,
+      "dimensions": [
+        52,
+        52
+      ]
+    },
+    {
+      "path": "gfx/scripted_gui/usa_wall/increase_no.dds",
+      "errors": [],
+      "protected_pixels": 804,
+      "frames": 1,
+      "dimensions": [
+        118,
+        118
+      ]
+    },
+    {
+      "path": "gfx/scripted_gui/usa_wall/increase_yes.dds",
+      "errors": [],
+      "protected_pixels": 290,
+      "frames": 1,
+      "dimensions": [
+        52,
+        52
+      ]
+    }
+  ],
+  "failures": [],
+  "independent_outside_scope_changes": [
+    "gfx/interface/equipmentdesigner/graphic_db/02_lar_plane_icons.txt"
+  ],
+  "independent_definition_changes": [
+    "interface/TD_technologies.gfx"
+  ],
+  "authorized_definition_updates": {
+    "interface/eventwindow.gui": "b873dcac6ab67e4662174220805edd446a5243efe801a80d51b325c2a28d966c",
+    "interface/eventwindow.gfx": "707cd20656aeaf7ddf7556e37841445e4bf316bf14ddf45df67f33bfc6a4cd3a",
+    "interface/countrypoliticsview.gui": "e256303d994660e12fac0767543a8cc9f20053a941a02384c9a759cd9ef0e3a3"
+  },
+  "narrow_additional_holders": 2,
+  "in_game_validated": false,
+  "installed_game_version": "1.18.3.0.7709"
+}

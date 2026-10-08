@@ -6,3 +6,25 @@ entity = {
 	pdxmesh = "building_industrial_complex"
 	scale = 1.0
 }
+
+# Stage 7 original placeholders share the inherited installed industrial mesh.
+entity = {
+	name = "building_GO_econ_steel_plant"
+	pdxmesh = "building_industrial_complex"
+	scale = 1.0
+}
+entity = {
+	name = "building_GO_econ_aluminium_plant"
+	pdxmesh = "building_industrial_complex"
+	scale = 1.0
+}
+entity = {
+	name = "building_GO_econ_rubber_plant"
+	pdxmesh = "building_industrial_complex"
+	scale = 1.0
+}
+entity = {
+	name = "building_GO_econ_semiconductor_factory"
+	pdxmesh = "building_industrial_complex"
+	scale = 1.0
+}

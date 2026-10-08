@@ -775,11 +775,11 @@
     "gfx/scripted_gui/usa_wall/increase_yes.dds": "custom_reference",
     "gfx/interface/LoadingScreen_Progress_1.dds": "custom_reference",
     "gfx/interface/Loadingscreen_loadingstatus.dds": "custom_reference",
-    "gfx/interface/add_national_goal_button.dds": "custom_reference",
+    "gfx/interface/add_national_goal_button.dds": "holder",
     "gfx/interface/bookmark_entry_bg.dds": "custom_reference",
     "gfx/interface/button_123x34.dds": "custom_reference",
     "gfx/interface/button_221x34.dds": "custom_reference",
-    "gfx/interface/category_header.dds": "custom_reference",
+    "gfx/interface/category_header.dds": "holder",
     "gfx/interface/country_selection_bg.dds": "custom_reference",
     "gfx/interface/country_selection_entry.dds": "custom_reference",
     "gfx/interface/decisionview/category_header_bg.dds": "custom_reference",
@@ -799,13 +799,13 @@
     "gfx/interface/focusview/titlebar/focus_can_start_bg.dds": "custom_reference",
     "gfx/interface/focusview/titlebar/focus_completed_bg.dds": "custom_reference",
     "gfx/interface/focusview/titlebar/focus_unavailable_bg.dds": "custom_reference",
-    "gfx/interface/header_bg.dds": "custom_reference",
+    "gfx/interface/header_bg.dds": "holder",
     "gfx/interface/intel_ledger/tab.dds": "custom_reference",
     "gfx/interface/main_lobby_button.dds": "custom_reference",
     "gfx/interface/main_lobby_divider.dds": "custom_reference",
-    "gfx/interface/pol_goal_bg.dds": "custom_reference",
-    "gfx/interface/pol_leader_frame.dds": "custom_reference",
-    "gfx/interface/pol_view_bg.dds": "custom_reference",
+    "gfx/interface/pol_goal_bg.dds": "holder",
+    "gfx/interface/pol_leader_frame.dds": "holder",
+    "gfx/interface/pol_view_bg.dds": "holder",
     "gfx/interface/research_line_bg.dds": "custom_reference",
     "gfx/interface/scripted_gui_graphics/SOV_UR_ruling_party_gov_gui_background.dds": "custom_reference",
     "gfx/interface/scripted_gui_graphics/government_gui_background.dds": "custom_reference",
@@ -819,7 +819,7 @@
     "gfx/interface/tiles/tiled_main_menu.dds": "custom_reference",
     "gfx/interface/tiles/tiled_paper_bg2.dds": "custom_reference",
     "gfx/interface/tiles/tiled_window.dds": "custom_reference",
-    "gfx/interface/tiles/tiled_window2_1b_border.dds": "custom_reference",
+    "gfx/interface/tiles/tiled_window2_1b_border.dds": "holder",
     "gfx/interface/tiles/tiled_window2_2b_border.dds": "custom_reference",
     "gfx/interface/tiles/tiled_window_pol_goal.dds": "custom_reference",
     "gfx/interface/tiles/tiled_window_thin_border2.dds": "holder",
@@ -4073,7 +4073,16 @@
     "gfx/interface/tiles/tiled_window_1b_border.dds": [],
     "gfx/interface/tiles/tiled_window_thin_border2.dds": [],
     "gfx/interface/alerts/global_alert_icons.dds": [],
-    "gfx/interface/alerts/global_diplorequest_icons.dds": []
+    "gfx/interface/alerts/global_diplorequest_icons.dds": [],
+    "gfx/interface/add_national_goal_button.dds": [],
+    "gfx/interface/category_header.dds": [],
+    "gfx/interface/header_bg.dds": [],
+    "gfx/interface/pol_goal_bg.dds": [],
+    "gfx/interface/pol_leader_frame.dds": [],
+    "gfx/interface/pol_view_bg.dds": [],
+    "gfx/interface/tiles/tiled_window2_1b_border.dds": [],
+    "gfx/interface/topbar/toolbar/international_market_button.dds": [],
+    "gfx/interface/topbar/toolbar/staff_office_button.dds": []
   },
   "styles": {
     "gfx/interface/military_raids/raids_launch_all_button.dds": "red",
@@ -4137,7 +4146,14 @@
     "gfx/interface/tiles/tiled_window_1b_border.dds": "neutral",
     "gfx/interface/tiles/tiled_window_thin_border2.dds": "slate",
     "gfx/interface/alerts/global_alert_icons.dds": "well",
-    "gfx/interface/alerts/global_diplorequest_icons.dds": "well"
+    "gfx/interface/alerts/global_diplorequest_icons.dds": "well",
+    "gfx/interface/pol_view_bg.dds": "neutral",
+    "gfx/interface/pol_leader_frame.dds": "neutral",
+    "gfx/interface/pol_goal_bg.dds": "neutral",
+    "gfx/interface/header_bg.dds": "neutral",
+    "gfx/interface/category_header.dds": "neutral",
+    "gfx/interface/add_national_goal_button.dds": "neutral",
+    "gfx/interface/tiles/tiled_window2_1b_border.dds": "neutral"
   },
   "glyph_regions": {
     "gfx/interface/military_industrial_organization/MIO_policy_slot_button.dds": [
@@ -4371,7 +4387,14 @@
         100,
         71
       ]
-    ]
+    ],
+    "gfx/interface/add_national_goal_button.dds": [],
+    "gfx/interface/category_header.dds": [],
+    "gfx/interface/header_bg.dds": [],
+    "gfx/interface/pol_goal_bg.dds": [],
+    "gfx/interface/pol_leader_frame.dds": [],
+    "gfx/interface/pol_view_bg.dds": [],
+    "gfx/interface/tiles/tiled_window2_1b_border.dds": []
   },
   "functional_alpha": [
     "gfx/interface/popup_window/popup_window_corners_bd_x79_y119.dds",
@@ -4667,6 +4690,7 @@
     "placement": "surfaces only; exclude frame lips, art, glyphs"
   },
   "blue_surfaces": [
+    "gfx/interface/add_national_goal_button.dds",
     "gfx/interface/career_profile/btn_blue.dds",
     "gfx/interface/factions/ui/faction_edit_rule_button.dds",
     "gfx/interface/naval_deploy_button.dds",
@@ -4913,7 +4937,16 @@
     "gfx/interface/tiles/tiled_window_1b_border.dds": 5,
     "gfx/interface/tiles/tiled_window_thin_border2.dds": 5,
     "gfx/interface/alerts/global_alert_icons.dds": 3,
-    "gfx/interface/alerts/global_diplorequest_icons.dds": 3
+    "gfx/interface/alerts/global_diplorequest_icons.dds": 3,
+    "gfx/interface/pol_view_bg.dds": 5,
+    "gfx/interface/pol_leader_frame.dds": 5,
+    "gfx/interface/pol_goal_bg.dds": 5,
+    "gfx/interface/header_bg.dds": 4,
+    "gfx/interface/category_header.dds": 4,
+    "gfx/interface/add_national_goal_button.dds": 4,
+    "gfx/interface/tiles/tiled_window2_1b_border.dds": 5,
+    "gfx/interface/topbar/toolbar/international_market_button.dds": 2,
+    "gfx/interface/topbar/toolbar/staff_office_button.dds": 2
   },
   "art_regions": {
     "gfx/interface/diplo_action_boost_party_bg.dds": [
@@ -5802,6 +5835,23 @@
         52,
         112,
         216
+      ]
+    },
+    "gfx/interface/add_national_goal_button.dds": {
+      "0": [
+        67,
+        123,
+        211
+      ],
+      "1": [
+        83,
+        151,
+        235
+      ],
+      "2": [
+        88,
+        111,
+        150
       ]
     }
   },
@@ -7981,8 +8031,10 @@
     ]
   },
   "artwork_free": [
+    "gfx/interface/add_national_goal_button.dds",
     "gfx/interface/career_profile/button_medal_display_slot_selected.dds",
     "gfx/interface/career_profile/button_ribbon_display_slot_selected.dds",
+    "gfx/interface/category_header.dds",
     "gfx/interface/conference_action_turn_entry.dds",
     "gfx/interface/date_pause_button.dds",
     "gfx/interface/date_pause_button_bg.dds",
@@ -7990,6 +8042,7 @@
     "gfx/interface/empty_button.dds",
     "gfx/interface/factions/ui/faction_edit_rule_button.dds",
     "gfx/interface/government_in_exile/reinstate_button.dds",
+    "gfx/interface/header_bg.dds",
     "gfx/interface/load_save_entry.dds",
     "gfx/interface/military_raids/launch_button.dds",
     "gfx/interface/naval_deploy_button.dds",
@@ -8000,8 +8053,12 @@
     "gfx/interface/peace_conference/bid_button.dds",
     "gfx/interface/play_button.dds",
     "gfx/interface/play_button_ready.dds",
+    "gfx/interface/pol_goal_bg.dds",
+    "gfx/interface/pol_leader_frame.dds",
+    "gfx/interface/pol_view_bg.dds",
     "gfx/interface/stop_training_leadergroup_button.dds",
     "gfx/interface/tiles/tiled_focus_bg.dds",
+    "gfx/interface/tiles/tiled_window2_1b_border.dds",
     "gfx/interface/tiles/tiled_window_1b_border.dds",
     "gfx/interface/tiles/tiled_window_thin_border2.dds",
     "gfx/interface/topbar/armyoverview_buttons_bg.dds",
@@ -8183,6 +8240,11 @@
       "16": "well",
       "17": "well",
       "18": "well"
+    },
+    "gfx/interface/add_national_goal_button.dds": {
+      "0": "blue",
+      "1": "blue_pressed",
+      "2": "blue_disabled"
     }
   },
   "silhouette_polygons": {
@@ -8348,36 +8410,36 @@
     ],
     "gfx/interface/tiles/tiled_focus_bg.dds": [
       [
-        12,
+        8,
         0
       ],
       [
-        985,
+        989,
         0
       ],
       [
         997,
-        12
+        8
       ],
       [
         997,
-        1018
+        1022
       ],
       [
-        985,
+        989,
         1030
       ],
       [
-        12,
+        8,
         1030
       ],
       [
         0,
-        1018
+        1022
       ],
       [
         0,
-        12
+        8
       ]
     ],
     "gfx/interface/tiles/tiled_window_1b_border.dds": [
@@ -8515,10 +8577,317 @@
         2,
         5
       ]
+    ],
+    "gfx/interface/pol_view_bg.dds": [
+      [
+        7,
+        3
+      ],
+      [
+        549,
+        3
+      ],
+      [
+        553,
+        7
+      ],
+      [
+        553,
+        455
+      ],
+      [
+        549,
+        459
+      ],
+      [
+        7,
+        459
+      ],
+      [
+        3,
+        455
+      ],
+      [
+        3,
+        7
+      ]
+    ],
+    "gfx/interface/pol_leader_frame.dds": [
+      [
+        10,
+        4
+      ],
+      [
+        179,
+        4
+      ],
+      [
+        184,
+        9
+      ],
+      [
+        184,
+        261
+      ],
+      [
+        179,
+        266
+      ],
+      [
+        10,
+        266
+      ],
+      [
+        5,
+        261
+      ],
+      [
+        5,
+        9
+      ]
+    ],
+    "gfx/interface/pol_goal_bg.dds": [
+      [
+        21,
+        9
+      ],
+      [
+        103,
+        9
+      ],
+      [
+        108,
+        14
+      ],
+      [
+        108,
+        83
+      ],
+      [
+        103,
+        88
+      ],
+      [
+        21,
+        88
+      ],
+      [
+        16,
+        83
+      ],
+      [
+        16,
+        14
+      ]
+    ],
+    "gfx/interface/header_bg.dds": [
+      [
+        3,
+        0
+      ],
+      [
+        539,
+        0
+      ],
+      [
+        542,
+        3
+      ],
+      [
+        542,
+        37
+      ],
+      [
+        539,
+        40
+      ],
+      [
+        3,
+        40
+      ],
+      [
+        0,
+        37
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "gfx/interface/category_header.dds": [
+      [
+        3,
+        0
+      ],
+      [
+        507,
+        0
+      ],
+      [
+        510,
+        3
+      ],
+      [
+        510,
+        40
+      ],
+      [
+        507,
+        43
+      ],
+      [
+        3,
+        43
+      ],
+      [
+        0,
+        40
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "gfx/interface/add_national_goal_button.dds": [
+      [
+        4,
+        0
+      ],
+      [
+        254,
+        0
+      ],
+      [
+        258,
+        4
+      ],
+      [
+        258,
+        78
+      ],
+      [
+        254,
+        82
+      ],
+      [
+        4,
+        82
+      ],
+      [
+        0,
+        78
+      ],
+      [
+        0,
+        4
+      ]
+    ],
+    "gfx/interface/tiles/tiled_window2_1b_border.dds": [
+      [
+        6,
+        0
+      ],
+      [
+        183,
+        0
+      ],
+      [
+        189,
+        6
+      ],
+      [
+        189,
+        183
+      ],
+      [
+        183,
+        189
+      ],
+      [
+        6,
+        189
+      ],
+      [
+        0,
+        183
+      ],
+      [
+        0,
+        6
+      ]
+    ],
+    "gfx/interface/topbar/toolbar/international_market_button.dds": [
+      [
+        2,
+        0
+      ],
+      [
+        52,
+        0
+      ],
+      [
+        54,
+        2
+      ],
+      [
+        54,
+        38
+      ],
+      [
+        52,
+        40
+      ],
+      [
+        2,
+        40
+      ],
+      [
+        0,
+        38
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "gfx/interface/topbar/toolbar/staff_office_button.dds": [
+      [
+        2,
+        0
+      ],
+      [
+        52,
+        0
+      ],
+      [
+        54,
+        2
+      ],
+      [
+        54,
+        38
+      ],
+      [
+        52,
+        40
+      ],
+      [
+        2,
+        40
+      ],
+      [
+        0,
+        38
+      ],
+      [
+        0,
+        2
+      ]
     ]
   },
   "solid_surfaces": [
     "gfx/interface/tiles/tiled_focus_bg.dds",
+    "gfx/interface/tiles/tiled_window2_1b_border.dds",
     "gfx/interface/tiles/tiled_window_1b_border.dds",
     "gfx/interface/tiles/tiled_window_thin_border2.dds"
   ],
@@ -8537,12 +8906,164 @@
   "detailed_geometry": {
     "gfx/interface/topbar/background_extended.dds": "topbar_main",
     "gfx/interface/topbar/armyoverview_buttons_bg.dds": "topbar_right",
-    "gfx/interface/tiles/tiled_focus_bg.dds": "focus_canvas"
+    "gfx/interface/pol_view_bg.dds": "country_panel",
+    "gfx/interface/pol_leader_frame.dds": "country_portrait",
+    "gfx/interface/pol_goal_bg.dds": "country_goal",
+    "gfx/interface/header_bg.dds": "country_header",
+    "gfx/interface/category_header.dds": "country_category"
   },
   "art_cutouts": {
     "gfx/interface/alerts/global_alert_icons.dds": {
       "archive": "targeted682_before.zip",
       "member": "reference/alert_symbols.dds"
     }
-  }
+  },
+  "angular_frames": {
+    "gfx/interface/pol_view_bg.dds": {
+      "box": [
+        3,
+        3,
+        553,
+        459
+      ],
+      "cut": 4
+    },
+    "gfx/interface/pol_leader_frame.dds": {
+      "box": [
+        5,
+        4,
+        184,
+        266
+      ],
+      "cut": 5
+    },
+    "gfx/interface/pol_goal_bg.dds": {
+      "box": [
+        16,
+        9,
+        108,
+        88
+      ],
+      "cut": 5
+    },
+    "gfx/interface/header_bg.dds": {
+      "box": [
+        0,
+        0,
+        542,
+        40
+      ],
+      "cut": 3
+    },
+    "gfx/interface/category_header.dds": {
+      "box": [
+        0,
+        0,
+        510,
+        43
+      ],
+      "cut": 3
+    },
+    "gfx/interface/add_national_goal_button.dds": {
+      "box": [
+        0,
+        0,
+        258,
+        82
+      ],
+      "cut": 4
+    },
+    "gfx/interface/tiles/tiled_window2_1b_border.dds": {
+      "box": [
+        0,
+        0,
+        189,
+        189
+      ],
+      "cut": 6
+    },
+    "gfx/interface/tiles/tiled_focus_bg.dds": {
+      "box": [
+        0,
+        0,
+        997,
+        1030
+      ],
+      "cut": 8
+    },
+    "gfx/interface/topbar/toolbar/international_market_button.dds": {
+      "box": [
+        0,
+        0,
+        54,
+        40
+      ],
+      "cut": 2
+    },
+    "gfx/interface/topbar/toolbar/staff_office_button.dds": {
+      "box": [
+        0,
+        0,
+        54,
+        40
+      ],
+      "cut": 2
+    }
+  },
+  "functional_alpha_regions": {
+    "gfx/interface/pol_leader_frame.dds": [
+      [
+        18,
+        14,
+        172,
+        217
+      ]
+    ]
+  },
+  "blue_pressed": {
+    "top": [
+      17,
+      43,
+      99
+    ],
+    "center": [
+      12,
+      34,
+      82
+    ],
+    "bottom": [
+      10,
+      28,
+      66
+    ]
+  },
+  "blue_disabled": {
+    "top": [
+      61,
+      80,
+      110
+    ],
+    "center": [
+      49,
+      65,
+      91
+    ],
+    "bottom": [
+      39,
+      51,
+      75
+    ]
+  },
+  "opaque_surfaces": [
+    "gfx/interface/add_national_goal_button.dds",
+    "gfx/interface/category_header.dds",
+    "gfx/interface/header_bg.dds",
+    "gfx/interface/pol_goal_bg.dds",
+    "gfx/interface/pol_leader_frame.dds",
+    "gfx/interface/pol_view_bg.dds",
+    "gfx/interface/tiles/tiled_focus_bg.dds",
+    "gfx/interface/tiles/tiled_window2_1b_border.dds",
+    "gfx/interface/topbar/toolbar/international_market_button.dds",
+    "gfx/interface/topbar/toolbar/staff_office_button.dds"
+  ]
 }

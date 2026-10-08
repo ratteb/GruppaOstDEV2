@@ -1,0 +1,93 @@
+{
+  "files": [
+    {
+      "path": "interface/eventwindow.gui",
+      "before_sha256": "fb10296f40a1198a233f3b32124ab300b24f65aaf6604af32787eadee68878e0"
+    },
+    {
+      "path": "interface/eventwindow.gfx",
+      "before_sha256": "6c79a219219b4b13274465db3058dcbe77b4b26789e5b20fc42dd184dddbd61d"
+    },
+    {
+      "path": "interface/countrypoliticsview.gui",
+      "before_sha256": "edac3eb1a6613ee68e5ac86efcc6ec52b3f2b8534695c7575e06978a162bab93"
+    },
+    {
+      "path": "gfx/interface/pol_view_bg.dds",
+      "before_sha256": "1bf442d8db1987a02b9cda8415f065a6e5ac89b7d15d5be7cce906f21707c2c1"
+    },
+    {
+      "path": "gfx/interface/event_news_bg.dds",
+      "before_sha256": "e3616c909707f87b6ac9f46acf95897ec4908f0f3dd4c5e5718ebf9ecaa57ded"
+    },
+    {
+      "path": "gfx/interface/event_option_entry.dds",
+      "before_sha256": "967acd57632d492bafa4afbbb637787989ddae1629007dc842db5511620e3e25"
+    },
+    {
+      "path": "tools/ui_rework/country_followup_geometry.py",
+      "before_sha256": "bbe5ad7cff10297aa401d695d963a3374a9c1d131f016c3df27ef3d69d22cc5c"
+    },
+    {
+      "path": "tools/ui_rework/original_custom_design.json",
+      "before_sha256": "cc6974f12e198ad68214cef082c11b1e2e181e721952b5ea6b8a8888d387ee70"
+    }
+  ],
+  "in_game_validated": false,
+  "status": "installed_static_verified",
+  "outputs": {
+    "gfx/interface/pol_view_bg.dds": "29c40705aab7f82f1a7485ba2f5aae446c1a887acde389c5b073852e6e3def2d",
+    "gfx/interface/event_news_bg.dds": "6c443af069c0d6182f6c01f0ed7ea17d44b061a8f361d087445df01238c709c2",
+    "gfx/interface/GO_news_picture_holder.dds": "aa1030447b51b76a3e6e1c7ef4bdf62bea0d886755d035283c88323c5d3d5d2a",
+    "gfx/interface/GO_event_option_holder.dds": "473251c9725c74fa95bd28cb92d28bdf8bad8e4a28240f8f3a137f05fd21120d",
+    "interface/eventwindow.gui": "b873dcac6ab67e4662174220805edd446a5243efe801a80d51b325c2a28d966c",
+    "interface/eventwindow.gfx": "707cd20656aeaf7ddf7556e37841445e4bf316bf14ddf45df67f33bfc6a4cd3a",
+    "interface/countrypoliticsview.gui": "e256303d994660e12fac0767543a8cc9f20053a941a02384c9a759cd9ef0e3a3"
+  },
+  "layout": {
+    "title": [
+      60,
+      18,
+      540,
+      44
+    ],
+    "picture": [
+      22,
+      86,
+      584,
+      166
+    ],
+    "body": [
+      30,
+      284,
+      568,
+      639
+    ],
+    "top_height": 272,
+    "footer_height": 204,
+    "button": [
+      216,
+      18,
+      196,
+      54
+    ],
+    "button_text": [
+      10,
+      4,
+      176,
+      46
+    ],
+    "slot_height": 60
+  },
+  "shared_change": "event_option_entry uses a native 196x54 button and smaller inset labels; all four option grids receive 60px vertical slots; original 196x30 DDS preserved",
+  "read_only_references": {
+    "gfx/event_pictures/news_russia_teaser_event_001.dds": "135a54d5493a5e3b1befc3de5c104a9583333fcb9b4ec33800c5f6613d0a4bec",
+    "gfx/interface/pol_piechart_overlay_63x63.dds": "17eb5daa64eb086721c980278eb215b3b1bc8d9ddf0158c58a00b7aa7e3a1245",
+    "gfx/fonts/TD_event_font_12pt.fnt": "faf060ac6317055d396640ce599da3dfc44344f75abe0aedd5f3315eee3dc5f3",
+    "gfx/fonts/TD_event_font_12pt.dds": "0cda3e48a40fb619aac00dbf114c5568eff43feb87cd4050a38e042a7dd5fc91",
+    "gfx/fonts/TD_event_font_14pt.fnt": "18bc2299f215566d048903ffb227b7b2c69cc049a25121edc8f4ad63efce616c",
+    "gfx/fonts/TD_event_font_14pt.dds": "eec12300bbb4a00b69b04c247839dfd5410bf511f994d37e3f2dd655bab989aa",
+    "gfx/fonts/TD_event_font_18pt.fnt": "f570773fae56f8b475e1b4dcefacb72ce63ff34df9f8600c8f4c00faff60780f",
+    "gfx/fonts/TD_event_font_18pt.dds": "d9e381b1b75dbea4be7f2c2a527b8e0af124c78f16870d24f9e397207bc944bf"
+  }
+}

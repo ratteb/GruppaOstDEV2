@@ -150,7 +150,7 @@ default_unit_production_super_heavies = {
 		num_of_military_factories > 150 # nly if we have loads of factories
 		date > 1943.6.1 # Lets wait until late war
 		NOT = { has_tech = main_battle_tank_chassis } # Abandon Super heavy projects if we start doing modern tanks instead
-		NOT = { has_government = democratic } # Let the authoritarian regimes spend money on this 
+		NOT = { has_government = progressivism } # Let the authoritarian regimes spend money on this
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
@@ -160,17 +160,18 @@ default_unit_production_super_heavies = {
 	}
 }
 
-default_unit_production_land_cruiser = {
-	enable = {
-		is_special_project_completed = sp:sp_land_land_cruiser
-	}
-	abort_when_not_enabled = yes
-	ai_strategy = {
-		type = role_ratio
-		id = mega_heavy_breakthrough_role
-		value = 2
-	}
-}
+# Dormant compatibility entry: inherited WWII special-project branch; its project/equipment is absent from this campaign.
+# default_unit_production_land_cruiser = {
+# 	enable = {
+# 		is_special_project_completed = sp:sp_land_land_cruiser
+# 	}
+# 	abort_when_not_enabled = yes
+# 	ai_strategy = {
+# 		type = role_ratio
+# 		id = mega_heavy_breakthrough_role
+# 		value = 2
+# 	}
+# }
 
 default_role_ratios = {
 	enable = {
@@ -1832,7 +1833,7 @@ comintern_avoid_starting_wars_during_endgame = { #Sov should avoid attacking all
 	}
 	enable = {
 		is_historical_focus_on = yes
-		SOV = { has_government = communism }
+		SOV = { has_government = marxism_leninism }
 		OR = {
 			USA = {
 				has_capitulated = no
@@ -1888,7 +1889,7 @@ allies_avoid_starting_wars_during_endgame = { #Allies should avoid attacking.. w
 	}
 	enable = {
 		is_historical_focus_on = yes
-		ENG = { has_government = democratic }
+		ENG = { has_government = progressivism }
 		OR = {
 			tag = ENG
 			is_in_faction_with = ENG
@@ -1928,52 +1929,56 @@ we_dont_believe_in_mountain_tanks = {
 }
 
 # Build some rockets (simple strats to have a minimum production at least )
-if_we_can_build_v1_rockets_we_want_rockets = {
-	enable = {
-		is_special_project_completed = sp:sp_rockets_flying_bomb
-	}
-	abort_when_not_enabled = yes
+# Dormant compatibility entry: inherited WWII special-project branch; its project/equipment is absent from this campaign.
+# if_we_can_build_v1_rockets_we_want_rockets = {
+# 	enable = {
+# 		is_special_project_completed = sp:sp_rockets_flying_bomb
+# 	}
+# 	abort_when_not_enabled = yes
+#
+# 	ai_strategy = {
+# 		type = equipment_production_min_factories_archetype
+# 		id = guided_missile_equipment
+# 		value = 1
+# 	}
+# }
 
-	ai_strategy = {
-		type = equipment_production_min_factories_archetype
-		id = guided_missile_equipment
-		value = 1
-	}
-}
-
-if_we_can_build_v2_rockets_we_want_v2_rockets = {
-	enable = {
-		is_special_project_completed = sp:sp_rockets_ballistic_missile
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = equipment_production_min_factories_archetype
-		id = ballistic_missile_equipment
-		value = 1
-	}
-}
-if_we_can_build_sams_we_want_sams = {
-	enable = {
-		is_special_project_completed = sp:sp_rockets_ground_to_air_missile
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = equipment_production_min_factories_archetype
-		id = sam_missile_equipment
-		value = 1
-	}
-}
-if_we_can_build_nuclear_missiles_we_want_nuclear_missiles = {
-	enable = {
-		is_special_project_completed = sp:sp_nuclear_warheads
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = equipment_production_min_factories_archetype
-		id = nuclear_missile_equipment
-		value = 1
-	}
-}
+# Dormant compatibility entry: inherited WWII special-project branch; its project/equipment is absent from this campaign.
+# if_we_can_build_v2_rockets_we_want_v2_rockets = {
+# 	enable = {
+# 		is_special_project_completed = sp:sp_rockets_ballistic_missile
+# 	}
+# 	abort_when_not_enabled = yes
+#
+# 	ai_strategy = {
+# 		type = equipment_production_min_factories_archetype
+# 		id = ballistic_missile_equipment
+# 		value = 1
+# 	}
+# }
+# Dormant compatibility entry: inherited WWII special-project branch; its project/equipment is absent from this campaign.
+# if_we_can_build_sams_we_want_sams = {
+# 	enable = {
+# 		is_special_project_completed = sp:sp_rockets_ground_to_air_missile
+# 	}
+# 	abort_when_not_enabled = yes
+#
+# 	ai_strategy = {
+# 		type = equipment_production_min_factories_archetype
+# 		id = sam_missile_equipment
+# 		value = 1
+# 	}
+# }
+# Dormant compatibility entry: inherited WWII special-project branch; its project/equipment is absent from this campaign.
+# if_we_can_build_nuclear_missiles_we_want_nuclear_missiles = {
+# 	enable = {
+# 		is_special_project_completed = sp:sp_nuclear_warheads
+# 	}
+# 	abort_when_not_enabled = yes
+#
+# 	ai_strategy = {
+# 		type = equipment_production_min_factories_archetype
+# 		id = nuclear_missile_equipment
+# 		value = 1
+# 	}
+# }

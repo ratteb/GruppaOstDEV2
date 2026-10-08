@@ -63,7 +63,7 @@ spriteTypes = {
 
    spriteType = {
      name = "GFX_unit_ifv_battalion_icon_small"
-     texturefile = "gfx/texticons/unit_ifv_battalion_icon_small.dds"
+     texturefile = "gfx/interface/counters/divisions_small/onmap_unit_ifv_battalion_icon.dds"
      legacy_lazy_load = no
      noOfFrames = 2		
    }

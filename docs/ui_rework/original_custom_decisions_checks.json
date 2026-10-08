@@ -1,0 +1,82 @@
+[
+  {
+    "path": "gfx/interface/decisionview/category_header_bg.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      516,
+      53
+    ]
+  },
+  {
+    "path": "gfx/interface/decisionview/decision_item_bg.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 3,
+    "dimensions": [
+      1536,
+      40
+    ]
+  },
+  {
+    "path": "gfx/interface/decisionview/event_header_bg.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      515,
+      83
+    ]
+  },
+  {
+    "path": "gfx/interface/focusview/titlebar/focus_can_start_bg.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      164,
+      50
+    ]
+  },
+  {
+    "path": "gfx/interface/focusview/titlebar/focus_completed_bg.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      164,
+      50
+    ]
+  },
+  {
+    "path": "gfx/interface/focusview/titlebar/focus_unavailable_bg.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      164,
+      50
+    ]
+  },
+  {
+    "path": "gfx/interface/research_line_bg.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      508,
+      99
+    ]
+  },
+  {
+    "path": "gfx/interface/techtree/tech_info_top_win.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      548,
+      220
+    ]
+  }
+]

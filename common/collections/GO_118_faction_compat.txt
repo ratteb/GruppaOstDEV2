@@ -1,0 +1,85 @@
+# Target: HOI4 1.18.3.0.7709. Restore only APIs referenced by this mod.
+# Native collections.txt structure; ideology sets match existing faction goals.
+# The dominion branch is absent because no autonomy_dominion type is defined.
+
+faction_owned_core_states = {
+	input = game:scope
+	operators = {
+		faction_members
+		owned_states
+		limit = {
+			is_core_of = PREV 
+		}
+	}
+	name = COLLECTION_FACTION_OWNED_CORE_STATES
+}
+
+communist_controlled_states_my_continent = {
+	input = game:all_states
+	name = COLLECTION_AMOUNT_OF_COMMUNIST_CONTROLLED_STATES_SAME_CONTINENT
+	operators = {
+		limit = {
+			is_on_same_continent_as = ROOT
+			controller = {
+				has_government = marxism_leninism
+			}
+		}
+	}
+}
+
+fascist_controlled_states_my_continent = {
+	input = game:all_states
+	name = COLLECTION_AMOUNT_OF_FASCIST_CONTROLLED_STATES_SAME_CONTINENT
+	operators = {
+		limit = {
+			is_on_same_continent_as = ROOT
+			controller = {
+				has_government = fascism
+			}
+		}
+	}
+}
+
+anti_communist_controlled_states_my_continent = {
+	input = game:all_states
+	name = COLLECTION_STATES_MY_CONTINENT_CONTROLLED_DEMOCRATIC_FASCIST
+	operators = {
+		limit = {
+			is_on_same_continent_as = ROOT
+			controller = {
+				OR = {
+					has_government = fascism
+					has_government = progressivism
+				}
+			}
+		}
+	}
+}
+
+anti_fascist_controlled_states_my_continent = {
+	input = game:all_states
+	name = COLLECTION_STATES_MY_CONTINENT_CONTROLLED_DEMOCRATIC_COMMUNIST
+	operators = {
+		limit = {
+			is_on_same_continent_as = ROOT
+			controller = {
+				OR = {
+					has_government = marxism_leninism
+					has_government = progressivism
+				}
+			}
+		}
+	}
+}
+
+world_uncapitulated_progressivism_countries_and_dominions = {
+	input = game:all_countries
+	name = COLLECTION_UNCAPITULATED_DEMOCRATIC_COUNTRIES_AND_DOMINIONS
+	operators = {
+		limit = {
+			has_government = progressivism
+			has_capitulated = no
+			is_subject = no
+		}
+	}
+}

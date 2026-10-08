@@ -1,0 +1,4 @@
+# Gruppa Ost compatibility override for HOI4 1.18.3.0.7709.
+# All designer pools in this vanilla file reference tank chassis absent from this mod.
+# Authored tank equipment, sprites and usable air/ship pools remain unchanged.
+# Source: dlc/dlc045_expansion_pass_1_supporter_pack/gfx/interface/equipmentdesigner/graphic_db/09_expansion_pass_1_support_pack_tank_icons.txt

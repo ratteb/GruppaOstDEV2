@@ -1,0 +1,52 @@
+[
+  {
+    "path": "gfx/interface/diplo_flag_frame.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      134,
+      80
+    ]
+  },
+  {
+    "path": "gfx/interface/diplo_goal_button.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 3,
+    "dimensions": [
+      855,
+      64
+    ]
+  },
+  {
+    "path": "gfx/interface/diplo_leader_frame.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      134,
+      175
+    ]
+  },
+  {
+    "path": "gfx/interface/diplo_nat_spirits_bg.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      520,
+      92
+    ]
+  },
+  {
+    "path": "gfx/interface/diplo_top_bg_diplo_tab.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      399,
+      167
+    ]
+  }
+]

@@ -171,9 +171,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				custom_effect_tooltip = {
-					SOV_tooltip_1_tt
-				}
+				custom_modifier_tooltip = SOV_tooltip_1_tt
 			}
 		}
 		SOV_russkiy_mir01 = {

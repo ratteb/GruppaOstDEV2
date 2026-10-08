@@ -131,4 +131,7 @@ def run():
         'recovery_archive':str(BACKUP.relative_to(ROOT)), 'assets':records},indent=2)+'\n')
     print('Updated and decoded 10 DDS assets; original headers retained; flag changes confined to its pocket.')
 
-if __name__=='__main__':run()
+if __name__=='__main__':
+    # The initial color-mask/polygon pass is superseded by the user correction.
+    from production686_revision import run as revised_run
+    revised_run()

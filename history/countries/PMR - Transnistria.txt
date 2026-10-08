@@ -1,4 +1,4 @@
-﻿capital = 13365 #Baku
+﻿capital = 979 # Transnistria; contains the existing capital province 13365.
 
 oob = "AZR_1936"
 

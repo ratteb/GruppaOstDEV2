@@ -1,0 +1,61 @@
+{
+  "title": {
+    "lines": 1,
+    "height": 22,
+    "max_line_width": 457,
+    "available_width": 540,
+    "available_height": 44
+  },
+  "description": {
+    "lines": 23,
+    "height": 391,
+    "max_line_width": 567,
+    "available_width": 568,
+    "available_height": 639
+  },
+  "option": {
+    "fonts": "TD_event_font_12pt",
+    "lines": 2,
+    "height": 30,
+    "max_line_width": 167,
+    "available_width": 176,
+    "available_height": 46
+  },
+  "estimated_news_height": 879,
+  "description_bottom": 675,
+  "picture_bottom": 252,
+  "button_top": 693,
+  "button_bottom": 747,
+  "space_after_button": 132,
+  "missing_glyphs": [],
+  "shared_option_capacity": {
+    "resolved_authored_labels": 133,
+    "maximum_lines": 3,
+    "maximum_height": 45,
+    "three_line_labels": [
+      "SOV_sotnik.3.b"
+    ]
+  },
+  "chart_changed_pixels": 679,
+  "chart_center": [
+    217,
+    238
+  ],
+  "dds_headers_unchanged": true,
+  "news_tile_border": [
+    18,
+    88
+  ],
+  "tile_center_seam_verified": true,
+  "picture_opening": [
+    10,
+    10,
+    584,
+    166
+  ],
+  "option_texture_bytes_unchanged": true,
+  "ordinary_gui_prefix_sha256": "f537d699c13da0dd55ba1746606a1c0c37711971c1b64c0ad1549d0268f4afe5",
+  "in_game_validated": false,
+  "installed_outputs_verified": 7,
+  "protected_references_unchanged": 8
+}

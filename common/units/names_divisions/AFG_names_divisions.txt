@@ -2,7 +2,7 @@
 	name = "Placeholder Division Group (SOV)"
 	for_countries = { SOV }
 	can_use = { always = yes }
-	division_types = { "infantry" "armor" "motorized" "mechanized" }
+	division_types = { "infantry" "modern_armor" "motorized" "mechanized" }
 	fallback_name = "%dth Division"
 }
 
@@ -10,7 +10,7 @@ NOV_ARM_01 = {
 	name = "Placeholder Division Group (NOV)"
 	for_countries = { NOV }
 	can_use = { always = yes }
-	division_types = { "infantry" "armor" "motorized" "mechanized" }
+	division_types = { "infantry" "modern_armor" "motorized" "mechanized" }
 	fallback_name = "%dth Division"
 }
 
@@ -18,7 +18,7 @@ ZAK_ARM_01 = {
 	name = "Placeholder Division Group (ZAK)"
 	for_countries = { ZAK }
 	can_use = { always = yes }
-	division_types = { "infantry" "armor" "motorized" "mechanized" }
+	division_types = { "infantry" "modern_armor" "motorized" "mechanized" }
 	fallback_name = "%dth Division"
 }
 
@@ -34,6 +34,6 @@ AFG_ARM_01 = {
 	name = "Placeholder Armor Group (AFG)"
 	for_countries = { AFG }
 	can_use = { always = yes }
-	division_types = { "infantry" "armor" }
+	division_types = { "infantry" "modern_armor" }
 	fallback_name = "%dth Division"
 }

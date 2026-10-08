@@ -1,0 +1,2 @@
+# State 990 is the sole PAL-owned state in the authored start.
+capital = 990

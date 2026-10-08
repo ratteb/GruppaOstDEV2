@@ -1,0 +1,12 @@
+[
+  "gfx/interface/add_national_goal_button.dds",
+  "gfx/interface/category_header.dds",
+  "gfx/interface/header_bg.dds",
+  "gfx/interface/pol_goal_bg.dds",
+  "gfx/interface/pol_leader_frame.dds",
+  "gfx/interface/pol_view_bg.dds",
+  "gfx/interface/tiles/tiled_window2_1b_border.dds",
+  "gfx/interface/tiles/tiled_focus_bg.dds",
+  "gfx/interface/topbar/toolbar/international_market_button.dds",
+  "gfx/interface/topbar/toolbar/staff_office_button.dds"
+]

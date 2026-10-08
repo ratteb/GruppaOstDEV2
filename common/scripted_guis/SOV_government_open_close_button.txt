@@ -5,6 +5,8 @@ scripted_gui = {
 
     visible = {
       tag = SOV
+      # The government panel has no interface containers yet.
+      always = no
     }
 
     effects = {

@@ -109,6 +109,42 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_6.dds"
 	}
 
+	# Equipment IDs for production; preserve the technology-name sprites above.
+	SpriteType = {
+		name = "GFX_SOV_anti_tank_weapons_0_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_0.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_anti_tank_weapons_1_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_anti_tank_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_anti_tank_weapons_3_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_anti_tank_weapons_4_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_anti_tank_weapons_5_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_anti_tank_weapons_6_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_6.dds"
+	}
+
 	SpriteType = {
 		name = "GFX_SOV_modern_tank_medium"
 		texturefile = "gfx/interface/technologies/SOV_modern_tank_0.dds"
@@ -396,6 +432,42 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_6.dds"
 	}
 
+	# Equipment IDs for production; preserve the technology-name sprites above.
+	SpriteType = {
+		name = "GFX_NOV_anti_tank_weapons_0_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_0.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_anti_tank_weapons_1_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_anti_tank_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_anti_tank_weapons_3_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_anti_tank_weapons_4_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_anti_tank_weapons_5_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NOV_anti_tank_weapons_6_medium"
+		texturefile = "gfx/interface/technologies/SOV_anti_tank_weapons_6.dds"
+	}
+
 	SpriteType = {
 		name = "GFX_NOV_modern_tank_medium"
 		texturefile = "gfx/interface/technologies/SOV_modern_tank_0.dds"
@@ -671,6 +743,42 @@ spriteTypes = {
 
 		SpriteType = {
 		name = "GFX_USA_anti_tank_weapons7_medium"
+		texturefile = "gfx/interface/technologies/USA_anti_tank_weapons_6.dds"
+	}
+
+	# Equipment IDs for production; preserve the technology-name sprites above.
+	SpriteType = {
+		name = "GFX_USA_anti_tank_weapons_0_medium"
+		texturefile = "gfx/interface/technologies/USA_anti_tank_weapons_0.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_USA_anti_tank_weapons_1_medium"
+		texturefile = "gfx/interface/technologies/USA_anti_tank_weapons_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_USA_anti_tank_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/USA_anti_tank_weapons_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_USA_anti_tank_weapons_3_medium"
+		texturefile = "gfx/interface/technologies/USA_anti_tank_weapons_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_USA_anti_tank_weapons_4_medium"
+		texturefile = "gfx/interface/technologies/USA_anti_tank_weapons_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_USA_anti_tank_weapons_5_medium"
+		texturefile = "gfx/interface/technologies/USA_anti_tank_weapons_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_USA_anti_tank_weapons_6_medium"
 		texturefile = "gfx/interface/technologies/USA_anti_tank_weapons_6.dds"
 	}
 

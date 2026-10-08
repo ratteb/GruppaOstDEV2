@@ -1,0 +1,24 @@
+# Referenced faction reward excluded by replace_path="common/ideas".
+# Source: installed HOI4 1.18.3.0.7709, common/ideas/zzz_generic.txt:878-900.
+# Preserve the native ID, availability and modifiers; no new campaign access.
+ideas = {
+	country = {
+		deterrence = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_production_bonus
+			modifier = {
+				production_speed_bunker_factor = 0.2
+				production_speed_coastal_bunker_factor = 0.2
+				production_speed_anti_air_building_factor = 0.2
+				production_speed_arms_factory_factor = 0.2
+				bunker_max_level_terrain_limit = 1
+			}
+		}
+	}
+}

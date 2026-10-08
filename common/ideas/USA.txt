@@ -174,10 +174,10 @@ ideas = {
 
 			removal_cost = -1
 			
-			modifier = {
-					research_bonus = { armor = -0.10 }
-					research_bonus =  { cat_special_forces_generic = -0.10 }
-					research_bonus = { armoured_infantry = -0.10 }
+			research_bonus = {
+				armor = -0.10
+				cat_special_forces_generic = -0.10
+				armoured_infantry = -0.10
 			}
 		}
 	}

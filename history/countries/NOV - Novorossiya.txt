@@ -71,6 +71,9 @@ SOV = {
 }
 # Starting tech
 set_technology = {
+	# Minimum equipment unlocks required by the authored starting divisions.
+	interwar_antiair = 1
+	rocket_artillery = 1
 infantry_weapons = 1
 	infantry_weapons1 = 1
 	improved_infantry_weapons = 1

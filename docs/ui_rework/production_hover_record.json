@@ -1,0 +1,81 @@
+{
+  "target": "1.18.*",
+  "installed_source": "1.18.3.0.7709",
+  "in_game_tested": false,
+  "shader_compiled_in_game": false,
+  "fix": "Expose the three-pixel native button rim under outdated panels and apply immediate high-contrast blue hover to production equipment card sprites. Slate face and all GUI geometry/click targets remain unchanged.",
+  "sources": [
+    "Installed gfx/FX/buttonstate.shader: VS texture Offset and Effect Up/Over/Down/Disable dispatch; buttonstate.fxh constant-buffer layout.",
+    "Installed interface/countrydeploymentview.gfx: GFX sprites reference .shader effectFile directly.",
+    "Project countryproductionlineview.gui: obsolete icons draw above equipment_button, hiding its hover with alpha=255.",
+    "Project production686_revision.py: three-pixel frame geometry."
+  ],
+  "checks": [
+    "Seven outdated DDS headers/dimensions/RGB unchanged; only border alpha changed.",
+    "All seven card sprite definitions point to dedicated hover shader. No GUI edits.",
+    "Offline composition confirms slate interior unchanged and exposed hover rim increases by at least 49 per RGB channel in reviewed layouts.",
+    "GFX diff limited to seven effectFile bindings; shader effects and delimiters checked against native structure. No engine shader compilation claimed."
+  ],
+  "remaining": "Verify shader loading and hover/pressed behavior in HOI4 for expanded/collapsed equipment and chooser entries; refit rows have no equipment_button and retain native row feedback.",
+  "backup": "tools\\ui_rework\\production_hover_before.zip",
+  "assets": [
+    {
+      "path": "gfx\\interface\\GO_outdated_land.dds",
+      "before_sha256": "babd9e11622f44d5b516c43ee14d7c4d09ffb7acc9b05ed89e80c0df0567dcab",
+      "after_sha256": "e54219b2bb54e3503435370300358913e605d900574df4e36770cf02deee16a5"
+    },
+    {
+      "path": "gfx\\interface\\GO_outdated_naval.dds",
+      "before_sha256": "a37744895e25f068289baa13c6cde48b6034101f7f94ba8a71728f89024354a9",
+      "after_sha256": "889d3d3e6a21dea23340081d66a51791a71e7f2151262215453ea146c4ff47f8"
+    },
+    {
+      "path": "gfx\\interface\\GO_outdated_land_small.dds",
+      "before_sha256": "9f381f033b691dfb078085ca36b6a5460824f7fd36e214247d55527872384739",
+      "after_sha256": "82269f4ac9fc864295dd930ad56103a9f9739fe5ac452915d08c27379842b9ab"
+    },
+    {
+      "path": "gfx\\interface\\GO_outdated_rail_small.dds",
+      "before_sha256": "199d222de0319fb9fee04a6c7120fb66c1dd580ffeaf6b52142a9e294b73e1b8",
+      "after_sha256": "fd24a768a11724113166dbd507584e27bf4ebdfcbdb3ef2fd7900b8406c54d69"
+    },
+    {
+      "path": "gfx\\interface\\GO_outdated_naval_small.dds",
+      "before_sha256": "199d222de0319fb9fee04a6c7120fb66c1dd580ffeaf6b52142a9e294b73e1b8",
+      "after_sha256": "fd24a768a11724113166dbd507584e27bf4ebdfcbdb3ef2fd7900b8406c54d69"
+    },
+    {
+      "path": "gfx\\interface\\GO_outdated_land_choice.dds",
+      "before_sha256": "c50032eca263b85189a027f1794db01886bdd9db2fcdc13201caad10e99a6e8e",
+      "after_sha256": "dab09e1cd91f879063b518102a5e013380284a1281bb948f1bbca07a2e7e6e61"
+    },
+    {
+      "path": "gfx\\interface\\GO_outdated_naval_choice.dds",
+      "before_sha256": "c50032eca263b85189a027f1794db01886bdd9db2fcdc13201caad10e99a6e8e",
+      "after_sha256": "dab09e1cd91f879063b518102a5e013380284a1281bb948f1bbca07a2e7e6e61"
+    }
+  ],
+  "preview_metrics": [
+    {
+      "kind": "land",
+      "minimum_border_rgb_increase": 51,
+      "face_unchanged": true
+    },
+    {
+      "kind": "land_choice",
+      "minimum_border_rgb_increase": 51,
+      "face_unchanged": true
+    },
+    {
+      "kind": "land_small",
+      "minimum_border_rgb_increase": 51,
+      "face_unchanged": true
+    }
+  ],
+  "final_hashes": {
+    "gfx/FX/GO_equipment_hover.shader": "5563c7b914327ef479284c2542dc8193398ec3262c64c25d72acfd405bb959e6",
+    "interface/countryproductionlineview.gfx": "f535b69701749bb4a6078c97ae25f1ce49ec6e8e32224815258403e043dee520",
+    "tools/ui_rework/production686_revision.py": "208f78d3f2815721caff86bd7ef96386bcb17f8162ece9020709e5f2e10ff356"
+  },
+  "superseded_by": "docs/ui_rework/equipment_hover_match_record.json"
+}

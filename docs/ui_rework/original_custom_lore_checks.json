@@ -1,0 +1,42 @@
+[
+  {
+    "path": "gfx/scripted_gui/lore_screen/chapter_button.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      115,
+      21
+    ]
+  },
+  {
+    "path": "gfx/scripted_gui/lore_screen/chapterbutton.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      208,
+      34
+    ]
+  },
+  {
+    "path": "gfx/scripted_gui/lore_screen/lore_open_button.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      104,
+      34
+    ]
+  },
+  {
+    "path": "gfx/scripted_gui/lore_screen/lore_screen_main_screen.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      1226,
+      956
+    ]
+  }
+]

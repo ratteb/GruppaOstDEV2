@@ -1,0 +1,212 @@
+[
+  {
+    "path": "gfx/scripted_gui/csto/csto_cata_danger_progress_bar_background.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      410,
+      30
+    ],
+    "fingerprint": {
+      "source_sha256": "ff5d232bdca5da1dbb5e1ff8075e4505f905096f51214e2325b24160954164b9",
+      "recipe_sha256": "4ff76589c31a1911ac37ff7d7b4e83e495c1f100cda3604b06eeaece317f9c40",
+      "dependencies": {
+        "original_custom_renderer.py": "90f086b49e04d83f866cf219bd7a3550d4a0d1650dbfb8a1a0c7dcd6f7646ba3",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "e12ffeb3ead361f2c684729fbb49ba551d828697848e84823e722e57c65734c9"
+  },
+  {
+    "path": "gfx/scripted_gui/csto/csto_cata_threat_progress_bar_background.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      410,
+      30
+    ],
+    "fingerprint": {
+      "source_sha256": "ff5d232bdca5da1dbb5e1ff8075e4505f905096f51214e2325b24160954164b9",
+      "recipe_sha256": "4ff76589c31a1911ac37ff7d7b4e83e495c1f100cda3604b06eeaece317f9c40",
+      "dependencies": {
+        "original_custom_renderer.py": "90f086b49e04d83f866cf219bd7a3550d4a0d1650dbfb8a1a0c7dcd6f7646ba3",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "e12ffeb3ead361f2c684729fbb49ba551d828697848e84823e722e57c65734c9"
+  },
+  {
+    "path": "gfx/scripted_gui/sotnik/gerasimov_frame.dds",
+    "errors": [],
+    "protected_pixels": 3781,
+    "frames": 1,
+    "dimensions": [
+      196,
+      250
+    ],
+    "fingerprint": {
+      "source_sha256": "17afcd6e2726b55c7029b44138014b0f8b7472a3e914be7e028f23221045dfa5",
+      "recipe_sha256": "2e8b238a11b3b9bb58c8b7b76b859df7f72ef791f33ba4ab4e7314dc42246ab8",
+      "dependencies": {
+        "original_custom_renderer.py": "90f086b49e04d83f866cf219bd7a3550d4a0d1650dbfb8a1a0c7dcd6f7646ba3",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "f85028f8729831b0df619fb6f0e88be5102623061aabc8bd28956ea56de0565d"
+  },
+  {
+    "path": "gfx/scripted_gui/sotnik/gerasimov_progress_bar_background.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      410,
+      30
+    ],
+    "fingerprint": {
+      "source_sha256": "6d4846da83336f8ebab6be5dd9d4cdf481d0bd2c3164df978e406dcb690a3068",
+      "recipe_sha256": "4ff76589c31a1911ac37ff7d7b4e83e495c1f100cda3604b06eeaece317f9c40",
+      "dependencies": {
+        "original_custom_renderer.py": "90f086b49e04d83f866cf219bd7a3550d4a0d1650dbfb8a1a0c7dcd6f7646ba3",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "e12ffeb3ead361f2c684729fbb49ba551d828697848e84823e722e57c65734c9"
+  },
+  {
+    "path": "gfx/scripted_gui/sotnik/shoigu_frame.dds",
+    "errors": [],
+    "protected_pixels": 3906,
+    "frames": 1,
+    "dimensions": [
+      196,
+      250
+    ],
+    "fingerprint": {
+      "source_sha256": "beb08263b622021f933c31de752c96a452eba1aa73bdc1d9d5363627c1c445d0",
+      "recipe_sha256": "2e8b238a11b3b9bb58c8b7b76b859df7f72ef791f33ba4ab4e7314dc42246ab8",
+      "dependencies": {
+        "original_custom_renderer.py": "90f086b49e04d83f866cf219bd7a3550d4a0d1650dbfb8a1a0c7dcd6f7646ba3",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "54ff68f9393bcb7b60450010f640aed6132ec9a0036dd276a745ab72e7ec2d64"
+  },
+  {
+    "path": "gfx/scripted_gui/sotnik/shoigu_progress_bar_background.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      410,
+      30
+    ],
+    "fingerprint": {
+      "source_sha256": "6d4846da83336f8ebab6be5dd9d4cdf481d0bd2c3164df978e406dcb690a3068",
+      "recipe_sha256": "4ff76589c31a1911ac37ff7d7b4e83e495c1f100cda3604b06eeaece317f9c40",
+      "dependencies": {
+        "original_custom_renderer.py": "90f086b49e04d83f866cf219bd7a3550d4a0d1650dbfb8a1a0c7dcd6f7646ba3",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "e12ffeb3ead361f2c684729fbb49ba551d828697848e84823e722e57c65734c9"
+  },
+  {
+    "path": "gfx/scripted_gui/sotnik/sotnik_progress_bar_background.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      410,
+      30
+    ],
+    "fingerprint": {
+      "source_sha256": "6d4846da83336f8ebab6be5dd9d4cdf481d0bd2c3164df978e406dcb690a3068",
+      "recipe_sha256": "4ff76589c31a1911ac37ff7d7b4e83e495c1f100cda3604b06eeaece317f9c40",
+      "dependencies": {
+        "original_custom_renderer.py": "90f086b49e04d83f866cf219bd7a3550d4a0d1650dbfb8a1a0c7dcd6f7646ba3",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "e12ffeb3ead361f2c684729fbb49ba551d828697848e84823e722e57c65734c9"
+  },
+  {
+    "path": "gfx/scripted_gui/csto/page1_button.dds",
+    "errors": [],
+    "protected_pixels": 100,
+    "frames": 1,
+    "dimensions": [
+      52,
+      52
+    ],
+    "fingerprint": {
+      "source_sha256": "0ee577f110d1a5b985adc08c63d4f492cdc5f7955c5565597be20760103fd094",
+      "recipe_sha256": "a81c73b85e3dd8f861f97580603f44d83772dcc3132bbd45bfc716bfb45e37ca",
+      "dependencies": {
+        "original_custom_renderer.py": "90f086b49e04d83f866cf219bd7a3550d4a0d1650dbfb8a1a0c7dcd6f7646ba3",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "bbc99c54813c634b985ca64c6edc7e2783c0c37038ee3cb11bfe5475c0bf4f28"
+  },
+  {
+    "path": "gfx/scripted_gui/csto/page2_button.dds",
+    "errors": [],
+    "protected_pixels": 189,
+    "frames": 1,
+    "dimensions": [
+      52,
+      52
+    ],
+    "fingerprint": {
+      "source_sha256": "a69c9175c9385f9925eb02a44d485db62f08238564c23cde4aab867eaa34939e",
+      "recipe_sha256": "a81c73b85e3dd8f861f97580603f44d83772dcc3132bbd45bfc716bfb45e37ca",
+      "dependencies": {
+        "original_custom_renderer.py": "90f086b49e04d83f866cf219bd7a3550d4a0d1650dbfb8a1a0c7dcd6f7646ba3",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "b054ca77249869553fb1d999765930eae2ef8b43f63f84abf13b9d1f9609b7a6"
+  },
+  {
+    "path": "gfx/scripted_gui/csto/page3_button.dds",
+    "errors": [],
+    "protected_pixels": 189,
+    "frames": 1,
+    "dimensions": [
+      52,
+      52
+    ],
+    "fingerprint": {
+      "source_sha256": "e1ca9d0de9847cdeec604983afb5d6e3f4cb14ac2b37bec8b223879c5573d743",
+      "recipe_sha256": "a81c73b85e3dd8f861f97580603f44d83772dcc3132bbd45bfc716bfb45e37ca",
+      "dependencies": {
+        "original_custom_renderer.py": "90f086b49e04d83f866cf219bd7a3550d4a0d1650dbfb8a1a0c7dcd6f7646ba3",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "6d4be6195192b767768cf411a8c9c285d5d436fb5013961374126e9af5a9d0ed"
+  }
+]

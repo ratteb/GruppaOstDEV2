@@ -107,6 +107,17 @@ bitmapfonts = {
         }
     }
 
+    # Compatibility name used by the authored lore screen.
+    bitmapfont = {
+        name = "TD_event_font_16p"
+        path = "gfx/fonts/TD_event_font_16pt"
+        color = 0xfff8f1e4
+
+        textcolors = {
+            G = { 255 244 224 }
+        }
+    }
+
 
      bitmapfont = {
         name = "TD_interface_font_8pt"

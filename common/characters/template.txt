@@ -1,16 +1,18 @@
-characters={
-	AFG_mohammed_zahir_shah={
-		name="Mohammed Zahir Shah"
-		portraits={
-			civilian={
-				large=GFX_portrait_Mohammed_Zahir_Shah
-			}
-		}
-		country_leader={
-			ideology=despotism
-			desc = 
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-}
+# Dormant example character, expired before the 2027 campaign; not recruited.
+# Preserve the original authoring template without registering an invalid leader.
+#characters={
+#	AFG_mohammed_zahir_shah={
+#		name="Mohammed Zahir Shah"
+#		portraits={
+#			civilian={
+#				large=GFX_portrait_Mohammed_Zahir_Shah
+#			}
+#		}
+#		country_leader={
+#			ideology=despotism
+#			desc =
+#			expire="1965.1.1.1"
+#			id=-1
+#		}
+#	}
+#}

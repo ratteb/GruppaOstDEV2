@@ -8,7 +8,7 @@ characters={
 		}
 		country_leader={
 			ideology=western_autocracy
-			desc = 
+			desc = ""
 			expire="3000.1.1.1"
 			id=-1
 		}

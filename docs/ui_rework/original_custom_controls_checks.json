@@ -1,0 +1,288 @@
+[
+  {
+    "path": "gfx/interface/button_123x34.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      123,
+      36
+    ],
+    "fingerprint": {
+      "source_sha256": "7fe6695b272053f82146ef873b1bfc7673f116642725e57cc9fc36a276de1cc0",
+      "recipe_sha256": "aee0d6442db1c951d1598c03faabffb3583f0bb5e1818f0dd48c5bb81e9e4132",
+      "dependencies": {
+        "original_custom.py": "61b5ba7d3572e8ee03a0b9c68515fa05cf6405957ca67245ed1ff60bbff55d3d",
+        "original_custom_renderer.py": "0bfe5b9d557f019fa986bf0d991ea970e07495977a941194edcf79f954b35942",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "38d5f6320d8649ca2b44e5b30d807cc16a9d43b4e23b34e0ca5c6ccf2e73a893"
+  },
+  {
+    "path": "gfx/interface/button_221x34.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      221,
+      36
+    ],
+    "fingerprint": {
+      "source_sha256": "48a8dc457724126c454431d7656e7342c9940caf6baf57ddbab60846c989a5fc",
+      "recipe_sha256": "aee0d6442db1c951d1598c03faabffb3583f0bb5e1818f0dd48c5bb81e9e4132",
+      "dependencies": {
+        "original_custom.py": "61b5ba7d3572e8ee03a0b9c68515fa05cf6405957ca67245ed1ff60bbff55d3d",
+        "original_custom_renderer.py": "0bfe5b9d557f019fa986bf0d991ea970e07495977a941194edcf79f954b35942",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "e369536141b377cc81c5fc85df5be865f73a1e06c653c20a62a759bd02309b16"
+  },
+  {
+    "path": "gfx/interface/intel_ledger/tab.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 2,
+    "dimensions": [
+      520,
+      42
+    ],
+    "fingerprint": {
+      "source_sha256": "c7d97d1716ffb5effc0a8f50bdb441ef7cc7c3fa90dbb030cb2a4216c70b83f8",
+      "recipe_sha256": "90318acee6b86a8cae26e64ff712903a7e8ec09f6ff3330f7002efac39b033d7",
+      "dependencies": {
+        "original_custom.py": "61b5ba7d3572e8ee03a0b9c68515fa05cf6405957ca67245ed1ff60bbff55d3d",
+        "original_custom_renderer.py": "0bfe5b9d557f019fa986bf0d991ea970e07495977a941194edcf79f954b35942",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "0cb3f2a0c4ca8fe5dc90f3fcf3da906dbebb99e807bd97734de0a611aa29a330"
+  },
+  {
+    "path": "gfx/interface/main_lobby_button.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 3,
+    "dimensions": [
+      864,
+      36
+    ],
+    "fingerprint": {
+      "source_sha256": "dd1dd24855538f81889beecf75edfd4d5b74a93c1e82910cf2d320340939bfe6",
+      "recipe_sha256": "7a3e1a9ae5f590d9b005c0a97f2a6a2160a696741e3ab52374cb5feca95d47e6",
+      "dependencies": {
+        "original_custom.py": "61b5ba7d3572e8ee03a0b9c68515fa05cf6405957ca67245ed1ff60bbff55d3d",
+        "original_custom_renderer.py": "0bfe5b9d557f019fa986bf0d991ea970e07495977a941194edcf79f954b35942",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "87748b9f26190ba2cd0fcaf89cd8cb56c1a139e342715eb49a5e68f6b2779b0b"
+  },
+  {
+    "path": "gfx/interface/main_lobby_divider.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      312,
+      15
+    ],
+    "fingerprint": {
+      "source_sha256": "2d1d4b8d8c447f6fa13f3e9aa5b0de48098ae073cc031267e6dd4cef793f8b50",
+      "recipe_sha256": "87beb10da864421a83413654d3087fc63aa1f4f165908bbeafb307e3a87a4c9a",
+      "dependencies": {
+        "original_custom.py": "61b5ba7d3572e8ee03a0b9c68515fa05cf6405957ca67245ed1ff60bbff55d3d",
+        "original_custom_renderer.py": "0bfe5b9d557f019fa986bf0d991ea970e07495977a941194edcf79f954b35942",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "003fff56783e1533e90d484dc9dd18b2d222110f311bb131671d060e27facaec"
+  },
+  {
+    "path": "gfx/interface/unitcontrol/focus_reward_header.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      552,
+      35
+    ],
+    "fingerprint": {
+      "source_sha256": "3277e15b16d3383711de506877b50b146378f242d58b8d025cf924fccab925e4",
+      "recipe_sha256": "15ff9a83b07e1a140d454c898528bb9fe3acca4f72b3dd15185be512926356fb",
+      "dependencies": {
+        "original_custom.py": "61b5ba7d3572e8ee03a0b9c68515fa05cf6405957ca67245ed1ff60bbff55d3d",
+        "original_custom_renderer.py": "0bfe5b9d557f019fa986bf0d991ea970e07495977a941194edcf79f954b35942",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "a5548d81110432682a92b3ebff8047b70f31ed1277e4beab3538aa1d620553d7"
+  },
+  {
+    "path": "gfx/interface/unitcontrol/unit_entry_bg.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 2,
+    "dimensions": [
+      780,
+      33
+    ],
+    "fingerprint": {
+      "source_sha256": "894a10c8c5f502b829640ec3b714a42a4d2f29c51218bc98531d84a85c500236",
+      "recipe_sha256": "e6a2f7a8310cdef0b919cc6c0a827b1fa7252324e1b6f0abb7f31db831a1c058",
+      "dependencies": {
+        "original_custom.py": "61b5ba7d3572e8ee03a0b9c68515fa05cf6405957ca67245ed1ff60bbff55d3d",
+        "original_custom_renderer.py": "0bfe5b9d557f019fa986bf0d991ea970e07495977a941194edcf79f954b35942",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "5b8e229661d333aa8b53c76c6962cb051e80a43ea600858fa7ef0268ceaf9749"
+  },
+  {
+    "path": "gfx/interface/unitcontrol/unit_list_header.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      392,
+      35
+    ],
+    "fingerprint": {
+      "source_sha256": "607b8c9f7c67cdf50d04c84ce8ab61118fd98f8e0f09cf1f7a27492dec0d76d6",
+      "recipe_sha256": "15ff9a83b07e1a140d454c898528bb9fe3acca4f72b3dd15185be512926356fb",
+      "dependencies": {
+        "original_custom.py": "61b5ba7d3572e8ee03a0b9c68515fa05cf6405957ca67245ed1ff60bbff55d3d",
+        "original_custom_renderer.py": "0bfe5b9d557f019fa986bf0d991ea970e07495977a941194edcf79f954b35942",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "f9d0566ecb6c31513e970cda258fe118d0a3f11d3c92ea07fc0e55837f78b44b"
+  },
+  {
+    "path": "gfx/interface/unitcontrol/unitlist_unassigned_bg.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      396,
+      54
+    ],
+    "fingerprint": {
+      "source_sha256": "a4bf60e64fff26c2283074c1e91521b845b70c48d2abfe956d7cfa0edc33a9c2",
+      "recipe_sha256": "15ff9a83b07e1a140d454c898528bb9fe3acca4f72b3dd15185be512926356fb",
+      "dependencies": {
+        "original_custom.py": "61b5ba7d3572e8ee03a0b9c68515fa05cf6405957ca67245ed1ff60bbff55d3d",
+        "original_custom_renderer.py": "0bfe5b9d557f019fa986bf0d991ea970e07495977a941194edcf79f954b35942",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "3b133bdd13774ee091baf4dc6dc59c7953b8cc9a2cdf0107bfca02f1d93b59d9"
+  },
+  {
+    "path": "gfx/scripted_gui/usa_wall/decrease_no.dds",
+    "errors": [],
+    "protected_pixels": 627,
+    "frames": 1,
+    "dimensions": [
+      118,
+      118
+    ],
+    "fingerprint": {
+      "source_sha256": "afe41a27c14bbf9569e456c02c4ff3e63494356f1b2ac9220c0ccfa8005ef39d",
+      "recipe_sha256": "b3ed83b8d9db5acd6f34f102c0775b49726c2b7cf41f568aea5775c84397b092",
+      "dependencies": {
+        "original_custom.py": "61b5ba7d3572e8ee03a0b9c68515fa05cf6405957ca67245ed1ff60bbff55d3d",
+        "original_custom_renderer.py": "0bfe5b9d557f019fa986bf0d991ea970e07495977a941194edcf79f954b35942",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "ae3c0b43c03f6a2fd9deb1425d44b03d5cf789f8211979d69261167fc45665b6"
+  },
+  {
+    "path": "gfx/scripted_gui/usa_wall/decrease_yes.dds",
+    "errors": [],
+    "protected_pixels": 208,
+    "frames": 1,
+    "dimensions": [
+      52,
+      52
+    ],
+    "fingerprint": {
+      "source_sha256": "18a698eac94ad5305f90ab1bc61d65b238cc27abe5e617deb5420e1ebddd71b7",
+      "recipe_sha256": "5c05120efb2f754c1957b88e281256fa7d78caec9f5324f359f67d6d68bac732",
+      "dependencies": {
+        "original_custom.py": "61b5ba7d3572e8ee03a0b9c68515fa05cf6405957ca67245ed1ff60bbff55d3d",
+        "original_custom_renderer.py": "0bfe5b9d557f019fa986bf0d991ea970e07495977a941194edcf79f954b35942",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "d7bb23a8d5c784da924af9ea1e29bc13b3a1444058fc52419e3e78ea5ca0b85e"
+  },
+  {
+    "path": "gfx/scripted_gui/usa_wall/increase_no.dds",
+    "errors": [],
+    "protected_pixels": 804,
+    "frames": 1,
+    "dimensions": [
+      118,
+      118
+    ],
+    "fingerprint": {
+      "source_sha256": "33895596ac8d2c7a002f243bb00d80fe5c93f271f7aeb88c147d16aa275746e3",
+      "recipe_sha256": "53b223151d12e3218167265aba750bdd6b04f0ca159a6e2f99423ba2635bb7f0",
+      "dependencies": {
+        "original_custom.py": "61b5ba7d3572e8ee03a0b9c68515fa05cf6405957ca67245ed1ff60bbff55d3d",
+        "original_custom_renderer.py": "0bfe5b9d557f019fa986bf0d991ea970e07495977a941194edcf79f954b35942",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "6a2e264fd471cd7afb3c0844aa56528598333f76cf58664dade614d57b911662"
+  },
+  {
+    "path": "gfx/scripted_gui/usa_wall/increase_yes.dds",
+    "errors": [],
+    "protected_pixels": 290,
+    "frames": 1,
+    "dimensions": [
+      52,
+      52
+    ],
+    "fingerprint": {
+      "source_sha256": "67c13536425625e11f7c3afa47ff0e34d21bf8098e24eb16d8b5c655728f3d5f",
+      "recipe_sha256": "c7a6c825271f634decbd1fb60d0eea7380f29de63f5023b5d3babe8057571326",
+      "dependencies": {
+        "original_custom.py": "61b5ba7d3572e8ee03a0b9c68515fa05cf6405957ca67245ed1ff60bbff55d3d",
+        "original_custom_renderer.py": "0bfe5b9d557f019fa986bf0d991ea970e07495977a941194edcf79f954b35942",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "190059443ec52a94d9916cfaec51aea1c7823df8029e6b21df52204c697380ab"
+  }
+]

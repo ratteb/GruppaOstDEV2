@@ -1,0 +1,107 @@
+[
+  {
+    "path": "gfx/interface/scripted_gui_graphics/SOV_UR_ruling_party_gov_gui_background.dds",
+    "errors": [],
+    "protected_pixels": 1364200,
+    "frames": 1,
+    "dimensions": [
+      1452,
+      966
+    ],
+    "fingerprint": {
+      "source_sha256": "b03070f23ccf50dd1a6080eee8501eb07d9e01158dc08eb4010229b10d035d67",
+      "recipe_sha256": "89b3a53ff1aefc042670850d14eb39ea6333b3d88e0d14355656f325d91e2473",
+      "dependencies": {
+        "original_custom_renderer.py": "90f086b49e04d83f866cf219bd7a3550d4a0d1650dbfb8a1a0c7dcd6f7646ba3",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "54f3d05b8c26d0ad2ab60ce7f121e41b8491f6e9287d0622a8ad50154af9bf20"
+  },
+  {
+    "path": "gfx/interface/scripted_gui_graphics/government_gui_background.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      1452,
+      966
+    ],
+    "fingerprint": {
+      "source_sha256": "9230282d3d79c21a80a785f07ebb9a6c9b3147c5f7ca7350fd2392d45cedb2b9",
+      "recipe_sha256": "e75c02dfc800f6a959d1bdff315b68c7cd5b357b70ea14f17bf6d3de1c59e9bb",
+      "dependencies": {
+        "original_custom_renderer.py": "90f086b49e04d83f866cf219bd7a3550d4a0d1650dbfb8a1a0c7dcd6f7646ba3",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "f11af632300dbcd7f6f181cf41f0ed33dc1540387dea5c85ebae337f62253484"
+  },
+  {
+    "path": "gfx/interface/scripted_gui_graphics/intro_screen_background.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      2034,
+      2020
+    ],
+    "fingerprint": {
+      "source_sha256": "9f137d2fbd596c4f919b7a3e4ff55a26f389ed29d7b61e97ac63c312646b0d81",
+      "recipe_sha256": "853bef0a2e2c92460bb28417e9e8e447fb34db094cd5298e18d35bd078fb099e",
+      "dependencies": {
+        "original_custom_renderer.py": "90f086b49e04d83f866cf219bd7a3550d4a0d1650dbfb8a1a0c7dcd6f7646ba3",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "f5ec6292ec0c938074ef28a34b4376e8ab4337cc3647926670b2ebae6f788d52"
+  },
+  {
+    "path": "gfx/interface/scripted_gui_graphics/military_gov_gui_background.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      1452,
+      966
+    ],
+    "fingerprint": {
+      "source_sha256": "a99cbbb1b6726f44dd78335747eace57c75b606073caa86a3bbac738d79b7cf9",
+      "recipe_sha256": "da9026d86ad1dd05b40e33593d997e13d4aa9e9d7978607635dcf757b5690856",
+      "dependencies": {
+        "original_custom_renderer.py": "90f086b49e04d83f866cf219bd7a3550d4a0d1650dbfb8a1a0c7dcd6f7646ba3",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "2976aa0ffcd13a2e3ac33a39539506496d961184a18d76f1db5b9f342e5cd3a2"
+  },
+  {
+    "path": "gfx/interface/scripted_gui_graphics/opposition_gov_gui_background.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      1452,
+      966
+    ],
+    "fingerprint": {
+      "source_sha256": "642f72d9744b0d8ab3c6063d6ccc9e24877439b8f2cef1b662790e0701295a01",
+      "recipe_sha256": "e0ef2c3be60c5e7e017def401d1038366bd0842e8e390097e9e8236a7ff03f78",
+      "dependencies": {
+        "original_custom_renderer.py": "90f086b49e04d83f866cf219bd7a3550d4a0d1650dbfb8a1a0c7dcd6f7646ba3",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "f4307e80f2138d14fe8691e3fb06e35797abad0d57f2fdd649218ff71cac16bc"
+  }
+]

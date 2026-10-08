@@ -450,6 +450,1224 @@ GO_econ_initialize_country_materials = {
     }
 }
 
+# Stage 7 - COUNTRY authored daily supply.
+# Fresh records only: initialization never reconstructs a deleted saved token.
+# Setting/changing rates preserves cadence; configured zero is a real receipt.
+# An unavailable attempt retains the last successful receipt and its date.
+
+GO_econ_initialize_country_material_supply = {
+    GO_econ_initialize_country_materials = yes
+    if = {
+        limit = {
+            GO_econ_country_materials_initialized = yes
+            NOT = { has_variable = GO_econ_country_material_supply_schema_version }
+            NOT = { has_variable = GO_econ_country_material_iron_supply_rate }
+            NOT = { has_variable = GO_econ_country_material_iron_supply_populated }
+            NOT = { has_variable = GO_econ_country_material_iron_supply_last_day }
+            NOT = { has_variable = GO_econ_country_material_iron_supply_status }
+            NOT = { has_variable = GO_econ_country_material_iron_supply_report_day }
+            NOT = { has_variable = GO_econ_country_material_iron_supply_received }
+            NOT = { has_variable = GO_econ_country_material_iron_supply_report_populated }
+            NOT = { has_variable = GO_econ_country_material_bauxite_supply_rate }
+            NOT = { has_variable = GO_econ_country_material_bauxite_supply_populated }
+            NOT = { has_variable = GO_econ_country_material_bauxite_supply_last_day }
+            NOT = { has_variable = GO_econ_country_material_bauxite_supply_status }
+            NOT = { has_variable = GO_econ_country_material_bauxite_supply_report_day }
+            NOT = { has_variable = GO_econ_country_material_bauxite_supply_received }
+            NOT = { has_variable = GO_econ_country_material_bauxite_supply_report_populated }
+            NOT = { has_variable = GO_econ_country_material_food_supply_rate }
+            NOT = { has_variable = GO_econ_country_material_food_supply_populated }
+            NOT = { has_variable = GO_econ_country_material_food_supply_last_day }
+            NOT = { has_variable = GO_econ_country_material_food_supply_status }
+            NOT = { has_variable = GO_econ_country_material_food_supply_report_day }
+            NOT = { has_variable = GO_econ_country_material_food_supply_received }
+            NOT = { has_variable = GO_econ_country_material_food_supply_report_populated }
+            NOT = { has_variable = GO_econ_country_material_coal_supply_rate }
+            NOT = { has_variable = GO_econ_country_material_coal_supply_populated }
+            NOT = { has_variable = GO_econ_country_material_coal_supply_last_day }
+            NOT = { has_variable = GO_econ_country_material_coal_supply_status }
+            NOT = { has_variable = GO_econ_country_material_coal_supply_report_day }
+            NOT = { has_variable = GO_econ_country_material_coal_supply_received }
+            NOT = { has_variable = GO_econ_country_material_coal_supply_report_populated }
+            NOT = { has_variable = GO_econ_country_material_natural_gas_supply_rate }
+            NOT = { has_variable = GO_econ_country_material_natural_gas_supply_populated }
+            NOT = { has_variable = GO_econ_country_material_natural_gas_supply_last_day }
+            NOT = { has_variable = GO_econ_country_material_natural_gas_supply_status }
+            NOT = { has_variable = GO_econ_country_material_natural_gas_supply_report_day }
+            NOT = { has_variable = GO_econ_country_material_natural_gas_supply_received }
+            NOT = { has_variable = GO_econ_country_material_natural_gas_supply_report_populated }
+            NOT = { has_variable = GO_econ_country_material_oil_supply_rate }
+            NOT = { has_variable = GO_econ_country_material_oil_supply_populated }
+            NOT = { has_variable = GO_econ_country_material_oil_supply_last_day }
+            NOT = { has_variable = GO_econ_country_material_oil_supply_status }
+            NOT = { has_variable = GO_econ_country_material_oil_supply_report_day }
+            NOT = { has_variable = GO_econ_country_material_oil_supply_received }
+            NOT = { has_variable = GO_econ_country_material_oil_supply_report_populated }
+            NOT = { has_variable = GO_econ_country_material_rare_earth_minerals_supply_rate }
+            NOT = { has_variable = GO_econ_country_material_rare_earth_minerals_supply_populated }
+            NOT = { has_variable = GO_econ_country_material_rare_earth_minerals_supply_last_day }
+            NOT = { has_variable = GO_econ_country_material_rare_earth_minerals_supply_status }
+            NOT = { has_variable = GO_econ_country_material_rare_earth_minerals_supply_report_day }
+            NOT = { has_variable = GO_econ_country_material_rare_earth_minerals_supply_received }
+            NOT = { has_variable = GO_econ_country_material_rare_earth_minerals_supply_report_populated }
+            NOT = { has_variable = GO_econ_country_material_tungsten_supply_rate }
+            NOT = { has_variable = GO_econ_country_material_tungsten_supply_populated }
+            NOT = { has_variable = GO_econ_country_material_tungsten_supply_last_day }
+            NOT = { has_variable = GO_econ_country_material_tungsten_supply_status }
+            NOT = { has_variable = GO_econ_country_material_tungsten_supply_report_day }
+            NOT = { has_variable = GO_econ_country_material_tungsten_supply_received }
+            NOT = { has_variable = GO_econ_country_material_tungsten_supply_report_populated }
+            NOT = { has_variable = GO_econ_country_material_titanium_supply_rate }
+            NOT = { has_variable = GO_econ_country_material_titanium_supply_populated }
+            NOT = { has_variable = GO_econ_country_material_titanium_supply_last_day }
+            NOT = { has_variable = GO_econ_country_material_titanium_supply_status }
+            NOT = { has_variable = GO_econ_country_material_titanium_supply_report_day }
+            NOT = { has_variable = GO_econ_country_material_titanium_supply_received }
+            NOT = { has_variable = GO_econ_country_material_titanium_supply_report_populated }
+            NOT = { has_variable = GO_econ_country_material_steel_supply_rate }
+            NOT = { has_variable = GO_econ_country_material_steel_supply_populated }
+            NOT = { has_variable = GO_econ_country_material_steel_supply_last_day }
+            NOT = { has_variable = GO_econ_country_material_steel_supply_status }
+            NOT = { has_variable = GO_econ_country_material_steel_supply_report_day }
+            NOT = { has_variable = GO_econ_country_material_steel_supply_received }
+            NOT = { has_variable = GO_econ_country_material_steel_supply_report_populated }
+            NOT = { has_variable = GO_econ_country_material_aluminium_supply_rate }
+            NOT = { has_variable = GO_econ_country_material_aluminium_supply_populated }
+            NOT = { has_variable = GO_econ_country_material_aluminium_supply_last_day }
+            NOT = { has_variable = GO_econ_country_material_aluminium_supply_status }
+            NOT = { has_variable = GO_econ_country_material_aluminium_supply_report_day }
+            NOT = { has_variable = GO_econ_country_material_aluminium_supply_received }
+            NOT = { has_variable = GO_econ_country_material_aluminium_supply_report_populated }
+            NOT = { has_variable = GO_econ_country_material_rubber_supply_rate }
+            NOT = { has_variable = GO_econ_country_material_rubber_supply_populated }
+            NOT = { has_variable = GO_econ_country_material_rubber_supply_last_day }
+            NOT = { has_variable = GO_econ_country_material_rubber_supply_status }
+            NOT = { has_variable = GO_econ_country_material_rubber_supply_report_day }
+            NOT = { has_variable = GO_econ_country_material_rubber_supply_received }
+            NOT = { has_variable = GO_econ_country_material_rubber_supply_report_populated }
+            NOT = { has_variable = GO_econ_country_material_rations_supply_rate }
+            NOT = { has_variable = GO_econ_country_material_rations_supply_populated }
+            NOT = { has_variable = GO_econ_country_material_rations_supply_last_day }
+            NOT = { has_variable = GO_econ_country_material_rations_supply_status }
+            NOT = { has_variable = GO_econ_country_material_rations_supply_report_day }
+            NOT = { has_variable = GO_econ_country_material_rations_supply_received }
+            NOT = { has_variable = GO_econ_country_material_rations_supply_report_populated }
+            NOT = { has_variable = GO_econ_country_material_fuel_supply_rate }
+            NOT = { has_variable = GO_econ_country_material_fuel_supply_populated }
+            NOT = { has_variable = GO_econ_country_material_fuel_supply_last_day }
+            NOT = { has_variable = GO_econ_country_material_fuel_supply_status }
+            NOT = { has_variable = GO_econ_country_material_fuel_supply_report_day }
+            NOT = { has_variable = GO_econ_country_material_fuel_supply_received }
+            NOT = { has_variable = GO_econ_country_material_fuel_supply_report_populated }
+            NOT = { has_variable = GO_econ_country_material_microchips_supply_rate }
+            NOT = { has_variable = GO_econ_country_material_microchips_supply_populated }
+            NOT = { has_variable = GO_econ_country_material_microchips_supply_last_day }
+            NOT = { has_variable = GO_econ_country_material_microchips_supply_status }
+            NOT = { has_variable = GO_econ_country_material_microchips_supply_report_day }
+            NOT = { has_variable = GO_econ_country_material_microchips_supply_received }
+            NOT = { has_variable = GO_econ_country_material_microchips_supply_report_populated }
+        }
+        set_variable = { GO_econ_country_material_supply_schema_version = 1 }
+    }
+    if = {
+        limit = {
+            GO_econ_country_material_supply_initialized = yes
+        }
+        if = {
+            limit = {
+                NOT = { has_variable = GO_econ_country_material_iron_supply_rate }
+                NOT = { has_variable = GO_econ_country_material_iron_supply_populated }
+                NOT = { has_variable = GO_econ_country_material_iron_supply_last_day }
+                NOT = { has_variable = GO_econ_country_material_iron_supply_status }
+                NOT = { has_variable = GO_econ_country_material_iron_supply_report_day }
+                NOT = { has_variable = GO_econ_country_material_iron_supply_received }
+                NOT = { has_variable = GO_econ_country_material_iron_supply_report_populated }
+            }
+            set_variable = { GO_econ_country_material_iron_supply_rate = 0 }
+            set_variable = { GO_econ_country_material_iron_supply_populated = 0 }
+            set_variable = { GO_econ_country_material_iron_supply_last_day = -1 }
+            set_variable = { GO_econ_country_material_iron_supply_status = 0 }
+            set_variable = { GO_econ_country_material_iron_supply_report_day = -1 }
+            set_variable = { GO_econ_country_material_iron_supply_received = 0 }
+            set_variable = { GO_econ_country_material_iron_supply_report_populated = 0 }
+        }
+        if = {
+            limit = {
+                NOT = { has_variable = GO_econ_country_material_bauxite_supply_rate }
+                NOT = { has_variable = GO_econ_country_material_bauxite_supply_populated }
+                NOT = { has_variable = GO_econ_country_material_bauxite_supply_last_day }
+                NOT = { has_variable = GO_econ_country_material_bauxite_supply_status }
+                NOT = { has_variable = GO_econ_country_material_bauxite_supply_report_day }
+                NOT = { has_variable = GO_econ_country_material_bauxite_supply_received }
+                NOT = { has_variable = GO_econ_country_material_bauxite_supply_report_populated }
+            }
+            set_variable = { GO_econ_country_material_bauxite_supply_rate = 0 }
+            set_variable = { GO_econ_country_material_bauxite_supply_populated = 0 }
+            set_variable = { GO_econ_country_material_bauxite_supply_last_day = -1 }
+            set_variable = { GO_econ_country_material_bauxite_supply_status = 0 }
+            set_variable = { GO_econ_country_material_bauxite_supply_report_day = -1 }
+            set_variable = { GO_econ_country_material_bauxite_supply_received = 0 }
+            set_variable = { GO_econ_country_material_bauxite_supply_report_populated = 0 }
+        }
+        if = {
+            limit = {
+                NOT = { has_variable = GO_econ_country_material_food_supply_rate }
+                NOT = { has_variable = GO_econ_country_material_food_supply_populated }
+                NOT = { has_variable = GO_econ_country_material_food_supply_last_day }
+                NOT = { has_variable = GO_econ_country_material_food_supply_status }
+                NOT = { has_variable = GO_econ_country_material_food_supply_report_day }
+                NOT = { has_variable = GO_econ_country_material_food_supply_received }
+                NOT = { has_variable = GO_econ_country_material_food_supply_report_populated }
+            }
+            set_variable = { GO_econ_country_material_food_supply_rate = 0 }
+            set_variable = { GO_econ_country_material_food_supply_populated = 0 }
+            set_variable = { GO_econ_country_material_food_supply_last_day = -1 }
+            set_variable = { GO_econ_country_material_food_supply_status = 0 }
+            set_variable = { GO_econ_country_material_food_supply_report_day = -1 }
+            set_variable = { GO_econ_country_material_food_supply_received = 0 }
+            set_variable = { GO_econ_country_material_food_supply_report_populated = 0 }
+        }
+        if = {
+            limit = {
+                NOT = { has_variable = GO_econ_country_material_coal_supply_rate }
+                NOT = { has_variable = GO_econ_country_material_coal_supply_populated }
+                NOT = { has_variable = GO_econ_country_material_coal_supply_last_day }
+                NOT = { has_variable = GO_econ_country_material_coal_supply_status }
+                NOT = { has_variable = GO_econ_country_material_coal_supply_report_day }
+                NOT = { has_variable = GO_econ_country_material_coal_supply_received }
+                NOT = { has_variable = GO_econ_country_material_coal_supply_report_populated }
+            }
+            set_variable = { GO_econ_country_material_coal_supply_rate = 0 }
+            set_variable = { GO_econ_country_material_coal_supply_populated = 0 }
+            set_variable = { GO_econ_country_material_coal_supply_last_day = -1 }
+            set_variable = { GO_econ_country_material_coal_supply_status = 0 }
+            set_variable = { GO_econ_country_material_coal_supply_report_day = -1 }
+            set_variable = { GO_econ_country_material_coal_supply_received = 0 }
+            set_variable = { GO_econ_country_material_coal_supply_report_populated = 0 }
+        }
+        if = {
+            limit = {
+                NOT = { has_variable = GO_econ_country_material_natural_gas_supply_rate }
+                NOT = { has_variable = GO_econ_country_material_natural_gas_supply_populated }
+                NOT = { has_variable = GO_econ_country_material_natural_gas_supply_last_day }
+                NOT = { has_variable = GO_econ_country_material_natural_gas_supply_status }
+                NOT = { has_variable = GO_econ_country_material_natural_gas_supply_report_day }
+                NOT = { has_variable = GO_econ_country_material_natural_gas_supply_received }
+                NOT = { has_variable = GO_econ_country_material_natural_gas_supply_report_populated }
+            }
+            set_variable = { GO_econ_country_material_natural_gas_supply_rate = 0 }
+            set_variable = { GO_econ_country_material_natural_gas_supply_populated = 0 }
+            set_variable = { GO_econ_country_material_natural_gas_supply_last_day = -1 }
+            set_variable = { GO_econ_country_material_natural_gas_supply_status = 0 }
+            set_variable = { GO_econ_country_material_natural_gas_supply_report_day = -1 }
+            set_variable = { GO_econ_country_material_natural_gas_supply_received = 0 }
+            set_variable = { GO_econ_country_material_natural_gas_supply_report_populated = 0 }
+        }
+        if = {
+            limit = {
+                NOT = { has_variable = GO_econ_country_material_oil_supply_rate }
+                NOT = { has_variable = GO_econ_country_material_oil_supply_populated }
+                NOT = { has_variable = GO_econ_country_material_oil_supply_last_day }
+                NOT = { has_variable = GO_econ_country_material_oil_supply_status }
+                NOT = { has_variable = GO_econ_country_material_oil_supply_report_day }
+                NOT = { has_variable = GO_econ_country_material_oil_supply_received }
+                NOT = { has_variable = GO_econ_country_material_oil_supply_report_populated }
+            }
+            set_variable = { GO_econ_country_material_oil_supply_rate = 0 }
+            set_variable = { GO_econ_country_material_oil_supply_populated = 0 }
+            set_variable = { GO_econ_country_material_oil_supply_last_day = -1 }
+            set_variable = { GO_econ_country_material_oil_supply_status = 0 }
+            set_variable = { GO_econ_country_material_oil_supply_report_day = -1 }
+            set_variable = { GO_econ_country_material_oil_supply_received = 0 }
+            set_variable = { GO_econ_country_material_oil_supply_report_populated = 0 }
+        }
+        if = {
+            limit = {
+                NOT = { has_variable = GO_econ_country_material_rare_earth_minerals_supply_rate }
+                NOT = { has_variable = GO_econ_country_material_rare_earth_minerals_supply_populated }
+                NOT = { has_variable = GO_econ_country_material_rare_earth_minerals_supply_last_day }
+                NOT = { has_variable = GO_econ_country_material_rare_earth_minerals_supply_status }
+                NOT = { has_variable = GO_econ_country_material_rare_earth_minerals_supply_report_day }
+                NOT = { has_variable = GO_econ_country_material_rare_earth_minerals_supply_received }
+                NOT = { has_variable = GO_econ_country_material_rare_earth_minerals_supply_report_populated }
+            }
+            set_variable = { GO_econ_country_material_rare_earth_minerals_supply_rate = 0 }
+            set_variable = { GO_econ_country_material_rare_earth_minerals_supply_populated = 0 }
+            set_variable = { GO_econ_country_material_rare_earth_minerals_supply_last_day = -1 }
+            set_variable = { GO_econ_country_material_rare_earth_minerals_supply_status = 0 }
+            set_variable = { GO_econ_country_material_rare_earth_minerals_supply_report_day = -1 }
+            set_variable = { GO_econ_country_material_rare_earth_minerals_supply_received = 0 }
+            set_variable = { GO_econ_country_material_rare_earth_minerals_supply_report_populated = 0 }
+        }
+        if = {
+            limit = {
+                NOT = { has_variable = GO_econ_country_material_tungsten_supply_rate }
+                NOT = { has_variable = GO_econ_country_material_tungsten_supply_populated }
+                NOT = { has_variable = GO_econ_country_material_tungsten_supply_last_day }
+                NOT = { has_variable = GO_econ_country_material_tungsten_supply_status }
+                NOT = { has_variable = GO_econ_country_material_tungsten_supply_report_day }
+                NOT = { has_variable = GO_econ_country_material_tungsten_supply_received }
+                NOT = { has_variable = GO_econ_country_material_tungsten_supply_report_populated }
+            }
+            set_variable = { GO_econ_country_material_tungsten_supply_rate = 0 }
+            set_variable = { GO_econ_country_material_tungsten_supply_populated = 0 }
+            set_variable = { GO_econ_country_material_tungsten_supply_last_day = -1 }
+            set_variable = { GO_econ_country_material_tungsten_supply_status = 0 }
+            set_variable = { GO_econ_country_material_tungsten_supply_report_day = -1 }
+            set_variable = { GO_econ_country_material_tungsten_supply_received = 0 }
+            set_variable = { GO_econ_country_material_tungsten_supply_report_populated = 0 }
+        }
+        if = {
+            limit = {
+                NOT = { has_variable = GO_econ_country_material_titanium_supply_rate }
+                NOT = { has_variable = GO_econ_country_material_titanium_supply_populated }
+                NOT = { has_variable = GO_econ_country_material_titanium_supply_last_day }
+                NOT = { has_variable = GO_econ_country_material_titanium_supply_status }
+                NOT = { has_variable = GO_econ_country_material_titanium_supply_report_day }
+                NOT = { has_variable = GO_econ_country_material_titanium_supply_received }
+                NOT = { has_variable = GO_econ_country_material_titanium_supply_report_populated }
+            }
+            set_variable = { GO_econ_country_material_titanium_supply_rate = 0 }
+            set_variable = { GO_econ_country_material_titanium_supply_populated = 0 }
+            set_variable = { GO_econ_country_material_titanium_supply_last_day = -1 }
+            set_variable = { GO_econ_country_material_titanium_supply_status = 0 }
+            set_variable = { GO_econ_country_material_titanium_supply_report_day = -1 }
+            set_variable = { GO_econ_country_material_titanium_supply_received = 0 }
+            set_variable = { GO_econ_country_material_titanium_supply_report_populated = 0 }
+        }
+        if = {
+            limit = {
+                NOT = { has_variable = GO_econ_country_material_steel_supply_rate }
+                NOT = { has_variable = GO_econ_country_material_steel_supply_populated }
+                NOT = { has_variable = GO_econ_country_material_steel_supply_last_day }
+                NOT = { has_variable = GO_econ_country_material_steel_supply_status }
+                NOT = { has_variable = GO_econ_country_material_steel_supply_report_day }
+                NOT = { has_variable = GO_econ_country_material_steel_supply_received }
+                NOT = { has_variable = GO_econ_country_material_steel_supply_report_populated }
+            }
+            set_variable = { GO_econ_country_material_steel_supply_rate = 0 }
+            set_variable = { GO_econ_country_material_steel_supply_populated = 0 }
+            set_variable = { GO_econ_country_material_steel_supply_last_day = -1 }
+            set_variable = { GO_econ_country_material_steel_supply_status = 0 }
+            set_variable = { GO_econ_country_material_steel_supply_report_day = -1 }
+            set_variable = { GO_econ_country_material_steel_supply_received = 0 }
+            set_variable = { GO_econ_country_material_steel_supply_report_populated = 0 }
+        }
+        if = {
+            limit = {
+                NOT = { has_variable = GO_econ_country_material_aluminium_supply_rate }
+                NOT = { has_variable = GO_econ_country_material_aluminium_supply_populated }
+                NOT = { has_variable = GO_econ_country_material_aluminium_supply_last_day }
+                NOT = { has_variable = GO_econ_country_material_aluminium_supply_status }
+                NOT = { has_variable = GO_econ_country_material_aluminium_supply_report_day }
+                NOT = { has_variable = GO_econ_country_material_aluminium_supply_received }
+                NOT = { has_variable = GO_econ_country_material_aluminium_supply_report_populated }
+            }
+            set_variable = { GO_econ_country_material_aluminium_supply_rate = 0 }
+            set_variable = { GO_econ_country_material_aluminium_supply_populated = 0 }
+            set_variable = { GO_econ_country_material_aluminium_supply_last_day = -1 }
+            set_variable = { GO_econ_country_material_aluminium_supply_status = 0 }
+            set_variable = { GO_econ_country_material_aluminium_supply_report_day = -1 }
+            set_variable = { GO_econ_country_material_aluminium_supply_received = 0 }
+            set_variable = { GO_econ_country_material_aluminium_supply_report_populated = 0 }
+        }
+        if = {
+            limit = {
+                NOT = { has_variable = GO_econ_country_material_rubber_supply_rate }
+                NOT = { has_variable = GO_econ_country_material_rubber_supply_populated }
+                NOT = { has_variable = GO_econ_country_material_rubber_supply_last_day }
+                NOT = { has_variable = GO_econ_country_material_rubber_supply_status }
+                NOT = { has_variable = GO_econ_country_material_rubber_supply_report_day }
+                NOT = { has_variable = GO_econ_country_material_rubber_supply_received }
+                NOT = { has_variable = GO_econ_country_material_rubber_supply_report_populated }
+            }
+            set_variable = { GO_econ_country_material_rubber_supply_rate = 0 }
+            set_variable = { GO_econ_country_material_rubber_supply_populated = 0 }
+            set_variable = { GO_econ_country_material_rubber_supply_last_day = -1 }
+            set_variable = { GO_econ_country_material_rubber_supply_status = 0 }
+            set_variable = { GO_econ_country_material_rubber_supply_report_day = -1 }
+            set_variable = { GO_econ_country_material_rubber_supply_received = 0 }
+            set_variable = { GO_econ_country_material_rubber_supply_report_populated = 0 }
+        }
+        if = {
+            limit = {
+                NOT = { has_variable = GO_econ_country_material_rations_supply_rate }
+                NOT = { has_variable = GO_econ_country_material_rations_supply_populated }
+                NOT = { has_variable = GO_econ_country_material_rations_supply_last_day }
+                NOT = { has_variable = GO_econ_country_material_rations_supply_status }
+                NOT = { has_variable = GO_econ_country_material_rations_supply_report_day }
+                NOT = { has_variable = GO_econ_country_material_rations_supply_received }
+                NOT = { has_variable = GO_econ_country_material_rations_supply_report_populated }
+            }
+            set_variable = { GO_econ_country_material_rations_supply_rate = 0 }
+            set_variable = { GO_econ_country_material_rations_supply_populated = 0 }
+            set_variable = { GO_econ_country_material_rations_supply_last_day = -1 }
+            set_variable = { GO_econ_country_material_rations_supply_status = 0 }
+            set_variable = { GO_econ_country_material_rations_supply_report_day = -1 }
+            set_variable = { GO_econ_country_material_rations_supply_received = 0 }
+            set_variable = { GO_econ_country_material_rations_supply_report_populated = 0 }
+        }
+        if = {
+            limit = {
+                NOT = { has_variable = GO_econ_country_material_fuel_supply_rate }
+                NOT = { has_variable = GO_econ_country_material_fuel_supply_populated }
+                NOT = { has_variable = GO_econ_country_material_fuel_supply_last_day }
+                NOT = { has_variable = GO_econ_country_material_fuel_supply_status }
+                NOT = { has_variable = GO_econ_country_material_fuel_supply_report_day }
+                NOT = { has_variable = GO_econ_country_material_fuel_supply_received }
+                NOT = { has_variable = GO_econ_country_material_fuel_supply_report_populated }
+            }
+            set_variable = { GO_econ_country_material_fuel_supply_rate = 0 }
+            set_variable = { GO_econ_country_material_fuel_supply_populated = 0 }
+            set_variable = { GO_econ_country_material_fuel_supply_last_day = -1 }
+            set_variable = { GO_econ_country_material_fuel_supply_status = 0 }
+            set_variable = { GO_econ_country_material_fuel_supply_report_day = -1 }
+            set_variable = { GO_econ_country_material_fuel_supply_received = 0 }
+            set_variable = { GO_econ_country_material_fuel_supply_report_populated = 0 }
+        }
+        if = {
+            limit = {
+                NOT = { has_variable = GO_econ_country_material_microchips_supply_rate }
+                NOT = { has_variable = GO_econ_country_material_microchips_supply_populated }
+                NOT = { has_variable = GO_econ_country_material_microchips_supply_last_day }
+                NOT = { has_variable = GO_econ_country_material_microchips_supply_status }
+                NOT = { has_variable = GO_econ_country_material_microchips_supply_report_day }
+                NOT = { has_variable = GO_econ_country_material_microchips_supply_received }
+                NOT = { has_variable = GO_econ_country_material_microchips_supply_report_populated }
+            }
+            set_variable = { GO_econ_country_material_microchips_supply_rate = 0 }
+            set_variable = { GO_econ_country_material_microchips_supply_populated = 0 }
+            set_variable = { GO_econ_country_material_microchips_supply_last_day = -1 }
+            set_variable = { GO_econ_country_material_microchips_supply_status = 0 }
+            set_variable = { GO_econ_country_material_microchips_supply_report_day = -1 }
+            set_variable = { GO_econ_country_material_microchips_supply_received = 0 }
+            set_variable = { GO_econ_country_material_microchips_supply_report_populated = 0 }
+        }
+    }
+}
+
+GO_econ_set_national_material_daily_supply = {
+    set_variable = { GO_econ_work_material_supply_succeeded = 0 }
+    GO_econ_initialize_country_material_supply = yes
+    if = {
+        limit = {
+            GO_econ_can_set_national_material_daily_supply = yes
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 1 }
+            }
+            set_variable = { GO_econ_country_material_iron_supply_rate = GO_econ_work_material_supply_rate }
+            set_variable = { GO_econ_country_material_iron_supply_populated = 1 }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 2 }
+            }
+            set_variable = { GO_econ_country_material_bauxite_supply_rate = GO_econ_work_material_supply_rate }
+            set_variable = { GO_econ_country_material_bauxite_supply_populated = 1 }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 3 }
+            }
+            set_variable = { GO_econ_country_material_food_supply_rate = GO_econ_work_material_supply_rate }
+            set_variable = { GO_econ_country_material_food_supply_populated = 1 }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 4 }
+            }
+            set_variable = { GO_econ_country_material_coal_supply_rate = GO_econ_work_material_supply_rate }
+            set_variable = { GO_econ_country_material_coal_supply_populated = 1 }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 5 }
+            }
+            set_variable = { GO_econ_country_material_natural_gas_supply_rate = GO_econ_work_material_supply_rate }
+            set_variable = { GO_econ_country_material_natural_gas_supply_populated = 1 }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 6 }
+            }
+            set_variable = { GO_econ_country_material_oil_supply_rate = GO_econ_work_material_supply_rate }
+            set_variable = { GO_econ_country_material_oil_supply_populated = 1 }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 7 }
+            }
+            set_variable = { GO_econ_country_material_rare_earth_minerals_supply_rate = GO_econ_work_material_supply_rate }
+            set_variable = { GO_econ_country_material_rare_earth_minerals_supply_populated = 1 }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 8 }
+            }
+            set_variable = { GO_econ_country_material_tungsten_supply_rate = GO_econ_work_material_supply_rate }
+            set_variable = { GO_econ_country_material_tungsten_supply_populated = 1 }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 9 }
+            }
+            set_variable = { GO_econ_country_material_titanium_supply_rate = GO_econ_work_material_supply_rate }
+            set_variable = { GO_econ_country_material_titanium_supply_populated = 1 }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 10 }
+            }
+            set_variable = { GO_econ_country_material_steel_supply_rate = GO_econ_work_material_supply_rate }
+            set_variable = { GO_econ_country_material_steel_supply_populated = 1 }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 11 }
+            }
+            set_variable = { GO_econ_country_material_aluminium_supply_rate = GO_econ_work_material_supply_rate }
+            set_variable = { GO_econ_country_material_aluminium_supply_populated = 1 }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 12 }
+            }
+            set_variable = { GO_econ_country_material_rubber_supply_rate = GO_econ_work_material_supply_rate }
+            set_variable = { GO_econ_country_material_rubber_supply_populated = 1 }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 13 }
+            }
+            set_variable = { GO_econ_country_material_rations_supply_rate = GO_econ_work_material_supply_rate }
+            set_variable = { GO_econ_country_material_rations_supply_populated = 1 }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 14 }
+            }
+            set_variable = { GO_econ_country_material_fuel_supply_rate = GO_econ_work_material_supply_rate }
+            set_variable = { GO_econ_country_material_fuel_supply_populated = 1 }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 15 }
+            }
+            set_variable = { GO_econ_country_material_microchips_supply_rate = GO_econ_work_material_supply_rate }
+            set_variable = { GO_econ_country_material_microchips_supply_populated = 1 }
+        }
+        set_variable = { GO_econ_work_material_supply_succeeded = 1 }
+    }
+}
+
+GO_econ_change_national_material_daily_supply = {
+    set_variable = { GO_econ_work_material_supply_succeeded = 0 }
+    GO_econ_initialize_country_material_supply = yes
+    if = {
+        limit = {
+            GO_econ_can_change_national_material_daily_supply = yes
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 1 }
+            }
+            set_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_country_material_iron_supply_rate }
+            add_to_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_work_material_supply_change }
+            set_variable = { GO_econ_country_material_iron_supply_rate = GO_econ_material_next_supply_rate }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 2 }
+            }
+            set_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_country_material_bauxite_supply_rate }
+            add_to_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_work_material_supply_change }
+            set_variable = { GO_econ_country_material_bauxite_supply_rate = GO_econ_material_next_supply_rate }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 3 }
+            }
+            set_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_country_material_food_supply_rate }
+            add_to_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_work_material_supply_change }
+            set_variable = { GO_econ_country_material_food_supply_rate = GO_econ_material_next_supply_rate }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 4 }
+            }
+            set_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_country_material_coal_supply_rate }
+            add_to_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_work_material_supply_change }
+            set_variable = { GO_econ_country_material_coal_supply_rate = GO_econ_material_next_supply_rate }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 5 }
+            }
+            set_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_country_material_natural_gas_supply_rate }
+            add_to_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_work_material_supply_change }
+            set_variable = { GO_econ_country_material_natural_gas_supply_rate = GO_econ_material_next_supply_rate }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 6 }
+            }
+            set_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_country_material_oil_supply_rate }
+            add_to_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_work_material_supply_change }
+            set_variable = { GO_econ_country_material_oil_supply_rate = GO_econ_material_next_supply_rate }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 7 }
+            }
+            set_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_country_material_rare_earth_minerals_supply_rate }
+            add_to_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_work_material_supply_change }
+            set_variable = { GO_econ_country_material_rare_earth_minerals_supply_rate = GO_econ_material_next_supply_rate }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 8 }
+            }
+            set_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_country_material_tungsten_supply_rate }
+            add_to_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_work_material_supply_change }
+            set_variable = { GO_econ_country_material_tungsten_supply_rate = GO_econ_material_next_supply_rate }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 9 }
+            }
+            set_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_country_material_titanium_supply_rate }
+            add_to_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_work_material_supply_change }
+            set_variable = { GO_econ_country_material_titanium_supply_rate = GO_econ_material_next_supply_rate }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 10 }
+            }
+            set_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_country_material_steel_supply_rate }
+            add_to_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_work_material_supply_change }
+            set_variable = { GO_econ_country_material_steel_supply_rate = GO_econ_material_next_supply_rate }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 11 }
+            }
+            set_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_country_material_aluminium_supply_rate }
+            add_to_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_work_material_supply_change }
+            set_variable = { GO_econ_country_material_aluminium_supply_rate = GO_econ_material_next_supply_rate }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 12 }
+            }
+            set_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_country_material_rubber_supply_rate }
+            add_to_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_work_material_supply_change }
+            set_variable = { GO_econ_country_material_rubber_supply_rate = GO_econ_material_next_supply_rate }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 13 }
+            }
+            set_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_country_material_rations_supply_rate }
+            add_to_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_work_material_supply_change }
+            set_variable = { GO_econ_country_material_rations_supply_rate = GO_econ_material_next_supply_rate }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 14 }
+            }
+            set_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_country_material_fuel_supply_rate }
+            add_to_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_work_material_supply_change }
+            set_variable = { GO_econ_country_material_fuel_supply_rate = GO_econ_material_next_supply_rate }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_material_id = 15 }
+            }
+            set_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_country_material_microchips_supply_rate }
+            add_to_temp_variable = { GO_econ_material_next_supply_rate = GO_econ_work_material_supply_change }
+            set_variable = { GO_econ_country_material_microchips_supply_rate = GO_econ_material_next_supply_rate }
+        }
+        set_variable = { GO_econ_work_material_supply_succeeded = 1 }
+    }
+}
+
+GO_econ_update_selected_material_daily_supply = {
+    GO_econ_initialize_country_material_supply = yes
+    if = {
+        limit = {
+            has_variable = GO_econ_work_material_id
+            check_variable = { GO_econ_work_material_id = 1 }
+            GO_econ_material_iron_supply_record_ready = yes
+            check_variable = { var = GO_econ_country_material_iron_supply_last_day value = global.num_days compare = less_than }
+        }
+        set_variable = { GO_econ_country_material_iron_supply_last_day = global.num_days }
+        set_variable = { GO_econ_country_material_iron_supply_status = 0 }
+        if = {
+            limit = {
+                GO_econ_material_iron_supply_configuration_ready = yes
+            }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_country_material_iron_supply_rate }
+            if = {
+                limit = {
+                    GO_econ_can_add_national_material = yes
+                }
+                GO_econ_add_national_material = yes
+                if = {
+                    limit = {
+                        check_variable = { GO_econ_work_material_succeeded = 1 }
+                    }
+                    set_variable = { GO_econ_country_material_iron_supply_status = 1 }
+                    set_variable = { GO_econ_country_material_iron_supply_report_day = global.num_days }
+                    set_variable = { GO_econ_country_material_iron_supply_received = GO_econ_work_material_quantity }
+                    set_variable = { GO_econ_country_material_iron_supply_report_populated = 1 }
+                }
+            }
+        }
+    }
+    if = {
+        limit = {
+            has_variable = GO_econ_work_material_id
+            check_variable = { GO_econ_work_material_id = 2 }
+            GO_econ_material_bauxite_supply_record_ready = yes
+            check_variable = { var = GO_econ_country_material_bauxite_supply_last_day value = global.num_days compare = less_than }
+        }
+        set_variable = { GO_econ_country_material_bauxite_supply_last_day = global.num_days }
+        set_variable = { GO_econ_country_material_bauxite_supply_status = 0 }
+        if = {
+            limit = {
+                GO_econ_material_bauxite_supply_configuration_ready = yes
+            }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_country_material_bauxite_supply_rate }
+            if = {
+                limit = {
+                    GO_econ_can_add_national_material = yes
+                }
+                GO_econ_add_national_material = yes
+                if = {
+                    limit = {
+                        check_variable = { GO_econ_work_material_succeeded = 1 }
+                    }
+                    set_variable = { GO_econ_country_material_bauxite_supply_status = 1 }
+                    set_variable = { GO_econ_country_material_bauxite_supply_report_day = global.num_days }
+                    set_variable = { GO_econ_country_material_bauxite_supply_received = GO_econ_work_material_quantity }
+                    set_variable = { GO_econ_country_material_bauxite_supply_report_populated = 1 }
+                }
+            }
+        }
+    }
+    if = {
+        limit = {
+            has_variable = GO_econ_work_material_id
+            check_variable = { GO_econ_work_material_id = 3 }
+            GO_econ_material_food_supply_record_ready = yes
+            check_variable = { var = GO_econ_country_material_food_supply_last_day value = global.num_days compare = less_than }
+        }
+        set_variable = { GO_econ_country_material_food_supply_last_day = global.num_days }
+        set_variable = { GO_econ_country_material_food_supply_status = 0 }
+        if = {
+            limit = {
+                GO_econ_material_food_supply_configuration_ready = yes
+            }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_country_material_food_supply_rate }
+            if = {
+                limit = {
+                    GO_econ_can_add_national_material = yes
+                }
+                GO_econ_add_national_material = yes
+                if = {
+                    limit = {
+                        check_variable = { GO_econ_work_material_succeeded = 1 }
+                    }
+                    set_variable = { GO_econ_country_material_food_supply_status = 1 }
+                    set_variable = { GO_econ_country_material_food_supply_report_day = global.num_days }
+                    set_variable = { GO_econ_country_material_food_supply_received = GO_econ_work_material_quantity }
+                    set_variable = { GO_econ_country_material_food_supply_report_populated = 1 }
+                }
+            }
+        }
+    }
+    if = {
+        limit = {
+            has_variable = GO_econ_work_material_id
+            check_variable = { GO_econ_work_material_id = 4 }
+            GO_econ_material_coal_supply_record_ready = yes
+            check_variable = { var = GO_econ_country_material_coal_supply_last_day value = global.num_days compare = less_than }
+        }
+        set_variable = { GO_econ_country_material_coal_supply_last_day = global.num_days }
+        set_variable = { GO_econ_country_material_coal_supply_status = 0 }
+        if = {
+            limit = {
+                GO_econ_material_coal_supply_configuration_ready = yes
+            }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_country_material_coal_supply_rate }
+            if = {
+                limit = {
+                    GO_econ_can_add_national_material = yes
+                }
+                GO_econ_add_national_material = yes
+                if = {
+                    limit = {
+                        check_variable = { GO_econ_work_material_succeeded = 1 }
+                    }
+                    set_variable = { GO_econ_country_material_coal_supply_status = 1 }
+                    set_variable = { GO_econ_country_material_coal_supply_report_day = global.num_days }
+                    set_variable = { GO_econ_country_material_coal_supply_received = GO_econ_work_material_quantity }
+                    set_variable = { GO_econ_country_material_coal_supply_report_populated = 1 }
+                }
+            }
+        }
+    }
+    if = {
+        limit = {
+            has_variable = GO_econ_work_material_id
+            check_variable = { GO_econ_work_material_id = 5 }
+            GO_econ_material_natural_gas_supply_record_ready = yes
+            check_variable = { var = GO_econ_country_material_natural_gas_supply_last_day value = global.num_days compare = less_than }
+        }
+        set_variable = { GO_econ_country_material_natural_gas_supply_last_day = global.num_days }
+        set_variable = { GO_econ_country_material_natural_gas_supply_status = 0 }
+        if = {
+            limit = {
+                GO_econ_material_natural_gas_supply_configuration_ready = yes
+            }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_country_material_natural_gas_supply_rate }
+            if = {
+                limit = {
+                    GO_econ_can_add_national_material = yes
+                }
+                GO_econ_add_national_material = yes
+                if = {
+                    limit = {
+                        check_variable = { GO_econ_work_material_succeeded = 1 }
+                    }
+                    set_variable = { GO_econ_country_material_natural_gas_supply_status = 1 }
+                    set_variable = { GO_econ_country_material_natural_gas_supply_report_day = global.num_days }
+                    set_variable = { GO_econ_country_material_natural_gas_supply_received = GO_econ_work_material_quantity }
+                    set_variable = { GO_econ_country_material_natural_gas_supply_report_populated = 1 }
+                }
+            }
+        }
+    }
+    if = {
+        limit = {
+            has_variable = GO_econ_work_material_id
+            check_variable = { GO_econ_work_material_id = 6 }
+            GO_econ_material_oil_supply_record_ready = yes
+            check_variable = { var = GO_econ_country_material_oil_supply_last_day value = global.num_days compare = less_than }
+        }
+        set_variable = { GO_econ_country_material_oil_supply_last_day = global.num_days }
+        set_variable = { GO_econ_country_material_oil_supply_status = 0 }
+        if = {
+            limit = {
+                GO_econ_material_oil_supply_configuration_ready = yes
+            }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_country_material_oil_supply_rate }
+            if = {
+                limit = {
+                    GO_econ_can_add_national_material = yes
+                }
+                GO_econ_add_national_material = yes
+                if = {
+                    limit = {
+                        check_variable = { GO_econ_work_material_succeeded = 1 }
+                    }
+                    set_variable = { GO_econ_country_material_oil_supply_status = 1 }
+                    set_variable = { GO_econ_country_material_oil_supply_report_day = global.num_days }
+                    set_variable = { GO_econ_country_material_oil_supply_received = GO_econ_work_material_quantity }
+                    set_variable = { GO_econ_country_material_oil_supply_report_populated = 1 }
+                }
+            }
+        }
+    }
+    if = {
+        limit = {
+            has_variable = GO_econ_work_material_id
+            check_variable = { GO_econ_work_material_id = 7 }
+            GO_econ_material_rare_earth_minerals_supply_record_ready = yes
+            check_variable = { var = GO_econ_country_material_rare_earth_minerals_supply_last_day value = global.num_days compare = less_than }
+        }
+        set_variable = { GO_econ_country_material_rare_earth_minerals_supply_last_day = global.num_days }
+        set_variable = { GO_econ_country_material_rare_earth_minerals_supply_status = 0 }
+        if = {
+            limit = {
+                GO_econ_material_rare_earth_minerals_supply_configuration_ready = yes
+            }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_country_material_rare_earth_minerals_supply_rate }
+            if = {
+                limit = {
+                    GO_econ_can_add_national_material = yes
+                }
+                GO_econ_add_national_material = yes
+                if = {
+                    limit = {
+                        check_variable = { GO_econ_work_material_succeeded = 1 }
+                    }
+                    set_variable = { GO_econ_country_material_rare_earth_minerals_supply_status = 1 }
+                    set_variable = { GO_econ_country_material_rare_earth_minerals_supply_report_day = global.num_days }
+                    set_variable = { GO_econ_country_material_rare_earth_minerals_supply_received = GO_econ_work_material_quantity }
+                    set_variable = { GO_econ_country_material_rare_earth_minerals_supply_report_populated = 1 }
+                }
+            }
+        }
+    }
+    if = {
+        limit = {
+            has_variable = GO_econ_work_material_id
+            check_variable = { GO_econ_work_material_id = 8 }
+            GO_econ_material_tungsten_supply_record_ready = yes
+            check_variable = { var = GO_econ_country_material_tungsten_supply_last_day value = global.num_days compare = less_than }
+        }
+        set_variable = { GO_econ_country_material_tungsten_supply_last_day = global.num_days }
+        set_variable = { GO_econ_country_material_tungsten_supply_status = 0 }
+        if = {
+            limit = {
+                GO_econ_material_tungsten_supply_configuration_ready = yes
+            }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_country_material_tungsten_supply_rate }
+            if = {
+                limit = {
+                    GO_econ_can_add_national_material = yes
+                }
+                GO_econ_add_national_material = yes
+                if = {
+                    limit = {
+                        check_variable = { GO_econ_work_material_succeeded = 1 }
+                    }
+                    set_variable = { GO_econ_country_material_tungsten_supply_status = 1 }
+                    set_variable = { GO_econ_country_material_tungsten_supply_report_day = global.num_days }
+                    set_variable = { GO_econ_country_material_tungsten_supply_received = GO_econ_work_material_quantity }
+                    set_variable = { GO_econ_country_material_tungsten_supply_report_populated = 1 }
+                }
+            }
+        }
+    }
+    if = {
+        limit = {
+            has_variable = GO_econ_work_material_id
+            check_variable = { GO_econ_work_material_id = 9 }
+            GO_econ_material_titanium_supply_record_ready = yes
+            check_variable = { var = GO_econ_country_material_titanium_supply_last_day value = global.num_days compare = less_than }
+        }
+        set_variable = { GO_econ_country_material_titanium_supply_last_day = global.num_days }
+        set_variable = { GO_econ_country_material_titanium_supply_status = 0 }
+        if = {
+            limit = {
+                GO_econ_material_titanium_supply_configuration_ready = yes
+            }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_country_material_titanium_supply_rate }
+            if = {
+                limit = {
+                    GO_econ_can_add_national_material = yes
+                }
+                GO_econ_add_national_material = yes
+                if = {
+                    limit = {
+                        check_variable = { GO_econ_work_material_succeeded = 1 }
+                    }
+                    set_variable = { GO_econ_country_material_titanium_supply_status = 1 }
+                    set_variable = { GO_econ_country_material_titanium_supply_report_day = global.num_days }
+                    set_variable = { GO_econ_country_material_titanium_supply_received = GO_econ_work_material_quantity }
+                    set_variable = { GO_econ_country_material_titanium_supply_report_populated = 1 }
+                }
+            }
+        }
+    }
+    if = {
+        limit = {
+            has_variable = GO_econ_work_material_id
+            check_variable = { GO_econ_work_material_id = 10 }
+            GO_econ_material_steel_supply_record_ready = yes
+            check_variable = { var = GO_econ_country_material_steel_supply_last_day value = global.num_days compare = less_than }
+        }
+        set_variable = { GO_econ_country_material_steel_supply_last_day = global.num_days }
+        set_variable = { GO_econ_country_material_steel_supply_status = 0 }
+        if = {
+            limit = {
+                GO_econ_material_steel_supply_configuration_ready = yes
+            }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_country_material_steel_supply_rate }
+            if = {
+                limit = {
+                    GO_econ_can_add_national_material = yes
+                }
+                GO_econ_add_national_material = yes
+                if = {
+                    limit = {
+                        check_variable = { GO_econ_work_material_succeeded = 1 }
+                    }
+                    set_variable = { GO_econ_country_material_steel_supply_status = 1 }
+                    set_variable = { GO_econ_country_material_steel_supply_report_day = global.num_days }
+                    set_variable = { GO_econ_country_material_steel_supply_received = GO_econ_work_material_quantity }
+                    set_variable = { GO_econ_country_material_steel_supply_report_populated = 1 }
+                }
+            }
+        }
+    }
+    if = {
+        limit = {
+            has_variable = GO_econ_work_material_id
+            check_variable = { GO_econ_work_material_id = 11 }
+            GO_econ_material_aluminium_supply_record_ready = yes
+            check_variable = { var = GO_econ_country_material_aluminium_supply_last_day value = global.num_days compare = less_than }
+        }
+        set_variable = { GO_econ_country_material_aluminium_supply_last_day = global.num_days }
+        set_variable = { GO_econ_country_material_aluminium_supply_status = 0 }
+        if = {
+            limit = {
+                GO_econ_material_aluminium_supply_configuration_ready = yes
+            }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_country_material_aluminium_supply_rate }
+            if = {
+                limit = {
+                    GO_econ_can_add_national_material = yes
+                }
+                GO_econ_add_national_material = yes
+                if = {
+                    limit = {
+                        check_variable = { GO_econ_work_material_succeeded = 1 }
+                    }
+                    set_variable = { GO_econ_country_material_aluminium_supply_status = 1 }
+                    set_variable = { GO_econ_country_material_aluminium_supply_report_day = global.num_days }
+                    set_variable = { GO_econ_country_material_aluminium_supply_received = GO_econ_work_material_quantity }
+                    set_variable = { GO_econ_country_material_aluminium_supply_report_populated = 1 }
+                }
+            }
+        }
+    }
+    if = {
+        limit = {
+            has_variable = GO_econ_work_material_id
+            check_variable = { GO_econ_work_material_id = 12 }
+            GO_econ_material_rubber_supply_record_ready = yes
+            check_variable = { var = GO_econ_country_material_rubber_supply_last_day value = global.num_days compare = less_than }
+        }
+        set_variable = { GO_econ_country_material_rubber_supply_last_day = global.num_days }
+        set_variable = { GO_econ_country_material_rubber_supply_status = 0 }
+        if = {
+            limit = {
+                GO_econ_material_rubber_supply_configuration_ready = yes
+            }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_country_material_rubber_supply_rate }
+            if = {
+                limit = {
+                    GO_econ_can_add_national_material = yes
+                }
+                GO_econ_add_national_material = yes
+                if = {
+                    limit = {
+                        check_variable = { GO_econ_work_material_succeeded = 1 }
+                    }
+                    set_variable = { GO_econ_country_material_rubber_supply_status = 1 }
+                    set_variable = { GO_econ_country_material_rubber_supply_report_day = global.num_days }
+                    set_variable = { GO_econ_country_material_rubber_supply_received = GO_econ_work_material_quantity }
+                    set_variable = { GO_econ_country_material_rubber_supply_report_populated = 1 }
+                }
+            }
+        }
+    }
+    if = {
+        limit = {
+            has_variable = GO_econ_work_material_id
+            check_variable = { GO_econ_work_material_id = 13 }
+            GO_econ_material_rations_supply_record_ready = yes
+            check_variable = { var = GO_econ_country_material_rations_supply_last_day value = global.num_days compare = less_than }
+        }
+        set_variable = { GO_econ_country_material_rations_supply_last_day = global.num_days }
+        set_variable = { GO_econ_country_material_rations_supply_status = 0 }
+        if = {
+            limit = {
+                GO_econ_material_rations_supply_configuration_ready = yes
+            }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_country_material_rations_supply_rate }
+            if = {
+                limit = {
+                    GO_econ_can_add_national_material = yes
+                }
+                GO_econ_add_national_material = yes
+                if = {
+                    limit = {
+                        check_variable = { GO_econ_work_material_succeeded = 1 }
+                    }
+                    set_variable = { GO_econ_country_material_rations_supply_status = 1 }
+                    set_variable = { GO_econ_country_material_rations_supply_report_day = global.num_days }
+                    set_variable = { GO_econ_country_material_rations_supply_received = GO_econ_work_material_quantity }
+                    set_variable = { GO_econ_country_material_rations_supply_report_populated = 1 }
+                }
+            }
+        }
+    }
+    if = {
+        limit = {
+            has_variable = GO_econ_work_material_id
+            check_variable = { GO_econ_work_material_id = 14 }
+            GO_econ_material_fuel_supply_record_ready = yes
+            check_variable = { var = GO_econ_country_material_fuel_supply_last_day value = global.num_days compare = less_than }
+        }
+        set_variable = { GO_econ_country_material_fuel_supply_last_day = global.num_days }
+        set_variable = { GO_econ_country_material_fuel_supply_status = 0 }
+        if = {
+            limit = {
+                GO_econ_material_fuel_supply_configuration_ready = yes
+            }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_country_material_fuel_supply_rate }
+            if = {
+                limit = {
+                    GO_econ_can_add_national_material = yes
+                }
+                GO_econ_add_national_material = yes
+                if = {
+                    limit = {
+                        check_variable = { GO_econ_work_material_succeeded = 1 }
+                    }
+                    set_variable = { GO_econ_country_material_fuel_supply_status = 1 }
+                    set_variable = { GO_econ_country_material_fuel_supply_report_day = global.num_days }
+                    set_variable = { GO_econ_country_material_fuel_supply_received = GO_econ_work_material_quantity }
+                    set_variable = { GO_econ_country_material_fuel_supply_report_populated = 1 }
+                }
+            }
+        }
+    }
+    if = {
+        limit = {
+            has_variable = GO_econ_work_material_id
+            check_variable = { GO_econ_work_material_id = 15 }
+            GO_econ_material_microchips_supply_record_ready = yes
+            check_variable = { var = GO_econ_country_material_microchips_supply_last_day value = global.num_days compare = less_than }
+        }
+        set_variable = { GO_econ_country_material_microchips_supply_last_day = global.num_days }
+        set_variable = { GO_econ_country_material_microchips_supply_status = 0 }
+        if = {
+            limit = {
+                GO_econ_material_microchips_supply_configuration_ready = yes
+            }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_country_material_microchips_supply_rate }
+            if = {
+                limit = {
+                    GO_econ_can_add_national_material = yes
+                }
+                GO_econ_add_national_material = yes
+                if = {
+                    limit = {
+                        check_variable = { GO_econ_work_material_succeeded = 1 }
+                    }
+                    set_variable = { GO_econ_country_material_microchips_supply_status = 1 }
+                    set_variable = { GO_econ_country_material_microchips_supply_report_day = global.num_days }
+                    set_variable = { GO_econ_country_material_microchips_supply_received = GO_econ_work_material_quantity }
+                    set_variable = { GO_econ_country_material_microchips_supply_report_populated = 1 }
+                }
+            }
+        }
+    }
+}
+
+GO_econ_update_national_material_daily_supply = {
+    set_variable = { GO_econ_work_material_id = 1 }
+    GO_econ_update_selected_material_daily_supply = yes
+    set_variable = { GO_econ_work_material_id = 2 }
+    GO_econ_update_selected_material_daily_supply = yes
+    set_variable = { GO_econ_work_material_id = 3 }
+    GO_econ_update_selected_material_daily_supply = yes
+    set_variable = { GO_econ_work_material_id = 4 }
+    GO_econ_update_selected_material_daily_supply = yes
+    set_variable = { GO_econ_work_material_id = 5 }
+    GO_econ_update_selected_material_daily_supply = yes
+    set_variable = { GO_econ_work_material_id = 6 }
+    GO_econ_update_selected_material_daily_supply = yes
+    set_variable = { GO_econ_work_material_id = 7 }
+    GO_econ_update_selected_material_daily_supply = yes
+    set_variable = { GO_econ_work_material_id = 8 }
+    GO_econ_update_selected_material_daily_supply = yes
+    set_variable = { GO_econ_work_material_id = 9 }
+    GO_econ_update_selected_material_daily_supply = yes
+    set_variable = { GO_econ_work_material_id = 10 }
+    GO_econ_update_selected_material_daily_supply = yes
+    set_variable = { GO_econ_work_material_id = 11 }
+    GO_econ_update_selected_material_daily_supply = yes
+    set_variable = { GO_econ_work_material_id = 12 }
+    GO_econ_update_selected_material_daily_supply = yes
+    set_variable = { GO_econ_work_material_id = 13 }
+    GO_econ_update_selected_material_daily_supply = yes
+    set_variable = { GO_econ_work_material_id = 14 }
+    GO_econ_update_selected_material_daily_supply = yes
+    set_variable = { GO_econ_work_material_id = 15 }
+    GO_econ_update_selected_material_daily_supply = yes
+}
+
+# Coordinated fixed-recipe material transaction. Caller prepares all required
+# regular quantity fields. Guards preflight every input stock/consumption total
+# and output stock/output total before the first consume call. Recipes use
+# distinct literal accounts; no recipe can double-debit or credit its input.
+# This helper has no cadence: only the guarded processing family owns its day.
+
+GO_econ_execute_processing_transaction = {
+    set_variable = { GO_econ_work_processing_transaction_succeeded = 0 }
+    if = {
+        limit = {
+            GO_econ_processing_transaction_ready = yes
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_processing_recipe_id = 1 }
+            }
+            set_variable = { GO_econ_work_material_id = 1 }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_work_processing_input_1_quantity }
+            GO_econ_consume_national_material = yes
+            set_variable = { GO_econ_work_material_id = 10 }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_work_processing_output_quantity }
+            GO_econ_credit_national_material_output = yes
+            set_variable = { GO_econ_work_processing_transaction_succeeded = GO_econ_work_material_succeeded }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_processing_recipe_id = 2 }
+            }
+            set_variable = { GO_econ_work_material_id = 2 }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_work_processing_input_1_quantity }
+            GO_econ_consume_national_material = yes
+            set_variable = { GO_econ_work_material_id = 11 }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_work_processing_output_quantity }
+            GO_econ_credit_national_material_output = yes
+            set_variable = { GO_econ_work_processing_transaction_succeeded = GO_econ_work_material_succeeded }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_processing_recipe_id = 3 }
+            }
+            set_variable = { GO_econ_work_material_id = 6 }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_work_processing_input_1_quantity }
+            GO_econ_consume_national_material = yes
+            set_variable = { GO_econ_work_material_id = 4 }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_work_processing_input_2_quantity }
+            GO_econ_consume_national_material = yes
+            set_variable = { GO_econ_work_material_id = 12 }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_work_processing_output_quantity }
+            GO_econ_credit_national_material_output = yes
+            set_variable = { GO_econ_work_processing_transaction_succeeded = GO_econ_work_material_succeeded }
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_work_processing_recipe_id = 4 }
+            }
+            set_variable = { GO_econ_work_material_id = 10 }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_work_processing_input_1_quantity }
+            GO_econ_consume_national_material = yes
+            set_variable = { GO_econ_work_material_id = 7 }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_work_processing_input_2_quantity }
+            GO_econ_consume_national_material = yes
+            set_variable = { GO_econ_work_material_id = 9 }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_work_processing_input_3_quantity }
+            GO_econ_consume_national_material = yes
+            set_variable = { GO_econ_work_material_id = 15 }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_work_processing_output_quantity }
+            GO_econ_credit_national_material_output = yes
+            set_variable = { GO_econ_work_processing_transaction_succeeded = GO_econ_work_material_succeeded }
+        }
+    }
+}
+
+
 # Deliberate authored opening, including known zero. Repeated calls fail after
 # the opening is recorded; partial records cannot be reset through this API.
 GO_econ_open_national_material = {

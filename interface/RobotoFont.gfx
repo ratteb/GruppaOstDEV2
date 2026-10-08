@@ -1,13 +1,15 @@
-bitmapfonts = {
-    bitmapfont = {
-        name = "robotofont"
-        fontfiles = {
-            "gfx/fonts/RobotoFont.dds"
-        }
-        color = 0xffffffff
-
-        textcolors = {
-            G = { 86 172 91 }
-        }
-    }
-}
+# Unused prototype registration. The referenced Roboto font assets are absent.
+# Preserve it until actual .fnt/.dds files are supplied before enabling it.
+# bitmapfonts = {
+#     bitmapfont = {
+#         name = "robotofont"
+#         fontfiles = {
+#             "gfx/fonts/RobotoFont.dds"
+#         }
+#         color = 0xffffffff
+#
+#         textcolors = {
+#             G = { 86 172 91 }
+#         }
+#     }
+# }

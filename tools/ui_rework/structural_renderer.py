@@ -137,6 +137,34 @@ def contour_frame(image, silhouette, width, design, accent=None):
     return Image.fromarray(arr), np.asarray(current)[1:-1, 1:-1] > 0
 
 
+def angular_frame(image, profile, width, design, accent=None):
+    """Continuous chamfers with the same apparent thickness as straight rails.
+
+    Square-kernel erosion made diagonal corners wider than their straight
+    sides. Explicit inward-offset polygons avoid those bulky corner patches.
+    """
+    x0,y0,x1,y1=profile['box'];cut=profile['cut']
+    def mask(inset):
+        chamfer=max(0,round(cut-(2-2**.5)*inset))
+        xx0,yy0,xx1,yy1=x0+inset,y0+inset,x1-inset,y1-inset
+        result=Image.new('L',image.size)
+        ImageDraw.Draw(result).polygon([(xx0+chamfer,yy0),(xx1-chamfer,yy0),
+            (xx1,yy0+chamfer),(xx1,yy1-chamfer),(xx1-chamfer,yy1),
+            (xx0+chamfer,yy1),(xx0,yy1-chamfer),(xx0,yy0+chamfer)],fill=255)
+        return np.asarray(result)>0
+    arr=np.array(image);current=mask(0)
+    for inset,color in enumerate(frame_colors(width,design,False,accent)):
+        inner=mask(inset+1);arr[current&~inner]=color;current=inner
+    return Image.fromarray(arr)
+
+
+def alpha_regions(size, asset, design):
+    base=Image.new('L',(asset['contract']['width'],asset['contract']['height']))
+    for x0,y0,x1,y1 in design.get('functional_alpha_regions',{}).get(asset['path'],[]):
+        ImageDraw.Draw(base).rectangle((x0,y0,x1-1,y1-1),fill=255)
+    return np.asarray(base.resize(size,Image.Resampling.BOX))>0
+
+
 def protected(image, asset, design):
     rgba = np.asarray(image)
     h, w = rgba.shape[:2]
@@ -433,6 +461,8 @@ def render(image, asset, design):
         part = surface((fw, h), colors, design['scanlines']['strength'], bc, surface_state)
         if asset['path'] in design.get('functional_alpha', []):
             newalpha = alpha.copy()
+        elif asset['path'] in design.get('opaque_surfaces', []):
+            newalpha=np.where(silhouette,255,0).astype('uint8')
         else:
             interior = alpha[y0+3:max(y0+4, y1-2), x0+3:max(x0+4, x1-2)]
             values, counts = np.unique(interior if interior.size else alpha[silhouette], return_counts=True)
@@ -451,7 +481,10 @@ def render(image, asset, design):
         accent = design['blue']['rim'] if recolored_face else semantic_accent(source, asset, index, design)
         flat = bc == (0, 0) or bool(re.search(r'(noframe|flat_bg|color_picker|black_bg|dark_area)', asset['path']))
         if not flat:
-            part, _ = contour_frame(part, silhouette, width, design, accent)
+            if asset['path'] in design.get('angular_frames', {}):
+                part=angular_frame(part,design['angular_frames'][asset['path']],width,design,accent)
+            else:
+                part, _ = contour_frame(part, silhouette, width, design, accent)
         if asset['path'] in design.get('radio_states', {}):
             radio(part, box, index in design['radio_states'][asset['path']], index>=2, design)
         if asset['path'] in design.get('placeholder_shapes',{}):
@@ -575,6 +608,9 @@ def render(image, asset, design):
                 ImageDraw.Draw(mask).ellipse((int(xx.min()), int(yy.min()), int(xx.max()), int(yy.max())), fill=255)
                 part[:, :, 3] = np.asarray(mask)
     output[keep] = artwork_pixels(image, asset, design)[keep]
+    if asset['path'] in design.get('functional_alpha_regions', {}):
+        mask=alpha_regions(image.size,asset,design)
+        output[mask,3]=original[mask,3]
     return Image.fromarray(output)
 
 
@@ -592,6 +628,9 @@ def encode(drawn, source, asset, design):
             arr[old[:, :, 3] == 0, 3] = 0
         if asset['path'] in design.get('functional_alpha', []):
             arr[:, :, 3] = old[:, :, 3]
+        if asset['path'] in design.get('functional_alpha_regions', {}):
+            region=alpha_regions(current.size,asset,design)
+            arr[region,3]=old[region,3]
         arr[keep] = artwork_pixels(original, asset, design)[keep]; current=Image.fromarray(arr)
         if contract['format'].startswith('DXT'):
             buf=io.BytesIO(); current.save(buf, format='DDS', pixel_format=contract['format'])

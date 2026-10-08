@@ -354,6 +354,14 @@ guiTypes = {
 			fixedsize = yes
 		}	
 
+		iconType = {
+			name ="industrial_ratio_bar"
+			spriteType = "GFX_topbar_fuel_bar"
+			position = { x = 438 y = 20 }
+			frame = 50
+			alwaystransparent = yes
+		}
+
 		## convoy
 		
 		iconType ={
@@ -499,30 +507,50 @@ guiTypes = {
 			alwaystransparent = yes
 		}	
 		
-		iconType ={
-			name ="nuke_text_bg"
-			spriteType = "GFX_generic_box_smallest"
-			position = { x=1030 y=5 }
-			Orientation = "UPPER_LEFT"
+		containerWindowType = {
+			name = "nukes"
+			position = { x = 1030 y = 5 }
+			size = { width = 73 height = 30 }
+			clipping = no
+			Orientation = UPPER_LEFT
+
+			iconType ={
+				name ="nuke_text_bg"
+				spriteType = "GFX_generic_box_smallest"
+				position = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			iconType ={
+				name ="nuke_icon"
+				spriteType = "GFX_topbar_nuke"
+				position = { x = 1 y = 3 }
+				Orientation = "UPPER_LEFT"
+				scale = 0.8
+			}
+
+			instantTextBoxType = {
+				name ="nuke_count"
+				position = { x = 23 y = 4 }
+				font = "hoi_18mbs"
+				format = center
+				maxWidth = 44
+				maxHeight = 24
+				fixedsize = yes
+				hide = yes # Retained obsolete hook; the native value is below.
+			}
+
+			instantTextBoxType = {
+				name = "nukes_value"
+				position = { x = 23 y = 4 }
+				font = "hoi_18mbs"
+				format = center
+				maxWidth = 44
+				maxHeight = 24
+				fixedsize = yes
+				alwaystransparent = yes
+			}
 		}
-		
-		iconType ={
-			name ="nuke_icon"
-			spriteType = "GFX_topbar_nuke"
-			position = { x=1031 y=8 }
-			Orientation = "UPPER_LEFT"
-			scale = 0.8
-		}
-		
-		instantTextBoxType = {
-			name ="nuke_count"
-			position = { x=1053 y=9 }
-			font = "hoi_18mbs"
-			format = center
-			maxWidth = 44
-			maxHeight = 24
-			fixedsize = yes
-		}	
 		
 		
 		containerWindowType = {

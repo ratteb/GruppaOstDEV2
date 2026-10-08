@@ -1,0 +1,13 @@
+﻿l_english:
+ GO_econ_steel_plant:0 "Steel Plant"
+ GO_econ_steel_plant_plural:0 "Steel Plants"
+ GO_econ_steel_plant_desc:0 "Assigned Steel Plants process iron into steel for national industry."
+ GO_econ_aluminium_plant:0 "Aluminium Plant"
+ GO_econ_aluminium_plant_plural:0 "Aluminium Plants"
+ GO_econ_aluminium_plant_desc:0 "Assigned Aluminium Plants process bauxite into aluminium for national industry."
+ GO_econ_rubber_plant:0 "Rubber Plant"
+ GO_econ_rubber_plant_plural:0 "Rubber Plants"
+ GO_econ_rubber_plant_desc:0 "Assigned Rubber Plants process oil and coal into rubber for national industry."
+ GO_econ_semiconductor_factory:0 "Semiconductor Factory"
+ GO_econ_semiconductor_factory_plural:0 "Semiconductor Factories"
+ GO_econ_semiconductor_factory_desc:0 "Assigned Semiconductor Factories use steel, rare earth minerals and titanium to produce microchips."

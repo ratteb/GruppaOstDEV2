@@ -1,0 +1,907 @@
+{
+  "style": "Existing graphite/slate geometry, vibrant blue actions and faint scanlines",
+  "recipes": {
+    "gfx/interface/LoadingScreen_Progress_1.dds": {
+      "group": "frontend",
+      "family": "neutral",
+      "mode": "progress",
+      "width": 4,
+      "cut": 2
+    },
+    "gfx/interface/Loadingscreen_loadingstatus.dds": {
+      "group": "frontend",
+      "family": "neutral",
+      "width": 5,
+      "cut": 4
+    },
+    "gfx/interface/add_national_goal_button.dds": {
+      "group": "country",
+      "retain_current": true,
+      "reason": "Individually redesigned country/shared holder already installed; verify instead of redrawing."
+    },
+    "gfx/interface/bookmark_entry_bg.dds": {
+      "group": "frontend",
+      "family": "neutral",
+      "width": 4,
+      "cut": 3,
+      "interior_alpha": true,
+      "selection": true
+    },
+    "gfx/interface/button_123x34.dds": {
+      "group": "controls",
+      "family": "blue",
+      "states": null,
+      "width": 3,
+      "cut": 2
+    },
+    "gfx/interface/button_221x34.dds": {
+      "group": "controls",
+      "family": "blue",
+      "states": null,
+      "width": 3,
+      "cut": 2
+    },
+    "gfx/interface/category_header.dds": {
+      "group": "country",
+      "retain_current": true,
+      "reason": "Individually redesigned country/shared holder already installed; verify instead of redrawing."
+    },
+    "gfx/interface/country_selection_bg.dds": {
+      "group": "frontend",
+      "family": "neutral",
+      "mode": "country_selection",
+      "width": 5,
+      "cut": 4,
+      "art": [
+        [
+          6,
+          489,
+          235,
+          841
+        ]
+      ],
+      "shape_parts": [
+        [
+          266,
+          0,
+          958,
+          75
+        ],
+        [
+          0,
+          75,
+          1224,
+          847
+        ]
+      ]
+    },
+    "gfx/interface/country_selection_entry.dds": {
+      "group": "frontend",
+      "family": "neutral",
+      "width": 4,
+      "cut": 3,
+      "interior_alpha": true,
+      "selection": true
+    },
+    "gfx/interface/decisionview/category_header_bg.dds": {
+      "group": "decisions",
+      "family": "blue",
+      "mode": "decision_category",
+      "width": 4,
+      "cut": 3
+    },
+    "gfx/interface/decisionview/decision_item_bg.dds": {
+      "group": "decisions",
+      "states": [
+        "neutral",
+        "blue",
+        "blue_pressed"
+      ],
+      "width": 3,
+      "cut": 2
+    },
+    "gfx/interface/decisionview/event_header_bg.dds": {
+      "group": "decisions",
+      "family": "blue",
+      "mode": "decision_event",
+      "width": 4,
+      "cut": 3
+    },
+    "gfx/interface/diplo_flag_frame.dds": {
+      "group": "diplomacy",
+      "family": "neutral",
+      "width": 5,
+      "cut": 4,
+      "alpha": [
+        [
+          18,
+          9,
+          116,
+          70
+        ]
+      ],
+      "panes": []
+    },
+    "gfx/interface/diplo_goal_button.dds": {
+      "group": "diplomacy",
+      "states": [
+        "blue",
+        "blue_pressed",
+        "blue_disabled"
+      ],
+      "width": 4
+    },
+    "gfx/interface/diplo_leader_frame.dds": {
+      "group": "diplomacy",
+      "family": "neutral",
+      "width": 5,
+      "cut": 4,
+      "alpha": [
+        [
+          8,
+          7,
+          126,
+          141
+        ]
+      ],
+      "panes": [
+        {
+          "box": [
+            7,
+            144,
+            126,
+            169
+          ],
+          "family": "slate",
+          "width": 3
+        }
+      ]
+    },
+    "gfx/interface/diplo_nat_spirits_bg.dds": {
+      "group": "diplomacy",
+      "family": "neutral",
+      "width": 5,
+      "panes": [
+        {
+          "box": [
+            6,
+            5,
+            144,
+            24
+          ],
+          "family": "slate",
+          "width": 3
+        }
+      ]
+    },
+    "gfx/interface/diplo_top_bg_diplo_tab.dds": {
+      "group": "diplomacy",
+      "family": "neutral",
+      "mode": "diplo_chart",
+      "width": 5,
+      "cut": 4
+    },
+    "gfx/interface/event_news_bg.dds": {
+      "group": "events",
+      "family": "slate",
+      "width": 5,
+      "cut": 3,
+      "mode": "news"
+    },
+    "gfx/interface/event_option_entry.dds": {
+      "group": "events",
+      "family": "blue_pressed",
+      "width": 3,
+      "cut": 2
+    },
+    "gfx/interface/event_report_bottom_win.dds": {
+      "group": "events",
+      "family": "slate",
+      "width": 5,
+      "cut": 3,
+      "mode": "event_bottom"
+    },
+    "gfx/interface/event_report_bottom_win_2.dds": {
+      "group": "events",
+      "family": "slate",
+      "width": 5,
+      "cut": 3,
+      "mode": null
+    },
+    "gfx/interface/event_report_tileable_midsection.dds": {
+      "group": "events",
+      "family": "slate",
+      "vertical_repeat": true,
+      "width": 5,
+      "cut": 0
+    },
+    "gfx/interface/event_report_top_win.dds": {
+      "group": "events",
+      "family": "slate",
+      "width": 5,
+      "cut": 3,
+      "mode": "event_top"
+    },
+    "gfx/interface/focusview/titlebar/focus_can_start_bg.dds": {
+      "group": "decisions",
+      "family": "blue",
+      "width": 3,
+      "cut": 3
+    },
+    "gfx/interface/focusview/titlebar/focus_completed_bg.dds": {
+      "group": "decisions",
+      "family": "blue_pressed",
+      "width": 3,
+      "cut": 3,
+      "mode": "complete_focus_title"
+    },
+    "gfx/interface/focusview/titlebar/focus_unavailable_bg.dds": {
+      "group": "decisions",
+      "family": "blue_disabled",
+      "width": 3,
+      "cut": 3
+    },
+    "gfx/interface/header_bg.dds": {
+      "group": "country",
+      "retain_current": true,
+      "reason": "Individually redesigned country/shared holder already installed; verify instead of redrawing."
+    },
+    "gfx/interface/intel_ledger/tab.dds": {
+      "group": "controls",
+      "states": [
+        "neutral",
+        "blue"
+      ],
+      "width": 3,
+      "cut": 3
+    },
+    "gfx/interface/main_lobby_button.dds": {
+      "group": "controls",
+      "family": "blue",
+      "states": [
+        "blue",
+        "blue_pressed",
+        "blue_disabled"
+      ],
+      "width": 3,
+      "cut": 2
+    },
+    "gfx/interface/main_lobby_divider.dds": {
+      "group": "controls",
+      "family": "neutral",
+      "width": 2,
+      "cut": 4
+    },
+    "gfx/interface/pol_goal_bg.dds": {
+      "group": "country",
+      "retain_current": true,
+      "reason": "Individually redesigned country/shared holder already installed; verify instead of redrawing."
+    },
+    "gfx/interface/pol_leader_frame.dds": {
+      "group": "country",
+      "retain_current": true,
+      "reason": "Individually redesigned country/shared holder already installed; verify instead of redrawing."
+    },
+    "gfx/interface/pol_view_bg.dds": {
+      "group": "country",
+      "retain_current": true,
+      "reason": "Individually redesigned country/shared holder already installed; verify instead of redrawing."
+    },
+    "gfx/interface/research_line_bg.dds": {
+      "group": "decisions",
+      "family": "neutral",
+      "mode": "research",
+      "width": 5,
+      "cut": 8
+    },
+    "gfx/interface/scripted_gui_graphics/SOV_UR_ruling_party_gov_gui_background.dds": {
+      "group": "government",
+      "family": "slate",
+      "width": 6,
+      "cut": 4,
+      "art": [
+        [
+          8,
+          8,
+          1443,
+          957
+        ]
+      ]
+    },
+    "gfx/interface/scripted_gui_graphics/government_gui_background.dds": {
+      "group": "government",
+      "family": "neutral",
+      "width": 6,
+      "cut": 5,
+      "mode": "government",
+      "inner_family": "neutral"
+    },
+    "gfx/interface/scripted_gui_graphics/intro_screen_background.dds": {
+      "group": "government",
+      "family": "paper",
+      "width": 6,
+      "cut": 5,
+      "mode": "government",
+      "inner_family": "paper"
+    },
+    "gfx/interface/scripted_gui_graphics/military_gov_gui_background.dds": {
+      "group": "government",
+      "family": "blue",
+      "width": 6,
+      "cut": 5,
+      "mode": "government",
+      "inner_family": "blue_pressed"
+    },
+    "gfx/interface/scripted_gui_graphics/opposition_gov_gui_background.dds": {
+      "group": "government",
+      "family": "neutral",
+      "width": 6,
+      "cut": 5,
+      "mode": "government",
+      "inner_family": "neutral",
+      "signal": [
+        145,
+        55,
+        60
+      ]
+    },
+    "gfx/interface/select_date_bg.dds": {
+      "group": "frontend",
+      "family": "neutral",
+      "mode": "select_date",
+      "width": 5,
+      "cut": 4,
+      "shape_parts": [
+        [
+          108,
+          2,
+          670,
+          58
+        ],
+        [
+          2,
+          56,
+          776,
+          709
+        ]
+      ]
+    },
+    "gfx/interface/techtree/tech_info_top_win.dds": {
+      "group": "decisions",
+      "family": "neutral",
+      "mode": "tech_info",
+      "width": 4,
+      "cut": 3
+    },
+    "gfx/interface/tiles/tiled_army_badge_view.dds": {
+      "group": "custom_tiles",
+      "retain_current": true,
+      "reason": "Almost transparent alpha operand (0/1); empty functional resource, not visible chrome."
+    },
+    "gfx/interface/tiles/tiled_army_view.dds": {
+      "group": "custom_tiles",
+      "family": "neutral",
+      "tile": true,
+      "width": 5,
+      "cut": 4
+    },
+    "gfx/interface/tiles/tiled_main_menu.dds": {
+      "group": "custom_tiles",
+      "family": "neutral",
+      "tile": true,
+      "width": 5,
+      "cut": 4
+    },
+    "gfx/interface/tiles/tiled_paper_bg2.dds": {
+      "group": "custom_tiles",
+      "family": "blue",
+      "tile": true,
+      "width": 5,
+      "cut": 4
+    },
+    "gfx/interface/tiles/tiled_window.dds": {
+      "group": "custom_tiles",
+      "family": "neutral",
+      "tile": true,
+      "width": 5,
+      "cut": 4
+    },
+    "gfx/interface/tiles/tiled_window2_1b_border.dds": {
+      "group": "country",
+      "retain_current": true,
+      "reason": "Individually redesigned country/shared holder already installed; verify instead of redrawing."
+    },
+    "gfx/interface/tiles/tiled_window2_2b_border.dds": {
+      "group": "custom_tiles",
+      "family": "neutral",
+      "tile": true,
+      "width": 5,
+      "cut": 4
+    },
+    "gfx/interface/tiles/tiled_window_1b_border.dds": {
+      "group": "country",
+      "retain_current": true,
+      "reason": "Individually redesigned country/shared holder already installed; verify instead of redrawing."
+    },
+    "gfx/interface/tiles/tiled_window_pol_goal.dds": {
+      "group": "custom_tiles",
+      "family": "neutral",
+      "tile": true,
+      "width": 5,
+      "cut": 4,
+      "panes": [
+        {
+          "box": [
+            17,
+            10,
+            366,
+            54
+          ],
+          "family": "slate",
+          "width": 3
+        },
+        {
+          "box": [
+            17,
+            62,
+            366,
+            368
+          ],
+          "family": "paper",
+          "width": 4,
+          "constant": true
+        }
+      ]
+    },
+    "gfx/interface/tiles/tiled_window_thin_border2.dds": {
+      "group": "country",
+      "retain_current": true,
+      "reason": "Individually redesigned country/shared holder already installed; verify instead of redrawing."
+    },
+    "gfx/interface/tiles/tiles_dialog.dds": {
+      "group": "custom_tiles",
+      "family": "neutral",
+      "tile": true,
+      "width": 5,
+      "cut": 4
+    },
+    "gfx/interface/unitcontrol/focus_reward_header.dds": {
+      "group": "controls",
+      "family": "neutral",
+      "mode": "thin_header",
+      "width": 3,
+      "cut": 2
+    },
+    "gfx/interface/unitcontrol/unit_entry_bg.dds": {
+      "group": "controls",
+      "states": [
+        "blue_disabled",
+        "blue"
+      ],
+      "width": 3,
+      "cut": 2
+    },
+    "gfx/interface/unitcontrol/unit_list_header.dds": {
+      "group": "controls",
+      "family": "neutral",
+      "mode": "thin_header",
+      "width": 3,
+      "cut": 2
+    },
+    "gfx/interface/unitcontrol/unitlist_unassigned_bg.dds": {
+      "group": "controls",
+      "family": "neutral",
+      "mode": "thin_header",
+      "width": 3,
+      "cut": 2
+    },
+    "gfx/scripted_gui/csto/csto_cata_danger_progress_bar_background.dds": {
+      "group": "sotnik_csto",
+      "family": "neutral",
+      "mode": "progress",
+      "width": 4,
+      "cut": 2
+    },
+    "gfx/scripted_gui/csto/csto_cata_threat_progress_bar_background.dds": {
+      "group": "sotnik_csto",
+      "family": "neutral",
+      "mode": "progress",
+      "width": 4,
+      "cut": 2
+    },
+    "gfx/scripted_gui/lore_screen/chapter_button.dds": {
+      "group": "lore",
+      "family": "blue",
+      "width": 3,
+      "cut": 2
+    },
+    "gfx/scripted_gui/lore_screen/chapterbutton.dds": {
+      "group": "lore",
+      "family": "blue",
+      "width": 3,
+      "cut": 2
+    },
+    "gfx/scripted_gui/lore_screen/lore_open_button.dds": {
+      "group": "lore",
+      "family": "blue",
+      "width": 3,
+      "cut": 2
+    },
+    "gfx/scripted_gui/lore_screen/lore_screen_main_screen.dds": {
+      "group": "lore",
+      "family": "neutral",
+      "mode": "lore",
+      "width": 5,
+      "cut": 4
+    },
+    "gfx/scripted_gui/sotnik/gerasimov_frame.dds": {
+      "group": "sotnik_csto",
+      "family": "slate",
+      "box": [
+        12,
+        12,
+        184,
+        237
+      ],
+      "width": 5,
+      "cut": 4,
+      "alpha": [
+        [
+          19,
+          56,
+          179,
+          235
+        ],
+        [
+          55,
+          20,
+          137,
+          56
+        ]
+      ],
+      "art_polygons": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            46,
+            0
+          ],
+          [
+            51,
+            14
+          ],
+          [
+            49,
+            46
+          ],
+          [
+            41,
+            53
+          ],
+          [
+            16,
+            55
+          ],
+          [
+            4,
+            39
+          ],
+          [
+            0,
+            31
+          ]
+        ],
+        [
+          [
+            137,
+            2
+          ],
+          [
+            190,
+            0
+          ],
+          [
+            195,
+            18
+          ],
+          [
+            194,
+            36
+          ],
+          [
+            182,
+            54
+          ],
+          [
+            160,
+            57
+          ],
+          [
+            145,
+            45
+          ],
+          [
+            137,
+            19
+          ]
+        ]
+      ],
+      "opaque_art_only": true,
+      "panes": [
+        {
+          "box": [
+            0,
+            0,
+            54,
+            55
+          ],
+          "family": "slate",
+          "width": 3
+        },
+        {
+          "box": [
+            138,
+            0,
+            195,
+            55
+          ],
+          "family": "slate",
+          "width": 3
+        }
+      ]
+    },
+    "gfx/scripted_gui/sotnik/gerasimov_progress_bar_background.dds": {
+      "group": "sotnik_csto",
+      "family": "neutral",
+      "mode": "progress",
+      "width": 4,
+      "cut": 2
+    },
+    "gfx/scripted_gui/sotnik/shoigu_frame.dds": {
+      "group": "sotnik_csto",
+      "family": "slate",
+      "box": [
+        12,
+        12,
+        184,
+        237
+      ],
+      "width": 5,
+      "cut": 4,
+      "alpha": [
+        [
+          19,
+          56,
+          179,
+          235
+        ],
+        [
+          55,
+          20,
+          137,
+          56
+        ]
+      ],
+      "art_polygons": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            46,
+            0
+          ],
+          [
+            51,
+            14
+          ],
+          [
+            49,
+            46
+          ],
+          [
+            41,
+            53
+          ],
+          [
+            16,
+            55
+          ],
+          [
+            4,
+            39
+          ],
+          [
+            0,
+            31
+          ]
+        ],
+        [
+          [
+            137,
+            2
+          ],
+          [
+            190,
+            0
+          ],
+          [
+            195,
+            18
+          ],
+          [
+            194,
+            36
+          ],
+          [
+            182,
+            54
+          ],
+          [
+            160,
+            57
+          ],
+          [
+            145,
+            45
+          ],
+          [
+            137,
+            19
+          ]
+        ]
+      ],
+      "opaque_art_only": true,
+      "panes": [
+        {
+          "box": [
+            0,
+            0,
+            54,
+            55
+          ],
+          "family": "slate",
+          "width": 3
+        },
+        {
+          "box": [
+            138,
+            0,
+            195,
+            55
+          ],
+          "family": "slate",
+          "width": 3
+        }
+      ]
+    },
+    "gfx/scripted_gui/sotnik/shoigu_progress_bar_background.dds": {
+      "group": "sotnik_csto",
+      "family": "neutral",
+      "mode": "progress",
+      "width": 4,
+      "cut": 2
+    },
+    "gfx/scripted_gui/sotnik/sotnik_progress_bar_background.dds": {
+      "group": "sotnik_csto",
+      "family": "neutral",
+      "mode": "progress",
+      "width": 4,
+      "cut": 2
+    },
+    "gfx/template_border.dds": {
+      "group": "custom_tiles",
+      "family": "slate",
+      "width": 5,
+      "cut": 4,
+      "interior_alpha": true,
+      "mode": "template_frame"
+    },
+    "gfx/scripted_gui/csto/page1_button.dds": {
+      "group": "sotnik_csto",
+      "family": "blue",
+      "width": 3,
+      "cut": 2,
+      "glyphs": [
+        [
+          17,
+          10,
+          37,
+          43
+        ]
+      ]
+    },
+    "gfx/scripted_gui/csto/page2_button.dds": {
+      "group": "sotnik_csto",
+      "family": "blue",
+      "width": 3,
+      "cut": 2,
+      "glyphs": [
+        [
+          17,
+          10,
+          37,
+          43
+        ]
+      ]
+    },
+    "gfx/scripted_gui/csto/page3_button.dds": {
+      "group": "sotnik_csto",
+      "family": "blue",
+      "width": 3,
+      "cut": 2,
+      "glyphs": [
+        [
+          17,
+          10,
+          37,
+          43
+        ]
+      ]
+    },
+    "gfx/scripted_gui/usa_wall/decrease_no.dds": {
+      "group": "controls",
+      "family": "blue_disabled",
+      "width": 4,
+      "cut": 3,
+      "glyphs": [
+        [
+          33,
+          53,
+          84,
+          69
+        ]
+      ],
+      "glyph_background": "two_sided"
+    },
+    "gfx/scripted_gui/usa_wall/decrease_yes.dds": {
+      "group": "controls",
+      "family": "blue",
+      "width": 4,
+      "cut": 3,
+      "glyphs": [
+        [
+          13,
+          22,
+          36,
+          32
+        ]
+      ],
+      "glyph_background": "two_sided"
+    },
+    "gfx/scripted_gui/usa_wall/increase_no.dds": {
+      "group": "controls",
+      "family": "blue_disabled",
+      "width": 4,
+      "cut": 3,
+      "glyphs": [
+        [
+          39,
+          37,
+          81,
+          79
+        ]
+      ],
+      "glyph_background": "two_sided"
+    },
+    "gfx/scripted_gui/usa_wall/increase_yes.dds": {
+      "group": "controls",
+      "family": "blue",
+      "width": 4,
+      "cut": 3,
+      "glyphs": [
+        [
+          15,
+          15,
+          35,
+          35
+        ]
+      ],
+      "glyph_background": "two_sided"
+    }
+  }
+}

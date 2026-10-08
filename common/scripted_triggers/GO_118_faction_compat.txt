@@ -1,0 +1,8 @@
+# Target: HOI4 1.18.3.0.7709. Restore only APIs referenced by this mod.
+# Source: native CHI_scripted_triggers.txt; omit original tags absent here.
+is_independent_china_or_warlord = { #Does not include sinkiang
+	OR = {
+		original_tag = CHI
+	}
+	is_subject = no
+}

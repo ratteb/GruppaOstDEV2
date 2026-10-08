@@ -1,12 +1,21 @@
 spriteTypes = {
+	spriteType = {
+		name = "GFX_GO_news_picture_holder"
+		texturefile = "gfx/interface/GO_news_picture_holder.dds"
+		alwaystransparent = yes
+	}
+
 
 	spriteType = {
 		name = "GFX_event_news_pic_overlay"
 		texturefile = "gfx/interface/event_news_pic_overlay.dds"
 	}
 
-	spriteType = {
+	corneredTileSpriteType = {
 		name = "GFX_event_news_bg"
+		size = { x = 628 y = 1022 }
+		borderSize = { x = 18 y = 88 }
+		tilingCenter = yes
 		texturefile = "gfx/interface/event_news_bg.dds"
 	}
 
@@ -17,7 +26,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_event_option_entry"
-		texturefile = "gfx/interface/event_option_entry.dds"
+		texturefile = "gfx/interface/GO_event_option_holder.dds"
 	}
 
 	corneredTileSpriteType = {

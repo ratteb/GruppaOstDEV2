@@ -108,13 +108,14 @@ generic_naval_blockade = {
     max_priority = 20
 }
 
-generic_strike_force = {
-    objective_type = strike_force_objective
-
-    #blocked_for = {
-        # no one yet
-    #}
-    
-    min_priority = 10
-    max_priority = 20
-}
+# Dormant compatibility entry: strike_force_objective is not a supported 1.18.3 AI objective; existing native goals remain.
+# generic_strike_force = {
+#     objective_type = strike_force_objective
+#
+#     #blocked_for = {
+#         # no one yet
+#     #}
+#
+#     min_priority = 10
+#     max_priority = 20
+# }

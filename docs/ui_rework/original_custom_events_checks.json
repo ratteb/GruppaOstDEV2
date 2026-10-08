@@ -1,0 +1,62 @@
+[
+  {
+    "path": "gfx/interface/event_news_bg.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      628,
+      1022
+    ]
+  },
+  {
+    "path": "gfx/interface/event_option_entry.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      196,
+      30
+    ]
+  },
+  {
+    "path": "gfx/interface/event_report_bottom_win.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      657,
+      308
+    ]
+  },
+  {
+    "path": "gfx/interface/event_report_bottom_win_2.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      581,
+      59
+    ]
+  },
+  {
+    "path": "gfx/interface/event_report_tileable_midsection.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      653,
+      77
+    ]
+  },
+  {
+    "path": "gfx/interface/event_report_top_win.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      682,
+      93
+    ]
+  }
+]

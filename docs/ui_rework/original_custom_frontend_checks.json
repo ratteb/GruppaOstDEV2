@@ -1,0 +1,134 @@
+[
+  {
+    "path": "gfx/interface/LoadingScreen_Progress_1.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      934,
+      40
+    ],
+    "fingerprint": {
+      "source_sha256": "bb94dee51660e8cff605262aca3c6bb6afecd1fdf5c7e0ec1d33e85fd65398e5",
+      "recipe_sha256": "3eb43e60e79d2eb15c321972debea21941def001d126b7d632eb939ca3d4bc76",
+      "dependencies": {
+        "original_custom.py": "78c6477a831786679f0828d6fbde136e42f231d6fef3f7fad5c1240ff133d7a5",
+        "original_custom_renderer.py": "ab93a8d2680395d820c1668f192613eef35d9c2df6878dbe09e4aa6e33d0687d",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "3cf6fc12f8981c41e3d13ffc322259f2c57e0dd1dbd5d24bd29376f9bc28a045"
+  },
+  {
+    "path": "gfx/interface/Loadingscreen_loadingstatus.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      1400,
+      92
+    ],
+    "fingerprint": {
+      "source_sha256": "a357bae1d47a1852d33b5121d8729d6d5069e454c5528ab513286216d148d0e9",
+      "recipe_sha256": "aa482d6b583cebfc26a055801e91ea43d41e670888a8d356271d8e77a629284d",
+      "dependencies": {
+        "original_custom.py": "78c6477a831786679f0828d6fbde136e42f231d6fef3f7fad5c1240ff133d7a5",
+        "original_custom_renderer.py": "ab93a8d2680395d820c1668f192613eef35d9c2df6878dbe09e4aa6e33d0687d",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "d82bb739f74cc4097ddadd49498df286fa760b48e096ec4b040ee76decf6622e"
+  },
+  {
+    "path": "gfx/interface/bookmark_entry_bg.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 2,
+    "dimensions": [
+      383,
+      650
+    ],
+    "fingerprint": {
+      "source_sha256": "109d75e55a1c251f684a0f3b0f2ff9202f37019fde5b818a07865c4d2507e997",
+      "recipe_sha256": "4ab2cc9e483056ebc60927e00fbf0533c70b9c4748e9b223d99ab51d80d30be2",
+      "dependencies": {
+        "original_custom.py": "78c6477a831786679f0828d6fbde136e42f231d6fef3f7fad5c1240ff133d7a5",
+        "original_custom_renderer.py": "ab93a8d2680395d820c1668f192613eef35d9c2df6878dbe09e4aa6e33d0687d",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "fc2d3a1c8e4f30ed5fd9636ece4b16c0ba25aa74e7b5ca321931f2f2be7439fa"
+  },
+  {
+    "path": "gfx/interface/country_selection_bg.dds",
+    "errors": [],
+    "protected_pixels": 81190,
+    "frames": 1,
+    "dimensions": [
+      1225,
+      848
+    ],
+    "fingerprint": {
+      "source_sha256": "22078043fa2376cb44c6c0823b6c20ec6d1908f009bb92b195a3282e7585d7fd",
+      "recipe_sha256": "81981efc59833da0cef382d6b4b6aaee8eeda8c1e4b15ab9d3ef118b6ce2e7c9",
+      "dependencies": {
+        "original_custom.py": "78c6477a831786679f0828d6fbde136e42f231d6fef3f7fad5c1240ff133d7a5",
+        "original_custom_renderer.py": "ab93a8d2680395d820c1668f192613eef35d9c2df6878dbe09e4aa6e33d0687d",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "97a6c54cbd1ef0a64ec680fc4dd01e19cf4c79dc3bd7a33b60e78d252940ff95"
+  },
+  {
+    "path": "gfx/interface/country_selection_entry.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 2,
+    "dimensions": [
+      290,
+      70
+    ],
+    "fingerprint": {
+      "source_sha256": "eeeae6e240fb9ab5bb35ad691a83144e517c0afd88c37f06207ed4297b569b6e",
+      "recipe_sha256": "4ab2cc9e483056ebc60927e00fbf0533c70b9c4748e9b223d99ab51d80d30be2",
+      "dependencies": {
+        "original_custom.py": "78c6477a831786679f0828d6fbde136e42f231d6fef3f7fad5c1240ff133d7a5",
+        "original_custom_renderer.py": "ab93a8d2680395d820c1668f192613eef35d9c2df6878dbe09e4aa6e33d0687d",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "e40e33897be3e8b52f368587d0557932b769c4f6e0377ed65a2af5dc5672c924"
+  },
+  {
+    "path": "gfx/interface/select_date_bg.dds",
+    "errors": [],
+    "protected_pixels": 0,
+    "frames": 1,
+    "dimensions": [
+      779,
+      712
+    ],
+    "fingerprint": {
+      "source_sha256": "7ed7434942113c4acae147cbbdcc39c267cab6de0a66c1dfc1c6847491c1ce30",
+      "recipe_sha256": "25f8fc2fecf2501b61ea49672ce98a91f763018998a657ab1b1329c074554fbc",
+      "dependencies": {
+        "original_custom.py": "78c6477a831786679f0828d6fbde136e42f231d6fef3f7fad5c1240ff133d7a5",
+        "original_custom_renderer.py": "ab93a8d2680395d820c1668f192613eef35d9c2df6878dbe09e4aa6e33d0687d",
+        "structural_renderer.py": "8f276938c73d581933df199ef8df3ca2f5fce754d1792805362401ddc634162c",
+        "crisp_renderer.py": "c628c9bd70a9a811d304104ccbbda35c90d2286239a71a22cb585036a3953049",
+        "structural_design.json": "24c258886f4fad5aa7d34a3f857210bffee20391f9b4bca3d97b731c4ca25f11"
+      }
+    },
+    "output_sha256": "50f68e2e39449a3ef21d52860a0c87ddd30515136e8cd709eeb8c35fe8601dbf"
+  }
+]

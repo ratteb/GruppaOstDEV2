@@ -1,0 +1,70 @@
+# Gruppa Ost compatibility adaptation for HOI4 1.18.3.0.7709.
+# Preserve the six native cruiser-submarine pools; nuclear-submarine types are absent.
+# Source: dlc/dlc043_gotterdammerung/gfx/interface/equipmentdesigner/graphic_db/04_gtdr_ship_icons.txt
+# Match the source DLC's loading boundary when this override is present without that DLC.
+
+FRA = {
+	ship_hull_cruiser_submarine = {
+		pool = {
+			limit = { has_dlc = "Gotterdammerung" }
+			weight = 5501
+			icons = { GFX_FRA_ship_hull_cruiser_submarine_medium }
+			models = { FRA_ship_hull_cruiser_submarine_entity }
+		}
+	}
+}
+
+GER = {
+	ship_hull_cruiser_submarine = {
+		pool = {
+			limit = { has_dlc = "Gotterdammerung" }
+			weight = 5501
+			icons = { GFX_GER_ship_hull_cruiser_submarine_medium }
+			models = { GER_ship_hull_cruiser_submarine_entity }
+		}
+	}
+}
+
+ITA = {
+	ship_hull_cruiser_submarine = {
+		pool = {
+			limit = { has_dlc = "Gotterdammerung" }
+			weight = 5501
+			icons = { GFX_ITA_ship_hull_cruiser_submarine_medium }
+			models = { ITA_ship_hull_cruiser_submarine_entity }
+		}
+	}
+}
+
+JAP = {
+	ship_hull_cruiser_submarine = {
+		pool = {
+			limit = { has_dlc = "Gotterdammerung" }
+			weight = 5501
+			icons = { GFX_JAP_ship_hull_cruiser_submarine_medium }
+			models = { JAP_ship_hull_cruiser_submarine_entity }
+		}
+	}
+}
+
+SOV = {
+	ship_hull_cruiser_submarine = {
+		pool = {
+			limit = { has_dlc = "Gotterdammerung" }
+			weight = 5501
+			icons = { GFX_SOV_ship_hull_cruiser_submarine_medium }
+			models = { SOV_ship_hull_cruiser_submarine_entity }
+		}
+	}
+}
+
+USA = {
+	ship_hull_cruiser_submarine = {
+		pool = {
+			limit = { has_dlc = "Gotterdammerung" }
+			weight = 5501
+			icons = { GFX_USA_ship_hull_cruiser_submarine_medium }
+			models = { USA_ship_hull_cruiser_submarine_entity }
+		}
+	}
+}

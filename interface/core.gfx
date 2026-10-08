@@ -318,6 +318,14 @@ spriteTypes = {
 		texturefile = "gfx//interface//icon_twitter.dds"
 	}
 	spriteType = {
+		name = "x"
+		texturefile = "gfx/interface/icon_twitter.dds"
+	}
+	spriteType = {
+		name = "bluesky"
+		texturefile = "gfx/interface/icon_bluesky.dds"
+	}
+	spriteType = {
 		name = "youtube"
 		texturefile = "gfx//interface//icon_youtube.dds"
 	}

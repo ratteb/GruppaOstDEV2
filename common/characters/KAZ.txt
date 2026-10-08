@@ -7,7 +7,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=right_wing_populism
+			ideology=conservatism_right_wing_populism
 			desc = ""
 			expire="3000.1.1.1"
 			id=-1

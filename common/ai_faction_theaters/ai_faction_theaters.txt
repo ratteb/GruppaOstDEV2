@@ -525,7 +525,7 @@ middle_east = {
 		236 # South Arabia
 		239 # Alborz
 		116 # Central Iranian Range
-		298 # Eastern Zagros
+		# 298 # Eastern Zagros; covered by current region 240.
 		
 	}
 	cancel = {
@@ -566,14 +566,14 @@ persia = {
 	regions = {
 		239 # Alborz
 		116 # Central Iranian Range
-		298 # Eastern Zagros
+		240 # Replaces native region 298; constituent provinces are in this campaign region.
 		203 # Persian Gulf
 		232 # Levant
 		28 # Middle East
 		241 # Dash-E Kavir
-		297 # Eastern Iranian Range
-		291 # Baluchistan
-		289 # South Afghanistan 
+		# 297 # Eastern Iranian Range; covered by current region 116.
+		190 # Replaces native region 291; constituent provinces are in this campaign region.
+		162 # Replaces native region 289; constituent provinces are in this campaign region.
 		134 # Caucasus
 	}
 	cancel = {
@@ -657,10 +657,10 @@ south_east_asia = {
 		142  # North Indochina
 		73  # Gulf of Thailand
 		187  # Sumatra
-		293  # Tenasserim
-		294  # Rangoon
+		189 # Replaces native region 293; constituent provinces are in this campaign region.
+		# 294  # Rangoon; covered by current region 189.
 		101  # Bay of Bengal
-		292  # Shan States
+		# 292  # Shan States; covered by current region 189.
 			
 	}
 	cancel = {
@@ -698,12 +698,12 @@ bengal = {
 	name = theater_bengal
 	regions = {
 		101  # Bay of Bengal
-		290  # Bengal
+		# 290  # Bengal; covered by current region 141.
 		231 # East Ghats
 		230 # Cape Comorin
-		294 # Rangoon
+		189 # Replaces native region 294; constituent provinces are in this campaign region.
 		141 # Eastern India
-		293  # Tenasserim
+		# 293  # Tenasserim; covered by current region 189.
 		31  # Deccan Plateau
 	}
 	cancel = {
@@ -745,11 +745,11 @@ northern_india = {
 		153  # Northern India
 		190  # Pakistan
 		162 # North Afghanistan
-		289 # South Afghanistan
-		291 # Baluchistan
-		296 # Gujarat
+		# 289 # South Afghanistan; covered by current region 162.
+		# 291 # Baluchistan; covered by current region 190.
+		254 # Replaces native region 296; constituent provinces are in this campaign region.
 		251  # Ngari
-		297  # Eastern Iranian range
+		116 # Replaces native region 297; constituent provinces are in this campaign region.
 		104  # Arabian Sea
 	}
 	cancel = {

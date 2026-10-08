@@ -109,7 +109,7 @@ guiTypes = {
 				name = "options_grid"
 				position = { x = 453 y = 5 }
 				size = { width = 300 height = 30 }
-				slotsize = { width = 300 height = 47 }
+				slotsize = { width = 300 height = 60 }
 				max_slots_horizontal = 1
 				format = "UPPER_LEFT"
 			}
@@ -293,7 +293,7 @@ guiTypes = {
 				name = "options_grid"
 				position = { x = 90 y = 120 }
 				size = { width = 300 height = 0 }
-				slotsize = { width = 300 height = 47 }
+				slotsize = { width = 300 height = 60 }
 				max_slots_horizontal = 1
 				Orientation = UPPER_LEFT
 			}
@@ -432,7 +432,7 @@ guiTypes = {
 				name = "options_grid"
 				position = { x = 115 y = 10 }
 				size = { width = 300 height = 0 }
-				slotsize = { width = 300 height = 47 }
+				slotsize = { width = 300 height = 60 }
 				max_slots_horizontal = 1
 				Orientation = UPPER_LEFT
 			}
@@ -461,8 +461,8 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "EventWindow_News"
-		position = { x=-282 y=-310 }	
-		size = { width = 628 height = 1022 }
+		position = { x=-314 y=-440 }	
+		size = { width = 628 height = 880 }
 		moveable = yes
 		Orientation = CENTER
 		show_sound = world_news_effect
@@ -470,46 +470,47 @@ guiTypes = {
 		
 		background = {
 			name = "Background"	
-			spriteType ="GFX_event_news_bg"
+			quadTextureSprite = "GFX_event_news_bg"
 		}
 
 		containerWindowType = {
 			name = "top_Window"
 			position = { x=0 y=0 }	
-			size = { width = 581 height =121 }
+			size = { width = 628 height = 272 }
 			Orientation = UPPER_LEFT
 
 			iconType =
 			{
 				name ="event_picture"
 				spriteType = "GFX_news_event_001"
-				position = { x = 22 y = 794 }
+				position = { x = 22 y = 86 }
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = yes
 			}
 			
 			iconType = {
 				name ="event_picture_overlay"
-				spriteType = ""
-				position = { x = 59 y = 750 }
+				spriteType = "GFX_GO_news_picture_holder"
+				position = { x = 12 y = 76 }
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = yes
 			}			
 			
 			instantTextBoxType = {
 				name = "Title"
-				position = { x = 26 y = 68 }
-				font = "TD_event_font_26pt"
+				position = { x = 60 y = 18 }
+				font = "TD_event_font_18pt"
 				borderSize = {x = 0 y = 0}
 				text = "Title text here!"	
-				maxWidth = 570
-				maxHeight = 65
+				maxWidth = 540
+				maxHeight = 44
+				vertical_alignment = center
 				format = centre
 			}
 			
 			buttonType = {
 				name = "btn_minimize"
-				position = {x=10 y=10}
+				position = {x=20 y=20}
 				spriteType = "GFX_event_button_minimize"
 				clicksound = click_default
 			}
@@ -517,17 +518,17 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "midsection"
-			position = { x=0 y=0 }	
-			size = { width = 580 height = 639 }
+			position = { x=0 y=272 }	
+			size = { width = 628 height = 0 }
 			Orientation = UPPER_LEFT
 		
 			instantTextBoxType = {
 				name = "Description"
-				position = { x = 39 y = 170 }
-				font = "TD_event_font_18pt"
+				position = { x = 30 y = 12 }
+				font = "TD_event_font_14pt"
 				borderSize = {x = 0 y = 0}
 				text = "Long text here!"	
-				maxWidth = 570
+				maxWidth = 568
 				maxHeight = 639
 				format = left
 			}	
@@ -536,15 +537,15 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "bottom_Window"
-			position = { x=0 y=300 }	
-			size = { width = 581 height = 455 }
+			position = { x=0 y=272 }	
+			size = { width = 628 height = 204 }
 			Orientation = UPPER_LEFT
 
 			gridBoxType = {
 				name = "options_grid"
-				position = { x = 120 y = 328 }
-				size = { width = 300 height = 30 }
-				slotsize = { width = 300 height = 48 }
+				position = { x = 216 y = 18 }
+				size = { width = 196 height = 180 }
+				slotsize = { width = 196 height = 60 }
 				max_slots_horizontal = 1
 				format = "UPPER_LEFT"
 			}
@@ -553,7 +554,7 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "event_option_entry"
-		size = { width = 352 height = 100 }
+		size = { width = 196 height = 54 }
 		clipping = no
 		
 		background = {
@@ -563,10 +564,10 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name = "Name"
-			position = { x = -70 y = -8 }
-			font = "TD_event_font_18pt"
-			maxWidth = 340
-			maxHeight = 40
+			position = { x = 10 y = 4 }
+			font = "TD_event_font_12pt"
+			maxWidth = 176
+			maxHeight = 46
 			format = center
 			vertical_alignment = center
 			alwaystransparent = yes

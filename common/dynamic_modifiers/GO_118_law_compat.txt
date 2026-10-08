@@ -1,0 +1,11 @@
+# Referenced by the existing uncontrolled_exports law's removal callback.
+# Source: installed HOI4 1.18.3.0.7709, common/dynamic_modifiers/0_dynamic_modifiers.txt:318.
+# Restore the native definition only; no campaign script applies it here.
+international_city = {
+	enable = { always = yes }
+	icon = GFX_modifiers_sabotaged_resource
+	state_resources_factor = -1
+	recruitable_population_factor = -1
+	local_factories = -1
+	disable_strategic_redeployment = yes
+}

@@ -306,6 +306,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_prod_naval_equipment_item_large"
 		textureFile = "gfx//interface//prod_naval_equipment_item_large.dds"
+		effectFile = "gfx/FX/GO_equipment_hover.shader"
 	}	
 
 	frameAnimatedSpriteType = {
@@ -369,21 +370,25 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_prod_land_equipment_item_large"
 		textureFile = "gfx//interface//prod_land_equipment_item_large.dds"
+		effectFile = "gfx/FX/GO_equipment_hover.shader"
 	}
 
 	spriteType = {
 		name = "GFX_naval_item_collapsed"
 		textureFile = "gfx//interface//naval_item_collapsed.dds"
+		effectFile = "gfx/FX/GO_equipment_hover.shader"
 	}
 
 	spriteType = {
 		name = "GFX_equipment_item_collapsed"
 		textureFile = "gfx//interface//equipment_item_collapsed.dds"
+		effectFile = "gfx/FX/GO_equipment_hover.shader"
 	}
 
 	spriteType = {
 		name = "GFX_equipment_item_collapsed_wide"
 		textureFile = "gfx//interface//equipment_item_collapsed_wide.dds"
+		effectFile = "gfx/FX/GO_equipment_hover.shader"
 	}
 
 	spriteType = {
@@ -406,12 +411,14 @@ spriteTypes = {
 		name = "GFX_equipment_item_large_02"
 		textureFile = "gfx//interface//equipment_item_large_02.dds"
 		noOfFrames = 2
+		effectFile = "gfx/FX/GO_equipment_hover.shader"
 	}
 	
 	spriteType = {
 		name = "GFX_naval_equipment_item_large"
 		textureFile = "gfx//interface//naval_equipment_item_large.dds"
 		noOfFrames = 2
+		effectFile = "gfx/FX/GO_equipment_hover.shader"
 	}
 
 	spriteType = {
@@ -727,5 +734,35 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_production_prohibition_sign_icon"
 		textureFile = "gfx/interface/equipmentdesigner/production_prohibition_sign_icon.dds"
+	}
+
+	# Fitted slate counterparts for production equipment cards.
+	spriteType = {
+		name = "GFX_GO_outdated_land"
+		textureFile = "gfx/interface/GO_outdated_land.dds"
+	}
+	spriteType = {
+		name = "GFX_GO_outdated_naval"
+		textureFile = "gfx/interface/GO_outdated_naval.dds"
+	}
+	spriteType = {
+		name = "GFX_GO_outdated_land_small"
+		textureFile = "gfx/interface/GO_outdated_land_small.dds"
+	}
+	spriteType = {
+		name = "GFX_GO_outdated_rail_small"
+		textureFile = "gfx/interface/GO_outdated_rail_small.dds"
+	}
+	spriteType = {
+		name = "GFX_GO_outdated_naval_small"
+		textureFile = "gfx/interface/GO_outdated_naval_small.dds"
+	}
+	spriteType = {
+		name = "GFX_GO_outdated_land_choice"
+		textureFile = "gfx/interface/GO_outdated_land_choice.dds"
+	}
+	spriteType = {
+		name = "GFX_GO_outdated_naval_choice"
+		textureFile = "gfx/interface/GO_outdated_naval_choice.dds"
 	}
 }

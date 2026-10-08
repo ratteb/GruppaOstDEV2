@@ -1,9 +1,23 @@
 {
-  "checked_holders": 11,
-  "owned_resources_checked": 1548,
-  "protected_files": 4632,
-  "protected_pixels_across_mips": 53151,
-  "repeating_centres_checked": 3,
-  "failures": [],
+  "checked_holders": 10,
+  "owned_resources_checked": 1555,
+  "protected_files": 4625,
+  "protected_pixels_across_mips": 3668,
+  "repeating_centres_checked": 2,
+  "failures": [
+    "Installed ownership changed gfx/interface/add_prod_aircraft_line.dds",
+    "Installed ownership changed gfx/interface/add_prod_armour_line.dds",
+    "Installed ownership changed gfx/interface/add_prod_inf_art_line.dds",
+    "Installed ownership changed gfx/interface/add_prod_naval_line.dds",
+    "Installed ownership changed gfx/interface/equipment_item_collapsed.dds",
+    "Installed ownership changed gfx/interface/equipment_item_collapsed_wide.dds",
+    "Installed ownership changed gfx/interface/equipment_item_large_02.dds",
+    "Installed ownership changed gfx/interface/naval_equipment_item_large.dds",
+    "Installed ownership changed gfx/interface/naval_item_collapsed.dds",
+    "Installed ownership changed gfx/interface/naval_repair_view_button.dds",
+    "Installed ownership changed gfx/interface/prod_land_equipment_item_large.dds",
+    "Installed ownership changed gfx/interface/prod_naval_equipment_item_large.dds",
+    "Installed ownership changed gfx/interface/topbar/background_extended.dds"
+  ],
   "in_game_validated": false
 }

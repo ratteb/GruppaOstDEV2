@@ -6,6 +6,11 @@ set_research_slots = 4
 
 # Starting tech
 set_technology = {
+	# Minimum equipment unlocks required by the authored starting divisions.
+	apc_vehicle = 1
+	ifv_vehicle = 1
+	rocket_artillery = 1
+	motorized_rocket_unit = 1
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	improved_infantry_weapons = 1

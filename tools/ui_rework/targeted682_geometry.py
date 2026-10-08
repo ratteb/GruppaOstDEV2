@@ -92,6 +92,9 @@ def tile_corners(image, design):
 
 def apply(image, asset, design):
     mode=design.get('detailed_geometry',{}).get(asset['path'])
+    if mode and mode.startswith('country_'):
+        import country_followup_geometry
+        return country_followup_geometry.apply(image,mode,design)
     if mode=='topbar_main':main_bar(image,design)
     elif mode=='topbar_right':right_bar(image,design)
     elif mode=='focus_canvas':tile_corners(image,design)

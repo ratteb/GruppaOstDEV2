@@ -149,7 +149,8 @@ DOCTRINE_SF_superior_firepower_ratios = {
 
 DOCTRINE_SF_concentrated_fire_plans_ratios = {
 	enable = {
-		has_completed_subdoctrine = fire_concentration
+		always = no # The inherited subdoctrine is not defined in this campaign.
+		# has_completed_subdoctrine = fire_concentration
 	}
 	abort = {
 		always = no
@@ -266,7 +267,8 @@ DOCTRINE_GB_aifc_mechanized_offensive = {
 
 DOCTRINE_GB_aifc_assault_concentration = {
 	enable = {
-		has_doctrine = grand_assault
+		always = no # The inherited subdoctrine is not defined in this campaign.
+		# has_doctrine = grand_assault
 	}
 	abort_when_not_enabled = yes
 
@@ -278,7 +280,8 @@ DOCTRINE_GB_aifc_assault_concentration = {
 
 DOCTRINE_GB_aifc_assault_breakthrough = {
 	enable = {
-		has_completed_subdoctrine = grand_assault
+		always = no # The inherited subdoctrine is not defined in this campaign.
+		# has_completed_subdoctrine = grand_assault
 	}
 	abort_when_not_enabled = yes
 
@@ -290,7 +293,8 @@ DOCTRINE_GB_aifc_assault_breakthrough = {
 
 DOCTRINE_GB_aifc_armored_operations = {
 	enable = {
-		has_doctrine = infiltration_tactics
+		always = no # The inherited subdoctrine is not defined in this campaign.
+		# has_doctrine = infiltration_tactics
 	}
 	abort_when_not_enabled = yes
 
@@ -302,7 +306,8 @@ DOCTRINE_GB_aifc_armored_operations = {
 
 DOCTRINE_GB_aifc_infiltration_in_depth = {
 	enable = {
-		has_completed_subdoctrine = infiltration_tactics
+		always = no # The inherited subdoctrine is not defined in this campaign.
+		# has_completed_subdoctrine = infiltration_tactics
 	}
 	abort_when_not_enabled = yes
 
@@ -317,7 +322,8 @@ DOCTRINE_GB_aifc_infiltration_in_depth = {
 
 DOCTRINE_MA_mass_assault_ratios = {
 	enable = {
-		has_doctrine = deep_battle
+		always = no # The inherited subdoctrine is not defined in this campaign.
+		# has_doctrine = deep_battle
 	}
 	abort = {
 		always = no
@@ -338,7 +344,8 @@ DOCTRINE_MA_mass_assault_ratios = {
 
 DOCTRINE_MA_large_front_operations_ratios = {
 	enable = {
-		has_completed_subdoctrine = deep_battle
+		always = no # The inherited subdoctrine is not defined in this campaign.
+		# has_completed_subdoctrine = deep_battle
 	}
 	abort = {
 		always = no

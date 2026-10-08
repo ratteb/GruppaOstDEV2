@@ -17,6 +17,27 @@ GO_econ_state_ammunition_assignment_initialized = {
     check_variable = { GO_econ_state_ammunition_assignment_schema_version = 1 }
 }
 
+# STATE. Zero native capacity needs no authored assignment only when its record
+# is absent or exactly fresh/unavailable. Partial or invalid saved records block.
+GO_econ_state_ammunition_has_no_assignment = {
+    OR = {
+        AND = {
+            NOT = { has_variable = GO_econ_state_ammunition_assignment_schema_version }
+            NOT = { has_variable = GO_econ_state_ammunition_assigned_levels }
+            NOT = { has_variable = GO_econ_state_ammunition_assignment_populated }
+            NOT = { has_variable = GO_econ_state_ammunition_assignment_owner }
+        }
+        AND = {
+            GO_econ_state_ammunition_assignment_initialized = yes
+            has_variable = GO_econ_state_ammunition_assigned_levels
+            has_variable = GO_econ_state_ammunition_assignment_populated
+            check_variable = { GO_econ_state_ammunition_assigned_levels = 0 }
+            check_variable = { GO_econ_state_ammunition_assignment_populated = 0 }
+            NOT = { has_variable = GO_econ_state_ammunition_assignment_owner }
+        }
+    }
+}
+
 # STATE. The existing project building has a physical maximum of 20 levels.
 GO_econ_state_ammunition_physical_levels_valid = {
     check_variable = { var = building_level@ammunition_plant value = 0 compare = greater_than_or_equals }
@@ -111,8 +132,7 @@ GO_econ_country_ammunition_plant_capacity_ready = {
                 OR = {
                     AND = {
                         check_variable = { building_level@ammunition_plant = 0 }
-                        NOT = { check_variable = { GO_econ_state_ammunition_assignment_populated = 1 } }
-                        NOT = { check_variable = { GO_econ_state_ammunition_assigned_levels > 0 } }
+                        GO_econ_state_ammunition_has_no_assignment = yes
                     }
                     GO_econ_state_has_ammunition_assignment = yes
                 }
@@ -170,7 +190,7 @@ GO_econ_ammunition_plant_recipe_numbers_ready = {
 # COUNTRY. Historical gross recipe flows are labelled with their own day.
 # Current assignment/input readiness is separate from this stored last result.
 GO_econ_country_ammunition_plant_report_ready = {
-    GO_econ_country_ammunition_production_initialized = yes
+    GO_econ_country_ammunition_plant_report_capacity_ready = yes
     has_variable = GO_econ_country_ammunition_plant_report_populated
     check_variable = { GO_econ_country_ammunition_plant_report_populated = 1 }
     has_variable = GO_econ_country_ammunition_plant_report_day
@@ -186,6 +206,7 @@ GO_econ_country_ammunition_plant_report_ready = {
         check_variable = { GO_econ_country_ammunition_plant_status = 1 }
         AND = {
             check_variable = { GO_econ_country_ammunition_plant_status = 2 }
+            check_variable = { var = GO_econ_country_ammunition_plant_report_assigned value = 0 compare = greater_than }
             check_variable = { GO_econ_country_ammunition_plant_operating = 0 }
         }
     }
@@ -195,4 +216,43 @@ GO_econ_country_ammunition_plant_report_ready = {
     set_temp_variable = { GO_econ_ammunition_report_expected_output = GO_econ_country_ammunition_plant_operating }
     multiply_temp_variable = { var = GO_econ_ammunition_report_expected_output value = 0.5 }
     check_variable = { GO_econ_country_ammunition_plant_output_k = GO_econ_ammunition_report_expected_output }
+    OR = {
+        AND = {
+            check_variable = { GO_econ_country_ammunition_plant_status = 1 }
+            check_variable = { GO_econ_country_ammunition_plant_operating = GO_econ_country_ammunition_plant_report_assigned }
+        }
+        check_variable = { GO_econ_country_ammunition_plant_status = 2 }
+    }
+}
+
+# COUNTRY. Dated attempt status; unavailable status 0 never publishes zero flows.
+GO_econ_country_ammunition_plant_report_attempt_ready = {
+    GO_econ_country_ammunition_production_initialized = yes
+    has_variable = GO_econ_country_ammunition_plant_report_day
+    check_variable = { GO_econ_country_ammunition_plant_report_day = GO_econ_country_ammunition_plant_last_day }
+    check_variable = { var = GO_econ_country_ammunition_plant_report_day value = 0 compare = greater_than_or_equals }
+    has_variable = GO_econ_country_ammunition_plant_status
+    OR = {
+        check_variable = { GO_econ_country_ammunition_plant_status = 0 }
+        check_variable = { GO_econ_country_ammunition_plant_status = 1 }
+        check_variable = { GO_econ_country_ammunition_plant_status = 2 }
+    }
+}
+
+# COUNTRY. Historical built/assigned snapshot, separate from live capacity.
+GO_econ_country_ammunition_plant_report_capacity_ready = {
+    GO_econ_country_ammunition_plant_report_attempt_ready = yes
+    has_variable = GO_econ_country_ammunition_plant_report_capacity_populated
+    check_variable = { GO_econ_country_ammunition_plant_report_capacity_populated = 1 }
+    has_variable = GO_econ_country_ammunition_plant_report_built
+    has_variable = GO_econ_country_ammunition_plant_report_assigned
+    check_variable = { var = GO_econ_country_ammunition_plant_report_built value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_ammunition_plant_report_assigned value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_ammunition_plant_report_assigned value = GO_econ_country_ammunition_plant_report_built compare = less_than_or_equals }
+    set_temp_variable = { GO_econ_ammunition_report_built_fraction = GO_econ_country_ammunition_plant_report_built }
+    set_temp_variable = { GO_econ_ammunition_report_assigned_fraction = GO_econ_country_ammunition_plant_report_assigned }
+    modulo_temp_variable = { var = GO_econ_ammunition_report_built_fraction value = 1 }
+    modulo_temp_variable = { var = GO_econ_ammunition_report_assigned_fraction value = 1 }
+    check_variable = { GO_econ_ammunition_report_built_fraction = 0 }
+    check_variable = { GO_econ_ammunition_report_assigned_fraction = 0 }
 }

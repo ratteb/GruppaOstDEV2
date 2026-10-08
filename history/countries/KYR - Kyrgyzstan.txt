@@ -99,7 +99,7 @@ create_country_leader = {
 	name = "Mr Generic"
 	desc = ""
 	picture = GFX_portrait_Mir_Jafar_Baghirov
-	ideology = right_wing_populism
+	ideology = conservatism_right_wing_populism
 	traits = {
 		
 	}

@@ -14,12 +14,87 @@ buildings = {
 			state_max = 5
 		}
 	}
+
+	# Stage 7 specialized plants provide assigned national capacity only.
+	# The shared 20-level cap and 6400 native IC cost are editable starter
+	# calibration, matching the existing ammunition plant. IC is not money.
+	# Direct construction stays blocked until funded construction is integrated.
+	# These definitions grant no native resources, fuel or ordinary PU capacity.
+	GO_econ_steel_plant = {
+		show_on_map = 1
+		spawn_point = GO_econ_steel_plant_spawn
+		base_cost = 6400
+		icon_frame = 1
+		is_buildable = no
+		only_display_if_exists = yes
+		level_cap = {
+			shares_slots = yes
+			state_max = 20
+		}
+	}
+	GO_econ_aluminium_plant = {
+		show_on_map = 1
+		spawn_point = GO_econ_aluminium_plant_spawn
+		base_cost = 6400
+		icon_frame = 1
+		is_buildable = no
+		only_display_if_exists = yes
+		level_cap = {
+			shares_slots = yes
+			state_max = 20
+		}
+	}
+	GO_econ_rubber_plant = {
+		show_on_map = 1
+		spawn_point = GO_econ_rubber_plant_spawn
+		base_cost = 6400
+		icon_frame = 1
+		is_buildable = no
+		only_display_if_exists = yes
+		level_cap = {
+			shares_slots = yes
+			state_max = 20
+		}
+	}
+	GO_econ_semiconductor_factory = {
+		show_on_map = 1
+		spawn_point = GO_econ_semiconductor_factory_spawn
+		base_cost = 6400
+		icon_frame = 1
+		is_buildable = no
+		only_display_if_exists = yes
+		level_cap = {
+			shares_slots = yes
+			state_max = 20
+		}
+	}
 }
 
 # An authored map/buildings.txt position is required before the state location
 # readiness input may be set. No campaign positions are supplied by Stage 5.
 spawn_points = {
 	GO_econ_substation_spawn = {
+		type = state
+		max = 1
+		disable_auto_nudging = yes
+	}
+	# Stage 7 supplies loading references, not authored campaign map positions.
+	GO_econ_steel_plant_spawn = {
+		type = state
+		max = 1
+		disable_auto_nudging = yes
+	}
+	GO_econ_aluminium_plant_spawn = {
+		type = state
+		max = 1
+		disable_auto_nudging = yes
+	}
+	GO_econ_rubber_plant_spawn = {
+		type = state
+		max = 1
+		disable_auto_nudging = yes
+	}
+	GO_econ_semiconductor_factory_spawn = {
 		type = state
 		max = 1
 		disable_auto_nudging = yes

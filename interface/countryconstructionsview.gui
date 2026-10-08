@@ -45,6 +45,88 @@ guiTypes = {
 		}
 		
 		containerWindowType = {
+			name = "count_container"
+			position = { x=-220 y=12 }
+			orientation = upper_right
+			iconType ={
+				name ="bg"
+				spriteType = "GFX_generic_box_80"
+				position = { x=35 y=1 }
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "REPAIR_ASSIGNMENT_INFO_FACTORIES"
+			}
+
+			iconType = {
+				name = "factories_used"
+				position = { x=3 y=2 }
+				spriteType = "GFX_factory_icon_with_wrench"
+				frame = 1
+				pdx_tooltip = "REPAIR_ASSIGNMENT_INFO_FACTORIES"
+			}
+
+			instantTextboxType = {
+				name = "factories_used_txt"
+				position = { x=50 y=6 }
+				font = "hoi_18b"
+				borderSize = {x = 0 y = 0}
+				text = "42"
+				maxWidth = 50
+				maxHeight = 25
+				fixedsize = yes
+				format = center
+				pdx_tooltip = "REPAIR_ASSIGNMENT_INFO_FACTORIES"
+			}
+			buttonType = {
+				name = "factories_sub_1x"
+				position = { x=31 y=2 }
+				quadTextureSprite = "GFX_subtract_one"
+				font = "hoi_16mbs"
+				clicksound = click_default
+				pdx_tooltip = "PRODUCTION_SUB_FACTORIES_CLICK"
+			}
+			buttonType = {
+				name = "factories_sub_5x"
+				position = { x=31 y=2 }
+				quadTextureSprite = "GFX_subtract_5"
+				font = "hoi_16mbs"
+				clicksound = click_default
+				pdx_tooltip = "PRODUCTION_SUB_FACTORIES_CLICK"
+			}
+			buttonType = {
+				name = "factories_sub_10x"
+				position = { x=31 y=2 }
+				quadTextureSprite = "GFX_subtract_10"
+				font = "hoi_16mbs"
+				clicksound = click_default
+				pdx_tooltip = "PRODUCTION_SUB_FACTORIES_CLICK"
+			}
+			buttonType = {
+				name = "factories_add_1x"
+				position = { x=95 y=2 }
+				quadTextureSprite = "GFX_add_one"
+				font = "hoi_16mbs"
+				clicksound = click_default
+				pdx_tooltip = "PRODUCTION_ADD_FACTORIES_CLICK"
+			}
+			buttonType = {
+				name = "factories_add_5x"
+				position = { x=95 y=2 }
+				quadTextureSprite = "GFX_add_5"
+				font = "hoi_16mbs"
+				clicksound = click_default
+				pdx_tooltip = "PRODUCTION_ADD_FACTORIES_CLICK"
+			}
+			buttonType = {
+				name = "factories_add_10x"
+				position = { x=95 y=2 }
+				quadTextureSprite = "GFX_add_10"
+				font = "hoi_16mbs"
+				clicksound = click_default
+				pdx_tooltip = "PRODUCTION_ADD_FACTORIES_CLICK"
+			}
+		}
+
+		containerWindowType = {
 			name = "production_win_top"
 			position = { x = 28 y = 26 }
 			size = { width = 100% height = 80% }
@@ -122,23 +204,47 @@ guiTypes = {
 				format = right
 			}
 
-			iconType = {
-				name = "construction_speed_icon"
-				position = { x = 264 y = 45 }
-				spriteType = "GFX_construction_speed_icon"
+			containerWindowType = {
+				name = "speed_container"
+				position = { x = 264 y = 0 }
+				size = { width = 100 height = 30 }
+				clipping = no
+
+				iconType = {
+					name = "construction_speed_icon"
+					position = { x = 0 y = 45 }
+					spriteType = "GFX_construction_speed_icon"
+				}
+
+				instantTextboxType = {
+					name = "construction_speed_value"
+					position = { x = 51 y = 44 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = {x = 0 y = 0}
+					text = "99"
+					maxWidth = 70
+					maxHeight = 20
+					format = right
+				}
+
+				containerWindowType = {
+					name = "resource_strip_container"
+					position = { x=30 y=36 }
+					size = { width = 70 height = 30 }
+
+					gridBoxType = {
+						orientation = "CENTER_UP"
+						name = "resources_grid"
+						position = { x = 0 y = 4 }
+						size = { width = 100% height = 100% }
+						slotsize = { width = 70 height = 31 }
+						max_slots = { x = 7 y = 1 }
+						add_horizontal = no
+						format = "UPPER_LEFT"
+					}
+				}
 			}
-			
-			instantTextboxType = {
-				name = "construction_speed_value"
-				position = { x = 315 y = 44 }
-				textureFile = ""
-				font = "hoi_18mbs"
-				borderSize = {x = 0 y = 0}
-				text = "99"
-				maxWidth = 70
-				maxHeight = 20
-				format = right
-			}			
 			
 		}
 			
@@ -224,67 +330,111 @@ guiTypes = {
 #				quadTextureSprite ="GFX_tiled_plain_bg_small"
 #			}
 
-			iconType = {
-				name = "constructions_bg1"
-				position = { x = 0 y = 6 }
-				quadTextureSprite = "GFX_constructions_bg2"
+			containerWindowType = {
+				name = "possible_state_constructions"
+				position = { x = 0 y = 0 }
+				size = { width = 104 height = 100% }
+				clipping = no
+
+				iconType = {
+					name = "constructions_bg1"
+					position = { x = 0 y = 6 }
+					quadTextureSprite = "GFX_constructions_bg2"
+				}
+
+				iconType = {
+					name = "state_constructions"
+					position = { x = 5 y = 9 }
+					quadTextureSprite = "GFX_state_constructions"
+				}
+
+				gridBoxType = {
+					name = "non_shared_item_grid"
+					position = { x = 8 y = 51 }
+					size = { width = 100% height = 100% }
+					slotsize = { width = 46 height = 44 }
+					max_slots_horizontal = 2
+					format = "UPPER_LEFT"
+				}
 			}
 
-			iconType = {
-				name = "constructions_bg2"
-				position = { x = 0 y = 152 }
-				quadTextureSprite = "GFX_constructions_bg4"
-			}
-			
-			iconType = {
-				name = "constructions_bg3"
-				position = { x = 0 y = 430 }
-				quadTextureSprite = "GFX_constructions_bg1"
+			containerWindowType = {
+				name = "possible_shared_constructions"
+				position = { x = 0 y = 146 }
+				size = { width = 104 height = 100% }
+				clipping = no
+
+				iconType = {
+					name = "constructions_bg2"
+					position = { x = 0 y = 6 }
+					quadTextureSprite = "GFX_constructions_bg4"
+				}
+
+				iconType = {
+					name = "shared_constructions"
+					position = { x = 5 y = 9 }
+					quadTextureSprite = "GFX_shared_constructions"
+				}
+
+				gridBoxType = {
+					name = "shared_item_grid"
+					position = { x = 8 y = 50 }
+					size = { width = 100% height = 100% }
+					slotsize = { width = 46 height = 44 }
+					max_slots_horizontal = 2
+					format = "UPPER_LEFT"
+				}
 			}
 
-			iconType = {
-				name = "state_constructions"
-				position = { x = 5 y = 9 }
-				quadTextureSprite = "GFX_state_constructions"
+			containerWindowType = {
+				name = "possible_province_constructions"
+				position = { x = 0 y = 424 }
+				size = { width = 104 height = 100% }
+				clipping = no
+
+				iconType = {
+					name = "constructions_bg3"
+					position = { x = 0 y = 6 }
+					quadTextureSprite = "GFX_constructions_bg1"
+				}
+
+				iconType = {
+					name = "province_constructions"
+					position = { x = 5 y = 9 }
+					quadTextureSprite = "GFX_province_constructions"
+				}
+
+				gridBoxType = {
+					name = "province_item_grid"
+					position = { x = 8 y = 48 }
+					size = { width = 100% height = 100% }
+					slotsize = { width = 46 height = 44 }
+					max_slots_horizontal = 2
+					format = "UPPER_LEFT"
+				}
 			}
 
-			iconType = {
-				name = "shared_constructions"
-				position = { x = 5 y = 155 }
-				quadTextureSprite = "GFX_shared_constructions"
-			}
+			containerWindowType = {
+				name = "possible_facility_constructions"
+				position = { x = 0 y = 568 }
+				size = { width = 104 height = 100% }
+			
 
-			iconType = {
-				name = "province_constructions"
-				position = { x = 5 y = 433 }
-				quadTextureSprite = "GFX_province_constructions"
-			}
-			
-			gridBoxType = {
-				name = "non_shared_item_grid"
-				position = { x = 8 y = 51 }
-				size = { width = 100% height = 100% }
-				slotsize = { width = 46 height = 44 }
-				max_slots_horizontal = 2
-				format = "UPPER_LEFT"
-			}
-			
-			gridBoxType = {
-				name = "shared_item_grid"
-				position = { x = 8 y = 196 }
-				size = { width = 100% height = 100% }
-				slotsize = { width = 46 height = 44 }
-				max_slots_horizontal = 2
-				format = "UPPER_LEFT"
-			}
-			
-			gridBoxType = {
-				name = "province_item_grid"
-				position = { x = 8 y = 472 }
-				size = { width = 100% height = 100% }
-				slotsize = { width = 46 height = 44 }
-				max_slots_horizontal = 2
-				format = "UPPER_LEFT"
+				iconType = {
+					name = "facility_constructions"
+					position = { x = 5 y = 9 }
+					quadTextureSprite = "GFX_facility_constructions"
+				}
+
+
+				gridBoxType = {
+					name = "facility_item_grid"
+					position = { x = 8 y = 52 }
+					size = { width = 100% height = 100% }
+					slotsize = { width = 46 height = 44 }
+					max_slots_horizontal = 2
+					format = "UPPER_LEFT"
+				}
 			}
 			
 			buttonType = {

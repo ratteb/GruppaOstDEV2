@@ -65,7 +65,7 @@ faction_goal_marine_corps = {
 				operators = { faction_members }
 				name = FACTION
 			}
-			unit_category = { marine marine_commando amphibious_mechanized category_amphibious_tanks }
+			unit_category = { marine marine_commando category_amphibious_tanks } # amphibious_mechanized is not a campaign sub-unit.
 			equipment_ratio = 0.9
 			size > 29
 		}

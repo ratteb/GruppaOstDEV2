@@ -97,6 +97,12 @@ class Sources:
 
 def build(paths=None):
     m = load(); count=0
+    scope=m.get('active_scope',{})
+    if scope.get('mode')=='original_custom_ui_only':
+        if paths is None or set(paths)-set(scope['paths']):
+            raise RuntimeError('Wider rollout suspended by user: select an original-custom screen group only.')
+        if any(a.get('builder')=='original_custom.py' for a in selected(m,paths)):
+            raise RuntimeError('Use original_custom.py for the reviewed screen-specific recipes; generic rendering would discard their structure.')
     with Sources() as z:
         for a in selected(m, paths):
             source=z.read_asset(a); image=c.image(source)
@@ -223,8 +229,8 @@ def coverage():
 
 def restore():
     m=load()
-    if m.get('last_correction')=='targeted682':
-        raise RuntimeError('Recover the targeted682_before.zip snapshot first; full-rollout recovery must not silently undo later user-approved holders.')
+    if m.get('last_correction') in {'targeted682','country_followup','original_custom_first'} or any(a.get('before_archive') for a in m['assets']):
+        raise RuntimeError('Recover the applicable narrow-pass snapshot first; full-rollout recovery must not silently undo later user-approved holders.')
     owned=[a for a in m['assets'] if a['built']]
     # Check the entire recovery operation before replacing or removing files.
     for a in owned:

@@ -1,0 +1,73 @@
+{
+  "target": "1.18.*",
+  "installed_source": "1.18.3.0.7709",
+  "in_game_tested": false,
+  "shader_compiled_in_game": false,
+  "fix": "Match current and outdated equipment hover with the same three-pixel blue rim; both card faces retain their normal RGB.",
+  "backup": "tools/ui_rework/equipment_hover_match_before.zip",
+  "assets": [
+    {
+      "path": "gfx\\interface\\prod_land_equipment_item_large.dds",
+      "before_sha256": "8a92808b31b5c6c6d1ba6f19e0b9a9b7550748bbf34d8527528bd624ed98e55f",
+      "after_sha256": "ed56c273c25830b5ffda833bcd8c9350303824333069b7ef9f5fdf033daf4acd"
+    },
+    {
+      "path": "gfx\\interface\\prod_naval_equipment_item_large.dds",
+      "before_sha256": "7b44113dffc8ee2798ab7bf6cafe03c321c90f219f89cf4e7211a12c6e3f1043",
+      "after_sha256": "e4a2a9fb9e774e1c1c4f2d863fc687f839cbe0be17a2f19eaaa5df2b3201fecb"
+    },
+    {
+      "path": "gfx\\interface\\equipment_item_collapsed.dds",
+      "before_sha256": "d75992a884291e19aead667f8726123fed5025e26e68ff60f4e711ed4053a421",
+      "after_sha256": "945a2a18b58f6506ce691ce7f05261cac5f93cea46d069506bde7ce3b68108a5"
+    },
+    {
+      "path": "gfx\\interface\\equipment_item_collapsed_wide.dds",
+      "before_sha256": "ef8062083b1edb6798ffb5048864e76655a3200629cc59235752e3add890154a",
+      "after_sha256": "413fdef1b442dc99af9c69db288f434ac27994b24d690c5f2a25c923fa936026"
+    },
+    {
+      "path": "gfx\\interface\\naval_item_collapsed.dds",
+      "before_sha256": "ef8062083b1edb6798ffb5048864e76655a3200629cc59235752e3add890154a",
+      "after_sha256": "413fdef1b442dc99af9c69db288f434ac27994b24d690c5f2a25c923fa936026"
+    },
+    {
+      "path": "gfx\\interface\\equipment_item_large_02.dds",
+      "before_sha256": "d86a24c899808274f702e4d99d7f8cdaf10103df9bcafe72205290a5ae3f3926",
+      "after_sha256": "05c4202155a743bef09c52a52c2a133f0d537886351ef4e43603970c5fb5178a"
+    },
+    {
+      "path": "gfx\\interface\\naval_equipment_item_large.dds",
+      "before_sha256": "10767c6bdcb19384c18cb90760e2c2e8c9e6bf81cb8ef98d919db4e4aeae594a",
+      "after_sha256": "1f45accc7a543ed24ae014a7d3bcc5c6ce7cf0d0dab01af20297ff43f02c67d2"
+    }
+  ],
+  "checks": [
+    "All nine frames across seven card textures: RGB bytes, DDS headers, dimensions and mip counts unchanged.",
+    "Decoded rim masks match exactly; only the three-pixel border receives hover colour.",
+    "Current and outdated hover borders match pixel-for-pixel; interiors remain unchanged in the offline shader model.",
+    "GUI, GFX bindings, flag and all outdated overlays unchanged."
+  ],
+  "sources": [
+    "Project GO_equipment_hover.shader and installed gfx/FX/buttonstate.shader/.fxh: frame Offset, Color and Up/Over/Down/Disable handling.",
+    "Installed gfx/FX/buttonstate_nontransparent.shader: sampled texture opacity can be explicitly restored in each state. Here Color alpha is applied afterward to retain engine fading.",
+    "Project production686_revision.py: opaque RGB32 card textures and three-pixel rims; alpha 254 marks faces, 255 marks rims in every atlas frame."
+  ],
+  "remaining": "Target-game shader load and hover on current/outdated expanded, collapsed and chooser cards; no engine compilation or gameplay test was performed.",
+  "protected_hashes": {
+    "interface/countryproductionlineview.gui": "ba42195ceef8e81996d0b437ac12dd5121a83a0b24e8dde0869e7d0fc49e9549",
+    "interface/countryproductionlineview.gfx": "f535b69701749bb4a6078c97ae25f1ce49ec6e8e32224815258403e043dee520",
+    "gfx/interface/topbar/background_extended.dds": "af5bf45664184a7fd84651f2548b5a5d803a1a2ab22360032551943a72a54a7b",
+    "gfx/interface/GO_outdated_land.dds": "e54219b2bb54e3503435370300358913e605d900574df4e36770cf02deee16a5",
+    "gfx/interface/GO_outdated_naval.dds": "889d3d3e6a21dea23340081d66a51791a71e7f2151262215453ea146c4ff47f8",
+    "gfx/interface/GO_outdated_land_small.dds": "82269f4ac9fc864295dd930ad56103a9f9739fe5ac452915d08c27379842b9ab",
+    "gfx/interface/GO_outdated_rail_small.dds": "fd24a768a11724113166dbd507584e27bf4ebdfcbdb3ef2fd7900b8406c54d69",
+    "gfx/interface/GO_outdated_naval_small.dds": "fd24a768a11724113166dbd507584e27bf4ebdfcbdb3ef2fd7900b8406c54d69",
+    "gfx/interface/GO_outdated_land_choice.dds": "dab09e1cd91f879063b518102a5e013380284a1281bb948f1bbca07a2e7e6e61",
+    "gfx/interface/GO_outdated_naval_choice.dds": "dab09e1cd91f879063b518102a5e013380284a1281bb948f1bbca07a2e7e6e61"
+  },
+  "final_hashes": {
+    "gfx/FX/GO_equipment_hover.shader": "6140788e5686521b69757b59762c29a2f7520df2e534d66525a7040cec4f0948",
+    "tools/ui_rework/production686_revision.py": "29519216f53d1f668aa9ae3032547498cba93e319bf40f01131c0b6b92420157"
+  }
+}

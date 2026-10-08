@@ -1,0 +1,78 @@
+{
+  "scope": [
+    {
+      "path": "gfx/interface/add_national_goal_button.dds",
+      "before_sha256": "919e99da9cd4186fbdaa045a6226aa9969f36066d43790c3f50dd67a96fed5db",
+      "original_sha256": "919e99da9cd4186fbdaa045a6226aa9969f36066d43790c3f50dd67a96fed5db",
+      "promoted": true,
+      "previous_disposition": "custom_reference"
+    },
+    {
+      "path": "gfx/interface/category_header.dds",
+      "before_sha256": "e454fe67f6978020938646b3684d5a8ebc79e724f7a1755961815f59109d55ff",
+      "original_sha256": "e454fe67f6978020938646b3684d5a8ebc79e724f7a1755961815f59109d55ff",
+      "promoted": true,
+      "previous_disposition": "custom_reference"
+    },
+    {
+      "path": "gfx/interface/header_bg.dds",
+      "before_sha256": "0b8975e56fba3d48b07a38f8b56369bb6be02607d2fe0c9cc1c1d0069c86f4de",
+      "original_sha256": "0b8975e56fba3d48b07a38f8b56369bb6be02607d2fe0c9cc1c1d0069c86f4de",
+      "promoted": true,
+      "previous_disposition": "custom_reference"
+    },
+    {
+      "path": "gfx/interface/pol_goal_bg.dds",
+      "before_sha256": "19c3068516bf162d2036e7bec769b21f4c1f9846242f817b810cd61615ca2901",
+      "original_sha256": "19c3068516bf162d2036e7bec769b21f4c1f9846242f817b810cd61615ca2901",
+      "promoted": true,
+      "previous_disposition": "custom_reference"
+    },
+    {
+      "path": "gfx/interface/pol_leader_frame.dds",
+      "before_sha256": "4ba953ea52ceb325cbceb2ccb4b5a57d06584b9d147497583829b7fe228766b9",
+      "original_sha256": "4ba953ea52ceb325cbceb2ccb4b5a57d06584b9d147497583829b7fe228766b9",
+      "promoted": true,
+      "previous_disposition": "custom_reference"
+    },
+    {
+      "path": "gfx/interface/pol_view_bg.dds",
+      "before_sha256": "0270b91542eb2073ded697b2c709962b3b13f2f79cce4ea56cbc6bad8486aa2d",
+      "original_sha256": "0270b91542eb2073ded697b2c709962b3b13f2f79cce4ea56cbc6bad8486aa2d",
+      "promoted": true,
+      "previous_disposition": "custom_reference"
+    },
+    {
+      "path": "gfx/interface/tiles/tiled_window2_1b_border.dds",
+      "before_sha256": "7f0cd939fde5b4a8177dfe50fdb3ca48aef16a867ab47d815ea288b3dc1ab4e2",
+      "original_sha256": "7f0cd939fde5b4a8177dfe50fdb3ca48aef16a867ab47d815ea288b3dc1ab4e2",
+      "promoted": true,
+      "previous_disposition": "custom_reference"
+    },
+    {
+      "path": "gfx/interface/tiles/tiled_focus_bg.dds",
+      "before_sha256": "4ea74f2ffbad29bd81714004e281ee054a9425c761d1c6594c5d06ce650bc47c",
+      "original_sha256": "adf0d7741fcaffa1c1a09ace5b0ea6bdd6015516bb334cdfcbd0ea3459b4ef6d",
+      "promoted": false,
+      "previous_disposition": "holder"
+    },
+    {
+      "path": "gfx/interface/topbar/toolbar/international_market_button.dds",
+      "before_sha256": "795c43a039ec6308bd6a9c78c772f09ce21ef8e31076ba394538fa242218b51b",
+      "original_sha256": "5efc475bad06888d2a2f38bd5efff3e477256ea37a4a1b3ddee4ec532f538b6b",
+      "promoted": false,
+      "previous_disposition": "composite"
+    },
+    {
+      "path": "gfx/interface/topbar/toolbar/staff_office_button.dds",
+      "before_sha256": "68eec546bad7180419920e6b4c2093a97cc645159dc9b18a102fdfd4806fdc69",
+      "original_sha256": "d7413348c8b82a1eecb5bb70cb2437733dd4b152079328a6c2fe8af47a4cd2ae",
+      "promoted": false,
+      "previous_disposition": "composite"
+    }
+  ],
+  "source_and_recovery_archive": "tools/ui_rework/country_followup_before.zip",
+  "original_mod_ui_backup_count": 351,
+  "readable_backup_folder": "artwork_backups",
+  "in_game_validated": false
+}

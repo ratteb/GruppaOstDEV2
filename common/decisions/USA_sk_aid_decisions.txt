@@ -58,51 +58,52 @@ USA_sk_aid_decision_cat = {
 		}
 	}
 
-	CHI_nk_forfeit = {
-
-		icon = generic_industry
-
-		visible = {
-				has_country_flag = CHI_help_NK50
-			NOT = {
-				has_country_flag = CHI_help_NK100
-			}
-		}
-
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = SOV_nk_forfeit_ctt 
-				check_variable ={
-				var = CHI_NK_aid
-				value = 50
-				compare = greater_than_or_equals
-			}
-			}
-		}
-
-		fire_only_once = yes
-
-
-		custom_cost_trigger = {
-			has_political_power > 25
-		}
-		custom_cost_text = SOV_csto_training_cost
-
-		complete_effect = {
-			KOR = {
-				country_event = {
-					id = DPRK_russia.2
-					days = 5
-				}
-			}
-		}
-		remove_effect = {  
-		}
-		
-		ai_will_do = {
-			factor = 0 
-		}
-	}
+# Dormant compatibility entry: exact duplicate; CHI_nk_aid_decisions.txt retains the CHI decision and ID.
+# 	CHI_nk_forfeit = {
+#
+# 		icon = generic_industry
+#
+# 		visible = {
+# 				has_country_flag = CHI_help_NK50
+# 			NOT = {
+# 				has_country_flag = CHI_help_NK100
+# 			}
+# 		}
+#
+# 		available = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = SOV_nk_forfeit_ctt
+# 				check_variable ={
+# 				var = CHI_NK_aid
+# 				value = 50
+# 				compare = greater_than_or_equals
+# 			}
+# 			}
+# 		}
+#
+# 		fire_only_once = yes
+#
+#
+# 		custom_cost_trigger = {
+# 			has_political_power > 25
+# 		}
+# 		custom_cost_text = SOV_csto_training_cost
+#
+# 		complete_effect = {
+# 			KOR = {
+# 				country_event = {
+# 					id = DPRK_russia.2
+# 					days = 5
+# 				}
+# 			}
+# 		}
+# 		remove_effect = {
+# 		}
+#
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+# 	}
 
 
 }

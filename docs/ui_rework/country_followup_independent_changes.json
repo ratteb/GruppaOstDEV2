@@ -1,0 +1,93 @@
+[
+  {
+    "path": "gfx/interface/add_prod_aircraft_line.dds",
+    "expected_sha256": "b2e7e57b4b570bbd3f0188331bd8367a3d37585c28df615dc91520f79bcdac97",
+    "current_sha256": "ef5110a94b1252b24038a7191f1aa5b64f1935e4f6d6bb80a684311926b29154",
+    "modified": "2026-10-08 20:02:45.111157",
+    "before_manifest_sha256": "b2e7e57b4b570bbd3f0188331bd8367a3d37585c28df615dc91520f79bcdac97"
+  },
+  {
+    "path": "gfx/interface/add_prod_armour_line.dds",
+    "expected_sha256": "69595eb6d28cf91360fdb9670e3f9103ad2cce60cd2ef1894065b420427c0b1d",
+    "current_sha256": "34b6b41f3f3e3898f539d4da1711f9ae851484669f171cec78ebb78ca3d8eb1b",
+    "modified": "2026-10-08 20:02:45.090138",
+    "before_manifest_sha256": "69595eb6d28cf91360fdb9670e3f9103ad2cce60cd2ef1894065b420427c0b1d"
+  },
+  {
+    "path": "gfx/interface/add_prod_inf_art_line.dds",
+    "expected_sha256": "1260c6f2d749d3b2a40589c3b435f2fb1724b300d19ca56c24b75a2f4502e281",
+    "current_sha256": "09aec3c7927cf7b9ff05c45de65b973fb88ebf1206be51dade386314ad9f976f",
+    "modified": "2026-10-08 20:02:45.069119",
+    "before_manifest_sha256": "1260c6f2d749d3b2a40589c3b435f2fb1724b300d19ca56c24b75a2f4502e281"
+  },
+  {
+    "path": "gfx/interface/add_prod_naval_line.dds",
+    "expected_sha256": "a344e9f02165355a65b2e0b5f099599ab6568ecbc92e83eb6009a7447db6ff28",
+    "current_sha256": "27c219afe43904b1f286f16d0c9e41cd545d475ccdb307c5b76dd4c53186a8bd",
+    "modified": "2026-10-08 20:02:45.132176",
+    "before_manifest_sha256": "a344e9f02165355a65b2e0b5f099599ab6568ecbc92e83eb6009a7447db6ff28"
+  },
+  {
+    "path": "gfx/interface/equipment_item_collapsed.dds",
+    "expected_sha256": "ca52105055f43956f9485a8be6cda2a0cd62b5df2be525d816d64d628a711373",
+    "current_sha256": "d75992a884291e19aead667f8726123fed5025e26e68ff60f4e711ed4053a421",
+    "modified": "2026-10-08 20:02:44.044663",
+    "before_manifest_sha256": "ca52105055f43956f9485a8be6cda2a0cd62b5df2be525d816d64d628a711373"
+  },
+  {
+    "path": "gfx/interface/equipment_item_collapsed_wide.dds",
+    "expected_sha256": "2931591e9cbc7053a486cea9ea2d095219ebc55f7ec156d67a7cbbe167bb80ae",
+    "current_sha256": "ef8062083b1edb6798ffb5048864e76655a3200629cc59235752e3add890154a",
+    "modified": "2026-10-08 20:02:44.093707",
+    "before_manifest_sha256": "2931591e9cbc7053a486cea9ea2d095219ebc55f7ec156d67a7cbbe167bb80ae"
+  },
+  {
+    "path": "gfx/interface/equipment_item_large_02.dds",
+    "expected_sha256": "ef50712cfd012a4cab2f976f53a2d778f8e39f44fc5f693a16246b4b429e7e9f",
+    "current_sha256": "d86a24c899808274f702e4d99d7f8cdaf10103df9bcafe72205290a5ae3f3926",
+    "modified": "2026-10-08 20:02:44.332925",
+    "before_manifest_sha256": "ef50712cfd012a4cab2f976f53a2d778f8e39f44fc5f693a16246b4b429e7e9f"
+  },
+  {
+    "path": "gfx/interface/naval_equipment_item_large.dds",
+    "expected_sha256": "f3812cebef21528603b6310eebe00ea6de2976102e0db467daba17e0008780a6",
+    "current_sha256": "10767c6bdcb19384c18cb90760e2c2e8c9e6bf81cb8ef98d919db4e4aeae594a",
+    "modified": "2026-10-08 20:02:44.703269",
+    "before_manifest_sha256": "f3812cebef21528603b6310eebe00ea6de2976102e0db467daba17e0008780a6"
+  },
+  {
+    "path": "gfx/interface/naval_item_collapsed.dds",
+    "expected_sha256": "9307a4e261a9353b1ceb73fa8e0ce318a6a8096804ea024ff5ec5e18da12893e",
+    "current_sha256": "ef8062083b1edb6798ffb5048864e76655a3200629cc59235752e3add890154a",
+    "modified": "2026-10-08 20:02:44.149758",
+    "before_manifest_sha256": "9307a4e261a9353b1ceb73fa8e0ce318a6a8096804ea024ff5ec5e18da12893e"
+  },
+  {
+    "path": "gfx/interface/naval_repair_view_button.dds",
+    "expected_sha256": "79a5bda33d6de4d17fbf09353e89b7225baf647bbd4d42486ad95ca7680a2b72",
+    "current_sha256": "59417327ba628b28ea294418639c54d76e84b5973e02d6a12b1513600aae571b",
+    "modified": "2026-10-08 20:02:45.154196",
+    "before_manifest_sha256": "79a5bda33d6de4d17fbf09353e89b7225baf647bbd4d42486ad95ca7680a2b72"
+  },
+  {
+    "path": "gfx/interface/prod_land_equipment_item_large.dds",
+    "expected_sha256": "b3fedf33032fcd5ca5a57401a9bc5a1cd64af70c53559762b6841ae343ce63a9",
+    "current_sha256": "8a92808b31b5c6c6d1ba6f19e0b9a9b7550748bbf34d8527528bd624ed98e55f",
+    "modified": "2026-10-08 20:02:43.794425",
+    "before_manifest_sha256": "b3fedf33032fcd5ca5a57401a9bc5a1cd64af70c53559762b6841ae343ce63a9"
+  },
+  {
+    "path": "gfx/interface/prod_naval_equipment_item_large.dds",
+    "expected_sha256": "f1d1b075c8e90b998e19d9b6f5c99ef43e8bb792fdd3c90b4ecf90b05b6417f3",
+    "current_sha256": "7b44113dffc8ee2798ab7bf6cafe03c321c90f219f89cf4e7211a12c6e3f1043",
+    "modified": "2026-10-08 20:02:43.933551",
+    "before_manifest_sha256": "f1d1b075c8e90b998e19d9b6f5c99ef43e8bb792fdd3c90b4ecf90b05b6417f3"
+  },
+  {
+    "path": "gfx/interface/topbar/background_extended.dds",
+    "expected_sha256": "cf4de56a66b5f6ca7dd249c9ff0f7b90ec3d0e07c37a8b8f346488e1968fb99e",
+    "current_sha256": "af5bf45664184a7fd84651f2548b5a5d803a1a2ab22360032551943a72a54a7b",
+    "modified": "2026-10-08 20:02:45.984006",
+    "before_manifest_sha256": "cf4de56a66b5f6ca7dd249c9ff0f7b90ec3d0e07c37a8b8f346488e1968fb99e"
+  }
+]

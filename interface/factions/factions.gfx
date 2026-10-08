@@ -58,7 +58,12 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_faction_logo_generic_progressivism"
-		texturefile = "gfx/interface/factions/faction_logos/faction_logo_generic_progressivism.dds"
+		texturefile = "gfx/interface/factions/faction_logos/faction_logo_generic_democratic.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_faction_logo_generic_democratic"
+		texturefile = "gfx/interface/factions/faction_logos/faction_logo_generic_democratic.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
@@ -191,7 +196,11 @@ spriteTypes = {
 	}
 		spriteType = {
 		name = "GFX_faction_logo_generic_progressivism_miniature"
-		texturefile = "gfx/interface/factions/faction_logos/faction_logo_generic_progressivism_miniature.dds"
+		texturefile = "gfx/interface/factions/faction_logos/faction_logo_generic_democratic_miniature.dds"
+	}
+		spriteType = {
+		name = "GFX_faction_logo_generic_democratic_miniature"
+		texturefile = "gfx/interface/factions/faction_logos/faction_logo_generic_democratic_miniature.dds"
 	}
 		spriteType = {
 		name = "GFX_faction_logo_generic_fascist_miniature"

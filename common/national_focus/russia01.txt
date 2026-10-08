@@ -1108,7 +1108,7 @@ focus_tree = {
 		prerequisite = { focus = SOV_continue_hybrid_warfare }
 		icon = GFX_goal_no_data
 		relative_position_id = SOV_continue_hybrid_warfare
-		mutually_exclusive = {focus = SOV_emphasis_information_warfare}
+		mutually_exclusive = {focus = SOV_emphasis_infiltration_warfare}
 		mutually_exclusive = { focus = SOV_emphasis_information_warfare }
 		x = 0
 		y = 1
