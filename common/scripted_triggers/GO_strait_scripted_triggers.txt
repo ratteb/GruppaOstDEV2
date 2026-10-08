@@ -1,0 +1,53 @@
+# The mod replaces common/scripted_triggers, so map/adjacency_rules.txt cannot
+# inherit these names from vanilla. Restore the access rules used by this map.
+# Source: installed HOI4 1.18.3.0.7709,
+# common/scripted_triggers/TUR_scripted_triggers.txt, the two same-named triggers.
+# The 2027 campaign has no Montreux focus/event chain; retain Turkey's peaceful
+# access, faction/military access to the controller, and the controller's access.
+# Per-country closure flags remain in map/adjacency_rules.txt.
+
+TUR_is_friend_for_bosphorus = {
+	hidden_trigger = {
+		OR = {
+			AND = {
+				TUR = { controls_state = 797 }
+				NOT = { has_war_with = TUR }
+			}
+			797 = {
+				controller = {
+					OR = {
+						is_in_faction_with = ROOT
+						ROOT = { has_military_access_to = PREV }
+					}
+				}
+			}
+			ROOT = { controls_state = 797 }
+		}
+	}
+}
+
+TUR_is_friend_for_dardanelles = {
+	hidden_trigger = {
+		OR = {
+			AND = {
+				TUR = {
+					controls_province = 6864
+					controls_province = 849
+				}
+				NOT = { has_war_with = TUR }
+			}
+			797 = {
+				controller = {
+					OR = {
+						is_in_faction_with = ROOT
+						ROOT = { has_military_access_to = PREV }
+					}
+				}
+			}
+			ROOT = {
+				controls_province = 6864
+				controls_province = 849
+			}
+		}
+	}
+}

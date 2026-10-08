@@ -255,7 +255,7 @@ spriteTypes = {
 		size= { x=192 y=192 }
 		textureFile = "gfx//interface//tiles//tiled_window.dds"
 		borderSize = { x=64 y=64 }
-		tilingCenter = yes
+		tilingCenter = no
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
 
@@ -282,7 +282,7 @@ spriteTypes = {
 		size= { x=192 y=192 }
 		textureFile = "gfx//interface//tiles//tiled_window2_2b_border.dds"
 		borderSize = { x=64 y=64 }
-		tilingCenter = yes
+		tilingCenter = no
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}	
 	

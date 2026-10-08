@@ -57,7 +57,7 @@ scripted_gui = {
           check_variable = {
             var = USA_build_wall_investment_points
             value = 1 
-            compare = lesser_than_or_equals 
+            compare = greater_than_or_equals
           }
         
       }
@@ -90,7 +90,7 @@ scripted_gui = {
       increase_button_click = {
       ai_will_do = {
 			base = 10
-			modifer = {
+			modifier = {
 				check_variable = {
 					var = USA_build_wall_investment_points
 					value = 10
@@ -101,10 +101,10 @@ scripted_gui = {
 		}
       }
 
-      decrease_button_click_button_click = {
+      decrease_button_click = {
       ai_will_do = {
 			base = 0
-			modifer = {
+			modifier = {
 				check_variable = {
 					var = USA_build_wall_investment_points
 					value = 10

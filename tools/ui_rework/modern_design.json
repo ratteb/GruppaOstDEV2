@@ -1,0 +1,51 @@
+{
+  "style": "Existing Gruppa Ost gray panels and slate event panels",
+  "references": [
+    "gfx/interface/pol_view_bg.dds",
+    "gfx/scripted_gui/lore_screen/lore_screen_main_screen.dds",
+    "gfx/interface/event_report_top_win.dds",
+    "gfx/interface/event_report_bottom_win.dds",
+    "gfx/interface/tiles/tiled_window.dds"
+  ],
+  "neutral": {"top": [65, 68, 71], "center": [48, 51, 54], "bottom": [37, 40, 43]},
+  "slate": {"top": [83, 94, 115], "center": [57, 66, 82], "bottom": [37, 44, 57]},
+  "paper": {"top": [193, 197, 201], "center": [181, 186, 190], "bottom": [162, 170, 176]},
+  "frame": {"outer": [12, 14, 16], "inner": [27, 30, 33], "highlight": [145, 150, 155]},
+  "preserve_identifying_frames": ["gfx/interface/flag_small_golden_frame.dds", "gfx/interface/topbar/musicplayer/selected_song.dds"],
+  "geometry_alpha_frames": [
+    "gfx/interface/tiles/tiled_focus_bg.dds",
+    "gfx/interface/tiles/tiled_generic_overlay_bg1.dds",
+    "gfx/interface/tiles/tiled_generic_overlay_bg1_small.dds",
+    "gfx/interface/tiles/marble_tiled_bg_edges.dds",
+    "gfx/interface/event_leader_frame.dds",
+    "gfx/interface/fullborder_tiled.dds"
+  ],
+  "geometry_alpha_filled": [
+    "gfx/interface/tooltip_tile.dds",
+    "gfx/interface/div_count_bg.dds",
+    "gfx/interface/group_div_count_bg.dds"
+  ],
+  "status_accents": {
+    "decision_AI_item_bg.dds": [177, 64, 55],
+    "decision_item_bg_single.dds": [81, 129, 70]
+  },
+  "legacy_custom_holders_to_rebuild": [
+    "gfx/interface/constructions_bg4.dds",
+    "gfx/interface/topbar/background_extended.dds",
+    "gfx/interface/templatestuff.dds",
+    "gfx/interface/scripted_gui_graphics/scripted_gui_background.dds"
+  ],
+  "layouts": {
+    "gfx/interface/topbar/topbar_date_overlay.dds": [[70, 11, 225, 33], [233, 11, 261, 33], [270, 11, 298, 33], [306, 11, 334, 33], [340, 11, 364, 33], [131, 44, 163, 74], [169, 44, 201, 74], [207, 44, 239, 74], [246, 44, 276, 74]],
+    "gfx/interface/topbar/armyoverview_buttons_bg.dds": [[75, 8, 281, 39]],
+    "gfx/interface/subjects_entry_bg.dds": [[186, 18, 374, 49]],
+    "gfx/interface/production_line_bg.dds": [[10, 8, 510, 36]],
+    "gfx/interface/occupation/occupation_country_entry_bg_top.dds": [[10, 60, 250, 100]],
+    "gfx/interface/occupation/occupation_country_entry_bg_top_locked.dds": [[10, 60, 250, 100]],
+    "gfx/interface/occupation/occupation_state_entry_bg.dds": [[10, 30, 325, 53]],
+    "gfx/interface/research_slot_bg.dds": [[8, 8, 430, 52]],
+    "gfx/interface/leader_selection_bg.dds": [[12, 45, 538, 596]],
+    "gfx/interface/officer_corp/agency_upgrades_popup_bg.dds": [],
+    "gfx/interface/techtree/unit_stats_template_tab_bg.dds": [[0, 0, 273, 40], [274, 0, 547, 40]]
+  }
+}

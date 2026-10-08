@@ -1,0 +1,213 @@
+# Gruppa Ost Stage 5 - COUNTRY Production Unit guards unless marked ANY.
+# Target/source: installed HOI4 1.18.3.0.7709. No energy readiness is inferred.
+# Temporary arithmetic in triggers: triggers_documentation.md:6286-6298,
+# 7324-7337; native GER_scripted_triggers.txt:152-154.
+
+# ANY. Editable calibration must remain positive, with whole nonnegative caps.
+GO_econ_production_unit_config_ready = {
+    has_variable = global.GO_econ_cfg_pu_gdp_divisor
+    check_variable = { global.GO_econ_cfg_pu_gdp_divisor > 0 }
+    has_variable = global.GO_econ_cfg_pu_cap_1
+    has_variable = global.GO_econ_cfg_pu_cap_2
+    has_variable = global.GO_econ_cfg_pu_cap_3
+    has_variable = global.GO_econ_cfg_pu_cap_4
+    has_variable = global.GO_econ_cfg_pu_cap_5
+    check_variable = { var = global.GO_econ_cfg_pu_cap_1 value = 0 compare = greater_than_or_equals }
+    check_variable = { var = global.GO_econ_cfg_pu_cap_2 value = 0 compare = greater_than_or_equals }
+    check_variable = { var = global.GO_econ_cfg_pu_cap_3 value = 0 compare = greater_than_or_equals }
+    check_variable = { var = global.GO_econ_cfg_pu_cap_4 value = 0 compare = greater_than_or_equals }
+    check_variable = { var = global.GO_econ_cfg_pu_cap_5 value = 0 compare = greater_than_or_equals }
+    set_temp_variable = { GO_econ_pu_cap_fraction_1 = global.GO_econ_cfg_pu_cap_1 }
+    set_temp_variable = { GO_econ_pu_cap_fraction_2 = global.GO_econ_cfg_pu_cap_2 }
+    set_temp_variable = { GO_econ_pu_cap_fraction_3 = global.GO_econ_cfg_pu_cap_3 }
+    set_temp_variable = { GO_econ_pu_cap_fraction_4 = global.GO_econ_cfg_pu_cap_4 }
+    set_temp_variable = { GO_econ_pu_cap_fraction_5 = global.GO_econ_cfg_pu_cap_5 }
+    modulo_temp_variable = { var = GO_econ_pu_cap_fraction_1 value = 1 }
+    modulo_temp_variable = { var = GO_econ_pu_cap_fraction_2 value = 1 }
+    modulo_temp_variable = { var = GO_econ_pu_cap_fraction_3 value = 1 }
+    modulo_temp_variable = { var = GO_econ_pu_cap_fraction_4 value = 1 }
+    modulo_temp_variable = { var = GO_econ_pu_cap_fraction_5 value = 1 }
+    check_variable = { GO_econ_pu_cap_fraction_1 = 0 }
+    check_variable = { GO_econ_pu_cap_fraction_2 = 0 }
+    check_variable = { GO_econ_pu_cap_fraction_3 = 0 }
+    check_variable = { GO_econ_pu_cap_fraction_4 = 0 }
+    check_variable = { GO_econ_pu_cap_fraction_5 = 0 }
+}
+
+GO_econ_country_production_units_initialized = {
+    has_variable = GO_econ_country_pu_schema_version
+    check_variable = { GO_econ_country_pu_schema_version = 1 }
+}
+
+GO_econ_country_has_national_base_pus = {
+    GO_econ_country_production_units_initialized = yes
+    has_variable = GO_econ_country_base_pus
+    has_variable = GO_econ_country_base_pus_populated
+    check_variable = { GO_econ_country_base_pus_populated = 1 }
+    # Authored signed/fractional base values follow the approved max/floor rule.
+}
+
+GO_econ_country_has_requested_civil_percent = {
+    GO_econ_country_production_units_initialized = yes
+    has_variable = GO_econ_country_requested_civil_percent
+    check_variable = { var = GO_econ_country_requested_civil_percent value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_requested_civil_percent value = 100 compare = less_than_or_equals }
+    set_temp_variable = { GO_econ_pu_request_fraction = GO_econ_country_requested_civil_percent }
+    modulo_temp_variable = { var = GO_econ_pu_request_fraction value = 1 }
+    check_variable = { GO_econ_pu_request_fraction = 0 }
+}
+
+GO_econ_country_has_settled_civil_percent = {
+    GO_econ_country_production_units_initialized = yes
+    has_variable = GO_econ_country_settled_civil_percent
+    check_variable = { var = GO_econ_country_settled_civil_percent value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_settled_civil_percent value = 100 compare = less_than_or_equals }
+    set_temp_variable = { GO_econ_pu_settled_fraction = GO_econ_country_settled_civil_percent }
+    modulo_temp_variable = { var = GO_econ_pu_settled_fraction value = 1 }
+    check_variable = { GO_econ_pu_settled_fraction = 0 }
+}
+
+# Persistent grants/replay history are never reconstructed from native factories.
+GO_econ_country_pu_grant_record_ready = {
+    GO_econ_country_production_units_initialized = yes
+    GO_econ_country_has_settled_civil_percent = yes
+    GO_econ_fiscal_calendar_ready = yes
+    has_variable = GO_econ_country_pu_granted_civil
+    has_variable = GO_econ_country_pu_granted_military
+    has_variable = GO_econ_country_pu_last_allocation_month
+    check_variable = { var = GO_econ_country_pu_granted_civil value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_pu_granted_military value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_pu_last_allocation_month value = -1 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_pu_last_allocation_month value = global.GO_econ_month_serial compare = less_than_or_equals }
+    set_temp_variable = { GO_econ_pu_granted_civil_fraction = GO_econ_country_pu_granted_civil }
+    set_temp_variable = { GO_econ_pu_granted_military_fraction = GO_econ_country_pu_granted_military }
+    set_temp_variable = { GO_econ_pu_month_fraction = GO_econ_country_pu_last_allocation_month }
+    modulo_temp_variable = { var = GO_econ_pu_granted_civil_fraction value = 1 }
+    modulo_temp_variable = { var = GO_econ_pu_granted_military_fraction value = 1 }
+    modulo_temp_variable = { var = GO_econ_pu_month_fraction value = 1 }
+    check_variable = { GO_econ_pu_granted_civil_fraction = 0 }
+    check_variable = { GO_econ_pu_granted_military_fraction = 0 }
+    check_variable = { GO_econ_pu_month_fraction = 0 }
+}
+
+GO_econ_work_civil_percent_valid = {
+    has_variable = GO_econ_work_civil_percent
+    check_variable = { var = GO_econ_work_civil_percent value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_work_civil_percent value = 100 compare = less_than_or_equals }
+    set_temp_variable = { GO_econ_pu_work_fraction = GO_econ_work_civil_percent }
+    modulo_temp_variable = { var = GO_econ_pu_work_fraction value = 1 }
+    check_variable = { GO_econ_pu_work_fraction = 0 }
+}
+
+# Called after fresh coverage rebuilding; inputs cannot be partial subtotals.
+GO_econ_country_pu_capacity_inputs_ready = {
+    GO_econ_country_has_national_base_pus = yes
+    GO_econ_production_unit_config_ready = yes
+    GO_econ_country_has_global_status = yes
+    GO_econ_country_report_ready = yes
+    GO_econ_country_has_gdp = yes
+    check_variable = { var = GO_econ_country_gdp value = 0 compare = greater_than_or_equals }
+    has_variable = GO_econ_country_eligible_states
+    has_variable = GO_econ_country_gdp_states
+    has_variable = GO_econ_country_pu_industry_states
+    has_variable = GO_econ_country_pu_missing_industry_states
+    check_variable = { GO_econ_country_eligible_states > 0 }
+    check_variable = { GO_econ_country_gdp_states = GO_econ_country_eligible_states }
+    check_variable = { GO_econ_country_pu_industry_states = GO_econ_country_eligible_states }
+    check_variable = { GO_econ_country_pu_missing_industry_states = 0 }
+    # Recheck live inputs before any internal bridge call can use saved counters.
+    # Installed triggers_documentation.md:1073-1080 supports COUNTRY -> STATE.
+    all_owned_state = {
+        OR = {
+            NOT = { is_controlled_by = PREV }
+            AND = {
+                GO_econ_state_has_gdp = yes
+                check_variable = { var = GO_econ_state_gdp value = 0 compare = greater_than_or_equals }
+                GO_econ_state_has_industry_levels = yes
+            }
+        }
+    }
+}
+
+GO_econ_country_pu_capacity_ready = {
+    GO_econ_country_pu_capacity_inputs_ready = yes
+    has_variable = GO_econ_country_pu_capacity_populated
+    check_variable = { GO_econ_country_pu_capacity_populated = 1 }
+    has_variable = GO_econ_country_pu_industry_bonus
+    has_variable = GO_econ_country_pu_gdp_component
+    has_variable = GO_econ_country_pu_potential
+    has_variable = GO_econ_country_pu_status_cap
+    has_variable = GO_econ_country_pu_usable
+    has_variable = GO_econ_country_pu_suppressed
+    check_variable = { var = GO_econ_country_pu_industry_bonus value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_pu_gdp_component value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_pu_status_cap value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_pu_suppressed value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_pu_potential value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_pu_usable value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_pu_usable value = GO_econ_country_pu_potential compare = less_than_or_equals }
+    check_variable = { var = GO_econ_country_pu_usable value = GO_econ_country_pu_status_cap compare = less_than_or_equals }
+    OR = {
+        AND = {
+            check_variable = { GO_econ_country_global_status = 1 }
+            check_variable = { GO_econ_country_pu_status_cap = global.GO_econ_cfg_pu_cap_1 }
+        }
+        AND = {
+            check_variable = { GO_econ_country_global_status = 2 }
+            check_variable = { GO_econ_country_pu_status_cap = global.GO_econ_cfg_pu_cap_2 }
+        }
+        AND = {
+            check_variable = { GO_econ_country_global_status = 3 }
+            check_variable = { GO_econ_country_pu_status_cap = global.GO_econ_cfg_pu_cap_3 }
+        }
+        AND = {
+            check_variable = { GO_econ_country_global_status = 4 }
+            check_variable = { GO_econ_country_pu_status_cap = global.GO_econ_cfg_pu_cap_4 }
+        }
+        AND = {
+            check_variable = { GO_econ_country_global_status = 5 }
+            check_variable = { GO_econ_country_pu_status_cap = global.GO_econ_cfg_pu_cap_5 }
+        }
+    }
+    set_temp_variable = { GO_econ_pu_potential_fraction = GO_econ_country_pu_potential }
+    set_temp_variable = { GO_econ_pu_usable_fraction = GO_econ_country_pu_usable }
+    set_temp_variable = { GO_econ_pu_suppressed_fraction = GO_econ_country_pu_suppressed }
+    modulo_temp_variable = { var = GO_econ_pu_potential_fraction value = 1 }
+    modulo_temp_variable = { var = GO_econ_pu_usable_fraction value = 1 }
+    modulo_temp_variable = { var = GO_econ_pu_suppressed_fraction value = 1 }
+    check_variable = { GO_econ_pu_potential_fraction = 0 }
+    check_variable = { GO_econ_pu_usable_fraction = 0 }
+    check_variable = { GO_econ_pu_suppressed_fraction = 0 }
+}
+
+GO_econ_can_reconcile_production_units = {
+    has_country_flag = GO_econ_production_units_access
+    GO_econ_country_pu_capacity_ready = yes
+    GO_econ_country_pu_grant_record_ready = yes
+}
+
+# Public read guard: requested shares remain separate from settled native grants.
+GO_econ_country_pu_allocation_ready = {
+    GO_econ_can_reconcile_production_units = yes
+    has_variable = GO_econ_country_pu_allocation_populated
+    check_variable = { GO_econ_country_pu_allocation_populated = 1 }
+    has_variable = GO_econ_country_pu_desired_civil
+    has_variable = GO_econ_country_pu_desired_military
+    check_variable = { GO_econ_country_pu_desired_civil = GO_econ_country_pu_granted_civil }
+    check_variable = { GO_econ_country_pu_desired_military = GO_econ_country_pu_granted_military }
+    set_temp_variable = { GO_econ_pu_allocation_total = GO_econ_country_pu_desired_civil }
+    add_to_temp_variable = { GO_econ_pu_allocation_total = GO_econ_country_pu_desired_military }
+    check_variable = { GO_econ_pu_allocation_total = GO_econ_country_pu_usable }
+}
+
+# Only the same day as a successfully closed fiscal month can settle a request.
+GO_econ_can_settle_production_unit_allocation = {
+    GO_econ_can_reconcile_production_units = yes
+    GO_econ_country_has_requested_civil_percent = yes
+    GO_econ_fiscal_calendar_ready = yes
+    GO_econ_country_fiscal_report_ready = yes
+    check_variable = { global.GO_econ_month_serial > 0 }
+    check_variable = { global.GO_econ_month_pulse_day = global.num_days }
+    check_variable = { GO_econ_country_last_processed_month = global.GO_econ_month_serial }
+    check_variable = { GO_econ_country_pu_last_allocation_month < global.GO_econ_month_serial }
+}

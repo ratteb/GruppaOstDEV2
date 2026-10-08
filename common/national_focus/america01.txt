@@ -970,7 +970,7 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = USA_border.6
-			stability = -0.05			
+			add_stability = -0.05
 		}
 	}
 
@@ -1757,4 +1757,4 @@ focus_tree = {
 			
 		}
 	}
-}	
+}

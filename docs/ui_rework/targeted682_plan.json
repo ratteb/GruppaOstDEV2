@@ -1,0 +1,125 @@
+{
+  "game_version": "1.18.3.0.7709",
+  "scope": [
+    {
+      "path": "gfx/interface/topbar/background_extended.dds",
+      "before_exists": true,
+      "before_sha256": "dc4199ce880008e9d594679cdb8f094f7a1b2689c4b392462ccec1e78431ad57",
+      "source_sha256": "5f6cf65e751e119cc0b0bf9eae995bf4a6397ff372a7b0289e6ba52db09d0101",
+      "promoted": false,
+      "previous_disposition": "holder",
+      "installed_sha256": "cf4de56a66b5f6ca7dd249c9ff0f7b90ec3d0e07c37a8b8f346488e1968fb99e"
+    },
+    {
+      "path": "gfx/interface/topbar/armyoverview_buttons_bg.dds",
+      "before_exists": true,
+      "before_sha256": "798aab36a5c67a2b8cbf0236bfc71dccb43b623f0d0a5a300791665e3c4eda5a",
+      "source_sha256": "c1d0b861bb3bed35e45d39707d25a4b20a05f49cc26c64fd7cff45f8d99ad293",
+      "promoted": false,
+      "previous_disposition": "holder",
+      "installed_sha256": "5c4e85cb60ab6d7a1a4e14c18c2895d34c56682152cb09c5591fe83acbd400ab"
+    },
+    {
+      "path": "gfx/interface/date_pause_button_bg.dds",
+      "before_exists": true,
+      "before_sha256": "4c5d444cbb0abc959774a93b6f99eba68e61932106e0c0e10fcec4f4dc2a5845",
+      "source_sha256": "cd3c896d6782de54a8835d00afee6c047f6852916e3b0e585df1f1cec175a235",
+      "promoted": false,
+      "previous_disposition": "holder",
+      "installed_sha256": "aa9294ae4b3a31c2d331bfa18304e510b7980d3c4fea33ca60d513daf2ec2609"
+    },
+    {
+      "path": "gfx/interface/date_pause_button.dds",
+      "before_exists": true,
+      "before_sha256": "bc5c013ea57a1d0cdb7bd88e9909d8a9c9b3796965d72e67aaaa1dd6e0a461dd",
+      "source_sha256": "a1afc4051b7ff19afd2b30d235f97f32d673b5d377c3673db417bf2e741bf042",
+      "promoted": false,
+      "previous_disposition": "composite",
+      "installed_sha256": "ba99678d567eae438783b0f259bb5b78dd704337c01559756cb025a3ab3855b5"
+    },
+    {
+      "path": "gfx/interface/topbar/toolbar/international_market_button.dds",
+      "before_exists": true,
+      "before_sha256": "f4fafbe4a5e2d37d5d037eac6e8d2d8160adae905230bd88a938c4839ea1966a",
+      "source_sha256": "5efc475bad06888d2a2f38bd5efff3e477256ea37a4a1b3ddee4ec532f538b6b",
+      "promoted": false,
+      "previous_disposition": "composite",
+      "installed_sha256": "795c43a039ec6308bd6a9c78c772f09ce21ef8e31076ba394538fa242218b51b"
+    },
+    {
+      "path": "gfx/interface/topbar/toolbar/staff_office_button.dds",
+      "before_exists": true,
+      "before_sha256": "426c377001f12f142f7fc90f0d615135a4de905c53f5aeee6b3f4f16c37f037b",
+      "source_sha256": "d7413348c8b82a1eecb5bb70cb2437733dd4b152079328a6c2fe8af47a4cd2ae",
+      "promoted": false,
+      "previous_disposition": "composite",
+      "installed_sha256": "68eec546bad7180419920e6b4c2093a97cc645159dc9b18a102fdfd4806fdc69"
+    },
+    {
+      "path": "gfx/interface/alerts/global_alert_icons.dds",
+      "before_exists": false,
+      "before_sha256": null,
+      "source_sha256": "de09b37bc54a6069e644e518b1f7061030c05ae67142757d4e906272babc0d2f",
+      "promoted": true,
+      "previous_disposition": "artwork",
+      "installed_sha256": "242c71b0ce7a89a18a5dbacce7839b946b4e8be19bf525115dab3f57aa36bbaa"
+    },
+    {
+      "path": "gfx/interface/alerts/global_diplorequest_icons.dds",
+      "before_exists": false,
+      "before_sha256": null,
+      "source_sha256": "bb7124c3420108fb6a3ef75291629e5434a76728c78f27b17d551047622a283b",
+      "promoted": true,
+      "previous_disposition": "artwork",
+      "installed_sha256": "743f71411e2b28edca4a8b424457af6ac2b2b9f3d24fbd46f1e6fb84b10ced4a"
+    },
+    {
+      "path": "gfx/interface/tiles/tiled_focus_bg.dds",
+      "before_exists": true,
+      "before_sha256": "ad8f007185aca2b3d1436c423843a7f421d4e42f50eb073a2aba4ea89e7e0cdd",
+      "source_sha256": "adf0d7741fcaffa1c1a09ace5b0ea6bdd6015516bb334cdfcbd0ea3459b4ef6d",
+      "promoted": false,
+      "previous_disposition": "holder",
+      "installed_sha256": "4ea74f2ffbad29bd81714004e281ee054a9425c761d1c6594c5d06ce650bc47c"
+    },
+    {
+      "path": "gfx/interface/tiles/tiled_window_1b_border.dds",
+      "before_exists": true,
+      "before_sha256": "4393c5d15fdd0c4c300db8cd785f173aca38a5d442ed769c85b2d31af7dc197f",
+      "source_sha256": "4393c5d15fdd0c4c300db8cd785f173aca38a5d442ed769c85b2d31af7dc197f",
+      "promoted": true,
+      "previous_disposition": "custom_reference",
+      "installed_sha256": "5d11f0df0a9e849c2ffd5820cced35ce48a372cb911e9c2706e1b7aafb5c1491"
+    },
+    {
+      "path": "gfx/interface/tiles/tiled_window_thin_border2.dds",
+      "before_exists": true,
+      "before_sha256": "e911ec82532b7a92f6c89f91f910e71839cd3708affa6ef754eab922e4aed8fd",
+      "source_sha256": "e911ec82532b7a92f6c89f91f910e71839cd3708affa6ef754eab922e4aed8fd",
+      "promoted": true,
+      "previous_disposition": "custom_reference",
+      "installed_sha256": "6622d872a37e184d24e32787e119ce523fcb80c8511698058f3144b40d3f0866"
+    }
+  ],
+  "source_and_recovery_archive": "tools/ui_rework/targeted682_before.zip",
+  "alert_mask_reference_sha256": "7303ae7703f7c9fa5d9087d3bb81c42327e9d5960314cce3cde928ed3776575d",
+  "in_game_validated": false,
+  "definition_changes": [
+    {
+      "path": "interface/nationalfocusview.gfx",
+      "before_sha256": "c97b3bc76d565cb0303dad2dc65797d9fd73b5515d6b482c46e32c172b44aca8",
+      "after_sha256": "13d951e82e2ee88e48f303f7441f1d88dd15208627a6a143beda05945ec77ed2",
+      "change": "Owning GFX_tiled_focus_bg size matches 998x1031 DDS; corner region 495 -> 24 for rebuilt angular frame."
+    }
+  ],
+  "mask_hashes": {
+    "targeted682_alert_mask.png": "10e1f0333cf9822441c56919f487d25667469bef2d5cdd4323952fe3397d2c77",
+    "targeted682_diplo_mask.png": "96d22bc82f3b826b48696b2d5a554d702eba290eba5219eda1189938d4031fd9"
+  },
+  "detail_correction": "User requests structural detail and no smudging. Add purpose-drawn housing sections, seating rings, edge channels and relief. Use native transparent alert cutouts; diplomatic emblem medallions remain intact.",
+  "status": "installed_static_validation_passed",
+  "validation_reports": [
+    "targeted682_validation.json",
+    "targeted682_geometry_validation.json"
+  ]
+}

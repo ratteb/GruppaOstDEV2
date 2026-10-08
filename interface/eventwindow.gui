@@ -72,7 +72,6 @@ guiTypes = {
 				font = "TD_event_font_12pt"
 				borderSize = {x = 0 y = 0}
 				text = "Long text here!"
-				clipping = yes 
 				maxWidth = 610%%
 				maxHeight = 512%%
 				format = left

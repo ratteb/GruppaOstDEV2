@@ -1,0 +1,13 @@
+[
+  "gfx/interface/topbar/background_extended.dds",
+  "gfx/interface/topbar/armyoverview_buttons_bg.dds",
+  "gfx/interface/date_pause_button_bg.dds",
+  "gfx/interface/date_pause_button.dds",
+  "gfx/interface/topbar/toolbar/international_market_button.dds",
+  "gfx/interface/topbar/toolbar/staff_office_button.dds",
+  "gfx/interface/alerts/global_alert_icons.dds",
+  "gfx/interface/alerts/global_diplorequest_icons.dds",
+  "gfx/interface/tiles/tiled_focus_bg.dds",
+  "gfx/interface/tiles/tiled_window_1b_border.dds",
+  "gfx/interface/tiles/tiled_window_thin_border2.dds"
+]

@@ -1077,7 +1077,7 @@ default_market_convoy_purchases = {
 	}
 }
 
-d# Disabled: MTG_naval_treaty_adherent idea no longer exists in this mod.
+# Disabled: MTG_naval_treaty_adherent idea no longer exists in this mod.
 # dont_build_capitals_if_on_treaty = {
 # 	enable = {
 # 		has_idea = MTG_naval_treaty_adherent

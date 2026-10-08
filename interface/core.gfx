@@ -119,7 +119,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_sort_button_202x29_3_frames"
-		texturefile = "gfx//interface//sort_button_202x29_3_frames.tga"
+		texturefile = "gfx//interface//sort_button_202x29_3_frames.dds"
 		noOfFrames = 3
 	}
 
@@ -223,7 +223,7 @@ spriteTypes = {
 		size= { x=192 y=192 }
 		textureFile = "gfx//interface//tiles//tiled_window_1b_border.dds"
 		borderSize = { x=64 y=64 }
-		tilingCenter = yes
+		tilingCenter = no
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
 
@@ -359,7 +359,7 @@ spriteTypes = {
 
 	textSpriteType = {
 		name = "ToolTip"
-		texturefile = "gfx//interface//tiles//tiles_dialog.tga"
+		texturefile = "gfx//interface//tiles//tiles_dialog.dds"
 		noOfFrames = 1
 	}
 
@@ -1768,7 +1768,7 @@ bitmapfonts = {
 	corneredTileSpriteType = {
 		name = "SandboxFloaterBackground"
 		size= {x=190 y=310 }
-		textureFile ="gfx//interface//tiles//tiles_dialog.tga"
+		textureFile ="gfx//interface//tiles//tiles_dialog.dds"
 		borderSize = { x=32 y=32 }
 	}
 

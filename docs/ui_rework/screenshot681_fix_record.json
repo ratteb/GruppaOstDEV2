@@ -1,0 +1,674 @@
+{
+  "date": "2026-10-08",
+  "source_game_build": "Case Green v1.18.3.0.7709 (d7cc)",
+  "user_evidence": "C:/Users/znonm/Pictures/Screenshots/Screenshot (681).png",
+  "backup_archive": "tools/ui_rework/screenshot681_fix_before.zip",
+  "affected_resources": 51,
+  "changed_outputs": 51,
+  "in_game_validated": false,
+  "files": [
+    {
+      "path": "gfx/interface/add_pol_idea_button.dds",
+      "previous_output_sha256": "56b671da2320d61c872370188c1fb41df44c40eedfd8f63d80be60bb23cfef6b",
+      "corrected_output_sha256": "b1eb9b5c66ded4651f60d41564f561714aaa8b897f6fb3b7874d6f3fa65d45e2",
+      "changed": true,
+      "original_sha256": "9721289b9df595f74851dc60ee969030e9b13ed6f404eda8ab318d68316b6baf",
+      "dimensions": [
+        63,
+        63
+      ],
+      "frames": 1,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/career_profile/button_medal_display_slot_selected.dds",
+      "previous_output_sha256": "91ca04a2aef730663458c1d497402aa305e3e86a7f287c054e5b3f8ec29c9e17",
+      "corrected_output_sha256": "646ce94777258b522be02b747777b380973cc68ed2ce9d36ca1c8255a2a18eea",
+      "changed": true,
+      "original_sha256": "db9538e7eb5f1b1a693f5a1ec36895cc3f5add701c9217f5c8f2365131720d2d",
+      "dimensions": [
+        228,
+        76
+      ],
+      "frames": 3,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/career_profile/button_ribbon_display_slot_selected.dds",
+      "previous_output_sha256": "9edcf82ce5c5169eeca8325dfa7036d25489ff2b18cb784a2ad0edf0cf029bc6",
+      "corrected_output_sha256": "2cbf1ac26cd8bc9f8465af1d19ea7c351659fbe8758e0876f4596a6c42cb6ebd",
+      "changed": true,
+      "original_sha256": "329cac94f21a67bf1994f1d6a66d3b0da68a0a65bfecab0a9bf9d9b356c42abd",
+      "dimensions": [
+        540,
+        52
+      ],
+      "frames": 3,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/conference_action_turn_entry.dds",
+      "previous_output_sha256": "62d905ee187feb87a7775dce9af20e7447a9960c1971a4173a66603825c90d3b",
+      "corrected_output_sha256": "8ce00bfed4e84e6dfba46ff7aa78c9eaeb5b06c4879636c437c3e5832f85b295",
+      "changed": true,
+      "original_sha256": "8951999d8ddfdac15958ac083a9e3c0087b5cf6655f1415eff1df4ca85081dfe",
+      "dimensions": [
+        301,
+        29
+      ],
+      "frames": 1,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/difficulty_button_civilian.dds",
+      "previous_output_sha256": "0f1fd52d0c499c87c7281f79e1f2fa8441db8e93362d56fe7e7bfb1b7b3f332d",
+      "corrected_output_sha256": "454bee41459fa8e65ec0aa8d5ca16f08854ab7272380c2ddcf6163503913104c",
+      "changed": true,
+      "original_sha256": "038ebcece43af43055314f52063405fe512086e4c90ec7871a2bda85d4fe505b",
+      "dimensions": [
+        232,
+        35
+      ],
+      "frames": 2,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/difficulty_button_elite.dds",
+      "previous_output_sha256": "52bd1658e3052fd7efc8a7168ff27c928a082f5c2463f9a52f777dc5cde1128d",
+      "corrected_output_sha256": "f4ba864a9dad51f11d1348b2cc7744aaec7257295b694d480d6b97e429a98d76",
+      "changed": true,
+      "original_sha256": "5b79971043f5f801c954228309881edc895c3c5511062b86163846c2e085c48e",
+      "dimensions": [
+        232,
+        35
+      ],
+      "frames": 2,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/difficulty_button_recruit.dds",
+      "previous_output_sha256": "57d53ae7bb194c4e72f89c85e1655125d59159f2822a8e9b14bbdcb1eb4fe64b",
+      "corrected_output_sha256": "29e6624470b7d4291ff3d4525451d4bb37bcd250244488a3f0b151748e7d4aad",
+      "changed": true,
+      "original_sha256": "71eef0e1e3a589c0063be85dabe8c4719d5023fffe2dbac505e13fbe0380c3d1",
+      "dimensions": [
+        232,
+        35
+      ],
+      "frames": 2,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/difficulty_button_regular.dds",
+      "previous_output_sha256": "aba5c53518250962341f65a31a1865ae7b32356231331a16a9e340c7efaecfd1",
+      "corrected_output_sha256": "be8da3624aa718ecf8933f703ce30d4424470fb5b7457b9c5bb3978460770815",
+      "changed": true,
+      "original_sha256": "df2d1c31d02306743e69c865c3350d1ec1a2ffe652c1260c086906f411b63438",
+      "dimensions": [
+        232,
+        35
+      ],
+      "frames": 2,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/difficulty_button_veteran.dds",
+      "previous_output_sha256": "523daa856d1cc52eb7c3ee450811751b6aa3d860a1f7b4e60a76a0e65bd92296",
+      "corrected_output_sha256": "1a0d89767fd5e0dc6f5ad0dde57e331cee7b4a0b8a05e3c290d49a7f2be49d44",
+      "changed": true,
+      "original_sha256": "76ffee7ebf487fff15c47b067ce56a8e1dc2df2b960f60d5b4178b92febbfc78",
+      "dimensions": [
+        232,
+        35
+      ],
+      "frames": 2,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/division_3d_entry_half_width.dds",
+      "previous_output_sha256": "dd49961edd964985c3bda216d21241c397d88ad7d15c86acf949936af4f7dfe3",
+      "corrected_output_sha256": "b9cc95e123de8f0095d144f44f1b1140a0610b7d09278ffdfaed2ea08dde7704",
+      "changed": true,
+      "original_sha256": "70cbf13a810628e7e3dc8ba4795cadbd78d49c733cdf211011febc6bda382acf",
+      "dimensions": [
+        510,
+        43
+      ],
+      "frames": 2,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/empty_button.dds",
+      "previous_output_sha256": "c95c6ec409724e132b500a03a58f74aca3e06c3737b8ecdffb0181ac0f6cf3a1",
+      "corrected_output_sha256": "2b21571259befe3de112f5804cb1b8c4a2f5d5288a9705e86b4af879fd3085c8",
+      "changed": true,
+      "original_sha256": "058aa258ac0126e8afef8a9bf289340cedb68a7f3325db2ececd914bc0002891",
+      "dimensions": [
+        56,
+        37
+      ],
+      "frames": 1,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/equipmentdesigner/preset_button.dds",
+      "previous_output_sha256": "5ef6b0df646fde9d42b62bdf428384d5449bf831cd07ee2e62a966347fe29a4b",
+      "corrected_output_sha256": "7bc9997351595cddcc54bd154082e6eb7230eef070787f7665655a1113f454f4",
+      "changed": true,
+      "original_sha256": "a33dc8f8b9f40deb2a90c33425c75826333de57f1c511924b904d74b9c9da7cc",
+      "dimensions": [
+        120,
+        30
+      ],
+      "frames": 4,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/equipmentdesigner/preset_export_button.dds",
+      "previous_output_sha256": "79da4a54d69f6a2852f95cc79c1ff94e194bd3652c13e12f08e141600cbe045c",
+      "corrected_output_sha256": "8be3105439af648c7d7a54d920ca50f9390d1dec2d181dbca7aafddff0a89ff5",
+      "changed": true,
+      "original_sha256": "990ad0c4ff41b5e9c7219923a9af8a83243fc409ccb3c5b75b7a4d816cdbf15b",
+      "dimensions": [
+        120,
+        30
+      ],
+      "frames": 4,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/equipmentdesigner/preset_import_button.dds",
+      "previous_output_sha256": "dda8e79cb835219f92fa7da46621682d5865b8e1c4fc5c996e5f3782f9d104e9",
+      "corrected_output_sha256": "4725958ede5bda02bc5888f365b9a9691b9fb7eb674686fdf4fde95eb0624e48",
+      "changed": true,
+      "original_sha256": "8242ded22db424e216e8d4952601e2661d4fef0f1f82a8b7342bd222c73348b3",
+      "dimensions": [
+        120,
+        30
+      ],
+      "frames": 4,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/equipmentdesigner/save_preset_button.dds",
+      "previous_output_sha256": "4235c8fdd7c002815c6afffd02c5278de89c05959f409625c778113c4f2cfda2",
+      "corrected_output_sha256": "fe5fe089a66d3be0ab134e5c15334dd742612b9b11c630c20f475480050751e5",
+      "changed": true,
+      "original_sha256": "381aadb0f2d47f006582fa288c9bd7452eb104d9a0640c711ff9141107da1550",
+      "dimensions": [
+        120,
+        30
+      ],
+      "frames": 4,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/equipmentdesigner/tanks/designer_button_auto_strip.dds",
+      "previous_output_sha256": "bdb5fab5a3073b2f5ee44f0116e4543b44dbc530e5021f6a34509d83b2371b5f",
+      "corrected_output_sha256": "dd74139288c4796788a08ce28ded345871c6a2e65f304f030d33bcdbd9640084",
+      "changed": true,
+      "original_sha256": "6f22b1991528f178b55b4efe2d4f4d0818276ad58af1675a880a2681c5e69999",
+      "dimensions": [
+        120,
+        30
+      ],
+      "frames": 4,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/equipmentdesigner/tanks/designer_button_duplicate_strip.dds",
+      "previous_output_sha256": "be748750d87fae8ef8e50391167ff4499af0548aee27e4f3ac2485d4b7a4f96e",
+      "corrected_output_sha256": "0c857e18018c5a5fc0d073965c287f9d03bcd49cdb242fe4383a139a12dba2d0",
+      "changed": true,
+      "original_sha256": "26922ec9485391aebeb1ff1044a711f6e8fa8c080b609037fd1072852883c02a",
+      "dimensions": [
+        120,
+        30
+      ],
+      "frames": 4,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/equipmentdesigner/tanks/designer_button_upgrade_strip.dds",
+      "previous_output_sha256": "efa05d953fdcdd9dfad5d1afa8a3afc978e4458bbdfca86ab04ba65301aebeef",
+      "corrected_output_sha256": "355550559c86ee44cd8923f4d0cc4b6f5b361da3910832ca6d280526084ea99a",
+      "changed": true,
+      "original_sha256": "059844f092291135a09a3a893a8faed4c00a64547e8a56a839395ef69eed0896",
+      "dimensions": [
+        120,
+        30
+      ],
+      "frames": 4,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/factions/ui/faction_edit_rule_button.dds",
+      "previous_output_sha256": "eb77729c8c9e34aefeaad95dcad457823d4dc54c3a40e2bccdcf6bc6ac1f528b",
+      "corrected_output_sha256": "7cfd77fb5a6c15e2e21337c2e6da5275182f374687cd7771b579df4235ed5616",
+      "changed": true,
+      "original_sha256": "ba05ecfb0e1e30c4121fcfe79b235864aefd5595dfbbc08f8698bdee023e9134",
+      "dimensions": [
+        71,
+        26
+      ],
+      "frames": 1,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/government_in_exile/reinstate_button.dds",
+      "previous_output_sha256": "352bda4b5bf1e007a2973fd148f96ee76e30e0bdaf218ff2cdd790d8e22a1835",
+      "corrected_output_sha256": "afabdcd76f368d0ba8a9526757aa89ccfb128495bf78407d7dc2d4a1a91fffa6",
+      "changed": true,
+      "original_sha256": "6e89d6fe70de6c44398196c7c07431b20e78b3a4e91c5c80065e916da46529cf",
+      "dimensions": [
+        262,
+        44
+      ],
+      "frames": 2,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/leader_selection_button.dds",
+      "previous_output_sha256": "8d95ff88c7ef37ef1b3e2ab44b99faca0b8ea2886b5947696aeace079bad860d",
+      "corrected_output_sha256": "a4b9d2211095348f75a040a4aa5279061d93d49883416c87b4a06581c26a4c57",
+      "changed": true,
+      "original_sha256": "ceb51bccc5b0490dd007f348252c04576ae39d84a7ce5affff3a659f72096ddd",
+      "dimensions": [
+        180,
+        31
+      ],
+      "frames": 2,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/load_save_entry.dds",
+      "previous_output_sha256": "e01b4c3c94de7dd12034cdc050091d1c2284a769bb606c9596356189ef8a47ff",
+      "corrected_output_sha256": "75ac4adbc9f80e403f9544825b09ef01dc5ef44447b47712fe9ce13356a7e9e1",
+      "changed": true,
+      "original_sha256": "e24474e64074f8de3373fa8409adf4f3ce4a1cf2036c305bd149710732575a4e",
+      "dimensions": [
+        594,
+        54
+      ],
+      "frames": 2,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/military_raids/launch_button.dds",
+      "previous_output_sha256": "e2b0c5578c2fe8593b3af8474c621d3286fb5a6bcc092bb3701cb58d31810be7",
+      "corrected_output_sha256": "b5039b3cae900ef1481343eba53cdaf386da50da7c5fa8a469e54bc4f6a034af",
+      "changed": true,
+      "original_sha256": "c30ce757ef563ce38b0904d0464d03c4ece3ca549cb6dce1bf260f5ad03a14bd",
+      "dimensions": [
+        150,
+        50
+      ],
+      "frames": 1,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/naval_deploy_button.dds",
+      "previous_output_sha256": "0b2db93dfe8ef04702db02091cf2ceec145d96d0e73f6f8d292746e9ba9f269c",
+      "corrected_output_sha256": "041f299bea77436732f465f240dab4c413f2613c444cedece1558b1f0fdb1b48",
+      "changed": true,
+      "original_sha256": "ed0dab1dc765ccc2fa87e8842671c33164091d07f3431e643d170e7f7b908294",
+      "dimensions": [
+        124,
+        32
+      ],
+      "frames": 1,
+      "format": "DXT5"
+    },
+    {
+      "path": "gfx/interface/naval_name_list_button.dds",
+      "previous_output_sha256": "2bf886dbdb94dc37038b610ec9c83b3aa42747f332bf2e91fa826b5d02624f7f",
+      "corrected_output_sha256": "fbeca66b3bc2f53062c37bee06d9f9994d421e2153e2579816f3298a4073cb1a",
+      "changed": true,
+      "original_sha256": "285bb2821701d70cfddcd550abdfc7a754681b28a7e04a47e0f5bf35af23924a",
+      "dimensions": [
+        151,
+        23
+      ],
+      "frames": 1,
+      "format": "RGB24"
+    },
+    {
+      "path": "gfx/interface/naval_unit_ship_entry.dds",
+      "previous_output_sha256": "21ee4b86a92dd115c7281745175a5e6e004f61decea5e2180ff5f6dc4c09c7ab",
+      "corrected_output_sha256": "4e231ba65129b84316905e2c3e2966ceb3c979aef7c969972b37fb3543192433",
+      "changed": true,
+      "original_sha256": "f5ed0b8383e89d9f049971f15d8e3b45011bd452d5c8886b8c679141375549f8",
+      "dimensions": [
+        986,
+        47
+      ],
+      "frames": 2,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/naviesview/bg_small_naval_sub_unit_entry.dds",
+      "previous_output_sha256": "5df751600956a07b14c6da54f3f9035f34708a44a64a9d2b1feeea1048d22eec",
+      "corrected_output_sha256": "a3983a4ce102b2e8f0b403878f7b1ede8011729fb01ca888c6dffadd9547f6e8",
+      "changed": true,
+      "original_sha256": "1b33385e3ee3ae0263b574be78c1d8a093ce3e579b9e8b1cdaf6c1835b1bf913",
+      "dimensions": [
+        355,
+        47
+      ],
+      "frames": 1,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/naviesview/btn_active.dds",
+      "previous_output_sha256": "15052c39bf6c0f590bf3836adf6ffbba37c2f28c4f07e1edd36a947b0a5c1e2e",
+      "corrected_output_sha256": "165825a48c9286e2e974e7e34277faf23d09754dbbf10d9a32f640cd8ec26aa9",
+      "changed": true,
+      "original_sha256": "0c3125cc64fabeaec0900075c6cfbc488afdbed7608747e6de2e9d73bf0686b4",
+      "dimensions": [
+        162,
+        44
+      ],
+      "frames": 3,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/naviesview/btn_convoy_escort.dds",
+      "previous_output_sha256": "27aa27711e4c1a7e459bc638c8ef6baf25631876ee8b9c48ce6f3c9d21a6c0a1",
+      "corrected_output_sha256": "90269fea75c3455bebb5cb1ab93e78e70a736321f9e076c05a7157c72808658a",
+      "changed": true,
+      "original_sha256": "9506f808c59dad2c8498d7e161d6319f4e14429144d196a572d4fa8ec80c9957",
+      "dimensions": [
+        162,
+        44
+      ],
+      "frames": 3,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/naviesview/btn_convoy_raid.dds",
+      "previous_output_sha256": "08db92b92082366f446edd32f18f6258af6fa12dca44e4024f8dcf5ba0f42280",
+      "corrected_output_sha256": "dd4ed360f31956d431c039db21c400d8c0420336fc005d361f79abddf0d40dc3",
+      "changed": true,
+      "original_sha256": "0980293144d2bd7d8e9f253ff7a89d0e6ec5707d2f8b63f25347f8da1ecc228c",
+      "dimensions": [
+        162,
+        44
+      ],
+      "frames": 3,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/naviesview/btn_hold_small.dds",
+      "previous_output_sha256": "aa7edbe40f41c60b533d39139751648ab595831c2060cec6610461fe8a699da6",
+      "corrected_output_sha256": "9b7c6319383d7bc92ab5200371ec794f0c455fb11e5228406c3a32db927ff573",
+      "changed": true,
+      "original_sha256": "9ac001bd479425566de13d162f71400b2a318787b36752fa64a3294b58268eb0",
+      "dimensions": [
+        81,
+        27
+      ],
+      "frames": 3,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/naviesview/btn_invasion.dds",
+      "previous_output_sha256": "ed13268aabddca1ef9296748b872976d470b0f94e8fedb599dada8d859f1f3de",
+      "corrected_output_sha256": "1d8d89634a7e611da3fdc703ccb9c51fe48029d4651dc5ec03b05b96308d20d3",
+      "changed": true,
+      "original_sha256": "b7a8de7069aac5c29515d19d1759479a3495a2e595aa107d9c87dbb6632ec8d0",
+      "dimensions": [
+        162,
+        44
+      ],
+      "frames": 3,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/naviesview/btn_mines_planting.dds",
+      "previous_output_sha256": "1efa9ebaaac81b0dc4b1f3e9a88b4a6e1b1508af7b0f1fbe6de77ac1938358b5",
+      "corrected_output_sha256": "7ac4b26cddf3509e66bf6a49076cba35d0956dddb6433869ce6fc847fb073aba",
+      "changed": true,
+      "original_sha256": "0ae08f746b40f3da9ab5ea0e11f9e7da206ea5679139533aab6c819f9ece26b2",
+      "dimensions": [
+        162,
+        44
+      ],
+      "frames": 3,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/naviesview/btn_mines_sweeping.dds",
+      "previous_output_sha256": "0804945f091cba09b95f58a3a641e3a381f1648026ecb7df691b8d1f5b583f1c",
+      "corrected_output_sha256": "4b1c8999018a85ea0e3238a9db19816cc853ddb91cd42c81ba7d22dd2893064d",
+      "changed": true,
+      "original_sha256": "5bfd250adf24d579f117994f387b5545c66b2d3c5eb46c608a80dcc298a46fb1",
+      "dimensions": [
+        162,
+        44
+      ],
+      "frames": 3,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/naviesview/btn_mode.dds",
+      "previous_output_sha256": "30c0e0967fee8275d055a7fbb95ece2141bb886e8024fddb225229c48817e89e",
+      "corrected_output_sha256": "c66dff6dc205904e3d00b857fe4489880f61950f088716d3ce647bd3670ce8c3",
+      "changed": true,
+      "original_sha256": "9b43c6778917f90edb7ef83bfad0d6909f5d914ff9e66e596adedebf423719fe",
+      "dimensions": [
+        112,
+        44
+      ],
+      "frames": 2,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/naviesview/btn_patrol.dds",
+      "previous_output_sha256": "eba434ae57201be10cb504b853746322f48dde20d20e6abcf4a0aea78c16af78",
+      "corrected_output_sha256": "ebb4803782a3c90d05ce64793c66020ca4d443179d81e46a3a481fe43bd8fb49",
+      "changed": true,
+      "original_sha256": "82c78cd3c6b04f303a99c0ea5b5bcf48ad00b51fe457da598f3e4608a6b7be63",
+      "dimensions": [
+        162,
+        44
+      ],
+      "frames": 3,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/naviesview/btn_strike_force.dds",
+      "previous_output_sha256": "ace392e1736c790228d43fd9a9be3a4cc3bb522e484a074e3e02e79472faf9a9",
+      "corrected_output_sha256": "85c6388b85e278907479aa61c57bc728e052309576bbbced04815b9b715e4c70",
+      "changed": true,
+      "original_sha256": "1243fb79ab428a9b3003adb802cf85b70513c891b212591e85feff670dc6318a",
+      "dimensions": [
+        162,
+        44
+      ],
+      "frames": 3,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/naviesview/btn_training.dds",
+      "previous_output_sha256": "ceb8424c6ddfc52694d942b8581e955df95538fb3a26d3876ef94b67b608e649",
+      "corrected_output_sha256": "2bfead1b3953fb18c0fa3b4b3777ba0e421794482d1ba7f77b0cbe538b496bfd",
+      "changed": true,
+      "original_sha256": "0d6977af03e667783817746a33658cff60b7544400b407051b23276ca65fcceb",
+      "dimensions": [
+        162,
+        44
+      ],
+      "frames": 3,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/naviesview/naval_target_ships_button.dds",
+      "previous_output_sha256": "4cc2249e15fb01dad0d998a3be08dfe4780356df0f45fe26f79effaefb67a62d",
+      "corrected_output_sha256": "5b4c7ef2f60e4e68273a874868d72dfb055909657cf48d9df2fde416cfa1a335",
+      "changed": true,
+      "original_sha256": "2fccdbf92aee1240a7aef676a4a0c7b61a9b1599d2b3d1b05f6643fab42658ed",
+      "dimensions": [
+        228,
+        32
+      ],
+      "frames": 2,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/operatives/mission_button_background.dds",
+      "previous_output_sha256": "7852c20297a425cb4177cb17d83733109f8e26b2a2c28283245ec17087fdf83c",
+      "corrected_output_sha256": "8a5b51f67b9542c8c6757b87f83919737f9cd98c30206e4e376ab20929f82350",
+      "changed": true,
+      "original_sha256": "99e94b977525f8b5b256c6845173708b4e342645b6bc6eaf16ad7824ff48453c",
+      "dimensions": [
+        144,
+        48
+      ],
+      "frames": 3,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/peace_conference/bid_button.dds",
+      "previous_output_sha256": "410b258721a089ad2efd8920acfde264cefa2ce998b6216c7e81c760c705824a",
+      "corrected_output_sha256": "24f26ed86bda814b3dab51c2d52ff4938195b70082b0a47e646c98ea77420930",
+      "changed": true,
+      "original_sha256": "c3e1c65680e7549fe1da1ea65f5401d0f6cc3e0ad93544489c5d5172511badbf",
+      "dimensions": [
+        602,
+        30
+      ],
+      "frames": 2,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/play_button.dds",
+      "previous_output_sha256": "bb184d844ecf07d76efe7f7a59ccc02bece5aad6d4268dd1d61f0f196c20225d",
+      "corrected_output_sha256": "56818c3d3d2e2835fe5852610d9c44e03f95a9b5c7581b5cc274c476522a770c",
+      "changed": true,
+      "original_sha256": "c500bf4550bbfda9a9377515f1ef91ae73a1d83b3e50c32b74ccd6c1790cfa55",
+      "dimensions": [
+        723,
+        60
+      ],
+      "frames": 3,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/play_button_ready.dds",
+      "previous_output_sha256": "cfa2ac909401faf36613ad03ed5d447a7fb4e0f6704bb4efb6580cfb1871ef14",
+      "corrected_output_sha256": "531037240ed678ecce1febff57eed0f64fb10eaf67e649fe430c6c501f8cc8cb",
+      "changed": true,
+      "original_sha256": "ef4ef9be47f21813ba9209e05bc8f380e9a03e3da6f9b9cf0a47912de8065ba8",
+      "dimensions": [
+        241,
+        60
+      ],
+      "frames": 1,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/save_game_disconnected.dds",
+      "previous_output_sha256": "35d6320f40a21d7ae3c449323c30cb8b4ff6b7c60c0ce77e4eae0b734d8b4057",
+      "corrected_output_sha256": "96c25c94735de626eb01aa72ed9bd6815b67a4258d4fe2acc86c190002d5e3c1",
+      "changed": true,
+      "original_sha256": "8efda7cc3df9f1d1590bfad26a74be8c26ef1fba053e47db9229edfa0323af32",
+      "dimensions": [
+        123,
+        34
+      ],
+      "frames": 1,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/save_load_file_disconnected_3frames.dds",
+      "previous_output_sha256": "ae494a6c72c07abc474713bf91b3df63d852dc575213e8f9ea0e365edcd45930",
+      "corrected_output_sha256": "1232b80af82cbfa209f591ab5e1aeabb51ef6f6bdadf5665e401f7bdcc7bdbe0",
+      "changed": true,
+      "original_sha256": "efc3e88225af333b8bf8c741c05f04fe3744a78f6693f42981fa84d2aaf69ab4",
+      "dimensions": [
+        369,
+        34
+      ],
+      "frames": 3,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/scripted_gui_graphics/add_pol_idea_button.dds",
+      "previous_output_sha256": "f7c57dd25605e9252a26b17fad16558427b039244efadfa196995c3a912e2738",
+      "corrected_output_sha256": "1a64ec8ac1f45bc62d5db6a85041b8def9543ff988af5fa9b5a41d64929cd815",
+      "changed": true,
+      "original_sha256": "9721289b9df595f74851dc60ee969030e9b13ed6f404eda8ab318d68316b6baf",
+      "dimensions": [
+        63,
+        63
+      ],
+      "frames": 1,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/stop_training_leadergroup_button.dds",
+      "previous_output_sha256": "bf00aa1b1b08691a1cb1b80e40dbf48c372eb1fbdfebe166bb7ace9127b1568d",
+      "corrected_output_sha256": "3238f368cf0e1334a86f86cf54f124d98b7c95addada184531e24d3dea49d9d4",
+      "changed": true,
+      "original_sha256": "6bc45ffe168c5abe6330442a9ed2b77c2ee15015565d92d7dab04c78b866f1d0",
+      "dimensions": [
+        164,
+        29
+      ],
+      "frames": 2,
+      "format": "DXT1"
+    },
+    {
+      "path": "gfx/interface/strategicair/mission_bt_checkbox_bg.dds",
+      "previous_output_sha256": "5fb257156ece6e9b707390777852783a86eaf0567ff738b7ce18940e69af5720",
+      "corrected_output_sha256": "8dc643fc64588944cc182d32962daf7b4ef97e91a440fb766af6ba2dffb77fac",
+      "changed": true,
+      "original_sha256": "0b92ea00ed7a11e309b7a8ea8f829c89d603321151d1483acd565e049164acde",
+      "dimensions": [
+        188,
+        34
+      ],
+      "frames": 4,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/strategicair/mission_btn_bg.dds",
+      "previous_output_sha256": "0edc6337bc4d4a9fd9f7b3c8e5584add7f359be6708865f2539ac54fe33e9cdc",
+      "corrected_output_sha256": "e4039a3d154712f27296d231c2b5e514328efc05cec45bb5a9a93da84619af01",
+      "changed": true,
+      "original_sha256": "c8e308a319cae5d0788b3e6d4c9950fdb115cf82c388211b5dd1f55c622e6ff7",
+      "dimensions": [
+        188,
+        34
+      ],
+      "frames": 4,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/unitcontrol/unitlist_garrison_button.dds",
+      "previous_output_sha256": "48432c9d3b10731df76dd8e6d653cb9da610b6f5700559de491741ee7e72202b",
+      "corrected_output_sha256": "faaef20f132b988b686c0c7f949cfa7cae65994192655176c5571033168b4604",
+      "changed": true,
+      "original_sha256": "3d8929a86bc4e8b915af72d377be5ac4d5908e567ed66f0f4c1a1f3f4b44dab6",
+      "dimensions": [
+        152,
+        31
+      ],
+      "frames": 2,
+      "format": "RGB32"
+    },
+    {
+      "path": "gfx/interface/unitcontrol/unitlist_unitinfo_button_small.dds",
+      "previous_output_sha256": "04179d308b8b157329303aa0dc4029e981b0c1584a1163ade7cc047d04545b5d",
+      "corrected_output_sha256": "4fec21fe630fe0123420e752ffbfbbe021b94ea42874c20a85cdf4a5dfcdd8ee",
+      "changed": true,
+      "original_sha256": "4a03da3c6b50519c612d2f5903993fc01a4fb1c41c0c0c0dcc0593594ba8a72c",
+      "dimensions": [
+        64,
+        31
+      ],
+      "frames": 1,
+      "format": "RGB32"
+    }
+  ]
+}

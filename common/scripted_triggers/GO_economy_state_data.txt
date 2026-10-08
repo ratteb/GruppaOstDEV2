@@ -1,0 +1,147 @@
+# Gruppa Ost economy - Stage 1 state data access guards.
+# All triggers below require STATE scope.
+# Schema initialization allocates placeholders; only per-field guards permit data reads.
+#
+# Later state-scope calculation example (no calculation is implemented here):
+# if = {
+#     limit = { GO_econ_state_has_gdp = yes }
+#     set_temp_variable = { GO_econ_calc_gdp = GO_econ_state_gdp }
+# }
+# For another state's value, enter that state's scope and check its guard first.
+
+GO_econ_state_data_initialized = {
+    has_variable = GO_econ_state_schema_version
+    check_variable = { GO_econ_state_schema_version = 1 }
+}
+
+# State economic indicators
+GO_econ_state_has_gdp = {
+    GO_econ_state_data_initialized = yes
+    has_variable = GO_econ_state_gdp
+    check_variable = { GO_econ_state_gdp_populated = 1 }
+}
+
+GO_econ_state_has_gdp_per_capita = {
+    GO_econ_state_data_initialized = yes
+    has_variable = GO_econ_state_gdp_per_capita
+    check_variable = { GO_econ_state_gdp_per_capita_populated = 1 }
+    GO_econ_state_has_gdp = yes
+    check_variable = { var = GO_econ_state_gdp value = 0 compare = greater_than_or_equals }
+    GO_econ_state_has_population_millions = yes
+}
+
+GO_econ_state_has_debt = {
+    GO_econ_state_data_initialized = yes
+    has_variable = GO_econ_state_debt
+    check_variable = { GO_econ_state_debt_populated = 1 }
+}
+
+# State energy
+GO_econ_state_has_energy_demand = {
+    GO_econ_state_data_initialized = yes
+    has_variable = GO_econ_state_energy_demand
+    check_variable = { GO_econ_state_energy_demand_populated = 1 }
+}
+
+GO_econ_state_has_energy_generation = {
+    GO_econ_state_data_initialized = yes
+    has_variable = GO_econ_state_energy_generation
+    check_variable = { GO_econ_state_energy_generation_populated = 1 }
+}
+
+GO_econ_state_has_energy_transfer_capacity = {
+    GO_econ_state_data_initialized = yes
+    has_variable = GO_econ_state_energy_transfer_capacity
+    check_variable = { GO_econ_state_energy_transfer_capacity_populated = 1 }
+}
+
+# Resource slots (quantity meaning and units remain unspecified)
+GO_econ_state_has_resource_iron = {
+    GO_econ_state_data_initialized = yes
+    has_variable = GO_econ_state_resource_iron
+    check_variable = { GO_econ_state_resource_iron_populated = 1 }
+}
+
+GO_econ_state_has_resource_bauxite = {
+    GO_econ_state_data_initialized = yes
+    has_variable = GO_econ_state_resource_bauxite
+    check_variable = { GO_econ_state_resource_bauxite_populated = 1 }
+}
+
+GO_econ_state_has_resource_food = {
+    GO_econ_state_data_initialized = yes
+    has_variable = GO_econ_state_resource_food
+    check_variable = { GO_econ_state_resource_food_populated = 1 }
+}
+
+GO_econ_state_has_resource_coal = {
+    GO_econ_state_data_initialized = yes
+    has_variable = GO_econ_state_resource_coal
+    check_variable = { GO_econ_state_resource_coal_populated = 1 }
+}
+
+GO_econ_state_has_resource_natural_gas = {
+    GO_econ_state_data_initialized = yes
+    has_variable = GO_econ_state_resource_natural_gas
+    check_variable = { GO_econ_state_resource_natural_gas_populated = 1 }
+}
+
+GO_econ_state_has_resource_oil = {
+    GO_econ_state_data_initialized = yes
+    has_variable = GO_econ_state_resource_oil
+    check_variable = { GO_econ_state_resource_oil_populated = 1 }
+}
+
+GO_econ_state_has_resource_rare_earth_minerals = {
+    GO_econ_state_data_initialized = yes
+    has_variable = GO_econ_state_resource_rare_earth_minerals
+    check_variable = { GO_econ_state_resource_rare_earth_minerals_populated = 1 }
+}
+
+GO_econ_state_has_resource_tungsten = {
+    GO_econ_state_data_initialized = yes
+    has_variable = GO_econ_state_resource_tungsten
+    check_variable = { GO_econ_state_resource_tungsten_populated = 1 }
+}
+
+GO_econ_state_has_resource_titanium = {
+    GO_econ_state_data_initialized = yes
+    has_variable = GO_econ_state_resource_titanium
+    check_variable = { GO_econ_state_resource_titanium_populated = 1 }
+}
+
+GO_econ_state_has_resource_steel = {
+    GO_econ_state_data_initialized = yes
+    has_variable = GO_econ_state_resource_steel
+    check_variable = { GO_econ_state_resource_steel_populated = 1 }
+}
+
+GO_econ_state_has_resource_aluminium = {
+    GO_econ_state_data_initialized = yes
+    has_variable = GO_econ_state_resource_aluminium
+    check_variable = { GO_econ_state_resource_aluminium_populated = 1 }
+}
+
+GO_econ_state_has_resource_rations = {
+    GO_econ_state_data_initialized = yes
+    has_variable = GO_econ_state_resource_rations
+    check_variable = { GO_econ_state_resource_rations_populated = 1 }
+}
+
+GO_econ_state_has_resource_fuel = {
+    GO_econ_state_data_initialized = yes
+    has_variable = GO_econ_state_resource_fuel
+    check_variable = { GO_econ_state_resource_fuel_populated = 1 }
+}
+
+GO_econ_state_has_resource_microchips = {
+    GO_econ_state_data_initialized = yes
+    has_variable = GO_econ_state_resource_microchips
+    check_variable = { GO_econ_state_resource_microchips_populated = 1 }
+}
+
+GO_econ_state_has_resource_rubber = {
+    GO_econ_state_data_initialized = yes
+    has_variable = GO_econ_state_resource_rubber
+    check_variable = { GO_econ_state_resource_rubber_populated = 1 }
+}

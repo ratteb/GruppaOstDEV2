@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-08",
+  "game_reference": "1.18.3.0.7709",
+  "resources": {
+    "gfx/interface/topbar/background_extended.dds": {
+      "sha256": "cf4de56a66b5f6ca7dd249c9ff0f7b90ec3d0e07c37a8b8f346488e1968fb99e",
+      "dimensions": [
+        2346,
+        87
+      ],
+      "frames": 1,
+      "header_unchanged": true
+    },
+    "gfx/interface/topbar/armyoverview_buttons_bg.dds": {
+      "sha256": "5c4e85cb60ab6d7a1a4e14c18c2895d34c56682152cb09c5591fe83acbd400ab",
+      "dimensions": [
+        403,
+        101
+      ],
+      "frames": 1,
+      "header_unchanged": true
+    },
+    "gfx/interface/date_pause_button_bg.dds": {
+      "sha256": "aa9294ae4b3a31c2d331bfa18304e510b7980d3c4fea33ca60d513daf2ec2609",
+      "dimensions": [
+        206,
+        28
+      ],
+      "frames": 1,
+      "header_unchanged": true
+    },
+    "gfx/interface/date_pause_button.dds": {
+      "sha256": "ba99678d567eae438783b0f259bb5b78dd704337c01559756cb025a3ab3855b5",
+      "dimensions": [
+        412,
+        28
+      ],
+      "frames": 2,
+      "header_unchanged": true
+    },
+    "gfx/interface/topbar/toolbar/international_market_button.dds": {
+      "sha256": "795c43a039ec6308bd6a9c78c772f09ce21ef8e31076ba394538fa242218b51b",
+      "dimensions": [
+        110,
+        41
+      ],
+      "frames": 2,
+      "header_unchanged": true
+    },
+    "gfx/interface/topbar/toolbar/staff_office_button.dds": {
+      "sha256": "68eec546bad7180419920e6b4c2093a97cc645159dc9b18a102fdfd4806fdc69",
+      "dimensions": [
+        110,
+        41
+      ],
+      "frames": 2,
+      "header_unchanged": true
+    },
+    "gfx/interface/alerts/global_alert_icons.dds": {
+      "sha256": "242c71b0ce7a89a18a5dbacce7839b946b4e8be19bf525115dab3f57aa36bbaa",
+      "dimensions": [
+        3290,
+        42
+      ],
+      "frames": 70,
+      "header_unchanged": true
+    },
+    "gfx/interface/alerts/global_diplorequest_icons.dds": {
+      "sha256": "743f71411e2b28edca4a8b424457af6ac2b2b9f3d24fbd46f1e6fb84b10ced4a",
+      "dimensions": [
+        893,
+        42
+      ],
+      "frames": 19,
+      "header_unchanged": true
+    },
+    "gfx/interface/tiles/tiled_focus_bg.dds": {
+      "sha256": "4ea74f2ffbad29bd81714004e281ee054a9425c761d1c6594c5d06ce650bc47c",
+      "dimensions": [
+        998,
+        1031
+      ],
+      "frames": 1,
+      "header_unchanged": true
+    },
+    "gfx/interface/tiles/tiled_window_1b_border.dds": {
+      "sha256": "5d11f0df0a9e849c2ffd5820cced35ce48a372cb911e9c2706e1b7aafb5c1491",
+      "dimensions": [
+        190,
+        190
+      ],
+      "frames": 1,
+      "header_unchanged": true
+    },
+    "gfx/interface/tiles/tiled_window_thin_border2.dds": {
+      "sha256": "6622d872a37e184d24e32787e119ce523fcb80c8511698058f3144b40d3f0866",
+      "dimensions": [
+        190,
+        190
+      ],
+      "frames": 1,
+      "header_unchanged": true
+    }
+  },
+  "opaque_alert_pixels_preserved": 21945,
+  "animation_frames_checked": 2,
+  "offline_resolutions": [
+    [
+      1920,
+      1080
+    ],
+    [
+      2560,
+      1440
+    ]
+  ],
+  "failures": [],
+  "in_game_validated": false
+}

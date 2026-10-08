@@ -1,0 +1,8 @@
+# Original placeholder entity referencing the installed vanilla mesh.
+# No vanilla model, texture or animation is copied into the mod.
+# Matching entity convention: installed 1.18.3 gfx/entities/buildings.asset.
+entity = {
+	name = "building_GO_econ_substation"
+	pdxmesh = "building_industrial_complex"
+	scale = 1.0
+}

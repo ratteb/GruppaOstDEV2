@@ -1,0 +1,165 @@
+# Gruppa Ost economy - Stage 2 national GDP reporting caches.
+# Scope: COUNTRY for both effects. Values use common reference-currency units.
+# Sources: docs/HOI4_MOD_DESIGN.md, D-010/D-013 and the GDP accounting contract;
+# installed HOI4 1.18.3 common/scripted_effects/RAJ_GOE_scripted_effects.txt:267,271
+# and WTT_china_political_struggle_effects.txt:514,527 for scoped accumulation.
+# This layer refreshes reports only: it applies no growth, charges or PU grants.
+
+GO_econ_initialize_country_ledger = {
+    # The approved starting price index is a real default, not placeholder GDP.
+    # A missing value invalidates any orphan marker before receiving this default.
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_price_index } }
+        set_variable = { GO_econ_country_price_index = 1 }
+        set_variable = { GO_econ_country_price_index_populated = 1 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_price_index_populated } }
+        set_variable = { GO_econ_country_price_index_populated = 0 }
+    }
+
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_gdp } }
+        set_variable = { GO_econ_country_gdp = 0 }
+        set_variable = { GO_econ_country_gdp_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_gdp_populated } }
+        set_variable = { GO_econ_country_gdp_populated = 0 }
+    }
+
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_gdp_nominal } }
+        set_variable = { GO_econ_country_gdp_nominal = 0 }
+        set_variable = { GO_econ_country_gdp_nominal_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_gdp_nominal_populated } }
+        set_variable = { GO_econ_country_gdp_nominal_populated = 0 }
+    }
+
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_population_millions } }
+        set_variable = { GO_econ_country_population_millions = 0 }
+        set_variable = { GO_econ_country_population_millions_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_population_millions_populated } }
+        set_variable = { GO_econ_country_population_millions_populated = 0 }
+    }
+
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_gdp_per_capita } }
+        set_variable = { GO_econ_country_gdp_per_capita = 0 }
+        set_variable = { GO_econ_country_gdp_per_capita_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_gdp_per_capita_populated } }
+        set_variable = { GO_econ_country_gdp_per_capita_populated = 0 }
+    }
+
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_report_rebuilt } }
+        set_variable = { GO_econ_country_report_rebuilt = 0 }
+    }
+
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_ledger_schema_version } }
+        set_variable = { GO_econ_country_ledger_schema_version = 1 }
+    }
+}
+
+GO_econ_refresh_country_gdp = {
+    GO_econ_initialize_country_ledger = yes
+
+    if = {
+        limit = { GO_econ_country_ledger_initialized = yes }
+        set_variable = { GO_econ_country_report_rebuilt = 0 }
+        # Rebuild derived values and readiness together. Incomplete data are never
+        # published through the complete-total fields, including after data loss.
+        set_variable = { GO_econ_country_gdp = 0 }
+        set_variable = { GO_econ_country_gdp_populated = 0 }
+        set_variable = { GO_econ_country_gdp_nominal = 0 }
+        set_variable = { GO_econ_country_gdp_nominal_populated = 0 }
+        set_variable = { GO_econ_country_population_millions = 0 }
+        set_variable = { GO_econ_country_population_millions_populated = 0 }
+        set_variable = { GO_econ_country_gdp_per_capita = 0 }
+        set_variable = { GO_econ_country_gdp_per_capita_populated = 0 }
+
+        set_variable = { GO_econ_country_owned_states = 0 }
+        set_variable = { GO_econ_country_eligible_states = 0 }
+        set_variable = { GO_econ_country_excluded_states = 0 }
+        set_variable = { GO_econ_country_gdp_states = 0 }
+        # population_states counts usable GDP + resident-population pairs.
+        set_variable = { GO_econ_country_population_states = 0 }
+        set_variable = { GO_econ_country_missing_gdp_states = 0 }
+        set_variable = { GO_econ_country_missing_population_states = 0 }
+        set_variable = { GO_econ_country_gdp_subtotal = 0 }
+        set_variable = { GO_econ_country_gdp_population_subtotal = 0 }
+        set_variable = { GO_econ_country_population_subtotal = 0 }
+
+        every_owned_state = {
+            add_to_variable = { PREV.GO_econ_country_owned_states = 1 }
+            if = {
+                limit = { is_controlled_by = PREV }
+                add_to_variable = { PREV.GO_econ_country_eligible_states = 1 }
+                if = {
+                    limit = {
+                        GO_econ_state_has_gdp = yes
+                        check_variable = { var = GO_econ_state_gdp value = 0 compare = greater_than_or_equals }
+                    }
+                    add_to_variable = { PREV.GO_econ_country_gdp_states = 1 }
+                    add_to_variable = { PREV.GO_econ_country_gdp_subtotal = GO_econ_state_gdp }
+                    if = {
+                        limit = {
+                            GO_econ_state_has_population_millions = yes
+                            check_variable = { GO_econ_state_population_millions > 0 }
+                        }
+                        add_to_variable = { PREV.GO_econ_country_population_states = 1 }
+                        add_to_variable = { PREV.GO_econ_country_gdp_population_subtotal = GO_econ_state_gdp }
+                        add_to_variable = { PREV.GO_econ_country_population_subtotal = GO_econ_state_population_millions }
+                    }
+                }
+            }
+            else = {
+                add_to_variable = { PREV.GO_econ_country_excluded_states = 1 }
+            }
+        }
+
+        set_variable = { GO_econ_country_missing_gdp_states = GO_econ_country_eligible_states }
+        subtract_from_variable = { GO_econ_country_missing_gdp_states = GO_econ_country_gdp_states }
+        # This count means missing usable GDP/population pairs, including missing GDP.
+        set_variable = { GO_econ_country_missing_population_states = GO_econ_country_eligible_states }
+        subtract_from_variable = { GO_econ_country_missing_population_states = GO_econ_country_population_states }
+
+        if = {
+            limit = {
+                check_variable = { GO_econ_country_eligible_states > 0 }
+                check_variable = { GO_econ_country_gdp_states = GO_econ_country_eligible_states }
+            }
+            set_variable = { GO_econ_country_gdp = GO_econ_country_gdp_subtotal }
+            set_variable = { GO_econ_country_gdp_populated = 1 }
+            if = {
+                limit = { GO_econ_country_has_price_index = yes }
+                set_variable = { GO_econ_country_gdp_nominal = GO_econ_country_gdp }
+                multiply_variable = { GO_econ_country_gdp_nominal = GO_econ_country_price_index }
+                set_variable = { GO_econ_country_gdp_nominal_populated = 1 }
+            }
+        }
+
+        if = {
+            limit = {
+                check_variable = { GO_econ_country_eligible_states > 0 }
+                check_variable = { GO_econ_country_population_states = GO_econ_country_eligible_states }
+                check_variable = { GO_econ_country_population_subtotal > 0 }
+            }
+            set_variable = { GO_econ_country_population_millions = GO_econ_country_population_subtotal }
+            set_variable = { GO_econ_country_population_millions_populated = 1 }
+            set_variable = { GO_econ_country_gdp_per_capita = GO_econ_country_gdp_population_subtotal }
+            multiply_variable = { GO_econ_country_gdp_per_capita = 1000 }
+            divide_variable = { GO_econ_country_gdp_per_capita = GO_econ_country_population_subtotal }
+            set_variable = { GO_econ_country_gdp_per_capita_populated = 1 }
+        }
+        set_variable = { GO_econ_country_report_rebuilt = 1 }
+    }
+}

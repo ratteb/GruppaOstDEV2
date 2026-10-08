@@ -1,0 +1,209 @@
+# Gruppa Ost - Government Services backend guards, HOI4 1.18.3.
+# All guards require STATE scope except the country project-count guard.
+# Public actor input: GO_econ_work_actor is a regular country-valued variable.
+# Never substitute ROOT for the actor/sponsor: these helpers can have any caller.
+# Sources: installed NORDIC_scripted_effects.txt:473,508-514 (country variables),
+# WTT_china_political_struggle_effects.txt:80-86 (country-keyed state variables),
+# documentation/triggers_documentation.md:2073-2095 (variable comparisons).
+
+# STATE. Membership uses real country scopes, including defeated identities.
+# scope_exists on a variable scope cannot establish that it is a country.
+GO_econ_work_actor_is_country = {
+    has_variable = GO_econ_work_actor
+    any_of_scopes = {
+        array = global.countries
+        check_variable = { PREV.GO_econ_work_actor = THIS }
+    }
+}
+
+GO_econ_services_project_has_sponsor = {
+    has_variable = GO_econ_state_project_sponsor
+    any_of_scopes = {
+        array = global.countries
+        check_variable = { PREV.GO_econ_state_project_sponsor = THIS }
+    }
+}
+
+GO_econ_state_has_services_completed_levels = {
+    GO_econ_state_ledger_initialized = yes
+    has_variable = GO_econ_state_services_completed_levels
+    check_variable = { GO_econ_state_services_completed_levels_populated = 1 }
+    OR = {
+        check_variable = { GO_econ_state_services_completed_levels = 0 }
+        check_variable = { GO_econ_state_services_completed_levels = 1 }
+        check_variable = { GO_econ_state_services_completed_levels = 2 }
+        check_variable = { GO_econ_state_services_completed_levels = 3 }
+        check_variable = { GO_econ_state_services_completed_levels = 4 }
+        check_variable = { GO_econ_state_services_completed_levels = 5 }
+    }
+}
+
+GO_econ_state_has_services_requested_levels = {
+    GO_econ_state_has_services_completed_levels = yes
+    has_variable = GO_econ_state_services_requested_levels
+    check_variable = { GO_econ_state_services_requested_levels_populated = 1 }
+    OR = {
+        check_variable = { GO_econ_state_services_requested_levels = 0 }
+        check_variable = { GO_econ_state_services_requested_levels = 1 }
+        check_variable = { GO_econ_state_services_requested_levels = 2 }
+        check_variable = { GO_econ_state_services_requested_levels = 3 }
+        check_variable = { GO_econ_state_services_requested_levels = 4 }
+        check_variable = { GO_econ_state_services_requested_levels = 5 }
+    }
+    check_variable = {
+        var = GO_econ_state_services_requested_levels
+        value = GO_econ_state_services_completed_levels
+        compare = less_than_or_equals
+    }
+}
+
+# Durable record validity is independent of current owner, GDP and status.
+# Refunds must remain possible after the state leaves its original sponsor.
+GO_econ_development_project_record_valid = {
+    GO_econ_state_fiscal_initialized = yes
+    has_variable = GO_econ_state_project_active
+    check_variable = { GO_econ_state_project_active = 1 }
+    OR = {
+        check_variable = { GO_econ_state_project_type = 1 }
+        check_variable = { GO_econ_state_project_type = 2 }
+        check_variable = { GO_econ_state_project_type = 3 }
+    }
+    has_variable = GO_econ_state_project_completed
+    check_variable = { GO_econ_state_project_completed = 0 }
+    has_variable = GO_econ_state_project_refund_pending
+    OR = {
+        check_variable = { GO_econ_state_project_refund_pending = 0 }
+        check_variable = { GO_econ_state_project_refund_pending = 1 }
+    }
+    has_variable = GO_econ_state_project_completion_pending
+    OR = {
+        check_variable = { GO_econ_state_project_completion_pending = 0 }
+        check_variable = { GO_econ_state_project_completion_pending = 1 }
+    }
+    GO_econ_services_project_has_sponsor = yes
+    has_variable = GO_econ_state_project_paid_cost
+    has_variable = GO_econ_state_project_cash_used
+    has_variable = GO_econ_state_project_borrowed_outstanding
+    has_variable = GO_econ_state_project_required_days
+    has_variable = GO_econ_state_project_workdays
+    has_variable = GO_econ_state_project_last_work_day
+    has_variable = GO_econ_state_project_next_level
+    has_variable = GO_econ_state_project_start_gdp
+    has_variable = GO_econ_state_project_start_price
+    has_variable = GO_econ_state_project_required_days_fraction
+    has_variable = GO_econ_state_project_workdays_fraction
+    has_variable = GO_econ_state_project_last_work_day_fraction
+    has_variable = GO_econ_state_project_funding_total
+    check_variable = { GO_econ_state_project_required_days_fraction = 0 }
+    check_variable = { GO_econ_state_project_workdays_fraction = 0 }
+    check_variable = { GO_econ_state_project_last_work_day_fraction = 0 }
+    check_variable = { var = GO_econ_state_project_last_work_day value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_state_project_last_work_day value = global.num_days compare = less_than_or_equals }
+    check_variable = { var = GO_econ_state_project_paid_cost value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_state_project_cash_used value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_state_project_borrowed_outstanding value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_state_project_cash_used value = GO_econ_state_project_paid_cost compare = less_than_or_equals }
+    check_variable = { var = GO_econ_state_project_borrowed_outstanding value = GO_econ_state_project_paid_cost compare = less_than_or_equals }
+    # No active-project repayment exists. All paid cost must be funded.
+    check_variable = { GO_econ_state_project_funding_total = GO_econ_state_project_paid_cost }
+    check_variable = { GO_econ_state_project_required_days > 0 }
+    check_variable = { var = GO_econ_state_project_workdays value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_state_project_workdays value = GO_econ_state_project_required_days compare = less_than_or_equals }
+    check_variable = { var = GO_econ_state_project_start_gdp value = 0 compare = greater_than_or_equals }
+    check_variable = { GO_econ_state_project_start_price > 0 }
+    OR = {
+        check_variable = { GO_econ_state_project_next_level = 1 }
+        check_variable = { GO_econ_state_project_next_level = 2 }
+        check_variable = { GO_econ_state_project_next_level = 3 }
+        check_variable = { GO_econ_state_project_next_level = 4 }
+        check_variable = { GO_econ_state_project_next_level = 5 }
+    }
+    GO_econ_development_project_type_record_valid = yes
+}
+
+GO_econ_services_project_record_valid = {
+    check_variable = { GO_econ_state_project_type = 1 }
+    GO_econ_development_project_record_valid = yes
+}
+
+GO_econ_development_project_finance_ready = {
+    GO_econ_development_project_record_valid = yes
+    GO_econ_state_has_debt = yes
+    check_variable = { GO_econ_state_debt_attribution_complete = 1 }
+    var:GO_econ_state_project_sponsor = {
+        GO_econ_country_has_treasury = yes
+        GO_econ_country_has_debt = yes
+        GO_econ_country_pending_fiscal_flows_ready = yes
+        check_variable = { GO_econ_country_debt_attribution_complete = 1 }
+        PREV = {
+            # An absent entry is real zero only under both complete declarations.
+            OR = {
+                AND = {
+                    NOT = { has_variable = GO_econ_state_liability_@PREV }
+                    check_variable = { GO_econ_state_project_borrowed_outstanding = 0 }
+                }
+                AND = {
+                    has_variable = GO_econ_state_liability_@PREV
+                    check_variable = { var = GO_econ_state_liability_@PREV value = GO_econ_state_project_borrowed_outstanding compare = greater_than_or_equals }
+                }
+            }
+        }
+    }
+}
+
+GO_econ_services_project_finance_ready = {
+    check_variable = { GO_econ_state_project_type = 1 }
+    GO_econ_development_project_finance_ready = yes
+}
+
+GO_econ_can_start_services_project = {
+    GO_econ_state_fiscal_initialized = yes
+    GO_econ_fiscal_config_ready = yes
+    GO_econ_state_has_services_completed_levels = yes
+    GO_econ_state_has_services_requested_levels = yes
+    GO_econ_state_has_gdp = yes
+    GO_econ_state_has_debt = yes
+    check_variable = { var = GO_econ_state_gdp value = 0 compare = greater_than_or_equals }
+    GO_econ_state_has_population_millions = yes
+    has_variable = GO_econ_state_project_active
+    check_variable = { GO_econ_state_project_active = 0 }
+    has_variable = GO_econ_state_project_type
+    check_variable = { GO_econ_state_project_type = 0 }
+    GO_econ_work_actor_is_country = yes
+    has_variable = GO_econ_state_services_funding_owner
+    check_variable = { GO_econ_state_services_funding_owner = GO_econ_work_actor }
+    has_state_flag = GO_econ_services_state_access
+    check_variable = { GO_econ_state_debt_attribution_complete = 1 }
+    check_variable = { GO_econ_state_services_completed_levels < 5 }
+    var:GO_econ_work_actor = {
+        has_country_flag = GO_econ_services_campaign_access
+        GO_econ_country_has_price_index = yes
+        GO_econ_country_has_treasury = yes
+        GO_econ_country_has_debt = yes
+        GO_econ_country_pending_fiscal_flows_ready = yes
+        GO_econ_country_has_global_status = yes
+        GO_econ_country_has_project_capacity = yes
+        PREV = {
+            is_owned_by = PREV
+            is_controlled_by = PREV
+            check_variable = {
+                var = GO_econ_state_services_completed_levels
+                value = PREV.GO_econ_country_state_development_limit
+                compare = less_than
+            }
+        }
+    }
+}
+
+GO_econ_can_cancel_services_project = {
+    GO_econ_services_project_finance_ready = yes
+    GO_econ_work_actor_is_country = yes
+    check_variable = { GO_econ_work_actor = GO_econ_state_project_sponsor }
+}
+
+# COUNTRY. Count rebuilt by GO_econ_refresh_project_slots, not incremented copies.
+GO_econ_country_project_slots_ready = {
+    has_variable = GO_econ_country_active_projects
+    check_variable = { GO_econ_country_active_projects_populated = 1 }
+    check_variable = { var = GO_econ_country_active_projects value = 0 compare = greater_than_or_equals }
+}

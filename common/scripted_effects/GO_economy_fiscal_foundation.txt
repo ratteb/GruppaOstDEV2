@@ -1,0 +1,235 @@
+# Gruppa Ost economy - Stage 3 fiscal configuration, calendar and debt reports.
+# ANY scope: config and pulses. COUNTRY/STATE scopes are labelled below.
+# Installed approved source: HOI4 1.18.3.0.7709, documentation/
+# dynamic_variables_documentation.md:968-991 (global.countries/num_days),
+# effects_documentation.md:4125-4140,4266-4280 (every_state/scope loop),
+# common/scripted_effects/ETH_scripted_effects.txt:620-625 (all country scopes),
+# WTT_china_political_struggle_effects.txt:248-255 (state keys indexed by country).
+# The complete-attribution markers are explicit author declarations, never seeds
+# inferred from an absent key or a placeholder zero. All money is nominal billions.
+
+GO_econ_initialize_fiscal_config = {
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_services_min_cost } }
+        set_variable = { global.GO_econ_cfg_services_min_cost = 0.005 }
+    }
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_services_cost_factor } }
+        set_variable = { global.GO_econ_cfg_services_cost_factor = 0.005 }
+    }
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_services_required_days } }
+        set_variable = { global.GO_econ_cfg_services_required_days = 180 }
+    }
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_services_expense_factor } }
+        set_variable = { global.GO_econ_cfg_services_expense_factor = 0.005 }
+    }
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_growth_per_level } }
+        set_variable = { global.GO_econ_cfg_growth_per_level = 0.25 }
+    }
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_base_growth } }
+        set_variable = { global.GO_econ_cfg_base_growth = 2 }
+    }
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_min_growth } }
+        set_variable = { global.GO_econ_cfg_min_growth = -20 }
+    }
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_max_growth } }
+        set_variable = { global.GO_econ_cfg_max_growth = 15 }
+    }
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_months_per_year } }
+        set_variable = { global.GO_econ_cfg_months_per_year = 12 }
+    }
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_percent_month_divisor } }
+        set_variable = { global.GO_econ_cfg_percent_month_divisor = 1200 }
+    }
+    # Derived safety bounds, not independent tuning or economic data.
+    set_variable = { global.GO_econ_cfg_growth_factor_floor = global.GO_econ_cfg_percent_month_divisor }
+    multiply_variable = { global.GO_econ_cfg_growth_factor_floor = -1 }
+    set_variable = { global.GO_econ_cfg_services_day_fraction = global.GO_econ_cfg_services_required_days }
+    modulo_variable = { global.GO_econ_cfg_services_day_fraction = 1 }
+    # Persisted identities belong to native calendar pulses. Initialization and
+    # report refresh never open a settlement month or reset a saved identity.
+    if = {
+        limit = {
+            NOT = { has_variable = global.GO_econ_month_serial }
+            NOT = { has_variable = global.GO_econ_month_pulse_day }
+            NOT = { has_variable = global.GO_econ_daily_pulse_day }
+        }
+        set_variable = { global.GO_econ_month_serial = 0 }
+        set_variable = { global.GO_econ_month_pulse_day = -1 }
+        set_variable = { global.GO_econ_daily_pulse_day = -1 }
+    }
+}
+
+# ANY. Invoke only from native on_monthly. Per-country on-action invocation is
+# deduplicated globally; settlement has its own per-country serial guard.
+GO_econ_monthly_pulse = {
+    GO_econ_initialize_fiscal_config = yes
+    if = {
+        limit = {
+            GO_econ_fiscal_calendar_ready = yes
+            NOT = { check_variable = { global.GO_econ_month_pulse_day = global.num_days } }
+        }
+        set_variable = { global.GO_econ_month_pulse_day = global.num_days }
+        add_to_variable = { global.GO_econ_month_serial = 1 }
+        # Dispatch once globally, including for blocked countries. An authored
+        # input writer may explicitly retry settle_country_month on this same day.
+        every_country = {
+            limit = {
+                exists = yes
+                has_country_flag = GO_econ_fiscal_campaign_access
+                OR = {
+                    NOT = { has_variable = GO_econ_country_last_processed_month }
+                    check_variable = { GO_econ_country_last_processed_month < global.GO_econ_month_serial }
+                }
+            }
+            GO_econ_settle_country_month = yes
+        }
+    }
+}
+
+# ANY. Native on_daily calls this once per world day. Record before dispatch so
+# callbacks cannot recursively award more work on the same saved date.
+GO_econ_daily_pulse = {
+    GO_econ_initialize_fiscal_config = yes
+    if = {
+        limit = {
+            GO_econ_fiscal_calendar_ready = yes
+            NOT = { check_variable = { global.GO_econ_daily_pulse_day = global.num_days } }
+        }
+        set_variable = { global.GO_econ_daily_pulse_day = global.num_days }
+        every_state = {
+            limit = {
+                OR = {
+                    check_variable = { GO_econ_state_project_active = 1 }
+                    check_variable = { GO_econ_state_services_completed_levels_populated = 1 }
+                    check_variable = { GO_econ_state_industry_levels_populated = 1 }
+                    check_variable = { GO_econ_state_substation_levels > 0 }
+                }
+            }
+            GO_econ_tick_development_project = yes
+        }
+        # Capture, legal transfers and authored status changes use the last
+        # settled ratio. This never applies a pending allocation request.
+        every_country = {
+            limit = {
+                exists = yes
+                has_country_flag = GO_econ_production_units_access
+            }
+            GO_econ_refresh_country_production_units = yes
+        }
+    }
+}
+
+# COUNTRY. Sum this debtor's indexed liabilities across every state, including
+# states it no longer owns/controls. Territory changes do not transfer the debt.
+GO_econ_refresh_country_debt = {
+    set_variable = { GO_econ_country_debt_populated = 0 }
+    if = {
+        limit = {
+            GO_econ_country_fiscal_initialized = yes
+            has_variable = GO_econ_country_debt_attribution_complete
+            check_variable = { GO_econ_country_debt_attribution_complete = 1 }
+        }
+        set_variable = { GO_econ_country_debt = 0 }
+        set_variable = { GO_econ_country_debt_populated = 1 }
+        every_state = {
+            # Current scope = state, PREV = debtor country. An absent key is zero
+            # only because that country explicitly declared its ledger complete.
+            if = {
+                limit = { has_variable = GO_econ_state_liability_@PREV }
+                if = {
+                    limit = {
+                        check_variable = {
+                            var = GO_econ_state_liability_@PREV
+                            value = 0
+                            compare = greater_than_or_equals
+                        }
+                    }
+                    add_to_variable = { PREV.GO_econ_country_debt = GO_econ_state_liability_@PREV }
+                }
+                else = {
+                    set_variable = { PREV.GO_econ_country_debt_populated = 0 }
+                }
+            }
+        }
+    }
+}
+
+# STATE. A complete state ledger may contain debts of several country debtors.
+# Loop includes nonexisting country scopes, preserving defeated sponsors' debt.
+GO_econ_refresh_state_debt = {
+    # Preserve any unmapped user-authored opening debt stock. Without an explicit
+    # complete attribution declaration, invalidate availability without erasing it.
+    set_variable = { GO_econ_state_debt_populated = 0 }
+    if = {
+        limit = {
+            GO_econ_state_fiscal_initialized = yes
+            GO_econ_state_data_initialized = yes
+            has_variable = GO_econ_state_debt_attribution_complete
+            check_variable = { GO_econ_state_debt_attribution_complete = 1 }
+        }
+        set_variable = { GO_econ_state_debt = 0 }
+        set_variable = { GO_econ_state_debt_populated = 1 }
+        for_each_scope_loop = {
+            array = global.countries
+            # Loop enters debtor country (PREV = state). Returning to PREV enters
+            # state again, where PREV now denotes the debtor for the indexed key.
+            PREV = {
+                if = {
+                    limit = { has_variable = GO_econ_state_liability_@PREV }
+                    if = {
+                        limit = {
+                            check_variable = {
+                                var = GO_econ_state_liability_@PREV
+                                value = 0
+                                compare = greater_than_or_equals
+                            }
+                        }
+                        add_to_variable = { GO_econ_state_debt = GO_econ_state_liability_@PREV }
+                    }
+                    else = {
+                        set_variable = { GO_econ_state_debt_populated = 0 }
+                    }
+                }
+            }
+        }
+    }
+}
+
+# COUNTRY. Only authored Global Status changes these limits. No default status,
+# GDP-based promotion or project cancellation is performed here.
+GO_econ_refresh_status_limits = {
+    set_variable = { GO_econ_country_status_limits_populated = 0 }
+    if = {
+        limit = { GO_econ_country_has_global_status = yes }
+        set_variable = { GO_econ_country_state_development_limit = GO_econ_country_global_status }
+        if = {
+            limit = { check_variable = { GO_econ_country_global_status = 1 } }
+            set_variable = { GO_econ_country_project_limit = 1 }
+        }
+        else_if = {
+            limit = { check_variable = { GO_econ_country_global_status = 2 } }
+            set_variable = { GO_econ_country_project_limit = 2 }
+        }
+        else_if = {
+            limit = { check_variable = { GO_econ_country_global_status = 3 } }
+            set_variable = { GO_econ_country_project_limit = 3 }
+        }
+        else_if = {
+            limit = { check_variable = { GO_econ_country_global_status = 4 } }
+            set_variable = { GO_econ_country_project_limit = 4 }
+        }
+        else = {
+            set_variable = { GO_econ_country_project_limit = 6 }
+        }
+        set_variable = { GO_econ_country_status_limits_populated = 1 }
+    }
+}

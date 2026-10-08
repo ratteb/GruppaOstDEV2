@@ -1,0 +1,10 @@
+{
+  "reported_control_frames_checked": 14,
+  "checks": [
+    "Start and Ready faces contain blue throughout the reported patch region",
+    "Difficulty face has no horizontal patches outside its symbol",
+    "Difficulty outline is opaque with a contrasting rim on all four sides"
+  ],
+  "failures": [],
+  "in_game_validated": false
+}

@@ -1,0 +1,634 @@
+# Gruppa Ost Stage 3 - pilot fiscal backend; no UI and no campaign data seeding.
+# STATE/COUNTRY scopes are documented per effect. All money: nominal reference-USD billions.
+# Zero allocation is unavailable unless a marker/explicit complete-attribution declaration says otherwise.
+# Shared helper inputs are regular scratch variables; callers must set them before each guarded call.
+
+GO_econ_initialize_state_fiscal = {
+    GO_econ_initialize_state_ledger = yes
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_services_completed_levels } }
+        set_variable = { GO_econ_state_services_completed_levels = 0 }
+        set_variable = { GO_econ_state_services_completed_levels_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_services_completed_levels_populated } }
+        set_variable = { GO_econ_state_services_completed_levels_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_services_requested_levels } }
+        set_variable = { GO_econ_state_services_requested_levels = 0 }
+        set_variable = { GO_econ_state_services_requested_levels_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_services_requested_levels_populated } }
+        set_variable = { GO_econ_state_services_requested_levels_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_debt_attribution_complete } }
+        set_variable = { GO_econ_state_debt_attribution_complete = 0 }
+    }
+    # Allocate replay/project metadata only for a provably fresh fiscal record.
+    # Missing fields on a saved paid record must remain invalid, never become cash.
+    if = {
+        limit = {
+            NOT = { has_variable = GO_econ_state_fiscal_schema_version }
+            NOT = { has_variable = GO_econ_state_project_active }
+            NOT = { has_variable = GO_econ_state_project_sponsor }
+            NOT = { has_variable = GO_econ_state_last_service_month }
+            NOT = { has_variable = GO_econ_state_last_growth_month }
+            NOT = { has_variable = GO_econ_state_services_funding_owner }
+            NOT = { has_variable = GO_econ_state_services_owner_associated }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_state_project_active } }
+            set_variable = { GO_econ_state_project_active = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_state_project_type } }
+            set_variable = { GO_econ_state_project_type = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_state_project_paid_cost } }
+            set_variable = { GO_econ_state_project_paid_cost = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_state_project_cash_used } }
+            set_variable = { GO_econ_state_project_cash_used = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_state_project_borrowed_outstanding } }
+            set_variable = { GO_econ_state_project_borrowed_outstanding = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_state_project_required_days } }
+            set_variable = { GO_econ_state_project_required_days = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_state_project_workdays } }
+            set_variable = { GO_econ_state_project_workdays = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_state_project_last_work_day } }
+            set_variable = { GO_econ_state_project_last_work_day = -1 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_state_project_next_level } }
+            set_variable = { GO_econ_state_project_next_level = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_state_project_start_gdp } }
+            set_variable = { GO_econ_state_project_start_gdp = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_state_project_start_price } }
+            set_variable = { GO_econ_state_project_start_price = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_state_last_service_month } }
+            set_variable = { GO_econ_state_last_service_month = -1 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_state_last_growth_month } }
+            set_variable = { GO_econ_state_last_growth_month = -1 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_state_services_expense_last } }
+            set_variable = { GO_econ_state_services_expense_last = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_state_services_expense_last_populated } }
+            set_variable = { GO_econ_state_services_expense_last_populated = 0 }
+        }
+        set_variable = { GO_econ_state_services_owner_associated = 0 }
+        # Country-valued sponsor/funding-owner variables are not fabricated as numeric zero.
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_fiscal_schema_version } }
+        set_variable = { GO_econ_state_fiscal_schema_version = 1 }
+    }
+}
+
+GO_econ_initialize_country_fiscal = {
+    GO_econ_initialize_country_ledger = yes
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_treasury } }
+        set_variable = { GO_econ_country_treasury = 0 }
+        set_variable = { GO_econ_country_treasury_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_treasury_populated } }
+        set_variable = { GO_econ_country_treasury_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_global_status } }
+        set_variable = { GO_econ_country_global_status = 0 }
+        set_variable = { GO_econ_country_global_status_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_global_status_populated } }
+        set_variable = { GO_econ_country_global_status_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_monthly_receipts } }
+        set_variable = { GO_econ_country_monthly_receipts = 0 }
+        set_variable = { GO_econ_country_monthly_receipts_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_monthly_receipts_populated } }
+        set_variable = { GO_econ_country_monthly_receipts_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_receipts_month } }
+        set_variable = { GO_econ_country_receipts_month = 0 }
+        set_variable = { GO_econ_country_receipts_month_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_receipts_month_populated } }
+        set_variable = { GO_econ_country_receipts_month_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_annual_inflation_percent } }
+        set_variable = { GO_econ_country_annual_inflation_percent = 0 }
+        set_variable = { GO_econ_country_annual_inflation_percent_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_annual_inflation_percent_populated } }
+        set_variable = { GO_econ_country_annual_inflation_percent_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_debt } }
+        set_variable = { GO_econ_country_debt = 0 }
+        set_variable = { GO_econ_country_debt_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_debt_populated } }
+        set_variable = { GO_econ_country_debt_populated = 0 }
+    }
+    # Existing saved fiscal metadata is never reconstructed as known-zero history.
+    if = {
+        limit = {
+            NOT = { has_variable = GO_econ_country_fiscal_schema_version }
+            NOT = { has_variable = GO_econ_country_last_processed_month }
+            NOT = { has_variable = GO_econ_country_open_flow_first_day }
+            NOT = { has_variable = GO_econ_country_report_month }
+        }
+        # Approved starting policy; completed service levels are still external data.
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_services_funding_enabled } }
+            set_variable = { GO_econ_country_services_funding_enabled = 1 }
+            set_variable = { GO_econ_country_services_funding_enabled_populated = 1 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_services_funding_enabled_populated } }
+            set_variable = { GO_econ_country_services_funding_enabled_populated = 0 }
+        }
+        # Approved starting policy; completed service levels are still external data.
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_services_funding_requested } }
+            set_variable = { GO_econ_country_services_funding_requested = 1 }
+            set_variable = { GO_econ_country_services_funding_requested_populated = 1 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_services_funding_requested_populated } }
+            set_variable = { GO_econ_country_services_funding_requested_populated = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_debt_attribution_complete } }
+            set_variable = { GO_econ_country_debt_attribution_complete = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_active_projects } }
+            set_variable = { GO_econ_country_active_projects = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_active_projects_populated } }
+            set_variable = { GO_econ_country_active_projects_populated = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_last_processed_month } }
+            set_variable = { GO_econ_country_last_processed_month = -1 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_settlement_in_progress } }
+            set_variable = { GO_econ_country_settlement_in_progress = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_fiscal_report_populated } }
+            set_variable = { GO_econ_country_fiscal_report_populated = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_report_month } }
+            set_variable = { GO_econ_country_report_month = -1 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_settlement_blocked_states } }
+            set_variable = { GO_econ_country_settlement_blocked_states = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_open_flow_first_day } }
+            set_variable = { GO_econ_country_open_flow_first_day = -1 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_open_flow_last_day } }
+            set_variable = { GO_econ_country_open_flow_last_day = -1 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_capital_expenses_pending } }
+            set_variable = { GO_econ_country_capital_expenses_pending = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_capital_expenses_last } }
+            set_variable = { GO_econ_country_capital_expenses_last = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_capital_refunds_pending } }
+            set_variable = { GO_econ_country_capital_refunds_pending = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_capital_refunds_last } }
+            set_variable = { GO_econ_country_capital_refunds_last = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_cash_used_pending } }
+            set_variable = { GO_econ_country_cash_used_pending = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_cash_used_last } }
+            set_variable = { GO_econ_country_cash_used_last = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_borrowing_pending } }
+            set_variable = { GO_econ_country_borrowing_pending = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_borrowing_last } }
+            set_variable = { GO_econ_country_borrowing_last = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_refunds_pending } }
+            set_variable = { GO_econ_country_refunds_pending = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_refunds_last } }
+            set_variable = { GO_econ_country_refunds_last = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_debt_retired_pending } }
+            set_variable = { GO_econ_country_debt_retired_pending = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_debt_retired_last } }
+            set_variable = { GO_econ_country_debt_retired_last = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_refund_cash_pending } }
+            set_variable = { GO_econ_country_refund_cash_pending = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_refund_cash_last } }
+            set_variable = { GO_econ_country_refund_cash_last = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_receipts_last } }
+            set_variable = { GO_econ_country_receipts_last = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_services_expenses_last } }
+            set_variable = { GO_econ_country_services_expenses_last = 0 }
+        }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_fiscal_schema_version } }
+        set_variable = { GO_econ_country_fiscal_schema_version = 1 }
+    }
+}
+
+# STATE. Native population is the source authorized by the user in Stage 3.
+GO_econ_refresh_native_population = {
+    if = {
+        limit = { GO_econ_state_ledger_initialized = yes }
+        set_variable = { GO_econ_state_population_millions_populated = 0 }
+        set_variable = { GO_econ_state_population_millions = state_population_k }
+        divide_variable = { GO_econ_state_population_millions = 1000 }
+        if = {
+            limit = { check_variable = { GO_econ_state_population_millions > 0 } }
+            set_variable = { GO_econ_state_population_millions_populated = 1 }
+        }
+    }
+}
+
+# STATE. Preserve completed assets; clear the former legal payer's funding requests.
+GO_econ_reconcile_services_owner = {
+    GO_econ_initialize_state_fiscal = yes
+    if = {
+        limit = { GO_econ_state_has_services_completed_levels = yes }
+        if = {
+            limit = {
+                has_variable = GO_econ_state_services_funding_owner
+                any_of_scopes = {
+                    array = global.countries
+                    check_variable = { PREV.GO_econ_state_services_funding_owner = THIS }
+                }
+            }
+            set_variable = { GO_econ_state_services_owner_associated = 1 }
+            var:GO_econ_state_services_funding_owner = {
+                if = {
+                    limit = { NOT = { PREV = { is_owned_by = PREV } } }
+                    PREV = {
+                        set_variable = { GO_econ_state_services_requested_levels = 0 }
+                        set_variable = { GO_econ_state_services_requested_levels_populated = 1 }
+                        set_variable = { GO_econ_state_services_funded_levels = 0 }
+                        set_variable = { GO_econ_state_services_funded_levels_populated = 1 }
+                        set_variable = { GO_econ_state_services_funding_owner = OWNER }
+                        owner = { GO_econ_initialize_country_fiscal = yes }
+                        GO_econ_refresh_state_gdp = yes
+                        owner = {
+                            GO_econ_refresh_country_gdp = yes
+                            GO_econ_refresh_status_limits = yes
+                            GO_econ_refresh_project_slots = yes
+                        }
+                    }
+                    GO_econ_refresh_country_gdp = yes
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = { has_variable = GO_econ_state_services_funding_owner }
+                has_variable = GO_econ_state_services_owner_associated
+                check_variable = { GO_econ_state_services_owner_associated = 0 }
+                has_variable = GO_econ_state_last_service_month
+                check_variable = { GO_econ_state_last_service_month = -1 }
+                has_variable = GO_econ_state_last_growth_month
+                check_variable = { GO_econ_state_last_growth_month = -1 }
+                has_variable = GO_econ_state_project_active
+                check_variable = { GO_econ_state_project_active = 0 }
+                NOT = { has_variable = GO_econ_state_project_sponsor }
+                has_variable = GO_econ_state_project_paid_cost
+                check_variable = { GO_econ_state_project_paid_cost = 0 }
+                has_variable = GO_econ_state_project_required_days
+                check_variable = { GO_econ_state_project_required_days = 0 }
+            }
+            # An authored current-owner requested level is retained on first association.
+            # Missing saved payer identity must not be adopted after any prior association.
+            set_variable = { GO_econ_state_services_funding_owner = OWNER }
+            set_variable = { GO_econ_state_services_owner_associated = 1 }
+            set_variable = { GO_econ_state_services_funded_levels_populated = 0 }
+        }
+    }
+}
+
+# STATE caller supplies work_actor (country target) and work_requested_levels.
+GO_econ_request_services_funding = {
+    if = {
+        limit = {
+            GO_econ_can_request_services_funding = yes
+        }
+        set_variable = { GO_econ_state_services_requested_levels = GO_econ_work_requested_levels }
+        set_variable = { GO_econ_state_services_requested_levels_populated = 1 }
+        set_variable = { GO_econ_state_services_funding_owner = GO_econ_work_actor }
+        set_variable = { GO_econ_state_services_owner_associated = 1 }
+    }
+}
+
+# COUNTRY caller supplies work_funding_enabled (0 or 1). Applied next settlement.
+GO_econ_request_national_services_funding = {
+    if = {
+        limit = {
+            GO_econ_can_request_national_services_funding = yes
+        }
+        set_variable = { GO_econ_country_services_funding_requested = GO_econ_work_funding_enabled }
+        set_variable = { GO_econ_country_services_funding_requested_populated = 1 }
+    }
+}
+
+# STATE. Shared guarded money helper, no category booking: caller books the payment once.
+# work_actor owns/controls this state; cost is nonnegative. Return scratch fields are replaced.
+GO_econ_pay_state_cost = {
+    set_variable = { GO_econ_work_payment_ok = 0 }
+    set_variable = { GO_econ_work_cash_used = 0 }
+    set_variable = { GO_econ_work_borrowed = 0 }
+    if = {
+        limit = { GO_econ_state_payment_ready = yes }
+        var:GO_econ_work_actor = {
+            set_temp_variable = { GO_econ_calc_cash = PREV.GO_econ_work_cost }
+            clamp_temp_variable = { var = GO_econ_calc_cash min = 0 max = GO_econ_country_treasury }
+            set_temp_variable = { GO_econ_calc_borrow = PREV.GO_econ_work_cost }
+            subtract_from_temp_variable = { GO_econ_calc_borrow = GO_econ_calc_cash }
+            subtract_from_variable = { GO_econ_country_treasury = GO_econ_calc_cash }
+            PREV = {
+                # Attribution declarations make a missing debtor entry a known zero.
+                if = {
+                    limit = { NOT = { has_variable = GO_econ_state_liability_@PREV } }
+                    set_variable = { GO_econ_state_liability_@PREV = 0 }
+                }
+                add_to_variable = { GO_econ_state_liability_@PREV = PREV.GO_econ_calc_borrow }
+                set_variable = { GO_econ_work_cash_used = PREV.GO_econ_calc_cash }
+                set_variable = { GO_econ_work_borrowed = PREV.GO_econ_calc_borrow }
+                set_variable = { GO_econ_work_payment_ok = 1 }
+                GO_econ_refresh_state_debt = yes
+            }
+            GO_econ_refresh_country_debt = yes
+        }
+    }
+}
+
+# COUNTRY. Historical last-closed settlement report; open event flows stay in *_pending.
+# This effect never moves money, applies GDP growth, or consumes pending entries.
+GO_econ_mark_open_fiscal_flow = {
+    if = {
+        limit = { check_variable = { GO_econ_country_open_flow_first_day < 0 } }
+        set_variable = { GO_econ_country_open_flow_first_day = global.num_days }
+    }
+    set_variable = { GO_econ_country_open_flow_last_day = global.num_days }
+}
+
+GO_econ_refresh_fiscal_report = {
+    if = {
+        limit = { GO_econ_country_fiscal_initialized = yes }
+        set_variable = { GO_econ_country_fiscal_report_populated = 0 }
+        if = {
+            limit = { GO_econ_country_closed_fiscal_record_ready = yes }
+            set_variable = { GO_econ_country_report_month = GO_econ_country_last_processed_month }
+            set_variable = { GO_econ_country_receipts = GO_econ_country_receipts_last }
+            set_variable = { GO_econ_country_expenses = GO_econ_country_services_expenses_last }
+            add_to_variable = { GO_econ_country_expenses = GO_econ_country_capital_expenses_last }
+            subtract_from_variable = { GO_econ_country_expenses = GO_econ_country_capital_refunds_last }
+            set_variable = { GO_econ_country_deficit = GO_econ_country_expenses }
+            subtract_from_variable = { GO_econ_country_deficit = GO_econ_country_receipts }
+            set_variable = { GO_econ_country_financing = GO_econ_country_borrowing_last }
+            set_variable = { GO_econ_country_refunds = GO_econ_country_refunds_last }
+            set_variable = { GO_econ_country_fiscal_report_populated = 1 }
+        }
+    }
+}
+
+# COUNTRY. Native monthly pulse only; no late catch-up or settlement via refresh.
+GO_econ_settle_country_month = {
+    GO_econ_initialize_fiscal_config = yes
+    GO_econ_initialize_country_fiscal = yes
+    every_owned_state = {
+        GO_econ_initialize_state_fiscal = yes
+        GO_econ_reconcile_services_owner = yes
+        GO_econ_refresh_native_population = yes
+        GO_econ_refresh_state_debt = yes
+    }
+    GO_econ_refresh_country_debt = yes
+    GO_econ_refresh_status_limits = yes
+
+    # Preflight every eligible state before any fiscal or GDP mutation.
+    set_variable = { GO_econ_country_settlement_blocked_states = 0 }
+    every_owned_state = {
+        limit = { is_controlled_by = PREV }
+        if = {
+            limit = { NOT = { GO_econ_state_month_inputs_ready = yes } }
+            add_to_variable = { PREV.GO_econ_country_settlement_blocked_states = 1 }
+        }
+    }
+    if = {
+        limit = { GO_econ_country_month_inputs_ready = yes }
+        # Set before committing: a repeated/indirect call cannot enter this settlement.
+        set_variable = { GO_econ_country_settlement_in_progress = 1 }
+        set_variable = { GO_econ_country_last_processed_month = global.GO_econ_month_serial }
+
+        # 1. Pending funding choices become current together.
+        set_variable = { GO_econ_country_services_funding_enabled = GO_econ_country_services_funding_requested }
+        set_variable = { GO_econ_country_services_funding_enabled_populated = 1 }
+        every_owned_state = {
+            limit = { is_controlled_by = PREV }
+            set_variable = { GO_econ_state_services_funded_levels = GO_econ_state_services_requested_levels }
+            if = {
+                limit = { PREV = { check_variable = { GO_econ_country_services_funding_enabled = 0 } } }
+                set_variable = { GO_econ_state_services_funded_levels = 0 }
+            }
+            set_variable = { GO_econ_state_services_funded_levels_populated = 1 }
+            set_variable = { GO_econ_state_services_funding_owner = OWNER }
+        }
+
+        # 2. Receipt is an explicit input for this serial, not a default or borrowed money.
+        set_variable = { GO_econ_country_receipts_last = GO_econ_country_monthly_receipts }
+        add_to_variable = { GO_econ_country_treasury = GO_econ_country_monthly_receipts }
+        GO_econ_mark_open_fiscal_flow = yes
+        set_variable = { GO_econ_country_monthly_receipts_populated = 0 }
+        set_variable = { GO_econ_country_receipts_month_populated = 0 }
+
+        # 3. Service charge uses opening real GDP and opening price index.
+        set_variable = { GO_econ_country_services_expenses_last = 0 }
+        every_owned_state = {
+            limit = { is_controlled_by = PREV }
+            if = {
+                limit = { check_variable = { GO_econ_state_last_service_month < global.GO_econ_month_serial } }
+                set_variable = { GO_econ_work_actor = OWNER }
+                set_variable = { GO_econ_work_cost = GO_econ_state_gdp }
+                multiply_variable = { GO_econ_work_cost = global.GO_econ_cfg_services_expense_factor }
+                multiply_variable = { GO_econ_work_cost = GO_econ_state_services_funded_levels }
+                divide_variable = { GO_econ_work_cost = global.GO_econ_cfg_months_per_year }
+                owner = { PREV = { multiply_variable = { GO_econ_work_cost = PREV.GO_econ_country_price_index } } }
+                GO_econ_pay_state_cost = yes
+                if = {
+                    limit = { check_variable = { GO_econ_work_payment_ok = 1 } }
+                    set_variable = { GO_econ_state_last_service_month = global.GO_econ_month_serial }
+                    set_variable = { GO_econ_state_services_expense_last = GO_econ_work_cost }
+                    set_variable = { GO_econ_state_services_expense_last_populated = 1 }
+                    add_to_variable = { PREV.GO_econ_country_services_expenses_last = GO_econ_work_cost }
+                    add_to_variable = { PREV.GO_econ_country_cash_used_pending = GO_econ_work_cash_used }
+                    add_to_variable = { PREV.GO_econ_country_borrowing_pending = GO_econ_work_borrowed }
+                }
+            }
+        }
+
+        # 4. Apply each state projection once. State guard prevents same-month transfer replay.
+        every_owned_state = {
+            limit = { is_controlled_by = PREV }
+            GO_econ_refresh_state_gdp = yes
+            if = {
+                limit = {
+                    GO_econ_state_has_gdp_monthly_projection = yes
+                    check_variable = { GO_econ_state_last_growth_month < global.GO_econ_month_serial }
+                }
+                set_variable = { GO_econ_state_last_growth_month = global.GO_econ_month_serial }
+                set_variable = { GO_econ_state_gdp = GO_econ_state_gdp_monthly_projection }
+            }
+        }
+
+        # 5. Consume authored inflation input; this does not generate inflation.
+        set_temp_variable = { GO_econ_calc_price_factor = GO_econ_country_annual_inflation_percent }
+        divide_temp_variable = { GO_econ_calc_price_factor = global.GO_econ_cfg_percent_month_divisor }
+        add_to_temp_variable = { GO_econ_calc_price_factor = 1 }
+        multiply_variable = { GO_econ_country_price_index = GO_econ_calc_price_factor }
+
+        # 6. Close event flows exactly once, then rebuild reports.
+        set_variable = { GO_econ_country_capital_expenses_last = GO_econ_country_capital_expenses_pending }
+        set_variable = { GO_econ_country_capital_expenses_pending = 0 }
+        set_variable = { GO_econ_country_capital_refunds_last = GO_econ_country_capital_refunds_pending }
+        set_variable = { GO_econ_country_capital_refunds_pending = 0 }
+        set_variable = { GO_econ_country_cash_used_last = GO_econ_country_cash_used_pending }
+        set_variable = { GO_econ_country_cash_used_pending = 0 }
+        set_variable = { GO_econ_country_borrowing_last = GO_econ_country_borrowing_pending }
+        set_variable = { GO_econ_country_borrowing_pending = 0 }
+        set_variable = { GO_econ_country_refunds_last = GO_econ_country_refunds_pending }
+        set_variable = { GO_econ_country_refunds_pending = 0 }
+        set_variable = { GO_econ_country_debt_retired_last = GO_econ_country_debt_retired_pending }
+        set_variable = { GO_econ_country_debt_retired_pending = 0 }
+        set_variable = { GO_econ_country_refund_cash_last = GO_econ_country_refund_cash_pending }
+        set_variable = { GO_econ_country_refund_cash_pending = 0 }
+        # Keep the actual event-flow span when earlier pulses were blocked.
+        set_variable = { GO_econ_country_report_flow_first_day = GO_econ_country_open_flow_first_day }
+        set_variable = { GO_econ_country_report_flow_last_day = GO_econ_country_open_flow_last_day }
+        set_variable = { GO_econ_country_report_closed_day = global.num_days }
+        set_variable = { GO_econ_country_open_flow_first_day = -1 }
+        set_variable = { GO_econ_country_open_flow_last_day = -1 }
+        every_owned_state = {
+            limit = { is_controlled_by = PREV }
+            GO_econ_refresh_state_gdp = yes
+        }
+        GO_econ_refresh_country_gdp = yes
+        GO_econ_refresh_country_debt = yes
+        GO_econ_refresh_fiscal_report = yes
+        set_variable = { GO_econ_country_settlement_in_progress = 0 }
+    }
+    # Guarded same-day allocation retry is possible after a successful close;
+    # blocked fiscal settlement cannot settle a pending PU request.
+    if = {
+        limit = { has_country_flag = GO_econ_production_units_access }
+        GO_econ_settle_production_unit_allocation = yes
+    }
+}
+
+# ANY. New-campaign storage setup or explicitly authored existing-save migration.
+# This allocates records/policy only; no GDP, fiscal receipts, debt or status dataset.
+GO_econ_initialize_economy_fiscal = {
+    GO_econ_initialize_fiscal_config = yes
+    GO_econ_initialize_development_config = yes
+    every_state = {
+        GO_econ_initialize_state_fiscal = yes
+        GO_econ_initialize_state_development = yes
+        GO_econ_refresh_state_substations = yes
+    }
+    every_country = {
+        limit = { exists = yes }
+        GO_econ_initialize_country_fiscal = yes
+        GO_econ_initialize_country_production_units = yes
+    }
+    GO_econ_refresh_all_gdp = yes
+    every_country = {
+        limit = { exists = yes }
+        GO_econ_refresh_country_debt = yes
+        GO_econ_refresh_status_limits = yes
+        GO_econ_refresh_fiscal_report = yes
+        if = {
+            limit = {
+                OR = {
+                    has_country_flag = GO_econ_services_campaign_access
+                    has_country_flag = GO_econ_industry_campaign_access
+                    has_country_flag = GO_econ_substation_campaign_access
+                }
+            }
+            GO_econ_refresh_project_slots = yes
+        }
+        if = {
+            limit = { has_country_flag = GO_econ_production_units_access }
+            GO_econ_refresh_country_production_units = yes
+        }
+    }
+}

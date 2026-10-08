@@ -24,7 +24,7 @@ bookmarks = {
 		}
 	    CHI = {
 			history = CHI_2027_DESC
-			ideology = socialism 
+			ideology = authoritarian_socialism
 			ideas = {
 			}
 			focuses = {

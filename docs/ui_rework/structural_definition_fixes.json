@@ -1,0 +1,17 @@
+{
+  "changes": [
+    {
+      "sprite": "GFX_tiled_window",
+      "definition": "interface/countrytechtreeview.gfx",
+      "change": "Stretch original shaded centre; preserve DDS and border contract"
+    },
+    {
+      "sprite": "GFX_tiled_window2_2b_border",
+      "definition": "interface/countrytechtreeview.gfx",
+      "change": "Stretch original shaded centre; preserve DDS and border contract"
+    }
+  ],
+  "before_sha256": "7d9a16a6f62d77c62a83feeb727c0c87d9b6af4c6234bb62b68668201af22298",
+  "after_sha256": "b3f59733743bda9e5a084ee82a235c32d7c7e5ba44e02d3eb7a645ab563c6d82",
+  "in_game_validated": false
+}

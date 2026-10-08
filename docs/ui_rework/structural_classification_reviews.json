@@ -1,0 +1,13 @@
+{
+  "reviews": [
+    {
+      "path": "gfx/interface/tiles/tiled_army_badge_view.dds",
+      "previous_disposition": "custom_reference",
+      "disposition": "operand",
+      "alpha_max": 1,
+      "reference_match": "gfx/interface/tiles/tiled_window_transparent.dds",
+      "action": "retain functional transparency"
+    }
+  ],
+  "retained_original_modern_references": 74
+}

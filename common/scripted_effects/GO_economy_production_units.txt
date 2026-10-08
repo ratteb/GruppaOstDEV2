@@ -1,0 +1,221 @@
+# Gruppa Ost Stage 5 - COUNTRY Production Unit backend unless marked ANY.
+# Common real GDP billions; no GDP proxy from physical/offsite factories.
+# Offsite delta syntax: installed 1.18.3.0.7709 effects_documentation.md:1811-1817
+# and events/Britain.txt:1191-1193. Floor uses remainder subtraction (E-016).
+# Native consumer goods are retained. Energy does not constrain this prototype.
+
+# ANY. Preserve authored tuning; no country status or campaign inputs are seeded.
+GO_econ_initialize_production_unit_config = {
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_pu_gdp_divisor } }
+        set_variable = { global.GO_econ_cfg_pu_gdp_divisor = 100 }
+    }
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_pu_cap_1 } }
+        set_variable = { global.GO_econ_cfg_pu_cap_1 = 25 }
+    }
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_pu_cap_2 } }
+        set_variable = { global.GO_econ_cfg_pu_cap_2 = 75 }
+    }
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_pu_cap_3 } }
+        set_variable = { global.GO_econ_cfg_pu_cap_3 = 150 }
+    }
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_pu_cap_4 } }
+        set_variable = { global.GO_econ_cfg_pu_cap_4 = 300 }
+    }
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_pu_cap_5 } }
+        set_variable = { global.GO_econ_cfg_pu_cap_5 = 600 }
+    }
+}
+
+GO_econ_initialize_country_production_units = {
+    GO_econ_initialize_production_unit_config = yes
+    # A wholly fresh bridge alone receives approved base/share and zero grants.
+    # Partial saved records remain unavailable, preventing replacement grants.
+    if = {
+        limit = {
+            NOT = { has_variable = GO_econ_country_pu_schema_version }
+            NOT = { has_variable = GO_econ_country_pu_granted_civil }
+            NOT = { has_variable = GO_econ_country_pu_granted_military }
+            NOT = { has_variable = GO_econ_country_pu_last_allocation_month }
+            NOT = { has_variable = GO_econ_country_settled_civil_percent }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_base_pus } }
+            set_variable = { GO_econ_country_base_pus = 10 }
+            if = {
+                limit = { NOT = { has_variable = GO_econ_country_base_pus_populated } }
+                set_variable = { GO_econ_country_base_pus_populated = 1 }
+            }
+            else = {
+                # An orphaned readiness marker cannot prove an authored base.
+                set_variable = { GO_econ_country_base_pus_populated = 0 }
+            }
+        }
+        if = {
+            limit = { NOT = { has_variable = GO_econ_country_requested_civil_percent } }
+            set_variable = { GO_econ_country_requested_civil_percent = 50 }
+        }
+        set_variable = { GO_econ_country_settled_civil_percent = 50 }
+        set_variable = { GO_econ_country_pu_granted_civil = 0 }
+        set_variable = { GO_econ_country_pu_granted_military = 0 }
+        set_variable = { GO_econ_country_pu_last_allocation_month = -1 }
+        set_variable = { GO_econ_country_pu_schema_version = 1 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_pu_capacity_populated } }
+        set_variable = { GO_econ_country_pu_capacity_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_pu_allocation_populated } }
+        set_variable = { GO_econ_country_pu_allocation_populated = 0 }
+    }
+}
+
+# Authored configuration API. Set regular GO_econ_work_base_pus before calling.
+# The signed/fractional input participates in the documented final max/floor.
+GO_econ_set_national_base_production_units = {
+    GO_econ_initialize_country_production_units = yes
+    set_variable = { GO_econ_work_pu_base_succeeded = 0 }
+    if = {
+        limit = {
+            GO_econ_country_production_units_initialized = yes
+            has_variable = GO_econ_work_base_pus
+        }
+        set_variable = { GO_econ_country_base_pus = GO_econ_work_base_pus }
+        set_variable = { GO_econ_country_base_pus_populated = 1 }
+        set_variable = { GO_econ_work_pu_base_succeeded = 1 }
+        GO_econ_refresh_country_production_units = yes
+    }
+}
+
+# Queues only. Repeated calls never settle or grant; fractions/out-of-range fail.
+# Set regular GO_econ_work_civil_percent before calling, in acting COUNTRY scope.
+GO_econ_request_production_unit_allocation = {
+    GO_econ_initialize_country_production_units = yes
+    set_variable = { GO_econ_work_pu_request_succeeded = 0 }
+    if = {
+        limit = {
+            has_country_flag = GO_econ_production_units_access
+            GO_econ_country_pu_grant_record_ready = yes
+            GO_econ_work_civil_percent_valid = yes
+        }
+        set_variable = { GO_econ_country_requested_civil_percent = GO_econ_work_civil_percent }
+        set_variable = { GO_econ_work_pu_request_succeeded = 1 }
+    }
+}
+
+# Rebuild only: complete eligible GDP and industry are required. No grants here.
+# Coverage/captured-state exclusion exactly matches the national GDP report.
+GO_econ_calculate_country_production_units = {
+    GO_econ_initialize_country_production_units = yes
+    GO_econ_refresh_country_gdp = yes
+    set_variable = { GO_econ_country_pu_capacity_populated = 0 }
+    set_variable = { GO_econ_country_pu_allocation_populated = 0 }
+    set_variable = { GO_econ_country_pu_industry_subtotal = 0 }
+    set_variable = { GO_econ_country_pu_industry_states = 0 }
+    every_owned_state = {
+        limit = { is_controlled_by = PREV }
+        if = {
+            limit = { GO_econ_state_has_industry_levels = yes }
+            add_to_variable = { PREV.GO_econ_country_pu_industry_subtotal = GO_econ_state_industry_levels }
+            add_to_variable = { PREV.GO_econ_country_pu_industry_states = 1 }
+        }
+    }
+    set_variable = { GO_econ_country_pu_missing_industry_states = GO_econ_country_eligible_states }
+    subtract_from_variable = { GO_econ_country_pu_missing_industry_states = GO_econ_country_pu_industry_states }
+    if = {
+        limit = { GO_econ_country_pu_capacity_inputs_ready = yes }
+        set_variable = { GO_econ_country_pu_industry_bonus = GO_econ_country_pu_industry_subtotal }
+        set_variable = { GO_econ_country_pu_gdp_component = GO_econ_country_gdp }
+        divide_variable = { GO_econ_country_pu_gdp_component = global.GO_econ_cfg_pu_gdp_divisor }
+        set_variable = { GO_econ_country_pu_potential = GO_econ_country_base_pus }
+        add_to_variable = { GO_econ_country_pu_potential = GO_econ_country_pu_industry_bonus }
+        add_to_variable = { GO_econ_country_pu_potential = GO_econ_country_pu_gdp_component }
+        clamp_variable = { var = GO_econ_country_pu_potential min = 0 }
+        set_variable = { GO_econ_pu_potential_remainder = GO_econ_country_pu_potential }
+        modulo_variable = { var = GO_econ_pu_potential_remainder value = 1 }
+        subtract_from_variable = { GO_econ_country_pu_potential = GO_econ_pu_potential_remainder }
+        if = {
+            limit = { check_variable = { GO_econ_country_global_status = 1 } }
+            set_variable = { GO_econ_country_pu_status_cap = global.GO_econ_cfg_pu_cap_1 }
+        }
+        else_if = {
+            limit = { check_variable = { GO_econ_country_global_status = 2 } }
+            set_variable = { GO_econ_country_pu_status_cap = global.GO_econ_cfg_pu_cap_2 }
+        }
+        else_if = {
+            limit = { check_variable = { GO_econ_country_global_status = 3 } }
+            set_variable = { GO_econ_country_pu_status_cap = global.GO_econ_cfg_pu_cap_3 }
+        }
+        else_if = {
+            limit = { check_variable = { GO_econ_country_global_status = 4 } }
+            set_variable = { GO_econ_country_pu_status_cap = global.GO_econ_cfg_pu_cap_4 }
+        }
+        else = {
+            set_variable = { GO_econ_country_pu_status_cap = global.GO_econ_cfg_pu_cap_5 }
+        }
+        set_variable = { GO_econ_country_pu_usable = GO_econ_country_pu_potential }
+        clamp_variable = { var = GO_econ_country_pu_usable max = GO_econ_country_pu_status_cap }
+        set_variable = { GO_econ_country_pu_suppressed = GO_econ_country_pu_potential }
+        subtract_from_variable = { GO_econ_country_pu_suppressed = GO_econ_country_pu_usable }
+        set_variable = { GO_econ_country_pu_capacity_populated = 1 }
+    }
+}
+
+# Internal COUNTRY bridge: callers calculate current capacity before entry.
+# Desired-minus-recorded deltas remove at most this bridge's tracked grants.
+# Offsite effects never alter state physical factories. Other systems must not
+# mutate this bridge's record or independently retire its offsite grants.
+GO_econ_reconcile_production_unit_grants = {
+    set_variable = { GO_econ_country_pu_allocation_populated = 0 }
+    if = {
+        limit = { GO_econ_can_reconcile_production_units = yes }
+        set_variable = { GO_econ_country_pu_desired_civil = GO_econ_country_pu_usable }
+        multiply_variable = { GO_econ_country_pu_desired_civil = GO_econ_country_settled_civil_percent }
+        divide_variable = { GO_econ_country_pu_desired_civil = 100 }
+        set_variable = { GO_econ_pu_civil_remainder = GO_econ_country_pu_desired_civil }
+        modulo_variable = { var = GO_econ_pu_civil_remainder value = 1 }
+        subtract_from_variable = { GO_econ_country_pu_desired_civil = GO_econ_pu_civil_remainder }
+        set_variable = { GO_econ_country_pu_desired_military = GO_econ_country_pu_usable }
+        subtract_from_variable = { GO_econ_country_pu_desired_military = GO_econ_country_pu_desired_civil }
+        set_variable = { GO_econ_pu_civil_delta = GO_econ_country_pu_desired_civil }
+        subtract_from_variable = { GO_econ_pu_civil_delta = GO_econ_country_pu_granted_civil }
+        set_variable = { GO_econ_pu_military_delta = GO_econ_country_pu_desired_military }
+        subtract_from_variable = { GO_econ_pu_military_delta = GO_econ_country_pu_granted_military }
+        if = {
+            limit = { NOT = { check_variable = { GO_econ_pu_civil_delta = 0 } } }
+            add_offsite_building = { type = industrial_complex level = var:GO_econ_pu_civil_delta }
+            set_variable = { GO_econ_country_pu_granted_civil = GO_econ_country_pu_desired_civil }
+        }
+        if = {
+            limit = { NOT = { check_variable = { GO_econ_pu_military_delta = 0 } } }
+            add_offsite_building = { type = arms_factory level = var:GO_econ_pu_military_delta }
+            set_variable = { GO_econ_country_pu_granted_military = GO_econ_country_pu_desired_military }
+        }
+        set_variable = { GO_econ_country_pu_allocation_populated = 1 }
+    }
+}
+
+# Public immediate refresh for status/territory/completion/base changes. Uses the
+# last settled ratio for both gains and losses; missing inputs freeze records.
+GO_econ_refresh_country_production_units = {
+    GO_econ_calculate_country_production_units = yes
+    GO_econ_reconcile_production_unit_grants = yes
+}
+
+# Monthly integration calls this after a successful fiscal close, once per serial.
+# Calculate first without granting at the old ratio, then reconcile only once.
+GO_econ_settle_production_unit_allocation = {
+    GO_econ_calculate_country_production_units = yes
+    if = {
+        limit = { GO_econ_can_settle_production_unit_allocation = yes }
+        set_variable = { GO_econ_country_settled_civil_percent = GO_econ_country_requested_civil_percent }
+        set_variable = { GO_econ_country_pu_last_allocation_month = global.GO_econ_month_serial }
+    }
+    GO_econ_reconcile_production_unit_grants = yes
+}

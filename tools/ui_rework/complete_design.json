@@ -1,0 +1,3354 @@
+{
+  "style": "Gruppa Ost crisp gray and slate holders",
+  "game_root": "E:/SteamLibrary/steamapps/common/Hearts of Iron IV",
+  "game_version": "1.18.3.0.7709",
+  "neutral": {
+    "top": [
+      56,
+      58,
+      61
+    ],
+    "center": [
+      51,
+      53,
+      56
+    ],
+    "bottom": [
+      46,
+      48,
+      51
+    ]
+  },
+  "slate": {
+    "top": [
+      62,
+      72,
+      90
+    ],
+    "center": [
+      57,
+      67,
+      85
+    ],
+    "bottom": [
+      52,
+      62,
+      80
+    ]
+  },
+  "paper": {
+    "top": [
+      187,
+      191,
+      195
+    ],
+    "center": [
+      182,
+      186,
+      190
+    ],
+    "bottom": [
+      177,
+      181,
+      185
+    ]
+  },
+  "frame": {
+    "outer": [
+      10,
+      12,
+      14
+    ],
+    "rim": [
+      123,
+      129,
+      136
+    ],
+    "inner": [
+      25,
+      28,
+      32
+    ]
+  },
+  "preserve_folders": [
+    "goals",
+    "ideas",
+    "icons",
+    "traits",
+    "medals",
+    "technologies",
+    "terrains",
+    "archetypes",
+    "division_equipment",
+    "strategic_locations",
+    "mapicons",
+    "counters",
+    "state_modifiers",
+    "ideologies",
+    "dlc_banners",
+    "events"
+  ],
+  "overrides": {
+    "gfx/interface/air_detection_strip.dds": "artwork",
+    "gfx/interface/air_mission_efficiency_strip.dds": "artwork",
+    "gfx/interface/air_overview_plane_strip.dds": "artwork",
+    "gfx/interface/air_superiority_bg.dds": "artwork",
+    "gfx/interface/alerts/global_alert_icons_no_backgrounds.dds": "artwork",
+    "gfx/interface/ammunition/ammo_strip.dds": "unused",
+    "gfx/interface/armortech_bg.dds": "artwork",
+    "gfx/interface/base_strike_bg.dds": "artwork",
+    "gfx/interface/battlefield_destruction_bg.dds": "artwork",
+    "gfx/interface/career_profile/btn_expand_isolated.dds": "artwork",
+    "gfx/interface/career_profile/button_close.dds": "artwork",
+    "gfx/interface/career_profile/button_navigation_dot.dds": "artwork",
+    "gfx/interface/career_profile/button_navigation_left.dds": "artwork",
+    "gfx/interface/career_profile/button_navigation_right.dds": "artwork",
+    "gfx/interface/career_profile/medal_bg.dds": "artwork",
+    "gfx/interface/combat_log_info_bg.dds": "artwork",
+    "gfx/interface/decisions/decision_cat_picture_develop_norway.dds": "artwork",
+    "gfx/interface/decisions/decision_cat_picture_ITA_missiolinis.dds": "artwork",
+    "gfx/interface/decisions/rk/rk_bg_50.dds": "artwork",
+    "gfx/interface/decisions/rk/rk_bg_60.dds": "artwork",
+    "gfx/interface/decisions/rk/rk_bg_70.dds": "artwork",
+    "gfx/interface/decisions/rk/rk_bg_solid.dds": "artwork",
+    "gfx/interface/decisionview/event_type_strip.dds": "artwork",
+    "gfx/interface/defending_anim_strip.dds": "artwork",
+    "gfx/interface/div_priority_strip.dds": "artwork",
+    "gfx/interface/equipmentdesigner/naval/ship_view_bg.dds": "artwork",
+    "gfx/interface/equipmentdesigner/planes/generic_plane_blueprint_background.dds": "artwork",
+    "gfx/interface/equipmentdesigner/tanks/generic_tank_blueprint_background.dds": "artwork",
+    "gfx/interface/equipmentdesigner/terrain_mod_ship_movement_strip.dds": "artwork",
+    "gfx/interface/execution_strip_icons.dds": "artwork",
+    "gfx/interface/exercise_anim_strip.dds": "artwork",
+    "gfx/interface/exile_flag_small_golden_frame.dds": "artwork",
+    "gfx/interface/factions/ui/faction_spymaster_background.dds": "artwork",
+    "gfx/interface/flag_overlay.dds": "unused",
+    "gfx/interface/flag_overlay_small.dds": "artwork",
+    "gfx/interface/fleet_in_being_bg.dds": "artwork",
+    "gfx/interface/focusview/focus_exlusive_link_line1.dds": "artwork",
+    "gfx/interface/focusview/focus_exlusive_link_line2.dds": "artwork",
+    "gfx/interface/grand_battleplan_bg.dds": "artwork",
+    "gfx/interface/imperial_influence/imperial_influence_faction_frame_dominating.dds": "artwork",
+    "gfx/interface/imperial_influence/imperial_influence_faction_frame_influential.dds": "artwork",
+    "gfx/interface/imperial_influence/imperial_influence_faction_frame_meddling.dds": "artwork",
+    "gfx/interface/imperial_influence/imperial_influence_faction_frame_subdued.dds": "artwork",
+    "gfx/interface/imperial_influence/imperial_influence_ruler_frame.dds": "artwork",
+    "gfx/interface/land_battle_heading_indicator_strip.dds": "artwork",
+    "gfx/interface/land_battle_leader_skill_bg.dds": "artwork",
+    "gfx/interface/landbattle_strip.dds": "artwork",
+    "gfx/interface/landcombat/battle_div_modifier_strip.dds": "artwork",
+    "gfx/interface/landcombat/battle_modifier_strip.dds": "artwork",
+    "gfx/interface/leader_button.dds": "artwork",
+    "gfx/interface/mapmode/mapmode_buttons_deselected_small.dds": "artwork",
+    "gfx/interface/military_raids/map_icons/on_map_raids_icons_frame_strip.dds": "artwork",
+    "gfx/interface/missing_resources_strip.dds": "artwork",
+    "gfx/interface/mob_warfare_bg.dds": "artwork",
+    "gfx/interface/navalcombat/bg_weather_heavy_rain.dds": "artwork",
+    "gfx/interface/navalcombat/bg_weather_heavy_rain_night.dds": "artwork",
+    "gfx/interface/navalcombat/bg_weather_light_rain.dds": "artwork",
+    "gfx/interface/navalcombat/bg_weather_light_rain_night.dds": "artwork",
+    "gfx/interface/navalcombat/bg_weather_none.dds": "artwork",
+    "gfx/interface/navalcombat/tiled_fex_bg.dds": "artwork",
+    "gfx/interface/navalrepairview/btn_ally_dockyard_repair_states.dds": "artwork",
+    "gfx/interface/navalrepairview/btn_dockyard_repair_states.dds": "artwork",
+    "gfx/interface/naviesview/btn_aggressiveness_small.dds": "artwork",
+    "gfx/interface/naviesview/btn_repair_priority.dds": "artwork",
+    "gfx/interface/naviesview/btn_toggle_day_night.dds": "artwork",
+    "gfx/interface/naviesview/btn_toggle_split_for_repair.dds": "artwork",
+    "gfx/interface/naviesview/defensive_stance_strip.dds": "artwork",
+    "gfx/interface/naviesview/icn_spotting_anim_strip.dds": "artwork",
+    "gfx/interface/naviesview/icn_training_anim_strip.dds": "artwork",
+    "gfx/interface/naviesview/naval_dominance_support_strip.dds": "artwork",
+    "gfx/interface/occupation/compliance_tiers_small_strip.dds": "artwork",
+    "gfx/interface/occupation/compliance_tiers_strip.dds": "artwork",
+    "gfx/interface/occupation/resistance_tiers_small_strip.dds": "artwork",
+    "gfx/interface/occupation/resistance_tiers_strip.dds": "artwork",
+    "gfx/interface/officer_corp/chief_and_theorist_strip.dds": "artwork",
+    "gfx/interface/officer_corp/give_medal_officer_corp_strip.dds": "artwork",
+    "gfx/interface/officer_corp/officer_status_icons_strip.dds": "artwork",
+    "gfx/interface/officer_corp/path_officer_corp_advisor_strip.dds": "artwork",
+    "gfx/interface/officer_corp/path_officer_corp_chief_n_theorist_strip.dds": "artwork",
+    "gfx/interface/officer_corp/spirit_banner_decoration_air.dds": "artwork",
+    "gfx/interface/officer_corp/spirit_banner_decoration_army.dds": "artwork",
+    "gfx/interface/officer_corp/spirit_banner_decoration_navy.dds": "artwork",
+    "gfx/interface/onmap_victorypoints_strip.dds": "artwork",
+    "gfx/interface/operational_destruction_bg.dds": "artwork",
+    "gfx/interface/operative_event_bg.dds": "unused",
+    "gfx/interface/operatives/group_add_operative_bg.dds": "artwork",
+    "gfx/interface/operatives/intelligence_agency_header4.dds": "artwork",
+    "gfx/interface/paranoia/SOV_paranoia_bg.dds": "artwork",
+    "gfx/interface/plan_value_strip.dds": "artwork",
+    "gfx/interface/propaganda/SOV_propaganda_strip.dds": "artwork",
+    "gfx/interface/resources_strip.dds": "artwork",
+    "gfx/interface/screens_bg.dds": "artwork",
+    "gfx/interface/scripted_gui_graphics/open_government_window.dds": "artwork",
+    "gfx/interface/scripted_gui_graphics/staff_office_button.dds": "unused",
+    "gfx/interface/special_project/special_project_completed_popup_bg.dds": "artwork",
+    "gfx/interface/strategic_destruction_bg.dds": "artwork",
+    "gfx/interface/strategicair/airwing_prio_strip.dds": "artwork",
+    "gfx/interface/strategicair/wing_status_strip.dds": "artwork",
+    "gfx/interface/strategicair/wing_types.dds": "artwork",
+    "gfx/interface/sub/startup/subscription_startup_image_awards.dds": "artwork",
+    "gfx/interface/sup_firepower_bg.dds": "artwork",
+    "gfx/interface/tac_operation_bg.dds": "artwork",
+    "gfx/interface/techtree/air_techtree_bg.dds": "artwork",
+    "gfx/interface/techtree/artillery_techtree_bg.dds": "artwork",
+    "gfx/interface/techtree/engineering_techtree_bg.dds": "artwork",
+    "gfx/interface/techtree/industry_techtree_bg.dds": "artwork",
+    "gfx/interface/techtree/infantry_techtree_bg.dds": "artwork",
+    "gfx/interface/techtree/naval_techtree_bg.dds": "artwork",
+    "gfx/interface/techtree/support_techtree_bg.dds": "artwork",
+    "gfx/interface/techtree/techtree_dotline_horisontal_left_anim_strip.dds": "artwork",
+    "gfx/interface/techtree/techtree_dotline_horisontal_right_anim_strip.dds": "artwork",
+    "gfx/interface/techtree/techtree_dotline_vertical_down_anim_strip.dds": "artwork",
+    "gfx/interface/techtree/techtree_dotline_vertical_up_anim_strip.dds": "artwork",
+    "gfx/interface/techtree/techtree_line_down_strip.dds": "operand",
+    "gfx/interface/techtree/techtree_line_left_strip.dds": "operand",
+    "gfx/interface/techtree/techtree_line_right_strip.dds": "operand",
+    "gfx/interface/techtree/techtree_line_up_strip.dds": "operand",
+    "gfx/interface/terrain_mod_attack_defense_strip.dds": "artwork",
+    "gfx/interface/terrain_mod_attack_strip.dds": "artwork",
+    "gfx/interface/terrain_mod_defense_strip.dds": "artwork",
+    "gfx/interface/terrain_mod_movement_strip.dds": "artwork",
+    "gfx/interface/terrain_mod_other_strip.dds": "artwork",
+    "gfx/interface/topbar/toolbar/bak/construction_button.dds": "unused",
+    "gfx/interface/topbar/toolbar/bak/Copy of ledger_button.dds": "unused",
+    "gfx/interface/topbar/toolbar/bak/deployment_button.dds": "unused",
+    "gfx/interface/topbar/toolbar/bak/diplomacy_button.dds": "unused",
+    "gfx/interface/topbar/toolbar/bak/intelligence_button.dds": "unused",
+    "gfx/interface/topbar/toolbar/bak/ledger_button.dds": "unused",
+    "gfx/interface/topbar/toolbar/bak/production_button.dds": "unused",
+    "gfx/interface/topbar/toolbar/bak/sience_button.dds": "unused",
+    "gfx/interface/topbar/toolbar/bak/topbar_decisionview_button.dds": "unused",
+    "gfx/interface/topbar/toolbar/bak/trade_button.dds": "unused",
+    "gfx/interface/trade_interdiction_bg.dds": "artwork",
+    "gfx/interface/unitcontrol/group_add_leader_bg.dds": "artwork",
+    "gfx/interface/unitcontrol/group_add_marshal.dds": "artwork",
+    "gfx/interface/unitcontrol/group_add_marshal_bg.dds": "artwork",
+    "gfx/interface/unitcontrol/motorization_level_toggle_strip.dds": "artwork",
+    "gfx/interface/unitcontrol/unitcontrol_sort_buttons_strip.dds": "artwork",
+    "gfx/interface/wonderweapons_bg.dds": "artwork",
+    "gfx/interface/WT_anim_strip.dds": "artwork",
+    "gfx/scripted_gui/csto/csto_symbol_background.dds": "artwork",
+    "gfx/interface/career_profile/bg_battle.dds": "artwork",
+    "gfx/interface/career_profile/bg_battle_owned.dds": "artwork",
+    "gfx/interface/career_profile/bg_bba.dds": "artwork",
+    "gfx/interface/career_profile/bg_bba_owned.dds": "artwork",
+    "gfx/interface/career_profile/bg_death.dds": "artwork",
+    "gfx/interface/career_profile/bg_death_owned.dds": "artwork",
+    "gfx/interface/career_profile/bg_gotterdammerung.dds": "artwork",
+    "gfx/interface/career_profile/bg_gotterdammerung_owned.dds": "artwork",
+    "gfx/interface/career_profile/bg_man.dds": "artwork",
+    "gfx/interface/career_profile/bg_man_owned.dds": "artwork",
+    "gfx/interface/career_profile/bg_no.dds": "artwork",
+    "gfx/interface/career_profile/bg_no_compromise_no_surrender.dds": "artwork",
+    "gfx/interface/career_profile/bg_no_compromise_no_surrender_china.dds": "artwork",
+    "gfx/interface/career_profile/bg_no_compromise_no_surrender_china_owned.dds": "artwork",
+    "gfx/interface/career_profile/bg_no_compromise_no_surrender_owned.dds": "artwork",
+    "gfx/interface/career_profile/bg_no_owned.dds": "artwork",
+    "gfx/interface/career_profile/bg_resistance.dds": "artwork",
+    "gfx/interface/career_profile/bg_resistance_owned.dds": "artwork",
+    "gfx/interface/career_profile/bg_together.dds": "artwork",
+    "gfx/interface/career_profile/bg_together_owned.dds": "artwork",
+    "gfx/interface/career_profile/bg_tyranny.dds": "artwork",
+    "gfx/interface/career_profile/bg_tyranny_owned.dds": "artwork",
+    "gfx/interface/career_profile/bg_waking.dds": "artwork",
+    "gfx/interface/career_profile/bg_waking_owned.dds": "artwork",
+    "gfx/interface/career_profile/career_profile_bg_default.dds": "artwork",
+    "gfx/interface/career_profile/career_profile_bg_ENG.dds": "artwork",
+    "gfx/interface/career_profile/career_profile_bg_GER.dds": "artwork",
+    "gfx/interface/career_profile/career_profile_bg_JAP.dds": "artwork",
+    "gfx/interface/career_profile/career_profile_bg_SOV.dds": "artwork",
+    "gfx/interface/career_profile/career_profile_bg_USA.dds": "artwork",
+    "gfx/interface/career_profile/playthrough_stats_bg_default.dds": "artwork",
+    "gfx/interface/career_profile/playthrough_stats_bg_ENG.dds": "artwork",
+    "gfx/interface/career_profile/playthrough_stats_bg_GER.dds": "artwork",
+    "gfx/interface/career_profile/playthrough_stats_bg_JAP.dds": "artwork",
+    "gfx/interface/career_profile/playthrough_stats_bg_SOV.dds": "artwork",
+    "gfx/interface/career_profile/playthrough_stats_bg_USA.dds": "artwork",
+    "gfx/interface/career_profile/profile_backgrounds/profile_background_1_1.dds": "artwork",
+    "gfx/interface/career_profile/profile_backgrounds/profile_background_1_2.dds": "artwork",
+    "gfx/interface/career_profile/profile_backgrounds/profile_background_1_3.dds": "artwork",
+    "gfx/interface/career_profile/profile_backgrounds/profile_background_2_1.dds": "artwork",
+    "gfx/interface/career_profile/profile_backgrounds/profile_background_2_2.dds": "artwork",
+    "gfx/interface/career_profile/profile_backgrounds/profile_background_2_3.dds": "artwork",
+    "gfx/interface/career_profile/profile_backgrounds/profile_background_3_1.dds": "artwork",
+    "gfx/interface/career_profile/profile_backgrounds/profile_background_3_2.dds": "artwork",
+    "gfx/interface/career_profile/profile_backgrounds/profile_background_3_3.dds": "artwork",
+    "gfx/interface/career_profile/profile_backgrounds/profile_background_4_1.dds": "artwork",
+    "gfx/interface/career_profile/profile_backgrounds/profile_background_4_2.dds": "artwork",
+    "gfx/interface/career_profile/profile_backgrounds/profile_background_4_3.dds": "artwork",
+    "gfx/interface/career_profile/profile_backgrounds/profile_background_5_1.dds": "artwork",
+    "gfx/interface/career_profile/profile_backgrounds/profile_background_5_2.dds": "artwork",
+    "gfx/interface/career_profile/profile_backgrounds/profile_background_5_3.dds": "artwork",
+    "gfx/interface/career_profile/profile_backgrounds/profile_background_6_1.dds": "artwork",
+    "gfx/interface/career_profile/profile_backgrounds/profile_background_6_2.dds": "artwork",
+    "gfx/interface/career_profile/profile_backgrounds/profile_background_6_3.dds": "artwork",
+    "gfx/interface/career_profile/profile_backgrounds/profile_background_7_1.dds": "artwork",
+    "gfx/interface/career_profile/profile_backgrounds/profile_background_7_2.dds": "artwork",
+    "gfx/interface/career_profile/profile_backgrounds/profile_background_7_3.dds": "artwork",
+    "gfx/interface/abilitylist/ability_active_bg.dds": "operand",
+    "gfx/interface/abilitylist/ability_active_bg_full.dds": "operand",
+    "gfx/interface/abilitylist/ability_cooldown_bg.dds": "operand",
+    "gfx/interface/abilitylist/ability_cooldown_bg_full.dds": "operand",
+    "gfx/interface/air_base_wing_entry.dds": "operand",
+    "gfx/interface/airview/wing_entry_bg.dds": "operand",
+    "gfx/interface/army_badge_bar_bg.dds": "operand",
+    "gfx/interface/army_badge_division_summary_item_selected.dds": "operand",
+    "gfx/interface/autonomy/subject_progress_bar_bg.dds": "operand",
+    "gfx/interface/autonomy/subject_progress_bar_long_bg.dds": "operand",
+    "gfx/interface/battle_log_entry_terrain_overlay.dds": "operand",
+    "gfx/interface/building_damage_bar_bg.dds": "operand",
+    "gfx/interface/career_profile/button_filter_end_screen.dds": "operand",
+    "gfx/interface/career_profile/button_filter_end_screen_long.dds": "operand",
+    "gfx/interface/career_profile/button_toggle.dds": "operand",
+    "gfx/interface/career_profile/profile_picture_lock.dds": "operand",
+    "gfx/interface/career_profile/tiled_career_profile_brown_60.dds": "operand",
+    "gfx/interface/career_profile/tiled_transparent_bg.dds": "operand",
+    "gfx/interface/career_profile/tiled_transparent_bg_light.dds": "operand",
+    "gfx/interface/colonial_flag_small_golden_frame.dds": "operand",
+    "gfx/interface/combat_header.dds": "operand",
+    "gfx/interface/combat_log_info_bg_overlay.dds": "operand",
+    "gfx/interface/construction_progressbar_bg.dds": "operand",
+    "gfx/interface/conveyor_location_btn.dds": "operand",
+    "gfx/interface/crypto/decryption_bar_bg.dds": "operand",
+    "gfx/interface/crypto/decryption_bar_small_bg.dds": "operand",
+    "gfx/interface/decisionview/checkbox_small4.dds": "operand",
+    "gfx/interface/decisionview/checkbox_small5.dds": "operand",
+    "gfx/interface/decisionview/checkbox_small_red.dds": "operand",
+    "gfx/interface/deploy_priority_equipment_meter_bg.dds": "operand",
+    "gfx/interface/diplo_action_cancel_bg.dds": "operand",
+    "gfx/interface/doctrines/UI/doctrine_mastery_backgrounds.dds": "operand",
+    "gfx/interface/doctrines/UI/mastery_progress_bar_bg.dds": "operand",
+    "gfx/interface/doctrines/UI/mastery_progress_bar_bg_filled.dds": "operand",
+    "gfx/interface/efficiency_progressbar_bg.dds": "operand",
+    "gfx/interface/efficiency_progressbar_bg_max.dds": "operand",
+    "gfx/interface/error_log_button.dds": "operand",
+    "gfx/interface/factions/ui/opacity_layer_dark.dds": "operand",
+    "gfx/interface/flag_small_golden_frame.dds": "operand",
+    "gfx/interface/fuel_bar_bg.dds": "operand",
+    "gfx/interface/garrison_bar_bg.dds": "operand",
+    "gfx/interface/government_in_exile/legitimacy_progress_bar_long_bg.dds": "operand",
+    "gfx/interface/guimore/gui_cover.dds": "operand",
+    "gfx/interface/imperial_influence/imperial_influence_faction_status_box.dds": "operand",
+    "gfx/interface/in_game_menu_dark_overlay.dds": "operand",
+    "gfx/interface/ladder_background.dds": "operand",
+    "gfx/interface/landcombat/division_bg.dds": "operand",
+    "gfx/interface/leading_pol_party_bg.dds": "operand",
+    "gfx/interface/mapmode/allied_plans_button.dds": "operand",
+    "gfx/interface/military_raids/raids_loading_bar_bg.dds": "operand",
+    "gfx/interface/navalcombat/escape_progress_bg.dds": "operand",
+    "gfx/interface/navalcombat/ship_bar_bg.dds": "operand",
+    "gfx/interface/navieslist_bar_bg.dds": "operand",
+    "gfx/interface/naviesview/task_force_mission_bg.dds": "operand",
+    "gfx/interface/nuke_progress_bg.dds": "operand",
+    "gfx/interface/observer_button_overlay.dds": "operand",
+    "gfx/interface/officer_corp/officer_corp_bg_banner_air.dds": "operand",
+    "gfx/interface/officer_corp/officer_corp_bg_banner_army.dds": "operand",
+    "gfx/interface/officer_corp/officer_corp_bg_banner_navy.dds": "operand",
+    "gfx/interface/onmap_spotting_bar.dds": "operand",
+    "gfx/interface/onmap_spotting_bar_bg.dds": "operand",
+    "gfx/interface/onmap_spotting_bar_bg_small.dds": "operand",
+    "gfx/interface/onmap_spotting_bar_small.dds": "operand",
+    "gfx/interface/operatives/opacity_layer.dds": "operand",
+    "gfx/interface/peace_conference/delimeter_entry.dds": "operand",
+    "gfx/interface/placeholder_bg.dds": "operand",
+    "gfx/interface/placeholder_bordered.dds": "operand",
+    "gfx/interface/placeholder_bordered2.dds": "operand",
+    "gfx/interface/pol_party_colour_bg.dds": "operand",
+    "gfx/interface/popup_window/popup_window_shadow_bd_x79_y107.dds": "operand",
+    "gfx/interface/priority_strip.dds": "operand",
+    "gfx/interface/prod_line_target_strip.dds": "operand",
+    "gfx/interface/production_progressbar_bg.dds": "operand",
+    "gfx/interface/research_progressbar_bg.dds": "operand",
+    "gfx/interface/small_box1.dds": "operand",
+    "gfx/interface/social/chatbox_bullet.dds": "operand",
+    "gfx/interface/social/chatbox_other.dds": "operand",
+    "gfx/interface/social/chatbox_self.dds": "operand",
+    "gfx/interface/social/hex_bg.dds": "operand",
+    "gfx/interface/special_project/breakthrough_progressbar_bg.dds": "operand",
+    "gfx/interface/stateview/province_landmark_damage_bar_bg.dds": "operand",
+    "gfx/interface/stats_entry_bg.dds": "operand",
+    "gfx/interface/stats_entry_long_bg.dds": "operand",
+    "gfx/interface/strategicair/wing_icon_background.dds": "operand",
+    "gfx/interface/sub/startup/black_bg_tile.dds": "operand",
+    "gfx/interface/sub/startup/subscription_startup_bg_overlay.dds": "operand",
+    "gfx/interface/sunk_ships_entry_divider.dds": "operand",
+    "gfx/interface/support_header.dds": "operand",
+    "gfx/interface/surrender_progress_bg.dds": "operand",
+    "gfx/interface/techtree/researching_anim_strip.dds": "holder",
+    "gfx/interface/techtree/researching_special_projects_big_anim_strip.dds": "operand",
+    "gfx/interface/techtree/tech_doctrine_researching_anim_strip.dds": "holder",
+    "gfx/interface/techtree/tech_naval_currently_researching_anim_strip.dds": "holder",
+    "gfx/interface/techtree/techline_center_all_strip.dds": "operand",
+    "gfx/interface/techtree/techline_center_bottom_left_anim_strip.dds": "operand",
+    "gfx/interface/techtree/techline_center_bottom_right_anim_strip.dds": "operand",
+    "gfx/interface/techtree/techline_center_down_anim_strip.dds": "operand",
+    "gfx/interface/techtree/techline_center_left_anim_strip.dds": "operand",
+    "gfx/interface/techtree/techline_center_right_anim_strip.dds": "operand",
+    "gfx/interface/techtree/techline_center_top_left_anim_strip.dds": "operand",
+    "gfx/interface/techtree/techline_center_top_right_strip.dds": "operand",
+    "gfx/interface/techtree/techline_center_up_anim_strip.dds": "operand",
+    "gfx/interface/techtree/technology_special_project_naval_researching_anim_strip.dds": "holder",
+    "gfx/interface/techtree/technology_special_project_small_researching_anim_strip.dds": "holder",
+    "gfx/interface/tiles/black_bg_tile.dds": "operand",
+    "gfx/interface/tiles/dark_area_cut_8.dds": "operand",
+    "gfx/interface/tiles/tiled_selection.dds": "operand",
+    "gfx/interface/tiles/tiled_selection_bold.dds": "operand",
+    "gfx/interface/toggle_obsolete_button.dds": "operand",
+    "gfx/interface/topbar/musicplayer/music_player_entry_bg.dds": "operand",
+    "gfx/interface/transp_white.dds": "operand",
+    "gfx/interface/transp_white_fade.dds": "operand",
+    "gfx/interface/tutorial/shade.dds": "operand",
+    "gfx/interface/tutorial/shade_small.dds": "operand",
+    "gfx/interface/unitcontrol/army_shield_bg.dds": "operand",
+    "gfx/interface/unitcontrol/color_picker_hue_slider_bg.dds": "operand",
+    "gfx/interface/unitcontrol/color_picker_sat_slider_bg.dds": "operand",
+    "gfx/interface/unitcontrol/color_picker_scroll_track.dds": "operand",
+    "gfx/interface/unitcontrol/color_picker_val_slider_bg.dds": "operand",
+    "gfx/interface/unitcontrol/comm_group_plan_power_bar_bg.dds": "operand",
+    "gfx/interface/unitcontrol/theatre_selection_unit_indicator.dds": "operand",
+    "gfx/interface/unitcontrol/unit_list_header_placeholder.dds": "operand",
+    "gfx/interface/unitlist_bar_prepare_bg.dds": "operand",
+    "gfx/interface/unitlist_colonial_flag_frame.dds": "operand",
+    "gfx/interface/unitlist_exile_flag_frame.dds": "operand",
+    "gfx/interface/unitview_entry_combat_icon_progressbar_bg.dds": "operand",
+    "gfx/interface/warscore_progressbar_bg.dds": "operand",
+    "gfx/interface/warscore_progressbar_small_bg.dds": "operand",
+    "gfx/interface/scripted_gui_graphics/SOV_government_gui_military_button.dds": "unused",
+    "gfx/interface/scripted_gui_graphics/SOV_government_gui_opposition_button.dds": "unused",
+    "gfx/interface/scripted_gui_graphics/SOV_government_gui_ruling_party_button.dds": "unused",
+    "gfx/interface/tiles/tiled_window_1b_border.dds": "holder",
+    "gfx/scripted_gui/csto/page1_button.dds": "custom_reference",
+    "gfx/scripted_gui/csto/page2_button.dds": "custom_reference",
+    "gfx/scripted_gui/csto/page3_button.dds": "custom_reference",
+    "gfx/scripted_gui/usa_wall/decrease_no.dds": "custom_reference",
+    "gfx/scripted_gui/usa_wall/increase_no.dds": "custom_reference",
+    "gfx/interface/decisionview/on_map_decision_bg.dds": "composite",
+    "gfx/interface/diplo_opinion_bg.dds": "composite",
+    "gfx/interface/equipmentdesigner/preset_button.dds": "composite",
+    "gfx/interface/equipmentdesigner/preset_export_button.dds": "composite",
+    "gfx/interface/equipmentdesigner/preset_import_button.dds": "composite",
+    "gfx/interface/equipmentdesigner/save_preset_button.dds": "composite",
+    "gfx/interface/followup_goal_bg.dds": "composite",
+    "gfx/interface/leader_selection_button.dds": "composite",
+    "gfx/interface/operatives/mission_button_background.dds": "holder",
+    "gfx/interface/research_folder_strip.dds": "composite",
+    "gfx/interface/scripted_gui_graphics/close_button.dds": "composite",
+    "gfx/interface/stockpile_maximum_button.dds": "composite",
+    "gfx/interface/strategicair/mission_bt_checkbox_bg.dds": "composite",
+    "gfx/interface/strategicair/mission_btn_bg.dds": "composite",
+    "gfx/interface/techtree/techtree_air_tab.dds": "composite",
+    "gfx/interface/techtree/techtree_airdoctrine_tab.dds": "composite",
+    "gfx/interface/techtree/techtree_airdoctrine_tab_large.dds": "composite",
+    "gfx/interface/techtree/techtree_artillery_tab.dds": "composite",
+    "gfx/interface/techtree/techtree_engineering_tab.dds": "composite",
+    "gfx/interface/techtree/techtree_industry_tab.dds": "composite",
+    "gfx/interface/techtree/techtree_infantry_tab.dds": "composite",
+    "gfx/interface/techtree/techtree_landdoctrine_tab.dds": "composite",
+    "gfx/interface/techtree/techtree_landdoctrine_tab_large.dds": "composite",
+    "gfx/interface/techtree/techtree_naval_support_tab.dds": "composite",
+    "gfx/interface/techtree/techtree_naval_tab.dds": "composite",
+    "gfx/interface/techtree/techtree_navaldoctrine_tab.dds": "composite",
+    "gfx/interface/techtree/techtree_navaldoctrine_tab_large.dds": "composite",
+    "gfx/interface/techtree/techtree_special_tab.dds": "composite",
+    "gfx/interface/techtree/techtree_specialforcesdoctrine_tab_large.dds": "composite",
+    "gfx/interface/techtree/techtree_support_tab.dds": "composite",
+    "gfx/interface/techtree/techtree_tabs.dds": "composite",
+    "gfx/interface/techtree/techtree_tank_tab.dds": "composite",
+    "gfx/interface/topbar/toolbar/open_government_window.dds": "composite",
+    "gfx/interface/tradeview/trade_filter_btn_convoy.dds": "composite",
+    "gfx/interface/career_profile/btn_blue.dds": "holder",
+    "gfx/interface/career_profile/btn_dropdown.dds": "holder",
+    "gfx/interface/career_profile/btn_green.dds": "holder",
+    "gfx/interface/chart_history_level_button.dds": "holder",
+    "gfx/interface/chart_history_type_button.dds": "holder",
+    "gfx/interface/officer_corp/doctrines_officer_corps_button_air.dds": "holder",
+    "gfx/interface/officer_corp/doctrines_officer_corps_button_land.dds": "holder",
+    "gfx/interface/officer_corp/doctrines_officer_corps_button_naval.dds": "holder",
+    "gfx/interface/operatives/upgrade_button_available.dds": "holder",
+    "gfx/interface/operatives/upgrade_button_completed.dds": "holder",
+    "gfx/interface/operatives/upgrade_button_unavailable.dds": "holder",
+    "gfx/interface/special_project/history_button_cabinet_front.dds": "holder",
+    "gfx/interface/special_project/history_button_cabinet_front_410x130.dds": "holder",
+    "gfx/interface/special_project/history_button_cabinet_front_410x70.dds": "holder",
+    "gfx/interface/small_flag_frame_thin3_gold.dds": "operand",
+    "gfx/interface/topbar/button_help.dds": "unused",
+    "gfx/interface/topbar/button_menu.dds": "unused",
+    "gfx/interface/topbar/musicplayer/musicplayer_add_button.dds": "unused",
+    "gfx/interface/topbar/musicplayer/musicplayer_remove_button.dds": "unused",
+    "gfx/interface/unitcontrol/btn_delete.dds": "unused",
+    "gfx/interface/LoadingScreen_Progress_2.dds": "operand",
+    "gfx/interface/ammunition/ammo_bar_bg.dds": "operand",
+    "gfx/interface/decisionview/decision_progress_bad.dds": "operand",
+    "gfx/interface/decisionview/decision_progress_good.dds": "operand",
+    "gfx/interface/decisionview/decision_progress_neutral.dds": "operand",
+    "gfx/interface/generic_text_bg_325_transp.dds": "operand",
+    "gfx/interface/minor_portrait_overlay.dds": "operand",
+    "gfx/interface/portrait_bg_blank.dds": "operand",
+    "gfx/interface/tiles/tiled_progress_bar_color.dds": "operand",
+    "gfx/interface/tiles/tiled_window_color_picker.dds": "operand",
+    "gfx/interface/tiles/tiled_window_transparent.dds": "operand",
+    "gfx/interface/topbar/musicplayer/disabled_song.dds": "operand",
+    "gfx/interface/topbar/musicplayer/musicplayer_list_bg.dds": "artwork",
+    "gfx/interface/topbar/musicplayer/musicplayer_list_bg2.dds": "artwork",
+    "gfx/interface/topbar/musicplayer/selected_song.dds": "operand",
+    "gfx/interface/military_raids/raids_launch_all_button.dds": "holder",
+    "gfx/interface/military_raids/raids_launch_button_single.dds": "holder",
+    "gfx/interface/abilitylist/bg_begin.dds": "holder",
+    "gfx/interface/abilitylist/bg_end.dds": "holder",
+    "gfx/interface/airview/air_group.dds": "holder",
+    "gfx/interface/bop/bop_glow_effect.dds": "holder",
+    "gfx/interface/browser_overlay.dds": "holder",
+    "gfx/interface/career_profile/profile_picture_selected.dds": "holder",
+    "gfx/interface/career_profile/scroll_thumb.dds": "holder",
+    "gfx/interface/chat_whisper_player.dds": "holder",
+    "gfx/interface/deploy_supply_entry.dds": "holder",
+    "gfx/interface/deployment_progress_frames.dds": "holder",
+    "gfx/interface/equipmentdesigner/tanks/tank_designer_stat_card.dds": "holder",
+    "gfx/interface/event_news_pic_overlay.dds": "holder",
+    "gfx/interface/factions/ui/faction_sp_facility_card_empty.dds": "holder",
+    "gfx/interface/factions/ui/faction_special_project_open_facilityt.dds": "holder",
+    "gfx/interface/factions/ui/faction_theaters_tabs.dds": "holder",
+    "gfx/interface/factions/ui/topbar_faction_empty.dds": "holder",
+    "gfx/interface/generic_w_box.dds": "holder",
+    "gfx/interface/generic_w_box_125.dds": "holder",
+    "gfx/interface/generic_w_box_small.dds": "holder",
+    "gfx/interface/generic_w_box_smallest.dds": "holder",
+    "gfx/interface/header_naval_terrain.dds": "holder",
+    "gfx/interface/imperial_influence/imperial_influence_faction_name_box.dds": "holder",
+    "gfx/interface/imperial_influence/imperial_influence_ruler_name_box.dds": "holder",
+    "gfx/interface/inner_circle/fuhrer_name_ribbon.dds": "holder",
+    "gfx/interface/intel_ledger/intel_ledger_linechart.dds": "holder",
+    "gfx/interface/military_industrial_organization/mio_department_trait.dds": "holder",
+    "gfx/interface/military_industrial_organization/mio_design_team_specialization.dds": "holder",
+    "gfx/interface/military_industrial_organization/mio_industrial_manufacturer_specialization.dds": "holder",
+    "gfx/interface/military_industrial_organization/mio_special_department_trait.dds": "holder",
+    "gfx/interface/military_raids/success_chance_display.dds": "holder",
+    "gfx/interface/naval_production_line_selected.dds": "holder",
+    "gfx/interface/navalcombat/naval_battle_bg2.dds": "holder",
+    "gfx/interface/obsolete_template_overlay.dds": "holder",
+    "gfx/interface/onmap_mission_unit_counter.dds": "holder",
+    "gfx/interface/onmap_mission_unit_counter_selected.dds": "holder",
+    "gfx/interface/onmap_naval_unit_counter.dds": "holder",
+    "gfx/interface/onmap_unit_counter.dds": "holder",
+    "gfx/interface/onmap_unit_counter_half.dds": "holder",
+    "gfx/interface/onmap_unit_counter_half_selected.dds": "holder",
+    "gfx/interface/onmap_unit_counter_selected.dds": "holder",
+    "gfx/interface/operations/launch_operation.dds": "holder",
+    "gfx/interface/operatives/operative_leader_badge.dds": "holder",
+    "gfx/interface/operatives/operatives_execute_stop_operation_mask.dds": "holder",
+    "gfx/interface/participants_icon.dds": "holder",
+    "gfx/interface/popup_window/popup_window_texture_bd_x12_y12.dds": "holder",
+    "gfx/interface/production_line_selected.dds": "holder",
+    "gfx/interface/production_progressbar_frame2.dds": "holder",
+    "gfx/interface/reassign_all_active.dds": "holder",
+    "gfx/interface/scrollbar_slider.dds": "holder",
+    "gfx/interface/scrollbar_slider_2.dds": "holder",
+    "gfx/interface/special_project/scroll_drager.dds": "holder",
+    "gfx/interface/tab_small_116.dds": "holder",
+    "gfx/interface/theater/theater_group_assign_btn.dds": "holder",
+    "gfx/interface/theater/theatre_dropdown_bottom.dds": "holder",
+    "gfx/interface/theater/theatre_dropdown_middle.dds": "holder",
+    "gfx/interface/theater/theatre_naval_control_panel.dds": "holder",
+    "gfx/interface/tiles/tiled_window_1_scrollbar_glow.dds": "holder",
+    "gfx/interface/trait_window/trait_pickable.dds": "holder",
+    "gfx/interface/trait_window/trait_picked.dds": "holder",
+    "gfx/interface/air_base_copy_btn.dds": "composite",
+    "gfx/interface/air_base_create_new_btn.dds": "composite",
+    "gfx/interface/air_base_merge_btn.dds": "composite",
+    "gfx/interface/air_base_reorganize_btn.dds": "composite",
+    "gfx/interface/air_base_select_all_btn.dds": "composite",
+    "gfx/interface/air_base_split_btn.dds": "composite",
+    "gfx/interface/army_group_toggle_armies_divisions_btn.dds": "composite",
+    "gfx/interface/arrow_down_small.dds": "composite",
+    "gfx/interface/arrow_left_small.dds": "composite",
+    "gfx/interface/arrow_right_small.dds": "composite",
+    "gfx/interface/arrow_up_small.dds": "composite",
+    "gfx/interface/browser_back.dds": "composite",
+    "gfx/interface/browser_forward.dds": "composite",
+    "gfx/interface/browser_refresh.dds": "composite",
+    "gfx/interface/building_repair.dds": "composite",
+    "gfx/interface/buildings/building_intel_icon.dds": "composite",
+    "gfx/interface/buildings/building_no_building.dds": "composite",
+    "gfx/interface/buildings/building_railway_gun.dds": "composite",
+    "gfx/interface/carrier_base_create_new_btn.dds": "composite",
+    "gfx/interface/change_armygroup_template.dds": "composite",
+    "gfx/interface/change_armygroup_template_down.dds": "composite",
+    "gfx/interface/change_armygroup_template_up.dds": "composite",
+    "gfx/interface/changed_slider_indicator.dds": "composite",
+    "gfx/interface/consolidate.dds": "composite",
+    "gfx/interface/conversion_mapicon.dds": "composite",
+    "gfx/interface/convert_industrial_cap_left.dds": "composite",
+    "gfx/interface/convert_industrial_cap_right.dds": "composite",
+    "gfx/interface/crypto/add_new.dds": "composite",
+    "gfx/interface/cze_skoda/CZE_skoda_UI_square_aircraft_selected.dds": "composite",
+    "gfx/interface/cze_skoda/CZE_skoda_UI_square_armor_selected.dds": "composite",
+    "gfx/interface/cze_skoda/CZE_skoda_UI_square_default_selected.dds": "composite",
+    "gfx/interface/cze_skoda/CZE_skoda_UI_square_infantry_selected.dds": "composite",
+    "gfx/interface/cze_skoda/CZE_skoda_UI_square_naval_work_disabled.dds": "composite",
+    "gfx/interface/cze_skoda/CZE_skoda_UI_square_naval_work_selected.dds": "composite",
+    "gfx/interface/div_designer_colonial_flag_frame2.dds": "composite",
+    "gfx/interface/div_designer_exile_flag_frame2.dds": "composite",
+    "gfx/interface/divisiondesigner/2d_3d.dds": "composite",
+    "gfx/interface/exercise_btn.dds": "composite",
+    "gfx/interface/expand_collapse_sideways.dds": "composite",
+    "gfx/interface/expedionary_forces_icon.dds": "composite",
+    "gfx/interface/factions/ui/call_to_war_rules_filter.dds": "composite",
+    "gfx/interface/factions/ui/change_leader_rules_filter.dds": "composite",
+    "gfx/interface/factions/ui/contribution_rule_filter.dds": "composite",
+    "gfx/interface/factions/ui/dismissal_rules_filter.dds": "composite",
+    "gfx/interface/factions/ui/joining_rules_filter.dds": "composite",
+    "gfx/interface/factions/ui/member_rules_filter.dds": "composite",
+    "gfx/interface/factions/ui/peace_conference_rules_filter.dds": "composite",
+    "gfx/interface/factions/ui/release_rules_filter.dds": "composite",
+    "gfx/interface/factions/ui/sort_assigned_countries.dds": "composite",
+    "gfx/interface/factions/ui/sort_mastery.dds": "composite",
+    "gfx/interface/factions/ui/sort_navy_supply.dds": "composite",
+    "gfx/interface/factions/ui/sort_regions.dds": "composite",
+    "gfx/interface/factions/ui/sort_supply.dds": "composite",
+    "gfx/interface/factions/ui/topbar_faction.dds": "composite",
+    "gfx/interface/factions/ui/war_declaration_rules_filter.dds": "composite",
+    "gfx/interface/focusview/filter/find_editbox.dds": "composite",
+    "gfx/interface/focusview/filter/zoom_in.dds": "composite",
+    "gfx/interface/focusview/filter/zoom_out.dds": "composite",
+    "gfx/interface/icon_bluesky.dds": "composite",
+    "gfx/interface/icon_facebook.dds": "composite",
+    "gfx/interface/icon_forum.dds": "composite",
+    "gfx/interface/icon_homepage.dds": "composite",
+    "gfx/interface/icon_instagram.dds": "composite",
+    "gfx/interface/icon_privacy.dds": "composite",
+    "gfx/interface/icon_twitter.dds": "composite",
+    "gfx/interface/icon_x.dds": "composite",
+    "gfx/interface/icon_youtube.dds": "composite",
+    "gfx/interface/idea_slot_aircraft_manufacturer.dds": "composite",
+    "gfx/interface/idea_slot_industrial_concern.dds": "composite",
+    "gfx/interface/idea_slot_materiel_manufacturer.dds": "composite",
+    "gfx/interface/idea_slot_naval_manufacturer.dds": "composite",
+    "gfx/interface/idea_slot_tank_manufacturer.dds": "composite",
+    "gfx/interface/imperial_influence/support_and discredit_scroll.dds": "composite",
+    "gfx/interface/intel_ledger/intel_ledger_tech_icon.dds": "composite",
+    "gfx/interface/international_market/sort_amount.dds": "composite",
+    "gfx/interface/international_market/sort_cost.dds": "composite",
+    "gfx/interface/log_max.dds": "composite",
+    "gfx/interface/log_min.dds": "composite",
+    "gfx/interface/mic_btn_frames.dds": "composite",
+    "gfx/interface/navalcombat/air.dds": "composite",
+    "gfx/interface/navalcombat/capital.dds": "composite",
+    "gfx/interface/navalcombat/golden_star.dds": "composite",
+    "gfx/interface/navalcombat/screen.dds": "composite",
+    "gfx/interface/navalcombat/submarine.dds": "composite",
+    "gfx/interface/officer_corp/select_advisor.dds": "composite",
+    "gfx/interface/operations/refund_operation.dds": "composite",
+    "gfx/interface/outdated_equipment_overlay.dds": "composite",
+    "gfx/interface/outdated_equipment_overlay_collapsed.dds": "composite",
+    "gfx/interface/outdated_naval_equipment_overlay.dds": "composite",
+    "gfx/interface/outdated_naval_overlay_collapsed.dds": "composite",
+    "gfx/interface/peace_conference/give_points.dds": "composite",
+    "gfx/interface/phase_ok_iconstrip.dds": "composite",
+    "gfx/interface/playerlobby_kick.dds": "composite",
+    "gfx/interface/playerlobby_mute.dds": "composite",
+    "gfx/interface/production_line_arrow_down.dds": "composite",
+    "gfx/interface/production_line_arrow_left.dds": "composite",
+    "gfx/interface/production_line_arrow_right.dds": "composite",
+    "gfx/interface/production_line_arrow_up.dds": "composite",
+    "gfx/interface/redeployment_type_icon.dds": "composite",
+    "gfx/interface/return_btn.dds": "composite",
+    "gfx/interface/save_game_disconnected.dds": "composite",
+    "gfx/interface/save_load_file_disconnected_3frames.dds": "composite",
+    "gfx/interface/scripted_gui_graphics/select_advisor.dds": "composite",
+    "gfx/interface/SOV_government_graphics/select_advisor.dds": "composite",
+    "gfx/interface/scroll_left_gold.dds": "composite",
+    "gfx/interface/scroll_right_gold.dds": "composite",
+    "gfx/interface/select_half.dds": "composite",
+    "gfx/interface/stateview/destroy_railway.dds": "composite",
+    "gfx/interface/strategicair/add_to_air_group.dds": "composite",
+    "gfx/interface/strategicair/aggressivness_btn.dds": "composite",
+    "gfx/interface/strategicair/air_target_icon.dds": "composite",
+    "gfx/interface/strategicair/day_night.dds": "composite",
+    "gfx/interface/strategicair/details_btn.dds": "composite",
+    "gfx/interface/strategicair/expand.dds": "composite",
+    "gfx/interface/strategicair/mapicon_air_supply.dds": "composite",
+    "gfx/interface/strategicair/mission_cancel.dds": "composite",
+    "gfx/interface/strategicair/split_btn.dds": "composite",
+    "gfx/interface/strategicnavy/naval_access_rule.dds": "composite",
+    "gfx/interface/strategicnavy/naval_region_convoys_icon.dds": "composite",
+    "gfx/interface/strategicnavy/naval_region_enemy_convoys_icon.dds": "composite",
+    "gfx/interface/strategicnavy/naval_region_enemy_mine_icon.dds": "composite",
+    "gfx/interface/strategicnavy/naval_region_enemy_plane_icon.dds": "composite",
+    "gfx/interface/strategicnavy/naval_region_enemy_ship_icon.dds": "composite",
+    "gfx/interface/strategicnavy/naval_region_mine_icon.dds": "composite",
+    "gfx/interface/strategicnavy/naval_region_plane_icon.dds": "composite",
+    "gfx/interface/strategicnavy/naval_region_ship_icon.dds": "composite",
+    "gfx/interface/tech_bonus.dds": "composite",
+    "gfx/interface/techtree/tech_naval_currently_researching_item.dds": "composite",
+    "gfx/interface/theater/theater_group_settings_btn.dds": "composite",
+    "gfx/interface/trait_window/trait_adviser_pickable.dds": "composite",
+    "gfx/interface/trait_window/trait_adviser_picked.dds": "composite",
+    "gfx/interface/trait_window/trait_new.dds": "composite",
+    "gfx/interface/transfer_all_btn.dds": "composite",
+    "gfx/interface/transfer_all_btn2.dds": "composite",
+    "gfx/interface/transfer_amount_btn.dds": "composite",
+    "gfx/interface/transfer_amount_btn2.dds": "composite",
+    "gfx/interface/unitcontrol/army_group_expand_collapse.dds": "composite",
+    "gfx/interface/unitcontrol/cohesion_balanced.dds": "composite",
+    "gfx/interface/unitcontrol/cohesion_immobile.dds": "composite",
+    "gfx/interface/unitcontrol/cohesion_loose.dds": "composite",
+    "gfx/interface/unitcontrol/cohesion_strict.dds": "composite",
+    "gfx/interface/unitcontrol/color_picker_close.dds": "composite",
+    "gfx/interface/unitcontrol/commander_filter_admiral.dds": "composite",
+    "gfx/interface/unitcontrol/commander_filter_all.dds": "composite",
+    "gfx/interface/unitcontrol/commander_filter_FM.dds": "composite",
+    "gfx/interface/unitcontrol/commander_sort_blue.dds": "composite",
+    "gfx/interface/unitcontrol/commander_sort_green.dds": "composite",
+    "gfx/interface/unitcontrol/disband.dds": "composite",
+    "gfx/interface/unitcontrol/disband_orders_group.dds": "composite",
+    "gfx/interface/unitcontrol/execute_btn_play.dds": "composite",
+    "gfx/interface/unitcontrol/execute_btn_play_small.dds": "composite",
+    "gfx/interface/unitcontrol/execute_btn_play_small_ag.dds": "composite",
+    "gfx/interface/unitcontrol/execute_btn_stop.dds": "composite",
+    "gfx/interface/unitcontrol/execute_btn_stop_small.dds": "composite",
+    "gfx/interface/unitcontrol/execute_btn_stop_small_ag.dds": "composite",
+    "gfx/interface/unitcontrol/execute_fast.dds": "composite",
+    "gfx/interface/unitcontrol/execute_mid.dds": "composite",
+    "gfx/interface/unitcontrol/execute_slow.dds": "composite",
+    "gfx/interface/unitcontrol/group_add_leader.dds": "composite",
+    "gfx/interface/unitcontrol/group_marker3.dds": "composite",
+    "gfx/interface/unitcontrol/leader_details_icon_available_trait.dds": "composite",
+    "gfx/interface/waroverview_tabs.dds": "composite",
+    "gfx/interface/waroverview_tabs_all.dds": "composite",
+    "gfx/interface/techtree/icons/air_doctrine_folder_icon.dds": "composite",
+    "gfx/interface/techtree/icons/air_techs_folder_icon.dds": "composite",
+    "gfx/interface/techtree/icons/armour_folder_icon.dds": "composite",
+    "gfx/interface/techtree/icons/artillery_folder_icon.dds": "composite",
+    "gfx/interface/techtree/icons/electronics_folder_icon.dds": "composite",
+    "gfx/interface/techtree/icons/industry_folder_icon.dds": "composite",
+    "gfx/interface/techtree/icons/infantry_folder_icon.dds": "composite",
+    "gfx/interface/techtree/icons/land_doctrine_folder_icon.dds": "composite",
+    "gfx/interface/techtree/icons/naval_doctrine_folder_icon.dds": "composite",
+    "gfx/interface/techtree/icons/naval_folder_icon.dds": "composite",
+    "gfx/interface/techtree/icons/naval_support_folder_icon.dds": "composite",
+    "gfx/interface/techtree/icons/support_folder_icon.dds": "composite",
+    "gfx/interface/unitcontrol/garr_airbase.dds": "composite",
+    "gfx/interface/unitcontrol/garr_borders.dds": "composite",
+    "gfx/interface/unitcontrol/garr_coastline.dds": "composite",
+    "gfx/interface/unitcontrol/garr_facility.dds": "composite",
+    "gfx/interface/unitcontrol/garr_fort.dds": "composite",
+    "gfx/interface/unitcontrol/garr_port.dds": "composite",
+    "gfx/interface/unitcontrol/garr_rail.dds": "composite",
+    "gfx/interface/unitcontrol/garr_resistance.dds": "composite",
+    "gfx/interface/unitcontrol/garr_vp.dds": "composite",
+    "gfx/interface/unitcontrol/sort_adviser.dds": "composite",
+    "gfx/interface/unitcontrol/sort_attack_trait.dds": "composite",
+    "gfx/interface/unitcontrol/sort_coordination_trait.dds": "composite",
+    "gfx/interface/unitcontrol/sort_defense_trait.dds": "composite",
+    "gfx/interface/unitcontrol/sort_maneuvering_trait.dds": "composite",
+    "gfx/interface/unitcontrol/sort_planning_trait.dds": "composite",
+    "gfx/interface/unitcontrol/sort_skill.dds": "composite",
+    "gfx/interface/unitcontrol/sort_supply_trait.dds": "composite",
+    "gfx/interface/button_kick.dds": "artwork",
+    "gfx/interface/pol_factions_strip.dds": "artwork",
+    "gfx/interface/unitcontrol/leader_details_icon.dds": "artwork",
+    "gfx/interface/resources_placeholder.dds": "operand",
+    "gfx/interface/scripted_gui_graphics/government_gui_transparent.dds": "operand",
+    "gfx/scripted_gui/usa_wall/wall_bar_0.dds": "operand",
+    "gfx/scripted_gui/usa_wall/wall_bar_100.dds": "operand",
+    "gfx/scripted_gui/usa_wall/wall_bar_25.dds": "operand",
+    "gfx/scripted_gui/usa_wall/wall_bar_50.dds": "operand",
+    "gfx/scripted_gui/usa_wall/wall_bar_75.dds": "operand",
+    "gfx/scripted_gui/usa_wall/decrease_yes.dds": "custom_reference",
+    "gfx/scripted_gui/usa_wall/increase_yes.dds": "custom_reference",
+    "gfx/interface/LoadingScreen_Progress_1.dds": "custom_reference",
+    "gfx/interface/Loadingscreen_loadingstatus.dds": "custom_reference",
+    "gfx/interface/add_national_goal_button.dds": "custom_reference",
+    "gfx/interface/bookmark_entry_bg.dds": "custom_reference",
+    "gfx/interface/button_123x34.dds": "custom_reference",
+    "gfx/interface/button_221x34.dds": "custom_reference",
+    "gfx/interface/category_header.dds": "custom_reference",
+    "gfx/interface/country_selection_bg.dds": "custom_reference",
+    "gfx/interface/country_selection_entry.dds": "custom_reference",
+    "gfx/interface/decisionview/category_header_bg.dds": "custom_reference",
+    "gfx/interface/decisionview/decision_item_bg.dds": "custom_reference",
+    "gfx/interface/decisionview/event_header_bg.dds": "custom_reference",
+    "gfx/interface/diplo_flag_frame.dds": "custom_reference",
+    "gfx/interface/diplo_goal_button.dds": "custom_reference",
+    "gfx/interface/diplo_leader_frame.dds": "custom_reference",
+    "gfx/interface/diplo_nat_spirits_bg.dds": "custom_reference",
+    "gfx/interface/diplo_top_bg_diplo_tab.dds": "custom_reference",
+    "gfx/interface/event_news_bg.dds": "custom_reference",
+    "gfx/interface/event_option_entry.dds": "custom_reference",
+    "gfx/interface/event_report_bottom_win.dds": "custom_reference",
+    "gfx/interface/event_report_bottom_win_2.dds": "custom_reference",
+    "gfx/interface/event_report_tileable_midsection.dds": "custom_reference",
+    "gfx/interface/event_report_top_win.dds": "custom_reference",
+    "gfx/interface/focusview/titlebar/focus_can_start_bg.dds": "custom_reference",
+    "gfx/interface/focusview/titlebar/focus_completed_bg.dds": "custom_reference",
+    "gfx/interface/focusview/titlebar/focus_unavailable_bg.dds": "custom_reference",
+    "gfx/interface/header_bg.dds": "custom_reference",
+    "gfx/interface/intel_ledger/tab.dds": "custom_reference",
+    "gfx/interface/main_lobby_button.dds": "custom_reference",
+    "gfx/interface/main_lobby_divider.dds": "custom_reference",
+    "gfx/interface/pol_goal_bg.dds": "custom_reference",
+    "gfx/interface/pol_leader_frame.dds": "custom_reference",
+    "gfx/interface/pol_view_bg.dds": "custom_reference",
+    "gfx/interface/research_line_bg.dds": "custom_reference",
+    "gfx/interface/scripted_gui_graphics/SOV_UR_ruling_party_gov_gui_background.dds": "custom_reference",
+    "gfx/interface/scripted_gui_graphics/government_gui_background.dds": "custom_reference",
+    "gfx/interface/scripted_gui_graphics/intro_screen_background.dds": "custom_reference",
+    "gfx/interface/scripted_gui_graphics/military_gov_gui_background.dds": "custom_reference",
+    "gfx/interface/scripted_gui_graphics/opposition_gov_gui_background.dds": "custom_reference",
+    "gfx/interface/select_date_bg.dds": "custom_reference",
+    "gfx/interface/techtree/tech_info_top_win.dds": "custom_reference",
+    "gfx/interface/tiles/tiled_army_badge_view.dds": "operand",
+    "gfx/interface/tiles/tiled_army_view.dds": "custom_reference",
+    "gfx/interface/tiles/tiled_main_menu.dds": "custom_reference",
+    "gfx/interface/tiles/tiled_paper_bg2.dds": "custom_reference",
+    "gfx/interface/tiles/tiled_window.dds": "custom_reference",
+    "gfx/interface/tiles/tiled_window2_1b_border.dds": "custom_reference",
+    "gfx/interface/tiles/tiled_window2_2b_border.dds": "custom_reference",
+    "gfx/interface/tiles/tiled_window_pol_goal.dds": "custom_reference",
+    "gfx/interface/tiles/tiled_window_thin_border2.dds": "holder",
+    "gfx/interface/tiles/tiles_dialog.dds": "custom_reference",
+    "gfx/interface/unitcontrol/focus_reward_header.dds": "custom_reference",
+    "gfx/interface/unitcontrol/unit_entry_bg.dds": "custom_reference",
+    "gfx/interface/unitcontrol/unit_list_header.dds": "custom_reference",
+    "gfx/interface/unitcontrol/unitlist_unassigned_bg.dds": "custom_reference",
+    "gfx/scripted_gui/csto/csto_cata_danger_progress_bar_background.dds": "custom_reference",
+    "gfx/scripted_gui/csto/csto_cata_threat_progress_bar_background.dds": "custom_reference",
+    "gfx/scripted_gui/lore_screen/chapter_button.dds": "custom_reference",
+    "gfx/scripted_gui/lore_screen/chapterbutton.dds": "custom_reference",
+    "gfx/scripted_gui/lore_screen/lore_open_button.dds": "custom_reference",
+    "gfx/scripted_gui/lore_screen/lore_screen_main_screen.dds": "custom_reference",
+    "gfx/scripted_gui/sotnik/gerasimov_frame.dds": "custom_reference",
+    "gfx/scripted_gui/sotnik/gerasimov_progress_bar_background.dds": "custom_reference",
+    "gfx/scripted_gui/sotnik/shoigu_frame.dds": "custom_reference",
+    "gfx/scripted_gui/sotnik/shoigu_progress_bar_background.dds": "custom_reference",
+    "gfx/scripted_gui/sotnik/sotnik_progress_bar_background.dds": "custom_reference",
+    "gfx/template_border.dds": "custom_reference",
+    "gfx/interface/reward_icon_bonus_mask.png": "operand",
+    "gfx/interface/sort_button_120x29.png": "composite",
+    "gfx/interface/special_project/placeholder_content/placeholder_highlight_program_item.png": "operand",
+    "gfx/interface/special_project/placeholder_content/placeholder_prototyping_icon.png": "artwork",
+    "gfx/interface/strategicair/details_channel_btn.png": "holder",
+    "gfx/interface/tinybutton.tga": "holder",
+    "gfx/interface/trait_window/leader_exp_fg_mid_empty.png": "operand",
+    "gfx/interface/trait_window/trait_exclusive.png": "operand",
+    "gfx/interface/trait_window/trait_exclusive_horizontal.png": "operand",
+    "gfx/interface/trait_window/trait_line_bottom.png": "operand",
+    "gfx/interface/trait_window/trait_line_bottom_dotted.png": "operand",
+    "gfx/interface/trait_window/trait_line_dotted_tile_8x8.png": "operand",
+    "gfx/interface/trait_window/trait_line_horizontal_tile_8x8.png": "operand",
+    "gfx/interface/trait_window/trait_line_left.png": "operand",
+    "gfx/interface/trait_window/trait_line_left_dotted.png": "operand",
+    "gfx/interface/trait_window/trait_line_mid.png": "operand",
+    "gfx/interface/trait_window/trait_line_right.png": "operand",
+    "gfx/interface/trait_window/trait_line_right_dotted.png": "operand",
+    "gfx/interface/trait_window/trait_line_top.png": "operand",
+    "gfx/interface/trait_window/trait_line_top_dotted.png": "operand",
+    "gfx/interface/trait_window/trait_line_vertical_tile_8x8.png": "operand",
+    "gfx/interface/researching_anim_strip.dds": "holder",
+    "gfx/interface/subtech_air_techs_currently_researching_item_bg.dds": "holder",
+    "gfx/interface/technology_info_bg.dds": "holder",
+    "gfx/interface/ungrouped_air_wings.dds": "artwork",
+    "gfx/interface/subtech_carrier_plane_currently_researching_item_bg.dds": "holder",
+    "gfx/interface/division_equipment/equipmeny_stats_list_entry.dds": "holder",
+    "gfx/interface/division_equipment/equipmeny_stats_list_entry_small.dds": "holder",
+    "gfx/interface/mapicons/generic_text_bg_40x20.dds": "holder",
+    "gfx/interface/mapicons/mapicon_air_mission_bg.dds": "holder",
+    "gfx/interface/mapicons/mapicon_air_mission_bg_more_ground_crews.dds": "holder",
+    "gfx/interface/mapicons/mapicon_frame_strip.dds": "holder",
+    "gfx/interface/mapicons/mapicon_intel_cartouche.dds": "holder",
+    "gfx/interface/mapicons/mapicon_naval_mission_bg.dds": "holder",
+    "gfx/interface/mapicons/mapicon_naval_mission_efficiency_bg.dds": "holder",
+    "gfx/interface/mapicons/mapicon_operation_bg.dds": "holder",
+    "gfx/interface/mapicons/mapicon_operative_mission.dds": "holder",
+    "gfx/interface/mapicons/mapicon_operative_mission_highlight.dds": "holder",
+    "gfx/interface/mapicons/mapicon_operative_mission_highlight_warn.dds": "holder",
+    "gfx/interface/mapicons/mapicon_supply_cap_bg.dds": "holder",
+    "gfx/interface/mapicons/mapicon_tiny_unit_counter.dds": "holder",
+    "gfx/interface/mapicons/naval_mission_dominance_progress_bar.dds": "holder",
+    "gfx/interface/mapicons/naval_mission_dominance_progress_bar_frame.dds": "holder",
+    "gfx/interface/mapicons/on_map_supply_values.dds": "holder",
+    "gfx/interface/mapicons/on_map_supply_values_bg.dds": "holder",
+    "gfx/interface/mapicons/on_map_values_bg.dds": "holder",
+    "gfx/interface/mapicons/supply/railway_mapicon_bg.dds": "holder",
+    "gfx/interface/mapicons/supply/supply_hub_button_bg_strip_small.dds": "holder",
+    "gfx/interface/division_equipment/generic_checkbox3_orange.dds": "composite",
+    "gfx/interface/mapicons/mapicon_faction_theatre.dds": "composite",
+    "gfx/interface/mapicons/mapicon_land_combat_frame.dds": "composite",
+    "gfx/interface/mapicons/mapicon_naval_mission_convoy_escort.dds": "composite",
+    "gfx/interface/mapicons/mapicon_naval_mission_convoy_raid.dds": "composite",
+    "gfx/interface/mapicons/mapicon_naval_mission_mines_planting.dds": "composite",
+    "gfx/interface/mapicons/mapicon_naval_mission_mines_sweeping.dds": "composite",
+    "gfx/interface/mapicons/mapicon_naval_mission_naval_invasion_support.dds": "composite",
+    "gfx/interface/mapicons/mapicon_naval_mission_patrol.dds": "composite",
+    "gfx/interface/mapicons/mapicon_naval_mission_ship_entry.dds": "composite",
+    "gfx/interface/mapicons/mapicon_naval_mission_strike_force.dds": "composite",
+    "gfx/interface/mapicons/mapicon_naval_mission_training.dds": "composite",
+    "gfx/interface/mapicons/mapicon_supply_bg.dds": "composite",
+    "gfx/interface/mapicons/mapicon_supply_red_bg.dds": "composite",
+    "gfx/interface/medals/add_medal_button.dds": "composite",
+    "gfx/interface/events/war_escalation_level_1.dds": "composite",
+    "gfx/interface/events/war_escalation_level_10.dds": "composite",
+    "gfx/interface/events/war_escalation_level_2.dds": "composite",
+    "gfx/interface/events/war_escalation_level_3.dds": "composite",
+    "gfx/interface/events/war_escalation_level_4.dds": "composite",
+    "gfx/interface/events/war_escalation_level_5.dds": "composite",
+    "gfx/interface/events/war_escalation_level_6.dds": "composite",
+    "gfx/interface/events/war_escalation_level_7.dds": "composite",
+    "gfx/interface/events/war_escalation_level_8.dds": "composite",
+    "gfx/interface/events/war_escalation_level_9.dds": "composite",
+    "gfx/interface/events/war_escalation_level_green.dds": "composite",
+    "gfx/interface/events/war_escalation_level_red.dds": "composite",
+    "gfx/interface/events/war_escalation_level_white.dds": "composite",
+    "gfx/interface/add_goal_button.dds": "holder",
+    "gfx/interface/army_deploy_button.dds": "holder",
+    "gfx/interface/battle_log_tab.dds": "holder",
+    "gfx/interface/button_type_4.dds": "holder",
+    "gfx/interface/buttons/icon_button_32x32.dds": "holder",
+    "gfx/interface/buttons/icon_button_45x32.dds": "holder",
+    "gfx/interface/buttons/icon_button_46x46.dds": "holder",
+    "gfx/interface/checkbox.dds": "holder",
+    "gfx/interface/checkbox_small.dds": "holder",
+    "gfx/interface/career_profile/button_medal_display_slot_selected.dds": "holder",
+    "gfx/interface/career_profile/button_ribbon_display_slot_selected.dds": "holder",
+    "gfx/interface/conference_action_turn_entry.dds": "holder",
+    "gfx/interface/division_3d_entry_half_width.dds": "holder",
+    "gfx/interface/empty_button.dds": "holder",
+    "gfx/interface/factions/ui/faction_edit_rule_button.dds": "holder",
+    "gfx/interface/government_in_exile/reinstate_button.dds": "holder",
+    "gfx/interface/load_save_entry.dds": "holder",
+    "gfx/interface/military_raids/launch_button.dds": "holder",
+    "gfx/interface/naval_deploy_button.dds": "holder",
+    "gfx/interface/naval_name_list_button.dds": "holder",
+    "gfx/interface/naval_unit_ship_entry.dds": "holder",
+    "gfx/interface/naviesview/bg_small_naval_sub_unit_entry.dds": "holder",
+    "gfx/interface/peace_conference/bid_button.dds": "holder",
+    "gfx/interface/play_button.dds": "holder",
+    "gfx/interface/play_button_ready.dds": "holder",
+    "gfx/interface/stop_training_leadergroup_button.dds": "holder",
+    "gfx/interface/unitcontrol/unitlist_garrison_button.dds": "holder",
+    "gfx/interface/unitcontrol/unitlist_unitinfo_button_small.dds": "holder",
+    "gfx/interface/topbar/background_extended.dds": "holder",
+    "gfx/interface/topbar/armyoverview_buttons_bg.dds": "holder",
+    "gfx/interface/date_pause_button_bg.dds": "holder",
+    "gfx/interface/date_pause_button.dds": "holder",
+    "gfx/interface/topbar/toolbar/international_market_button.dds": "composite",
+    "gfx/interface/topbar/toolbar/staff_office_button.dds": "composite",
+    "gfx/interface/alerts/global_alert_icons.dds": "composite",
+    "gfx/interface/alerts/global_diplorequest_icons.dds": "composite",
+    "gfx/interface/tiles/tiled_focus_bg.dds": "holder"
+  },
+  "masks": {
+    "gfx/interface/production_win_top.dds": [
+      [
+        56,
+        183,
+        82,
+        204
+      ],
+      [
+        141,
+        183,
+        167,
+        204
+      ],
+      [
+        226,
+        183,
+        252,
+        204
+      ],
+      [
+        311,
+        183,
+        337,
+        204
+      ],
+      [
+        396,
+        183,
+        422,
+        204
+      ],
+      [
+        481,
+        183,
+        507,
+        204
+      ]
+    ],
+    "gfx/interface/armyoverview_air_tab.dds": [
+      [
+        7,
+        7,
+        156,
+        47
+      ],
+      [
+        170,
+        7,
+        319,
+        47
+      ]
+    ],
+    "gfx/interface/armyoverview_army_tab.dds": [
+      [
+        7,
+        7,
+        156,
+        47
+      ],
+      [
+        170,
+        7,
+        319,
+        47
+      ]
+    ],
+    "gfx/interface/armyoverview_naval_tab.dds": [
+      [
+        7,
+        7,
+        156,
+        47
+      ],
+      [
+        170,
+        7,
+        319,
+        47
+      ]
+    ],
+    "gfx/interface/land_battle_bg.dds": [
+      [
+        12,
+        340,
+        555,
+        607
+      ]
+    ],
+    "gfx/interface/naval_battle_report_bg.dds": [
+      [
+        141,
+        90,
+        580,
+        500
+      ]
+    ],
+    "gfx/interface/navalcombat/naval_battle_report_defeat_bg.dds": [
+      [
+        141,
+        99,
+        580,
+        548
+      ]
+    ],
+    "gfx/interface/navalcombat/naval_battle_report_victory_bg.dds": [
+      [
+        141,
+        103,
+        580,
+        573
+      ]
+    ],
+    "gfx/interface/strategicair/strategic_air_bg.dds": [
+      [
+        8,
+        169,
+        544,
+        426
+      ]
+    ],
+    "gfx/interface/research_top_win.dds": [
+      [
+        7,
+        7,
+        315,
+        122
+      ]
+    ],
+    "gfx/interface/operatives/create agency_bg.dds": [
+      [
+        198,
+        14,
+        310,
+        104
+      ]
+    ],
+    "gfx/interface/topbar/armyoverview_buttons_bg.dds": [
+      [
+        22,
+        43,
+        58,
+        82
+      ]
+    ],
+    "gfx/interface/topbar/topbar_date_overlay.dds": [
+      [
+        28,
+        6,
+        45,
+        25
+      ]
+    ],
+    "gfx/interface/factions/ui/leader_selection_active_entry_bg_faction.dds": [
+      [
+        0,
+        0,
+        117,
+        98
+      ]
+    ],
+    "gfx/interface/factions/ui/leader_selection_entry_bg_faction.dds": [
+      [
+        0,
+        0,
+        117,
+        98
+      ]
+    ],
+    "gfx/interface/leader_selection_active_entry_bg.dds": [
+      [
+        0,
+        0,
+        117,
+        98
+      ]
+    ],
+    "gfx/interface/leader_selection_entry_bg.dds": [
+      [
+        0,
+        0,
+        117,
+        98
+      ]
+    ],
+    "gfx/interface/leader_selection_unavailable_active_entry_bg.dds": [
+      [
+        0,
+        0,
+        117,
+        98
+      ]
+    ],
+    "gfx/interface/leader_selection_unavailable_entry_bg.dds": [
+      [
+        0,
+        0,
+        117,
+        98
+      ]
+    ],
+    "gfx/interface/marshal_selection_active_entry_bg.dds": [
+      [
+        0,
+        0,
+        117,
+        98
+      ]
+    ],
+    "gfx/interface/marshal_selection_entry_bg.dds": [
+      [
+        0,
+        0,
+        117,
+        98
+      ]
+    ],
+    "gfx/interface/naval_leader_selection_active_entry_bg.dds": [
+      [
+        0,
+        0,
+        117,
+        98
+      ]
+    ],
+    "gfx/interface/naval_leader_selection_entry_bg.dds": [
+      [
+        0,
+        0,
+        117,
+        98
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_can_start_joint_AFG_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_can_start_joint_AFG_IRQ_PER_TUR_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_can_start_joint_BEL_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_can_start_joint_BEL_COG_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_can_start_joint_COG_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_can_start_joint_GDC_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_can_start_joint_GDC_GXC_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_can_start_joint_GXC_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_can_start_joint_IRQ_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_can_start_joint_MA_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_can_start_joint_PER_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_completed_joint_AFG_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_completed_joint_AFG_IRQ_PER_TUR_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_completed_joint_BEL_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_completed_joint_BEL_COG_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_completed_joint_COG_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_completed_joint_GDC_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_completed_joint_GDC_GXC_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_completed_joint_GXC_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_completed_joint_IRQ_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_completed_joint_MA_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_completed_joint_PER_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_completed_joint_TUR_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_unavailable_joint_AFG_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_unavailable_joint_AFG_IRQ_PER_TUR_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_unavailable_joint_BEL_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_unavailable_joint_BEL_COG_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_unavailable_joint_COG_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_unavailable_joint_GDC_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_unavailable_joint_GDC_GXC_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_unavailable_joint_GXC_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_unavailable_joint_IRQ_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_unavailable_joint_MA_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_unavailable_joint_PER_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/focusview/titlebar/focus_unavailable_joint_TUR_bg.dds": [
+      [
+        0,
+        44,
+        164,
+        69
+      ]
+    ],
+    "gfx/interface/special_project/blueprint_bg_straight.dds": [
+      [
+        16,
+        12,
+        145,
+        86
+      ]
+    ],
+    "gfx/interface/techtree/technology_special_project_big_available_item_bg.dds": [
+      [
+        16,
+        12,
+        187,
+        92
+      ]
+    ],
+    "gfx/interface/techtree/technology_special_project_big_researched_item_bg.dds": [
+      [
+        16,
+        12,
+        187,
+        92
+      ]
+    ],
+    "gfx/interface/techtree/technology_special_project_big_unavailable_item_bg.dds": [
+      [
+        16,
+        12,
+        187,
+        92
+      ]
+    ],
+    "gfx/interface/techtree/technology_special_project_naval_available_item_bg.dds": [
+      [
+        16,
+        12,
+        336,
+        77
+      ]
+    ],
+    "gfx/interface/techtree/technology_special_project_naval_researched_item_bg.dds": [
+      [
+        16,
+        12,
+        336,
+        77
+      ]
+    ],
+    "gfx/interface/techtree/technology_special_project_naval_unavailable_item_bg.dds": [
+      [
+        16,
+        12,
+        336,
+        77
+      ]
+    ],
+    "gfx/interface/techtree/technology_special_project_small_available_item_bg.dds": [
+      [
+        16,
+        12,
+        76,
+        80
+      ]
+    ],
+    "gfx/interface/techtree/technology_special_project_small_researched_item_bg.dds": [
+      [
+        16,
+        12,
+        76,
+        80
+      ]
+    ],
+    "gfx/interface/techtree/technology_special_project_small_unavailable_item_bg.dds": [
+      [
+        16,
+        12,
+        76,
+        80
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_airforce_completed.dds": [
+      [
+        0,
+        0,
+        38,
+        74
+      ],
+      [
+        100,
+        0,
+        139,
+        74
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_airforce_unavailable.dds": [
+      [
+        0,
+        0,
+        38,
+        74
+      ],
+      [
+        100,
+        0,
+        139,
+        74
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_army_completed.dds": [
+      [
+        0,
+        0,
+        38,
+        74
+      ],
+      [
+        100,
+        0,
+        139,
+        74
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_army_unavailable.dds": [
+      [
+        0,
+        0,
+        38,
+        74
+      ],
+      [
+        100,
+        0,
+        139,
+        74
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_defense_completed.dds": [
+      [
+        0,
+        0,
+        38,
+        74
+      ],
+      [
+        100,
+        0,
+        139,
+        74
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_defense_unavailable.dds": [
+      [
+        0,
+        0,
+        38,
+        74
+      ],
+      [
+        100,
+        0,
+        139,
+        74
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_economy_completed.dds": [
+      [
+        0,
+        0,
+        38,
+        74
+      ],
+      [
+        100,
+        0,
+        139,
+        74
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_economy_unavailable.dds": [
+      [
+        0,
+        0,
+        38,
+        74
+      ],
+      [
+        100,
+        0,
+        139,
+        74
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_form_available.dds": [
+      [
+        0,
+        0,
+        38,
+        74
+      ],
+      [
+        100,
+        0,
+        139,
+        74
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_form_completed.dds": [
+      [
+        0,
+        0,
+        38,
+        74
+      ],
+      [
+        100,
+        0,
+        139,
+        74
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_form_unavailable.dds": [
+      [
+        0,
+        0,
+        38,
+        74
+      ],
+      [
+        100,
+        0,
+        139,
+        74
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_naval_completed.dds": [
+      [
+        0,
+        0,
+        38,
+        74
+      ],
+      [
+        100,
+        0,
+        139,
+        74
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_naval_unavailable.dds": [
+      [
+        0,
+        0,
+        38,
+        74
+      ],
+      [
+        100,
+        0,
+        139,
+        74
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_background.dds": [
+      [
+        0,
+        0,
+        40,
+        68
+      ]
+    ],
+    "gfx/interface/trait_window/trait_adviser_disabled.dds": [
+      [
+        0,
+        0,
+        60,
+        52
+      ]
+    ],
+    "gfx/interface/production_win_top_new.dds": [
+      [
+        56,
+        183,
+        82,
+        204
+      ],
+      [
+        141,
+        183,
+        167,
+        204
+      ],
+      [
+        226,
+        183,
+        252,
+        204
+      ],
+      [
+        311,
+        183,
+        337,
+        204
+      ],
+      [
+        396,
+        183,
+        422,
+        204
+      ],
+      [
+        481,
+        183,
+        507,
+        204
+      ]
+    ],
+    "gfx/interface/officer_corp/select_advisor.dds": [
+      [
+        3,
+        3,
+        60,
+        63
+      ]
+    ],
+    "gfx/interface/scripted_gui_graphics/select_advisor.dds": [
+      [
+        3,
+        3,
+        60,
+        63
+      ]
+    ],
+    "gfx/interface/SOV_government_graphics/select_advisor.dds": [
+      [
+        3,
+        3,
+        60,
+        63
+      ]
+    ],
+    "gfx/interface/unitcontrol/group_add_leader.dds": [
+      [
+        3,
+        3,
+        58,
+        80
+      ],
+      [
+        64,
+        3,
+        119,
+        80
+      ]
+    ]
+  },
+  "panes": {
+    "gfx/interface/production_win_top.dds": [
+      [
+        30,
+        12,
+        532,
+        44
+      ],
+      [
+        15,
+        53,
+        533,
+        85
+      ],
+      [
+        15,
+        175,
+        98,
+        212
+      ],
+      [
+        99,
+        175,
+        183,
+        212
+      ],
+      [
+        185,
+        175,
+        270,
+        212
+      ],
+      [
+        272,
+        175,
+        357,
+        212
+      ],
+      [
+        359,
+        175,
+        444,
+        212
+      ],
+      [
+        446,
+        175,
+        532,
+        212
+      ],
+      [
+        15,
+        214,
+        98,
+        242
+      ],
+      [
+        99,
+        214,
+        183,
+        242
+      ],
+      [
+        185,
+        214,
+        270,
+        242
+      ],
+      [
+        272,
+        214,
+        357,
+        242
+      ],
+      [
+        359,
+        214,
+        444,
+        242
+      ],
+      [
+        446,
+        214,
+        532,
+        242
+      ]
+    ],
+    "gfx/interface/production_item.dds": [
+      [
+        4,
+        3,
+        355,
+        28
+      ],
+      [
+        357,
+        3,
+        475,
+        28
+      ],
+      [
+        4,
+        31,
+        280,
+        104
+      ],
+      [
+        318,
+        31,
+        471,
+        104
+      ],
+      [
+        475,
+        31,
+        507,
+        54
+      ],
+      [
+        475,
+        56,
+        507,
+        79
+      ],
+      [
+        475,
+        81,
+        507,
+        104
+      ]
+    ],
+    "gfx/interface/production_item_collapsed.dds": [
+      [
+        4,
+        3,
+        355,
+        27
+      ],
+      [
+        357,
+        3,
+        475,
+        27
+      ],
+      [
+        4,
+        31,
+        357,
+        56
+      ],
+      [
+        359,
+        31,
+        507,
+        56
+      ]
+    ],
+    "gfx/interface/production_resources_bg.dds": [
+      [
+        5,
+        5,
+        57,
+        35
+      ],
+      [
+        59,
+        5,
+        111,
+        35
+      ],
+      [
+        113,
+        5,
+        167,
+        35
+      ],
+      [
+        5,
+        37,
+        57,
+        68
+      ],
+      [
+        59,
+        37,
+        111,
+        68
+      ],
+      [
+        113,
+        37,
+        167,
+        68
+      ]
+    ],
+    "gfx/interface/mapmode/mapmode_main_bg.dds": [
+      [
+        5,
+        5,
+        59,
+        201
+      ],
+      [
+        61,
+        5,
+        92,
+        201
+      ]
+    ],
+    "gfx/interface/topbar/topbar_date_overlay.dds": [
+      [
+        70,
+        11,
+        225,
+        33
+      ],
+      [
+        233,
+        11,
+        261,
+        33
+      ],
+      [
+        270,
+        11,
+        298,
+        33
+      ],
+      [
+        306,
+        11,
+        334,
+        33
+      ],
+      [
+        340,
+        11,
+        364,
+        33
+      ],
+      [
+        131,
+        44,
+        163,
+        74
+      ],
+      [
+        169,
+        44,
+        201,
+        74
+      ],
+      [
+        207,
+        44,
+        239,
+        74
+      ],
+      [
+        246,
+        44,
+        276,
+        74
+      ]
+    ],
+    "gfx/interface/topbar/armyoverview_buttons_bg.dds": [
+      [
+        75,
+        8,
+        281,
+        39
+      ]
+    ],
+    "gfx/interface/subjects_entry_bg.dds": [
+      [
+        186,
+        18,
+        374,
+        49
+      ]
+    ],
+    "gfx/interface/production_line_bg.dds": [
+      [
+        10,
+        8,
+        510,
+        36
+      ]
+    ],
+    "gfx/interface/occupation/occupation_country_entry_bg_top.dds": [
+      [
+        10,
+        60,
+        250,
+        100
+      ]
+    ],
+    "gfx/interface/occupation/occupation_country_entry_bg_top_locked.dds": [
+      [
+        10,
+        60,
+        250,
+        100
+      ]
+    ],
+    "gfx/interface/occupation/occupation_state_entry_bg.dds": [
+      [
+        10,
+        30,
+        325,
+        53
+      ]
+    ],
+    "gfx/interface/research_slot_bg.dds": [
+      [
+        8,
+        8,
+        430,
+        52
+      ]
+    ],
+    "gfx/interface/leader_selection_bg.dds": [
+      [
+        12,
+        45,
+        538,
+        596
+      ]
+    ],
+    "gfx/interface/officer_corp/agency_upgrades_popup_bg.dds": [],
+    "gfx/interface/techtree/unit_stats_template_tab_bg.dds": [
+      [
+        0,
+        0,
+        273,
+        40
+      ],
+      [
+        274,
+        0,
+        547,
+        40
+      ]
+    ],
+    "gfx/interface/production_win_top_new.dds": [
+      [
+        30,
+        12,
+        532,
+        44
+      ],
+      [
+        15,
+        53,
+        533,
+        85
+      ],
+      [
+        15,
+        175,
+        98,
+        212
+      ],
+      [
+        99,
+        175,
+        183,
+        212
+      ],
+      [
+        185,
+        175,
+        270,
+        212
+      ],
+      [
+        272,
+        175,
+        357,
+        212
+      ],
+      [
+        359,
+        175,
+        444,
+        212
+      ],
+      [
+        446,
+        175,
+        532,
+        212
+      ],
+      [
+        15,
+        214,
+        98,
+        242
+      ],
+      [
+        99,
+        214,
+        183,
+        242
+      ],
+      [
+        185,
+        214,
+        270,
+        242
+      ],
+      [
+        272,
+        214,
+        357,
+        242
+      ],
+      [
+        359,
+        214,
+        444,
+        242
+      ],
+      [
+        446,
+        214,
+        532,
+        242
+      ]
+    ],
+    "gfx/interface/production_line_selected.dds": [
+      [
+        4,
+        3,
+        355,
+        28
+      ],
+      [
+        357,
+        3,
+        475,
+        28
+      ],
+      [
+        4,
+        31,
+        280,
+        104
+      ],
+      [
+        318,
+        31,
+        471,
+        104
+      ],
+      [
+        475,
+        31,
+        507,
+        54
+      ],
+      [
+        475,
+        56,
+        507,
+        79
+      ],
+      [
+        475,
+        81,
+        507,
+        104
+      ]
+    ]
+  },
+  "styles": {
+    "gfx/interface/military_raids/raids_launch_all_button.dds": "red",
+    "gfx/interface/military_raids/raids_launch_button_single.dds": "red",
+    "gfx/interface/air_unit_stats_bg.dds": "paper",
+    "gfx/interface/division_designer_bg.dds": "paper",
+    "gfx/interface/division_designer_popup_bg.dds": "paper",
+    "gfx/interface/eic_scripted_gui_background.dds": "paper",
+    "gfx/interface/equipmentdesigner/planes/plane_designer_popup_bg.dds": "paper",
+    "gfx/interface/equipmentdesigner/ship_designer_popup_bg.dds": "paper",
+    "gfx/interface/equipmentdesigner/tanks/tank_designer_popup_bg.dds": "paper",
+    "gfx/interface/factions/ui/faction_intelligence_background.dds": "paper",
+    "gfx/interface/factions/ui/faction_sp_background.dds": "paper",
+    "gfx/interface/factions/ui/faction_sp_background_tab.dds": "paper",
+    "gfx/interface/factions/ui/faction_sp_facility_card_bg.dds": "paper",
+    "gfx/interface/factions/ui/leader_selection_active_entry_bg_faction.dds": "paper",
+    "gfx/interface/factions/ui/leader_selection_entry_bg_faction.dds": "paper",
+    "gfx/interface/leader_selection_active_entry_bg.dds": "paper",
+    "gfx/interface/leader_selection_entry_bg.dds": "paper",
+    "gfx/interface/leader_selection_unavailable_active_entry_bg.dds": "paper",
+    "gfx/interface/leader_selection_unavailable_entry_bg.dds": "paper",
+    "gfx/interface/marshal_selection_active_entry_bg.dds": "paper",
+    "gfx/interface/marshal_selection_entry_bg.dds": "paper",
+    "gfx/interface/naval_leader_selection_active_entry_bg.dds": "paper",
+    "gfx/interface/naval_leader_selection_entry_bg.dds": "paper",
+    "gfx/interface/naval_unit_stats_bg.dds": "paper",
+    "gfx/interface/operations/list_entry_bg.dds": "paper",
+    "gfx/interface/operations/operations_clipboard_bottom_bg.dds": "paper",
+    "gfx/interface/operations/operations_clipboard_mid_bg.dds": "paper",
+    "gfx/interface/operations/operations_clipboard_top_bg.dds": "paper",
+    "gfx/interface/operations/operations_entry_bg.dds": "paper",
+    "gfx/interface/operations/operatives_view_entry_bg.dds": "paper",
+    "gfx/interface/operations/phase_title_bg.dds": "paper",
+    "gfx/interface/parch_bg.dds": "paper",
+    "gfx/interface/parch_bg_adjustable.dds": "paper",
+    "gfx/interface/special_project/project_output_bg.dds": "paper",
+    "gfx/interface/special_project/project_progress_info_bg.dds": "paper",
+    "gfx/interface/special_project/project_roster_bg.dds": "paper",
+    "gfx/interface/special_project/projects_bg.dds": "paper",
+    "gfx/interface/special_project/sp_entry_bg.dds": "paper",
+    "gfx/interface/special_project/sp_facility_card_bg.dds": "paper",
+    "gfx/interface/special_project/sp_reward_choices_button.dds": "paper",
+    "gfx/interface/special_project/sp_select_scientists_bg_strip.dds": "paper",
+    "gfx/interface/strategicair/details_linechart_bg.dds": "paper",
+    "gfx/interface/techtree/tech_info_bg.dds": "paper",
+    "gfx/interface/trait_window/admiral_trait_tree_bg.dds": "paper",
+    "gfx/interface/trait_window/leader_exp_bg.dds": "paper",
+    "gfx/interface/trait_window/trait_tree_bg.dds": "paper",
+    "gfx/interface/unit_stats_bg.dds": "paper",
+    "gfx/interface/equipmentdesigner/tanks/tank_designer_stat_card.dds": "paper",
+    "gfx/interface/factions/ui/faction_sp_facility_card_empty.dds": "paper",
+    "gfx/interface/factions/ui/faction_special_project_open_facilityt.dds": "paper",
+    "gfx/interface/imperial_influence/imperial_influence_faction_name_box.dds": "paper",
+    "gfx/interface/imperial_influence/imperial_influence_ruler_name_box.dds": "paper",
+    "gfx/interface/imperial_influence/support_and discredit_scroll.dds": "paper",
+    "gfx/interface/intel_ledger/intel_ledger_linechart.dds": "paper",
+    "gfx/interface/inner_circle/fuhrer_name_ribbon.dds": "red",
+    "gfx/interface/add_pol_idea_button.dds": "paper"
+  },
+  "glyph_regions": {
+    "gfx/interface/achievements_top_bar.dds": [
+      [
+        7,
+        7,
+        125,
+        67
+      ],
+      [
+        640,
+        7,
+        758,
+        67
+      ]
+    ],
+    "gfx/interface/battle_log_top.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        533,
+        7,
+        651,
+        87
+      ]
+    ],
+    "gfx/interface/capitulation_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/conference_top_left.dds": [
+      [
+        7,
+        7,
+        110,
+        87
+      ],
+      [
+        220,
+        7,
+        323,
+        87
+      ]
+    ],
+    "gfx/interface/conference_top_right.dds": [
+      [
+        7,
+        7,
+        110,
+        87
+      ],
+      [
+        220,
+        7,
+        323,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_action_boost_party_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_action_call_allies_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_action_declare_war_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_action_dissolve_faction_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_action_embargo.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        401,
+        7,
+        519,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_action_expeditionary_force_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_action_foreign_garrison_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        401,
+        7,
+        519,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_action_guarantee_independence_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_action_imp_relations_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_action_invite_to_faction_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_action_join_allies_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_action_justify_wargoals_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_action_justify_wargoals_top_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        375,
+        7,
+        493,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_action_lend_lease_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_action_license_production_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        371,
+        7,
+        489,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_action_mil_acess_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_action_offer_peace_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_action_request_forces_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_action_send_attache_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_action_spymaster_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        401,
+        7,
+        519,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_action_stage_coup_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_action_volunteers_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_nonagression_pact_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/generic_diplo_action_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/military_raids/raids_outcome_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        513,
+        7,
+        631,
+        87
+      ]
+    ],
+    "gfx/interface/naval_headquarters/naval_headquarters_header.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        449,
+        7,
+        567,
+        87
+      ]
+    ],
+    "gfx/interface/new_exile_hosted_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/new_exile_hosted_small_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/operatives/agency_upgrades_popup_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        967,
+        7,
+        1085,
+        87
+      ]
+    ],
+    "gfx/interface/peace_popup_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        433,
+        7,
+        551,
+        87
+      ]
+    ],
+    "gfx/interface/stateview/stateview_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        338,
+        7,
+        456,
+        87
+      ]
+    ],
+    "gfx/interface/stateview/ww_stateview_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        338,
+        7,
+        456,
+        87
+      ]
+    ],
+    "gfx/interface/strategicnavy/naval_region_header.dds": [
+      [
+        7,
+        7,
+        125,
+        62
+      ],
+      [
+        310,
+        7,
+        428,
+        62
+      ]
+    ],
+    "gfx/interface/topbar/musicplayer/musicplayer_header_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        469,
+        7,
+        587,
+        87
+      ]
+    ],
+    "gfx/interface/tradeview/trade_offer_popup_win.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/tutorial/hint_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        488,
+        7,
+        606,
+        87
+      ]
+    ],
+    "gfx/interface/tutorial/tutorial_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        488,
+        7,
+        606,
+        87
+      ]
+    ],
+    "gfx/interface/waroverview_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        1042,
+        7,
+        1160,
+        87
+      ]
+    ],
+    "gfx/interface/waroverview_bg_tiled.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        1043,
+        7,
+        1161,
+        87
+      ]
+    ],
+    "gfx/interface/world_tension_bg.dds": [
+      [
+        7,
+        7,
+        125,
+        87
+      ],
+      [
+        402,
+        7,
+        520,
+        87
+      ]
+    ],
+    "gfx/interface/diplo_filter_area_bg.dds": [
+      [
+        0,
+        0,
+        70,
+        136
+      ]
+    ],
+    "gfx/interface/occupation/compliance_bar_large_bg.dds": [
+      [
+        0,
+        0,
+        70,
+        31
+      ]
+    ],
+    "gfx/interface/occupation/resistance_bar_large_bg.dds": [
+      [
+        0,
+        0,
+        70,
+        31
+      ]
+    ],
+    "gfx/interface/unitcontrol/expeditionary_force_button_bg.dds": [
+      [
+        12,
+        3,
+        113,
+        32
+      ]
+    ],
+    "gfx/interface/military_industrial_organization/MIO_policy_slot_button.dds": [
+      [
+        0,
+        0,
+        130,
+        80
+      ],
+      [
+        138,
+        0,
+        268,
+        80
+      ]
+    ],
+    "gfx/interface/div_designer_colonial_flag_frame2.dds": [
+      [
+        0,
+        0,
+        23,
+        22
+      ]
+    ],
+    "gfx/interface/div_designer_exile_flag_frame2.dds": [
+      [
+        0,
+        0,
+        22,
+        22
+      ]
+    ],
+    "gfx/interface/focusview/filter/find_editbox.dds": [
+      [
+        0,
+        0,
+        60,
+        39
+      ]
+    ],
+    "gfx/interface/intel_ledger/intel_ledger_tech_icon.dds": [
+      [
+        0,
+        0,
+        60,
+        69
+      ]
+    ],
+    "gfx/interface/outdated_equipment_overlay.dds": [
+      [
+        114,
+        0,
+        158,
+        72
+      ]
+    ],
+    "gfx/interface/outdated_equipment_overlay_collapsed.dds": [
+      [
+        117,
+        0,
+        161,
+        26
+      ]
+    ],
+    "gfx/interface/outdated_naval_equipment_overlay.dds": [
+      [
+        158,
+        0,
+        202,
+        72
+      ]
+    ],
+    "gfx/interface/outdated_naval_overlay_collapsed.dds": [
+      [
+        156,
+        0,
+        200,
+        26
+      ]
+    ],
+    "gfx/interface/imperial_influence/support_and discredit_scroll.dds": [
+      [
+        33,
+        4,
+        117,
+        178
+      ]
+    ],
+    "gfx/interface/trait_window/trait_adviser_pickable.dds": [
+      [
+        0,
+        0,
+        38,
+        52
+      ]
+    ],
+    "gfx/interface/trait_window/trait_adviser_picked.dds": [
+      [
+        0,
+        0,
+        38,
+        52
+      ]
+    ],
+    "gfx/interface/browser_back.dds": [
+      [
+        8,
+        8,
+        33,
+        37
+      ]
+    ],
+    "gfx/interface/browser_forward.dds": [
+      [
+        8,
+        8,
+        33,
+        37
+      ]
+    ],
+    "gfx/interface/browser_refresh.dds": [
+      [
+        8,
+        8,
+        33,
+        37
+      ]
+    ]
+  },
+  "faces": {
+    "gfx/interface/operatives/upgrade_frame_airforce_completed.dds": [
+      [
+        38,
+        3,
+        100,
+        71
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_airforce_unavailable.dds": [
+      [
+        38,
+        3,
+        100,
+        71
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_army_completed.dds": [
+      [
+        38,
+        3,
+        100,
+        71
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_army_unavailable.dds": [
+      [
+        38,
+        3,
+        100,
+        71
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_defense_completed.dds": [
+      [
+        38,
+        3,
+        100,
+        71
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_defense_unavailable.dds": [
+      [
+        38,
+        3,
+        100,
+        71
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_economy_completed.dds": [
+      [
+        38,
+        3,
+        100,
+        71
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_economy_unavailable.dds": [
+      [
+        38,
+        3,
+        100,
+        71
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_form_available.dds": [
+      [
+        38,
+        3,
+        100,
+        71
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_form_completed.dds": [
+      [
+        38,
+        3,
+        100,
+        71
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_form_unavailable.dds": [
+      [
+        38,
+        3,
+        100,
+        71
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_naval_completed.dds": [
+      [
+        38,
+        3,
+        100,
+        71
+      ]
+    ],
+    "gfx/interface/operatives/upgrade_frame_naval_unavailable.dds": [
+      [
+        38,
+        3,
+        100,
+        71
+      ]
+    ]
+  },
+  "functional_alpha": [
+    "gfx/interface/popup_window/popup_window_corners_bd_x79_y119.dds",
+    "gfx/interface/popup_window/popup_window_side_tiles_bd_x22_y12.dds",
+    "gfx/interface/popup_window/popup_window_top_bottom_bd_x20_y80.dds",
+    "gfx/interface/bop/bop_glow_effect.dds",
+    "gfx/interface/naval_production_line_selected.dds",
+    "gfx/interface/unitcontrol/selected_air_priorities_overlay.dds",
+    "gfx/interface/unitcontrol/selected_order_overlay.dds",
+    "gfx/interface/mapicons/naval_mission_dominance_progress_bar.dds",
+    "gfx/interface/mapicons/naval_mission_dominance_progress_bar_frame.dds",
+    "gfx/interface/mapicons/on_map_supply_values_bg.dds"
+  ],
+  "red": {
+    "top": [
+      157,
+      49,
+      43
+    ],
+    "center": [
+      152,
+      44,
+      38
+    ],
+    "bottom": [
+      147,
+      39,
+      33
+    ]
+  },
+  "open_frames": [
+    "gfx/interface/event_news_pic_overlay.dds",
+    "gfx/interface/tiles/tiled_window_1_scrollbar_glow.dds",
+    "gfx/interface/mapicons/mapicon_operative_mission.dds",
+    "gfx/interface/mapicons/mapicon_operative_mission_highlight.dds",
+    "gfx/interface/mapicons/mapicon_operative_mission_highlight_warn.dds"
+  ],
+  "charts": [
+    "gfx/interface/equipmentdesigner/tanks/tank_designer_stat_card.dds",
+    "gfx/interface/intel_ledger/intel_ledger_linechart.dds",
+    "gfx/interface/navalcombat/naval_battle_bg2.dds",
+    "gfx/interface/technology_info_bg.dds"
+  ],
+  "chevrons": {
+    "gfx/interface/researching_anim_strip.dds": "animated",
+    "gfx/interface/subtech_air_techs_currently_researching_item_bg.dds": "state",
+    "gfx/interface/subtech_carrier_plane_currently_researching_item_bg.dds": "state",
+    "gfx/interface/techtree/researching_anim_strip.dds": "animated",
+    "gfx/interface/techtree/tech_doctrine_researching_anim_strip.dds": "animated",
+    "gfx/interface/techtree/tech_naval_currently_researching_anim_strip.dds": "animated",
+    "gfx/interface/techtree/technology_special_project_naval_researching_anim_strip.dds": "animated",
+    "gfx/interface/techtree/technology_special_project_small_researching_anim_strip.dds": "animated"
+  },
+  "accents": {
+    "gfx/interface/mapicons/mapicon_operative_mission.dds": [
+      140,
+      115,
+      166
+    ],
+    "gfx/interface/mapicons/mapicon_operative_mission_highlight.dds": [
+      177,
+      146,
+      72
+    ],
+    "gfx/interface/mapicons/mapicon_operative_mission_highlight_warn.dds": [
+      179,
+      65,
+      57
+    ],
+    "gfx/interface/production_line_selected.dds": [
+      94,
+      144,
+      78
+    ],
+    "gfx/interface/production_item_selected_collapsed.dds": [
+      94,
+      144,
+      78
+    ],
+    "gfx/interface/career_profile/btn_green.dds": [
+      94,
+      144,
+      78
+    ]
+  },
+  "pale_symbols": [
+    "gfx/interface/career_profile/career_checkbox.dds"
+  ],
+  "dark_text": [
+    "gfx/interface/add_pol_idea_button.dds"
+  ],
+  "stencils": {
+    "gfx/interface/add_pol_idea_button.dds": [
+      [
+        28,
+        18,
+        36,
+        46
+      ],
+      [
+        17,
+        28,
+        46,
+        36
+      ]
+    ]
+  },
+  "radio_states": {
+    "gfx/interface/checkbox.dds": [
+      1,
+      3
+    ],
+    "gfx/interface/checkbox_small.dds": [
+      1
+    ]
+  }
+}

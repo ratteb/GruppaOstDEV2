@@ -14,6 +14,46 @@ calculate_gdp = {
     multiply_temp_variable = { tmp = 400 }
     add_to_temp_variable = { gdp_temp = tmp }
 
-	
+	set_temp_variable = { tmp = resource@oil }
+    multiply_temp_variable = { tmp = 450 }
+    add_to_temp_variable = { gdp_temp = tmp }
+
+	set_temp_variable = { tmp = resource@aluminium }
+    multiply_temp_variable = { tmp = 60 }
+    add_to_temp_variable = { gdp_temp = tmp }
+
+	set_temp_variable = { tmp = resource@rubber }
+    multiply_temp_variable = { tmp = 40 }
+    add_to_temp_variable = { gdp_temp = tmp }
+
+	set_temp_variable = { tmp = resource@tungsten }
+    multiply_temp_variable = { tmp = 120 }
+    add_to_temp_variable = { gdp_temp = tmp }
+
+	set_temp_variable = { tmp = resource@steel }
+    multiply_temp_variable = { tmp = 20 }
+    add_to_temp_variable = { gdp_temp = tmp }
+
+	set_temp_variable = { tmp = resource@chromium }
+    multiply_temp_variable = { tmp = 280 }
+    add_to_temp_variable = { gdp_temp = tmp }
+
+
     set_variable = { gdp = gdp_temp }
+}
+
+calculate_state_gdp = {
+    set_variable = { state_gdp = 0 }
+
+    set_temp_variable = { tmp = industrial_complex_level }
+    multiply_temp_variable = { tmp = 550 }
+    add_to_variable = { state_gdp = tmp }
+
+    set_temp_variable = { tmp = arms_factory_level }
+    multiply_temp_variable = { tmp = 300 }
+    add_to_variable = { state_gdp = tmp }
+
+    set_temp_variable = { tmp = dockyard_level }
+    multiply_temp_variable = { tmp = 400 }
+    add_to_variable = { state_gdp = tmp }
 }

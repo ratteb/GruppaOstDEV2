@@ -1,0 +1,198 @@
+# Gruppa Ost Stage 6 - physical ammunition assignments and daily recipe guards.
+# STATE assignment records; COUNTRY capacity/daily guards unless labelled ANY.
+# Installed 1.18.3.0.7709: dynamic_variables_documentation.md:990-991,
+# 1095-1096; triggers_documentation.md:6286-6298,7324-7337 (whole checks).
+# No energy, damage scaling or allocation among input-starved plants is inferred.
+
+# ANY. Native day is a dynamic value, not a fabricated fiscal/calendar input.
+GO_econ_ammunition_native_day_ready = {
+    check_variable = { var = global.num_days value = 0 compare = greater_than_or_equals }
+    set_temp_variable = { GO_econ_ammunition_day_fraction = global.num_days }
+    modulo_temp_variable = { var = GO_econ_ammunition_day_fraction value = 1 }
+    check_variable = { GO_econ_ammunition_day_fraction = 0 }
+}
+
+GO_econ_state_ammunition_assignment_initialized = {
+    has_variable = GO_econ_state_ammunition_assignment_schema_version
+    check_variable = { GO_econ_state_ammunition_assignment_schema_version = 1 }
+}
+
+# STATE. The existing project building has a physical maximum of 20 levels.
+GO_econ_state_ammunition_physical_levels_valid = {
+    check_variable = { var = building_level@ammunition_plant value = 0 compare = greater_than_or_equals }
+    check_variable = { var = building_level@ammunition_plant value = 20 compare = less_than_or_equals }
+    set_temp_variable = { GO_econ_ammunition_physical_fraction = building_level@ammunition_plant }
+    modulo_temp_variable = { var = GO_econ_ammunition_physical_fraction value = 1 }
+    check_variable = { GO_econ_ammunition_physical_fraction = 0 }
+}
+
+# STATE. A saved assignment belongs to its recorded legal owner. Capture pauses
+# its national contribution; legal transfer requires an explicit new assignment.
+GO_econ_state_has_ammunition_assignment = {
+    GO_econ_state_ammunition_assignment_initialized = yes
+    GO_econ_state_ammunition_physical_levels_valid = yes
+    has_variable = GO_econ_state_ammunition_assigned_levels
+    has_variable = GO_econ_state_ammunition_assignment_populated
+    check_variable = { GO_econ_state_ammunition_assignment_populated = 1 }
+    has_variable = GO_econ_state_ammunition_assignment_owner
+    owner = { check_variable = { PREV.GO_econ_state_ammunition_assignment_owner = THIS } }
+    check_variable = { var = GO_econ_state_ammunition_assigned_levels value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_state_ammunition_assigned_levels value = building_level@ammunition_plant compare = less_than_or_equals }
+    set_temp_variable = { GO_econ_ammunition_assignment_fraction = GO_econ_state_ammunition_assigned_levels }
+    modulo_temp_variable = { var = GO_econ_ammunition_assignment_fraction value = 1 }
+    check_variable = { GO_econ_ammunition_assignment_fraction = 0 }
+}
+
+# STATE. Public inputs are regular GO_econ_work_actor and
+# GO_econ_work_ammunition_assigned_levels; no implicit caller/ROOT identity.
+GO_econ_can_assign_ammunition_plant = {
+    GO_econ_state_ammunition_assignment_initialized = yes
+    GO_econ_state_ammunition_physical_levels_valid = yes
+    GO_econ_work_actor_is_country = yes
+    has_variable = GO_econ_work_ammunition_assigned_levels
+    check_variable = { var = GO_econ_work_ammunition_assigned_levels value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_work_ammunition_assigned_levels value = building_level@ammunition_plant compare = less_than_or_equals }
+    set_temp_variable = { GO_econ_ammunition_work_assignment_fraction = GO_econ_work_ammunition_assigned_levels }
+    modulo_temp_variable = { var = GO_econ_ammunition_work_assignment_fraction value = 1 }
+    check_variable = { GO_econ_ammunition_work_assignment_fraction = 0 }
+    var:GO_econ_work_actor = {
+        PREV = { is_owned_by = PREV is_controlled_by = PREV }
+    }
+}
+
+# COUNTRY. Both tokens are allocated together only for a wholly fresh record.
+# A saved partial/unknown record cannot repeat consumption or receipts.
+GO_econ_country_ammunition_production_initialized = {
+    GO_econ_ammunition_native_day_ready = yes
+    has_variable = GO_econ_country_ammunition_schema_version
+    check_variable = { GO_econ_country_ammunition_schema_version = 1 }
+    has_variable = GO_econ_country_ammunition_last_day
+    has_variable = GO_econ_country_ammunition_plant_last_day
+    check_variable = { var = GO_econ_country_ammunition_last_day value = -1 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_ammunition_last_day value = global.num_days compare = less_than_or_equals }
+    check_variable = { var = GO_econ_country_ammunition_plant_last_day value = -1 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_ammunition_plant_last_day value = GO_econ_country_ammunition_last_day compare = less_than_or_equals }
+    set_temp_variable = { GO_econ_ammunition_last_day_fraction = GO_econ_country_ammunition_last_day }
+    set_temp_variable = { GO_econ_ammunition_plant_last_day_fraction = GO_econ_country_ammunition_plant_last_day }
+    modulo_temp_variable = { var = GO_econ_ammunition_last_day_fraction value = 1 }
+    modulo_temp_variable = { var = GO_econ_ammunition_plant_last_day_fraction value = 1 }
+    check_variable = { GO_econ_ammunition_last_day_fraction = 0 }
+    check_variable = { GO_econ_ammunition_plant_last_day_fraction = 0 }
+}
+
+GO_econ_ammunition_daily_update_ready = {
+    GO_econ_country_ammunition_production_initialized = yes
+    check_variable = { var = GO_econ_country_ammunition_last_day value = global.num_days compare = less_than }
+}
+
+# COUNTRY. Guards the freshly rebuilt eligible capacity, never a partial total.
+GO_econ_country_ammunition_plant_capacity_ready = {
+    GO_econ_country_ammunition_production_initialized = yes
+    has_variable = GO_econ_country_ammunition_plant_capacity_populated
+    check_variable = { GO_econ_country_ammunition_plant_capacity_populated = 1 }
+    has_variable = GO_econ_country_ammunition_plant_eligible_built
+    has_variable = GO_econ_country_ammunition_plant_assigned
+    has_variable = GO_econ_country_ammunition_plant_missing_assignments
+    check_variable = { GO_econ_country_ammunition_plant_missing_assignments = 0 }
+    check_variable = { var = GO_econ_country_ammunition_plant_eligible_built value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_ammunition_plant_assigned value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_ammunition_plant_assigned value = GO_econ_country_ammunition_plant_eligible_built compare = less_than_or_equals }
+    set_temp_variable = { GO_econ_ammunition_built_fraction = GO_econ_country_ammunition_plant_eligible_built }
+    set_temp_variable = { GO_econ_ammunition_assigned_fraction = GO_econ_country_ammunition_plant_assigned }
+    modulo_temp_variable = { var = GO_econ_ammunition_built_fraction value = 1 }
+    modulo_temp_variable = { var = GO_econ_ammunition_assigned_fraction value = 1 }
+    check_variable = { GO_econ_ammunition_built_fraction = 0 }
+    check_variable = { GO_econ_ammunition_assigned_fraction = 0 }
+    all_owned_state = {
+        OR = {
+            NOT = { is_controlled_by = PREV }
+            AND = {
+                GO_econ_state_ammunition_physical_levels_valid = yes
+                OR = {
+                    AND = {
+                        check_variable = { building_level@ammunition_plant = 0 }
+                        NOT = { check_variable = { GO_econ_state_ammunition_assignment_populated = 1 } }
+                        NOT = { check_variable = { GO_econ_state_ammunition_assigned_levels > 0 } }
+                    }
+                    GO_econ_state_has_ammunition_assignment = yes
+                }
+            }
+        }
+    }
+}
+
+# COUNTRY. Only the coordinated daily hook may claim a recipe attempt.
+GO_econ_ammunition_plant_daily_update_ready = {
+    GO_econ_country_ammunition_production_initialized = yes
+    check_variable = { GO_econ_country_ammunition_last_day = global.num_days }
+    check_variable = { var = GO_econ_country_ammunition_plant_last_day value = global.num_days compare = less_than }
+    has_variable = ammunition_daily
+    has_variable = ammunition_variable
+}
+
+# COUNTRY. Validate the prospective fixed output and its two additions before
+# spending steel. Signed legacy gain/temporarily negative consumed stock remain
+# permitted. Direction checks reject obvious invalid arithmetic without an
+# invented storage limit or exact reversal of fractional legacy additions.
+GO_econ_ammunition_plant_recipe_numbers_ready = {
+    has_variable = ammunition_daily
+    has_variable = ammunition_variable
+    has_variable = GO_econ_country_ammunition_plant_assigned
+    set_temp_variable = { GO_econ_ammunition_recipe_output = GO_econ_country_ammunition_plant_assigned }
+    multiply_temp_variable = { var = GO_econ_ammunition_recipe_output value = 0.5 }
+    check_variable = { var = GO_econ_ammunition_recipe_output value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_ammunition_recipe_output value = GO_econ_country_ammunition_plant_assigned compare = less_than_or_equals }
+    set_temp_variable = { GO_econ_ammunition_recipe_daily = ammunition_daily }
+    add_to_temp_variable = { var = GO_econ_ammunition_recipe_daily value = GO_econ_ammunition_recipe_output }
+    check_variable = { var = GO_econ_ammunition_recipe_daily value = ammunition_daily compare = greater_than_or_equals }
+    OR = {
+        check_variable = { GO_econ_ammunition_recipe_output = 0 }
+        check_variable = { var = GO_econ_ammunition_recipe_daily value = ammunition_daily compare = greater_than }
+    }
+    set_temp_variable = { GO_econ_ammunition_recipe_stock = ammunition_variable }
+    add_to_temp_variable = { var = GO_econ_ammunition_recipe_stock value = GO_econ_ammunition_recipe_daily }
+    OR = {
+        AND = {
+            check_variable = { GO_econ_ammunition_recipe_daily = 0 }
+            check_variable = { GO_econ_ammunition_recipe_stock = ammunition_variable }
+        }
+        AND = {
+            check_variable = { GO_econ_ammunition_recipe_daily > 0 }
+            check_variable = { var = GO_econ_ammunition_recipe_stock value = ammunition_variable compare = greater_than }
+        }
+        AND = {
+            check_variable = { GO_econ_ammunition_recipe_daily < 0 }
+            check_variable = { var = GO_econ_ammunition_recipe_stock value = ammunition_variable compare = less_than }
+        }
+    }
+}
+
+# COUNTRY. Historical gross recipe flows are labelled with their own day.
+# Current assignment/input readiness is separate from this stored last result.
+GO_econ_country_ammunition_plant_report_ready = {
+    GO_econ_country_ammunition_production_initialized = yes
+    has_variable = GO_econ_country_ammunition_plant_report_populated
+    check_variable = { GO_econ_country_ammunition_plant_report_populated = 1 }
+    has_variable = GO_econ_country_ammunition_plant_report_day
+    check_variable = { GO_econ_country_ammunition_plant_report_day = GO_econ_country_ammunition_plant_last_day }
+    check_variable = { var = GO_econ_country_ammunition_plant_report_day value = 0 compare = greater_than_or_equals }
+    has_variable = GO_econ_country_ammunition_plant_operating
+    has_variable = GO_econ_country_ammunition_plant_steel_consumed
+    has_variable = GO_econ_country_ammunition_plant_output_k
+    has_variable = GO_econ_country_ammunition_plant_status
+    check_variable = { var = GO_econ_country_ammunition_plant_operating value = 0 compare = greater_than_or_equals }
+    check_variable = { GO_econ_country_ammunition_plant_steel_consumed = GO_econ_country_ammunition_plant_operating }
+    OR = {
+        check_variable = { GO_econ_country_ammunition_plant_status = 1 }
+        AND = {
+            check_variable = { GO_econ_country_ammunition_plant_status = 2 }
+            check_variable = { GO_econ_country_ammunition_plant_operating = 0 }
+        }
+    }
+    set_temp_variable = { GO_econ_ammunition_report_operating_fraction = GO_econ_country_ammunition_plant_operating }
+    modulo_temp_variable = { var = GO_econ_ammunition_report_operating_fraction value = 1 }
+    check_variable = { GO_econ_ammunition_report_operating_fraction = 0 }
+    set_temp_variable = { GO_econ_ammunition_report_expected_output = GO_econ_country_ammunition_plant_operating }
+    multiply_temp_variable = { var = GO_econ_ammunition_report_expected_output value = 0.5 }
+    check_variable = { GO_econ_country_ammunition_plant_output_k = GO_econ_ammunition_report_expected_output }
+}

@@ -1,0 +1,91 @@
+# Gruppa Ost economy - Stage 3 fiscal input guards.
+# COUNTRY scope unless marked ANY. Exact zero is valid only with explicit input
+# readiness; an unknown treasury/status/debt ledger never receives a game value.
+# Approved installed HOI4 1.18.3 documentation/triggers_documentation.md:2073-2095
+# supports explicit variable comparisons and scoped variable values.
+
+# ANY. A partial saved calendar is unavailable; initialization must not reopen it.
+GO_econ_fiscal_calendar_ready = {
+    has_variable = global.GO_econ_month_serial
+    has_variable = global.GO_econ_month_pulse_day
+    has_variable = global.GO_econ_daily_pulse_day
+    check_variable = { var = global.GO_econ_month_serial value = 0 compare = greater_than_or_equals }
+    check_variable = { var = global.GO_econ_month_pulse_day value = -1 compare = greater_than_or_equals }
+    check_variable = { var = global.GO_econ_month_pulse_day value = global.num_days compare = less_than_or_equals }
+    check_variable = { var = global.GO_econ_daily_pulse_day value = -1 compare = greater_than_or_equals }
+    check_variable = { var = global.GO_econ_daily_pulse_day value = global.num_days compare = less_than_or_equals }
+}
+
+# ANY. Preserve authored tuning, but reject values that make arithmetic unsafe.
+GO_econ_fiscal_config_ready = {
+    has_variable = global.GO_econ_cfg_services_min_cost
+    has_variable = global.GO_econ_cfg_services_cost_factor
+    has_variable = global.GO_econ_cfg_services_required_days
+    has_variable = global.GO_econ_cfg_services_expense_factor
+    has_variable = global.GO_econ_cfg_growth_per_level
+    has_variable = global.GO_econ_cfg_base_growth
+    has_variable = global.GO_econ_cfg_min_growth
+    has_variable = global.GO_econ_cfg_max_growth
+    has_variable = global.GO_econ_cfg_months_per_year
+    has_variable = global.GO_econ_cfg_percent_month_divisor
+    check_variable = { var = global.GO_econ_cfg_services_min_cost value = 0 compare = greater_than_or_equals }
+    check_variable = { var = global.GO_econ_cfg_services_cost_factor value = 0 compare = greater_than_or_equals }
+    check_variable = { global.GO_econ_cfg_services_required_days > 0 }
+    check_variable = { var = global.GO_econ_cfg_services_expense_factor value = 0 compare = greater_than_or_equals }
+    check_variable = { global.GO_econ_cfg_months_per_year > 0 }
+    check_variable = { global.GO_econ_cfg_percent_month_divisor > 0 }
+    has_variable = global.GO_econ_cfg_growth_factor_floor
+    check_variable = { global.GO_econ_cfg_min_growth > global.GO_econ_cfg_growth_factor_floor }
+    check_variable = { global.GO_econ_cfg_services_day_fraction = 0 }
+    check_variable = {
+        var = global.GO_econ_cfg_min_growth
+        value = global.GO_econ_cfg_max_growth
+        compare = less_than_or_equals
+    }
+}
+
+GO_econ_country_has_treasury = {
+    GO_econ_country_fiscal_initialized = yes
+    has_variable = GO_econ_country_treasury
+    has_variable = GO_econ_country_treasury_populated
+    check_variable = { GO_econ_country_treasury_populated = 1 }
+    check_variable = { var = GO_econ_country_treasury value = 0 compare = greater_than_or_equals }
+}
+
+GO_econ_country_has_debt = {
+    GO_econ_country_fiscal_initialized = yes
+    has_variable = GO_econ_country_debt_attribution_complete
+    check_variable = { GO_econ_country_debt_attribution_complete = 1 }
+    has_variable = GO_econ_country_debt
+    has_variable = GO_econ_country_debt_populated
+    check_variable = { GO_econ_country_debt_populated = 1 }
+    check_variable = { var = GO_econ_country_debt value = 0 compare = greater_than_or_equals }
+}
+
+# Exact enumerated values ensure a whole authored tier in the approved 1..5 range.
+GO_econ_country_has_global_status = {
+    GO_econ_country_fiscal_initialized = yes
+    has_variable = GO_econ_country_global_status
+    has_variable = GO_econ_country_global_status_populated
+    check_variable = { GO_econ_country_global_status_populated = 1 }
+    OR = {
+        check_variable = { GO_econ_country_global_status = 1 }
+        check_variable = { GO_econ_country_global_status = 2 }
+        check_variable = { GO_econ_country_global_status = 3 }
+        check_variable = { GO_econ_country_global_status = 4 }
+        check_variable = { GO_econ_country_global_status = 5 }
+    }
+}
+
+GO_econ_country_has_project_capacity = {
+    GO_econ_country_has_global_status = yes
+    has_variable = GO_econ_country_status_limits_populated
+    check_variable = { GO_econ_country_status_limits_populated = 1 }
+    has_variable = GO_econ_country_state_development_limit
+    has_variable = GO_econ_country_project_limit
+    has_variable = GO_econ_country_active_projects
+    has_variable = GO_econ_country_active_projects_populated
+    check_variable = { GO_econ_country_active_projects_populated = 1 }
+    check_variable = { var = GO_econ_country_active_projects value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_active_projects value = GO_econ_country_project_limit compare = less_than }
+}

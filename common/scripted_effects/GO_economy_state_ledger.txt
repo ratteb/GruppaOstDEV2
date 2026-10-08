@@ -1,0 +1,167 @@
+# Gruppa Ost economy - Stage 2 state ledger and calculation caches.
+# STATE scope unless explicitly documented below. Contract: docs/HOI4_MOD_DESIGN.md.
+# GDP is annual real billions at constant 2027 reference-USD prices.
+# Population is refreshed from native state_population_k into millions (Stage 3).
+# No authored economic input is seeded here. Missing values remain unpopulated.
+# Refreshes derive caches only: no growth, payments, resources or inflation are settled.
+
+GO_econ_initialize_state_ledger = {
+    GO_econ_initialize_state_data = yes
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_population_millions } }
+        set_variable = { GO_econ_state_population_millions = 0 }
+        set_variable = { GO_econ_state_population_millions_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_population_millions_populated } }
+        set_variable = { GO_econ_state_population_millions_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_growth_modifier_percent } }
+        set_variable = { GO_econ_state_growth_modifier_percent = 0 }
+        set_variable = { GO_econ_state_growth_modifier_percent_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_growth_modifier_percent_populated } }
+        set_variable = { GO_econ_state_growth_modifier_percent_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_services_funded_levels } }
+        set_variable = { GO_econ_state_services_funded_levels = 0 }
+        set_variable = { GO_econ_state_services_funded_levels_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_services_funded_levels_populated } }
+        set_variable = { GO_econ_state_services_funded_levels_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_gdp_nominal } }
+        set_variable = { GO_econ_state_gdp_nominal = 0 }
+        set_variable = { GO_econ_state_gdp_nominal_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_gdp_nominal_populated } }
+        set_variable = { GO_econ_state_gdp_nominal_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_annual_growth_percent } }
+        set_variable = { GO_econ_state_annual_growth_percent = 0 }
+        set_variable = { GO_econ_state_annual_growth_percent_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_annual_growth_percent_populated } }
+        set_variable = { GO_econ_state_annual_growth_percent_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_monthly_growth_factor } }
+        set_variable = { GO_econ_state_monthly_growth_factor = 0 }
+        set_variable = { GO_econ_state_monthly_growth_factor_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_monthly_growth_factor_populated } }
+        set_variable = { GO_econ_state_monthly_growth_factor_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_gdp_monthly_projection } }
+        set_variable = { GO_econ_state_gdp_monthly_projection = 0 }
+        set_variable = { GO_econ_state_gdp_monthly_projection_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_gdp_monthly_projection_populated } }
+        set_variable = { GO_econ_state_gdp_monthly_projection_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_ledger_schema_version } }
+        set_variable = { GO_econ_state_ledger_schema_version = 1 }
+    }
+}
+
+GO_econ_refresh_state_gdp = {
+    GO_econ_initialize_state_ledger = yes
+    GO_econ_initialize_fiscal_config = yes
+    GO_econ_refresh_native_population = yes
+    if = {
+        limit = { GO_econ_state_ledger_initialized = yes }
+        # Invalidate first, including stale outputs whose inputs have become unavailable.
+        set_variable = { GO_econ_state_gdp_per_capita_populated = 0 }
+        set_variable = { GO_econ_state_gdp_nominal_populated = 0 }
+        set_variable = { GO_econ_state_annual_growth_percent_populated = 0 }
+        set_variable = { GO_econ_state_monthly_growth_factor_populated = 0 }
+        set_variable = { GO_econ_state_gdp_monthly_projection_populated = 0 }
+
+        if = {
+            limit = {
+                GO_econ_state_ledger_initialized = yes
+                GO_econ_state_has_gdp = yes
+                check_variable = { var = GO_econ_state_gdp value = 0 compare = greater_than_or_equals }
+            }
+            if = {
+                limit = { GO_econ_state_has_population_millions = yes }
+                set_variable = { GO_econ_state_gdp_per_capita = GO_econ_state_gdp }
+                multiply_variable = { GO_econ_state_gdp_per_capita = 1000 }
+                divide_variable = { GO_econ_state_gdp_per_capita = GO_econ_state_population_millions }
+                set_variable = { GO_econ_state_gdp_per_capita_populated = 1 }
+            }
+
+            if = {
+                limit = {
+                    is_controlled_by = OWNER
+                    owner = { GO_econ_country_has_price_index = yes }
+                }
+                set_variable = { GO_econ_state_gdp_nominal = GO_econ_state_gdp }
+                owner = {
+                    PREV = {
+                        multiply_variable = { GO_econ_state_gdp_nominal = PREV.GO_econ_country_price_index }
+                    }
+                }
+                set_variable = { GO_econ_state_gdp_nominal_populated = 1 }
+            }
+
+            # Stage 3 supplies funded levels; this refresh still derives only a projection.
+            if = {
+                limit = {
+                    is_controlled_by = OWNER
+                    GO_econ_fiscal_config_ready = yes
+                    GO_econ_state_has_services_funded_levels = yes
+                    GO_econ_state_has_growth_modifier_percent = yes
+                }
+                set_variable = { GO_econ_state_annual_growth_percent = GO_econ_state_services_funded_levels }
+                multiply_variable = { GO_econ_state_annual_growth_percent = global.GO_econ_cfg_growth_per_level }
+                add_to_variable = { GO_econ_state_annual_growth_percent = global.GO_econ_cfg_base_growth }
+                add_to_variable = { GO_econ_state_annual_growth_percent = GO_econ_state_growth_modifier_percent }
+                clamp_variable = { var = GO_econ_state_annual_growth_percent min = global.GO_econ_cfg_min_growth max = global.GO_econ_cfg_max_growth }
+                set_variable = { GO_econ_state_annual_growth_percent_populated = 1 }
+
+                set_variable = { GO_econ_state_monthly_growth_factor = GO_econ_state_annual_growth_percent }
+                divide_variable = { GO_econ_state_monthly_growth_factor = global.GO_econ_cfg_percent_month_divisor }
+                add_to_variable = { GO_econ_state_monthly_growth_factor = 1 }
+                set_variable = { GO_econ_state_monthly_growth_factor_populated = 1 }
+
+                set_variable = { GO_econ_state_gdp_monthly_projection = GO_econ_state_gdp }
+                multiply_variable = { GO_econ_state_gdp_monthly_projection = GO_econ_state_monthly_growth_factor }
+                set_variable = { GO_econ_state_gdp_monthly_projection_populated = 1 }
+            }
+        }
+    }
+}
+
+# ANY effect scope. Idempotent allocation followed by a full reporting refresh.
+# This Stage 2 wrapper does not settle; Stage 3 has its own setup/pulse wrapper.
+GO_econ_initialize_economy_ledger = {
+    every_state = { GO_econ_initialize_state_ledger = yes }
+    every_country = {
+        limit = { exists = yes }
+        GO_econ_initialize_country_ledger = yes
+    }
+    GO_econ_refresh_all_gdp = yes
+}
+
+# ANY effect scope. Call after an authored input/price change or explicit migration.
+# Rebuilds all state caches before national caches, without modifying input stocks.
+GO_econ_refresh_all_gdp = {
+    every_state = { GO_econ_refresh_state_gdp = yes }
+    every_country = {
+        limit = { exists = yes }
+        GO_econ_refresh_country_gdp = yes
+    }
+}

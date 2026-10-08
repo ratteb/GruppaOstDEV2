@@ -37,11 +37,8 @@ buildings = {
 		}
 		
 		show_modifier = yes
-		 country_modifiers = {
-            modifiers = {
-                daily_ammunition_gain = 500
-            }
-        }
+		# Assigned production uses the guarded national steel recipe in Stage 6.
+		# No unconditional gain: unassigned plants cannot bypass that recipe.
 	}
 
 	ammunition_silo = {

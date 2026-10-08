@@ -1,0 +1,51 @@
+# Gruppa Ost economy - Stage 2 country GDP reporting guards.
+# Scope: COUNTRY. Complete totals require storage, populated marker and schema 1.
+# Coverage/subtotal caches must be labelled as such; they are not complete GDP.
+
+GO_econ_country_ledger_initialized = {
+    has_variable = GO_econ_country_ledger_schema_version
+    check_variable = { GO_econ_country_ledger_schema_version = 1 }
+}
+
+GO_econ_country_has_price_index = {
+    GO_econ_country_ledger_initialized = yes
+    has_variable = GO_econ_country_price_index
+    check_variable = { GO_econ_country_price_index_populated = 1 }
+    check_variable = { GO_econ_country_price_index > 0 }
+}
+
+GO_econ_country_has_gdp = {
+    GO_econ_country_ledger_initialized = yes
+    has_variable = GO_econ_country_gdp
+    check_variable = { GO_econ_country_gdp_populated = 1 }
+}
+
+GO_econ_country_has_gdp_nominal = {
+    GO_econ_country_ledger_initialized = yes
+    has_variable = GO_econ_country_gdp_nominal
+    check_variable = { GO_econ_country_gdp_nominal_populated = 1 }
+    GO_econ_country_has_gdp = yes
+    GO_econ_country_has_price_index = yes
+}
+
+GO_econ_country_has_population_millions = {
+    GO_econ_country_ledger_initialized = yes
+    has_variable = GO_econ_country_population_millions
+    check_variable = { GO_econ_country_population_millions_populated = 1 }
+    check_variable = { GO_econ_country_population_millions > 0 }
+}
+
+GO_econ_country_has_gdp_per_capita = {
+    GO_econ_country_ledger_initialized = yes
+    has_variable = GO_econ_country_gdp_per_capita
+    check_variable = { GO_econ_country_gdp_per_capita_populated = 1 }
+    GO_econ_country_has_gdp = yes
+    GO_econ_country_has_population_millions = yes
+}
+
+# Guard before reading any subtotal or coverage counter.
+GO_econ_country_report_ready = {
+    GO_econ_country_ledger_initialized = yes
+    has_variable = GO_econ_country_report_rebuilt
+    check_variable = { GO_econ_country_report_rebuilt = 1 }
+}

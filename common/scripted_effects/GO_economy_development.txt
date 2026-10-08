@@ -1,0 +1,347 @@
+# Gruppa Ost Stage 5 - Industry and physical Substation development backend.
+# No campaign seeds, player controls or energy generation/dispatch.
+# STATE public APIs take regular GO_econ_work_actor set to the sponsor country.
+# Type 1 Services retains its existing APIs; 2 Industry; 3 physical Substation.
+# Shared project funding/refunds/slots and durable guards extend Stage 3 records.
+# Sources: approved installed 1.18.3.0.7709, effects_documentation.md:837-844
+# (STATE instantaneous building grant); dynamic_variables_documentation.md:
+# 1095-1096 (building_level@building); existing arithmetic/project patterns.
+
+# ANY. Starter tuning only: absent campaign values are never filled as data.
+GO_econ_initialize_development_config = {
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_industry_min_cost } }
+        set_variable = { global.GO_econ_cfg_industry_min_cost = 0.05 }
+    }
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_industry_cost_factor } }
+        set_variable = { global.GO_econ_cfg_industry_cost_factor = 0.01 }
+    }
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_industry_required_days } }
+        set_variable = { global.GO_econ_cfg_industry_required_days = 180 }
+    }
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_industry_gdp_bonus_factor } }
+        set_variable = { global.GO_econ_cfg_industry_gdp_bonus_factor = 0.005 }
+    }
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_substation_cost_per_level } }
+        set_variable = { global.GO_econ_cfg_substation_cost_per_level = 0.25 }
+    }
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_substation_required_days } }
+        set_variable = { global.GO_econ_cfg_substation_required_days = 90 }
+    }
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_substation_transfer_per_level } }
+        set_variable = { global.GO_econ_cfg_substation_transfer_per_level = 100 }
+    }
+    set_variable = { global.GO_econ_cfg_industry_day_fraction = global.GO_econ_cfg_industry_required_days }
+    modulo_variable = { global.GO_econ_cfg_industry_day_fraction = 1 }
+    set_variable = { global.GO_econ_cfg_substation_day_fraction = global.GO_econ_cfg_substation_required_days }
+    modulo_variable = { global.GO_econ_cfg_substation_day_fraction = 1 }
+}
+
+# STATE. Industry is authored economic input: absent real zero remains unknown.
+# Physical building zero is obtained from the engine by the refresh below.
+# Location readiness is supplied only after an authored spawn position is checked.
+# Paid-project extension fields are created only by a new authorized start;
+# missing fields in saved paid projects remain missing and block, never heal.
+GO_econ_initialize_state_development = {
+    GO_econ_initialize_state_fiscal = yes
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_industry_levels } }
+        set_variable = { GO_econ_state_industry_levels = 0 }
+        set_variable = { GO_econ_state_industry_levels_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_industry_levels_populated } }
+        set_variable = { GO_econ_state_industry_levels_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_substation_location_ready } }
+        set_variable = { GO_econ_state_substation_location_ready = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_development_schema_version } }
+        set_variable = { GO_econ_state_development_schema_version = 1 }
+    }
+}
+
+# STATE. Rebuild from actual levels; capacity is a derived cache, not electricity.
+# Invalid native levels/config leave reports unavailable. No permanent capacity
+# or independent level is added during completion.
+GO_econ_refresh_state_substations = {
+    set_variable = { GO_econ_state_substation_levels_populated = 0 }
+    set_variable = { GO_econ_state_energy_transfer_capacity_populated = 0 }
+    if = {
+        limit = { GO_econ_state_development_initialized = yes }
+        set_variable = { GO_econ_state_substation_levels = building_level@GO_econ_substation }
+        if = {
+            limit = {
+                OR = {
+                    check_variable = { GO_econ_state_substation_levels = 0 }
+                    check_variable = { GO_econ_state_substation_levels = 1 }
+                    check_variable = { GO_econ_state_substation_levels = 2 }
+                    check_variable = { GO_econ_state_substation_levels = 3 }
+                    check_variable = { GO_econ_state_substation_levels = 4 }
+                    check_variable = { GO_econ_state_substation_levels = 5 }
+                }
+            }
+            set_variable = { GO_econ_state_substation_levels_populated = 1 }
+            if = {
+                limit = {
+                    has_variable = global.GO_econ_cfg_substation_transfer_per_level
+                    check_variable = { global.GO_econ_cfg_substation_transfer_per_level > 0 }
+                }
+                set_variable = { GO_econ_state_energy_transfer_capacity = GO_econ_state_substation_levels }
+                multiply_variable = { GO_econ_state_energy_transfer_capacity = global.GO_econ_cfg_substation_transfer_per_level }
+                set_variable = { GO_econ_state_substation_expected_capacity = GO_econ_state_energy_transfer_capacity }
+                set_variable = { GO_econ_state_substation_transfer_per_level_snapshot = global.GO_econ_cfg_substation_transfer_per_level }
+                set_variable = { GO_econ_state_energy_transfer_capacity_populated = 1 }
+            }
+        }
+    }
+}
+
+# STATE, internal preparation. All public starts still recheck their full guard.
+GO_econ_prepare_development_start = {
+    set_variable = { GO_econ_work_project_start_ok = 0 }
+    GO_econ_initialize_fiscal_config = yes
+    GO_econ_initialize_development_config = yes
+    GO_econ_initialize_state_development = yes
+    GO_econ_refresh_state_debt = yes
+    GO_econ_refresh_native_population = yes
+    GO_econ_refresh_state_substations = yes
+    if = {
+        limit = { GO_econ_work_actor_is_country = yes }
+        var:GO_econ_work_actor = {
+            GO_econ_initialize_country_fiscal = yes
+            GO_econ_refresh_country_debt = yes
+            GO_econ_refresh_status_limits = yes
+            GO_econ_refresh_project_slots = yes
+        }
+    }
+    GO_econ_refresh_state_gdp = yes
+}
+
+# STATE, internal after a guarded start. Caller snapshots type/next level/days,
+# price/cost/GDP and type-specific benefit before invoking the shared payment.
+GO_econ_pay_reserved_development_project = {
+    set_variable = { GO_econ_state_project_active = 1 }
+    set_variable = { GO_econ_state_project_sponsor = GO_econ_work_actor }
+    set_variable = { GO_econ_state_project_completed = 0 }
+    set_variable = { GO_econ_state_project_refund_pending = 0 }
+    set_variable = { GO_econ_state_project_completion_pending = 0 }
+    set_variable = { GO_econ_state_project_workdays = 0 }
+    set_variable = { GO_econ_state_project_last_work_day = global.num_days }
+    set_variable = { GO_econ_state_project_paid_cost = GO_econ_work_cost }
+    set_variable = { GO_econ_state_project_cash_used = 0 }
+    set_variable = { GO_econ_state_project_borrowed_outstanding = 0 }
+    GO_econ_refresh_services_project_record = yes
+    set_variable = { GO_econ_work_payment_ok = 0 }
+    GO_econ_pay_state_cost = yes
+    if = {
+        limit = { check_variable = { GO_econ_work_payment_ok = 1 } }
+        set_variable = { GO_econ_work_project_start_ok = 1 }
+        set_variable = { GO_econ_state_project_cash_used = GO_econ_work_cash_used }
+        set_variable = { GO_econ_state_project_borrowed_outstanding = GO_econ_work_borrowed }
+        var:GO_econ_state_project_sponsor = {
+            GO_econ_mark_open_fiscal_flow = yes
+            add_to_variable = { GO_econ_country_capital_expenses_pending = PREV.GO_econ_state_project_paid_cost }
+            add_to_variable = { GO_econ_country_cash_used_pending = PREV.GO_econ_state_project_cash_used }
+            add_to_variable = { GO_econ_country_borrowing_pending = PREV.GO_econ_state_project_borrowed_outstanding }
+            GO_econ_refresh_project_slots = yes
+            GO_econ_refresh_fiscal_report = yes
+        }
+    }
+    else = {
+        # The shared payment helper guarantees no financial mutation on rejection.
+        set_variable = { GO_econ_state_project_active = 0 }
+        set_variable = { GO_econ_state_project_type = 0 }
+        var:GO_econ_state_project_sponsor = { GO_econ_refresh_project_slots = yes }
+    }
+}
+
+GO_econ_start_industry_project = {
+    GO_econ_prepare_development_start = yes
+    if = {
+        limit = { GO_econ_can_start_industry_project = yes }
+        set_variable = { GO_econ_state_project_type = 2 }
+        set_variable = { GO_econ_state_project_next_level = GO_econ_state_industry_levels }
+        add_to_variable = { GO_econ_state_project_next_level = 1 }
+        set_variable = { GO_econ_state_project_required_days = global.GO_econ_cfg_industry_required_days }
+        set_variable = { GO_econ_state_project_start_gdp = GO_econ_state_gdp }
+        set_variable = { GO_econ_state_project_gdp_bonus = GO_econ_state_project_start_gdp }
+        multiply_variable = { GO_econ_state_project_gdp_bonus = global.GO_econ_cfg_industry_gdp_bonus_factor }
+        var:GO_econ_work_actor = {
+            PREV = { set_variable = { GO_econ_state_project_start_price = PREV.GO_econ_country_price_index } }
+        }
+        set_variable = { GO_econ_work_cost = GO_econ_state_project_start_gdp }
+        multiply_variable = { GO_econ_work_cost = global.GO_econ_cfg_industry_cost_factor }
+        multiply_variable = { GO_econ_work_cost = GO_econ_state_project_next_level }
+        clamp_variable = { var = GO_econ_work_cost min = global.GO_econ_cfg_industry_min_cost }
+        multiply_variable = { GO_econ_work_cost = GO_econ_state_project_start_price }
+        GO_econ_pay_reserved_development_project = yes
+    }
+}
+
+GO_econ_start_substation_project = {
+    GO_econ_prepare_development_start = yes
+    if = {
+        limit = { GO_econ_can_start_substation_project = yes }
+        set_variable = { GO_econ_state_project_type = 3 }
+        set_variable = { GO_econ_state_project_start_physical_level = GO_econ_state_substation_levels }
+        set_variable = { GO_econ_state_project_next_level = GO_econ_state_project_start_physical_level }
+        add_to_variable = { GO_econ_state_project_next_level = 1 }
+        set_variable = { GO_econ_state_project_building_grant_attempted = 0 }
+        set_variable = { GO_econ_state_project_required_days = global.GO_econ_cfg_substation_required_days }
+        set_variable = { GO_econ_state_project_start_gdp = GO_econ_state_gdp }
+        var:GO_econ_work_actor = {
+            PREV = { set_variable = { GO_econ_state_project_start_price = PREV.GO_econ_country_price_index } }
+        }
+        set_variable = { GO_econ_work_cost = GO_econ_state_project_next_level }
+        multiply_variable = { GO_econ_work_cost = global.GO_econ_cfg_substation_cost_per_level }
+        multiply_variable = { GO_econ_work_cost = GO_econ_state_project_start_price }
+        GO_econ_pay_reserved_development_project = yes
+    }
+}
+
+# STATE. Public cancellation covers every development type, including Services.
+# Shared helper verifies the caller is the saved sponsor and refunds debt first.
+GO_econ_cancel_development_project = {
+    GO_econ_refund_development_project = yes
+}
+
+# STATE, internal. Retain history/sponsor/finance; releasing active/type prevents
+# duplicate rewards even if completion is indirectly invoked again.
+GO_econ_release_completed_development_project = {
+    set_variable = { GO_econ_state_project_active = 0 }
+    set_variable = { GO_econ_state_project_type = 0 }
+    set_variable = { GO_econ_state_project_completed = 1 }
+    set_variable = { GO_econ_state_project_completion_pending = 0 }
+    set_variable = { GO_econ_work_project_completion_ok = 1 }
+}
+
+# STATE. An explicit repair retry may run on the same day without adding work.
+# Completion-pending remains active and retains the national reservation.
+GO_econ_try_complete_development_project = {
+    set_variable = { GO_econ_work_project_completion_ok = 0 }
+    GO_econ_refresh_services_project_record = yes
+    GO_econ_refresh_state_debt = yes
+    GO_econ_refresh_state_substations = yes
+    if = {
+        limit = { GO_econ_services_project_has_sponsor = yes }
+        var:GO_econ_state_project_sponsor = { GO_econ_refresh_country_debt = yes }
+    }
+    if = {
+        limit = {
+            GO_econ_development_project_record_valid = yes
+            check_variable = { GO_econ_state_project_workdays = GO_econ_state_project_required_days }
+            OR = {
+                check_variable = { GO_econ_state_project_type = 2 }
+                check_variable = { GO_econ_state_project_type = 3 }
+            }
+        }
+        set_variable = { GO_econ_state_project_completion_pending = 1 }
+        if = {
+            limit = { check_variable = { GO_econ_state_project_type = 2 } }
+            set_variable = { GO_econ_work_expected_next_level = GO_econ_state_industry_levels }
+            add_to_variable = { GO_econ_work_expected_next_level = 1 }
+            if = {
+                limit = { GO_econ_industry_project_can_complete = yes }
+                GO_econ_release_completed_development_project = yes
+                add_to_variable = { GO_econ_state_gdp = GO_econ_state_project_gdp_bonus }
+                set_variable = { GO_econ_state_industry_levels = GO_econ_state_project_next_level }
+                set_variable = { GO_econ_state_industry_levels_populated = 1 }
+                GO_econ_refresh_state_gdp = yes
+                var:GO_econ_state_project_sponsor = {
+                    GO_econ_refresh_project_slots = yes
+                    GO_econ_refresh_country_gdp = yes
+                    GO_econ_refresh_country_production_units = yes
+                    GO_econ_refresh_fiscal_report = yes
+                }
+            }
+        }
+        else_if = {
+            limit = { check_variable = { GO_econ_state_project_type = 3 } }
+            if = {
+                limit = { GO_econ_substation_project_can_grant = yes }
+                # Record the attempt before the engine call, then observe its
+                # exact target level. An unattempted pre-existing level blocks.
+                # Authored integrations must not independently mutate this
+                # building while a paid project is live: native provenance is
+                # not available to distinguish coincident external grants.
+                set_variable = { GO_econ_state_project_building_grant_attempted = 1 }
+                add_building_construction = {
+                    type = GO_econ_substation
+                    level = 1
+                    instant_build = yes
+                }
+                GO_econ_refresh_state_substations = yes
+            }
+            if = {
+                limit = { GO_econ_substation_project_grant_observed = yes }
+                GO_econ_release_completed_development_project = yes
+                var:GO_econ_state_project_sponsor = {
+                    GO_econ_refresh_project_slots = yes
+                    GO_econ_refresh_fiscal_report = yes
+                }
+            }
+        }
+    }
+}
+
+# STATE. All project types share the daily token and original sponsor.
+# Capture pauses; legal ownership transfer first attempts the original refund.
+# Services keeps its original benefit/funding implementation.
+GO_econ_tick_development_project = {
+    # Owner funding reconciliation also applies to idle completed Services.
+    GO_econ_reconcile_services_owner = yes
+    GO_econ_reconcile_development_project_owner = yes
+    GO_econ_refresh_state_substations = yes
+    if = {
+        limit = { check_variable = { GO_econ_state_project_type = 1 } }
+        GO_econ_tick_services_project = yes
+    }
+    else_if = {
+        limit = {
+            OR = {
+                check_variable = { GO_econ_state_project_type = 2 }
+                check_variable = { GO_econ_state_project_type = 3 }
+            }
+        }
+        GO_econ_refresh_services_project_record = yes
+        if = {
+            limit = {
+                GO_econ_development_project_record_valid = yes
+                NOT = { check_variable = { GO_econ_state_project_last_work_day = global.num_days } }
+            }
+            set_variable = { GO_econ_state_project_last_work_day = global.num_days }
+            set_variable = { GO_econ_work_actor = GO_econ_state_project_sponsor }
+            var:GO_econ_state_project_sponsor = {
+                PREV = {
+                    if = {
+                        limit = {
+                            OR = {
+                                check_variable = { GO_econ_state_project_refund_pending = 1 }
+                                NOT = { is_owned_by = PREV }
+                            }
+                        }
+                        GO_econ_refund_development_project = yes
+                    }
+                    else_if = {
+                        limit = { is_controlled_by = PREV }
+                        if = {
+                            limit = { check_variable = { GO_econ_state_project_workdays < GO_econ_state_project_required_days } }
+                            add_to_variable = { GO_econ_state_project_workdays = 1 }
+                            clamp_variable = { var = GO_econ_state_project_workdays max = GO_econ_state_project_required_days }
+                        }
+                        GO_econ_try_complete_development_project = yes
+                    }
+                }
+            }
+        }
+    }
+}

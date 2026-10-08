@@ -1,22 +1,22 @@
 SOV_shoigu_success = {
 	has_country_flag = SOV_shoigu_doctrine
-					check_var = {
+					check_variable = {
 						var = SOV_shoigu_influence
 						value = 50
 						compare = greater_than_or_equals
 					}
-					check_var = {
+					check_variable = {
 						var = SOV_gerasimov_influence
 						value = 50
 						compare = less_than
 					}
-					check_var = {
+					check_variable = {
 						var = SOV_gerasimov_support
 						value = 50
 						compare = less_than
 					}
 
-					check_var = {
+					check_variable = {
 						var = SOV_shoigu_support
 						value = 50
 						compare = greater_than_or_equals
@@ -25,23 +25,23 @@ SOV_shoigu_success = {
 
 SOV_shoigu_failure = {
 	has_country_flag = SOV_shoigu_doctrine
-					check_var = {
+					check_variable = {
 						var = SOV_shoigu_influence
 						value = 50
 						compare = less_than
 					}
-					check_var = {
+					check_variable = {
 						var = SOV_gerasimov_influence
 						value = 50
 						compare = greater_than_or_equals
 					}
-					check_var = {
+					check_variable = {
 						var = SOV_gerasimov_support
 						value = 50
 						compare = greater_than_or_equals
 					}
 
-					check_var = {
+					check_variable = {
 						var = SOV_shoigu_support
 						value = 50
 						compare = less_than
@@ -50,23 +50,23 @@ SOV_shoigu_failure = {
 
 SOV_gerasimov_failure = {
 	has_country_flag = SOV_gerasimov_doctrine
-					check_var = {
+					check_variable = {
 						var = SOV_shoigu_influence
 						value = 50
 						compare = greater_than_or_equals
 					}
-					check_var = {
+					check_variable = {
 						var = SOV_gerasimov_influence
 						value = 50
 						compare = less_than
 					}
-					check_var = {
+					check_variable = {
 						var = SOV_gerasimov_support
 						value = 50
 						compare = less_than
 					}
 
-					check_var = {
+					check_variable = {
 						var = SOV_shoigu_support
 						value = 50
 						compare = greater_than_or_equals
@@ -75,23 +75,23 @@ SOV_gerasimov_failure = {
 
 SOV_gerasimov_success = {
 	has_country_flag = SOV_gerasimov_doctrine
-					check_var = {
+					check_variable = {
 						var = SOV_shoigu_influence
 						value = 50
 						compare = less_than
 					}
-					check_var = {
+					check_variable = {
 						var = SOV_gerasimov_influence
 						value = 50
 						compare = greater_than_or_equals
 					}
-					check_var = {
+					check_variable = {
 						var = SOV_gerasimov_support
 						value = 50
 						compare = greater_than_or_equals
 					}
 
-					check_var = {
+					check_variable = {
 						var = SOV_shoigu_support
 						value = 50
 						compare = less_than

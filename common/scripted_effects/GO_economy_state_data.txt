@@ -1,0 +1,240 @@
+# Gruppa Ost economy - Stage 1 state data foundation.
+# Scope: STATE for GO_econ_initialize_state_data; any effect scope for the all-state wrapper.
+# See docs/HOI4_MOD_DESIGN.md, "Stage 1 state data contract".
+#
+# A zero initialized here is an UNPOPULATED placeholder, not an economic quantity.
+# Later authored calculations must write a value, then set its *_populated marker to 1.
+# Invalidate a stale value by setting only its *_populated marker back to 0.
+# Initialization preserves existing value/marker pairs, including populated real zero.
+# If a value is missing, its marker is reset to 0 even if an orphan marker already exists.
+# GDP helpers and their unprefixed gdp/state_gdp variables remain a separate prototype.
+
+GO_econ_initialize_state_data = {
+    # State economic indicators
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_gdp } }
+        set_variable = { GO_econ_state_gdp = 0 }
+        set_variable = { GO_econ_state_gdp_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_gdp_populated } }
+        set_variable = { GO_econ_state_gdp_populated = 0 }
+    }
+
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_gdp_per_capita } }
+        set_variable = { GO_econ_state_gdp_per_capita = 0 }
+        set_variable = { GO_econ_state_gdp_per_capita_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_gdp_per_capita_populated } }
+        set_variable = { GO_econ_state_gdp_per_capita_populated = 0 }
+    }
+
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_debt } }
+        set_variable = { GO_econ_state_debt = 0 }
+        set_variable = { GO_econ_state_debt_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_debt_populated } }
+        set_variable = { GO_econ_state_debt_populated = 0 }
+    }
+
+    # State energy
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_energy_demand } }
+        set_variable = { GO_econ_state_energy_demand = 0 }
+        set_variable = { GO_econ_state_energy_demand_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_energy_demand_populated } }
+        set_variable = { GO_econ_state_energy_demand_populated = 0 }
+    }
+
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_energy_generation } }
+        set_variable = { GO_econ_state_energy_generation = 0 }
+        set_variable = { GO_econ_state_energy_generation_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_energy_generation_populated } }
+        set_variable = { GO_econ_state_energy_generation_populated = 0 }
+    }
+
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_energy_transfer_capacity } }
+        set_variable = { GO_econ_state_energy_transfer_capacity = 0 }
+        set_variable = { GO_econ_state_energy_transfer_capacity_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_energy_transfer_capacity_populated } }
+        set_variable = { GO_econ_state_energy_transfer_capacity_populated = 0 }
+    }
+
+    # Resource slots (quantity meaning and units remain unspecified)
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_iron } }
+        set_variable = { GO_econ_state_resource_iron = 0 }
+        set_variable = { GO_econ_state_resource_iron_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_iron_populated } }
+        set_variable = { GO_econ_state_resource_iron_populated = 0 }
+    }
+
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_bauxite } }
+        set_variable = { GO_econ_state_resource_bauxite = 0 }
+        set_variable = { GO_econ_state_resource_bauxite_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_bauxite_populated } }
+        set_variable = { GO_econ_state_resource_bauxite_populated = 0 }
+    }
+
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_food } }
+        set_variable = { GO_econ_state_resource_food = 0 }
+        set_variable = { GO_econ_state_resource_food_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_food_populated } }
+        set_variable = { GO_econ_state_resource_food_populated = 0 }
+    }
+
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_coal } }
+        set_variable = { GO_econ_state_resource_coal = 0 }
+        set_variable = { GO_econ_state_resource_coal_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_coal_populated } }
+        set_variable = { GO_econ_state_resource_coal_populated = 0 }
+    }
+
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_natural_gas } }
+        set_variable = { GO_econ_state_resource_natural_gas = 0 }
+        set_variable = { GO_econ_state_resource_natural_gas_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_natural_gas_populated } }
+        set_variable = { GO_econ_state_resource_natural_gas_populated = 0 }
+    }
+
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_oil } }
+        set_variable = { GO_econ_state_resource_oil = 0 }
+        set_variable = { GO_econ_state_resource_oil_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_oil_populated } }
+        set_variable = { GO_econ_state_resource_oil_populated = 0 }
+    }
+
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_rare_earth_minerals } }
+        set_variable = { GO_econ_state_resource_rare_earth_minerals = 0 }
+        set_variable = { GO_econ_state_resource_rare_earth_minerals_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_rare_earth_minerals_populated } }
+        set_variable = { GO_econ_state_resource_rare_earth_minerals_populated = 0 }
+    }
+
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_tungsten } }
+        set_variable = { GO_econ_state_resource_tungsten = 0 }
+        set_variable = { GO_econ_state_resource_tungsten_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_tungsten_populated } }
+        set_variable = { GO_econ_state_resource_tungsten_populated = 0 }
+    }
+
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_titanium } }
+        set_variable = { GO_econ_state_resource_titanium = 0 }
+        set_variable = { GO_econ_state_resource_titanium_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_titanium_populated } }
+        set_variable = { GO_econ_state_resource_titanium_populated = 0 }
+    }
+
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_steel } }
+        set_variable = { GO_econ_state_resource_steel = 0 }
+        set_variable = { GO_econ_state_resource_steel_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_steel_populated } }
+        set_variable = { GO_econ_state_resource_steel_populated = 0 }
+    }
+
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_aluminium } }
+        set_variable = { GO_econ_state_resource_aluminium = 0 }
+        set_variable = { GO_econ_state_resource_aluminium_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_aluminium_populated } }
+        set_variable = { GO_econ_state_resource_aluminium_populated = 0 }
+    }
+
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_rations } }
+        set_variable = { GO_econ_state_resource_rations = 0 }
+        set_variable = { GO_econ_state_resource_rations_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_rations_populated } }
+        set_variable = { GO_econ_state_resource_rations_populated = 0 }
+    }
+
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_fuel } }
+        set_variable = { GO_econ_state_resource_fuel = 0 }
+        set_variable = { GO_econ_state_resource_fuel_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_fuel_populated } }
+        set_variable = { GO_econ_state_resource_fuel_populated = 0 }
+    }
+
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_microchips } }
+        set_variable = { GO_econ_state_resource_microchips = 0 }
+        set_variable = { GO_econ_state_resource_microchips_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_microchips_populated } }
+        set_variable = { GO_econ_state_resource_microchips_populated = 0 }
+    }
+
+    # Approved additional processed resource; units/stock-flow behavior are not assigned.
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_rubber } }
+        set_variable = { GO_econ_state_resource_rubber = 0 }
+        set_variable = { GO_econ_state_resource_rubber_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_resource_rubber_populated } }
+        set_variable = { GO_econ_state_resource_rubber_populated = 0 }
+    }
+
+    # Structural version only; this does not mark any gameplay field as populated.
+    if = {
+        limit = { NOT = { has_variable = GO_econ_state_schema_version } }
+        set_variable = { GO_econ_state_schema_version = 1 }
+    }
+}
+
+# Also available for an explicit authored migration or later setup call.
+# on_startup does not run when an existing save is loaded.
+GO_econ_initialize_all_state_data = {
+    every_state = {
+        GO_econ_initialize_state_data = yes
+    }
+}

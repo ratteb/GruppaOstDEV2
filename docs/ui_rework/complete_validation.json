@@ -1,0 +1,35 @@
+{
+  "game_version": "Case Green v1.18.3.0.7709 (d7cc)",
+  "holders_checked": 1544,
+  "protected_graphics_checked": 4634,
+  "repeatable_centers_checked": 107,
+  "unclassified": 0,
+  "decode_failures": [
+    {
+      "path": "gfx/interface/career_profile/shine_diffuse.dds",
+      "error": "Unimplemented DXGI format 91"
+    },
+    {
+      "path": "gfx/interface/decisions/decision_cat_exiles.dds",
+      "error": "Unimplemented pixel format 63"
+    },
+    {
+      "path": "gfx/interface/swe_rearnament.dds",
+      "error": "Unimplemented pixel format 1111971922"
+    },
+    {
+      "path": "gfx/SuperEvent/sp_events/Super_Event_SMO.dds",
+      "error": "File does not have a DDS header"
+    },
+    {
+      "path": "gfx/SuperEvent/super_event_station_ES.dds",
+      "error": "File does not have a DDS header"
+    }
+  ],
+  "failures": [
+    "Unchanged vanilla holder: gfx/interface/checkbox_small.dds",
+    "Unchanged vanilla holder: gfx/interface/closebutton_16.dds",
+    "No opaque holder pixels: gfx/interface/mapicons/on_map_supply_values_bg.dds"
+  ],
+  "in_game_validated": false
+}

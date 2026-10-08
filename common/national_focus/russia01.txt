@@ -1665,7 +1665,7 @@ focus_tree = {
 				SOV_shoigu_success = yes
 				SOV_shoigu_failure = yes  
 			}
-			check_var = {
+			check_variable = {
 				var = SOV_sotnik_progress
 				value = 100
 				compare = equals 
@@ -1687,115 +1687,115 @@ focus_tree = {
 			if = {
 				limit = {
 					has_country_flag = SOV_shoigu_doctrine
-					check_var = {
+					check_variable = {
 						var = SOV_shoigu_influence
 						value = 50
 						compare = greater_than_or_equals
 					}
-					check_var = {
+					check_variable = {
 						var = SOV_gerasimov_influence
 						value = 50
 						compare = less_than
 					}
-					check_var = {
+					check_variable = {
 						var = SOV_gerasimov_support
 						value = 50
 						compare = less_than
 					}
 
-					check_var = {
+					check_variable = {
 						var = SOV_shoigu_support
 						value = 50
 						compare = greater_than_or_equals
 					}
-					add_stability = 0.05
 				}
+				add_stability = 0.05
 			}
 
 			# Gerasimov not enoguh support
 			else_if = {
 				limit = {
 					has_country_flag = SOV_gerasimov_doctrine
-					check_var = {
+					check_variable = {
 						var = SOV_shoigu_influence
 						value = 50
 						compare = greater_than_or_equals
 					}
-					check_var = {
+					check_variable = {
 						var = SOV_gerasimov_influence
 						value = 50
 						compare = less_than
 					}
-					check_var = {
+					check_variable = {
 						var = SOV_gerasimov_support
 						value = 50
 						compare = less_than
 					}
 
-					check_var = {
+					check_variable = {
 						var = SOV_shoigu_support
 						value = 50
 						compare = greater_than_or_equals
 					}
-					add_stability = -0.05
 				}
+				add_stability = -0.05
 			}
 			#Gerasimov ideal support
 			else_if = {
 				limit = {
 					has_country_flag = SOV_gerasimov_doctrine
-					check_var = {
+					check_variable = {
 						var = SOV_shoigu_influence
 						value = 50
 						compare = less_than
 					}
-					check_var = {
+					check_variable = {
 						var = SOV_gerasimov_influence
 						value = 50
 						compare = greater_than_or_equals
 					}
-					check_var = {
+					check_variable = {
 						var = SOV_gerasimov_support
 						value = 50
 						compare = greater_than_or_equals
 					}
 
-					check_var = {
+					check_variable = {
 						var = SOV_shoigu_support
 						value = 50
 						compare = less_than
 					}
-					add_stability = 0.05
 				}
+				add_stability = 0.05
 			}
 
 			# Shoigu failed support
 			else_if = {
 				limit = {
 					has_country_flag = SOV_shoigu_doctrine
-					check_var = {
+					check_variable = {
 						var = SOV_shoigu_influence
 						value = 50
 						compare = less_than
 					}
-					check_var = {
+					check_variable = {
 						var = SOV_gerasimov_influence
 						value = 50
 						compare = greater_than_or_equals
 					}
-					check_var = {
+					check_variable = {
 						var = SOV_gerasimov_support
 						value = 50
 						compare = greater_than_or_equals
 					}
 
-					check_var = {
+					check_variable = {
 						var = SOV_shoigu_support
 						value = 50
 						compare = less_than
 					}
-					add_stability = -0.05
 				}
+				add_stability = -0.05
 			}
 
 			else = {

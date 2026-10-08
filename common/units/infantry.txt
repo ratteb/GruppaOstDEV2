@@ -220,7 +220,7 @@ sub_units = {
 		active = no
 
 		type = {
-			apc
+			motorized
 		}
 		
 		group = mobile

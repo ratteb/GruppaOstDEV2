@@ -1,0 +1,4926 @@
+[
+  {
+    "path": "gfx/interface/counters/divisions_large/unit_mountain_ski_icon.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/subuniticons.gfx",
+        "line": 86,
+        "name": "GFX_unit_mountaineers_ski_icon_medium",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/counters/divisions_large/unit_mountain_ski_icon.dds"
+        ],
+        "frames": 2,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/subuniticons.gfx",
+        "line": 143,
+        "name": "GFX_unit_mountaineers_ski_icon_medium",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/counters/divisions_large/unit_mountain_ski_icon.dds"
+        ],
+        "frames": 2,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/counters/divisions_small/onmap_unit_jungle_pioneers_support_icon_white.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/subuniticons.gfx",
+        "line": 200,
+        "name": "GFX_unit_jungle_pioneers_support_icon_medium_white",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/counters/divisions_small/onmap_unit_jungle_pioneers_support_icon_white.dds"
+        ],
+        "frames": 2,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/subuniticons.gfx",
+        "line": 257,
+        "name": "GFX_unit_jungle_pioneers_support_icon_medium_white",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/counters/divisions_small/onmap_unit_jungle_pioneers_support_icon_white.dds"
+        ],
+        "frames": 2,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/decisionview/event_end_bg.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/countrydecisionview.gfx",
+        "line": 18,
+        "name": "GFX_event_end_bg",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/decisionview/event_end_bg.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/countrydecisionview.gfx",
+        "line": 18,
+        "name": "GFX_event_end_bg",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/decisionview/event_end_bg.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/doctrines/doctrine_button_background.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/doctrines/doctrines.gfx",
+        "line": 74,
+        "name": "GFX_subdoctrine_icon_frame",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/doctrines/doctrine_button_background.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/doctrines/icons/doctrine_naval_gunfire.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/doctrines/doctrines.gfx",
+        "line": 329,
+        "name": "GFX_doctrine_naval_gunfire_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/doctrines/icons/doctrine_naval_gunfire.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": "yes",
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/doctrines/sub_doctrine_text_box.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/doctrines/doctrines.gfx",
+        "line": 79,
+        "name": "GFX_subdoctrine_name_frame",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/doctrines/sub_doctrine_text_box.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/factions/faction_logos/faction_logo_generic_progressivism.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. Referenced by an indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/factions/factions.gfx",
+        "line": 59,
+        "name": "GFX_faction_logo_generic_progressivism",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/factions/faction_logos/faction_logo_generic_progressivism.dds"
+        ],
+        "frames": 2,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [
+      {
+        "file": "interface/countryintelligenceagencyview.gui",
+        "line": 1037,
+        "source": "mod",
+        "sprite": "GFX_faction_logo_generic_progressivism"
+      },
+      {
+        "file": "interface/countrypoliticsview.gui",
+        "line": 217,
+        "source": "mod",
+        "sprite": "GFX_faction_logo_generic_progressivism"
+      }
+    ],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/factions/faction_logos/faction_logo_generic_progressivism_miniature.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. Referenced by an indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/factions/factions.gfx",
+        "line": 192,
+        "name": "GFX_faction_logo_generic_progressivism_miniature",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/factions/faction_logos/faction_logo_generic_progressivism_miniature.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [
+      {
+        "file": "interface/topbar.gui",
+        "line": 715,
+        "source": "mod",
+        "sprite": "GFX_faction_logo_generic_progressivism_miniature"
+      }
+    ],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/focusview/filter/decision_category_power_struggle.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/nationalfocusview.gfx",
+        "line": 1339,
+        "name": "GFX_FOCUS_FILTER_POWER_STRUGGLE",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/focusview/filter/decision_category_power_struggle.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/nationalfocusview.gfx",
+        "line": 392,
+        "name": "GFX_FOCUS_FILTER_POWER_STRUGGLE",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/focusview/filter/decision_category_power_struggle.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/goals/focus_state_of_toops.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/goals_shine.gfx",
+        "source": "mod",
+        "line": 281,
+        "name": "animation resource",
+        "type": "animationmaskfile",
+        "textures": [
+          "gfx/interface/goals/focus_state_of_toops.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/generic_progressivism_drift_bonus.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/factions/factions.gfx",
+        "line": 603,
+        "name": "GFX_dismissal_rule_ideology_progressivism",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/generic_progressivism_drift_bonus.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/idea_britain_arthur_percival_small.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/ideas.gfx",
+        "line": 11693,
+        "name": "GFX_idea_ENG_arthur_percival_small",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/idea_Britain_arthur_percival_small.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/idea_generic_helicopter_manufacturer_1.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/ideas.gfx",
+        "line": 1134,
+        "name": "GFX_idea_generic_helicopter_manufacturer_1",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/idea_generic_helicopter_manufacturer_1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/idea_generic_marxism_leninism_banned.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/factions/factions.gfx",
+        "line": 399,
+        "name": "GFX_joining_rule_non_communist",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/idea_generic_marxism_leninism_banned.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/idea_ger_limited_progressivism_principles.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/factions/factions.gfx",
+        "line": 455,
+        "name": "GFX_faction_peace_rule_ideology_focus",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/idea_GER_limited_progressivism_principles.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/idea_hol_prins_bernhard.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/ideas.gfx",
+        "line": 4104,
+        "name": "GFX_idea_hol_prins_bernhard",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/idea_hol_prins_bernhard.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/idea_man_henry_pu_yi.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/_leader_portraits.gfx",
+        "line": 1485,
+        "name": "GFX_portrait_man_henry_pu_yi_emperor_small",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/idea_MAN_henry_pu_yi.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/idea_man_yoshiko_kawashima.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/lar_ideas_characters.gfx",
+        "line": 164,
+        "name": "GFX_idea_MAN_yoshiko_kawashima",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/idea_MAN_yoshiko_kawashima.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc028_la_resistance"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/idea_mtg_naval_treaty_adherent.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/ideas.gfx",
+        "line": 4118,
+        "name": "GFX_idea_MTG_naval_treaty_adherent",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/idea_mtg_naval_treaty_adherent.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/idea_mtg_naval_treaty_adherent_reduced.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/ideas.gfx",
+        "line": 4123,
+        "name": "GFX_idea_MTG_naval_treaty_adherent_reduced",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/idea_mtg_naval_treaty_adherent_reduced.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/idea_nzl_elsie_farrelly.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/_leader_portraits.gfx",
+        "line": 387,
+        "name": "GFX_NZL_elsie_farrelly_small",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/idea_NZL_elsie_farrelly.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/idea_per_oscar_benavides.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/ideas_characters.gfx",
+        "line": 1915,
+        "name": "GFX_idea_PER_oscar_benavides",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/idea_PER_oscar_benavides.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/idea_roman_dmowski.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/pol_ideas.gfx",
+        "line": 62,
+        "name": "GFX_idea_POL_roman_dmowski",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/ideas/idea_roman_dmowski.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc002_polish_content_pack"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/joining_rule_progressivism_non_aligned.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/factions/factions.gfx",
+        "line": 419,
+        "name": "GFX_joining_rule_progressivism_non_aligned",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/joining_rule_progressivism_non_aligned.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/portrait_arg_augustin_pedro_justo_small.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/toa_ideas_characters.gfx",
+        "line": 105,
+        "name": "GFX_portrait_ARG_augustin_pedro_justo_civilian_small",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/portrait_ARG_augustin_pedro_justo_small.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc040_trial_of_allegiance"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/portrait_bra_alvaro_alberto_small.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/toa_ideas_characters.gfx",
+        "line": 435,
+        "name": "GFX_portrait_BRA_alvaro_alberto_civilian_small",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/portrait_BRA_alvaro_alberto_small.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc040_trial_of_allegiance"
+      },
+      {
+        "file": "interface/toa_ideas_characters.gfx",
+        "line": 439,
+        "name": "GFX_portrait_BRA_alvaro_alberto_military_small",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/portrait_BRA_alvaro_alberto_small.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc040_trial_of_allegiance"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/portrait_bra_mascarenhas_de_morais_small_1.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/ideas_characters.gfx",
+        "line": 90,
+        "name": "GFX_portrait_BRA_mascarenhas_de_morais_1_small",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/portrait_BRA_mascarenhas_de_morais_small_1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/portrait_britain_arthur_percival.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/ideas.gfx",
+        "line": 1995,
+        "name": "GFX_portrait_Britain_arthur_percival",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/portrait_Britain_arthur_percival.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/portrait_nor_trygve_lie_small.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/aat_ideas_characters.gfx",
+        "line": 191,
+        "name": "GFX_portrait_NOR_trygve_lie_small",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/portrait_NOR_trygve_lie_small.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc038_arms_against_tyranny"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/portrait_nxm_ma_hongkui_small.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/sea_ideas_characters.gfx",
+        "line": 157,
+        "name": "GFX_portrait_NXM_ma_hongkui_small",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/portrait_NXM_ma_hongkui_small.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc049_no_compromise_no_surrender"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/portrait_par_bernardino_caballero_small.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/toa_ideas_characters.gfx",
+        "line": 913,
+        "name": "GFX_portrait_PAR_bernardino_caballero_small",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/portrait_PAR_bernardino_caballero_small.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc040_trial_of_allegiance"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/portrait_par_emilio_gardel_small.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/toa_ideas_characters.gfx",
+        "line": 903,
+        "name": "GFX_portrait_PAR_emilio_gardel_small",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/portrait_PAR_emilio_gardel_small.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc040_trial_of_allegiance"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/portrait_par_higino_morinigo_small.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/toa_ideas_characters.gfx",
+        "line": 841,
+        "name": "GFX_portrait_PAR_higino_morinigo_small",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/portrait_PAR_higino_morinigo_small.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc040_trial_of_allegiance"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/portrait_par_ivan_beliaiev_small.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/toa_ideas_characters.gfx",
+        "line": 948,
+        "name": "GFX_portrait_PAR_ivan_Beliaiev_small",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/portrait_PAR_ivan_Beliaiev_small.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc040_trial_of_allegiance"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/portrait_par_tomas_salomoni_small.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/toa_ideas_characters.gfx",
+        "line": 953,
+        "name": "GFX_portrait_PAR_tomas_salomoni_small",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/portrait_PAR_tomas_salomoni_small.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc040_trial_of_allegiance"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/portrait_placeholder_2_small.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/ideas_characters.gfx",
+        "line": 3771,
+        "name": "GFX_portrait_PLACEHOLDER_2_small",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/portrait_PLACEHOLDER_2_small.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/portrait_swe_erik_af_edholm.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/aat_ideas_characters.gfx",
+        "line": 767,
+        "name": "GFX_portrait_SWE_erik_af_edholm",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/portrait_SWE_erik_af_edholm.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc038_arms_against_tyranny"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/portrait_swe_folke_hogberg.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/aat_ideas_characters.gfx",
+        "line": 771,
+        "name": "GFX_portrait_SWE_folke_hogberg",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/portrait_SWE_folke_hogberg.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc038_arms_against_tyranny"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/portrait_swe_nordic_defense_council.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/aat_ideas_characters.gfx",
+        "line": 775,
+        "name": "GFX_portrait_SWE_nordic_defense_council",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/portrait_SWE_nordic_defense_council.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc038_arms_against_tyranny"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/portrait_swe_sven_linderot.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/aat_ideas_characters.gfx",
+        "line": 783,
+        "name": "GFX_portrait_SWE_sven_linderot",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/portrait_SWE_sven_linderot.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc038_arms_against_tyranny"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/portrait_urg_andres_puyol_small.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/toa_ideas_characters.gfx",
+        "line": 1022,
+        "name": "GFX_portrait_URG_andres_puyol_small",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/portrait_URG_andres_puyol_small.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc040_trial_of_allegiance"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideas/portrait_urg_julio_roletti_small.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/toa_ideas_characters.gfx",
+        "line": 1032,
+        "name": "GFX_portrait_URG_julio_roletti_small",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideas/portrait_URG_julio_roletti_small.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc040_trial_of_allegiance"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideologies/centrism_group.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/countrypoliticsview.gfx",
+        "line": 467,
+        "name": "GFX_ideology_centrism_group",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideologies/centrism_group.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      },
+      {
+        "file": "interface/ideologies_graphics.gfx",
+        "line": 25,
+        "name": "GFX_ideology_centrism_group",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideologies/centrism_group.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideologies/despotism_group.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/ideologies_graphics.gfx",
+        "line": 21,
+        "name": "GFX_ideology_despotism_group",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideologies/despotism_group.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideologies/marxism_leninism_group.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/countrypoliticsview.gfx",
+        "line": 472,
+        "name": "GFX_ideology_marxism_leninism_group",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideologies/marxism_leninism_group.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      },
+      {
+        "file": "interface/ideologies_graphics.gfx",
+        "line": 9,
+        "name": "GFX_ideology_marxism_leninism_group",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideologies/marxism_leninism_group.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideologies/paternalism_group.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/ideologies_graphics.gfx",
+        "line": 13,
+        "name": "GFX_ideology_paternalism_group",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideologies/paternalism_group.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideologies/progressivism_group.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/countrypoliticsview.gfx",
+        "line": 482,
+        "name": "GFX_ideology_progressivism_group",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideologies/progressivism_group.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      },
+      {
+        "file": "interface/ideologies_graphics.gfx",
+        "line": 17,
+        "name": "GFX_ideology_progressivism_group",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideologies/progressivism_group.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideologies/putinism.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/countrypoliticsview.gfx",
+        "line": 492,
+        "name": "GFX_ideology_putinism",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideologies/putinism.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideologies/salafism_group.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/ideologies_graphics.gfx",
+        "line": 29,
+        "name": "GFX_ideology_salafism_group",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideologies/salafism_group.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/ideologies/socialism_group.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/ideologies_graphics.gfx",
+        "line": 5,
+        "name": "GFX_ideology_socialism_group",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/ideologies/socialism_group.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_plane_cv_naval_bomber_technology.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/military_industrial_organization/industrial_organization_policies_and_traits_icons.gfx",
+        "line": 1746,
+        "name": "GFX_generic_mio_department_icon_plane_cv_naval_bomber_technology",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_plane_cv_naval_bomber_technology.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_plane_tactical_bomber_line_efficiency.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/military_industrial_organization/industrial_organization_policies_and_traits_icons.gfx",
+        "line": 1209,
+        "name": "GFX_generic_mio_department_icon_plane_tactical_bomber_line_efficiency",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_plane_tactical_bomber_line_efficiency.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/military_industrial_organization/department_icons/gfx_generic_mio_department_icon_ship_capital_ship.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/military_industrial_organization/industrial_organization_policies_and_traits_icons.gfx",
+        "line": 1455,
+        "name": "GFX_generic_mio_department_icon_ship_capital_ship",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/military_industrial_organization/department_icons/GFX_generic_mio_department_icon_ship_capital_ship.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/operatives/agencies/intelligence_agency_logo_afg_centrism.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/countryintelligenceagencyview.gfx",
+        "line": 569,
+        "name": "GFX_intelligence_agency_logo_AFG_centrism",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/operatives/agencies/intelligence_agency_logo_AFG_centrism.dds"
+        ],
+        "frames": 2,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/operatives/agencies/intelligence_agency_logo_afg_marxism_leninism.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/countryintelligenceagencyview.gfx",
+        "line": 564,
+        "name": "GFX_intelligence_agency_logo_AFG_marxism_leninism",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/operatives/agencies/intelligence_agency_logo_AFG_marxism_leninism.dds"
+        ],
+        "frames": 2,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/operatives/agencies/intelligence_agency_logo_afg_progressivism.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/countryintelligenceagencyview.gfx",
+        "line": 559,
+        "name": "GFX_intelligence_agency_logo_AFG_progressivism",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/operatives/agencies/intelligence_agency_logo_AFG_progressivism.dds"
+        ],
+        "frames": 2,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/operatives/agencies/intelligence_agency_logo_aus_evidenzbureau_progressivism.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/countryintelligenceagencyview.gfx",
+        "line": 514,
+        "name": "GFX_intelligence_agency_logo_AUS_evidenzbureau_progressivism",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/operatives/agencies/intelligence_agency_logo_AUS_evidenzbureau_progressivism.dds"
+        ],
+        "frames": 2,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/operatives/agencies/intelligence_agency_logo_bra_centrism.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/countryintelligenceagencyview.gfx",
+        "line": 499,
+        "name": "GFX_intelligence_agency_logo_BRA_centrism",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/operatives/agencies/intelligence_agency_logo_BRA_centrism.dds"
+        ],
+        "frames": 2,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/special_project/project_icons/sp_land_v3.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/special_projects/project.gfx",
+        "line": 277,
+        "name": "GFX_sp_land_v3",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/special_project/project_icons/sp_land_v3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_adv_heavy_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8824,
+        "name": "GFX_CHI_advanced_heavy_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_adv_heavy_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8875,
+        "name": "GFX_CHI_advanced_heavy_tank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_adv_heavy_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_adv_light_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8800,
+        "name": "GFX_CHI_advanced_light_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_adv_light_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8851,
+        "name": "GFX_CHI_advanced_light_tank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_adv_light_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_adv_medium_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8812,
+        "name": "GFX_CHI_advanced_medium_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_adv_medium_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8863,
+        "name": "GFX_CHI_advanced_medium_tank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_adv_medium_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_basic_heavy_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8816,
+        "name": "GFX_CHI_basic_heavy_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_basic_heavy_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8867,
+        "name": "GFX_CHI_basic_heavy_tank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_basic_heavy_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_basic_light_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8792,
+        "name": "GFX_CHI_basic_light_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_basic_light_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8843,
+        "name": "GFX_CHI_basic_light_tank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_basic_light_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_basic_medium_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8804,
+        "name": "GFX_CHI_basic_medium_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_basic_medium_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8855,
+        "name": "GFX_CHI_basic_medium_tank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_basic_medium_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_cas1.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8659,
+        "name": "GFX_CHI_basic_small_cas_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_cas1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8706,
+        "name": "GFX_CHI_CAS1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_cas1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8773,
+        "name": "GFX_CHI_basic_small_cas_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_cas1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_cas2.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8663,
+        "name": "GFX_CHI_improved_small_cas_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_cas2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8710,
+        "name": "GFX_CHI_CAS2_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_cas2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8777,
+        "name": "GFX_CHI_improved_small_cas_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_cas2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_cas3.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8667,
+        "name": "GFX_CHI_advanced_small_cas_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_cas3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8714,
+        "name": "GFX_CHI_CAS3_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_cas3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8781,
+        "name": "GFX_CHI_advanced_small_cas_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_cas3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_early_bomber.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8631,
+        "name": "GFX_CHI_iw_medium_airframe_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_early_bomber.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8678,
+        "name": "GFX_CHI_early_bomber_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_early_bomber.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_early_fighter.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8615,
+        "name": "GFX_CHI_iw_small_airframe_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_early_fighter.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8674,
+        "name": "GFX_CHI_early_fighter_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_early_fighter.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8757,
+        "name": "GFX_CHI_iw_small_fighter_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_early_fighter.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_fighter1.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8619,
+        "name": "GFX_CHI_basic_small_airframe_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_fighter1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8682,
+        "name": "GFX_CHI_fighter1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_fighter1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8761,
+        "name": "GFX_CHI_basic_small_fighter_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_fighter1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_fighter2.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8623,
+        "name": "GFX_CHI_improved_small_airframe_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_fighter2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8686,
+        "name": "GFX_CHI_fighter2_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_fighter2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8765,
+        "name": "GFX_CHI_improved_small_fighter_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_fighter2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_fighter3.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8627,
+        "name": "GFX_CHI_advanced_small_airframe_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_fighter3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8690,
+        "name": "GFX_CHI_fighter3_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_fighter3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8769,
+        "name": "GFX_CHI_advanced_small_fighter_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_fighter3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_gwtank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8510,
+        "name": "GFX_PRC_gwtank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_gwtank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8561,
+        "name": "GFX_PRC_gwtank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_gwtank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8788,
+        "name": "GFX_CHI_gwtank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_gwtank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8839,
+        "name": "GFX_CHI_gwtank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_gwtank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_heavy_fighter1.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8694,
+        "name": "GFX_CHI_heavy_fighter1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_heavy_fighter1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_heavy_fighter2.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8698,
+        "name": "GFX_CHI_heavy_fighter2_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_heavy_fighter2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_heavy_fighter3.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8702,
+        "name": "GFX_CHI_heavy_fighter3_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_heavy_fighter3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_imp_heavy_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8820,
+        "name": "GFX_CHI_improved_heavy_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_imp_heavy_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8871,
+        "name": "GFX_CHI_improved_heavy_tank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_imp_heavy_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_imp_light_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8796,
+        "name": "GFX_CHI_improved_light_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_imp_light_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8847,
+        "name": "GFX_CHI_improved_light_tank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_imp_light_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_imp_medium_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8808,
+        "name": "GFX_CHI_improved_medium_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_imp_medium_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8859,
+        "name": "GFX_CHI_improved_medium_tank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_imp_medium_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_main_battle_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8832,
+        "name": "GFX_CHI_main_battle_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_main_battle_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8883,
+        "name": "GFX_CHI_main_battle_tank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_main_battle_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_naval_bomber1.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8742,
+        "name": "GFX_CHI_naval_bomber1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_naval_bomber1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_naval_bomber2.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8746,
+        "name": "GFX_CHI_naval_bomber2_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_naval_bomber2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_naval_bomber3.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8750,
+        "name": "GFX_CHI_naval_bomber3_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_naval_bomber3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_strategic_bomber1.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8647,
+        "name": "GFX_CHI_basic_large_airframe_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_strategic_bomber1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8730,
+        "name": "GFX_CHI_strategic_bomber1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_strategic_bomber1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_strategic_bomber2.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8651,
+        "name": "GFX_CHI_improved_large_airframe_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_strategic_bomber2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8734,
+        "name": "GFX_CHI_strategic_bomber2_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_strategic_bomber2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_strategic_bomber3.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8655,
+        "name": "GFX_CHI_advanced_large_airframe_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_strategic_bomber3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8738,
+        "name": "GFX_CHI_strategic_bomber3_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_strategic_bomber3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_superheavy_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8828,
+        "name": "GFX_CHI_super_heavy_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_superheavy_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8879,
+        "name": "GFX_CHI_super_heavy_tank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_superheavy_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_tactical_bomber1.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8635,
+        "name": "GFX_CHI_basic_medium_airframe_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_tactical_bomber1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8718,
+        "name": "GFX_CHI_tactical_bomber1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_tactical_bomber1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_tactical_bomber2.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8639,
+        "name": "GFX_CHI_improved_medium_airframe_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_tactical_bomber2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8722,
+        "name": "GFX_CHI_tactical_bomber2_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_tactical_bomber2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/chi_tactical_bomber3.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8643,
+        "name": "GFX_CHI_advanced_medium_airframe_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_tactical_bomber3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8726,
+        "name": "GFX_CHI_tactical_bomber3_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/chi_tactical_bomber3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/eng_amphibious_tank_1.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 6214,
+        "name": "GFX_ENG_amphibious_tank_chassis_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/eng_amphibious_tank_1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/eng_infantry_equipment_1.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/goe_technologies.gfx",
+        "line": 117,
+        "name": "GFX_AFG_infantry_weapons1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/ENG_infantry_equipment_1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc046_graveyard_of_empires"
+      },
+      {
+        "file": "interface/goe_technologies.gfx",
+        "line": 444,
+        "name": "GFX_IRQ_infantry_weapons1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/ENG_infantry_equipment_1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc046_graveyard_of_empires"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/eng_infantry_equipment_2.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/goe_technologies.gfx",
+        "line": 113,
+        "name": "GFX_AFG_improved_infantry_weapons_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/ENG_infantry_equipment_2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc046_graveyard_of_empires"
+      },
+      {
+        "file": "interface/goe_technologies.gfx",
+        "line": 440,
+        "name": "GFX_IRQ_improved_infantry_weapons_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/ENG_infantry_equipment_2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc046_graveyard_of_empires"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/eng_infantry_equipment_3.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/goe_technologies.gfx",
+        "line": 109,
+        "name": "GFX_AFG_advanced_infantry_weapons_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/ENG_infantry_equipment_3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc046_graveyard_of_empires"
+      },
+      {
+        "file": "interface/goe_technologies.gfx",
+        "line": 436,
+        "name": "GFX_IRQ_advanced_infantry_weapons_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/ENG_infantry_equipment_3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc046_graveyard_of_empires"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/ger_amphibious_tank_1.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 6070,
+        "name": "GFX_GER_amphibious_tank_chassis_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/ger_amphibious_tank_1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/jap_amphibious_tank_1.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 6338,
+        "name": "GFX_JAP_amphibious_tank_chassis_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/jap_amphibious_tank_1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_adv_heavy_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8546,
+        "name": "GFX_PRC_advanced_heavy_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_adv_heavy_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8597,
+        "name": "GFX_PRC_advanced_heavy_tank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_adv_heavy_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_adv_light_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8522,
+        "name": "GFX_PRC_advanced_light_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_adv_light_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8573,
+        "name": "GFX_PRC_advanced_light_tank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_adv_light_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_adv_medium_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8534,
+        "name": "GFX_PRC_advanced_medium_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_adv_medium_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8585,
+        "name": "GFX_PRC_advanced_medium_tank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_adv_medium_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_basic_heavy_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8538,
+        "name": "GFX_PRC_basic_heavy_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_basic_heavy_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8589,
+        "name": "GFX_PRC_basic_heavy_tank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_basic_heavy_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_basic_light_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8514,
+        "name": "GFX_PRC_basic_light_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_basic_light_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8565,
+        "name": "GFX_PRC_basic_light_tank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_basic_light_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_basic_medium_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8526,
+        "name": "GFX_PRC_basic_medium_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_basic_medium_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8577,
+        "name": "GFX_PRC_basic_medium_tank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_basic_medium_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_cas1.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8424,
+        "name": "GFX_PRC_CAS1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_cas1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8495,
+        "name": "GFX_PRC_basic_small_cas_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_cas1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_cas2.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8428,
+        "name": "GFX_PRC_CAS2_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_cas2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_cas3.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8436,
+        "name": "GFX_PRC_CAS3_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_cas3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_early_bomber.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8365,
+        "name": "GFX_PRC_iw_medium_airframe_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_early_bomber.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8432,
+        "name": "GFX_PRC_early_bomber_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_early_bomber.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_early_fighter.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8349,
+        "name": "GFX_PRC_iw_small_airframe_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_early_fighter.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8396,
+        "name": "GFX_PRC_early_fighter_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_early_fighter.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8479,
+        "name": "GFX_PRC_iw_small_fighter_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_early_fighter.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_fighter1.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8353,
+        "name": "GFX_PRC_basic_small_airframe_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_fighter1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8400,
+        "name": "GFX_PRC_fighter1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_fighter1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8483,
+        "name": "GFX_PRC_basic_small_fighter_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_fighter1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_fighter2.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8357,
+        "name": "GFX_PRC_improved_small_airframe_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_fighter2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8404,
+        "name": "GFX_PRC_fighter2_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_fighter2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8487,
+        "name": "GFX_PRC_improved_small_fighter_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_fighter2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_fighter3.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8361,
+        "name": "GFX_PRC_advanced_small_airframe_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_fighter3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8408,
+        "name": "GFX_PRC_fighter3_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_fighter3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8491,
+        "name": "GFX_PRC_advanced_small_fighter_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_fighter3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_heavy_fighter1.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8412,
+        "name": "GFX_PRC_heavy_fighter1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_heavy_fighter1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_heavy_fighter2.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8416,
+        "name": "GFX_PRC_heavy_fighter2_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_heavy_fighter2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_heavy_fighter3.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8420,
+        "name": "GFX_PRC_heavy_fighter3_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_heavy_fighter3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_imp_heavy_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8542,
+        "name": "GFX_PRC_improved_heavy_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_imp_heavy_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8593,
+        "name": "GFX_PRC_improved_heavy_tank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_imp_heavy_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_imp_light_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8518,
+        "name": "GFX_PRC_improved_light_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_imp_light_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8569,
+        "name": "GFX_PRC_improved_light_tank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_imp_light_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_imp_medium_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8530,
+        "name": "GFX_PRC_improved_medium_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_imp_medium_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8581,
+        "name": "GFX_PRC_improved_medium_tank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_imp_medium_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_main_battle_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8554,
+        "name": "GFX_PRC_main_battle_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_main_battle_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8605,
+        "name": "GFX_PRC_main_battle_tank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_main_battle_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_naval_bomber1.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8464,
+        "name": "GFX_PRC_naval_bomber1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_naval_bomber1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_naval_bomber2.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8468,
+        "name": "GFX_PRC_naval_bomber2_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_naval_bomber2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_naval_bomber3.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8472,
+        "name": "GFX_PRC_naval_bomber3_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_naval_bomber3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_strategic_bomber1.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8381,
+        "name": "GFX_PRC_basic_large_airframe_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_strategic_bomber1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8452,
+        "name": "GFX_PRC_strategic_bomber1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_strategic_bomber1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8503,
+        "name": "GFX_PRC_basic_large_strategic_bomber_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_strategic_bomber1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_strategic_bomber2.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8385,
+        "name": "GFX_PRC_improved_large_airframe_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_strategic_bomber2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8456,
+        "name": "GFX_PRC_strategic_bomber2_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_strategic_bomber2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_strategic_bomber3.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8389,
+        "name": "GFX_PRC_advanced_large_airframe_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_strategic_bomber3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8460,
+        "name": "GFX_PRC_strategic_bomber3_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_strategic_bomber3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_superheavy_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8550,
+        "name": "GFX_PRC_super_heavy_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_superheavy_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8601,
+        "name": "GFX_PRC_super_heavy_tank_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_superheavy_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_tactical_bomber1.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8369,
+        "name": "GFX_PRC_basic_medium_airframe_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_tactical_bomber1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8440,
+        "name": "GFX_PRC_tactical_bomber1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_tactical_bomber1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8499,
+        "name": "GFX_PRC_basic_medium_tactical_bomber_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_tactical_bomber1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_tactical_bomber2.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8373,
+        "name": "GFX_PRC_improved_medium_airframe_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_tactical_bomber2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8444,
+        "name": "GFX_PRC_tactical_bomber2_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_tactical_bomber2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/prc_tactical_bomber3.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8377,
+        "name": "GFX_PRC_advanced_medium_airframe_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_tactical_bomber3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8448,
+        "name": "GFX_PRC_tactical_bomber3_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/prc_tactical_bomber3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/raj_adv_main_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8280,
+        "name": "GFX_RAJ_advanced_medium_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/RAJ_adv_main_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/raj_basic_main_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8270,
+        "name": "GFX_RAJ_basic_medium_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/RAJ_basic_main_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/raj_fighter1.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8265,
+        "name": "GFX_RAJ_fighter1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/RAJ_fighter1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/raj_imp_main_tank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8275,
+        "name": "GFX_RAJ_improved_medium_tank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/RAJ_imp_main_tank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/swe_medium_ba_scout_1.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/aat_technologies.gfx",
+        "line": 156,
+        "name": "GFX_SWE_medium_ba_scout_1_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/SWE_medium_ba_scout_1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "dlc038_arms_against_tyranny"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/tfv_shared2_mechanized_equipment_1.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8250,
+        "name": "GFX_RAJ_mechanised_infantry_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/tfv_shared2_mechanized_equipment_1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/tfv_shared2_mechanized_equipment_2.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8255,
+        "name": "GFX_RAJ_mechanised_infantry2_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/tfv_shared2_mechanized_equipment_2.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/tfv_shared2_mechanized_equipment_3.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8260,
+        "name": "GFX_RAJ_mechanised_infantry3_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/tfv_shared2_mechanized_equipment_3.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/tfv_shared_gwtank.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 8285,
+        "name": "GFX_RAJ_gwtank_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/tfv_shared_gwtank.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/technologies/usa_amphibious_tank_1.dds",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/Technologies.gfx",
+        "line": 6170,
+        "name": "GFX_USA_amphibious_tank_chassis_medium",
+        "type": "SpriteType",
+        "textures": [
+          "gfx/interface/technologies/usa_amphibious_tank_1.dds"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  },
+  {
+    "path": "gfx/interface/tradeview/resource_overall.tga",
+    "disposition": "unavailable_reference",
+    "reason": "Pre-existing absent declaration; no source bytes to classify or rebuild. No direct indexed GUI consumer.",
+    "definitions": [
+      {
+        "file": "interface/countrytradeview.gfx",
+        "line": 99,
+        "name": "GFX_TRADE_resource_overall",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/tradeview/resource_overall.tga"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "base"
+      },
+      {
+        "file": "interface/countrytradeview.gfx",
+        "line": 99,
+        "name": "GFX_TRADE_resource_overall",
+        "type": "spriteType",
+        "textures": [
+          "gfx/interface/tradeview/resource_overall.tga"
+        ],
+        "frames": 1,
+        "size": null,
+        "border": null,
+        "tiling_center": null,
+        "effect": null,
+        "animation_fps": null,
+        "always_transparent": null,
+        "source": "mod"
+      }
+    ],
+    "consumers": [],
+    "coverage_limit": "missing_source"
+  }
+]

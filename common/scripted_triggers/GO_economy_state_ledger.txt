@@ -1,0 +1,82 @@
+# Gruppa Ost economy - Stage 2 state ledger guards. All require STATE scope.
+# Population comes from the native state source in Stage 3; other inputs remain guarded.
+GO_econ_state_ledger_initialized = {
+    GO_econ_state_data_initialized = yes
+    has_variable = GO_econ_state_ledger_schema_version
+    check_variable = { GO_econ_state_ledger_schema_version = 1 }
+}
+
+GO_econ_state_has_population_millions = {
+    GO_econ_state_ledger_initialized = yes
+    has_variable = GO_econ_state_population_millions
+    check_variable = { GO_econ_state_population_millions_populated = 1 }
+    check_variable = { GO_econ_state_population_millions > 0 }
+}
+
+GO_econ_state_has_growth_modifier_percent = {
+    GO_econ_state_ledger_initialized = yes
+    has_variable = GO_econ_state_growth_modifier_percent
+    check_variable = { GO_econ_state_growth_modifier_percent_populated = 1 }
+}
+
+GO_econ_state_has_services_funded_levels = {
+    GO_econ_state_ledger_initialized = yes
+    has_variable = GO_econ_state_services_funded_levels
+    check_variable = { GO_econ_state_services_funded_levels_populated = 1 }
+    # Whole funded levels 0..5; an external funding source must validate ownership
+    # and completed levels before setting this input's populated marker.
+    OR = {
+        check_variable = { GO_econ_state_services_funded_levels = 0 }
+        check_variable = { GO_econ_state_services_funded_levels = 1 }
+        check_variable = { GO_econ_state_services_funded_levels = 2 }
+        check_variable = { GO_econ_state_services_funded_levels = 3 }
+        check_variable = { GO_econ_state_services_funded_levels = 4 }
+        check_variable = { GO_econ_state_services_funded_levels = 5 }
+    }
+}
+
+GO_econ_state_has_gdp_nominal = {
+    GO_econ_state_ledger_initialized = yes
+    has_variable = GO_econ_state_gdp_nominal
+    check_variable = { GO_econ_state_gdp_nominal_populated = 1 }
+    GO_econ_state_has_gdp = yes
+    check_variable = { var = GO_econ_state_gdp value = 0 compare = greater_than_or_equals }
+    is_controlled_by = OWNER
+    owner = { GO_econ_country_has_price_index = yes }
+}
+
+GO_econ_state_has_annual_growth_percent = {
+    GO_econ_state_ledger_initialized = yes
+    GO_econ_fiscal_config_ready = yes
+    has_variable = GO_econ_state_annual_growth_percent
+    check_variable = { GO_econ_state_annual_growth_percent_populated = 1 }
+    GO_econ_state_has_gdp = yes
+    check_variable = { var = GO_econ_state_gdp value = 0 compare = greater_than_or_equals }
+    is_controlled_by = OWNER
+    GO_econ_state_has_growth_modifier_percent = yes
+    GO_econ_state_has_services_funded_levels = yes
+}
+
+GO_econ_state_has_monthly_growth_factor = {
+    GO_econ_state_ledger_initialized = yes
+    GO_econ_fiscal_config_ready = yes
+    has_variable = GO_econ_state_monthly_growth_factor
+    check_variable = { GO_econ_state_monthly_growth_factor_populated = 1 }
+    GO_econ_state_has_gdp = yes
+    check_variable = { var = GO_econ_state_gdp value = 0 compare = greater_than_or_equals }
+    is_controlled_by = OWNER
+    GO_econ_state_has_growth_modifier_percent = yes
+    GO_econ_state_has_services_funded_levels = yes
+}
+
+GO_econ_state_has_gdp_monthly_projection = {
+    GO_econ_state_ledger_initialized = yes
+    GO_econ_fiscal_config_ready = yes
+    has_variable = GO_econ_state_gdp_monthly_projection
+    check_variable = { GO_econ_state_gdp_monthly_projection_populated = 1 }
+    GO_econ_state_has_gdp = yes
+    check_variable = { var = GO_econ_state_gdp value = 0 compare = greater_than_or_equals }
+    is_controlled_by = OWNER
+    GO_econ_state_has_growth_modifier_percent = yes
+    GO_econ_state_has_services_funded_levels = yes
+}

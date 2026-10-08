@@ -15,8 +15,13 @@ guiTypes = {
 		fade_time = 500
 		fade_type = linear
 
-
-
+		# Required engine selection hook; retain the authored invisible entry background.
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_bookmark_entry_bg"
+			clicksound = click_checkbox
+			hide = yes
+		}
 		iconType = {
 			name = "icon"
 			spriteType = "GFX_select_date_1936"
@@ -122,6 +127,38 @@ guiTypes = {
 	### country entry
 	containerWindowType = {
 		name = "country_entry"
+
+		# Required engine hooks, hidden to retain the authored flag-only country strip.
+		buttonType = {
+			name = "country_leader"
+			quadTextureSprite = "GFX_leader_unknown"
+			position = { x = 17 y = 22 }
+			scale = 0.75
+			clicksound = click_checkbox
+			hide = yes
+		}
+
+		buttonType = {
+			name = "country_shine"
+			quadTextureSprite = "GFX_country_selection_entry_shine"
+			position = { x = 0 y = 803 }
+			clicksound = click_checkbox
+			scale = 0.980
+			hide = yes
+		}
+
+		instantTextBoxType = {
+			name = "country_name"
+			position = { x = 8 y = 247 }
+			font = "hoi_20b"
+			borderSize = { x = 0 y = 0 }
+			maxWidth = 131
+			maxHeight = 20
+			fixedsize = yes
+			format = center
+			Orientation = "UPPER_LEFT"
+			hide = yes
+		}
 
 		iconType = {
 			name = "country_flag"
@@ -627,10 +664,8 @@ guiTypes = {
 				position = { x = 50 y = -352 }
 				slotsize = { width = 150 height = 94 }
 				size = { height = 300 width = 1 }
-				scrollbarType = "right_vertical_slider"
 				add_horizontal = no
 				format = "UPPER_LEFT"
-				clipping = yes 
 			}
 
 		}

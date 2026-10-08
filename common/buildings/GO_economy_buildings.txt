@@ -1,0 +1,27 @@
+# Physical backend only; no normal construction route or economy simulation.
+# Engine construction IC is not the project's treasury price.
+# Sources: installed 1.18.3 common/buildings/00_buildings.txt and
+# 01_landmark_buildings.txt; see the design brief's Stage 5 evidence.
+buildings = {
+	GO_econ_substation = {
+		show_on_map = 1
+		spawn_point = GO_econ_substation_spawn
+		base_cost = 1
+		icon_frame = 1
+		is_buildable = no
+		only_display_if_exists = yes
+		level_cap = {
+			state_max = 5
+		}
+	}
+}
+
+# An authored map/buildings.txt position is required before the state location
+# readiness input may be set. No campaign positions are supplied by Stage 5.
+spawn_points = {
+	GO_econ_substation_spawn = {
+		type = state
+		max = 1
+		disable_auto_nudging = yes
+	}
+}

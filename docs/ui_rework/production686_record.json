@@ -1,0 +1,235 @@
+{
+  "target": "1.18.*",
+  "installed": "1.18.3.0.7709",
+  "in_game_tested": false,
+  "source_evidence": [
+    "Installed launcher-settings.json reconfirmed Case Green 1.18.3.0.7709.",
+    "Project interface/countryproductionlineview.gfx: existing four outdated overlays and five three-frame production buttons; definitions preserved.",
+    "Project interface/countryproductionlineview.gui: equipment overlays are drawn before equipment illustrations and labels; positions and click targets preserved.",
+    "Project interface/topbar.gui: player_flag at (12,14), topbar offset (-4,-1). Installed interface/general_stuff.gfx GFX_shield_medium uses the 82x52 flag_overlay.dds; only the underlying local flag pocket is redrawn.",
+    "Project tools/ui_rework/ui_rework.py encode_dds preserves original headers, channel masks and mip counts. Existing procedural UI workflow extended; no AI illustration generation."
+  ],
+  "checks": [
+    "All ten outputs decoded successfully at unchanged dimensions.",
+    "All DDS headers, formats and mip counts unchanged.",
+    "Topbar pixels outside (5,7)-(100,82) unchanged.",
+    "Offline native-size preview inspected, including all three button states."
+  ],
+  "remaining_in_game_checks": [
+    "Expanded/collapsed land and naval outdated tint alignment, including equipment chooser.",
+    "Production buttons normal/hover/disabled appearance and flag frame at actual UI scaling."
+  ],
+  "recovery_archive": "tools\\ui_rework\\production686_before.zip",
+  "assets": [
+    {
+      "path": "gfx/interface/outdated_equipment_overlay.dds",
+      "before_sha256": "13a29efb5f162764c49fb7bac72f4538d4a706ee36b15a0489b17b39b16b6dc8",
+      "after_sha256": "6ae88629cfc0cc07396ee61bc3bd0fbbc4f6defd5228fdb17f1c85de5166953d",
+      "contract": {
+        "width": 273,
+        "height": 72,
+        "mip_count": 0,
+        "format": "RGB32",
+        "rgb_bits": 32,
+        "masks": [
+          16711680,
+          65280,
+          255,
+          4278190080
+        ],
+        "header_sha256": "2f67e5e536dc24786d1c525fd970e1218d7f17acf25e3ef7925a2d8c371363c1",
+        "flags": 528391,
+        "caps": 4096
+      }
+    },
+    {
+      "path": "gfx/interface/outdated_equipment_overlay_collapsed.dds",
+      "before_sha256": "558a3f9e62d16b5decf335a6174364ef1e9d9163e64f85c39ab94ac94f4ef7f6",
+      "after_sha256": "3187065e2df2a4801158e87c8f082ac18d47e30ee72b45e636286eca90920e12",
+      "contract": {
+        "width": 278,
+        "height": 26,
+        "mip_count": 0,
+        "format": "RGB32",
+        "rgb_bits": 32,
+        "masks": [
+          16711680,
+          65280,
+          255,
+          4278190080
+        ],
+        "header_sha256": "3676faa30488fcfbcf1e426b2503f3e61a9fe2772c7418178325ee5bf410796b",
+        "flags": 4111,
+        "caps": 4096
+      }
+    },
+    {
+      "path": "gfx/interface/outdated_naval_equipment_overlay.dds",
+      "before_sha256": "c635eee02c1d799ad574224ad13fb88a4480d988934ba6642180269d4f3affbb",
+      "after_sha256": "3982ab9c53b4478dcfc93e0f7f18f7735042ee0f7f37b8ae00fb88e881d6d0a2",
+      "contract": {
+        "width": 360,
+        "height": 72,
+        "mip_count": 0,
+        "format": "RGB32",
+        "rgb_bits": 32,
+        "masks": [
+          16711680,
+          65280,
+          255,
+          4278190080
+        ],
+        "header_sha256": "85ef5ed773d9915174c7fe20501c34e9f6a36d9ea16b12d5de6768877892ad78",
+        "flags": 528391,
+        "caps": 4096
+      }
+    },
+    {
+      "path": "gfx/interface/outdated_naval_overlay_collapsed.dds",
+      "before_sha256": "ec7ddd82193814c197330c4600c0ca7dbc30f5fc72ebc5135e7d4ae9dd69ceca",
+      "after_sha256": "6e5e9bea18c72ff58ccfdfd657323104bd7d9e832ad8e0c84acdc235d4eb814d",
+      "contract": {
+        "width": 357,
+        "height": 26,
+        "mip_count": 0,
+        "format": "RGB32",
+        "rgb_bits": 32,
+        "masks": [
+          16711680,
+          65280,
+          255,
+          4278190080
+        ],
+        "header_sha256": "0c8ca4a9ed95da0bdd301953a16c81183298ca8b4447b6f60f4b98825c12dd85",
+        "flags": 4111,
+        "caps": 4096
+      }
+    },
+    {
+      "path": "gfx/interface/add_prod_inf_art_line.dds",
+      "before_sha256": "1260c6f2d749d3b2a40589c3b435f2fb1724b300d19ca56c24b75a2f4502e281",
+      "after_sha256": "26790bfa5364e7abc3cb86bcd2436d11dfdabebfbde2813a6975c26fbc422c16",
+      "contract": {
+        "width": 243,
+        "height": 41,
+        "mip_count": 0,
+        "format": "RGB32",
+        "rgb_bits": 32,
+        "masks": [
+          16711680,
+          65280,
+          255,
+          4278190080
+        ],
+        "header_sha256": "7aba50c2b414684be3fee60c81440b8ee0a6343f8fde5806d8725e065c7fd1d5",
+        "flags": 528391,
+        "caps": 4096
+      }
+    },
+    {
+      "path": "gfx/interface/add_prod_armour_line.dds",
+      "before_sha256": "69595eb6d28cf91360fdb9670e3f9103ad2cce60cd2ef1894065b420427c0b1d",
+      "after_sha256": "41d63283133b8ed5ca410f9a45edd6b2bf95da81b5517d1904d6d7a89b3e34c8",
+      "contract": {
+        "width": 243,
+        "height": 41,
+        "mip_count": 0,
+        "format": "RGB32",
+        "rgb_bits": 32,
+        "masks": [
+          16711680,
+          65280,
+          255,
+          4278190080
+        ],
+        "header_sha256": "7aba50c2b414684be3fee60c81440b8ee0a6343f8fde5806d8725e065c7fd1d5",
+        "flags": 528391,
+        "caps": 4096
+      }
+    },
+    {
+      "path": "gfx/interface/add_prod_aircraft_line.dds",
+      "before_sha256": "b2e7e57b4b570bbd3f0188331bd8367a3d37585c28df615dc91520f79bcdac97",
+      "after_sha256": "e954b2e5a620c69ed98aaa53987e5fea26e356b61b973d8601c23d650b0f5aad",
+      "contract": {
+        "width": 243,
+        "height": 41,
+        "mip_count": 0,
+        "format": "RGB32",
+        "rgb_bits": 32,
+        "masks": [
+          16711680,
+          65280,
+          255,
+          4278190080
+        ],
+        "header_sha256": "7aba50c2b414684be3fee60c81440b8ee0a6343f8fde5806d8725e065c7fd1d5",
+        "flags": 528391,
+        "caps": 4096
+      }
+    },
+    {
+      "path": "gfx/interface/add_prod_naval_line.dds",
+      "before_sha256": "a344e9f02165355a65b2e0b5f099599ab6568ecbc92e83eb6009a7447db6ff28",
+      "after_sha256": "64f5efcda29af0ee650b93468be44a4e2faa12299e6fcf78466a0eb9ee6dffae",
+      "contract": {
+        "width": 243,
+        "height": 41,
+        "mip_count": 0,
+        "format": "RGB32",
+        "rgb_bits": 32,
+        "masks": [
+          16711680,
+          65280,
+          255,
+          4278190080
+        ],
+        "header_sha256": "7aba50c2b414684be3fee60c81440b8ee0a6343f8fde5806d8725e065c7fd1d5",
+        "flags": 528391,
+        "caps": 4096
+      }
+    },
+    {
+      "path": "gfx/interface/naval_repair_view_button.dds",
+      "before_sha256": "79a5bda33d6de4d17fbf09353e89b7225baf647bbd4d42486ad95ca7680a2b72",
+      "after_sha256": "9bd95d3893a21d8ee91986a2789a4550a32332fd22c7eab00ab5eb91e8807221",
+      "contract": {
+        "width": 243,
+        "height": 41,
+        "mip_count": 8,
+        "format": "RGB32",
+        "rgb_bits": 32,
+        "masks": [
+          16711680,
+          65280,
+          255,
+          4278190080
+        ],
+        "header_sha256": "5cb220ecd14defc9b8236c6556e45bf04c3ab9576b285057c0a7a6665d617979",
+        "flags": 659463,
+        "caps": 4198408
+      }
+    },
+    {
+      "path": "gfx/interface/topbar/background_extended.dds",
+      "before_sha256": "cf4de56a66b5f6ca7dd249c9ff0f7b90ec3d0e07c37a8b8f346488e1968fb99e",
+      "after_sha256": "8166aaad57ebee1f25503b4f107b607035379960654269e191505fcc5d6f9db1",
+      "contract": {
+        "width": 2346,
+        "height": 87,
+        "mip_count": 1,
+        "format": "RGB32",
+        "rgb_bits": 32,
+        "masks": [
+          16711680,
+          65280,
+          255,
+          4278190080
+        ],
+        "header_sha256": "61eeeaee6bb2ca791900fbe9c02d333cc704db2bf681a5aa19284ec47dcecd55",
+        "flags": 4111,
+        "caps": 4096
+      }
+    }
+  ]
+}

@@ -2,12 +2,18 @@ on_actions = {
 
 	on_startup = {
 		effect = {
-			
+			# Native startup has no country scope. SOV is an existing anchor only.
+			SOV = { GO_econ_initialize_ammunition_backend = yes }
 		}
 	}
 
 	on_daily = {
 		effect = {
+			GO_econ_initialize_country_ammunition_production = yes
+			if = {
+				limit = { GO_econ_ammunition_daily_update_ready = yes }
+				# Persist before consumption/receipts; repeated calls cannot settle twice.
+				set_variable = { GO_econ_country_ammunition_last_day = global.num_days }
 
 
 			#### daily consumption
@@ -107,6 +113,9 @@ on_actions = {
 
 			multiply_variable = { ammunition_daily = ammunition_factor_calc }
 
+			# Fixed 500/day plant output is outside the legacy gain factor.
+			# The recipe debits steel once and joins the single stock credit below.
+			GO_econ_update_ammunition_plant_production = yes
 
 			add_to_variable = { ammunition_variable = ammunition_daily }
 
@@ -206,6 +215,7 @@ on_actions = {
 					check_variable = { ammunition_balance < 0 }
 				}
 				set_variable = { ammo_frame_var = 3 }
+			}
 			}
 
 		}

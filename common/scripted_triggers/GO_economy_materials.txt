@@ -1,0 +1,857 @@
+# Gruppa Ost Stage 6 - COUNTRY national material account guards.
+# Abstract game-accounting units, not mass. Fractional nonnegative balances and
+# source quantities are permitted; assigned ammunition levels use whole guards
+# in their separate backend. No state resource_* values enter these accounts.
+# Established variable/marker syntax: design evidence E-001/E-002/E-009.
+# Temporary arithmetic follows installed 1.18.3.0.7709 / E-028.
+#
+# Catalog IDs: 1 iron, 2 bauxite, 3 food, 4 coal, 5 natural_gas, 6 oil,
+# 7 rare_earth_minerals, 8 tungsten, 9 titanium, 10 steel, 11 aluminium,
+# 12 rubber, 13 rations, 14 fuel, 15 microchips.
+# A complete ready account includes stock plus lifetime flow history since its
+# explicit opening. Counters are never a daily throughput or a complete budget.
+
+GO_econ_country_materials_initialized = {
+    has_variable = GO_econ_country_material_schema_version
+    check_variable = { GO_econ_country_material_schema_version = 1 }
+}
+
+GO_econ_work_material_id_valid = {
+    has_variable = GO_econ_work_material_id
+    OR = {
+        check_variable = { GO_econ_work_material_id = 1 }
+        check_variable = { GO_econ_work_material_id = 2 }
+        check_variable = { GO_econ_work_material_id = 3 }
+        check_variable = { GO_econ_work_material_id = 4 }
+        check_variable = { GO_econ_work_material_id = 5 }
+        check_variable = { GO_econ_work_material_id = 6 }
+        check_variable = { GO_econ_work_material_id = 7 }
+        check_variable = { GO_econ_work_material_id = 8 }
+        check_variable = { GO_econ_work_material_id = 9 }
+        check_variable = { GO_econ_work_material_id = 10 }
+        check_variable = { GO_econ_work_material_id = 11 }
+        check_variable = { GO_econ_work_material_id = 12 }
+        check_variable = { GO_econ_work_material_id = 13 }
+        check_variable = { GO_econ_work_material_id = 14 }
+        check_variable = { GO_econ_work_material_id = 15 }
+    }
+}
+
+GO_econ_work_material_quantity_valid = {
+    has_variable = GO_econ_work_material_quantity
+    check_variable = { var = GO_econ_work_material_quantity value = 0 compare = greater_than_or_equals }
+}
+
+GO_econ_country_has_material_iron = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_iron
+    has_variable = GO_econ_country_material_iron_populated
+    has_variable = GO_econ_country_material_iron_opening_stock
+    has_variable = GO_econ_country_material_iron_opening_recorded
+    has_variable = GO_econ_country_material_iron_input_total
+    has_variable = GO_econ_country_material_iron_consumption_total
+    has_variable = GO_econ_country_material_iron_output_total
+    has_variable = GO_econ_country_material_iron_flows_populated
+    check_variable = { GO_econ_country_material_iron_populated = 1 }
+    check_variable = { GO_econ_country_material_iron_flows_populated = 1 }
+    check_variable = { GO_econ_country_material_iron_opening_recorded = 1 }
+    check_variable = { var = GO_econ_country_material_iron value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_iron_opening_stock value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_iron_input_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_iron_consumption_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_iron_output_total value = 0 compare = greater_than_or_equals }
+}
+
+# Only this wholly fresh, untouched placeholder may receive an opening.
+GO_econ_material_iron_can_open = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_iron
+    has_variable = GO_econ_country_material_iron_populated
+    has_variable = GO_econ_country_material_iron_opening_stock
+    has_variable = GO_econ_country_material_iron_opening_recorded
+    has_variable = GO_econ_country_material_iron_input_total
+    has_variable = GO_econ_country_material_iron_consumption_total
+    has_variable = GO_econ_country_material_iron_output_total
+    has_variable = GO_econ_country_material_iron_flows_populated
+    check_variable = { GO_econ_country_material_iron = 0 }
+    check_variable = { GO_econ_country_material_iron_populated = 0 }
+    check_variable = { GO_econ_country_material_iron_opening_stock = 0 }
+    check_variable = { GO_econ_country_material_iron_opening_recorded = 0 }
+    check_variable = { GO_econ_country_material_iron_input_total = 0 }
+    check_variable = { GO_econ_country_material_iron_consumption_total = 0 }
+    check_variable = { GO_econ_country_material_iron_output_total = 0 }
+    check_variable = { GO_econ_country_material_iron_flows_populated = 0 }
+}
+
+GO_econ_country_has_material_bauxite = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_bauxite
+    has_variable = GO_econ_country_material_bauxite_populated
+    has_variable = GO_econ_country_material_bauxite_opening_stock
+    has_variable = GO_econ_country_material_bauxite_opening_recorded
+    has_variable = GO_econ_country_material_bauxite_input_total
+    has_variable = GO_econ_country_material_bauxite_consumption_total
+    has_variable = GO_econ_country_material_bauxite_output_total
+    has_variable = GO_econ_country_material_bauxite_flows_populated
+    check_variable = { GO_econ_country_material_bauxite_populated = 1 }
+    check_variable = { GO_econ_country_material_bauxite_flows_populated = 1 }
+    check_variable = { GO_econ_country_material_bauxite_opening_recorded = 1 }
+    check_variable = { var = GO_econ_country_material_bauxite value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_bauxite_opening_stock value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_bauxite_input_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_bauxite_consumption_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_bauxite_output_total value = 0 compare = greater_than_or_equals }
+}
+
+# Only this wholly fresh, untouched placeholder may receive an opening.
+GO_econ_material_bauxite_can_open = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_bauxite
+    has_variable = GO_econ_country_material_bauxite_populated
+    has_variable = GO_econ_country_material_bauxite_opening_stock
+    has_variable = GO_econ_country_material_bauxite_opening_recorded
+    has_variable = GO_econ_country_material_bauxite_input_total
+    has_variable = GO_econ_country_material_bauxite_consumption_total
+    has_variable = GO_econ_country_material_bauxite_output_total
+    has_variable = GO_econ_country_material_bauxite_flows_populated
+    check_variable = { GO_econ_country_material_bauxite = 0 }
+    check_variable = { GO_econ_country_material_bauxite_populated = 0 }
+    check_variable = { GO_econ_country_material_bauxite_opening_stock = 0 }
+    check_variable = { GO_econ_country_material_bauxite_opening_recorded = 0 }
+    check_variable = { GO_econ_country_material_bauxite_input_total = 0 }
+    check_variable = { GO_econ_country_material_bauxite_consumption_total = 0 }
+    check_variable = { GO_econ_country_material_bauxite_output_total = 0 }
+    check_variable = { GO_econ_country_material_bauxite_flows_populated = 0 }
+}
+
+GO_econ_country_has_material_food = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_food
+    has_variable = GO_econ_country_material_food_populated
+    has_variable = GO_econ_country_material_food_opening_stock
+    has_variable = GO_econ_country_material_food_opening_recorded
+    has_variable = GO_econ_country_material_food_input_total
+    has_variable = GO_econ_country_material_food_consumption_total
+    has_variable = GO_econ_country_material_food_output_total
+    has_variable = GO_econ_country_material_food_flows_populated
+    check_variable = { GO_econ_country_material_food_populated = 1 }
+    check_variable = { GO_econ_country_material_food_flows_populated = 1 }
+    check_variable = { GO_econ_country_material_food_opening_recorded = 1 }
+    check_variable = { var = GO_econ_country_material_food value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_food_opening_stock value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_food_input_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_food_consumption_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_food_output_total value = 0 compare = greater_than_or_equals }
+}
+
+# Only this wholly fresh, untouched placeholder may receive an opening.
+GO_econ_material_food_can_open = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_food
+    has_variable = GO_econ_country_material_food_populated
+    has_variable = GO_econ_country_material_food_opening_stock
+    has_variable = GO_econ_country_material_food_opening_recorded
+    has_variable = GO_econ_country_material_food_input_total
+    has_variable = GO_econ_country_material_food_consumption_total
+    has_variable = GO_econ_country_material_food_output_total
+    has_variable = GO_econ_country_material_food_flows_populated
+    check_variable = { GO_econ_country_material_food = 0 }
+    check_variable = { GO_econ_country_material_food_populated = 0 }
+    check_variable = { GO_econ_country_material_food_opening_stock = 0 }
+    check_variable = { GO_econ_country_material_food_opening_recorded = 0 }
+    check_variable = { GO_econ_country_material_food_input_total = 0 }
+    check_variable = { GO_econ_country_material_food_consumption_total = 0 }
+    check_variable = { GO_econ_country_material_food_output_total = 0 }
+    check_variable = { GO_econ_country_material_food_flows_populated = 0 }
+}
+
+GO_econ_country_has_material_coal = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_coal
+    has_variable = GO_econ_country_material_coal_populated
+    has_variable = GO_econ_country_material_coal_opening_stock
+    has_variable = GO_econ_country_material_coal_opening_recorded
+    has_variable = GO_econ_country_material_coal_input_total
+    has_variable = GO_econ_country_material_coal_consumption_total
+    has_variable = GO_econ_country_material_coal_output_total
+    has_variable = GO_econ_country_material_coal_flows_populated
+    check_variable = { GO_econ_country_material_coal_populated = 1 }
+    check_variable = { GO_econ_country_material_coal_flows_populated = 1 }
+    check_variable = { GO_econ_country_material_coal_opening_recorded = 1 }
+    check_variable = { var = GO_econ_country_material_coal value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_coal_opening_stock value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_coal_input_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_coal_consumption_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_coal_output_total value = 0 compare = greater_than_or_equals }
+}
+
+# Only this wholly fresh, untouched placeholder may receive an opening.
+GO_econ_material_coal_can_open = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_coal
+    has_variable = GO_econ_country_material_coal_populated
+    has_variable = GO_econ_country_material_coal_opening_stock
+    has_variable = GO_econ_country_material_coal_opening_recorded
+    has_variable = GO_econ_country_material_coal_input_total
+    has_variable = GO_econ_country_material_coal_consumption_total
+    has_variable = GO_econ_country_material_coal_output_total
+    has_variable = GO_econ_country_material_coal_flows_populated
+    check_variable = { GO_econ_country_material_coal = 0 }
+    check_variable = { GO_econ_country_material_coal_populated = 0 }
+    check_variable = { GO_econ_country_material_coal_opening_stock = 0 }
+    check_variable = { GO_econ_country_material_coal_opening_recorded = 0 }
+    check_variable = { GO_econ_country_material_coal_input_total = 0 }
+    check_variable = { GO_econ_country_material_coal_consumption_total = 0 }
+    check_variable = { GO_econ_country_material_coal_output_total = 0 }
+    check_variable = { GO_econ_country_material_coal_flows_populated = 0 }
+}
+
+GO_econ_country_has_material_natural_gas = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_natural_gas
+    has_variable = GO_econ_country_material_natural_gas_populated
+    has_variable = GO_econ_country_material_natural_gas_opening_stock
+    has_variable = GO_econ_country_material_natural_gas_opening_recorded
+    has_variable = GO_econ_country_material_natural_gas_input_total
+    has_variable = GO_econ_country_material_natural_gas_consumption_total
+    has_variable = GO_econ_country_material_natural_gas_output_total
+    has_variable = GO_econ_country_material_natural_gas_flows_populated
+    check_variable = { GO_econ_country_material_natural_gas_populated = 1 }
+    check_variable = { GO_econ_country_material_natural_gas_flows_populated = 1 }
+    check_variable = { GO_econ_country_material_natural_gas_opening_recorded = 1 }
+    check_variable = { var = GO_econ_country_material_natural_gas value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_natural_gas_opening_stock value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_natural_gas_input_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_natural_gas_consumption_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_natural_gas_output_total value = 0 compare = greater_than_or_equals }
+}
+
+# Only this wholly fresh, untouched placeholder may receive an opening.
+GO_econ_material_natural_gas_can_open = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_natural_gas
+    has_variable = GO_econ_country_material_natural_gas_populated
+    has_variable = GO_econ_country_material_natural_gas_opening_stock
+    has_variable = GO_econ_country_material_natural_gas_opening_recorded
+    has_variable = GO_econ_country_material_natural_gas_input_total
+    has_variable = GO_econ_country_material_natural_gas_consumption_total
+    has_variable = GO_econ_country_material_natural_gas_output_total
+    has_variable = GO_econ_country_material_natural_gas_flows_populated
+    check_variable = { GO_econ_country_material_natural_gas = 0 }
+    check_variable = { GO_econ_country_material_natural_gas_populated = 0 }
+    check_variable = { GO_econ_country_material_natural_gas_opening_stock = 0 }
+    check_variable = { GO_econ_country_material_natural_gas_opening_recorded = 0 }
+    check_variable = { GO_econ_country_material_natural_gas_input_total = 0 }
+    check_variable = { GO_econ_country_material_natural_gas_consumption_total = 0 }
+    check_variable = { GO_econ_country_material_natural_gas_output_total = 0 }
+    check_variable = { GO_econ_country_material_natural_gas_flows_populated = 0 }
+}
+
+GO_econ_country_has_material_oil = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_oil
+    has_variable = GO_econ_country_material_oil_populated
+    has_variable = GO_econ_country_material_oil_opening_stock
+    has_variable = GO_econ_country_material_oil_opening_recorded
+    has_variable = GO_econ_country_material_oil_input_total
+    has_variable = GO_econ_country_material_oil_consumption_total
+    has_variable = GO_econ_country_material_oil_output_total
+    has_variable = GO_econ_country_material_oil_flows_populated
+    check_variable = { GO_econ_country_material_oil_populated = 1 }
+    check_variable = { GO_econ_country_material_oil_flows_populated = 1 }
+    check_variable = { GO_econ_country_material_oil_opening_recorded = 1 }
+    check_variable = { var = GO_econ_country_material_oil value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_oil_opening_stock value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_oil_input_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_oil_consumption_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_oil_output_total value = 0 compare = greater_than_or_equals }
+}
+
+# Only this wholly fresh, untouched placeholder may receive an opening.
+GO_econ_material_oil_can_open = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_oil
+    has_variable = GO_econ_country_material_oil_populated
+    has_variable = GO_econ_country_material_oil_opening_stock
+    has_variable = GO_econ_country_material_oil_opening_recorded
+    has_variable = GO_econ_country_material_oil_input_total
+    has_variable = GO_econ_country_material_oil_consumption_total
+    has_variable = GO_econ_country_material_oil_output_total
+    has_variable = GO_econ_country_material_oil_flows_populated
+    check_variable = { GO_econ_country_material_oil = 0 }
+    check_variable = { GO_econ_country_material_oil_populated = 0 }
+    check_variable = { GO_econ_country_material_oil_opening_stock = 0 }
+    check_variable = { GO_econ_country_material_oil_opening_recorded = 0 }
+    check_variable = { GO_econ_country_material_oil_input_total = 0 }
+    check_variable = { GO_econ_country_material_oil_consumption_total = 0 }
+    check_variable = { GO_econ_country_material_oil_output_total = 0 }
+    check_variable = { GO_econ_country_material_oil_flows_populated = 0 }
+}
+
+GO_econ_country_has_material_rare_earth_minerals = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_rare_earth_minerals
+    has_variable = GO_econ_country_material_rare_earth_minerals_populated
+    has_variable = GO_econ_country_material_rare_earth_minerals_opening_stock
+    has_variable = GO_econ_country_material_rare_earth_minerals_opening_recorded
+    has_variable = GO_econ_country_material_rare_earth_minerals_input_total
+    has_variable = GO_econ_country_material_rare_earth_minerals_consumption_total
+    has_variable = GO_econ_country_material_rare_earth_minerals_output_total
+    has_variable = GO_econ_country_material_rare_earth_minerals_flows_populated
+    check_variable = { GO_econ_country_material_rare_earth_minerals_populated = 1 }
+    check_variable = { GO_econ_country_material_rare_earth_minerals_flows_populated = 1 }
+    check_variable = { GO_econ_country_material_rare_earth_minerals_opening_recorded = 1 }
+    check_variable = { var = GO_econ_country_material_rare_earth_minerals value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_rare_earth_minerals_opening_stock value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_rare_earth_minerals_input_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_rare_earth_minerals_consumption_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_rare_earth_minerals_output_total value = 0 compare = greater_than_or_equals }
+}
+
+# Only this wholly fresh, untouched placeholder may receive an opening.
+GO_econ_material_rare_earth_minerals_can_open = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_rare_earth_minerals
+    has_variable = GO_econ_country_material_rare_earth_minerals_populated
+    has_variable = GO_econ_country_material_rare_earth_minerals_opening_stock
+    has_variable = GO_econ_country_material_rare_earth_minerals_opening_recorded
+    has_variable = GO_econ_country_material_rare_earth_minerals_input_total
+    has_variable = GO_econ_country_material_rare_earth_minerals_consumption_total
+    has_variable = GO_econ_country_material_rare_earth_minerals_output_total
+    has_variable = GO_econ_country_material_rare_earth_minerals_flows_populated
+    check_variable = { GO_econ_country_material_rare_earth_minerals = 0 }
+    check_variable = { GO_econ_country_material_rare_earth_minerals_populated = 0 }
+    check_variable = { GO_econ_country_material_rare_earth_minerals_opening_stock = 0 }
+    check_variable = { GO_econ_country_material_rare_earth_minerals_opening_recorded = 0 }
+    check_variable = { GO_econ_country_material_rare_earth_minerals_input_total = 0 }
+    check_variable = { GO_econ_country_material_rare_earth_minerals_consumption_total = 0 }
+    check_variable = { GO_econ_country_material_rare_earth_minerals_output_total = 0 }
+    check_variable = { GO_econ_country_material_rare_earth_minerals_flows_populated = 0 }
+}
+
+GO_econ_country_has_material_tungsten = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_tungsten
+    has_variable = GO_econ_country_material_tungsten_populated
+    has_variable = GO_econ_country_material_tungsten_opening_stock
+    has_variable = GO_econ_country_material_tungsten_opening_recorded
+    has_variable = GO_econ_country_material_tungsten_input_total
+    has_variable = GO_econ_country_material_tungsten_consumption_total
+    has_variable = GO_econ_country_material_tungsten_output_total
+    has_variable = GO_econ_country_material_tungsten_flows_populated
+    check_variable = { GO_econ_country_material_tungsten_populated = 1 }
+    check_variable = { GO_econ_country_material_tungsten_flows_populated = 1 }
+    check_variable = { GO_econ_country_material_tungsten_opening_recorded = 1 }
+    check_variable = { var = GO_econ_country_material_tungsten value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_tungsten_opening_stock value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_tungsten_input_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_tungsten_consumption_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_tungsten_output_total value = 0 compare = greater_than_or_equals }
+}
+
+# Only this wholly fresh, untouched placeholder may receive an opening.
+GO_econ_material_tungsten_can_open = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_tungsten
+    has_variable = GO_econ_country_material_tungsten_populated
+    has_variable = GO_econ_country_material_tungsten_opening_stock
+    has_variable = GO_econ_country_material_tungsten_opening_recorded
+    has_variable = GO_econ_country_material_tungsten_input_total
+    has_variable = GO_econ_country_material_tungsten_consumption_total
+    has_variable = GO_econ_country_material_tungsten_output_total
+    has_variable = GO_econ_country_material_tungsten_flows_populated
+    check_variable = { GO_econ_country_material_tungsten = 0 }
+    check_variable = { GO_econ_country_material_tungsten_populated = 0 }
+    check_variable = { GO_econ_country_material_tungsten_opening_stock = 0 }
+    check_variable = { GO_econ_country_material_tungsten_opening_recorded = 0 }
+    check_variable = { GO_econ_country_material_tungsten_input_total = 0 }
+    check_variable = { GO_econ_country_material_tungsten_consumption_total = 0 }
+    check_variable = { GO_econ_country_material_tungsten_output_total = 0 }
+    check_variable = { GO_econ_country_material_tungsten_flows_populated = 0 }
+}
+
+GO_econ_country_has_material_titanium = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_titanium
+    has_variable = GO_econ_country_material_titanium_populated
+    has_variable = GO_econ_country_material_titanium_opening_stock
+    has_variable = GO_econ_country_material_titanium_opening_recorded
+    has_variable = GO_econ_country_material_titanium_input_total
+    has_variable = GO_econ_country_material_titanium_consumption_total
+    has_variable = GO_econ_country_material_titanium_output_total
+    has_variable = GO_econ_country_material_titanium_flows_populated
+    check_variable = { GO_econ_country_material_titanium_populated = 1 }
+    check_variable = { GO_econ_country_material_titanium_flows_populated = 1 }
+    check_variable = { GO_econ_country_material_titanium_opening_recorded = 1 }
+    check_variable = { var = GO_econ_country_material_titanium value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_titanium_opening_stock value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_titanium_input_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_titanium_consumption_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_titanium_output_total value = 0 compare = greater_than_or_equals }
+}
+
+# Only this wholly fresh, untouched placeholder may receive an opening.
+GO_econ_material_titanium_can_open = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_titanium
+    has_variable = GO_econ_country_material_titanium_populated
+    has_variable = GO_econ_country_material_titanium_opening_stock
+    has_variable = GO_econ_country_material_titanium_opening_recorded
+    has_variable = GO_econ_country_material_titanium_input_total
+    has_variable = GO_econ_country_material_titanium_consumption_total
+    has_variable = GO_econ_country_material_titanium_output_total
+    has_variable = GO_econ_country_material_titanium_flows_populated
+    check_variable = { GO_econ_country_material_titanium = 0 }
+    check_variable = { GO_econ_country_material_titanium_populated = 0 }
+    check_variable = { GO_econ_country_material_titanium_opening_stock = 0 }
+    check_variable = { GO_econ_country_material_titanium_opening_recorded = 0 }
+    check_variable = { GO_econ_country_material_titanium_input_total = 0 }
+    check_variable = { GO_econ_country_material_titanium_consumption_total = 0 }
+    check_variable = { GO_econ_country_material_titanium_output_total = 0 }
+    check_variable = { GO_econ_country_material_titanium_flows_populated = 0 }
+}
+
+GO_econ_country_has_material_steel = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_steel
+    has_variable = GO_econ_country_material_steel_populated
+    has_variable = GO_econ_country_material_steel_opening_stock
+    has_variable = GO_econ_country_material_steel_opening_recorded
+    has_variable = GO_econ_country_material_steel_input_total
+    has_variable = GO_econ_country_material_steel_consumption_total
+    has_variable = GO_econ_country_material_steel_output_total
+    has_variable = GO_econ_country_material_steel_flows_populated
+    check_variable = { GO_econ_country_material_steel_populated = 1 }
+    check_variable = { GO_econ_country_material_steel_flows_populated = 1 }
+    check_variable = { GO_econ_country_material_steel_opening_recorded = 1 }
+    check_variable = { var = GO_econ_country_material_steel value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_steel_opening_stock value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_steel_input_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_steel_consumption_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_steel_output_total value = 0 compare = greater_than_or_equals }
+}
+
+# Only this wholly fresh, untouched placeholder may receive an opening.
+GO_econ_material_steel_can_open = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_steel
+    has_variable = GO_econ_country_material_steel_populated
+    has_variable = GO_econ_country_material_steel_opening_stock
+    has_variable = GO_econ_country_material_steel_opening_recorded
+    has_variable = GO_econ_country_material_steel_input_total
+    has_variable = GO_econ_country_material_steel_consumption_total
+    has_variable = GO_econ_country_material_steel_output_total
+    has_variable = GO_econ_country_material_steel_flows_populated
+    check_variable = { GO_econ_country_material_steel = 0 }
+    check_variable = { GO_econ_country_material_steel_populated = 0 }
+    check_variable = { GO_econ_country_material_steel_opening_stock = 0 }
+    check_variable = { GO_econ_country_material_steel_opening_recorded = 0 }
+    check_variable = { GO_econ_country_material_steel_input_total = 0 }
+    check_variable = { GO_econ_country_material_steel_consumption_total = 0 }
+    check_variable = { GO_econ_country_material_steel_output_total = 0 }
+    check_variable = { GO_econ_country_material_steel_flows_populated = 0 }
+}
+
+GO_econ_country_has_material_aluminium = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_aluminium
+    has_variable = GO_econ_country_material_aluminium_populated
+    has_variable = GO_econ_country_material_aluminium_opening_stock
+    has_variable = GO_econ_country_material_aluminium_opening_recorded
+    has_variable = GO_econ_country_material_aluminium_input_total
+    has_variable = GO_econ_country_material_aluminium_consumption_total
+    has_variable = GO_econ_country_material_aluminium_output_total
+    has_variable = GO_econ_country_material_aluminium_flows_populated
+    check_variable = { GO_econ_country_material_aluminium_populated = 1 }
+    check_variable = { GO_econ_country_material_aluminium_flows_populated = 1 }
+    check_variable = { GO_econ_country_material_aluminium_opening_recorded = 1 }
+    check_variable = { var = GO_econ_country_material_aluminium value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_aluminium_opening_stock value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_aluminium_input_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_aluminium_consumption_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_aluminium_output_total value = 0 compare = greater_than_or_equals }
+}
+
+# Only this wholly fresh, untouched placeholder may receive an opening.
+GO_econ_material_aluminium_can_open = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_aluminium
+    has_variable = GO_econ_country_material_aluminium_populated
+    has_variable = GO_econ_country_material_aluminium_opening_stock
+    has_variable = GO_econ_country_material_aluminium_opening_recorded
+    has_variable = GO_econ_country_material_aluminium_input_total
+    has_variable = GO_econ_country_material_aluminium_consumption_total
+    has_variable = GO_econ_country_material_aluminium_output_total
+    has_variable = GO_econ_country_material_aluminium_flows_populated
+    check_variable = { GO_econ_country_material_aluminium = 0 }
+    check_variable = { GO_econ_country_material_aluminium_populated = 0 }
+    check_variable = { GO_econ_country_material_aluminium_opening_stock = 0 }
+    check_variable = { GO_econ_country_material_aluminium_opening_recorded = 0 }
+    check_variable = { GO_econ_country_material_aluminium_input_total = 0 }
+    check_variable = { GO_econ_country_material_aluminium_consumption_total = 0 }
+    check_variable = { GO_econ_country_material_aluminium_output_total = 0 }
+    check_variable = { GO_econ_country_material_aluminium_flows_populated = 0 }
+}
+
+GO_econ_country_has_material_rubber = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_rubber
+    has_variable = GO_econ_country_material_rubber_populated
+    has_variable = GO_econ_country_material_rubber_opening_stock
+    has_variable = GO_econ_country_material_rubber_opening_recorded
+    has_variable = GO_econ_country_material_rubber_input_total
+    has_variable = GO_econ_country_material_rubber_consumption_total
+    has_variable = GO_econ_country_material_rubber_output_total
+    has_variable = GO_econ_country_material_rubber_flows_populated
+    check_variable = { GO_econ_country_material_rubber_populated = 1 }
+    check_variable = { GO_econ_country_material_rubber_flows_populated = 1 }
+    check_variable = { GO_econ_country_material_rubber_opening_recorded = 1 }
+    check_variable = { var = GO_econ_country_material_rubber value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_rubber_opening_stock value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_rubber_input_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_rubber_consumption_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_rubber_output_total value = 0 compare = greater_than_or_equals }
+}
+
+# Only this wholly fresh, untouched placeholder may receive an opening.
+GO_econ_material_rubber_can_open = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_rubber
+    has_variable = GO_econ_country_material_rubber_populated
+    has_variable = GO_econ_country_material_rubber_opening_stock
+    has_variable = GO_econ_country_material_rubber_opening_recorded
+    has_variable = GO_econ_country_material_rubber_input_total
+    has_variable = GO_econ_country_material_rubber_consumption_total
+    has_variable = GO_econ_country_material_rubber_output_total
+    has_variable = GO_econ_country_material_rubber_flows_populated
+    check_variable = { GO_econ_country_material_rubber = 0 }
+    check_variable = { GO_econ_country_material_rubber_populated = 0 }
+    check_variable = { GO_econ_country_material_rubber_opening_stock = 0 }
+    check_variable = { GO_econ_country_material_rubber_opening_recorded = 0 }
+    check_variable = { GO_econ_country_material_rubber_input_total = 0 }
+    check_variable = { GO_econ_country_material_rubber_consumption_total = 0 }
+    check_variable = { GO_econ_country_material_rubber_output_total = 0 }
+    check_variable = { GO_econ_country_material_rubber_flows_populated = 0 }
+}
+
+GO_econ_country_has_material_rations = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_rations
+    has_variable = GO_econ_country_material_rations_populated
+    has_variable = GO_econ_country_material_rations_opening_stock
+    has_variable = GO_econ_country_material_rations_opening_recorded
+    has_variable = GO_econ_country_material_rations_input_total
+    has_variable = GO_econ_country_material_rations_consumption_total
+    has_variable = GO_econ_country_material_rations_output_total
+    has_variable = GO_econ_country_material_rations_flows_populated
+    check_variable = { GO_econ_country_material_rations_populated = 1 }
+    check_variable = { GO_econ_country_material_rations_flows_populated = 1 }
+    check_variable = { GO_econ_country_material_rations_opening_recorded = 1 }
+    check_variable = { var = GO_econ_country_material_rations value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_rations_opening_stock value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_rations_input_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_rations_consumption_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_rations_output_total value = 0 compare = greater_than_or_equals }
+}
+
+# Only this wholly fresh, untouched placeholder may receive an opening.
+GO_econ_material_rations_can_open = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_rations
+    has_variable = GO_econ_country_material_rations_populated
+    has_variable = GO_econ_country_material_rations_opening_stock
+    has_variable = GO_econ_country_material_rations_opening_recorded
+    has_variable = GO_econ_country_material_rations_input_total
+    has_variable = GO_econ_country_material_rations_consumption_total
+    has_variable = GO_econ_country_material_rations_output_total
+    has_variable = GO_econ_country_material_rations_flows_populated
+    check_variable = { GO_econ_country_material_rations = 0 }
+    check_variable = { GO_econ_country_material_rations_populated = 0 }
+    check_variable = { GO_econ_country_material_rations_opening_stock = 0 }
+    check_variable = { GO_econ_country_material_rations_opening_recorded = 0 }
+    check_variable = { GO_econ_country_material_rations_input_total = 0 }
+    check_variable = { GO_econ_country_material_rations_consumption_total = 0 }
+    check_variable = { GO_econ_country_material_rations_output_total = 0 }
+    check_variable = { GO_econ_country_material_rations_flows_populated = 0 }
+}
+
+GO_econ_country_has_material_fuel = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_fuel
+    has_variable = GO_econ_country_material_fuel_populated
+    has_variable = GO_econ_country_material_fuel_opening_stock
+    has_variable = GO_econ_country_material_fuel_opening_recorded
+    has_variable = GO_econ_country_material_fuel_input_total
+    has_variable = GO_econ_country_material_fuel_consumption_total
+    has_variable = GO_econ_country_material_fuel_output_total
+    has_variable = GO_econ_country_material_fuel_flows_populated
+    check_variable = { GO_econ_country_material_fuel_populated = 1 }
+    check_variable = { GO_econ_country_material_fuel_flows_populated = 1 }
+    check_variable = { GO_econ_country_material_fuel_opening_recorded = 1 }
+    check_variable = { var = GO_econ_country_material_fuel value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_fuel_opening_stock value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_fuel_input_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_fuel_consumption_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_fuel_output_total value = 0 compare = greater_than_or_equals }
+}
+
+# Only this wholly fresh, untouched placeholder may receive an opening.
+GO_econ_material_fuel_can_open = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_fuel
+    has_variable = GO_econ_country_material_fuel_populated
+    has_variable = GO_econ_country_material_fuel_opening_stock
+    has_variable = GO_econ_country_material_fuel_opening_recorded
+    has_variable = GO_econ_country_material_fuel_input_total
+    has_variable = GO_econ_country_material_fuel_consumption_total
+    has_variable = GO_econ_country_material_fuel_output_total
+    has_variable = GO_econ_country_material_fuel_flows_populated
+    check_variable = { GO_econ_country_material_fuel = 0 }
+    check_variable = { GO_econ_country_material_fuel_populated = 0 }
+    check_variable = { GO_econ_country_material_fuel_opening_stock = 0 }
+    check_variable = { GO_econ_country_material_fuel_opening_recorded = 0 }
+    check_variable = { GO_econ_country_material_fuel_input_total = 0 }
+    check_variable = { GO_econ_country_material_fuel_consumption_total = 0 }
+    check_variable = { GO_econ_country_material_fuel_output_total = 0 }
+    check_variable = { GO_econ_country_material_fuel_flows_populated = 0 }
+}
+
+GO_econ_country_has_material_microchips = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_microchips
+    has_variable = GO_econ_country_material_microchips_populated
+    has_variable = GO_econ_country_material_microchips_opening_stock
+    has_variable = GO_econ_country_material_microchips_opening_recorded
+    has_variable = GO_econ_country_material_microchips_input_total
+    has_variable = GO_econ_country_material_microchips_consumption_total
+    has_variable = GO_econ_country_material_microchips_output_total
+    has_variable = GO_econ_country_material_microchips_flows_populated
+    check_variable = { GO_econ_country_material_microchips_populated = 1 }
+    check_variable = { GO_econ_country_material_microchips_flows_populated = 1 }
+    check_variable = { GO_econ_country_material_microchips_opening_recorded = 1 }
+    check_variable = { var = GO_econ_country_material_microchips value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_microchips_opening_stock value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_microchips_input_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_microchips_consumption_total value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_microchips_output_total value = 0 compare = greater_than_or_equals }
+}
+
+# Only this wholly fresh, untouched placeholder may receive an opening.
+GO_econ_material_microchips_can_open = {
+    GO_econ_country_materials_initialized = yes
+    has_variable = GO_econ_country_material_microchips
+    has_variable = GO_econ_country_material_microchips_populated
+    has_variable = GO_econ_country_material_microchips_opening_stock
+    has_variable = GO_econ_country_material_microchips_opening_recorded
+    has_variable = GO_econ_country_material_microchips_input_total
+    has_variable = GO_econ_country_material_microchips_consumption_total
+    has_variable = GO_econ_country_material_microchips_output_total
+    has_variable = GO_econ_country_material_microchips_flows_populated
+    check_variable = { GO_econ_country_material_microchips = 0 }
+    check_variable = { GO_econ_country_material_microchips_populated = 0 }
+    check_variable = { GO_econ_country_material_microchips_opening_stock = 0 }
+    check_variable = { GO_econ_country_material_microchips_opening_recorded = 0 }
+    check_variable = { GO_econ_country_material_microchips_input_total = 0 }
+    check_variable = { GO_econ_country_material_microchips_consumption_total = 0 }
+    check_variable = { GO_econ_country_material_microchips_output_total = 0 }
+    check_variable = { GO_econ_country_material_microchips_flows_populated = 0 }
+}
+
+GO_econ_selected_material_account_ready = {
+    GO_econ_work_material_id_valid = yes
+    OR = {
+        AND = {
+            check_variable = { GO_econ_work_material_id = 1 }
+            GO_econ_country_has_material_iron = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 2 }
+            GO_econ_country_has_material_bauxite = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 3 }
+            GO_econ_country_has_material_food = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 4 }
+            GO_econ_country_has_material_coal = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 5 }
+            GO_econ_country_has_material_natural_gas = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 6 }
+            GO_econ_country_has_material_oil = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 7 }
+            GO_econ_country_has_material_rare_earth_minerals = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 8 }
+            GO_econ_country_has_material_tungsten = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 9 }
+            GO_econ_country_has_material_titanium = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 10 }
+            GO_econ_country_has_material_steel = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 11 }
+            GO_econ_country_has_material_aluminium = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 12 }
+            GO_econ_country_has_material_rubber = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 13 }
+            GO_econ_country_has_material_rations = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 14 }
+            GO_econ_country_has_material_fuel = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 15 }
+            GO_econ_country_has_material_microchips = yes
+        }
+    }
+}
+
+GO_econ_selected_material_can_open = {
+    GO_econ_work_material_id_valid = yes
+    OR = {
+        AND = {
+            check_variable = { GO_econ_work_material_id = 1 }
+            GO_econ_material_iron_can_open = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 2 }
+            GO_econ_material_bauxite_can_open = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 3 }
+            GO_econ_material_food_can_open = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 4 }
+            GO_econ_material_coal_can_open = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 5 }
+            GO_econ_material_natural_gas_can_open = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 6 }
+            GO_econ_material_oil_can_open = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 7 }
+            GO_econ_material_rare_earth_minerals_can_open = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 8 }
+            GO_econ_material_tungsten_can_open = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 9 }
+            GO_econ_material_titanium_can_open = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 10 }
+            GO_econ_material_steel_can_open = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 11 }
+            GO_econ_material_aluminium_can_open = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 12 }
+            GO_econ_material_rubber_can_open = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 13 }
+            GO_econ_material_rations_can_open = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 14 }
+            GO_econ_material_fuel_can_open = yes
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 15 }
+            GO_econ_material_microchips_can_open = yes
+        }
+    }
+}
+
+GO_econ_can_consume_national_material = {
+    GO_econ_work_material_quantity_valid = yes
+    GO_econ_selected_material_account_ready = yes
+    OR = {
+        AND = {
+            check_variable = { GO_econ_work_material_id = 1 }
+            check_variable = { var = GO_econ_country_material_iron value = GO_econ_work_material_quantity compare = greater_than_or_equals }
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 2 }
+            check_variable = { var = GO_econ_country_material_bauxite value = GO_econ_work_material_quantity compare = greater_than_or_equals }
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 3 }
+            check_variable = { var = GO_econ_country_material_food value = GO_econ_work_material_quantity compare = greater_than_or_equals }
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 4 }
+            check_variable = { var = GO_econ_country_material_coal value = GO_econ_work_material_quantity compare = greater_than_or_equals }
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 5 }
+            check_variable = { var = GO_econ_country_material_natural_gas value = GO_econ_work_material_quantity compare = greater_than_or_equals }
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 6 }
+            check_variable = { var = GO_econ_country_material_oil value = GO_econ_work_material_quantity compare = greater_than_or_equals }
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 7 }
+            check_variable = { var = GO_econ_country_material_rare_earth_minerals value = GO_econ_work_material_quantity compare = greater_than_or_equals }
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 8 }
+            check_variable = { var = GO_econ_country_material_tungsten value = GO_econ_work_material_quantity compare = greater_than_or_equals }
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 9 }
+            check_variable = { var = GO_econ_country_material_titanium value = GO_econ_work_material_quantity compare = greater_than_or_equals }
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 10 }
+            check_variable = { var = GO_econ_country_material_steel value = GO_econ_work_material_quantity compare = greater_than_or_equals }
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 11 }
+            check_variable = { var = GO_econ_country_material_aluminium value = GO_econ_work_material_quantity compare = greater_than_or_equals }
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 12 }
+            check_variable = { var = GO_econ_country_material_rubber value = GO_econ_work_material_quantity compare = greater_than_or_equals }
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 13 }
+            check_variable = { var = GO_econ_country_material_rations value = GO_econ_work_material_quantity compare = greater_than_or_equals }
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 14 }
+            check_variable = { var = GO_econ_country_material_fuel value = GO_econ_work_material_quantity compare = greater_than_or_equals }
+        }
+        AND = {
+            check_variable = { GO_econ_work_material_id = 15 }
+            check_variable = { var = GO_econ_country_material_microchips value = GO_econ_work_material_quantity compare = greater_than_or_equals }
+        }
+    }
+}

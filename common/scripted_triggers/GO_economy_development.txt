@@ -1,0 +1,234 @@
+# Gruppa Ost Stage 5 - shared development and physical-substation guards.
+# STATE unless labelled ANY. Type 1=Services, 2=Industry, 3=Substation.
+# The shared paid-record/finance guards live in GO_economy_services.txt.
+# Installed 1.18.3.0.7709: building_level@building dynamic variable;
+# triggers_documentation.md:2853-2866, free_building_slots.
+# A free construction level does not prove a map position. Location readiness
+# is an explicit authored declaration, never guessed from GDP or an empty slot.
+
+GO_econ_state_development_initialized = {
+    GO_econ_state_fiscal_initialized = yes
+    has_variable = GO_econ_state_development_schema_version
+    check_variable = { GO_econ_state_development_schema_version = 1 }
+}
+
+GO_econ_state_has_industry_levels = {
+    GO_econ_state_development_initialized = yes
+    has_variable = GO_econ_state_industry_levels
+    has_variable = GO_econ_state_industry_levels_populated
+    check_variable = { GO_econ_state_industry_levels_populated = 1 }
+    OR = {
+        check_variable = { GO_econ_state_industry_levels = 0 }
+        check_variable = { GO_econ_state_industry_levels = 1 }
+        check_variable = { GO_econ_state_industry_levels = 2 }
+        check_variable = { GO_econ_state_industry_levels = 3 }
+        check_variable = { GO_econ_state_industry_levels = 4 }
+        check_variable = { GO_econ_state_industry_levels = 5 }
+    }
+}
+
+GO_econ_state_has_substations = {
+    GO_econ_state_development_initialized = yes
+    has_variable = GO_econ_state_substation_levels
+    has_variable = GO_econ_state_substation_levels_populated
+    check_variable = { GO_econ_state_substation_levels_populated = 1 }
+    has_variable = GO_econ_state_energy_transfer_capacity
+    has_variable = GO_econ_state_energy_transfer_capacity_populated
+    check_variable = { GO_econ_state_energy_transfer_capacity_populated = 1 }
+    has_variable = GO_econ_state_substation_expected_capacity
+    has_variable = GO_econ_state_substation_transfer_per_level_snapshot
+    has_variable = global.GO_econ_cfg_substation_transfer_per_level
+    check_variable = { global.GO_econ_cfg_substation_transfer_per_level > 0 }
+    check_variable = { GO_econ_state_substation_transfer_per_level_snapshot = global.GO_econ_cfg_substation_transfer_per_level }
+    check_variable = { GO_econ_state_energy_transfer_capacity = GO_econ_state_substation_expected_capacity }
+    check_variable = { GO_econ_state_substation_levels = building_level@GO_econ_substation }
+    check_variable = { var = GO_econ_state_energy_transfer_capacity value = 0 compare = greater_than_or_equals }
+    OR = {
+        check_variable = { GO_econ_state_substation_levels = 0 }
+        check_variable = { GO_econ_state_substation_levels = 1 }
+        check_variable = { GO_econ_state_substation_levels = 2 }
+        check_variable = { GO_econ_state_substation_levels = 3 }
+        check_variable = { GO_econ_state_substation_levels = 4 }
+        check_variable = { GO_econ_state_substation_levels = 5 }
+    }
+}
+
+GO_econ_substation_location_ready = {
+    has_variable = GO_econ_state_substation_location_ready
+    check_variable = { GO_econ_state_substation_location_ready = 1 }
+}
+
+GO_econ_substation_physical_slot_ready = {
+    GO_econ_substation_location_ready = yes
+    check_variable = { var = building_level@GO_econ_substation value = 0 compare = greater_than_or_equals }
+    check_variable = { var = building_level@GO_econ_substation value = 5 compare = less_than }
+    free_building_slots = { building = GO_econ_substation size > 0 }
+}
+
+# ANY. Integer duration validation caches are derived by config initialization.
+GO_econ_development_config_ready = {
+    has_variable = global.GO_econ_cfg_industry_min_cost
+    has_variable = global.GO_econ_cfg_industry_cost_factor
+    has_variable = global.GO_econ_cfg_industry_required_days
+    has_variable = global.GO_econ_cfg_industry_day_fraction
+    has_variable = global.GO_econ_cfg_industry_gdp_bonus_factor
+    has_variable = global.GO_econ_cfg_substation_cost_per_level
+    has_variable = global.GO_econ_cfg_substation_required_days
+    has_variable = global.GO_econ_cfg_substation_day_fraction
+    has_variable = global.GO_econ_cfg_substation_transfer_per_level
+    check_variable = { var = global.GO_econ_cfg_industry_min_cost value = 0 compare = greater_than_or_equals }
+    check_variable = { var = global.GO_econ_cfg_industry_cost_factor value = 0 compare = greater_than_or_equals }
+    check_variable = { global.GO_econ_cfg_industry_required_days > 0 }
+    check_variable = { global.GO_econ_cfg_industry_day_fraction = 0 }
+    check_variable = { var = global.GO_econ_cfg_industry_gdp_bonus_factor value = 0 compare = greater_than_or_equals }
+    check_variable = { var = global.GO_econ_cfg_substation_cost_per_level value = 0 compare = greater_than_or_equals }
+    check_variable = { global.GO_econ_cfg_substation_required_days > 0 }
+    check_variable = { global.GO_econ_cfg_substation_day_fraction = 0 }
+    check_variable = { global.GO_econ_cfg_substation_transfer_per_level > 0 }
+}
+
+# STATE. Type-specific snapshots extend, rather than replace, saved Services.
+# Cancellation is possible without current GDP/levels/location/status.
+GO_econ_development_project_type_record_valid = {
+    OR = {
+        check_variable = { GO_econ_state_project_type = 1 }
+        AND = {
+            check_variable = { GO_econ_state_project_type = 2 }
+            has_variable = GO_econ_state_project_gdp_bonus
+            check_variable = { var = GO_econ_state_project_gdp_bonus value = 0 compare = greater_than_or_equals }
+        }
+        AND = {
+            check_variable = { GO_econ_state_project_type = 3 }
+            has_variable = GO_econ_state_project_start_physical_level
+            has_variable = GO_econ_state_project_expected_physical_next
+            has_variable = GO_econ_state_project_building_grant_attempted
+            check_variable = { GO_econ_state_project_next_level = GO_econ_state_project_expected_physical_next }
+            OR = {
+                AND = {
+                    check_variable = { GO_econ_state_project_start_physical_level = 0 }
+                    check_variable = { GO_econ_state_project_next_level = 1 }
+                }
+                AND = {
+                    check_variable = { GO_econ_state_project_start_physical_level = 1 }
+                    check_variable = { GO_econ_state_project_next_level = 2 }
+                }
+                AND = {
+                    check_variable = { GO_econ_state_project_start_physical_level = 2 }
+                    check_variable = { GO_econ_state_project_next_level = 3 }
+                }
+                AND = {
+                    check_variable = { GO_econ_state_project_start_physical_level = 3 }
+                    check_variable = { GO_econ_state_project_next_level = 4 }
+                }
+                AND = {
+                    check_variable = { GO_econ_state_project_start_physical_level = 4 }
+                    check_variable = { GO_econ_state_project_next_level = 5 }
+                }
+            }
+            OR = {
+                check_variable = { GO_econ_state_project_building_grant_attempted = 0 }
+                check_variable = { GO_econ_state_project_building_grant_attempted = 1 }
+            }
+        }
+    }
+}
+
+GO_econ_can_start_development_project = {
+    GO_econ_state_development_initialized = yes
+    GO_econ_fiscal_config_ready = yes
+    GO_econ_development_config_ready = yes
+    GO_econ_state_has_gdp = yes
+    check_variable = { var = GO_econ_state_gdp value = 0 compare = greater_than_or_equals }
+    GO_econ_state_has_debt = yes
+    check_variable = { GO_econ_state_debt_attribution_complete = 1 }
+    has_variable = GO_econ_state_project_active
+    check_variable = { GO_econ_state_project_active = 0 }
+    has_variable = GO_econ_state_project_type
+    check_variable = { GO_econ_state_project_type = 0 }
+    GO_econ_work_actor_is_country = yes
+    var:GO_econ_work_actor = {
+        GO_econ_country_has_price_index = yes
+        GO_econ_country_has_treasury = yes
+        GO_econ_country_has_debt = yes
+        GO_econ_country_pending_fiscal_flows_ready = yes
+        GO_econ_country_has_global_status = yes
+        GO_econ_country_has_project_capacity = yes
+        PREV = {
+            is_owned_by = PREV
+            is_controlled_by = PREV
+        }
+    }
+}
+
+GO_econ_can_start_industry_project = {
+    GO_econ_can_start_development_project = yes
+    GO_econ_state_has_industry_levels = yes
+    check_variable = { GO_econ_state_industry_levels < 5 }
+    has_state_flag = GO_econ_industry_state_access
+    var:GO_econ_work_actor = {
+        has_country_flag = GO_econ_industry_campaign_access
+        PREV = {
+            check_variable = { var = GO_econ_state_industry_levels value = PREV.GO_econ_country_state_development_limit compare = less_than }
+        }
+    }
+}
+
+GO_econ_can_start_substation_project = {
+    GO_econ_can_start_development_project = yes
+    GO_econ_state_has_substations = yes
+    GO_econ_substation_physical_slot_ready = yes
+    has_state_flag = GO_econ_substation_state_access
+    var:GO_econ_work_actor = {
+        has_country_flag = GO_econ_substation_campaign_access
+        PREV = {
+            check_variable = { var = GO_econ_state_substation_levels value = PREV.GO_econ_country_state_development_limit compare = less_than }
+        }
+    }
+}
+
+GO_econ_can_cancel_development_project = {
+    GO_econ_development_project_finance_ready = yes
+    GO_econ_work_actor_is_country = yes
+    check_variable = { GO_econ_work_actor = GO_econ_state_project_sponsor }
+}
+
+# Completion ignores later status/access reductions but rechecks sponsor/control,
+# financing, exact target level and every input actually used for its benefit.
+GO_econ_development_project_can_complete = {
+    GO_econ_development_project_finance_ready = yes
+    check_variable = { GO_econ_state_project_refund_pending = 0 }
+    check_variable = { GO_econ_state_project_workdays = GO_econ_state_project_required_days }
+    var:GO_econ_state_project_sponsor = {
+        PREV = {
+            is_owned_by = PREV
+            is_controlled_by = PREV
+        }
+    }
+}
+
+GO_econ_industry_project_can_complete = {
+    GO_econ_development_project_can_complete = yes
+    check_variable = { GO_econ_state_project_type = 2 }
+    GO_econ_state_has_gdp = yes
+    check_variable = { var = GO_econ_state_gdp value = 0 compare = greater_than_or_equals }
+    GO_econ_state_has_industry_levels = yes
+    has_variable = GO_econ_work_expected_next_level
+    check_variable = { GO_econ_state_project_next_level = GO_econ_work_expected_next_level }
+}
+
+GO_econ_substation_project_can_grant = {
+    GO_econ_development_project_can_complete = yes
+    check_variable = { GO_econ_state_project_type = 3 }
+    GO_econ_state_has_substations = yes
+    GO_econ_substation_physical_slot_ready = yes
+    check_variable = { GO_econ_state_substation_levels = GO_econ_state_project_start_physical_level }
+}
+
+GO_econ_substation_project_grant_observed = {
+    GO_econ_development_project_can_complete = yes
+    check_variable = { GO_econ_state_project_type = 3 }
+    GO_econ_substation_location_ready = yes
+    GO_econ_state_has_substations = yes
+    check_variable = { GO_econ_state_project_building_grant_attempted = 1 }
+    check_variable = { GO_econ_state_substation_levels = GO_econ_state_project_next_level }
+}

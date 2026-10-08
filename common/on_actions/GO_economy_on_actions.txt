@@ -1,0 +1,44 @@
+# Gruppa Ost economy - guarded backend setup, pulses and territorial refresh.
+# No campaign fiscal inputs/access flags are seeded; legacy weekly helpers remain separate.
+on_actions = {
+    on_startup = {
+        effect = {
+            # Native startup has no country scope. SOV is an initialization anchor;
+            # the wrapper still visits all states/countries and grants no access.
+            SOV = { GO_econ_initialize_economy_fiscal = yes }
+        }
+    }
+
+    # Native country callbacks can repeat per country; the global day token deduplicates.
+    on_monthly = {
+        effect = { GO_econ_monthly_pulse = yes }
+    }
+    on_daily = {
+        effect = { GO_econ_daily_pulse = yes }
+    }
+
+    # 1.18.3: ROOT is new controller, FROM old controller, FROM.FROM changed state.
+    on_state_control_changed = {
+        effect = {
+            FROM.FROM = {
+                owner = { GO_econ_initialize_country_fiscal = yes }
+                GO_econ_reconcile_services_owner = yes
+                GO_econ_reconcile_development_project_owner = yes
+                GO_econ_refresh_state_substations = yes
+                GO_econ_refresh_state_gdp = yes
+                owner = {
+                    GO_econ_refresh_country_gdp = yes
+                    GO_econ_refresh_country_production_units = yes
+                }
+            }
+            ROOT = {
+                GO_econ_refresh_country_gdp = yes
+                GO_econ_refresh_country_production_units = yes
+            }
+            FROM = {
+                GO_econ_refresh_country_gdp = yes
+                GO_econ_refresh_country_production_units = yes
+            }
+        }
+    }
+}

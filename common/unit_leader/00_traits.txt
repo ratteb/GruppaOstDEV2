@@ -1,4 +1,4 @@
-﻿# leader_traits contain a list of UnitLeaderTrait with the following structure:
+# leader_traits contain a list of UnitLeaderTrait with the following structure:
 # trait_key = {
 # 	type = all # or either of field_marshal, corps_commander, navy
 #	trait_type = basic_trait # or either of status_trait, personality_trait, assignable_trait, basic_terrain_trait, assignable_terrain_trait, exile

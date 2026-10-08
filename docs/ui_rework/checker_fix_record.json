@@ -1,0 +1,36 @@
+{
+  "sprite": "GFX_tiled_window_1b_border",
+  "definition": "interface/core.gfx",
+  "texture": "gfx/interface/tiles/tiled_window_1b_border.dds",
+  "before_sha256": "2824eeb7079483c02dfce721c09b0729459d76e24282fdf1ef9a9e717e29ef14",
+  "after_sha256": "7a57ea83032bdeb995f37070d9be647c59a70bd580f571ed3c78a48ba6b60040",
+  "texture_sha256": "4393c5d15fdd0c4c300db8cd785f173aca38a5d442ed769c85b2d31af7dc197f",
+  "change": "tilingCenter yes to no; DDS, borders, dimensions, layout and sprite ID unchanged",
+  "target": "1.18.3.0.7709",
+  "in_game_validated": false,
+  "offline_validation": {
+    "only_intended_setting_changed": true,
+    "texture_bytes_unchanged": true,
+    "nine_slice_model": [
+      {
+        "size": [
+          530,
+          270
+        ],
+        "border_pixels_equal": true,
+        "before_max_row_jump": 15.0,
+        "after_max_row_jump": 1.0
+      },
+      {
+        "size": [
+          700,
+          420
+        ],
+        "border_pixels_equal": true,
+        "before_max_row_jump": 15.0,
+        "after_max_row_jump": 1.0
+      }
+    ],
+    "limitation": "Model uses 64-pixel slices; it is not engine validation."
+  }
+}

@@ -1,0 +1,180 @@
+# Gruppa Ost Stage 6 - national steel-funded physical ammunition production.
+# The sole ammunition stock remains ammunition_variable, measured in thousands.
+# Plant output joins ammunition_daily AFTER legacy gain modifiers, before its
+# one stock credit and existing capacity clamp. Gross production may exceed room.
+# Sources: installed 1.18.3.0.7709 dynamic_variables_documentation.md:990-991,
+# 1095-1096; effects_documentation.md:4046-4064 (owned-state scope).
+
+# STATE. Storage is unavailable until an authored assignment, including zero.
+# Existing assignments/schema/owner identities are preserved, not guessed.
+GO_econ_initialize_state_ammunition_assignment = {
+    if = {
+        limit = {
+            NOT = { has_variable = GO_econ_state_ammunition_assignment_schema_version }
+            NOT = { has_variable = GO_econ_state_ammunition_assigned_levels }
+            NOT = { has_variable = GO_econ_state_ammunition_assignment_populated }
+            NOT = { has_variable = GO_econ_state_ammunition_assignment_owner }
+        }
+        set_variable = { GO_econ_state_ammunition_assigned_levels = 0 }
+        set_variable = { GO_econ_state_ammunition_assignment_populated = 0 }
+        set_variable = { GO_econ_state_ammunition_assignment_schema_version = 1 }
+    }
+}
+
+# COUNTRY. Fresh-only replay metadata; no ammunition/material stock is created.
+GO_econ_initialize_country_ammunition_production = {
+    if = {
+        limit = {
+            NOT = { has_variable = GO_econ_country_ammunition_schema_version }
+            NOT = { has_variable = GO_econ_country_ammunition_last_day }
+            NOT = { has_variable = GO_econ_country_ammunition_plant_last_day }
+            NOT = { has_variable = GO_econ_country_ammunition_plant_report_day }
+            NOT = { has_variable = GO_econ_country_ammunition_plant_report_populated }
+            NOT = { has_variable = GO_econ_country_ammunition_plant_operating }
+            NOT = { has_variable = GO_econ_country_ammunition_plant_steel_consumed }
+            NOT = { has_variable = GO_econ_country_ammunition_plant_output_k }
+            NOT = { has_variable = GO_econ_country_ammunition_plant_status }
+            NOT = { has_variable = GO_econ_country_ammunition_plant_capacity_populated }
+            NOT = { has_variable = GO_econ_country_ammunition_plant_eligible_built }
+            NOT = { has_variable = GO_econ_country_ammunition_plant_assigned }
+            NOT = { has_variable = GO_econ_country_ammunition_plant_missing_assignments }
+        }
+        set_variable = { GO_econ_country_ammunition_schema_version = 1 }
+        set_variable = { GO_econ_country_ammunition_last_day = -1 }
+        set_variable = { GO_econ_country_ammunition_plant_last_day = -1 }
+        set_variable = { GO_econ_country_ammunition_plant_report_day = -1 }
+        set_variable = { GO_econ_country_ammunition_plant_report_populated = 0 }
+    }
+    if = {
+        limit = { NOT = { has_variable = GO_econ_country_ammunition_plant_capacity_populated } }
+        set_variable = { GO_econ_country_ammunition_plant_capacity_populated = 0 }
+    }
+}
+
+# COUNTRY anchor/ANY nested scopes; called from the formerly empty ammo startup.
+# Only unavailable ledger/assignment storage and fresh replay metadata are added.
+GO_econ_initialize_ammunition_backend = {
+    every_state = { GO_econ_initialize_state_ammunition_assignment = yes }
+    every_country = {
+        GO_econ_initialize_country_materials = yes
+        GO_econ_initialize_country_ammunition_production = yes
+    }
+}
+
+# STATE public API. Caller sets actor country and whole assigned level count.
+# Successful zero explicitly records unassigned capacity; no material is spent.
+GO_econ_assign_ammunition_plant = {
+    set_variable = { GO_econ_work_ammunition_assignment_succeeded = 0 }
+    GO_econ_initialize_state_ammunition_assignment = yes
+    if = {
+        limit = { GO_econ_can_assign_ammunition_plant = yes }
+        set_variable = { GO_econ_state_ammunition_assignment_owner = GO_econ_work_actor }
+        set_variable = { GO_econ_state_ammunition_assigned_levels = GO_econ_work_ammunition_assigned_levels }
+        set_variable = { GO_econ_state_ammunition_assignment_populated = 1 }
+        set_variable = { GO_econ_work_ammunition_assignment_succeeded = 1 }
+        var:GO_econ_work_actor = {
+            GO_econ_initialize_country_ammunition_production = yes
+            GO_econ_refresh_ammunition_plant_capacity = yes
+        }
+    }
+}
+
+# COUNTRY. Rebuild current owned-and-controlled capacity without producing.
+# Incomplete assignments on physical plants block the entire national batch.
+# Captured states retain assignments; transferred states need authored reassignment.
+GO_econ_refresh_ammunition_plant_capacity = {
+    GO_econ_initialize_country_ammunition_production = yes
+    set_variable = { GO_econ_country_ammunition_plant_capacity_populated = 0 }
+    set_variable = { GO_econ_country_ammunition_plant_eligible_built = 0 }
+    set_variable = { GO_econ_country_ammunition_plant_assigned = 0 }
+    set_variable = { GO_econ_country_ammunition_plant_missing_assignments = 0 }
+    if = {
+        limit = { GO_econ_country_ammunition_production_initialized = yes }
+        every_owned_state = {
+            limit = { is_controlled_by = PREV }
+            if = {
+                limit = { GO_econ_state_ammunition_physical_levels_valid = yes }
+                add_to_variable = { PREV.GO_econ_country_ammunition_plant_eligible_built = building_level@ammunition_plant }
+                if = {
+                    limit = {
+                        OR = {
+                            check_variable = { building_level@ammunition_plant > 0 }
+                            check_variable = { GO_econ_state_ammunition_assignment_populated = 1 }
+                            check_variable = { GO_econ_state_ammunition_assigned_levels > 0 }
+                        }
+                    }
+                    if = {
+                        limit = { GO_econ_state_has_ammunition_assignment = yes }
+                        add_to_variable = { PREV.GO_econ_country_ammunition_plant_assigned = GO_econ_state_ammunition_assigned_levels }
+                    }
+                    else = {
+                        add_to_variable = { PREV.GO_econ_country_ammunition_plant_missing_assignments = 1 }
+                    }
+                }
+            }
+            else = {
+                add_to_variable = { PREV.GO_econ_country_ammunition_plant_missing_assignments = 1 }
+            }
+        }
+        if = {
+            limit = { check_variable = { GO_econ_country_ammunition_plant_missing_assignments = 0 } }
+            set_variable = { GO_econ_country_ammunition_plant_capacity_populated = 1 }
+            if = {
+                limit = { NOT = { GO_econ_country_ammunition_plant_capacity_ready = yes } }
+                set_variable = { GO_econ_country_ammunition_plant_capacity_populated = 0 }
+            }
+        }
+    }
+}
+
+# COUNTRY internal daily stage. The legacy hook has already claimed its day and
+# calculated its modifier-based gain. Claim recipe day before input inspection;
+# blocked attempts take effect next day after repair, never as a second deposit.
+GO_econ_update_ammunition_plant_production = {
+    if = {
+        limit = { GO_econ_ammunition_plant_daily_update_ready = yes }
+        set_variable = { GO_econ_country_ammunition_plant_last_day = global.num_days }
+        set_variable = { GO_econ_country_ammunition_plant_report_day = global.num_days }
+        set_variable = { GO_econ_country_ammunition_plant_report_populated = 0 }
+        set_variable = { GO_econ_country_ammunition_plant_operating = 0 }
+        set_variable = { GO_econ_country_ammunition_plant_steel_consumed = 0 }
+        set_variable = { GO_econ_country_ammunition_plant_output_k = 0 }
+        set_variable = { GO_econ_country_ammunition_plant_status = 0 }
+        GO_econ_refresh_ammunition_plant_capacity = yes
+        if = {
+            limit = {
+                GO_econ_country_ammunition_plant_capacity_ready = yes
+                GO_econ_country_has_material_steel = yes
+            }
+            if = {
+                limit = {
+                    check_variable = { var = GO_econ_country_material_steel value = GO_econ_country_ammunition_plant_assigned compare = greater_than_or_equals }
+                }
+                if = {
+                    limit = { GO_econ_ammunition_plant_recipe_numbers_ready = yes }
+                    # No priority/rationing rule: either the entire assigned
+                    # batch has its steel, or none operates. Whole plant levels.
+                    set_variable = { GO_econ_work_material_id = 10 }
+                    set_variable = { GO_econ_work_material_quantity = GO_econ_country_ammunition_plant_assigned }
+                    GO_econ_consume_national_material = yes
+                    if = {
+                        limit = { check_variable = { GO_econ_work_material_succeeded = 1 } }
+                        set_variable = { GO_econ_country_ammunition_plant_operating = GO_econ_country_ammunition_plant_assigned }
+                        set_variable = { GO_econ_country_ammunition_plant_steel_consumed = GO_econ_country_ammunition_plant_operating }
+                        set_variable = { GO_econ_country_ammunition_plant_output_k = GO_econ_country_ammunition_plant_operating }
+                        multiply_variable = { GO_econ_country_ammunition_plant_output_k = 0.5 }
+                        add_to_variable = { ammunition_daily = GO_econ_country_ammunition_plant_output_k }
+                        set_variable = { GO_econ_country_ammunition_plant_status = 1 }
+                        set_variable = { GO_econ_country_ammunition_plant_report_populated = 1 }
+                    }
+                }
+            }
+            else = {
+                # Known shortage yields known zero use/output; unavailable
+                # steel/assignment instead retains report_populated = 0 above.
+                set_variable = { GO_econ_country_ammunition_plant_status = 2 }
+                set_variable = { GO_econ_country_ammunition_plant_report_populated = 1 }
+            }
+        }
+    }
+}
