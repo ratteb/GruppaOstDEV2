@@ -75,9 +75,8 @@ set_popularities = {
 	progressivism = 0
 	marxism_leninism = 0
 	centrism = 0
-	paternalism = 0
-	authoritarian_socialism = 0
 	paternalism = 100
+	authoritarian_socialism = 0
 }
 
 create_country_leader = {
