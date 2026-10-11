@@ -65,7 +65,7 @@ if = {
 	}
 }
 set_politics = {
-	ruling_party = despotism
+	ruling_party = paternalism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
@@ -75,9 +75,8 @@ set_popularities = {
 	progressivism = 0
 	marxism_leninism = 0
 	centrism = 0
-	paternalism = 0
+	paternalism = 100
 	authoritarian_socialism = 0
-	despotism = 100
 }
 
 create_country_leader = {
