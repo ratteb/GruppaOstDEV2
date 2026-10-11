@@ -1,0 +1,163 @@
+# Stage 13 food production. COUNTRY unless explicitly marked STATE.
+# Food is the existing guarded reserve; these fields are capacity/result reports.
+# Native queries / scoped accumulation: design E-018/E-035. Sentinel checks E-043.
+
+# Original receipt identity is read only when allocating the additive record.
+# Missing external rate configuration does not invalidate this saved day.
+GO_econ_food_supply_day_ready = {
+    GO_econ_native_resource_observer_country_ready = yes
+    GO_econ_country_material_supply_initialized = yes
+    has_variable = GO_econ_country_material_food_supply_last_day
+    check_variable = { var = GO_econ_country_material_food_supply_last_day value = -1 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_material_food_supply_last_day value = global.num_days compare = less_than_or_equals }
+    set_temp_variable = { GO_econ_food_day_fraction = GO_econ_country_material_food_supply_last_day }
+    add_to_temp_variable = { GO_econ_food_day_fraction = 1 }
+    clamp_temp_variable = { var = GO_econ_food_day_fraction min = 0 }
+    modulo_temp_variable = { var = GO_econ_food_day_fraction value = 1 }
+    check_variable = { GO_econ_food_day_fraction = 0 }
+}
+
+GO_econ_food_production_config_ready = {
+    has_variable = global.GO_econ_cfg_food_output_per_level
+    check_variable = { var = global.GO_econ_cfg_food_output_per_level value = 0 compare = greater_than_or_equals }
+}
+
+GO_econ_food_production_record_ready = {
+    GO_econ_native_resource_observer_country_ready = yes
+    has_variable = GO_econ_country_food_production_schema_version
+    check_variable = { GO_econ_country_food_production_schema_version = 1 }
+    has_variable = GO_econ_country_food_production_last_day
+    has_variable = GO_econ_country_food_production_attempt_populated
+    has_variable = GO_econ_country_food_production_status
+    has_variable = GO_econ_country_food_production_capacity_day
+    has_variable = GO_econ_country_food_production_capacity_populated
+    has_variable = GO_econ_country_food_production_built_levels
+    has_variable = GO_econ_country_food_production_report_day
+    has_variable = GO_econ_country_food_production_report_populated
+    has_variable = GO_econ_country_food_production_report_built_levels
+    has_variable = GO_econ_country_food_production_report_rate
+    has_variable = GO_econ_country_food_production_report_output
+    check_variable = { var = GO_econ_country_food_production_last_day value = -1 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_food_production_last_day value = global.num_days compare = less_than_or_equals }
+    check_variable = { var = GO_econ_country_food_production_capacity_day value = -1 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_food_production_capacity_day value = global.num_days compare = less_than_or_equals }
+    check_variable = { var = GO_econ_country_food_production_report_day value = -1 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_food_production_report_day value = GO_econ_country_food_production_last_day compare = less_than_or_equals }
+    OR = { check_variable = { GO_econ_country_food_production_attempt_populated = 0 } check_variable = { GO_econ_country_food_production_attempt_populated = 1 } }
+    OR = { check_variable = { GO_econ_country_food_production_status = 0 } check_variable = { GO_econ_country_food_production_status = 1 } }
+    OR = { check_variable = { GO_econ_country_food_production_capacity_populated = 0 } check_variable = { GO_econ_country_food_production_capacity_populated = 1 } }
+    OR = { check_variable = { GO_econ_country_food_production_report_populated = 0 } check_variable = { GO_econ_country_food_production_report_populated = 1 } }
+    check_variable = { var = GO_econ_country_food_production_built_levels value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_food_production_report_built_levels value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_food_production_report_rate value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_food_production_report_output value = 0 compare = greater_than_or_equals }
+    set_temp_variable = { GO_econ_food_day_fraction = GO_econ_country_food_production_last_day }
+    add_to_temp_variable = { GO_econ_food_day_fraction = 1 }
+    clamp_temp_variable = { var = GO_econ_food_day_fraction min = 0 }
+    modulo_temp_variable = { var = GO_econ_food_day_fraction value = 1 }
+    check_variable = { GO_econ_food_day_fraction = 0 }
+    set_temp_variable = { GO_econ_food_day_fraction = GO_econ_country_food_production_capacity_day }
+    add_to_temp_variable = { GO_econ_food_day_fraction = 1 }
+    clamp_temp_variable = { var = GO_econ_food_day_fraction min = 0 }
+    modulo_temp_variable = { var = GO_econ_food_day_fraction value = 1 }
+    check_variable = { GO_econ_food_day_fraction = 0 }
+    set_temp_variable = { GO_econ_food_day_fraction = GO_econ_country_food_production_report_day }
+    add_to_temp_variable = { GO_econ_food_day_fraction = 1 }
+    clamp_temp_variable = { var = GO_econ_food_day_fraction min = 0 }
+    modulo_temp_variable = { var = GO_econ_food_day_fraction value = 1 }
+    check_variable = { GO_econ_food_day_fraction = 0 }
+    set_temp_variable = { GO_econ_food_level_fraction = GO_econ_country_food_production_built_levels }
+    clamp_temp_variable = { var = GO_econ_food_level_fraction min = 0 }
+    modulo_temp_variable = { var = GO_econ_food_level_fraction value = 1 }
+    check_variable = { GO_econ_food_level_fraction = 0 }
+    set_temp_variable = { GO_econ_food_level_fraction = GO_econ_country_food_production_report_built_levels }
+    clamp_temp_variable = { var = GO_econ_food_level_fraction min = 0 }
+    modulo_temp_variable = { var = GO_econ_food_level_fraction value = 1 }
+    check_variable = { GO_econ_food_level_fraction = 0 }
+    OR = {
+        check_variable = { GO_econ_country_food_production_attempt_populated = 0 }
+        check_variable = { var = GO_econ_country_food_production_last_day value = 0 compare = greater_than_or_equals }
+    }
+    OR = {
+        check_variable = { GO_econ_country_food_production_capacity_populated = 0 }
+        check_variable = { var = GO_econ_country_food_production_capacity_day value = 0 compare = greater_than_or_equals }
+    }
+    OR = {
+        check_variable = { GO_econ_country_food_production_report_populated = 0 }
+        AND = {
+            check_variable = { GO_econ_country_food_production_attempt_populated = 1 }
+            check_variable = { var = GO_econ_country_food_production_report_day value = 0 compare = greater_than_or_equals }
+            set_temp_variable = { GO_econ_food_expected_output = GO_econ_country_food_production_report_built_levels }
+            multiply_temp_variable = { GO_econ_food_expected_output = GO_econ_country_food_production_report_rate }
+            check_variable = { var = GO_econ_food_expected_output value = 0 compare = greater_than_or_equals }
+            check_variable = { GO_econ_country_food_production_report_output = GO_econ_food_expected_output }
+            OR = {
+                check_variable = { GO_econ_country_food_production_report_built_levels = 0 }
+                check_variable = { GO_econ_country_food_production_report_rate = 0 }
+                check_variable = { GO_econ_country_food_production_report_output > 0 }
+            }
+        }
+    }
+    OR = {
+        check_variable = { GO_econ_country_food_production_status = 0 }
+        AND = {
+            check_variable = { GO_econ_country_food_production_attempt_populated = 1 }
+            check_variable = { GO_econ_country_food_production_report_populated = 1 }
+            check_variable = { GO_econ_country_food_production_report_day = GO_econ_country_food_production_last_day }
+            check_variable = { var = GO_econ_country_food_production_last_day value = 0 compare = greater_than_or_equals }
+        }
+    }
+}
+
+# STATE. Completed physical levels only; no factory or resource proxy.
+GO_econ_food_state_capacity_ready = {
+    set_temp_variable = { GO_econ_food_native_levels = building_level@GO_econ_food_production }
+    check_variable = { var = GO_econ_food_native_levels value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_food_native_levels value = 20 compare = less_than_or_equals }
+    set_temp_variable = { GO_econ_food_level_fraction = GO_econ_food_native_levels }
+    clamp_temp_variable = { var = GO_econ_food_level_fraction min = 0 }
+    modulo_temp_variable = { var = GO_econ_food_level_fraction value = 1 }
+    check_variable = { GO_econ_food_level_fraction = 0 }
+}
+
+# Historical, dated observational capacity cache. It never claims receipt.
+GO_econ_food_production_capacity_report_ready = {
+    GO_econ_food_production_record_ready = yes
+    check_variable = { GO_econ_country_food_production_capacity_populated = 1 }
+    check_variable = { var = GO_econ_country_food_production_capacity_day value = 0 compare = greater_than_or_equals }
+}
+
+GO_econ_food_production_capacity_current = {
+    GO_econ_food_production_capacity_report_ready = yes
+    check_variable = { GO_econ_country_food_production_capacity_day = global.num_days }
+}
+
+# Last actual output report survives later unavailable attempts and live changes.
+GO_econ_food_production_report_ready = {
+    GO_econ_food_production_record_ready = yes
+    check_variable = { GO_econ_country_food_production_report_populated = 1 }
+    check_variable = { var = GO_econ_country_food_production_report_day value = 0 compare = greater_than_or_equals }
+    set_temp_variable = { GO_econ_food_expected_output = GO_econ_country_food_production_report_built_levels }
+    multiply_temp_variable = { GO_econ_food_expected_output = GO_econ_country_food_production_report_rate }
+    check_variable = { var = GO_econ_food_expected_output value = 0 compare = greater_than_or_equals }
+    check_variable = { GO_econ_country_food_production_report_output = GO_econ_food_expected_output }
+    OR = {
+        check_variable = { GO_econ_country_food_production_report_built_levels = 0 }
+        check_variable = { GO_econ_country_food_production_report_rate = 0 }
+        check_variable = { GO_econ_country_food_production_report_output > 0 }
+    }
+}
+
+GO_econ_food_production_attempt_ready = {
+    GO_econ_food_production_record_ready = yes
+    check_variable = { GO_econ_country_food_production_attempt_populated = 1 }
+    check_variable = { var = GO_econ_country_food_production_last_day value = 0 compare = greater_than_or_equals }
+    OR = {
+        check_variable = { GO_econ_country_food_production_status = 0 }
+        AND = {
+            check_variable = { GO_econ_country_food_production_status = 1 }
+            GO_econ_food_production_report_ready = yes
+            check_variable = { GO_econ_country_food_production_report_day = GO_econ_country_food_production_last_day }
+        }
+    }
+}

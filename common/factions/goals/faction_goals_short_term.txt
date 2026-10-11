@@ -1052,10 +1052,6 @@ faction_goal_develop_guyanan_bauxite = {
 	complete_effect = {
 		add_faction_power_projection = 100
 		687 = {
-			add_resource = {
-			    type = aluminium
-			    amount = 14
-			}
 		}
 	}
 	ai_will_do = {
@@ -1121,10 +1117,6 @@ faction_goal_develop_suriname_bauxite = {
 	complete_effect = {
 		add_faction_power_projection = 100
 		309 = {
-			add_resource = {
-			    type = aluminium
-			    amount = 14
-			}
 		}
 	}
 	ai_will_do = {
@@ -1203,10 +1195,6 @@ faction_goal_develop_lappland_metals = {
 			    amount = 14
 			}
 			add_resource = {
-			    type = steel
-			    amount = 14
-			}
-			add_resource = {
 			    type = chromium
 			    amount = 8
 			}
@@ -1214,10 +1202,6 @@ faction_goal_develop_lappland_metals = {
 		918 = {
 			add_resource = {
 			    type = tungsten
-			    amount = 10
-			}
-			add_resource = {
-			    type = steel
 			    amount = 10
 			}
 			add_resource = {
@@ -1671,10 +1655,6 @@ faction_goal_develop_chinese_metals = {
 			    amount = 4
 			}
 			add_resource = {
-			    type = steel
-			    amount = 6
-			}
-			add_resource = {
 			    type = chromium
 			    amount = 2
 			}
@@ -1682,10 +1662,6 @@ faction_goal_develop_chinese_metals = {
 		593 = {
 			add_resource = {
 			    type = tungsten
-			    amount = 6
-			}
-			add_resource = {
-			    type = steel
 			    amount = 6
 			}
 			add_resource = {
@@ -1699,10 +1675,6 @@ faction_goal_develop_chinese_metals = {
 			    amount = 4
 			}
 			add_resource = {
-			    type = steel
-			    amount = 4
-			}
-			add_resource = {
 			    type = chromium
 			    amount = 2
 			}
@@ -1710,10 +1682,6 @@ faction_goal_develop_chinese_metals = {
 		599 = {
 			add_resource = {
 			    type = tungsten
-			    amount = 6
-			}
-			add_resource = {
-			    type = steel
 			    amount = 6
 			}
 			add_resource = {
@@ -1859,51 +1827,23 @@ faction_goal_develop_malayan_riches = {
 			    amount = 2
 			}
 			add_resource = {
-			    type = rubber
-			    amount = 8
-			}
-			add_resource = {
 			    type = coal
 			    amount = 1
 			}
 		}
 		336 = {
 			add_resource = {
-			    type = aluminium
-			    amount = 4
-			}
-			add_resource = {
-			    type = rubber
-			    amount = 60
-			}
-			add_resource = {
 			    type = tungsten
 			    amount = 28
-			}
-			add_resource = {
-			    type = steel
-			    amount = 4
 			}
 		}
 		1021 = {
 			add_resource = {
-			    type = aluminium
-			    amount = 3
-			}
-			add_resource = {
 			    type = tungsten
 			    amount = 12
 			}
-			add_resource = {
-			    type = steel
-			    amount = 4
-			}
 		}
 		1024 = {
-			add_resource = {
-			    type = rubber
-			    amount = 8
-			}
 		}
 	}
 	ai_will_do = {
@@ -2089,10 +2029,6 @@ faction_goal_develop_indonesian_riches = {
 			    amount = 3
 			}
 			add_resource = {
-			    type = rubber
-			    amount = 28
-			}
-			add_resource = {
 			    type = coal
 			    amount = 2
 			}
@@ -2102,16 +2038,8 @@ faction_goal_develop_indonesian_riches = {
 			    type = oil
 			    amount = 4
 			}
-			add_resource = {
-			    type = rubber
-			    amount = 48
-			}
 		}
 		667 = {
-			add_resource = {
-			    type = rubber
-			    amount = 6
-			}
 		}
 		672 = {
 			add_resource = {
@@ -2119,23 +2047,11 @@ faction_goal_develop_indonesian_riches = {
 			    amount = 5
 			}
 			add_resource = {
-			    type = aluminium
-			    amount = 8
-			}
-			add_resource = {
-			    type = rubber
-			    amount = 50
-			}
-			add_resource = {
 			    type = coal
 			    amount = 3
 			}
 		}
 		673 = {
-			add_resource = {
-			    type = rubber
-			    amount = 10
-			}
 		}
 	}
 	ai_will_do = {

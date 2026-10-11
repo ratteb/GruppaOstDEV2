@@ -4,7 +4,8 @@ state={
 	name="STATE_65"
 	manpower = 5592576
 	resources={
-		steel=41 #was 12 was 32 #was 53 # was: 90
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 13
 	}
 
 	state_category = metropolis

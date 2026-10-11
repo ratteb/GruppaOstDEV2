@@ -2,6 +2,11 @@ state = {
 	id = 881
 	name = "STATE_881" # Karagandy
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 6
+	}
+
 	history = {
 		owner = KAZ
 		#victory_points = {

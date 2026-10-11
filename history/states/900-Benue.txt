@@ -4,6 +4,11 @@ state={
 	manpower = 1163674
 	state_category = pastoral 
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 2
+	}
+
 	history={
 		owner = NGA
 		add_core_of = NGA

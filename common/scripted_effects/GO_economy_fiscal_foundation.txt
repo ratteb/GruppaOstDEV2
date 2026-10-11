@@ -49,6 +49,13 @@ GO_econ_initialize_fiscal_config = {
         limit = { NOT = { has_variable = global.GO_econ_cfg_percent_month_divisor } }
         set_variable = { global.GO_econ_cfg_percent_month_divisor = 1200 }
     }
+    # Stage 12 fictional gameplay calibration: 20% of opening annual nominal
+    # GDP becomes government income over one year. This is not a tax-law model.
+    # Only explicitly opted-in countries use it; authored overrides are retained.
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_gdp_income_factor } }
+        set_variable = { global.GO_econ_cfg_gdp_income_factor = 0.20 }
+    }
     # Derived safety bounds, not independent tuning or economic data.
     set_variable = { global.GO_econ_cfg_growth_factor_floor = global.GO_econ_cfg_percent_month_divisor }
     multiply_variable = { global.GO_econ_cfg_growth_factor_floor = -1 }

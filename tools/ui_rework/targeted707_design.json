@@ -1,0 +1,23 @@
+{
+  "game_version": "1.18.3.0.7709",
+  "scope": "Only the buttons and speed indicators in Screenshot (707)",
+  "scanline_strength": 2,
+  "normal_palette": [[33,56,83],[95,143,190],[213,232,247]],
+  "selected_palette": [[39,76,126],[120,179,232],[236,247,255]],
+  "minimum_chroma": 8,
+  "minimum_brightness": 28,
+  "assets": [
+    {"source":"gfx/interface/topbar/armyoverview_button.dds","kind":"overview","frames":2,"bounds":[4,4,35,33],"sprite":"GFX_armyoverview_button"},
+    {"source":"gfx/interface/topbar/navyoverview_button.dds","kind":"overview","frames":2,"bounds":[4,4,35,33],"sprite":"GFX_navyoverview_button"},
+    {"source":"gfx/interface/topbar/airoverview_button.dds","kind":"overview","frames":2,"bounds":[3,5,35,33],"sprite":"GFX_airoverview_button"},
+    {"source":"gfx/interface/topbar/musicplayer/playlist_button.dds","kind":"utility","frames":1,"bounds":[9,6,27,26],"sprite":"GFX_playlist_button"},
+    {"source":"gfx/interface/topbar/achievements_button.dds","kind":"utility","frames":1,"bounds":[3,3,21,23],"sprite":"GFX_achievements_button"},
+    {"source":"gfx/interface/topbar/button_menu.dds","path":"gfx/interface/topbar/GO_utility_menu.dds","kind":"utility","frames":1,"bounds":[6,5,19,21],"sprite":"GFX_GO_utility_menu","old_sprite":"GFX_menu_button"},
+    {"source":"gfx/interface/topbar/button_help.dds","path":"gfx/interface/topbar/GO_utility_help.dds","kind":"utility","frames":1,"bounds":[6,4,19,23],"sprite":"GFX_GO_utility_help","old_sprite":"GFX_help_button"},
+    {"source":"gfx/interface/topbar/show_dismissed_alerts_icon.dds","path":"gfx/interface/topbar/GO_utility_alerts.dds","kind":"utility","frames":1,"bounds":[9,3,15,23],"sprite":"GFX_GO_utility_alerts","old_sprite":"GFX_show_dismissed_alerts_icon"},
+    {"source":"gfx/interface/topbar/zoom_in.dds","path":"gfx/interface/topbar/GO_speed_plus.dds","kind":"plus","frames":1,"sprite":"GFX_GO_speed_plus","old_sprite":"GFX_zoom_in"},
+    {"source":"gfx/interface/topbar/zoom_out.dds","path":"gfx/interface/topbar/GO_speed_minus.dds","kind":"minus","frames":1,"sprite":"GFX_GO_speed_minus","old_sprite":"GFX_zoom_out"},
+    {"source":"gfx/interface/topbar/speed_step.dds","kind":"speed","frames":3,"sprite":"GFX_speed_step"}
+  ],
+  "preserve": ["The globe artwork and its ten tension stages", "The existing detailed right-hand frame", "The date and pause controls", "Other screens' shared zoom and utility textures", "Widget positions, dimensions, IDs, fonts, hotkeys and tooltips"]
+}

@@ -5,6 +5,11 @@ state={
 	manpower = 7630651
 	state_category = megalopolis
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 34
+	}
+
 	history={
 		owner = USA
 		buildings = {

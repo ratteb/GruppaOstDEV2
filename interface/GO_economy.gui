@@ -1,0 +1,4622 @@
+# Economy views use separately gated trade_tab windows.
+# Each controller owns direct leaf bindings; dynamic rows keep COUNTRY context.
+guiTypes = {
+    containerWindowType = {
+        name = "GO_econ_ui_entry_window"
+        position = { x = 710 y = 40 }
+        size = { width = 148 height = 34 }
+        orientation = upper_left
+        clipping = no
+        buttonType = {
+            name = "GO_econ_ui_open_button"
+            position = { x = 0 y = 0 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_ENTRY"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_ENTRY_TOOLTIP"
+        }
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_window"
+        position = { x = 6 y = 43 }
+        size = { width = 1020 height = 100%% }
+        orientation = upper_left
+        clipping = no
+        background = { name = "GO_econ_ui_window_background" quadTextureSprite = "GFX_tiled_window2_1b_border" }
+        instantTextBoxType = {
+            name = "GO_econ_ui_subtitle"
+            position = { x = 24 y = 9 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SUBTITLE"
+            format = left
+            maxWidth = 960
+            maxHeight = 22
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_economy_tab"
+            position = { x = 24 y = 36 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_ECONOMY_TAB"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+        }
+        buttonType = {
+            name = "GO_econ_ui_economy_active_tab"
+            position = { x = 24 y = 36 }
+            quadTextureSprite = "GFX_button_148x34_light"
+            buttonText = "GO_ECON_UI_ECONOMY_TAB"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+        }
+        buttonType = {
+            name = "GO_econ_ui_resources_tab"
+            position = { x = 176 y = 36 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_RESOURCES_TAB"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+        }
+        buttonType = {
+            name = "GO_econ_ui_resources_active_tab"
+            position = { x = 176 y = 36 }
+            quadTextureSprite = "GFX_button_148x34_light"
+            buttonText = "GO_ECON_UI_RESOURCES_TAB"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_read_only"
+            position = { x = 24 y = 588 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_READ_ONLY"
+            format = left
+            maxWidth = 972
+            maxHeight = 23
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_economy_view"
+        position = { x = 6 y = 123 }
+        size = { width = 1020 height = 504 }
+        orientation = upper_left
+        clipping = no
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_national"
+        position = { x = 30 y = 123 }
+        size = { width = 972 height = 106 }
+        orientation = upper_left
+        clipping = no
+        background = { name = "GO_econ_ui_national_background" quadTextureSprite = "GFX_tiled_window_small" }
+        instantTextBoxType = {
+            name = "GO_econ_ui_national_title"
+            position = { x = 14 y = 7 }
+            font = "hoi_18mbs"
+            text = "GO_ECON_UI_NATIONAL_TITLE"
+            format = left
+            maxWidth = 940
+            maxHeight = 24
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_summary_empty"
+            position = { x = 14 y = 40 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SUMMARY_STATUS"
+            format = left
+            maxWidth = 936
+            maxHeight = 52
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_summary_values"
+        position = { x = 30 y = 123 }
+        size = { width = 972 height = 106 }
+        orientation = upper_left
+        clipping = no
+        instantTextBoxType = {
+            name = "GO_econ_ui_gdp_label"
+            position = { x = 14 y = 35 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_GDP"
+            format = left
+            maxWidth = 158
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_GDP_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_gdp_value"
+            position = { x = 174 y = 35 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyGDP]"
+            format = left
+            maxWidth = 148
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_GDP_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_treasury_label"
+            position = { x = 330 y = 35 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_TREASURY"
+            format = left
+            maxWidth = 158
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FINANCES_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_treasury_value"
+            position = { x = 490 y = 35 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyTreasury]"
+            format = left
+            maxWidth = 148
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FINANCES_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_debt_label"
+            position = { x = 646 y = 35 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_DEBT"
+            format = left
+            maxWidth = 158
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FINANCES_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_debt_value"
+            position = { x = 806 y = 35 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyDebt]"
+            format = left
+            maxWidth = 148
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FINANCES_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_real_gdp_label"
+            position = { x = 14 y = 67 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_REAL_GDP"
+            format = left
+            maxWidth = 158
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_GDP_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_real_gdp_value"
+            position = { x = 174 y = 67 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyRealGDP]"
+            format = left
+            maxWidth = 148
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_GDP_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_global_status_label"
+            position = { x = 330 y = 67 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_GLOBAL_STATUS"
+            format = left
+            maxWidth = 158
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_PU_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_global_status_value"
+            position = { x = 490 y = 67 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyGlobalStatus]"
+            format = left
+            maxWidth = 148
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_PU_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_pu_capacity_label"
+            position = { x = 646 y = 67 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_PUS_USABLE"
+            format = left
+            maxWidth = 158
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_PU_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_pu_capacity_value"
+            position = { x = 806 y = 67 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyUsablePUs]"
+            format = left
+            maxWidth = 148
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_PU_DETAILS"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_fiscal"
+        position = { x = 30 y = 239 }
+        size = { width = 972 height = 174 }
+        orientation = upper_left
+        clipping = no
+        background = { name = "GO_econ_ui_fiscal_background" quadTextureSprite = "GFX_tiled_window_small" }
+        instantTextBoxType = {
+            name = "GO_econ_ui_fiscal_title"
+            position = { x = 14 y = 12 }
+            font = "hoi_18mbs"
+            text = "GO_ECON_UI_FISCAL_TITLE"
+            format = left
+            maxWidth = 940
+            maxHeight = 25
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_fiscal_empty"
+            position = { x = 14 y = 54 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_FISCAL_EMPTY"
+            format = left
+            maxWidth = 936
+            maxHeight = 44
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_gdp_income_preview"
+            position = { x = 14 y = 112 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyGDPIncomePreviewLine]"
+            format = left
+            maxWidth = 936
+            maxHeight = 24
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_GDP_INCOME_PREVIEW_DETAILS"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_fiscal_values"
+        position = { x = 30 y = 239 }
+        size = { width = 972 height = 174 }
+        orientation = upper_left
+        clipping = no
+        instantTextBoxType = {
+            name = "GO_econ_ui_income_title"
+            position = { x = 14 y = 9 }
+            font = "hoi_18mbs"
+            text = "GO_ECON_UI_INCOME_TITLE"
+            format = left
+            maxWidth = 280
+            maxHeight = 24
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_expenditure_title"
+            position = { x = 326 y = 9 }
+            font = "hoi_18mbs"
+            text = "GO_ECON_UI_EXPENDITURE_TITLE"
+            format = left
+            maxWidth = 400
+            maxHeight = 24
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_financing_title"
+            position = { x = 748 y = 9 }
+            font = "hoi_18mbs"
+            text = "GO_ECON_UI_FINANCING_TITLE"
+            format = left
+            maxWidth = 205
+            maxHeight = 24
+            fixedsize = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_receipts_label"
+            position = { x = 14 y = 40 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_RECEIPTS"
+            format = left
+            maxWidth = 145
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FISCAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_receipts_value"
+            position = { x = 163 y = 40 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyReceipts]"
+            format = left
+            maxWidth = 151
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FISCAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_gdp_income_label"
+            position = { x = 14 y = 66 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_GDP_INCOME"
+            format = left
+            maxWidth = 145
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FISCAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_gdp_income_value"
+            position = { x = 163 y = 66 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyGDPIncome]"
+            format = left
+            maxWidth = 151
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FISCAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_other_income_label"
+            position = { x = 14 y = 92 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_OTHER_INCOME"
+            format = left
+            maxWidth = 145
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FISCAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_other_income_value"
+            position = { x = 163 y = 92 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyOtherIncome]"
+            format = left
+            maxWidth = 151
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FISCAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_financing_label"
+            position = { x = 748 y = 40 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_FINANCING"
+            format = left
+            maxWidth = 205
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FISCAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_financing_value"
+            position = { x = 748 y = 66 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyFinancing]"
+            format = left
+            maxWidth = 205
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FISCAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_deficit_label"
+            position = { x = 748 y = 96 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_DEFICIT"
+            format = left
+            maxWidth = 205
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FISCAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_deficit_value"
+            position = { x = 748 y = 122 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyDeficit]"
+            format = left
+            maxWidth = 205
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FISCAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_services_label"
+            position = { x = 326 y = 40 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SERVICES"
+            format = left
+            maxWidth = 247
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FISCAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_services_value"
+            position = { x = 577 y = 40 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyServices]"
+            format = left
+            maxWidth = 151
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FISCAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_capital_label"
+            position = { x = 326 y = 66 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_CAPITAL_SPENDING"
+            format = left
+            maxWidth = 247
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FISCAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_capital_value"
+            position = { x = 577 y = 66 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyCapitalSpending]"
+            format = left
+            maxWidth = 151
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FISCAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_refunds_label"
+            position = { x = 326 y = 92 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_CAPITAL_REFUNDS"
+            format = left
+            maxWidth = 247
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FISCAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_refunds_value"
+            position = { x = 577 y = 92 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyCapitalRefunds]"
+            format = left
+            maxWidth = 151
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FISCAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_expenses_label"
+            position = { x = 326 y = 118 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_EXPENSES"
+            format = left
+            maxWidth = 247
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FISCAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_expenses_value"
+            position = { x = 577 y = 118 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyExpenses]"
+            format = left
+            maxWidth = 151
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FISCAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_fiscal_status_value"
+            position = { x = 14 y = 122 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyFiscalPeriod]"
+            format = left
+            maxWidth = 300
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FISCAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_fiscal_span"
+            position = { x = 14 y = 147 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyReportSpan]"
+            format = left
+            maxWidth = 940
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_FISCAL_DETAILS"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_pu_values"
+        position = { x = 6 y = 423 }
+        size = { width = 1020 height = 204 }
+        orientation = upper_left
+        clipping = no
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_civil_allocation"
+        position = { x = 30 y = 423 }
+        size = { width = 468 height = 204 }
+        orientation = upper_left
+        clipping = no
+        background = { name = "GO_econ_ui_civil_allocation_background" quadTextureSprite = "GFX_tiled_window_small" }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_title"
+            position = { x = 14 y = 8 }
+            font = "hoi_18mbs"
+            text = "GO_ECON_UI_CIVILIAN_TITLE"
+            format = left
+            maxWidth = 440
+            maxHeight = 24
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_PU_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_requested_label"
+            position = { x = 14 y = 34 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_ALLOCATION_PENDING"
+            format = left
+            maxWidth = 99
+            maxHeight = 22
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_requested"
+            position = { x = 115 y = 34 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyPendingCivil]"
+            format = left
+            maxWidth = 90
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_ALLOCATION_TOOLTIP"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_effective_label"
+            position = { x = 233 y = 34 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_ALLOCATION_EFFECTIVE"
+            format = left
+            maxWidth = 99
+            maxHeight = 22
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_effective"
+            position = { x = 335 y = 34 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyEffectiveCivil]"
+            format = left
+            maxWidth = 112
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_ALLOCATION_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_civil_slot_0"
+            position = { x = 16 y = 68 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_civil_slot_0_factory"
+            position = { x = 19 y = 70 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_slot_0_count"
+            position = { x = 12 y = 93 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_ZERO"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_slot_0_selected"
+            position = { x = 36 y = 58 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_civil_slot_1"
+            position = { x = 56 y = 68 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_civil_slot_1_factory"
+            position = { x = 59 y = 70 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_slot_1_count"
+            position = { x = 52 y = 93 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyCivilSlot1]"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_slot_1_selected"
+            position = { x = 76 y = 58 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_civil_slot_2"
+            position = { x = 96 y = 68 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_civil_slot_2_factory"
+            position = { x = 99 y = 70 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_slot_2_count"
+            position = { x = 92 y = 93 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyCivilSlot2]"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_slot_2_selected"
+            position = { x = 116 y = 58 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_civil_slot_3"
+            position = { x = 136 y = 68 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_civil_slot_3_factory"
+            position = { x = 139 y = 70 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_slot_3_count"
+            position = { x = 132 y = 93 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyCivilSlot3]"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_slot_3_selected"
+            position = { x = 156 y = 58 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_civil_slot_4"
+            position = { x = 176 y = 68 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_civil_slot_4_factory"
+            position = { x = 179 y = 70 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_slot_4_count"
+            position = { x = 172 y = 93 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyCivilSlot4]"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_slot_4_selected"
+            position = { x = 196 y = 58 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_civil_slot_5"
+            position = { x = 216 y = 68 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_civil_slot_5_factory"
+            position = { x = 219 y = 70 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_slot_5_count"
+            position = { x = 212 y = 93 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyCivilSlot5]"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_slot_5_selected"
+            position = { x = 236 y = 58 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_civil_slot_6"
+            position = { x = 256 y = 68 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_civil_slot_6_factory"
+            position = { x = 259 y = 70 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_slot_6_count"
+            position = { x = 252 y = 93 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyCivilSlot6]"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_slot_6_selected"
+            position = { x = 276 y = 58 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_civil_slot_7"
+            position = { x = 296 y = 68 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_civil_slot_7_factory"
+            position = { x = 299 y = 70 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_slot_7_count"
+            position = { x = 292 y = 93 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyCivilSlot7]"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_slot_7_selected"
+            position = { x = 316 y = 58 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_civil_slot_8"
+            position = { x = 336 y = 68 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_civil_slot_8_factory"
+            position = { x = 339 y = 70 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_slot_8_count"
+            position = { x = 332 y = 93 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyCivilSlot8]"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_slot_8_selected"
+            position = { x = 356 y = 58 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_civil_slot_9"
+            position = { x = 376 y = 68 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_civil_slot_9_factory"
+            position = { x = 379 y = 70 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_slot_9_count"
+            position = { x = 372 y = 93 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyCivilSlot9]"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_slot_9_selected"
+            position = { x = 396 y = 58 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_civil_slot_10"
+            position = { x = 416 y = 68 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_civil_slot_10_factory"
+            position = { x = 419 y = 70 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_slot_10_count"
+            position = { x = 412 y = 93 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyCivilSlot10]"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_civil_slot_10_selected"
+            position = { x = 436 y = 58 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_civil_group_1"
+            position = { x = 10 y = 116 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_GROUP_1"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_GROUP_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_civil_group_1_active"
+            position = { x = 10 y = 116 }
+            quadTextureSprite = "GFX_button_148x34_light"
+            buttonText = "GO_ECON_UI_GROUP_1"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_GROUP_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_civil_group_5"
+            position = { x = 162 y = 116 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_GROUP_5"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_GROUP_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_civil_group_5_active"
+            position = { x = 162 y = 116 }
+            quadTextureSprite = "GFX_button_148x34_light"
+            buttonText = "GO_ECON_UI_GROUP_5"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_GROUP_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_civil_group_10"
+            position = { x = 314 y = 116 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_GROUP_10"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_GROUP_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_civil_group_10_active"
+            position = { x = 314 y = 116 }
+            quadTextureSprite = "GFX_button_148x34_light"
+            buttonText = "GO_ECON_UI_GROUP_10"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_GROUP_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_civil_earlier"
+            position = { x = 10 y = 158 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_EARLIER"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_civil_later"
+            position = { x = 310 y = 158 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_LATER"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_military_allocation"
+        position = { x = 534 y = 423 }
+        size = { width = 468 height = 204 }
+        orientation = upper_left
+        clipping = no
+        background = { name = "GO_econ_ui_military_allocation_background" quadTextureSprite = "GFX_tiled_window_small" }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_title"
+            position = { x = 14 y = 8 }
+            font = "hoi_18mbs"
+            text = "GO_ECON_UI_MILITARY_TITLE"
+            format = left
+            maxWidth = 440
+            maxHeight = 24
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_PU_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_requested_label"
+            position = { x = 14 y = 34 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_ALLOCATION_PENDING"
+            format = left
+            maxWidth = 99
+            maxHeight = 22
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_requested"
+            position = { x = 115 y = 34 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyPendingMilitary]"
+            format = left
+            maxWidth = 90
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_ALLOCATION_TOOLTIP"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_effective_label"
+            position = { x = 233 y = 34 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_ALLOCATION_EFFECTIVE"
+            format = left
+            maxWidth = 99
+            maxHeight = 22
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_effective"
+            position = { x = 335 y = 34 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyEffectiveMilitary]"
+            format = left
+            maxWidth = 112
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_ALLOCATION_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_military_slot_0"
+            position = { x = 16 y = 68 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_military_slot_0_factory"
+            position = { x = 19 y = 70 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_slot_0_count"
+            position = { x = 12 y = 93 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_ZERO"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_slot_0_selected"
+            position = { x = 36 y = 58 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_military_slot_1"
+            position = { x = 56 y = 68 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_military_slot_1_factory"
+            position = { x = 59 y = 70 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_slot_1_count"
+            position = { x = 52 y = 93 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyMilitarySlot1]"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_slot_1_selected"
+            position = { x = 76 y = 58 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_military_slot_2"
+            position = { x = 96 y = 68 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_military_slot_2_factory"
+            position = { x = 99 y = 70 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_slot_2_count"
+            position = { x = 92 y = 93 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyMilitarySlot2]"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_slot_2_selected"
+            position = { x = 116 y = 58 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_military_slot_3"
+            position = { x = 136 y = 68 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_military_slot_3_factory"
+            position = { x = 139 y = 70 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_slot_3_count"
+            position = { x = 132 y = 93 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyMilitarySlot3]"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_slot_3_selected"
+            position = { x = 156 y = 58 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_military_slot_4"
+            position = { x = 176 y = 68 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_military_slot_4_factory"
+            position = { x = 179 y = 70 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_slot_4_count"
+            position = { x = 172 y = 93 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyMilitarySlot4]"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_slot_4_selected"
+            position = { x = 196 y = 58 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_military_slot_5"
+            position = { x = 216 y = 68 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_military_slot_5_factory"
+            position = { x = 219 y = 70 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_slot_5_count"
+            position = { x = 212 y = 93 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyMilitarySlot5]"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_slot_5_selected"
+            position = { x = 236 y = 58 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_military_slot_6"
+            position = { x = 256 y = 68 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_military_slot_6_factory"
+            position = { x = 259 y = 70 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_slot_6_count"
+            position = { x = 252 y = 93 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyMilitarySlot6]"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_slot_6_selected"
+            position = { x = 276 y = 58 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_military_slot_7"
+            position = { x = 296 y = 68 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_military_slot_7_factory"
+            position = { x = 299 y = 70 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_slot_7_count"
+            position = { x = 292 y = 93 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyMilitarySlot7]"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_slot_7_selected"
+            position = { x = 316 y = 58 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_military_slot_8"
+            position = { x = 336 y = 68 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_military_slot_8_factory"
+            position = { x = 339 y = 70 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_slot_8_count"
+            position = { x = 332 y = 93 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyMilitarySlot8]"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_slot_8_selected"
+            position = { x = 356 y = 58 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_military_slot_9"
+            position = { x = 376 y = 68 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_military_slot_9_factory"
+            position = { x = 379 y = 70 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_slot_9_count"
+            position = { x = 372 y = 93 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyMilitarySlot9]"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_slot_9_selected"
+            position = { x = 396 y = 58 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_military_slot_10"
+            position = { x = 416 y = 68 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_military_slot_10_factory"
+            position = { x = 419 y = 70 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_slot_10_count"
+            position = { x = 412 y = 93 }
+            font = "hoi_16mbs"
+            text = "[GetGOEconomyMilitarySlot10]"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_military_slot_10_selected"
+            position = { x = 436 y = 58 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_military_group_1"
+            position = { x = 10 y = 116 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_GROUP_1"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_GROUP_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_military_group_1_active"
+            position = { x = 10 y = 116 }
+            quadTextureSprite = "GFX_button_148x34_light"
+            buttonText = "GO_ECON_UI_GROUP_1"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_GROUP_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_military_group_5"
+            position = { x = 162 y = 116 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_GROUP_5"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_GROUP_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_military_group_5_active"
+            position = { x = 162 y = 116 }
+            quadTextureSprite = "GFX_button_148x34_light"
+            buttonText = "GO_ECON_UI_GROUP_5"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_GROUP_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_military_group_10"
+            position = { x = 314 y = 116 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_GROUP_10"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_GROUP_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_military_group_10_active"
+            position = { x = 314 y = 116 }
+            quadTextureSprite = "GFX_button_148x34_light"
+            buttonText = "GO_ECON_UI_GROUP_10"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_GROUP_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_military_earlier"
+            position = { x = 10 y = 158 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_EARLIER"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_military_later"
+            position = { x = 310 y = 158 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_LATER"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_SLOT_TOOLTIP"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_pu_empty"
+        position = { x = 30 y = 423 }
+        size = { width = 972 height = 204 }
+        orientation = upper_left
+        clipping = no
+        background = { name = "GO_econ_ui_pu_empty_background" quadTextureSprite = "GFX_tiled_window_small" }
+        instantTextBoxType = {
+            name = "GO_econ_ui_pu_empty_title"
+            position = { x = 14 y = 12 }
+            font = "hoi_18mbs"
+            text = "GO_ECON_UI_PUS"
+            format = left
+            maxWidth = 940
+            maxHeight = 25
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_pu_empty_text"
+            position = { x = 14 y = 55 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_PU_EMPTY"
+            format = left
+            maxWidth = 936
+            maxHeight = 80
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_resources_view"
+        position = { x = 6 y = 123 }
+        size = { width = 1020 height = 504 }
+        orientation = upper_left
+        clipping = no
+        buttonType = {
+            name = "GO_econ_ui_reports_tab"
+            position = { x = 24 y = 0 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_REPORTS_TAB"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+        }
+        buttonType = {
+            name = "GO_econ_ui_reports_tab_active"
+            position = { x = 24 y = 0 }
+            quadTextureSprite = "GFX_button_148x34_light"
+            buttonText = "GO_ECON_UI_REPORTS_TAB"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+        }
+        buttonType = {
+            name = "GO_econ_ui_plants_tab"
+            position = { x = 176 y = 0 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_PLANTS_TAB"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+        }
+        buttonType = {
+            name = "GO_econ_ui_plants_tab_active"
+            position = { x = 176 y = 0 }
+            quadTextureSprite = "GFX_button_148x34_light"
+            buttonText = "GO_ECON_UI_PLANTS_TAB"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+        }
+        buttonType = {
+            name = "GO_econ_ui_trade_tab"
+            position = { x = 328 y = 0 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_TRADE_TAB"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_TRADE_NOTE"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_resources_reports"
+        position = { x = 6 y = 165 }
+        size = { width = 1020 height = 458 }
+        orientation = upper_left
+        clipping = no
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_output_boundary"
+            position = { x = 24 y = 399 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_NATIVE_OUTPUT_UNAVAILABLE"
+            format = left
+            maxWidth = 972
+            maxHeight = 22
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_resource_legend"
+            position = { x = 24 y = 425 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_RESOURCE_LEGEND"
+            format = left
+            maxWidth = 972
+            maxHeight = 32
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_native"
+        position = { x = 30 y = 165 }
+        size = { width = 468 height = 244 }
+        orientation = upper_left
+        clipping = no
+        background = { name = "GO_econ_ui_native_background" quadTextureSprite = "GFX_tiled_window_small" }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_title"
+            position = { x = 14 y = 9 }
+            font = "hoi_18mbs"
+            text = "GO_ECON_UI_NATIVE_TITLE"
+            format = left
+            maxWidth = 440
+            maxHeight = 24
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_note"
+            position = { x = 14 y = 36 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_NATIVE_NOTE"
+            format = left
+            maxWidth = 440
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_empty"
+            position = { x = 14 y = 87 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_NATIVE_EMPTY"
+            format = left
+            maxWidth = 436
+            maxHeight = 95
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_native_rows"
+        position = { x = 30 y = 165 }
+        size = { width = 468 height = 244 }
+        orientation = upper_left
+        clipping = no
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_resource_heading"
+            position = { x = 14 y = 66 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_RESOURCE"
+            format = left
+            maxWidth = 99
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_produced_heading"
+            position = { x = 115 y = 66 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_PRODUCED"
+            format = left
+            maxWidth = 67
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_imported_heading"
+            position = { x = 182 y = 66 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_IMPORTED"
+            format = left
+            maxWidth = 67
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_exported_heading"
+            position = { x = 249 y = 66 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_EXPORTED"
+            format = left
+            maxWidth = 67
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_consumed_heading"
+            position = { x = 316 y = 66 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_CONSUMED"
+            format = left
+            maxWidth = 67
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_surplus_heading"
+            position = { x = 383 y = 66 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_NET"
+            format = left
+            maxWidth = 67
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_native_coal_row"
+        position = { x = 30 y = 256 }
+        size = { width = 468 height = 24 }
+        orientation = upper_left
+        clipping = no
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_coal_name"
+            position = { x = 14 y = 0 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_MATERIAL_COAL"
+            format = left
+            maxWidth = 99
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_COAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_coal_produced"
+            position = { x = 115 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeCoalProduced]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_COAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_coal_imported"
+            position = { x = 182 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeCoalImported]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_COAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_coal_exported"
+            position = { x = 249 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeCoalExported]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_COAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_coal_consumed"
+            position = { x = 316 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeCoalConsumed]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_COAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_coal_surplus"
+            position = { x = 383 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeCoalSurplus]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_COAL_DETAILS"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_native_oil_row"
+        position = { x = 30 y = 280 }
+        size = { width = 468 height = 24 }
+        orientation = upper_left
+        clipping = no
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_oil_name"
+            position = { x = 14 y = 0 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_MATERIAL_OIL"
+            format = left
+            maxWidth = 99
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_OIL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_oil_produced"
+            position = { x = 115 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeOilProduced]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_OIL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_oil_imported"
+            position = { x = 182 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeOilImported]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_OIL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_oil_exported"
+            position = { x = 249 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeOilExported]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_OIL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_oil_consumed"
+            position = { x = 316 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeOilConsumed]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_OIL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_oil_surplus"
+            position = { x = 383 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeOilSurplus]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_OIL_DETAILS"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_native_tungsten_row"
+        position = { x = 30 y = 304 }
+        size = { width = 468 height = 24 }
+        orientation = upper_left
+        clipping = no
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_tungsten_name"
+            position = { x = 14 y = 0 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_MATERIAL_TUNGSTEN"
+            format = left
+            maxWidth = 99
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_TUNGSTEN_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_tungsten_produced"
+            position = { x = 115 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeTungstenProduced]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_TUNGSTEN_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_tungsten_imported"
+            position = { x = 182 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeTungstenImported]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_TUNGSTEN_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_tungsten_exported"
+            position = { x = 249 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeTungstenExported]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_TUNGSTEN_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_tungsten_consumed"
+            position = { x = 316 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeTungstenConsumed]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_TUNGSTEN_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_tungsten_surplus"
+            position = { x = 383 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeTungstenSurplus]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_TUNGSTEN_DETAILS"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_native_steel_row"
+        position = { x = 30 y = 328 }
+        size = { width = 468 height = 24 }
+        orientation = upper_left
+        clipping = no
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_steel_name"
+            position = { x = 14 y = 0 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_MATERIAL_STEEL"
+            format = left
+            maxWidth = 99
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_STEEL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_steel_produced"
+            position = { x = 115 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeSteelProduced]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_STEEL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_steel_imported"
+            position = { x = 182 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeSteelImported]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_STEEL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_steel_exported"
+            position = { x = 249 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeSteelExported]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_STEEL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_steel_consumed"
+            position = { x = 316 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeSteelConsumed]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_STEEL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_steel_surplus"
+            position = { x = 383 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeSteelSurplus]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_STEEL_DETAILS"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_native_aluminium_row"
+        position = { x = 30 y = 352 }
+        size = { width = 468 height = 24 }
+        orientation = upper_left
+        clipping = no
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_aluminium_name"
+            position = { x = 14 y = 0 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_MATERIAL_ALUMINIUM"
+            format = left
+            maxWidth = 99
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_ALUMINIUM_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_aluminium_produced"
+            position = { x = 115 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeAluminiumProduced]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_ALUMINIUM_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_aluminium_imported"
+            position = { x = 182 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeAluminiumImported]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_ALUMINIUM_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_aluminium_exported"
+            position = { x = 249 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeAluminiumExported]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_ALUMINIUM_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_aluminium_consumed"
+            position = { x = 316 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeAluminiumConsumed]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_ALUMINIUM_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_aluminium_surplus"
+            position = { x = 383 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeAluminiumSurplus]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_ALUMINIUM_DETAILS"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_native_rubber_row"
+        position = { x = 30 y = 376 }
+        size = { width = 468 height = 24 }
+        orientation = upper_left
+        clipping = no
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_rubber_name"
+            position = { x = 14 y = 0 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_MATERIAL_RUBBER"
+            format = left
+            maxWidth = 99
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_RUBBER_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_rubber_produced"
+            position = { x = 115 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeRubberProduced]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_RUBBER_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_rubber_imported"
+            position = { x = 182 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeRubberImported]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_RUBBER_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_rubber_exported"
+            position = { x = 249 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeRubberExported]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_RUBBER_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_rubber_consumed"
+            position = { x = 316 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeRubberConsumed]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_RUBBER_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_native_rubber_surplus"
+            position = { x = 383 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGONativeRubberSurplus]"
+            format = left
+            maxWidth = 67
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_NATIVE_RUBBER_DETAILS"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_materials"
+        position = { x = 534 y = 165 }
+        size = { width = 468 height = 364 }
+        orientation = upper_left
+        clipping = no
+        background = { name = "GO_econ_ui_materials_background" quadTextureSprite = "GFX_tiled_window_small" }
+        instantTextBoxType = {
+            name = "GO_econ_ui_materials_title"
+            position = { x = 14 y = 9 }
+            font = "hoi_18mbs"
+            text = "GO_ECON_UI_MATERIALS_TITLE"
+            format = left
+            maxWidth = 440
+            maxHeight = 24
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_materials_note"
+            position = { x = 14 y = 36 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_MATERIALS_NOTE"
+            format = left
+            maxWidth = 440
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_materials_empty"
+            position = { x = 14 y = 87 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_MATERIALS_EMPTY"
+            format = left
+            maxWidth = 436
+            maxHeight = 110
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_material_rows"
+        position = { x = 534 y = 165 }
+        size = { width = 468 height = 364 }
+        orientation = upper_left
+        clipping = no
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_resource_heading"
+            position = { x = 14 y = 66 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_RESOURCE"
+            format = left
+            maxWidth = 117
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_available_heading"
+            position = { x = 132 y = 66 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_AVAILABLE"
+            format = left
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_demand_heading"
+            position = { x = 212 y = 66 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_DEMAND"
+            format = left
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_allocation_heading"
+            position = { x = 292 y = 66 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_ALLOCATED"
+            format = left
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_output_heading"
+            position = { x = 372 y = 66 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_OUTPUT"
+            format = left
+            maxWidth = 80
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_material_iron_row"
+        position = { x = 534 y = 256 }
+        size = { width = 468 height = 22 }
+        orientation = upper_left
+        clipping = no
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_iron_name"
+            position = { x = 14 y = 0 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_MATERIAL_IRON"
+            format = left
+            maxWidth = 117
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_IRON_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_iron_available"
+            position = { x = 132 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialIronAvailable]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_IRON_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_iron_demand"
+            position = { x = 212 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialIronDemand]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_IRON_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_iron_allocation"
+            position = { x = 292 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialIronAllocation]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_IRON_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_iron_output"
+            position = { x = 372 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialIronOutput]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_IRON_DETAILS"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_material_bauxite_row"
+        position = { x = 534 y = 278 }
+        size = { width = 468 height = 22 }
+        orientation = upper_left
+        clipping = no
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_bauxite_name"
+            position = { x = 14 y = 0 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_MATERIAL_BAUXITE"
+            format = left
+            maxWidth = 117
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_BAUXITE_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_bauxite_available"
+            position = { x = 132 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialBauxiteAvailable]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_BAUXITE_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_bauxite_demand"
+            position = { x = 212 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialBauxiteDemand]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_BAUXITE_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_bauxite_allocation"
+            position = { x = 292 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialBauxiteAllocation]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_BAUXITE_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_bauxite_output"
+            position = { x = 372 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialBauxiteOutput]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_BAUXITE_DETAILS"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_material_coal_row"
+        position = { x = 534 y = 300 }
+        size = { width = 468 height = 22 }
+        orientation = upper_left
+        clipping = no
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_coal_name"
+            position = { x = 14 y = 0 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_MATERIAL_COAL"
+            format = left
+            maxWidth = 117
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_COAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_coal_available"
+            position = { x = 132 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialCoalAvailable]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_COAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_coal_demand"
+            position = { x = 212 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialCoalDemand]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_COAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_coal_allocation"
+            position = { x = 292 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialCoalAllocation]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_COAL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_coal_output"
+            position = { x = 372 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialCoalOutput]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_COAL_DETAILS"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_material_natural_gas_row"
+        position = { x = 534 y = 322 }
+        size = { width = 468 height = 22 }
+        orientation = upper_left
+        clipping = no
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_natural_gas_name"
+            position = { x = 14 y = 0 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_MATERIAL_NATURAL_GAS"
+            format = left
+            maxWidth = 117
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_NATURAL_GAS_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_natural_gas_available"
+            position = { x = 132 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialNaturalGasAvailable]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_NATURAL_GAS_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_natural_gas_demand"
+            position = { x = 212 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialNaturalGasDemand]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_NATURAL_GAS_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_natural_gas_allocation"
+            position = { x = 292 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialNaturalGasAllocation]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_NATURAL_GAS_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_natural_gas_output"
+            position = { x = 372 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialNaturalGasOutput]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_NATURAL_GAS_DETAILS"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_material_oil_row"
+        position = { x = 534 y = 344 }
+        size = { width = 468 height = 22 }
+        orientation = upper_left
+        clipping = no
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_oil_name"
+            position = { x = 14 y = 0 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_MATERIAL_OIL"
+            format = left
+            maxWidth = 117
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_OIL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_oil_available"
+            position = { x = 132 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialOilAvailable]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_OIL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_oil_demand"
+            position = { x = 212 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialOilDemand]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_OIL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_oil_allocation"
+            position = { x = 292 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialOilAllocation]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_OIL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_oil_output"
+            position = { x = 372 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialOilOutput]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_OIL_DETAILS"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_material_rare_earth_minerals_row"
+        position = { x = 534 y = 366 }
+        size = { width = 468 height = 22 }
+        orientation = upper_left
+        clipping = no
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_rare_earth_minerals_name"
+            position = { x = 14 y = 0 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_MATERIAL_RARE_EARTH_MINERALS"
+            format = left
+            maxWidth = 117
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_RARE_EARTH_MINERALS_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_rare_earth_minerals_available"
+            position = { x = 132 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialRareEarthMineralsAvailable]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_RARE_EARTH_MINERALS_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_rare_earth_minerals_demand"
+            position = { x = 212 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialRareEarthMineralsDemand]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_RARE_EARTH_MINERALS_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_rare_earth_minerals_allocation"
+            position = { x = 292 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialRareEarthMineralsAllocation]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_RARE_EARTH_MINERALS_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_rare_earth_minerals_output"
+            position = { x = 372 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialRareEarthMineralsOutput]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_RARE_EARTH_MINERALS_DETAILS"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_material_tungsten_row"
+        position = { x = 534 y = 388 }
+        size = { width = 468 height = 22 }
+        orientation = upper_left
+        clipping = no
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_tungsten_name"
+            position = { x = 14 y = 0 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_MATERIAL_TUNGSTEN"
+            format = left
+            maxWidth = 117
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_TUNGSTEN_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_tungsten_available"
+            position = { x = 132 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialTungstenAvailable]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_TUNGSTEN_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_tungsten_demand"
+            position = { x = 212 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialTungstenDemand]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_TUNGSTEN_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_tungsten_allocation"
+            position = { x = 292 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialTungstenAllocation]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_TUNGSTEN_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_tungsten_output"
+            position = { x = 372 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialTungstenOutput]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_TUNGSTEN_DETAILS"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_material_titanium_row"
+        position = { x = 534 y = 410 }
+        size = { width = 468 height = 22 }
+        orientation = upper_left
+        clipping = no
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_titanium_name"
+            position = { x = 14 y = 0 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_MATERIAL_TITANIUM"
+            format = left
+            maxWidth = 117
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_TITANIUM_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_titanium_available"
+            position = { x = 132 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialTitaniumAvailable]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_TITANIUM_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_titanium_demand"
+            position = { x = 212 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialTitaniumDemand]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_TITANIUM_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_titanium_allocation"
+            position = { x = 292 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialTitaniumAllocation]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_TITANIUM_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_titanium_output"
+            position = { x = 372 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialTitaniumOutput]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_TITANIUM_DETAILS"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_material_steel_row"
+        position = { x = 534 y = 432 }
+        size = { width = 468 height = 22 }
+        orientation = upper_left
+        clipping = no
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_steel_name"
+            position = { x = 14 y = 0 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_MATERIAL_STEEL"
+            format = left
+            maxWidth = 117
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_STEEL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_steel_available"
+            position = { x = 132 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialSteelAvailable]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_STEEL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_steel_demand"
+            position = { x = 212 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialSteelDemand]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_STEEL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_steel_allocation"
+            position = { x = 292 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialSteelAllocation]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_STEEL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_steel_output"
+            position = { x = 372 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialSteelOutput]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_STEEL_DETAILS"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_material_aluminium_row"
+        position = { x = 534 y = 454 }
+        size = { width = 468 height = 22 }
+        orientation = upper_left
+        clipping = no
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_aluminium_name"
+            position = { x = 14 y = 0 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_MATERIAL_ALUMINIUM"
+            format = left
+            maxWidth = 117
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_ALUMINIUM_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_aluminium_available"
+            position = { x = 132 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialAluminiumAvailable]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_ALUMINIUM_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_aluminium_demand"
+            position = { x = 212 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialAluminiumDemand]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_ALUMINIUM_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_aluminium_allocation"
+            position = { x = 292 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialAluminiumAllocation]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_ALUMINIUM_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_aluminium_output"
+            position = { x = 372 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialAluminiumOutput]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_ALUMINIUM_DETAILS"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_material_rubber_row"
+        position = { x = 534 y = 476 }
+        size = { width = 468 height = 22 }
+        orientation = upper_left
+        clipping = no
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_rubber_name"
+            position = { x = 14 y = 0 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_MATERIAL_RUBBER"
+            format = left
+            maxWidth = 117
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_RUBBER_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_rubber_available"
+            position = { x = 132 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialRubberAvailable]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_RUBBER_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_rubber_demand"
+            position = { x = 212 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialRubberDemand]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_RUBBER_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_rubber_allocation"
+            position = { x = 292 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialRubberAllocation]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_RUBBER_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_rubber_output"
+            position = { x = 372 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialRubberOutput]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_RUBBER_DETAILS"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_material_microchips_row"
+        position = { x = 534 y = 498 }
+        size = { width = 468 height = 22 }
+        orientation = upper_left
+        clipping = no
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_microchips_name"
+            position = { x = 14 y = 0 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_MATERIAL_MICROCHIPS"
+            format = left
+            maxWidth = 117
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_MICROCHIPS_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_microchips_available"
+            position = { x = 132 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialMicrochipsAvailable]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_MICROCHIPS_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_microchips_demand"
+            position = { x = 212 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialMicrochipsDemand]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_MICROCHIPS_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_microchips_allocation"
+            position = { x = 292 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialMicrochipsAllocation]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_MICROCHIPS_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_material_microchips_output"
+            position = { x = 372 y = 0 }
+            font = "hoi_16mbs"
+            text = "[GetGOMaterialMicrochipsOutput]"
+            format = left
+            maxWidth = 80
+            maxHeight = 22
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_MATERIAL_MICROCHIPS_DETAILS"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_reserves"
+        position = { x = 30 y = 419 }
+        size = { width = 468 height = 131 }
+        orientation = upper_left
+        clipping = no
+        background = { name = "GO_econ_ui_reserves_background" quadTextureSprite = "GFX_tiled_window_small" }
+        instantTextBoxType = {
+            name = "GO_econ_ui_reserves_title"
+            position = { x = 14 y = 8 }
+            font = "hoi_18mbs"
+            text = "GO_ECON_UI_RESERVES_TITLE"
+            format = left
+            maxWidth = 440
+            maxHeight = 24
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_reserve_fuel_label"
+            position = { x = 14 y = 36 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_FUEL"
+            format = left
+            maxWidth = 145
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_RESERVE_FUEL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_reserve_fuel_value"
+            position = { x = 166 y = 36 }
+            font = "hoi_16mbs"
+            text = "[GetGOReserveFuel]"
+            format = left
+            maxWidth = 283
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_RESERVE_FUEL_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_reserve_ammunition_label"
+            position = { x = 14 y = 59 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_AMMUNITION"
+            format = left
+            maxWidth = 145
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_RESERVE_AMMUNITION_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_reserve_ammunition_value"
+            position = { x = 166 y = 59 }
+            font = "hoi_16mbs"
+            text = "[GetGOReserveAmmunition]"
+            format = left
+            maxWidth = 283
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_RESERVE_AMMUNITION_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_reserve_food_label"
+            position = { x = 14 y = 82 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_FOOD"
+            format = left
+            maxWidth = 145
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_RESERVE_FOOD_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_reserve_food_value"
+            position = { x = 166 y = 82 }
+            font = "hoi_16mbs"
+            text = "[GetGOReserveFood]"
+            format = left
+            maxWidth = 283
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_RESERVE_FOOD_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_food_production_label"
+            position = { x = 14 y = 105 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_FOOD_PRODUCTION"
+            format = left
+            maxWidth = 145
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_RESERVE_FOOD_DETAILS"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_food_production_value"
+            position = { x = 166 y = 105 }
+            font = "hoi_16mbs"
+            text = "[GetGOFoodProductionOutput]"
+            format = left
+            maxWidth = 283
+            maxHeight = 23
+            fixedsize = yes
+            pdx_tooltip = "GO_ECON_UI_RESERVE_FOOD_DETAILS"
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_resources_plants"
+        position = { x = 30 y = 165 }
+        size = { width = 972 height = 458 }
+        orientation = upper_left
+        clipping = no
+        buttonType = {
+            name = "GO_econ_ui_plant_family_1"
+            position = { x = 0 y = 0 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_MATERIAL_STEEL"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_family_2"
+            position = { x = 154 y = 0 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_MATERIAL_ALUMINIUM"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_family_3"
+            position = { x = 308 y = 0 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_MATERIAL_RUBBER"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_family_4"
+            position = { x = 462 y = 0 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_MATERIAL_MICROCHIPS"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_family_5"
+            position = { x = 616 y = 0 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_AMMUNITION"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_family_title"
+            position = { x = 14 y = 45 }
+            font = "hoi_18mbs"
+            text = "GO_ECON_UI_PLANT_FAMILY_TITLE"
+            format = left
+            maxWidth = 450
+            maxHeight = 24
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_group_1"
+            position = { x = 504 y = 40 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_GROUP_1"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_NATIONAL_PLANT_GROUP_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_group_1_active"
+            position = { x = 504 y = 40 }
+            quadTextureSprite = "GFX_button_148x34_light"
+            buttonText = "GO_ECON_UI_GROUP_1"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_NATIONAL_PLANT_GROUP_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_group_5"
+            position = { x = 656 y = 40 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_GROUP_5"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_NATIONAL_PLANT_GROUP_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_group_5_active"
+            position = { x = 656 y = 40 }
+            quadTextureSprite = "GFX_button_148x34_light"
+            buttonText = "GO_ECON_UI_GROUP_5"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_NATIONAL_PLANT_GROUP_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_group_10"
+            position = { x = 808 y = 40 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_GROUP_10"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_NATIONAL_PLANT_GROUP_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_group_10_active"
+            position = { x = 808 y = 40 }
+            quadTextureSprite = "GFX_button_148x34_light"
+            buttonText = "GO_ECON_UI_GROUP_10"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_NATIONAL_PLANT_GROUP_TOOLTIP"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plants_note"
+            position = { x = 14 y = 82 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_PLANTS_NOTE"
+            format = left
+            maxWidth = 936
+            maxHeight = 42
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plants_empty"
+            position = { x = 14 y = 156 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_PLANTS_STATUS"
+            format = left
+            maxWidth = 936
+            maxHeight = 105
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_update_plants"
+            position = { x = 0 y = 409 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_UPDATE_PLANTS"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_UPDATE_PLANTS_TOOLTIP"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plants_config"
+            position = { x = 164 y = 410 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_PLANTS_CONFIG_NOTE"
+            format = left
+            maxWidth = 792
+            maxHeight = 42
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_plant_list"
+        position = { x = 30 y = 291 }
+        size = { width = 972 height = 270 }
+        orientation = upper_left
+        clipping = no
+        background = { name = "GO_econ_ui_national_plant_background" quadTextureSprite = "GFX_tiled_window_small" }
+        instantTextBoxType = {
+            name = "GO_econ_ui_national_plant_scan_date"
+            position = { x = 694 y = 12 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_NATIONAL_PLANT_SCAN_DATE"
+            format = right
+            maxWidth = 262
+            maxHeight = 25
+            fixedsize = yes
+            alwaystransparent = yes
+            pdx_tooltip = "GO_ECON_UI_UPDATE_PLANTS_TOOLTIP"
+        }
+        # Retain the former grid ID for compatibility; national controls below
+        # have no dynamic-list binding and this legacy grid stays hidden.
+        gridBoxType = {
+            name = "GO_econ_ui_plant_grid"
+            position = { x = 0 y = 0 }
+            size = { width = 956 height = 100%% }
+            slotsize = { width = 956 height = 84 }
+            max_slots_horizontal = 1
+            format = "UPPER_LEFT"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_national_plant_title"
+            position = { x = 14 y = 12 }
+            font = "hoi_18mbs"
+            text = "GO_ECON_UI_NATIONAL_PLANT_TITLE"
+            format = left
+            maxWidth = 936
+            maxHeight = 25
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_national_plant_built_label"
+            position = { x = 14 y = 47 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_PLANT_BUILT"
+            format = left
+            maxWidth = 210
+            maxHeight = 25
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_national_plant_built_value"
+            position = { x = 14 y = 73 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_NATIONAL_PLANT_BUILT_VALUE"
+            format = left
+            maxWidth = 210
+            maxHeight = 44
+            fixedsize = yes
+            alwaystransparent = yes
+            pdx_tooltip = "GO_ECON_UI_NATIONAL_PLANT_READOUT_TOOLTIP"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_national_plant_assigned_label"
+            position = { x = 250 y = 47 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_PLANT_ASSIGNED"
+            format = left
+            maxWidth = 246
+            maxHeight = 25
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_national_plant_assigned_value"
+            position = { x = 250 y = 73 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_NATIONAL_PLANT_ASSIGNED_VALUE"
+            format = left
+            maxWidth = 246
+            maxHeight = 44
+            fixedsize = yes
+            alwaystransparent = yes
+            pdx_tooltip = "GO_ECON_UI_NATIONAL_PLANT_READOUT_TOOLTIP"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_national_plant_operating_label"
+            position = { x = 520 y = 47 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_NATIONAL_PLANT_OPERATING"
+            format = left
+            maxWidth = 436
+            maxHeight = 25
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_national_plant_operating_value"
+            position = { x = 520 y = 73 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_NATIONAL_PLANT_OPERATING_VALUE"
+            format = left
+            maxWidth = 436
+            maxHeight = 44
+            fixedsize = yes
+            alwaystransparent = yes
+            pdx_tooltip = "GO_ECON_UI_NATIONAL_PLANT_READOUT_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_national_plant_idle"
+            position = { x = 14 y = 130 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_NATIONAL_PLANT_IDLE"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_NATIONAL_PLANT_ASSIGN_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_national_plant_less"
+            position = { x = 170 y = 130 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_NATIONAL_PLANT_LESS"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_NATIONAL_PLANT_ASSIGN_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_national_plant_more"
+            position = { x = 326 y = 130 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_NATIONAL_PLANT_MORE"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_NATIONAL_PLANT_ASSIGN_TOOLTIP"
+        }
+        buttonType = {
+            name = "GO_econ_ui_national_plant_all"
+            position = { x = 482 y = 130 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_NATIONAL_PLANT_ALL"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_NATIONAL_PLANT_ASSIGN_TOOLTIP"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_national_plant_status"
+            position = { x = 14 y = 184 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_NATIONAL_PLANT_STATUS"
+            format = left
+            maxWidth = 936
+            maxHeight = 68
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        click_to_front = no
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_native_trade_return"
+        position = { x = 700 y = 50 }
+        size = { width = 308 height = 142 }
+        orientation = upper_left
+        clipping = no
+        background = { name = "GO_econ_ui_native_trade_return_background" quadTextureSprite = "GFX_tiled_window_small" }
+        instantTextBoxType = {
+            name = "GO_econ_ui_trade_return_title"
+            position = { x = 14 y = 12 }
+            font = "hoi_18mbs"
+            text = "GO_ECON_UI_RESOURCES_TAB"
+            format = left
+            maxWidth = 280
+            maxHeight = 24
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_trade_return_note"
+            position = { x = 14 y = 43 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_TRADE_NOTE"
+            format = left
+            maxWidth = 280
+            maxHeight = 51
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_return_from_trade"
+            position = { x = 14 y = 100 }
+            quadTextureSprite = "GFX_button_148x34"
+            buttonText = "GO_ECON_UI_RETURN_FROM_TRADE"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+        }
+    }
+    containerWindowType = {
+        name = "GO_econ_ui_plant_entry"
+        position = { x = 0 y = 0 }
+        size = { width = 956 height = 82 }
+        orientation = upper_left
+        clipping = no
+        buttonType = {
+            name = "GO_econ_ui_plant_entry_background"
+            position = { x = 0 y = 0 }
+            size = { x = 956 y = 82 }
+            quadTextureSprite = "GFX_tiled_window_small"
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_state_name"
+            position = { x = 12 y = 5 }
+            font = "hoi_18mbs"
+            text = "GO_ECON_UI_PLANT_STATE_NAME"
+            format = left
+            maxWidth = 265
+            maxHeight = 23
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_built_label"
+            position = { x = 288 y = 5 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_PLANT_BUILT"
+            format = left
+            maxWidth = 46
+            maxHeight = 23
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_built_value"
+            position = { x = 340 y = 5 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_PLANT_BUILT_VALUE"
+            format = left
+            maxWidth = 48
+            maxHeight = 23
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_assigned_label"
+            position = { x = 406 y = 5 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_PLANT_ASSIGNED"
+            format = left
+            maxWidth = 69
+            maxHeight = 23
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_assigned_value"
+            position = { x = 480 y = 5 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_PLANT_ASSIGNED_VALUE"
+            format = left
+            maxWidth = 450
+            maxHeight = 23
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_slot_0"
+            position = { x = 15 y = 34 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_PLANT_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_plant_slot_0_factory"
+            position = { x = 18 y = 36 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_0_count"
+            position = { x = 11 y = 59 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_ZERO"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_0_selected"
+            position = { x = 35 y = 24 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_slot_1"
+            position = { x = 59 y = 34 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_PLANT_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_plant_slot_1_factory"
+            position = { x = 62 y = 36 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_1_count"
+            position = { x = 55 y = 59 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SLOT_1"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_1_selected"
+            position = { x = 79 y = 24 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_slot_2"
+            position = { x = 103 y = 34 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_PLANT_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_plant_slot_2_factory"
+            position = { x = 106 y = 36 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_2_count"
+            position = { x = 99 y = 59 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SLOT_2"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_2_selected"
+            position = { x = 123 y = 24 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_slot_3"
+            position = { x = 147 y = 34 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_PLANT_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_plant_slot_3_factory"
+            position = { x = 150 y = 36 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_3_count"
+            position = { x = 143 y = 59 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SLOT_3"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_3_selected"
+            position = { x = 167 y = 24 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_slot_4"
+            position = { x = 191 y = 34 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_PLANT_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_plant_slot_4_factory"
+            position = { x = 194 y = 36 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_4_count"
+            position = { x = 187 y = 59 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SLOT_4"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_4_selected"
+            position = { x = 211 y = 24 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_slot_5"
+            position = { x = 235 y = 34 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_PLANT_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_plant_slot_5_factory"
+            position = { x = 238 y = 36 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_5_count"
+            position = { x = 231 y = 59 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SLOT_5"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_5_selected"
+            position = { x = 255 y = 24 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_slot_6"
+            position = { x = 279 y = 34 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_PLANT_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_plant_slot_6_factory"
+            position = { x = 282 y = 36 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_6_count"
+            position = { x = 275 y = 59 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SLOT_6"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_6_selected"
+            position = { x = 299 y = 24 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_slot_7"
+            position = { x = 323 y = 34 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_PLANT_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_plant_slot_7_factory"
+            position = { x = 326 y = 36 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_7_count"
+            position = { x = 319 y = 59 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SLOT_7"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_7_selected"
+            position = { x = 343 y = 24 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_slot_8"
+            position = { x = 367 y = 34 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_PLANT_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_plant_slot_8_factory"
+            position = { x = 370 y = 36 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_8_count"
+            position = { x = 363 y = 59 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SLOT_8"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_8_selected"
+            position = { x = 387 y = 24 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_slot_9"
+            position = { x = 411 y = 34 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_PLANT_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_plant_slot_9_factory"
+            position = { x = 414 y = 36 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_9_count"
+            position = { x = 407 y = 59 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SLOT_9"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_9_selected"
+            position = { x = 431 y = 24 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_slot_10"
+            position = { x = 455 y = 34 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_PLANT_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_plant_slot_10_factory"
+            position = { x = 458 y = 36 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_10_count"
+            position = { x = 451 y = 59 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SLOT_10"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_10_selected"
+            position = { x = 475 y = 24 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_slot_11"
+            position = { x = 499 y = 34 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_PLANT_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_plant_slot_11_factory"
+            position = { x = 502 y = 36 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_11_count"
+            position = { x = 495 y = 59 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SLOT_11"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_11_selected"
+            position = { x = 519 y = 24 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_slot_12"
+            position = { x = 543 y = 34 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_PLANT_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_plant_slot_12_factory"
+            position = { x = 546 y = 36 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_12_count"
+            position = { x = 539 y = 59 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SLOT_12"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_12_selected"
+            position = { x = 563 y = 24 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_slot_13"
+            position = { x = 587 y = 34 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_PLANT_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_plant_slot_13_factory"
+            position = { x = 590 y = 36 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_13_count"
+            position = { x = 583 y = 59 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SLOT_13"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_13_selected"
+            position = { x = 607 y = 24 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_slot_14"
+            position = { x = 631 y = 34 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_PLANT_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_plant_slot_14_factory"
+            position = { x = 634 y = 36 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_14_count"
+            position = { x = 627 y = 59 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SLOT_14"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_14_selected"
+            position = { x = 651 y = 24 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_slot_15"
+            position = { x = 675 y = 34 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_PLANT_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_plant_slot_15_factory"
+            position = { x = 678 y = 36 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_15_count"
+            position = { x = 671 y = 59 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SLOT_15"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_15_selected"
+            position = { x = 695 y = 24 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_slot_16"
+            position = { x = 719 y = 34 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_PLANT_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_plant_slot_16_factory"
+            position = { x = 722 y = 36 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_16_count"
+            position = { x = 715 y = 59 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SLOT_16"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_16_selected"
+            position = { x = 739 y = 24 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_slot_17"
+            position = { x = 763 y = 34 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_PLANT_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_plant_slot_17_factory"
+            position = { x = 766 y = 36 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_17_count"
+            position = { x = 759 y = 59 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SLOT_17"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_17_selected"
+            position = { x = 783 y = 24 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_slot_18"
+            position = { x = 807 y = 34 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_PLANT_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_plant_slot_18_factory"
+            position = { x = 810 y = 36 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_18_count"
+            position = { x = 803 y = 59 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SLOT_18"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_18_selected"
+            position = { x = 827 y = 24 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_slot_19"
+            position = { x = 851 y = 34 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_PLANT_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_plant_slot_19_factory"
+            position = { x = 854 y = 36 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_19_count"
+            position = { x = 847 y = 59 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SLOT_19"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_19_selected"
+            position = { x = 871 y = 24 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "GO_econ_ui_plant_slot_20"
+            position = { x = 895 y = 34 }
+            quadTextureSprite = "GFX_factory_bg"
+            buttonText = ""
+            buttonFont = "hoi_16mbs"
+            clicksound = click_scroll
+            oversound = ui_menu_over
+            pdx_tooltip = "GO_ECON_UI_PLANT_SLOT_TOOLTIP"
+        }
+        iconType = {
+            name = "GO_econ_ui_plant_slot_20_factory"
+            position = { x = 898 y = 36 }
+            spriteType = "GFX_factory_item"
+            frame = 1
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_20_count"
+            position = { x = 891 y = 59 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SLOT_20"
+            format = center
+            maxWidth = 36
+            maxHeight = 20
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "GO_econ_ui_plant_slot_20_selected"
+            position = { x = 915 y = 24 }
+            font = "hoi_16mbs"
+            text = "GO_ECON_UI_SELECTED_MARK"
+            format = left
+            maxWidth = 18
+            maxHeight = 18
+            fixedsize = yes
+            alwaystransparent = yes
+        }
+    }
+}

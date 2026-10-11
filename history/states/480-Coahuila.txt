@@ -8,6 +8,8 @@ state = {
 	resources = {
 		oil = 8
 		#steel=4 sent to Mexico City
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 3
 	}
 
 	history = {

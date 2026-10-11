@@ -2,7 +2,8 @@ state={
 	id=215
 	name="STATE_215"
 	resources={
-		steel=30 # was: 52.000
+		# Stage 12: sourced geography; authored native resource points.
+		iron = 8
 	}
 
 	history={

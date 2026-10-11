@@ -1,0 +1,196 @@
+# Stage 12 fresh-start authoring guards. Never use these as save migrations.
+# Existing state/country GDP, cash, debt, services and replay records win.
+
+# STATE. Called from the prospective owner COUNTRY before any input is authored.
+GO_econ_2027_state_fresh = {
+    GO_econ_state_fiscal_initialized = yes
+    check_variable = { state_population_k > 0 }
+    has_variable = GO_econ_state_gdp
+    has_variable = GO_econ_state_gdp_populated
+    check_variable = { GO_econ_state_gdp = 0 }
+    check_variable = { GO_econ_state_gdp_populated = 0 }
+    has_variable = GO_econ_state_growth_modifier_percent
+    has_variable = GO_econ_state_growth_modifier_percent_populated
+    check_variable = { GO_econ_state_growth_modifier_percent = 0 }
+    check_variable = { GO_econ_state_growth_modifier_percent_populated = 0 }
+    has_variable = GO_econ_state_debt
+    has_variable = GO_econ_state_debt_populated
+    has_variable = GO_econ_state_debt_attribution_complete
+    check_variable = { GO_econ_state_debt = 0 }
+    check_variable = { GO_econ_state_debt_populated = 0 }
+    check_variable = { GO_econ_state_debt_attribution_complete = 0 }
+    has_variable = GO_econ_state_services_completed_levels
+    has_variable = GO_econ_state_services_completed_levels_populated
+    check_variable = { GO_econ_state_services_completed_levels = 0 }
+    check_variable = { GO_econ_state_services_completed_levels_populated = 0 }
+    has_variable = GO_econ_state_services_requested_levels
+    has_variable = GO_econ_state_services_requested_levels_populated
+    check_variable = { GO_econ_state_services_requested_levels = 0 }
+    check_variable = { GO_econ_state_services_requested_levels_populated = 0 }
+    has_variable = GO_econ_state_services_funded_levels
+    has_variable = GO_econ_state_services_funded_levels_populated
+    check_variable = { GO_econ_state_services_funded_levels = 0 }
+    check_variable = { GO_econ_state_services_funded_levels_populated = 0 }
+    has_variable = GO_econ_state_services_owner_associated
+    check_variable = { GO_econ_state_services_owner_associated = 0 }
+    NOT = { has_variable = GO_econ_state_services_funding_owner }
+    has_variable = GO_econ_state_last_service_month
+    has_variable = GO_econ_state_last_growth_month
+    check_variable = { GO_econ_state_last_service_month = -1 }
+    check_variable = { GO_econ_state_last_growth_month = -1 }
+    has_variable = GO_econ_state_project_active
+    has_variable = GO_econ_state_project_type
+    check_variable = { GO_econ_state_project_active = 0 }
+    check_variable = { GO_econ_state_project_type = 0 }
+    has_variable = GO_econ_state_project_paid_cost
+    has_variable = GO_econ_state_project_cash_used
+    has_variable = GO_econ_state_project_borrowed_outstanding
+    has_variable = GO_econ_state_project_workdays
+    has_variable = GO_econ_state_project_last_work_day
+    has_variable = GO_econ_state_project_required_days
+    has_variable = GO_econ_state_project_next_level
+    has_variable = GO_econ_state_project_start_gdp
+    has_variable = GO_econ_state_project_start_price
+    check_variable = { GO_econ_state_project_paid_cost = 0 }
+    check_variable = { GO_econ_state_project_cash_used = 0 }
+    check_variable = { GO_econ_state_project_borrowed_outstanding = 0 }
+    check_variable = { GO_econ_state_project_workdays = 0 }
+    check_variable = { GO_econ_state_project_last_work_day = -1 }
+    check_variable = { GO_econ_state_project_required_days = 0 }
+    check_variable = { GO_econ_state_project_next_level = 0 }
+    check_variable = { GO_econ_state_project_start_gdp = 0 }
+    check_variable = { GO_econ_state_project_start_price = 0 }
+    NOT = { has_variable = GO_econ_state_project_sponsor }
+    NOT = { has_variable = GO_econ_work_2027_starting_gdp }
+    NOT = { has_variable = GO_econ_state_2027_gdp_authored }
+    NOT = { has_variable = GO_econ_state_2027_fiscal_authored }
+    NOT = { has_variable = GO_econ_state_2027_inherited_debt_anchor }
+    # Do not declare away obligations owed to another (even defeated) country.
+    NOT = {
+        any_of_scopes = {
+            array = global.countries
+            PREV = { has_variable = GO_econ_state_liability_@PREV }
+        }
+    }
+}
+
+# COUNTRY. Only the public 2027 bookmark and an untouched initialized ledger.
+GO_econ_2027_country_fresh = {
+    exists = yes
+    OR = { tag = SOV tag = USA tag = CHI tag = FRA }
+    date > 2026.12.31
+    date < 2027.1.2
+    GO_econ_country_fiscal_initialized = yes
+    GO_econ_fiscal_config_ready = yes
+    GO_econ_fiscal_calendar_ready = yes
+    has_variable = global.GO_econ_cfg_gdp_income_factor
+    check_variable = { var = global.GO_econ_cfg_gdp_income_factor value = 0 compare = greater_than_or_equals }
+    NOT = { has_variable = GO_econ_country_2027_profile_version }
+    NOT = { has_variable = GO_econ_country_2027_gdp_dataset_complete }
+    NOT = { has_variable = GO_econ_country_2027_gdp_authored_states }
+    NOT = { has_variable = GO_econ_country_2027_gdp_expected_states }
+    NOT = { has_variable = GO_econ_country_2027_fiscal_authored_states }
+    NOT = { has_variable = GO_econ_country_2027_inherited_debt_anchors }
+    NOT = { has_variable = GO_econ_2027_startup_authoring }
+    NOT = { has_variable = GO_econ_work_2027_opening_debt }
+    NOT = { has_variable = GO_econ_country_gdp_income_policy }
+    NOT = { has_variable = GO_econ_country_gdp_income_policy_populated }
+    NOT = { has_country_flag = GO_econ_fiscal_campaign_access }
+    NOT = { has_country_flag = GO_econ_gdp_income_access }
+    has_variable = GO_econ_country_last_processed_month
+    check_variable = { GO_econ_country_last_processed_month = -1 }
+    has_variable = GO_econ_country_report_month
+    check_variable = { GO_econ_country_report_month = -1 }
+    has_variable = GO_econ_country_fiscal_report_populated
+    check_variable = { GO_econ_country_fiscal_report_populated = 0 }
+    has_variable = GO_econ_country_settlement_in_progress
+    check_variable = { GO_econ_country_settlement_in_progress = 0 }
+    has_variable = GO_econ_country_treasury
+    has_variable = GO_econ_country_treasury_populated
+    check_variable = { GO_econ_country_treasury = 0 }
+    check_variable = { GO_econ_country_treasury_populated = 0 }
+    has_variable = GO_econ_country_debt
+    has_variable = GO_econ_country_debt_populated
+    has_variable = GO_econ_country_debt_attribution_complete
+    check_variable = { GO_econ_country_debt = 0 }
+    check_variable = { GO_econ_country_debt_populated = 0 }
+    check_variable = { GO_econ_country_debt_attribution_complete = 0 }
+    has_variable = GO_econ_country_global_status
+    has_variable = GO_econ_country_global_status_populated
+    check_variable = { GO_econ_country_global_status = 0 }
+    check_variable = { GO_econ_country_global_status_populated = 0 }
+    has_variable = GO_econ_country_annual_inflation_percent
+    has_variable = GO_econ_country_annual_inflation_percent_populated
+    check_variable = { GO_econ_country_annual_inflation_percent = 0 }
+    check_variable = { GO_econ_country_annual_inflation_percent_populated = 0 }
+    has_variable = GO_econ_country_monthly_receipts
+    has_variable = GO_econ_country_monthly_receipts_populated
+    has_variable = GO_econ_country_receipts_month
+    has_variable = GO_econ_country_receipts_month_populated
+    check_variable = { GO_econ_country_monthly_receipts = 0 }
+    check_variable = { GO_econ_country_monthly_receipts_populated = 0 }
+    check_variable = { GO_econ_country_receipts_month = 0 }
+    check_variable = { GO_econ_country_receipts_month_populated = 0 }
+    GO_econ_country_has_price_index = yes
+    check_variable = { GO_econ_country_price_index = 1 }
+    GO_econ_country_pending_fiscal_flows_ready = yes
+    check_variable = { GO_econ_country_open_flow_first_day = -1 }
+    check_variable = { GO_econ_country_open_flow_last_day = -1 }
+    has_variable = GO_econ_country_services_funding_enabled
+    has_variable = GO_econ_country_services_funding_enabled_populated
+    check_variable = { GO_econ_country_services_funding_enabled = 1 }
+    check_variable = { GO_econ_country_services_funding_enabled_populated = 1 }
+    has_variable = GO_econ_country_services_funding_requested
+    has_variable = GO_econ_country_services_funding_requested_populated
+    check_variable = { GO_econ_country_services_funding_requested = 1 }
+    check_variable = { GO_econ_country_services_funding_requested_populated = 1 }
+    # Includes liabilities in states this country does not currently own.
+    NOT = { any_state = { has_variable = GO_econ_state_liability_@PREV } }
+    any_owned_state = { is_controlled_by = PREV }
+    any_owned_state = { is_controlled_by = PREV is_capital = yes }
+    NOT = {
+        any_owned_state = {
+            is_controlled_by = PREV
+            NOT = { GO_econ_2027_state_fresh = yes }
+        }
+    }
+}
+
+# COUNTRY. Access is granted only after full existing backend input validation.
+GO_econ_2027_profile_ready = {
+    exists = yes
+    OR = { tag = SOV tag = USA tag = CHI tag = FRA }
+    has_variable = GO_econ_country_2027_gdp_dataset_complete
+    check_variable = { GO_econ_country_2027_gdp_dataset_complete = 1 }
+    has_variable = GO_econ_country_2027_fiscal_authored_states
+    check_variable = { GO_econ_country_2027_fiscal_authored_states = GO_econ_country_2027_gdp_expected_states }
+    has_variable = GO_econ_country_2027_inherited_debt_anchors
+    check_variable = { GO_econ_country_2027_inherited_debt_anchors = 1 }
+    GO_econ_country_report_ready = yes
+    GO_econ_country_has_gdp = yes
+    check_variable = { GO_econ_country_gdp > 0 }
+    check_variable = { GO_econ_country_eligible_states = GO_econ_country_2027_gdp_expected_states }
+    GO_econ_country_has_gdp_nominal = yes
+    GO_econ_country_has_gdp_per_capita = yes
+    GO_econ_country_has_treasury = yes
+    GO_econ_country_has_debt = yes
+    GO_econ_country_has_global_status = yes
+    GO_econ_country_has_price_index = yes
+    GO_econ_country_pending_fiscal_flows_ready = yes
+    has_variable = GO_econ_country_annual_inflation_percent
+    has_variable = GO_econ_country_annual_inflation_percent_populated
+    check_variable = { GO_econ_country_annual_inflation_percent_populated = 1 }
+    check_variable = { GO_econ_country_annual_inflation_percent = 0 }
+    has_variable = GO_econ_country_gdp_income_policy
+    has_variable = GO_econ_country_gdp_income_policy_populated
+    check_variable = { GO_econ_country_gdp_income_policy = 1 }
+    check_variable = { GO_econ_country_gdp_income_policy_populated = 1 }
+    check_variable = { GO_econ_country_monthly_receipts_populated = 0 }
+    check_variable = { GO_econ_country_receipts_month_populated = 0 }
+    NOT = {
+        any_owned_state = {
+            is_controlled_by = PREV
+            NOT = { GO_econ_state_month_inputs_ready = yes }
+        }
+    }
+}

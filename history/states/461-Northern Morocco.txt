@@ -4,6 +4,8 @@ state={
 	name="STATE_461"
 	resources={
 		chromium=12.000 #added due to portugal setup
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 3
 	}
 
 	manpower = 3197719

@@ -42837,7 +42837,7 @@
       "was_mod_file": false,
       "original_sha256": "4bf18c381999afd86552f885e6325a4921f67161d2f7524fb87785f357d1e235",
       "baseline_sha256": "4bf18c381999afd86552f885e6325a4921f67161d2f7524fb87785f357d1e235",
-      "output_sha256": "ab685e01372a1b74fe5aafa65f8c8e3c0f925b5f63a3679b82c478e733b8a093",
+      "output_sha256": "b9d8de013850c68da93f215e27f9b60ae4e86491907cd1294bfa20285cf139d2",
       "contract": {
         "width": 1092,
         "height": 553,
@@ -42897,9 +42897,11 @@
       "before_exists": false,
       "before_sha256": null,
       "recipe": {
-        "family": "paper",
-        "kind": "panel"
-      }
+        "family": "section-specific",
+        "kind": "division_designer_popup"
+      },
+      "builder": "targeted691.py",
+      "visual_review_note": "Screenshot 691: restored original section structure using native GUI coordinates. Single background only; no in-game validation."
     },
     {
       "path": "gfx/interface/division_equipment/equipmeny_stats_list_entry.dds",
@@ -86955,7 +86957,7 @@
       "was_mod_file": false,
       "original_sha256": "8c60bce7c0a606b07e4e871cfc376359833396950e92839a79114f4ba2caf723",
       "baseline_sha256": "8c60bce7c0a606b07e4e871cfc376359833396950e92839a79114f4ba2caf723",
-      "output_sha256": "fb420ab7020e88e4f3028cf87d2675927cffadf557918b94b8e5624e3b480613",
+      "output_sha256": "6049776d87ee87d930e542b8e08c2796d493ccb90fef8e73cd11434508dbd083",
       "contract": {
         "width": 39,
         "height": 39,
@@ -87038,9 +87040,11 @@
       "before_exists": false,
       "before_sha256": null,
       "recipe": {
-        "family": "neutral",
-        "kind": "control"
-      }
+        "kind": "search",
+        "design": "tools/ui_rework/targeted705_design.json"
+      },
+      "builder": "targeted705.py",
+      "narrow_correction": "docs/ui_rework/targeted705_record.json"
     },
     {
       "path": "gfx/interface/mapmode/mapmode_bottom_bg.dds",
@@ -87059,7 +87063,7 @@
       "was_mod_file": false,
       "original_sha256": "f1de475b5ea073936664855f59c0a52f81e8819a6af0062ff45e92385c49f384",
       "baseline_sha256": "f1de475b5ea073936664855f59c0a52f81e8819a6af0062ff45e92385c49f384",
-      "output_sha256": "7394108dc585443005ab2e46e3260f47d1ae3045028274cbdeda7e93d853d82e",
+      "output_sha256": "9922d61e59e6871728cfba3ac1b15e187d211e4486bd1036ad4a7da54d3c564c",
       "contract": {
         "width": 86,
         "height": 59,
@@ -87142,9 +87146,11 @@
       "before_exists": false,
       "before_sha256": null,
       "recipe": {
-        "family": "neutral",
-        "kind": "panel"
-      }
+        "kind": "bottom_case",
+        "design": "tools/ui_rework/targeted705_design.json"
+      },
+      "builder": "targeted705.py",
+      "narrow_correction": "docs/ui_rework/targeted705_record.json"
     },
     {
       "path": "gfx/interface/mapmode/mapmode_button_all.dds",
@@ -87163,7 +87169,7 @@
       "was_mod_file": false,
       "original_sha256": "170b7caeb1c8c8cd5b30061c01131235728272d03d3cfc68465cff6181dd2256",
       "baseline_sha256": "170b7caeb1c8c8cd5b30061c01131235728272d03d3cfc68465cff6181dd2256",
-      "output_sha256": "199b8f21f7e9f3daaadf134549002fa5f860125e79bfd67d7734faf819759b22",
+      "output_sha256": "32d85878042e2d7c47237dc1adc422fd4810129e3ffadf3af51f5b85b6650d16",
       "contract": {
         "width": 44,
         "height": 21,
@@ -87223,9 +87229,11 @@
       "before_exists": false,
       "before_sha256": null,
       "recipe": {
-        "family": "neutral",
-        "kind": "control"
-      }
+        "kind": "back",
+        "design": "tools/ui_rework/targeted705_design.json"
+      },
+      "builder": "targeted705.py",
+      "narrow_correction": "docs/ui_rework/targeted705_record.json"
     },
     {
       "path": "gfx/interface/mapmode/mapmode_button_bg.dds",
@@ -87244,7 +87252,7 @@
       "was_mod_file": false,
       "original_sha256": "a677b2e63f87c2242ad2763098f6ba7532dd292a05613115b7368717a7cbf854",
       "baseline_sha256": "a677b2e63f87c2242ad2763098f6ba7532dd292a05613115b7368717a7cbf854",
-      "output_sha256": "ef1ee102ed4188dc95134edc4d0584d4f098bf3b852010dc81d5aeff91da30e5",
+      "output_sha256": "d48353bdce99299c4854a278f641a3592e1a3213c1d1b40f46b779f6000c8a87",
       "contract": {
         "width": 42,
         "height": 51,
@@ -87346,9 +87354,11 @@
       "before_exists": false,
       "before_sha256": null,
       "recipe": {
-        "family": "neutral",
-        "kind": "control"
-      }
+        "kind": "big_seat",
+        "design": "tools/ui_rework/targeted705_design.json"
+      },
+      "builder": "targeted705.py",
+      "narrow_correction": "docs/ui_rework/targeted705_record.json"
     },
     {
       "path": "gfx/interface/mapmode/mapmode_button_depressed.dds",
@@ -87367,7 +87377,7 @@
       "was_mod_file": false,
       "original_sha256": "0a4d62df5d16cccb8b7be61b4e3ece76dda02cf755deee79f6af322e36ccdd43",
       "baseline_sha256": "0a4d62df5d16cccb8b7be61b4e3ece76dda02cf755deee79f6af322e36ccdd43",
-      "output_sha256": "5b336c6699cc4854bee097e3e52fb655a129ab6e2e0229b2797f2f16d897774f",
+      "output_sha256": "97941a1abd2207c7c54d56612b5f5f23740c3fe3e951173131b8c8b09099249b",
       "contract": {
         "width": 23,
         "height": 20,
@@ -87559,9 +87569,11 @@
       "before_exists": false,
       "before_sha256": null,
       "recipe": {
-        "family": "neutral",
-        "kind": "control"
-      }
+        "kind": "small_seat",
+        "design": "tools/ui_rework/targeted705_design.json"
+      },
+      "builder": "targeted705.py",
+      "narrow_correction": "docs/ui_rework/targeted705_record.json"
     },
     {
       "path": "gfx/interface/mapmode/mapmode_buttons_configure.dds",
@@ -87654,7 +87666,7 @@
       "was_mod_file": false,
       "original_sha256": "d44137e4b403656299765f957c5fae0b7a06a037d96b628816e527fd3dc18f39",
       "baseline_sha256": "d44137e4b403656299765f957c5fae0b7a06a037d96b628816e527fd3dc18f39",
-      "output_sha256": "5e3b2b6d603843c4ffa08f406044f9f81aaf15530f9b9b4c37f52b41e28ced6c",
+      "output_sha256": "efaf8b3c9a4a8e1a38be4241ed03cb1d756df0114be9f52a9097313eef04f8b7",
       "contract": {
         "width": 136,
         "height": 31,
@@ -87756,9 +87768,11 @@
       "before_exists": false,
       "before_sha256": null,
       "recipe": {
-        "family": "neutral",
-        "kind": "control"
-      }
+        "kind": "big_normal",
+        "design": "tools/ui_rework/targeted705_design.json"
+      },
+      "builder": "targeted705.py",
+      "narrow_correction": "docs/ui_rework/targeted705_record.json"
     },
     {
       "path": "gfx/interface/mapmode/mapmode_buttons_selected_big.dds",
@@ -87777,7 +87791,7 @@
       "was_mod_file": false,
       "original_sha256": "5f8274f86c73c570682c32399409fcccb69ca7906270503efbd72ceefad1b511",
       "baseline_sha256": "5f8274f86c73c570682c32399409fcccb69ca7906270503efbd72ceefad1b511",
-      "output_sha256": "091656bde24136345a278c32a203fcfa64f219bbe637961aa01d58e8c4d1229a",
+      "output_sha256": "71fe2f59d334c7fa5b967df568127bb8ac782740620d2d15eaafd97a9ea77e23",
       "contract": {
         "width": 136,
         "height": 31,
@@ -87879,9 +87893,11 @@
       "before_exists": false,
       "before_sha256": null,
       "recipe": {
-        "family": "neutral",
-        "kind": "control"
-      }
+        "kind": "big_selected",
+        "design": "tools/ui_rework/targeted705_design.json"
+      },
+      "builder": "targeted705.py",
+      "narrow_correction": "docs/ui_rework/targeted705_record.json"
     },
     {
       "path": "gfx/interface/mapmode/mapmode_buttons_selected_small.dds",
@@ -87900,7 +87916,7 @@
       "was_mod_file": false,
       "original_sha256": "9cf3b03ef108fbd62dfd6f067a22d9eb7a949e6c53dcd50c8d97fad418836ee0",
       "baseline_sha256": "9cf3b03ef108fbd62dfd6f067a22d9eb7a949e6c53dcd50c8d97fad418836ee0",
-      "output_sha256": "dd39e4a02f2826d9e85a0f741899661a29ce110dc19f6e0687fe4546259b6210",
+      "output_sha256": "2a9b18645ebbbd874742b4160995ad56027b2d7c18d59cfc37d3494cc20da5b3",
       "contract": {
         "width": 360,
         "height": 18,
@@ -88050,9 +88066,11 @@
       "before_exists": false,
       "before_sha256": null,
       "recipe": {
-        "family": "neutral",
-        "kind": "control"
-      }
+        "kind": "small_selected",
+        "design": "tools/ui_rework/targeted705_design.json"
+      },
+      "builder": "targeted705.py",
+      "narrow_correction": "docs/ui_rework/targeted705_record.json"
     },
     {
       "path": "gfx/interface/mapmode/mapmode_configure_bg.dds",
@@ -88158,7 +88176,7 @@
       "was_mod_file": false,
       "original_sha256": "2c9f153064648615eb4998505820fe5b5ed4d28e30b88c70131d0bdc85fb708f",
       "baseline_sha256": "2c9f153064648615eb4998505820fe5b5ed4d28e30b88c70131d0bdc85fb708f",
-      "output_sha256": "f9d2549d0a7608740240f49b60f0301b3a6f49db8a16d766cc926c13103f4d8e",
+      "output_sha256": "7b89c3af8b38d3f2ee198e50edf372f990642317989ad1fb9c08a64f8b690551",
       "contract": {
         "width": 87,
         "height": 206,
@@ -88241,9 +88259,11 @@
       "before_exists": false,
       "before_sha256": null,
       "recipe": {
-        "family": "neutral",
-        "kind": "panel"
-      }
+        "kind": "main_case",
+        "design": "tools/ui_rework/targeted705_design.json"
+      },
+      "builder": "targeted705.py",
+      "narrow_correction": "docs/ui_rework/targeted705_record.json"
     },
     {
       "path": "gfx/interface/marshal_selection_active_entry_bg.dds",
@@ -90775,7 +90795,7 @@
       "was_mod_file": false,
       "original_sha256": "1974b7186be588f67db78701b97b80060d287011e882db2be21a760051b1847c",
       "baseline_sha256": "1974b7186be588f67db78701b97b80060d287011e882db2be21a760051b1847c",
-      "output_sha256": "13d900b498120b09dafcb42583bcdd2345e38fd7bd885a55c79b96f7e3fb593a",
+      "output_sha256": "6b23cf3b2cd202597a8ee3621027570e5212c47698e970dcbf8bc2406c6225fd",
       "contract": {
         "width": 82,
         "height": 39,
@@ -90835,9 +90855,11 @@
       "before_exists": false,
       "before_sha256": null,
       "recipe": {
-        "family": "neutral",
-        "kind": "header"
-      }
+        "kind": "raid_cap",
+        "design": "tools/ui_rework/targeted705_design.json"
+      },
+      "builder": "targeted705.py",
+      "narrow_correction": "docs/ui_rework/targeted705_record.json"
     },
     {
       "path": "gfx/interface/military_raids/raids_header_bg.dds",
@@ -169230,7 +169252,7 @@
       "was_mod_file": true,
       "original_sha256": "bf4de287dc5987158b4c40df162860962066320486908b3db7e5d51b33796826",
       "baseline_sha256": "bf4de287dc5987158b4c40df162860962066320486908b3db7e5d51b33796826",
-      "output_sha256": "2988a5788a8e8359fd7d91129d0edbe90cd0c59521f4c87d366a3f50d3d02134",
+      "output_sha256": "2ec5d7d5855efd43b85a00674872a6873d895e9478ed3d8dc1c56e1b01d6fe44",
       "contract": {
         "width": 24,
         "height": 24,
@@ -169296,9 +169318,11 @@
       "before_exists": true,
       "before_sha256": "bf4de287dc5987158b4c40df162860962066320486908b3db7e5d51b33796826",
       "recipe": {
-        "family": "neutral",
-        "kind": "control"
-      }
+        "design": "tools/ui_rework/targeted707_design.json",
+        "kind": "right_topbar_buttons"
+      },
+      "builder": "targeted707.py",
+      "narrow_correction": "docs/ui_rework/targeted707_record.json"
     },
     {
       "path": "gfx/interface/topbar/airoverview_button.dds",
@@ -169317,7 +169341,7 @@
       "was_mod_file": true,
       "original_sha256": "6f9189b4e3e2d3be8d0de3ae4a0a691f69ab3dd9c4d5382f5881ceda7765524c",
       "baseline_sha256": "6f9189b4e3e2d3be8d0de3ae4a0a691f69ab3dd9c4d5382f5881ceda7765524c",
-      "output_sha256": "af2dc195796e2a3819bd106bd2373e9448cd9846280722887f40bfc640c6ad8c",
+      "output_sha256": "3085f9088512d075e0f06a460d55f3cf70337b0fe10d316e8026cc6d4379c13e",
       "contract": {
         "width": 76,
         "height": 38,
@@ -169412,9 +169436,11 @@
       "before_exists": true,
       "before_sha256": "6f9189b4e3e2d3be8d0de3ae4a0a691f69ab3dd9c4d5382f5881ceda7765524c",
       "recipe": {
-        "family": "neutral",
-        "kind": "control"
-      }
+        "design": "tools/ui_rework/targeted707_design.json",
+        "kind": "right_topbar_buttons"
+      },
+      "builder": "targeted707.py",
+      "narrow_correction": "docs/ui_rework/targeted707_record.json"
     },
     {
       "path": "gfx/interface/topbar/armyoverview_button.dds",
@@ -169433,7 +169459,7 @@
       "was_mod_file": true,
       "original_sha256": "0b2a37aa0c00902c20837c69a6a3d84ac0558c726c8182cf995292f4a115e621",
       "baseline_sha256": "0b2a37aa0c00902c20837c69a6a3d84ac0558c726c8182cf995292f4a115e621",
-      "output_sha256": "9b0b8a934f1d4c3fbc7ae984070afb45591e8ab4e7e3e79ef096bff1674d2db6",
+      "output_sha256": "8f9b4aad4854a254c6dc67025fc27b3b666c7741d141e7afd5c0f796b317784c",
       "contract": {
         "width": 76,
         "height": 38,
@@ -169528,9 +169554,11 @@
       "before_exists": true,
       "before_sha256": "0b2a37aa0c00902c20837c69a6a3d84ac0558c726c8182cf995292f4a115e621",
       "recipe": {
-        "family": "neutral",
-        "kind": "control"
-      }
+        "design": "tools/ui_rework/targeted707_design.json",
+        "kind": "right_topbar_buttons"
+      },
+      "builder": "targeted707.py",
+      "narrow_correction": "docs/ui_rework/targeted707_record.json"
     },
     {
       "path": "gfx/interface/topbar/armyoverview_buttons_bg.dds",
@@ -172291,7 +172319,7 @@
       "was_mod_file": true,
       "original_sha256": "d98f90f688086478d396836aef13e95bab7c2b7bc16bc558bfb64085cc59ea06",
       "baseline_sha256": "d98f90f688086478d396836aef13e95bab7c2b7bc16bc558bfb64085cc59ea06",
-      "output_sha256": "4818afd4a0d42ce060521c807c608b233f67134929d48cb933c14881fa412151",
+      "output_sha256": "08de91b8ebed6352997ff03ecd889b95ab28fb33c18b9c8c19ab208dc6ab1739",
       "contract": {
         "width": 33,
         "height": 33,
@@ -172386,9 +172414,11 @@
       "before_exists": true,
       "before_sha256": "d98f90f688086478d396836aef13e95bab7c2b7bc16bc558bfb64085cc59ea06",
       "recipe": {
-        "family": "neutral",
-        "kind": "control"
-      }
+        "design": "tools/ui_rework/targeted707_design.json",
+        "kind": "right_topbar_buttons"
+      },
+      "builder": "targeted707.py",
+      "narrow_correction": "docs/ui_rework/targeted707_record.json"
     },
     {
       "path": "gfx/interface/topbar/musicplayer/toggle_shuffle_buttons.dds",
@@ -172703,7 +172733,7 @@
       "was_mod_file": true,
       "original_sha256": "93c91ae23a2f455d5e8bfd9debe6d14692fa20666720a40df742251ae22d93bf",
       "baseline_sha256": "93c91ae23a2f455d5e8bfd9debe6d14692fa20666720a40df742251ae22d93bf",
-      "output_sha256": "693fb30259d91f63ec3223f62c10cffdc6609a807362133b532bae86fe50141b",
+      "output_sha256": "3ae2c868c5b02bc5c5110c434a654cd85d2207ae07aae34e738e359016485cb3",
       "contract": {
         "width": 76,
         "height": 38,
@@ -172798,9 +172828,11 @@
       "before_exists": true,
       "before_sha256": "93c91ae23a2f455d5e8bfd9debe6d14692fa20666720a40df742251ae22d93bf",
       "recipe": {
-        "family": "neutral",
-        "kind": "control"
-      }
+        "design": "tools/ui_rework/targeted707_design.json",
+        "kind": "right_topbar_buttons"
+      },
+      "builder": "targeted707.py",
+      "narrow_correction": "docs/ui_rework/targeted707_record.json"
     },
     {
       "path": "gfx/interface/topbar/toolbar/button_depressed.dds",
@@ -172931,7 +172963,7 @@
       "was_mod_file": true,
       "original_sha256": "67825ced73066e55bc3ecdbd2d88d9876b01ab4511f6de31f21c2d7f5d715dc5",
       "baseline_sha256": "67825ced73066e55bc3ecdbd2d88d9876b01ab4511f6de31f21c2d7f5d715dc5",
-      "output_sha256": "ced5b05a8dea850e3ebecd6d59137ef4ede897565fc5c98257a669a4a07a6d55",
+      "output_sha256": "3d10d36413bd9cf2de119c97a1b66fd7f4c159dfe83941166fd37f342a02caf7",
       "contract": {
         "width": 110,
         "height": 41,
@@ -172984,7 +173016,7 @@
           "size": null,
           "border": null,
           "tiling_center": null,
-          "effect": null,
+          "effect": "gfx/FX/GO_topbar_button.shader",
           "animation_fps": null,
           "always_transparent": null,
           "source": "mod"
@@ -173026,9 +173058,11 @@
       "before_exists": true,
       "before_sha256": "67825ced73066e55bc3ecdbd2d88d9876b01ab4511f6de31f21c2d7f5d715dc5",
       "recipe": {
-        "family": "neutral",
-        "kind": "control"
-      }
+        "family": "navigation",
+        "kind": "normal_selected"
+      },
+      "builder": "topbar_buttons.py",
+      "visual_review_note": "Narrow top-bar correction: extracted native icon artwork; uniform opaque housing and blue selected frame. Scoped hover/down effect. Not game-tested."
     },
     {
       "path": "gfx/interface/topbar/toolbar/deployment_button.dds",
@@ -173045,7 +173079,7 @@
       "was_mod_file": true,
       "original_sha256": "1d17642ce2f384195c5ad46b7c6d50c2c1d97866fd86b77f7b1df069a7e0a5db",
       "baseline_sha256": "1d17642ce2f384195c5ad46b7c6d50c2c1d97866fd86b77f7b1df069a7e0a5db",
-      "output_sha256": "50a4383581a1afe5a9a3809d952a3901bf86a7721793657de0c2c9597a02ef40",
+      "output_sha256": "4844eb3d69375be9e89b686e4c270b0617b9776909d4fc079057b10ccf0728b0",
       "contract": {
         "width": 110,
         "height": 41,
@@ -173098,7 +173132,7 @@
           "size": null,
           "border": null,
           "tiling_center": null,
-          "effect": null,
+          "effect": "gfx/FX/GO_topbar_button.shader",
           "animation_fps": null,
           "always_transparent": null,
           "source": "mod"
@@ -173152,9 +173186,11 @@
       "before_exists": true,
       "before_sha256": "1d17642ce2f384195c5ad46b7c6d50c2c1d97866fd86b77f7b1df069a7e0a5db",
       "recipe": {
-        "family": "neutral",
-        "kind": "control"
-      }
+        "family": "navigation",
+        "kind": "normal_selected"
+      },
+      "builder": "topbar_buttons.py",
+      "visual_review_note": "Narrow top-bar correction: extracted native icon artwork; uniform opaque housing and blue selected frame. Scoped hover/down effect. Not game-tested."
     },
     {
       "path": "gfx/interface/topbar/toolbar/diplomacy_button.dds",
@@ -173173,7 +173209,7 @@
       "was_mod_file": true,
       "original_sha256": "05abcb383dcb5a9497149a39de024cc2ffcd14e8a2590b0862bfa32c7090a2ed",
       "baseline_sha256": "05abcb383dcb5a9497149a39de024cc2ffcd14e8a2590b0862bfa32c7090a2ed",
-      "output_sha256": "601743f6daa0db1a706b6c331798f85c05fdf3ba782ff336fd9bfd7220d905ed",
+      "output_sha256": "44f33fa3b73ba6a4923220fd0402e17882a9a301ce4fad88ee7a14177a3f850e",
       "contract": {
         "width": 110,
         "height": 41,
@@ -173226,7 +173262,7 @@
           "size": null,
           "border": null,
           "tiling_center": null,
-          "effect": null,
+          "effect": "gfx/FX/GO_topbar_button.shader",
           "animation_fps": null,
           "always_transparent": null,
           "source": "mod"
@@ -173268,9 +173304,11 @@
       "before_exists": true,
       "before_sha256": "05abcb383dcb5a9497149a39de024cc2ffcd14e8a2590b0862bfa32c7090a2ed",
       "recipe": {
-        "family": "neutral",
-        "kind": "control"
-      }
+        "family": "navigation",
+        "kind": "normal_selected"
+      },
+      "builder": "topbar_buttons.py",
+      "visual_review_note": "Narrow top-bar correction: extracted native icon artwork; uniform opaque housing and blue selected frame. Scoped hover/down effect. Not game-tested."
     },
     {
       "path": "gfx/interface/topbar/toolbar/intelligence_button.dds",
@@ -173287,7 +173325,7 @@
       "was_mod_file": true,
       "original_sha256": "0d958ab535d12f75174e9db76768e235fc9221b154dc026cc9aa037216125847",
       "baseline_sha256": "0d958ab535d12f75174e9db76768e235fc9221b154dc026cc9aa037216125847",
-      "output_sha256": "96ed629001b47f1757103b5dc9683649137e17a0ed3ec4e23449ab73889ec567",
+      "output_sha256": "96ba42ed5d5781ec86a986fd4281f7fb5eb152d9c06b4ab69b971219f32dda7b",
       "contract": {
         "width": 110,
         "height": 41,
@@ -173340,7 +173378,7 @@
           "size": null,
           "border": null,
           "tiling_center": null,
-          "effect": null,
+          "effect": "gfx/FX/GO_topbar_button.shader",
           "animation_fps": null,
           "always_transparent": null,
           "source": "mod"
@@ -173382,9 +173420,11 @@
       "before_exists": true,
       "before_sha256": "0d958ab535d12f75174e9db76768e235fc9221b154dc026cc9aa037216125847",
       "recipe": {
-        "family": "neutral",
-        "kind": "control"
-      }
+        "family": "navigation",
+        "kind": "normal_selected"
+      },
+      "builder": "topbar_buttons.py",
+      "visual_review_note": "Narrow top-bar correction: extracted native icon artwork; uniform opaque housing and blue selected frame. Scoped hover/down effect. Not game-tested."
     },
     {
       "path": "gfx/interface/topbar/toolbar/international_market_button.dds",
@@ -173403,7 +173443,7 @@
       "was_mod_file": true,
       "original_sha256": "5efc475bad06888d2a2f38bd5efff3e477256ea37a4a1b3ddee4ec532f538b6b",
       "baseline_sha256": "5efc475bad06888d2a2f38bd5efff3e477256ea37a4a1b3ddee4ec532f538b6b",
-      "output_sha256": "6cc18073e1be2379979857ee1acd915e29ec9a918c68c3f3cb81e43e465fe662",
+      "output_sha256": "dc096a6a461e2ae925cfa327b0e3df512a0564b7918ee76ca1811c22aeea2d97",
       "contract": {
         "width": 110,
         "height": 41,
@@ -173456,7 +173496,7 @@
           "size": null,
           "border": null,
           "tiling_center": null,
-          "effect": null,
+          "effect": "gfx/FX/GO_topbar_button.shader",
           "animation_fps": null,
           "always_transparent": null,
           "source": "mod"
@@ -173473,10 +173513,11 @@
       "before_exists": true,
       "before_sha256": "5efc475bad06888d2a2f38bd5efff3e477256ea37a4a1b3ddee4ec532f538b6b",
       "recipe": {
-        "family": "neutral",
-        "kind": "control"
+        "family": "navigation",
+        "kind": "normal_selected"
       },
-      "visual_review_note": "Country follow-up: original custom interface holders are authorized for restyling, with readable originals preserved. Toolbar boundaries are rebuilt independently of the protected blue glyphs."
+      "visual_review_note": "Narrow top-bar correction: extracted native icon artwork; uniform opaque housing and blue selected frame. Scoped hover/down effect. Not game-tested.",
+      "builder": "topbar_buttons.py"
     },
     {
       "path": "gfx/interface/topbar/toolbar/ledger_button.dds",
@@ -173493,7 +173534,7 @@
       "was_mod_file": true,
       "original_sha256": "677f2769aaf980bcd120c83805b7d40f34bf105588cfad2a5c394d1fdf5a1cf0",
       "baseline_sha256": "677f2769aaf980bcd120c83805b7d40f34bf105588cfad2a5c394d1fdf5a1cf0",
-      "output_sha256": "e8944f8163def5628cfbe6b812db5e15845fa33279fb8908640135d8397ea952",
+      "output_sha256": "65fd8cc1769137add5987b52b7ec6858c2444263f1f0660f369774b53f9dc714",
       "contract": {
         "width": 110,
         "height": 41,
@@ -173546,7 +173587,7 @@
           "size": null,
           "border": null,
           "tiling_center": null,
-          "effect": null,
+          "effect": "gfx/FX/GO_topbar_button.shader",
           "animation_fps": null,
           "always_transparent": null,
           "source": "mod"
@@ -173588,9 +173629,11 @@
       "before_exists": true,
       "before_sha256": "677f2769aaf980bcd120c83805b7d40f34bf105588cfad2a5c394d1fdf5a1cf0",
       "recipe": {
-        "family": "neutral",
-        "kind": "control"
-      }
+        "family": "navigation",
+        "kind": "normal_selected"
+      },
+      "builder": "topbar_buttons.py",
+      "visual_review_note": "Narrow top-bar correction: extracted native icon artwork; uniform opaque housing and blue selected frame. Scoped hover/down effect. Not game-tested."
     },
     {
       "path": "gfx/interface/topbar/toolbar/open_government_window.dds",
@@ -173681,7 +173724,7 @@
       "was_mod_file": true,
       "original_sha256": "18bfcb86e51a88877b8cbd3d63703307b3cc59d343b6de398aa490193e5d4c42",
       "baseline_sha256": "18bfcb86e51a88877b8cbd3d63703307b3cc59d343b6de398aa490193e5d4c42",
-      "output_sha256": "ea3f9df78e703cb079095d7021febabc4891ed603cf2a328fdd7d768b934025d",
+      "output_sha256": "93b6080946a9cf3fe973b3633e4b44312427ccef5caf9a69f5b3f5ef8a32b93c",
       "contract": {
         "width": 110,
         "height": 41,
@@ -173734,7 +173777,7 @@
           "size": null,
           "border": null,
           "tiling_center": null,
-          "effect": null,
+          "effect": "gfx/FX/GO_topbar_button.shader",
           "animation_fps": null,
           "always_transparent": null,
           "source": "mod"
@@ -173776,9 +173819,11 @@
       "before_exists": true,
       "before_sha256": "18bfcb86e51a88877b8cbd3d63703307b3cc59d343b6de398aa490193e5d4c42",
       "recipe": {
-        "family": "neutral",
-        "kind": "control"
-      }
+        "family": "navigation",
+        "kind": "normal_selected"
+      },
+      "builder": "topbar_buttons.py",
+      "visual_review_note": "Narrow top-bar correction: extracted native icon artwork; uniform opaque housing and blue selected frame. Scoped hover/down effect. Not game-tested."
     },
     {
       "path": "gfx/interface/topbar/toolbar/science_button.dds",
@@ -173795,7 +173840,7 @@
       "was_mod_file": true,
       "original_sha256": "b1c6cc09da2feade7d32f1f972e83a39d0a69c34e70fbb7701c865111226262a",
       "baseline_sha256": "b1c6cc09da2feade7d32f1f972e83a39d0a69c34e70fbb7701c865111226262a",
-      "output_sha256": "f78cc7ad5b88e2451b52c5957404a966210ad7c6320972522ea75129084215cd",
+      "output_sha256": "a0c5f7f8fb715d9c4e8833d69080445d34f770d8c5826c32b8944e439f9d3f49",
       "contract": {
         "width": 110,
         "height": 41,
@@ -173848,7 +173893,7 @@
           "size": null,
           "border": null,
           "tiling_center": null,
-          "effect": null,
+          "effect": "gfx/FX/GO_topbar_button.shader",
           "animation_fps": null,
           "always_transparent": null,
           "source": "mod"
@@ -173890,9 +173935,11 @@
       "before_exists": true,
       "before_sha256": "b1c6cc09da2feade7d32f1f972e83a39d0a69c34e70fbb7701c865111226262a",
       "recipe": {
-        "family": "neutral",
-        "kind": "control"
-      }
+        "family": "navigation",
+        "kind": "normal_selected"
+      },
+      "builder": "topbar_buttons.py",
+      "visual_review_note": "Narrow top-bar correction: extracted native icon artwork; uniform opaque housing and blue selected frame. Scoped hover/down effect. Not game-tested."
     },
     {
       "path": "gfx/interface/topbar/toolbar/staff_office_button.dds",
@@ -173911,7 +173958,7 @@
       "was_mod_file": true,
       "original_sha256": "d7413348c8b82a1eecb5bb70cb2437733dd4b152079328a6c2fe8af47a4cd2ae",
       "baseline_sha256": "d7413348c8b82a1eecb5bb70cb2437733dd4b152079328a6c2fe8af47a4cd2ae",
-      "output_sha256": "51082232f4c046edcd27d7d0e88b088261adbd465a238600d4d8154ec2bc0612",
+      "output_sha256": "2b18156436fcf15589e838d08e21aba36013ef8fcb2e39ae692f0a2084e7ac52",
       "contract": {
         "width": 110,
         "height": 41,
@@ -173964,7 +174011,7 @@
           "size": null,
           "border": null,
           "tiling_center": null,
-          "effect": null,
+          "effect": "gfx/FX/GO_topbar_button.shader",
           "animation_fps": null,
           "always_transparent": null,
           "source": "mod"
@@ -174006,10 +174053,11 @@
       "before_exists": true,
       "before_sha256": "d7413348c8b82a1eecb5bb70cb2437733dd4b152079328a6c2fe8af47a4cd2ae",
       "recipe": {
-        "family": "neutral",
-        "kind": "control"
+        "family": "navigation",
+        "kind": "normal_selected"
       },
-      "visual_review_note": "Country follow-up: original custom interface holders are authorized for restyling, with readable originals preserved. Toolbar boundaries are rebuilt independently of the protected blue glyphs."
+      "visual_review_note": "Narrow top-bar correction: extracted native icon artwork; uniform opaque housing and blue selected frame. Scoped hover/down effect. Not game-tested.",
+      "builder": "topbar_buttons.py"
     },
     {
       "path": "gfx/interface/topbar/toolbar/topbar_alert_bg.dds",
@@ -174322,7 +174370,7 @@
       "was_mod_file": true,
       "original_sha256": "1d73211ff68cd61ad7e09278f41a20bc36e31079ed2d42b63f16aca06b9f1a6f",
       "baseline_sha256": "1d73211ff68cd61ad7e09278f41a20bc36e31079ed2d42b63f16aca06b9f1a6f",
-      "output_sha256": "0c494630ea631de33a8f505f1d635624c72cab622ffe8c1c24c0fe7de7e7857b",
+      "output_sha256": "f1e724cf6351a3c60fc30a247644a1d720037a6eec05a746925a535c1a260098",
       "contract": {
         "width": 110,
         "height": 41,
@@ -174375,7 +174423,7 @@
           "size": null,
           "border": null,
           "tiling_center": null,
-          "effect": null,
+          "effect": "gfx/FX/GO_topbar_button.shader",
           "animation_fps": null,
           "always_transparent": null,
           "source": "mod"
@@ -174417,9 +174465,11 @@
       "before_exists": true,
       "before_sha256": "1d73211ff68cd61ad7e09278f41a20bc36e31079ed2d42b63f16aca06b9f1a6f",
       "recipe": {
-        "family": "neutral",
-        "kind": "control"
-      }
+        "family": "navigation",
+        "kind": "normal_selected"
+      },
+      "builder": "topbar_buttons.py",
+      "visual_review_note": "Narrow top-bar correction: extracted native icon artwork; uniform opaque housing and blue selected frame. Scoped hover/down effect. Not game-tested."
     },
     {
       "path": "gfx/interface/topbar/toolbar/trade_button.dds",
@@ -174436,7 +174486,7 @@
       "was_mod_file": true,
       "original_sha256": "276fa973e3a0d66ad24d8dab0669d60308750612ea4e3b8f388ac0d11b1de917",
       "baseline_sha256": "276fa973e3a0d66ad24d8dab0669d60308750612ea4e3b8f388ac0d11b1de917",
-      "output_sha256": "68f50caff596c2c8f8e0b59293a0b50b47260672b723d4707b5bab1f8399b822",
+      "output_sha256": "8fec868110115cb40c8754849fdeadb15700359c10c4fc01614c01cbcfffe23a",
       "contract": {
         "width": 110,
         "height": 41,
@@ -174489,7 +174539,7 @@
           "size": null,
           "border": null,
           "tiling_center": null,
-          "effect": null,
+          "effect": "gfx/FX/GO_topbar_button.shader",
           "animation_fps": null,
           "always_transparent": null,
           "source": "mod"
@@ -174531,9 +174581,11 @@
       "before_exists": true,
       "before_sha256": "276fa973e3a0d66ad24d8dab0669d60308750612ea4e3b8f388ac0d11b1de917",
       "recipe": {
-        "family": "neutral",
-        "kind": "control"
-      }
+        "family": "navigation",
+        "kind": "normal_selected"
+      },
+      "builder": "topbar_buttons.py",
+      "visual_review_note": "Narrow top-bar correction: extracted native icon artwork; uniform opaque housing and blue selected frame. Scoped hover/down effect. Not game-tested."
     },
     {
       "path": "gfx/interface/topbar/topbar_date_overlay.dds",
@@ -211492,6 +211544,289 @@
         "type": "spriteType",
         "frames": 1
       }
+    },
+    "gfx/interface/topbar/GO_value_holder.dds": {
+      "output_sha256": "10c985de43b471c6035d1dbd79ca2cb5dd88a852b2c6222d8dabdbe601031f8b",
+      "builder": "targeted704.py",
+      "reason": "Top-bar-only counter casing; shared source box is preserved.",
+      "contract": {
+        "width": 70,
+        "height": 26,
+        "mip_count": 0,
+        "format": "RGB32",
+        "rgb_bits": 32,
+        "masks": [
+          16711680,
+          65280,
+          255,
+          4278190080
+        ],
+        "header_sha256": "aa9d17e51f6b4218ecb7a336612d9e9a4fd73710635f976383d0745016425c93",
+        "flags": 4111,
+        "caps": 4096
+      },
+      "definition": {
+        "file": "interface/topbar.gfx",
+        "sprite": "GFX_GO_topbar_value_holder",
+        "type": "spriteType",
+        "frames": 1
+      }
+    },
+    "gfx/interface/topbar/GO_manpower_holder.dds": {
+      "output_sha256": "bf76ee5bc37e19768323ec7b48bbe345b6f69319eea820ec94684075f017b6a2",
+      "builder": "targeted704.py",
+      "reason": "Top-bar-only counter casing; shared source box is preserved.",
+      "contract": {
+        "width": 96,
+        "height": 26,
+        "mip_count": 0,
+        "format": "RGB32",
+        "rgb_bits": 32,
+        "masks": [
+          16711680,
+          65280,
+          255,
+          4278190080
+        ],
+        "header_sha256": "c25b7862f157f551567dedb5fc8ac81c5258b85eecbe8946ae74b0d0aa7c6b02",
+        "flags": 4111,
+        "caps": 4096
+      },
+      "definition": {
+        "file": "interface/topbar.gfx",
+        "sprite": "GFX_GO_topbar_manpower_holder",
+        "type": "spriteType",
+        "frames": 1
+      }
+    },
+    "gfx/interface/topbar/GO_utility_menu.dds": {
+      "output_sha256": "cfdf3586d3e3d39e98d3932c30b77c00a91da49ef647da67cb3766bc68ec19bf",
+      "builder": "targeted707.py",
+      "reason": "Local topbar control; shared source preserved.",
+      "contract": {
+        "width": 24,
+        "height": 24,
+        "mip_count": 0,
+        "format": "RGB32",
+        "rgb_bits": 32,
+        "masks": [
+          16711680,
+          65280,
+          255,
+          4278190080
+        ],
+        "header_sha256": "0c8e042948439793056d87902e5688924299bd264bf792c4449f3efde704f8f5",
+        "flags": 528391,
+        "caps": 4096
+      },
+      "definition": {
+        "file": "interface/topbar.gfx",
+        "sprite": "GFX_GO_utility_menu",
+        "type": "spriteType",
+        "frames": 1
+      }
+    },
+    "gfx/interface/topbar/GO_utility_help.dds": {
+      "output_sha256": "e2d3ebb0d811f19cda7bf16a4f43afac641d7e2f6a34b13b5e538e3126667ea6",
+      "builder": "targeted707.py",
+      "reason": "Local topbar control; shared source preserved.",
+      "contract": {
+        "width": 24,
+        "height": 24,
+        "mip_count": 0,
+        "format": "RGB32",
+        "rgb_bits": 32,
+        "masks": [
+          16711680,
+          65280,
+          255,
+          4278190080
+        ],
+        "header_sha256": "0c8e042948439793056d87902e5688924299bd264bf792c4449f3efde704f8f5",
+        "flags": 528391,
+        "caps": 4096
+      },
+      "definition": {
+        "file": "interface/topbar.gfx",
+        "sprite": "GFX_GO_utility_help",
+        "type": "spriteType",
+        "frames": 1
+      }
+    },
+    "gfx/interface/topbar/GO_utility_alerts.dds": {
+      "output_sha256": "83039ba3afc66c1190fddbcdbff22924b05d62135ac41ed203b92989c366f3cb",
+      "builder": "targeted707.py",
+      "reason": "Local topbar control; shared source preserved.",
+      "contract": {
+        "width": 24,
+        "height": 24,
+        "mip_count": 0,
+        "format": "RGB32",
+        "rgb_bits": 32,
+        "masks": [
+          16711680,
+          65280,
+          255,
+          4278190080
+        ],
+        "header_sha256": "0c8e042948439793056d87902e5688924299bd264bf792c4449f3efde704f8f5",
+        "flags": 528391,
+        "caps": 4096
+      },
+      "definition": {
+        "file": "interface/topbar.gfx",
+        "sprite": "GFX_GO_utility_alerts",
+        "type": "spriteType",
+        "frames": 1
+      }
+    },
+    "gfx/interface/topbar/GO_speed_plus.dds": {
+      "output_sha256": "8ce2e2a06c3702ec26e0cab6b3209cbea58774c779df7869d1477fd503d25afc",
+      "builder": "targeted707.py",
+      "reason": "Local topbar control; shared source preserved.",
+      "contract": {
+        "width": 27,
+        "height": 27,
+        "mip_count": 1,
+        "format": "RGB32",
+        "rgb_bits": 32,
+        "masks": [
+          16711680,
+          65280,
+          255,
+          4278190080
+        ],
+        "header_sha256": "feeafae0aa26bb45b5c50425edbdf679e5610d38b9e087d9db0de73ea909f66d",
+        "flags": 4111,
+        "caps": 4096
+      },
+      "definition": {
+        "file": "interface/topbar.gfx",
+        "sprite": "GFX_GO_speed_plus",
+        "type": "spriteType",
+        "frames": 1
+      }
+    },
+    "gfx/interface/topbar/GO_speed_minus.dds": {
+      "output_sha256": "328619e3420003b908dc4c20d9a70842834e4f7a26f871a83296891009335d85",
+      "builder": "targeted707.py",
+      "reason": "Local topbar control; shared source preserved.",
+      "contract": {
+        "width": 27,
+        "height": 27,
+        "mip_count": 1,
+        "format": "RGB32",
+        "rgb_bits": 32,
+        "masks": [
+          16711680,
+          65280,
+          255,
+          4278190080
+        ],
+        "header_sha256": "feeafae0aa26bb45b5c50425edbdf679e5610d38b9e087d9db0de73ea909f66d",
+        "flags": 4111,
+        "caps": 4096
+      },
+      "definition": {
+        "file": "interface/topbar.gfx",
+        "sprite": "GFX_GO_speed_minus",
+        "type": "spriteType",
+        "frames": 1
+      }
+    },
+    "gfx/interface/topbar/speed_step.dds": {
+      "output_sha256": "57fbcd3cd937ba8c8a34a2a251fcbfc37d11c54b25b00724197aa4ab0e6ec14d",
+      "builder": "targeted707.py",
+      "reason": "Existing three-frame speed indicator with active blue and retained red signal.",
+      "contract": {
+        "width": 84,
+        "height": 10,
+        "mip_count": 0,
+        "format": "RGB32",
+        "rgb_bits": 32,
+        "masks": [
+          16711680,
+          65280,
+          255,
+          4278190080
+        ],
+        "header_sha256": "a7289742a7f047b58cfd6e890f11932ff5352390b6c174188372c0f63827f627",
+        "flags": 528391,
+        "caps": 4096
+      },
+      "definition": {
+        "file": "interface/topbar.gfx",
+        "sprite": "GFX_speed_step",
+        "type": "spriteType",
+        "frames": 3
+      }
+    },
+    "gfx/interface/resources_strip.dds": {
+      "output_sha256": "003b6e1fd0eb3feb19556ed2c108146ed9abde7b0f35b5f5ae42ab29a60ed772",
+      "builder": "resource_icons.py",
+      "reason": "Five new native raw-resource icons; first seven cells preserved exactly.",
+      "contract": {
+        "width": 324,
+        "height": 27,
+        "mip_count": 1,
+        "format": "RGB32",
+        "rgb_bits": 32,
+        "masks": [
+          16711680,
+          65280,
+          255,
+          4278190080
+        ],
+        "header_sha256": "6975d5e7032399d81f737e583ae2df4bd39d4c17dd255ad07350c2ebf2cf5f3e",
+        "flags": 4111,
+        "caps": 4096
+      },
+      "definition": {
+        "file": "interface/general_stuff.gfx",
+        "sprite": "GFX_resources_strip",
+        "type": "spriteType",
+        "frames": 12
+      }
+    },
+    "gfx/interface/missing_resources_strip.dds": {
+      "output_sha256": "c4ed22806a204ff9534e6b994c16e3f527af9de4d5d39dd76d65394c56202485",
+      "builder": "resource_icons.py",
+      "reason": "Five new native raw-resource icons; first seven cells preserved exactly.",
+      "contract": {
+        "width": 324,
+        "height": 27,
+        "mip_count": 1,
+        "format": "RGB32",
+        "rgb_bits": 32,
+        "masks": [
+          16711680,
+          65280,
+          255,
+          4278190080
+        ],
+        "header_sha256": "6975d5e7032399d81f737e583ae2df4bd39d4c17dd255ad07350c2ebf2cf5f3e",
+        "flags": 4111,
+        "caps": 4096
+      },
+      "definition": {
+        "file": "interface/general_stuff.gfx",
+        "sprite": "GFX_missing_resources_strip",
+        "type": "spriteType",
+        "frames": 12
+      }
+    }
+  },
+  "narrow_corrections": {
+    "targeted691": "docs/ui_rework/targeted691_record.json",
+    "topbar_buttons": "docs/ui_rework/topbar_buttons_record.json",
+    "targeted704": "docs/ui_rework/targeted704_record.json",
+    "targeted705": "docs/ui_rework/targeted705_record.json",
+    "targeted707": "docs/ui_rework/targeted707_record.json",
+    "resource_icons": {
+      "record": "docs/ui_rework/resource_icons/record.json",
+      "checks": "docs/ui_rework/resource_icons/checks.json",
+      "scope": "Five native raw-resource placeholder icons and shortage states",
+      "in_game_validated": false
     }
   }
 }

@@ -5,6 +5,11 @@ state = {
 	manpower = 137203
 	state_category = pastoral
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		bauxite = 8
+	}
+
 	history = {
 		victory_points = {
 			108 1 

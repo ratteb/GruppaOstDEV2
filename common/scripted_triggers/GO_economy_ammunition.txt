@@ -1,4 +1,6 @@
 # Gruppa Ost Stage 6 - physical ammunition assignments and daily recipe guards.
+# Shift only temporary day copies before modulo: valid -1 stays whole; original
+# date bounds remain authoritative. Installed 1.18.3 trigger add/clamp/modulo.
 # STATE assignment records; COUNTRY capacity/daily guards unless labelled ANY.
 # Installed 1.18.3.0.7709: dynamic_variables_documentation.md:990-991,
 # 1095-1096; triggers_documentation.md:6286-6298,7324-7337 (whole checks).
@@ -94,7 +96,11 @@ GO_econ_country_ammunition_production_initialized = {
     check_variable = { var = GO_econ_country_ammunition_plant_last_day value = -1 compare = greater_than_or_equals }
     check_variable = { var = GO_econ_country_ammunition_plant_last_day value = GO_econ_country_ammunition_last_day compare = less_than_or_equals }
     set_temp_variable = { GO_econ_ammunition_last_day_fraction = GO_econ_country_ammunition_last_day }
+    add_to_temp_variable = { var = GO_econ_ammunition_last_day_fraction value = 1 }
+    clamp_temp_variable = { var = GO_econ_ammunition_last_day_fraction min = 0 }
     set_temp_variable = { GO_econ_ammunition_plant_last_day_fraction = GO_econ_country_ammunition_plant_last_day }
+    add_to_temp_variable = { var = GO_econ_ammunition_plant_last_day_fraction value = 1 }
+    clamp_temp_variable = { var = GO_econ_ammunition_plant_last_day_fraction min = 0 }
     modulo_temp_variable = { var = GO_econ_ammunition_last_day_fraction value = 1 }
     modulo_temp_variable = { var = GO_econ_ammunition_plant_last_day_fraction value = 1 }
     check_variable = { GO_econ_ammunition_last_day_fraction = 0 }
@@ -143,6 +149,7 @@ GO_econ_country_ammunition_plant_capacity_ready = {
 
 # COUNTRY. Only the coordinated daily hook may claim a recipe attempt.
 GO_econ_ammunition_plant_daily_update_ready = {
+    GO_econ_country_material_availability_current = yes
     GO_econ_country_ammunition_production_initialized = yes
     check_variable = { GO_econ_country_ammunition_last_day = global.num_days }
     check_variable = { var = GO_econ_country_ammunition_plant_last_day value = global.num_days compare = less_than }
@@ -255,4 +262,28 @@ GO_econ_country_ammunition_plant_report_capacity_ready = {
     modulo_temp_variable = { var = GO_econ_ammunition_report_assigned_fraction value = 1 }
     check_variable = { GO_econ_ammunition_report_built_fraction = 0 }
     check_variable = { GO_econ_ammunition_report_assigned_fraction = 0 }
+}
+
+# COUNTRY. Version-2 requested steel is separate from allocated steel. These
+# guards do not require a successful receipt or available source configuration.
+# Historical version-1 reports remain readable only through the older guards.
+GO_econ_country_ammunition_plant_requirements_ready = {
+    GO_econ_country_ammunition_plant_report_capacity_ready = yes
+    has_variable = GO_econ_country_ammunition_plant_report_accounting_version
+    check_variable = { GO_econ_country_ammunition_plant_report_accounting_version = 2 }
+    has_variable = GO_econ_country_ammunition_plant_requirements_populated
+    check_variable = { GO_econ_country_ammunition_plant_requirements_populated = 1 }
+    has_variable = GO_econ_country_ammunition_plant_steel_required
+    check_variable = { GO_econ_country_ammunition_plant_steel_required = GO_econ_country_ammunition_plant_report_assigned }
+}
+
+GO_econ_country_ammunition_plant_requirements_current = {
+    GO_econ_country_material_availability_current = yes
+    GO_econ_country_ammunition_plant_requirements_ready = yes
+    check_variable = { GO_econ_country_ammunition_plant_report_day = global.num_days }
+}
+
+GO_econ_country_ammunition_plant_availability_report_ready = {
+    GO_econ_country_ammunition_plant_report_ready = yes
+    GO_econ_country_ammunition_plant_requirements_ready = yes
 }

@@ -2,6 +2,11 @@ state={
 	id=522
 	name="STATE_522"
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		bauxite = 32
+	}
+
 	history={
 		owner = AST
 		buildings = {

@@ -2,6 +2,11 @@ state={
 	id=435
 	name="STATE_435"
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 15
+	}
+
 	history={
 		owner = RAJ
 		victory_points = {

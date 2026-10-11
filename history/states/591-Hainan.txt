@@ -3,6 +3,11 @@ state={
 	id=591
 	name="STATE_591"
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		iron = 4
+	}
+
 	history={
 		owner = CHI
 		add_core_of = CHI

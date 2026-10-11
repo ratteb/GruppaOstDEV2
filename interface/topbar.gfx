@@ -316,84 +316,98 @@ spriteTypes = {
 		name = "GFX_topbar_intelligence"
 		texturefile = "gfx/interface/topbar/toolbar/intelligence_button.dds"
 		noOfFrames = 2		
+		effectFile = "gfx/FX/GO_topbar_button.shader"
 	}
 	
 	spriteType = {
 		name = "GFX_topbar_production"
 		texturefile = "gfx/interface/topbar/toolbar/production_button.dds"
 		noOfFrames = 2		
+		effectFile = "gfx/FX/GO_topbar_button.shader"
 	}	
 	
 	spriteType = {
 		name = "GFX_topbar_technology"
 		texturefile = "gfx/interface/topbar/toolbar/science_button.dds"
 		noOfFrames = 2		
+		effectFile = "gfx/FX/GO_topbar_button.shader"
 	}
 		
 	spriteType = {
 		name = "GFX_topbar_decisionview_button"
 		texturefile = "gfx/interface/topbar/toolbar/topbar_decisionview_button.dds"
 		noOfFrames = 2		
+		effectFile = "gfx/FX/GO_topbar_button.shader"
 	}
 	
 	spriteType = {
 		name = "GFX_topbar_diplomacy"
 		texturefile = "gfx/interface/topbar/toolbar/diplomacy_button.dds"
 		noOfFrames = 2		
+		effectFile = "gfx/FX/GO_topbar_button.shader"
 	}
 
 	spriteType = {
 		name = "GFX_topbar_international_market"
 		texturefile = "gfx/interface/topbar/toolbar/international_market_button.dds"
 		noOfFrames = 2		
+		effectFile = "gfx/FX/GO_topbar_button.shader"
 	}
 
 	spriteType = {
 		name = "GFX_deployment_button"
 		texturefile = "gfx/interface/topbar/toolbar/deployment_button.dds"
 		noOfFrames = 2		
+		effectFile = "gfx/FX/GO_topbar_button.shader"
 	}
 
 	spriteType = {
 		name = "GFX_ledger_button"
 		texturefile = "gfx/interface/topbar/toolbar/ledger_button.dds"
 		noOfFrames = 2		
+		effectFile = "gfx/FX/GO_topbar_button.shader"
 	}
 	
 	spriteType = {
 		name = "GFX_staff_office_button"
 		texturefile = "gfx/interface/topbar/toolbar/staff_office_button.dds"
 		noOfFrames = 2		
+		effectFile = "gfx/FX/GO_topbar_button.shader"
 	}
 
 	spriteType = {
 		name = "GFX_airoverview_button"
 		texturefile = "gfx/interface/topbar/airoverview_button.dds"
 		noOfFrames = 2		
+		effectFile = "gfx/FX/buttonstate.lua"
 	}	
 	
 	spriteType = {
 		name = "GFX_navyoverview_button"
 		texturefile = "gfx/interface/topbar/navyoverview_button.dds"
 		noOfFrames = 2		
+		effectFile = "gfx/FX/buttonstate.lua"
 	}	
 	
 	spriteType = {
 		name = "GFX_armyoverview_button"
 		texturefile = "gfx/interface/topbar/armyoverview_button.dds"
 		noOfFrames = 2		
+		effectFile = "gfx/FX/buttonstate.lua"
 	}
 	
 	spriteType = {
 		name = "GFX_construction_button"
 		texturefile = "gfx/interface/topbar/toolbar/construction_button.dds"
 		noOfFrames = 2		
+		effectFile = "gfx/FX/GO_topbar_button.shader"
 	}
 	
 	spriteType = {
 		name = "GFX_topbar_trade_button"
 		texturefile = "gfx/interface/topbar/toolbar/trade_button.dds"
 		noOfFrames = 2		
+		effectFile = "gfx/FX/GO_topbar_button.shader"
 	}		
 	
 	spriteType = {
@@ -423,4 +437,48 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate_blendframes.lua"
 	}
 	
+
+	# Dedicated top-bar counters; shared generic boxes remain unchanged.
+	spriteType = {
+		name = "GFX_GO_topbar_value_holder"
+		texturefile = "gfx/interface/topbar/GO_value_holder.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GO_topbar_manpower_holder"
+		texturefile = "gfx/interface/topbar/GO_manpower_holder.dds"
+	}
+
+
+	# Scoped right-topbar controls; shared utility/zoom sprites are retained.
+	spriteType = {
+		name = "GFX_GO_utility_menu"
+		texturefile = "gfx/interface/topbar/GO_utility_menu.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_GO_utility_help"
+		texturefile = "gfx/interface/topbar/GO_utility_help.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_GO_utility_alerts"
+		texturefile = "gfx/interface/topbar/GO_utility_alerts.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_GO_speed_plus"
+		texturefile = "gfx/interface/topbar/GO_speed_plus.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_GO_speed_minus"
+		texturefile = "gfx/interface/topbar/GO_speed_minus.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
 }

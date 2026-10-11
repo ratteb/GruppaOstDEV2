@@ -7,6 +7,11 @@ state={
 	state_category = pastoral
 	
 	
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 8
+	}
+
 	history=
 	{
 		owner = CHI

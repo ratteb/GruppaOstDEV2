@@ -7,6 +7,8 @@ state = {
 
 	resources = {
 		tungsten = 42 # In replacement of Nitrate
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 1
 	}
 
 	history = {

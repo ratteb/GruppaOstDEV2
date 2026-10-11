@@ -6,6 +6,11 @@ state={
 	
 	state_category = city
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 25
+	}
+
 	history={
 		owner = NOV
 		buildings = {

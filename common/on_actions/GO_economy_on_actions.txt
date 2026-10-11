@@ -1,11 +1,14 @@
 # Gruppa Ost economy - guarded backend setup, pulses and territorial refresh.
-# No campaign fiscal inputs/access flags are seeded; legacy weekly helpers remain separate.
+# Stage 12 authors only guarded fresh-2027 bookmark profiles; legacy helpers stay separate.
 on_actions = {
     on_startup = {
         effect = {
             # Native startup has no country scope. SOV is an initialization anchor;
-            # the wrapper still visits all states/countries and grants no access.
-            SOV = { GO_econ_initialize_economy_fiscal = yes }
+            # storage wrapper still visits all states/countries and grants no access.
+            SOV = {
+                GO_econ_initialize_economy_fiscal = yes
+                GO_econ_author_2027_campaign = yes
+            }
         }
     }
 

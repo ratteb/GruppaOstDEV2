@@ -1,0 +1,35 @@
+{
+  "game_version": "1.18.3.0.7709",
+  "scope": "Only the map-control stack and raid cap shown in Screenshot (705)",
+  "scanline_strength": 2,
+  "assets": {
+    "gfx/interface/mapmode/mapmode_main_bg.dds": "main_case",
+    "gfx/interface/mapmode/mapmode_bottom_bg.dds": "bottom_case",
+    "gfx/interface/mapmode/mapmode_button_bg.dds": "big_seat",
+    "gfx/interface/mapmode/mapmode_button_depressed.dds": "small_seat",
+    "gfx/interface/mapmode/mapmode_buttons_deselected_big.dds": "big_normal",
+    "gfx/interface/mapmode/mapmode_buttons_selected_big.dds": "big_selected",
+    "gfx/interface/mapmode/mapmode_buttons_deselected_small.dds": "small_normal",
+    "gfx/interface/mapmode/mapmode_buttons_selected_small.dds": "small_selected",
+    "gfx/interface/mapmode/mapmode_button_all.dds": "back",
+    "gfx/interface/mapmode/find_screen_button.dds": "search",
+    "gfx/interface/military_raids/raids_filter_header_button.dds": "raid_cap"
+  },
+  "frames": {
+    "big_normal": 4,
+    "big_selected": 4,
+    "small_normal": 18,
+    "small_selected": 18,
+    "back": 2
+  },
+  "big_glyph_bounds": [[8,1,25,29],[2,4,32,26],[6,2,29,30],[4,7,31,25]],
+  "big_glyph_min_chroma": 8,
+  "big_glyph_min_brightness": 38,
+  "big_glyph_palette_normal": [[39,65,91],[100,145,186],[204,225,238]],
+  "big_glyph_palette_selected": [[48,84,129],[125,184,232],[228,242,255]],
+  "search_ring": {"center": [16,15], "outer_radius": 9, "inner_radius": 5},
+  "search_handle": [[21,19],[32,28],[29,31],[18,22]],
+  "back_glyph": [[3,10],[15,0],[19,0],[10,10],[18,19],[14,20]],
+  "raid_cap_polygon": [[4,10],[22,10],[29,3],[53,3],[60,10],[77,10],[77,29],[71,35],[10,35],[4,29]],
+  "art_policy": "Retain the native symbol shapes and details. Use cool blue luminance ramps for the four large gold/green buttons. Small and toggle symbols retain their distinct native states. Separate magnifier and arrow from their old button chrome with reviewed masks. Raid crosshair is a separate sprite and remains unchanged."
+}

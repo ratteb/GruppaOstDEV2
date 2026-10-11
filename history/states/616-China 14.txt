@@ -2,6 +2,11 @@ state = {
 	id = 616
 	name = "STATE_616"
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 2
+	}
+
 	history = {
 
 		owner = CHI

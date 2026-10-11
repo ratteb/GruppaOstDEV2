@@ -6,6 +6,11 @@ state=
 	
 	state_category = town
 	
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 19
+	}
+
 	history=
 	{
 		owner = CHI

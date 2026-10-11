@@ -1,0 +1,31 @@
+{
+  "game_version": "1.18.3.0.7709",
+  "buttons": {
+    "topbar_decisionview": "GFX_topbar_decisionview_button",
+    "intelligence": "GFX_topbar_intelligence",
+    "science": "GFX_topbar_technology",
+    "diplomacy": "GFX_topbar_diplomacy",
+    "trade": "GFX_topbar_trade_button",
+    "construction": "GFX_construction_button",
+    "production": "GFX_topbar_production",
+    "deployment": "GFX_deployment_button",
+    "ledger": "GFX_ledger_button",
+    "international_market": "GFX_topbar_international_market",
+    "staff_office": "GFX_staff_office_button"
+  },
+  "frame_size": [55, 41],
+  "frame_box": [0, 0, 54, 40],
+  "frame_width": 3,
+  "chamfer": 2,
+  "scanline_strength": 2,
+  "legacy_matte_offset": [2, 2],
+  "special_art_bounds": {
+    "diplomacy": [2, 6, 53, 38],
+    "international_market": [9, 6, 49, 38],
+    "staff_office": [6, 4, 52, 38]
+  },
+  "blue_glyphs": ["international_market", "staff_office"],
+  "hover_rim_add": [0.08, 0.18, 0.32],
+  "pressed_face_multiplier": 0.90,
+  "disabled_multiplier": 0.65
+}

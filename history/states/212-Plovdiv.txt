@@ -8,6 +8,8 @@ state={
 
 	resources={
 		chromium = 1
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 2
 	}
 
 	history={

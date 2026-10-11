@@ -6,7 +6,8 @@ state={
 	
 	state_category = city
 	resources={
-		steel=42 #was 100 # was: 236
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 5
 	}
 
 	history={

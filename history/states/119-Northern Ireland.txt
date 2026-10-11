@@ -34,7 +34,8 @@ state={
 	state_category="city"
 	
 	resources={
-		aluminium=2
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 2
 	}
 
 	local_supplies=0.0 

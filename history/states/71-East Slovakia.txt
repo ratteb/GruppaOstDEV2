@@ -5,6 +5,11 @@ state={
 	
 	state_category = rural
 	
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 2
+	}
+
 	history={
 		victory_points = {
 			3581 3

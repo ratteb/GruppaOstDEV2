@@ -1,0 +1,1850 @@
+# Explicit panel-level visibility replaces nested container visibility bindings.
+# All registered panels share native Trade hosting; opening/reading is observational.
+scripted_gui = {
+    GO_econ_ui_entry = {
+        context_type = player_context
+        window_name = "GO_econ_ui_entry_window"
+        parent_window_token = top_bar
+        visible = { always = no }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_screen = {
+        context_type = player_context
+        window_name = "GO_econ_ui_window"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+        }
+        effects = {
+            GO_econ_ui_economy_tab_click = { clr_country_flag = GO_econ_ui_resources }
+            GO_econ_ui_economy_active_tab_click = { clr_country_flag = GO_econ_ui_resources }
+            GO_econ_ui_resources_tab_click = { set_country_flag = GO_econ_ui_resources }
+            GO_econ_ui_resources_active_tab_click = { set_country_flag = GO_econ_ui_resources }
+        }
+        triggers = {
+            GO_econ_ui_economy_tab_visible = { has_country_flag = GO_econ_ui_resources }
+            GO_econ_ui_economy_active_tab_visible = {
+                NOT = { has_country_flag = GO_econ_ui_resources }
+            }
+            GO_econ_ui_resources_tab_visible = {
+                NOT = { has_country_flag = GO_econ_ui_resources }
+            }
+            GO_econ_ui_resources_active_tab_visible = { has_country_flag = GO_econ_ui_resources }
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_economy_view_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_economy_view"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            NOT = { has_country_flag = GO_econ_ui_resources }
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_national_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_national"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            NOT = { has_country_flag = GO_econ_ui_resources }
+        }
+        triggers = {
+            GO_econ_ui_summary_empty_visible = {
+                NOT = { GO_econ_gui_summary_has_data = yes }
+            }
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_summary_values_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_summary_values"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            NOT = { has_country_flag = GO_econ_ui_resources }
+            GO_econ_gui_summary_has_data = yes
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_fiscal_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_fiscal"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            NOT = { has_country_flag = GO_econ_ui_resources }
+        }
+        triggers = {
+            GO_econ_ui_fiscal_title_visible = {
+                NOT = { GO_econ_gui_fiscal_ready = yes }
+            }
+            GO_econ_ui_fiscal_empty_visible = {
+                NOT = { GO_econ_gui_fiscal_ready = yes }
+            }
+            GO_econ_ui_gdp_income_preview_visible = {
+                NOT = { GO_econ_gui_fiscal_ready = yes }
+                GO_econ_country_gdp_income_preview_ready = yes
+            }
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_fiscal_values_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_fiscal_values"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            NOT = { has_country_flag = GO_econ_ui_resources }
+            GO_econ_gui_fiscal_ready = yes
+        }
+        triggers = {
+            GO_econ_ui_gdp_income_label_visible = { GO_econ_country_gdp_income_report_ready = yes }
+            GO_econ_ui_gdp_income_value_visible = { GO_econ_country_gdp_income_report_ready = yes }
+            GO_econ_ui_other_income_label_visible = { GO_econ_country_gdp_income_report_ready = yes }
+            GO_econ_ui_other_income_value_visible = { GO_econ_country_gdp_income_report_ready = yes }
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_pu_values_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_pu_values"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            NOT = { has_country_flag = GO_econ_ui_resources }
+            GO_econ_gui_pu_visible = yes
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_civil_allocation_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_civil_allocation"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            NOT = { has_country_flag = GO_econ_ui_resources }
+            GO_econ_gui_pu_visible = yes
+        }
+        effects = {
+            GO_econ_ui_civil_slot_0_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 0 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        GO_econ_ui_can_request_pu_allocation = yes
+                    }
+                    set_variable = { GO_econ_ui_work_pu_kind = GO_econ_ui_candidate_kind }
+                    set_variable = { GO_econ_ui_work_target = GO_econ_ui_candidate_target }
+                    GO_econ_ui_request_pu_allocation = yes
+                }
+            }
+            GO_econ_ui_civil_slot_1_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 1 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        GO_econ_ui_can_request_pu_allocation = yes
+                    }
+                    set_variable = { GO_econ_ui_work_pu_kind = GO_econ_ui_candidate_kind }
+                    set_variable = { GO_econ_ui_work_target = GO_econ_ui_candidate_target }
+                    GO_econ_ui_request_pu_allocation = yes
+                }
+            }
+            GO_econ_ui_civil_slot_2_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 2 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        GO_econ_ui_can_request_pu_allocation = yes
+                    }
+                    set_variable = { GO_econ_ui_work_pu_kind = GO_econ_ui_candidate_kind }
+                    set_variable = { GO_econ_ui_work_target = GO_econ_ui_candidate_target }
+                    GO_econ_ui_request_pu_allocation = yes
+                }
+            }
+            GO_econ_ui_civil_slot_3_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 3 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        GO_econ_ui_can_request_pu_allocation = yes
+                    }
+                    set_variable = { GO_econ_ui_work_pu_kind = GO_econ_ui_candidate_kind }
+                    set_variable = { GO_econ_ui_work_target = GO_econ_ui_candidate_target }
+                    GO_econ_ui_request_pu_allocation = yes
+                }
+            }
+            GO_econ_ui_civil_slot_4_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 4 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        GO_econ_ui_can_request_pu_allocation = yes
+                    }
+                    set_variable = { GO_econ_ui_work_pu_kind = GO_econ_ui_candidate_kind }
+                    set_variable = { GO_econ_ui_work_target = GO_econ_ui_candidate_target }
+                    GO_econ_ui_request_pu_allocation = yes
+                }
+            }
+            GO_econ_ui_civil_slot_5_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 5 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        GO_econ_ui_can_request_pu_allocation = yes
+                    }
+                    set_variable = { GO_econ_ui_work_pu_kind = GO_econ_ui_candidate_kind }
+                    set_variable = { GO_econ_ui_work_target = GO_econ_ui_candidate_target }
+                    GO_econ_ui_request_pu_allocation = yes
+                }
+            }
+            GO_econ_ui_civil_slot_6_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 6 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        GO_econ_ui_can_request_pu_allocation = yes
+                    }
+                    set_variable = { GO_econ_ui_work_pu_kind = GO_econ_ui_candidate_kind }
+                    set_variable = { GO_econ_ui_work_target = GO_econ_ui_candidate_target }
+                    GO_econ_ui_request_pu_allocation = yes
+                }
+            }
+            GO_econ_ui_civil_slot_7_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 7 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        GO_econ_ui_can_request_pu_allocation = yes
+                    }
+                    set_variable = { GO_econ_ui_work_pu_kind = GO_econ_ui_candidate_kind }
+                    set_variable = { GO_econ_ui_work_target = GO_econ_ui_candidate_target }
+                    GO_econ_ui_request_pu_allocation = yes
+                }
+            }
+            GO_econ_ui_civil_slot_8_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 8 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        GO_econ_ui_can_request_pu_allocation = yes
+                    }
+                    set_variable = { GO_econ_ui_work_pu_kind = GO_econ_ui_candidate_kind }
+                    set_variable = { GO_econ_ui_work_target = GO_econ_ui_candidate_target }
+                    GO_econ_ui_request_pu_allocation = yes
+                }
+            }
+            GO_econ_ui_civil_slot_9_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 9 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        GO_econ_ui_can_request_pu_allocation = yes
+                    }
+                    set_variable = { GO_econ_ui_work_pu_kind = GO_econ_ui_candidate_kind }
+                    set_variable = { GO_econ_ui_work_target = GO_econ_ui_candidate_target }
+                    GO_econ_ui_request_pu_allocation = yes
+                }
+            }
+            GO_econ_ui_civil_slot_10_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 10 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        GO_econ_ui_can_request_pu_allocation = yes
+                    }
+                    set_variable = { GO_econ_ui_work_pu_kind = GO_econ_ui_candidate_kind }
+                    set_variable = { GO_econ_ui_work_target = GO_econ_ui_candidate_target }
+                    GO_econ_ui_request_pu_allocation = yes
+                }
+            }
+            GO_econ_ui_civil_group_1_click = {
+                set_variable = { GO_econ_ui_pu_group = 1 }
+                set_variable = { GO_econ_ui_civil_page = 0 }
+                set_variable = { GO_econ_ui_military_page = 0 }
+            }
+            GO_econ_ui_civil_group_1_active_click = {
+                set_variable = { GO_econ_ui_pu_group = 1 }
+                set_variable = { GO_econ_ui_civil_page = 0 }
+                set_variable = { GO_econ_ui_military_page = 0 }
+            }
+            GO_econ_ui_civil_group_5_click = {
+                set_variable = { GO_econ_ui_pu_group = 5 }
+                set_variable = { GO_econ_ui_civil_page = 0 }
+                set_variable = { GO_econ_ui_military_page = 0 }
+            }
+            GO_econ_ui_civil_group_5_active_click = {
+                set_variable = { GO_econ_ui_pu_group = 5 }
+                set_variable = { GO_econ_ui_civil_page = 0 }
+                set_variable = { GO_econ_ui_military_page = 0 }
+            }
+            GO_econ_ui_civil_group_10_click = {
+                set_variable = { GO_econ_ui_pu_group = 10 }
+                set_variable = { GO_econ_ui_civil_page = 0 }
+                set_variable = { GO_econ_ui_military_page = 0 }
+            }
+            GO_econ_ui_civil_group_10_active_click = {
+                set_variable = { GO_econ_ui_pu_group = 10 }
+                set_variable = { GO_econ_ui_civil_page = 0 }
+                set_variable = { GO_econ_ui_military_page = 0 }
+            }
+            GO_econ_ui_civil_earlier_click = {
+                if = {
+                    limit = {
+                        has_variable = GO_econ_ui_civil_page
+                        check_variable = { GO_econ_ui_civil_page > 0 }
+                    }
+                    subtract_from_variable = { GO_econ_ui_civil_page = 1 }
+                }
+            }
+            GO_econ_ui_civil_later_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 1 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        set_temp_variable = { GO_econ_ui_next_first = GO_econ_ui_candidate_group }
+                        multiply_temp_variable = { var = GO_econ_ui_next_first value = 10 }
+                        add_to_temp_variable = { var = GO_econ_ui_next_first value = GO_econ_ui_candidate_target }
+                        check_variable = { var = GO_econ_ui_next_first value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                    }
+                    add_to_variable = { GO_econ_ui_civil_page = 1 }
+                }
+            }
+        }
+        triggers = {
+            GO_econ_ui_civil_slot_0_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 0 }
+                GO_econ_ui_prepare_pu_slot = yes
+                GO_econ_ui_can_request_pu_allocation = yes
+            }
+            GO_econ_ui_civil_slot_0_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 0 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_0_factory_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 0 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_0_count_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 0 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_0_selected_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 0 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                GO_econ_ui_pending_pu_counts_ready = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_ui_pending_civil_count compare = equals }
+            }
+            GO_econ_ui_civil_slot_1_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 1 }
+                GO_econ_ui_prepare_pu_slot = yes
+                GO_econ_ui_can_request_pu_allocation = yes
+            }
+            GO_econ_ui_civil_slot_1_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 1 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_1_factory_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 1 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_1_count_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 1 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_1_selected_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 1 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                GO_econ_ui_pending_pu_counts_ready = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_ui_pending_civil_count compare = equals }
+            }
+            GO_econ_ui_civil_slot_2_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 2 }
+                GO_econ_ui_prepare_pu_slot = yes
+                GO_econ_ui_can_request_pu_allocation = yes
+            }
+            GO_econ_ui_civil_slot_2_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 2 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_2_factory_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 2 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_2_count_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 2 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_2_selected_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 2 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                GO_econ_ui_pending_pu_counts_ready = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_ui_pending_civil_count compare = equals }
+            }
+            GO_econ_ui_civil_slot_3_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 3 }
+                GO_econ_ui_prepare_pu_slot = yes
+                GO_econ_ui_can_request_pu_allocation = yes
+            }
+            GO_econ_ui_civil_slot_3_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 3 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_3_factory_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 3 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_3_count_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 3 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_3_selected_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 3 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                GO_econ_ui_pending_pu_counts_ready = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_ui_pending_civil_count compare = equals }
+            }
+            GO_econ_ui_civil_slot_4_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 4 }
+                GO_econ_ui_prepare_pu_slot = yes
+                GO_econ_ui_can_request_pu_allocation = yes
+            }
+            GO_econ_ui_civil_slot_4_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 4 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_4_factory_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 4 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_4_count_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 4 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_4_selected_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 4 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                GO_econ_ui_pending_pu_counts_ready = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_ui_pending_civil_count compare = equals }
+            }
+            GO_econ_ui_civil_slot_5_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 5 }
+                GO_econ_ui_prepare_pu_slot = yes
+                GO_econ_ui_can_request_pu_allocation = yes
+            }
+            GO_econ_ui_civil_slot_5_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 5 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_5_factory_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 5 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_5_count_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 5 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_5_selected_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 5 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                GO_econ_ui_pending_pu_counts_ready = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_ui_pending_civil_count compare = equals }
+            }
+            GO_econ_ui_civil_slot_6_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 6 }
+                GO_econ_ui_prepare_pu_slot = yes
+                GO_econ_ui_can_request_pu_allocation = yes
+            }
+            GO_econ_ui_civil_slot_6_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 6 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_6_factory_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 6 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_6_count_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 6 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_6_selected_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 6 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                GO_econ_ui_pending_pu_counts_ready = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_ui_pending_civil_count compare = equals }
+            }
+            GO_econ_ui_civil_slot_7_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 7 }
+                GO_econ_ui_prepare_pu_slot = yes
+                GO_econ_ui_can_request_pu_allocation = yes
+            }
+            GO_econ_ui_civil_slot_7_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 7 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_7_factory_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 7 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_7_count_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 7 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_7_selected_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 7 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                GO_econ_ui_pending_pu_counts_ready = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_ui_pending_civil_count compare = equals }
+            }
+            GO_econ_ui_civil_slot_8_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 8 }
+                GO_econ_ui_prepare_pu_slot = yes
+                GO_econ_ui_can_request_pu_allocation = yes
+            }
+            GO_econ_ui_civil_slot_8_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 8 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_8_factory_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 8 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_8_count_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 8 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_8_selected_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 8 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                GO_econ_ui_pending_pu_counts_ready = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_ui_pending_civil_count compare = equals }
+            }
+            GO_econ_ui_civil_slot_9_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 9 }
+                GO_econ_ui_prepare_pu_slot = yes
+                GO_econ_ui_can_request_pu_allocation = yes
+            }
+            GO_econ_ui_civil_slot_9_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 9 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_9_factory_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 9 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_9_count_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 9 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_9_selected_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 9 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                GO_econ_ui_pending_pu_counts_ready = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_ui_pending_civil_count compare = equals }
+            }
+            GO_econ_ui_civil_slot_10_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 10 }
+                GO_econ_ui_prepare_pu_slot = yes
+                GO_econ_ui_can_request_pu_allocation = yes
+            }
+            GO_econ_ui_civil_slot_10_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 10 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_10_factory_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 10 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_10_count_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 10 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_civil_slot_10_selected_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 10 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                GO_econ_ui_pending_pu_counts_ready = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_ui_pending_civil_count compare = equals }
+            }
+            GO_econ_ui_civil_group_1_visible = {
+                NOT = {
+                    OR = {
+                        NOT = { has_variable = GO_econ_ui_pu_group }
+                        check_variable = { GO_econ_ui_pu_group = 1 }
+                    }
+                }
+            }
+            GO_econ_ui_civil_group_1_active_visible = {
+                OR = {
+                    NOT = { has_variable = GO_econ_ui_pu_group }
+                    check_variable = { GO_econ_ui_pu_group = 1 }
+                }
+            }
+            GO_econ_ui_civil_group_5_visible = {
+                NOT = {
+                    has_variable = GO_econ_ui_pu_group
+                    check_variable = { GO_econ_ui_pu_group = 5 }
+                }
+            }
+            GO_econ_ui_civil_group_5_active_visible = {
+                has_variable = GO_econ_ui_pu_group
+                check_variable = { GO_econ_ui_pu_group = 5 }
+            }
+            GO_econ_ui_civil_group_10_visible = {
+                NOT = {
+                    has_variable = GO_econ_ui_pu_group
+                    check_variable = { GO_econ_ui_pu_group = 10 }
+                }
+            }
+            GO_econ_ui_civil_group_10_active_visible = {
+                has_variable = GO_econ_ui_pu_group
+                check_variable = { GO_econ_ui_pu_group = 10 }
+            }
+            GO_econ_ui_civil_earlier_click_enabled = {
+                has_variable = GO_econ_ui_civil_page
+                check_variable = { GO_econ_ui_civil_page > 0 }
+            }
+            GO_econ_ui_civil_later_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+                set_temp_variable = { GO_econ_ui_slot_index = 1 }
+                GO_econ_ui_prepare_pu_slot = yes
+                set_temp_variable = { GO_econ_ui_next_first = GO_econ_ui_candidate_group }
+                multiply_temp_variable = { var = GO_econ_ui_next_first value = 10 }
+                add_to_temp_variable = { var = GO_econ_ui_next_first value = GO_econ_ui_candidate_target }
+                check_variable = { var = GO_econ_ui_next_first value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_military_allocation_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_military_allocation"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            NOT = { has_country_flag = GO_econ_ui_resources }
+            GO_econ_gui_pu_visible = yes
+        }
+        effects = {
+            GO_econ_ui_military_slot_0_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 0 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        GO_econ_ui_can_request_pu_allocation = yes
+                    }
+                    set_variable = { GO_econ_ui_work_pu_kind = GO_econ_ui_candidate_kind }
+                    set_variable = { GO_econ_ui_work_target = GO_econ_ui_candidate_target }
+                    GO_econ_ui_request_pu_allocation = yes
+                }
+            }
+            GO_econ_ui_military_slot_1_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 1 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        GO_econ_ui_can_request_pu_allocation = yes
+                    }
+                    set_variable = { GO_econ_ui_work_pu_kind = GO_econ_ui_candidate_kind }
+                    set_variable = { GO_econ_ui_work_target = GO_econ_ui_candidate_target }
+                    GO_econ_ui_request_pu_allocation = yes
+                }
+            }
+            GO_econ_ui_military_slot_2_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 2 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        GO_econ_ui_can_request_pu_allocation = yes
+                    }
+                    set_variable = { GO_econ_ui_work_pu_kind = GO_econ_ui_candidate_kind }
+                    set_variable = { GO_econ_ui_work_target = GO_econ_ui_candidate_target }
+                    GO_econ_ui_request_pu_allocation = yes
+                }
+            }
+            GO_econ_ui_military_slot_3_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 3 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        GO_econ_ui_can_request_pu_allocation = yes
+                    }
+                    set_variable = { GO_econ_ui_work_pu_kind = GO_econ_ui_candidate_kind }
+                    set_variable = { GO_econ_ui_work_target = GO_econ_ui_candidate_target }
+                    GO_econ_ui_request_pu_allocation = yes
+                }
+            }
+            GO_econ_ui_military_slot_4_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 4 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        GO_econ_ui_can_request_pu_allocation = yes
+                    }
+                    set_variable = { GO_econ_ui_work_pu_kind = GO_econ_ui_candidate_kind }
+                    set_variable = { GO_econ_ui_work_target = GO_econ_ui_candidate_target }
+                    GO_econ_ui_request_pu_allocation = yes
+                }
+            }
+            GO_econ_ui_military_slot_5_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 5 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        GO_econ_ui_can_request_pu_allocation = yes
+                    }
+                    set_variable = { GO_econ_ui_work_pu_kind = GO_econ_ui_candidate_kind }
+                    set_variable = { GO_econ_ui_work_target = GO_econ_ui_candidate_target }
+                    GO_econ_ui_request_pu_allocation = yes
+                }
+            }
+            GO_econ_ui_military_slot_6_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 6 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        GO_econ_ui_can_request_pu_allocation = yes
+                    }
+                    set_variable = { GO_econ_ui_work_pu_kind = GO_econ_ui_candidate_kind }
+                    set_variable = { GO_econ_ui_work_target = GO_econ_ui_candidate_target }
+                    GO_econ_ui_request_pu_allocation = yes
+                }
+            }
+            GO_econ_ui_military_slot_7_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 7 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        GO_econ_ui_can_request_pu_allocation = yes
+                    }
+                    set_variable = { GO_econ_ui_work_pu_kind = GO_econ_ui_candidate_kind }
+                    set_variable = { GO_econ_ui_work_target = GO_econ_ui_candidate_target }
+                    GO_econ_ui_request_pu_allocation = yes
+                }
+            }
+            GO_econ_ui_military_slot_8_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 8 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        GO_econ_ui_can_request_pu_allocation = yes
+                    }
+                    set_variable = { GO_econ_ui_work_pu_kind = GO_econ_ui_candidate_kind }
+                    set_variable = { GO_econ_ui_work_target = GO_econ_ui_candidate_target }
+                    GO_econ_ui_request_pu_allocation = yes
+                }
+            }
+            GO_econ_ui_military_slot_9_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 9 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        GO_econ_ui_can_request_pu_allocation = yes
+                    }
+                    set_variable = { GO_econ_ui_work_pu_kind = GO_econ_ui_candidate_kind }
+                    set_variable = { GO_econ_ui_work_target = GO_econ_ui_candidate_target }
+                    GO_econ_ui_request_pu_allocation = yes
+                }
+            }
+            GO_econ_ui_military_slot_10_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 10 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        GO_econ_ui_can_request_pu_allocation = yes
+                    }
+                    set_variable = { GO_econ_ui_work_pu_kind = GO_econ_ui_candidate_kind }
+                    set_variable = { GO_econ_ui_work_target = GO_econ_ui_candidate_target }
+                    GO_econ_ui_request_pu_allocation = yes
+                }
+            }
+            GO_econ_ui_military_group_1_click = {
+                set_variable = { GO_econ_ui_pu_group = 1 }
+                set_variable = { GO_econ_ui_civil_page = 0 }
+                set_variable = { GO_econ_ui_military_page = 0 }
+            }
+            GO_econ_ui_military_group_1_active_click = {
+                set_variable = { GO_econ_ui_pu_group = 1 }
+                set_variable = { GO_econ_ui_civil_page = 0 }
+                set_variable = { GO_econ_ui_military_page = 0 }
+            }
+            GO_econ_ui_military_group_5_click = {
+                set_variable = { GO_econ_ui_pu_group = 5 }
+                set_variable = { GO_econ_ui_civil_page = 0 }
+                set_variable = { GO_econ_ui_military_page = 0 }
+            }
+            GO_econ_ui_military_group_5_active_click = {
+                set_variable = { GO_econ_ui_pu_group = 5 }
+                set_variable = { GO_econ_ui_civil_page = 0 }
+                set_variable = { GO_econ_ui_military_page = 0 }
+            }
+            GO_econ_ui_military_group_10_click = {
+                set_variable = { GO_econ_ui_pu_group = 10 }
+                set_variable = { GO_econ_ui_civil_page = 0 }
+                set_variable = { GO_econ_ui_military_page = 0 }
+            }
+            GO_econ_ui_military_group_10_active_click = {
+                set_variable = { GO_econ_ui_pu_group = 10 }
+                set_variable = { GO_econ_ui_civil_page = 0 }
+                set_variable = { GO_econ_ui_military_page = 0 }
+            }
+            GO_econ_ui_military_earlier_click = {
+                if = {
+                    limit = {
+                        has_variable = GO_econ_ui_military_page
+                        check_variable = { GO_econ_ui_military_page > 0 }
+                    }
+                    subtract_from_variable = { GO_econ_ui_military_page = 1 }
+                }
+            }
+            GO_econ_ui_military_later_click = {
+                if = {
+                    limit = {
+                        set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                        set_temp_variable = { GO_econ_ui_slot_index = 1 }
+                        GO_econ_ui_prepare_pu_slot = yes
+                        set_temp_variable = { GO_econ_ui_next_first = GO_econ_ui_candidate_group }
+                        multiply_temp_variable = { var = GO_econ_ui_next_first value = 10 }
+                        add_to_temp_variable = { var = GO_econ_ui_next_first value = GO_econ_ui_candidate_target }
+                        check_variable = { var = GO_econ_ui_next_first value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                    }
+                    add_to_variable = { GO_econ_ui_military_page = 1 }
+                }
+            }
+        }
+        triggers = {
+            GO_econ_ui_military_slot_0_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 0 }
+                GO_econ_ui_prepare_pu_slot = yes
+                GO_econ_ui_can_request_pu_allocation = yes
+            }
+            GO_econ_ui_military_slot_0_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 0 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_0_factory_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 0 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_0_count_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 0 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_0_selected_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 0 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                GO_econ_ui_pending_pu_counts_ready = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_ui_pending_military_count compare = equals }
+            }
+            GO_econ_ui_military_slot_1_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 1 }
+                GO_econ_ui_prepare_pu_slot = yes
+                GO_econ_ui_can_request_pu_allocation = yes
+            }
+            GO_econ_ui_military_slot_1_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 1 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_1_factory_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 1 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_1_count_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 1 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_1_selected_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 1 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                GO_econ_ui_pending_pu_counts_ready = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_ui_pending_military_count compare = equals }
+            }
+            GO_econ_ui_military_slot_2_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 2 }
+                GO_econ_ui_prepare_pu_slot = yes
+                GO_econ_ui_can_request_pu_allocation = yes
+            }
+            GO_econ_ui_military_slot_2_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 2 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_2_factory_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 2 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_2_count_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 2 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_2_selected_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 2 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                GO_econ_ui_pending_pu_counts_ready = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_ui_pending_military_count compare = equals }
+            }
+            GO_econ_ui_military_slot_3_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 3 }
+                GO_econ_ui_prepare_pu_slot = yes
+                GO_econ_ui_can_request_pu_allocation = yes
+            }
+            GO_econ_ui_military_slot_3_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 3 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_3_factory_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 3 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_3_count_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 3 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_3_selected_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 3 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                GO_econ_ui_pending_pu_counts_ready = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_ui_pending_military_count compare = equals }
+            }
+            GO_econ_ui_military_slot_4_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 4 }
+                GO_econ_ui_prepare_pu_slot = yes
+                GO_econ_ui_can_request_pu_allocation = yes
+            }
+            GO_econ_ui_military_slot_4_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 4 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_4_factory_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 4 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_4_count_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 4 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_4_selected_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 4 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                GO_econ_ui_pending_pu_counts_ready = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_ui_pending_military_count compare = equals }
+            }
+            GO_econ_ui_military_slot_5_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 5 }
+                GO_econ_ui_prepare_pu_slot = yes
+                GO_econ_ui_can_request_pu_allocation = yes
+            }
+            GO_econ_ui_military_slot_5_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 5 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_5_factory_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 5 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_5_count_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 5 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_5_selected_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 5 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                GO_econ_ui_pending_pu_counts_ready = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_ui_pending_military_count compare = equals }
+            }
+            GO_econ_ui_military_slot_6_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 6 }
+                GO_econ_ui_prepare_pu_slot = yes
+                GO_econ_ui_can_request_pu_allocation = yes
+            }
+            GO_econ_ui_military_slot_6_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 6 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_6_factory_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 6 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_6_count_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 6 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_6_selected_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 6 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                GO_econ_ui_pending_pu_counts_ready = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_ui_pending_military_count compare = equals }
+            }
+            GO_econ_ui_military_slot_7_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 7 }
+                GO_econ_ui_prepare_pu_slot = yes
+                GO_econ_ui_can_request_pu_allocation = yes
+            }
+            GO_econ_ui_military_slot_7_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 7 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_7_factory_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 7 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_7_count_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 7 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_7_selected_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 7 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                GO_econ_ui_pending_pu_counts_ready = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_ui_pending_military_count compare = equals }
+            }
+            GO_econ_ui_military_slot_8_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 8 }
+                GO_econ_ui_prepare_pu_slot = yes
+                GO_econ_ui_can_request_pu_allocation = yes
+            }
+            GO_econ_ui_military_slot_8_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 8 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_8_factory_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 8 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_8_count_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 8 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_8_selected_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 8 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                GO_econ_ui_pending_pu_counts_ready = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_ui_pending_military_count compare = equals }
+            }
+            GO_econ_ui_military_slot_9_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 9 }
+                GO_econ_ui_prepare_pu_slot = yes
+                GO_econ_ui_can_request_pu_allocation = yes
+            }
+            GO_econ_ui_military_slot_9_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 9 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_9_factory_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 9 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_9_count_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 9 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_9_selected_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 9 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                GO_econ_ui_pending_pu_counts_ready = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_ui_pending_military_count compare = equals }
+            }
+            GO_econ_ui_military_slot_10_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 10 }
+                GO_econ_ui_prepare_pu_slot = yes
+                GO_econ_ui_can_request_pu_allocation = yes
+            }
+            GO_econ_ui_military_slot_10_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 10 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_10_factory_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 10 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_10_count_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 10 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+            GO_econ_ui_military_slot_10_selected_visible = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 10 }
+                GO_econ_ui_prepare_pu_slot = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_country_pu_usable compare = less_than_or_equals }
+                GO_econ_ui_pending_pu_counts_ready = yes
+                check_variable = { var = GO_econ_ui_candidate_target value = GO_econ_ui_pending_military_count compare = equals }
+            }
+            GO_econ_ui_military_group_1_visible = {
+                NOT = {
+                    OR = {
+                        NOT = { has_variable = GO_econ_ui_pu_group }
+                        check_variable = { GO_econ_ui_pu_group = 1 }
+                    }
+                }
+            }
+            GO_econ_ui_military_group_1_active_visible = {
+                OR = {
+                    NOT = { has_variable = GO_econ_ui_pu_group }
+                    check_variable = { GO_econ_ui_pu_group = 1 }
+                }
+            }
+            GO_econ_ui_military_group_5_visible = {
+                NOT = {
+                    has_variable = GO_econ_ui_pu_group
+                    check_variable = { GO_econ_ui_pu_group = 5 }
+                }
+            }
+            GO_econ_ui_military_group_5_active_visible = {
+                has_variable = GO_econ_ui_pu_group
+                check_variable = { GO_econ_ui_pu_group = 5 }
+            }
+            GO_econ_ui_military_group_10_visible = {
+                NOT = {
+                    has_variable = GO_econ_ui_pu_group
+                    check_variable = { GO_econ_ui_pu_group = 10 }
+                }
+            }
+            GO_econ_ui_military_group_10_active_visible = {
+                has_variable = GO_econ_ui_pu_group
+                check_variable = { GO_econ_ui_pu_group = 10 }
+            }
+            GO_econ_ui_military_earlier_click_enabled = {
+                has_variable = GO_econ_ui_military_page
+                check_variable = { GO_econ_ui_military_page > 0 }
+            }
+            GO_econ_ui_military_later_click_enabled = {
+                set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+                set_temp_variable = { GO_econ_ui_slot_index = 1 }
+                GO_econ_ui_prepare_pu_slot = yes
+                set_temp_variable = { GO_econ_ui_next_first = GO_econ_ui_candidate_group }
+                multiply_temp_variable = { var = GO_econ_ui_next_first value = 10 }
+                add_to_temp_variable = { var = GO_econ_ui_next_first value = GO_econ_ui_candidate_target }
+                check_variable = { var = GO_econ_ui_next_first value = GO_econ_country_pu_usable compare = less_than_or_equals }
+            }
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_pu_empty_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_pu_empty"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            NOT = { has_country_flag = GO_econ_ui_resources }
+            NOT = { GO_econ_gui_pu_visible = yes }
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_resources_view_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_resources_view"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+        }
+        effects = {
+            GO_econ_ui_reports_tab_click = { clr_country_flag = GO_econ_ui_plants }
+            GO_econ_ui_reports_tab_active_click = { clr_country_flag = GO_econ_ui_plants }
+            GO_econ_ui_plants_tab_click = { set_country_flag = GO_econ_ui_plants GO_econ_ui_refresh_national_plant_capacity = yes }
+            GO_econ_ui_plants_tab_active_click = { set_country_flag = GO_econ_ui_plants GO_econ_ui_refresh_national_plant_capacity = yes }
+            GO_econ_ui_trade_tab_click = { set_country_flag = GO_econ_ui_native_trade }
+        }
+        triggers = {
+            GO_econ_ui_reports_tab_visible = {
+                NOT = {
+                    NOT = { has_country_flag = GO_econ_ui_plants }
+                }
+            }
+            GO_econ_ui_reports_tab_active_visible = {
+                NOT = { has_country_flag = GO_econ_ui_plants }
+            }
+            GO_econ_ui_plants_tab_visible = {
+                NOT = { has_country_flag = GO_econ_ui_plants }
+            }
+            GO_econ_ui_plants_tab_active_visible = { has_country_flag = GO_econ_ui_plants }
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_resources_reports_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_resources_reports"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_native_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_native"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+        }
+        triggers = {
+            GO_econ_ui_native_empty_visible = {
+                NOT = { GO_econ_gui_native_any_reports = yes }
+            }
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_native_rows_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_native_rows"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+            GO_econ_gui_native_any_reports = yes
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_native_coal_row_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_native_coal_row"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+            GO_econ_gui_native_any_reports = yes
+            GO_econ_gui_native_coal_row_visible = yes
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_native_oil_row_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_native_oil_row"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+            GO_econ_gui_native_any_reports = yes
+            GO_econ_gui_native_oil_row_visible = yes
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_native_tungsten_row_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_native_tungsten_row"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+            GO_econ_gui_native_any_reports = yes
+            GO_econ_gui_native_tungsten_row_visible = yes
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_native_steel_row_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_native_steel_row"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+            GO_econ_gui_native_any_reports = yes
+            GO_econ_gui_native_steel_row_visible = yes
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_native_aluminium_row_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_native_aluminium_row"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+            GO_econ_gui_native_any_reports = yes
+            GO_econ_gui_native_aluminium_row_visible = yes
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_native_rubber_row_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_native_rubber_row"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+            GO_econ_gui_native_any_reports = yes
+            GO_econ_gui_native_rubber_row_visible = yes
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_materials_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_materials"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+        }
+        triggers = {
+            GO_econ_ui_materials_empty_visible = {
+                NOT = { GO_econ_gui_materials_any_reports = yes }
+            }
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_material_rows_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_material_rows"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+            GO_econ_gui_materials_any_reports = yes
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_material_iron_row_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_material_iron_row"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+            GO_econ_gui_materials_any_reports = yes
+            GO_econ_gui_material_iron_row_visible = yes
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_material_bauxite_row_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_material_bauxite_row"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+            GO_econ_gui_materials_any_reports = yes
+            GO_econ_gui_material_bauxite_row_visible = yes
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_material_coal_row_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_material_coal_row"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+            GO_econ_gui_materials_any_reports = yes
+            GO_econ_gui_material_coal_row_visible = yes
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_material_natural_gas_row_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_material_natural_gas_row"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+            GO_econ_gui_materials_any_reports = yes
+            GO_econ_gui_material_natural_gas_row_visible = yes
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_material_oil_row_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_material_oil_row"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+            GO_econ_gui_materials_any_reports = yes
+            GO_econ_gui_material_oil_row_visible = yes
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_material_rare_earth_minerals_row_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_material_rare_earth_minerals_row"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+            GO_econ_gui_materials_any_reports = yes
+            GO_econ_gui_material_rare_earth_minerals_row_visible = yes
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_material_tungsten_row_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_material_tungsten_row"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+            GO_econ_gui_materials_any_reports = yes
+            GO_econ_gui_material_tungsten_row_visible = yes
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_material_titanium_row_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_material_titanium_row"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+            GO_econ_gui_materials_any_reports = yes
+            GO_econ_gui_material_titanium_row_visible = yes
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_material_steel_row_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_material_steel_row"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+            GO_econ_gui_materials_any_reports = yes
+            GO_econ_gui_material_steel_row_visible = yes
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_material_aluminium_row_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_material_aluminium_row"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+            GO_econ_gui_materials_any_reports = yes
+            GO_econ_gui_material_aluminium_row_visible = yes
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_material_rubber_row_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_material_rubber_row"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+            GO_econ_gui_materials_any_reports = yes
+            GO_econ_gui_material_rubber_row_visible = yes
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_material_microchips_row_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_material_microchips_row"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+            GO_econ_gui_materials_any_reports = yes
+            GO_econ_gui_material_microchips_row_visible = yes
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_reserves_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_reserves"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            NOT = { has_country_flag = GO_econ_ui_plants }
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_resources_plants_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_resources_plants"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            has_country_flag = GO_econ_ui_plants
+        }
+        effects = {
+            GO_econ_ui_plant_family_1_click = {
+                set_variable = { GO_econ_ui_plant_family = 1 }
+                GO_econ_ui_refresh_national_plant_capacity = yes
+            }
+            GO_econ_ui_plant_family_2_click = {
+                set_variable = { GO_econ_ui_plant_family = 2 }
+                GO_econ_ui_refresh_national_plant_capacity = yes
+            }
+            GO_econ_ui_plant_family_3_click = {
+                set_variable = { GO_econ_ui_plant_family = 3 }
+                GO_econ_ui_refresh_national_plant_capacity = yes
+            }
+            GO_econ_ui_plant_family_4_click = {
+                set_variable = { GO_econ_ui_plant_family = 4 }
+                GO_econ_ui_refresh_national_plant_capacity = yes
+            }
+            GO_econ_ui_plant_family_5_click = {
+                set_variable = { GO_econ_ui_plant_family = 5 }
+                GO_econ_ui_refresh_national_plant_capacity = yes
+            }
+            GO_econ_ui_update_plants_click = { GO_econ_ui_refresh_national_plant_capacity = yes }
+            GO_econ_ui_plant_group_1_click = {
+                set_variable = { GO_econ_ui_plant_group = 1 }
+            }
+            GO_econ_ui_plant_group_1_active_click = {
+                set_variable = { GO_econ_ui_plant_group = 1 }
+            }
+            GO_econ_ui_plant_group_5_click = {
+                set_variable = { GO_econ_ui_plant_group = 5 }
+            }
+            GO_econ_ui_plant_group_5_active_click = {
+                set_variable = { GO_econ_ui_plant_group = 5 }
+            }
+            GO_econ_ui_plant_group_10_click = {
+                set_variable = { GO_econ_ui_plant_group = 10 }
+            }
+            GO_econ_ui_plant_group_10_active_click = {
+                set_variable = { GO_econ_ui_plant_group = 10 }
+            }
+        }
+        triggers = {
+            GO_econ_ui_plant_group_1_visible = {
+                NOT = {
+                    OR = {
+                        NOT = { has_variable = GO_econ_ui_plant_group }
+                        check_variable = { GO_econ_ui_plant_group = 1 }
+                    }
+                }
+            }
+            GO_econ_ui_plant_group_1_active_visible = {
+                OR = {
+                    NOT = { has_variable = GO_econ_ui_plant_group }
+                    check_variable = { GO_econ_ui_plant_group = 1 }
+                }
+            }
+            GO_econ_ui_plant_group_5_visible = {
+                NOT = {
+                    has_variable = GO_econ_ui_plant_group
+                    check_variable = { GO_econ_ui_plant_group = 5 }
+                }
+            }
+            GO_econ_ui_plant_group_5_active_visible = {
+                has_variable = GO_econ_ui_plant_group
+                check_variable = { GO_econ_ui_plant_group = 5 }
+            }
+            GO_econ_ui_plant_group_10_visible = {
+                NOT = {
+                    has_variable = GO_econ_ui_plant_group
+                    check_variable = { GO_econ_ui_plant_group = 10 }
+                }
+            }
+            GO_econ_ui_plant_group_10_active_visible = {
+                has_variable = GO_econ_ui_plant_group
+                check_variable = { GO_econ_ui_plant_group = 10 }
+            }
+            GO_econ_ui_plants_empty_visible = { always = no }
+            GO_econ_ui_update_plants_visible = { always = yes }
+        }
+        ai_enabled = { always = no }
+    }
+    # National assignment controls use a fixed player-context panel. No dynamic
+    # state-row binding or collected array is required to display or click them.
+    GO_econ_ui_plant_list_panel = {
+        context_type = player_context
+        window_name = "GO_econ_ui_plant_list"
+        parent_window_token = trade_tab
+        visible = {
+            NOT = { has_country_flag = GO_econ_ui_native_trade }
+            has_country_flag = GO_econ_ui_resources
+            has_country_flag = GO_econ_ui_plants
+        }
+        effects = {
+            GO_econ_ui_national_plant_idle_click = {
+                set_variable = { GO_econ_ui_work_plant_action = 0 }
+                GO_econ_ui_apply_national_plant_action = yes
+            }
+            GO_econ_ui_national_plant_less_click = {
+                set_variable = { GO_econ_ui_work_plant_action = 1 }
+                GO_econ_ui_apply_national_plant_action = yes
+            }
+            GO_econ_ui_national_plant_more_click = {
+                set_variable = { GO_econ_ui_work_plant_action = 2 }
+                GO_econ_ui_apply_national_plant_action = yes
+            }
+            GO_econ_ui_national_plant_all_click = {
+                set_variable = { GO_econ_ui_work_plant_action = 3 }
+                GO_econ_ui_apply_national_plant_action = yes
+            }
+        }
+        triggers = {
+            GO_econ_ui_plant_grid_visible = { always = no }
+            GO_econ_ui_national_plant_idle_click_enabled = {
+                set_temp_variable = { GO_econ_ui_national_plant_action = 0 }
+                GO_econ_ui_prepare_national_plant_action = yes
+            }
+            GO_econ_ui_national_plant_less_click_enabled = {
+                set_temp_variable = { GO_econ_ui_national_plant_action = 1 }
+                GO_econ_ui_prepare_national_plant_action = yes
+            }
+            GO_econ_ui_national_plant_more_click_enabled = {
+                set_temp_variable = { GO_econ_ui_national_plant_action = 2 }
+                GO_econ_ui_prepare_national_plant_action = yes
+            }
+            GO_econ_ui_national_plant_all_click_enabled = {
+                set_temp_variable = { GO_econ_ui_national_plant_action = 3 }
+                GO_econ_ui_prepare_national_plant_action = yes
+            }
+        }
+        ai_enabled = { always = no }
+    }
+    GO_econ_ui_trade_return = {
+        context_type = player_context
+        window_name = "GO_econ_ui_native_trade_return"
+        parent_window_token = trade_tab
+        visible = { has_country_flag = GO_econ_ui_native_trade }
+        effects = {
+            GO_econ_ui_return_from_trade_click = {
+                clr_country_flag = GO_econ_ui_native_trade
+                set_country_flag = GO_econ_ui_resources
+                clr_country_flag = GO_econ_ui_plants
+            }
+        }
+        ai_enabled = { always = no }
+    }
+}

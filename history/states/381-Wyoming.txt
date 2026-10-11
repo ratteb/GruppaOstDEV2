@@ -5,6 +5,11 @@ state={
 	manpower = 225564
 	state_category = rural
 	
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 7
+	}
+
 	history={
 		owner = USA
 		buildings = {

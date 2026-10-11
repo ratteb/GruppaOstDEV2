@@ -1,4 +1,4 @@
-# Gruppa Ost Stage 6 - national steel-funded physical ammunition production.
+# Gruppa Ost Stage 6/8 - current-availability-funded physical ammunition production.
 # The sole ammunition stock remains ammunition_variable, measured in thousands.
 # Plant output joins ammunition_daily AFTER legacy gain modifiers, before its
 # one stock credit and existing capacity clamp. Gross production may exceed room.
@@ -33,6 +33,9 @@ GO_econ_initialize_country_ammunition_production = {
             NOT = { has_variable = GO_econ_country_ammunition_plant_report_built }
             NOT = { has_variable = GO_econ_country_ammunition_plant_report_assigned }
             NOT = { has_variable = GO_econ_country_ammunition_plant_report_capacity_populated }
+            NOT = { has_variable = GO_econ_country_ammunition_plant_report_accounting_version }
+            NOT = { has_variable = GO_econ_country_ammunition_plant_requirements_populated }
+            NOT = { has_variable = GO_econ_country_ammunition_plant_steel_required }
             NOT = { has_variable = GO_econ_country_ammunition_plant_operating }
             NOT = { has_variable = GO_econ_country_ammunition_plant_steel_consumed }
             NOT = { has_variable = GO_econ_country_ammunition_plant_output_k }
@@ -145,6 +148,9 @@ GO_econ_update_ammunition_plant_production = {
         set_variable = { GO_econ_country_ammunition_plant_report_built = 0 }
         set_variable = { GO_econ_country_ammunition_plant_report_assigned = 0 }
         set_variable = { GO_econ_country_ammunition_plant_operating = 0 }
+        set_variable = { GO_econ_country_ammunition_plant_report_accounting_version = 2 }
+        set_variable = { GO_econ_country_ammunition_plant_requirements_populated = 0 }
+        set_variable = { GO_econ_country_ammunition_plant_steel_required = 0 }
         set_variable = { GO_econ_country_ammunition_plant_steel_consumed = 0 }
         set_variable = { GO_econ_country_ammunition_plant_output_k = 0 }
         set_variable = { GO_econ_country_ammunition_plant_status = 0 }
@@ -154,15 +160,27 @@ GO_econ_update_ammunition_plant_production = {
             set_variable = { GO_econ_country_ammunition_plant_report_built = GO_econ_country_ammunition_plant_eligible_built }
             set_variable = { GO_econ_country_ammunition_plant_report_assigned = GO_econ_country_ammunition_plant_assigned }
             set_variable = { GO_econ_country_ammunition_plant_report_capacity_populated = 1 }
+            set_variable = { GO_econ_country_ammunition_plant_steel_required = GO_econ_country_ammunition_plant_report_assigned }
+            # Requested steel remains visible even if supply or ammunition
+            # credit preflight is unavailable. A blocked recipe allocates none.
+            set_variable = { GO_econ_work_material_id = 10 }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_country_ammunition_plant_steel_required }
+            GO_econ_record_national_material_demand = yes
+            if = {
+                limit = { check_variable = { GO_econ_work_material_demand_succeeded = 1 } }
+                set_variable = { GO_econ_country_ammunition_plant_requirements_populated = 1 }
+            }
         }
         if = {
             limit = {
                 GO_econ_country_ammunition_plant_capacity_ready = yes
+                GO_econ_country_ammunition_plant_requirements_current = yes
                 GO_econ_country_has_material_steel = yes
+                GO_econ_ammunition_plant_recipe_numbers_ready = yes
             }
             if = {
                 limit = {
-                    check_variable = { var = GO_econ_country_material_steel value = GO_econ_country_ammunition_plant_assigned compare = greater_than_or_equals }
+                    check_variable = { var = GO_econ_country_material_steel_availability_remaining value = GO_econ_country_ammunition_plant_steel_required compare = greater_than_or_equals }
                 }
                 if = {
                     limit = { GO_econ_ammunition_plant_recipe_numbers_ready = yes }

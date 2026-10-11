@@ -3,6 +3,11 @@ state={
 	id=362
 	name="STATE_362"
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 11
+	}
+
 	history={
 		owner = USA
 		buildings = {

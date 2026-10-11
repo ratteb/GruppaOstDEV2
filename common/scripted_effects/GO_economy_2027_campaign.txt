@@ -1,0 +1,142 @@
+# Stage 12 authored fresh-2027 profiles, not an existing-save migration.
+# Fictional scenario calibration; factual GDP/debt anchors and assumptions are
+# recorded in docs/HOI4_MOD_DESIGN.md. All money is reference-USD billions.
+
+# ANY. Called solely after the existing backend initializer in on_startup.
+# The hidden event owns initial geopolitical status, as required by D-011.
+GO_econ_author_2027_campaign = {
+    every_country = {
+        limit = {
+            GO_econ_2027_country_fresh = yes
+            NOT = { has_country_flag = GO_econ_2027_authoring_pending }
+        }
+        set_country_flag = GO_econ_2027_authoring_pending
+        country_event = { id = GO_economy_campaign.1 }
+    }
+}
+
+# COUNTRY, called only by the guarded fresh-start event with authoring authority.
+GO_econ_author_2027_country_fiscal = {
+    if = {
+        limit = {
+            has_variable = GO_econ_2027_startup_authoring
+            check_variable = { GO_econ_2027_startup_authoring = 1 }
+            GO_econ_country_has_global_status = yes
+            NOT = { has_variable = GO_econ_country_2027_profile_version }
+            NOT = { has_variable = GO_econ_country_2027_gdp_dataset_complete }
+            OR = { tag = SOV tag = USA tag = CHI tag = FRA }
+        }
+        GO_econ_author_2027_bookmark_gdp = yes
+        every_owned_state = {
+            limit = { is_controlled_by = PREV }
+            GO_econ_refresh_native_population = yes
+        }
+        GO_econ_refresh_country_gdp = yes
+        if = {
+            limit = {
+                check_variable = { GO_econ_country_2027_gdp_dataset_complete = 1 }
+                GO_econ_country_has_gdp = yes
+                check_variable = { GO_econ_country_gdp > 0 }
+                check_variable = { GO_econ_country_eligible_states = GO_econ_country_2027_gdp_expected_states }
+            }
+            # Editable inherited liabilities, not current income or new borrowing.
+            if = { limit = { tag = SOV } set_variable = { GO_econ_work_2027_opening_debt = 320 } }
+            else_if = { limit = { tag = USA } set_variable = { GO_econ_work_2027_opening_debt = 38000 } }
+            else_if = { limit = { tag = CHI } set_variable = { GO_econ_work_2027_opening_debt = 12500 } }
+            else_if = { limit = { tag = FRA } set_variable = { GO_econ_work_2027_opening_debt = 3900 } }
+            set_variable = { GO_econ_country_2027_fiscal_authored_states = 0 }
+            set_variable = { GO_econ_country_2027_inherited_debt_anchors = 0 }
+            every_owned_state = {
+                limit = { is_controlled_by = PREV }
+                GO_econ_author_2027_state_fiscal = yes
+            }
+            if = {
+                limit = {
+                    check_variable = { GO_econ_country_2027_fiscal_authored_states = GO_econ_country_2027_gdp_expected_states }
+                    check_variable = { GO_econ_country_2027_inherited_debt_anchors = 1 }
+                }
+                set_variable = { GO_econ_country_debt_attribution_complete = 1 }
+                GO_econ_refresh_country_debt = yes
+                # Opening liquidity is one month of the calibrated GDP income.
+                # It is an opening balance, never a receipt or a financing flow.
+                set_variable = { GO_econ_country_treasury = GO_econ_country_gdp }
+                multiply_variable = { GO_econ_country_treasury = GO_econ_country_price_index }
+                multiply_variable = { GO_econ_country_treasury = global.GO_econ_cfg_gdp_income_factor }
+                divide_variable = { GO_econ_country_treasury = global.GO_econ_cfg_months_per_year }
+                set_variable = { GO_econ_country_treasury_populated = 1 }
+                set_variable = { GO_econ_country_annual_inflation_percent = 0 }
+                set_variable = { GO_econ_country_annual_inflation_percent_populated = 1 }
+                set_variable = { GO_econ_country_gdp_income_policy = 1 }
+                set_variable = { GO_econ_country_gdp_income_policy_populated = 1 }
+                GO_econ_refresh_status_limits = yes
+                GO_econ_refresh_country_gdp = yes
+                if = {
+                    limit = {
+                        GO_econ_2027_profile_ready = yes
+                        check_variable = { GO_econ_country_debt = GO_econ_work_2027_opening_debt }
+                    }
+                    set_variable = { GO_econ_country_2027_profile_version = 1 }
+                    set_country_flag = GO_econ_gdp_income_access
+                    set_country_flag = GO_econ_fiscal_campaign_access
+                    GO_econ_refresh_gdp_income_preview = yes
+                    # Native callback ordering cannot skip an already opened
+                    # current-day month. The original settlement guard dedupes.
+                    if = {
+                        limit = {
+                            check_variable = { global.GO_econ_month_serial > 0 }
+                            check_variable = { global.GO_econ_month_pulse_day = global.num_days }
+                        }
+                        GO_econ_settle_country_month = yes
+                    }
+                }
+            }
+        }
+        clear_variable = GO_econ_work_2027_opening_debt
+    }
+}
+
+# STATE, entered directly from the newly authored owner COUNTRY. Inherited
+# national obligations use the current capital as an administrative anchor;
+# this is not an estimate of regional government debt. Exactly one is required.
+# Only the canonical indexed ledger is written; debt totals are derived caches.
+GO_econ_author_2027_state_fiscal = {
+    if = {
+        limit = {
+            is_owned_by = PREV
+            is_controlled_by = PREV
+            GO_econ_state_fiscal_initialized = yes
+            check_variable = { GO_econ_state_2027_gdp_authored = 1 }
+            NOT = { has_variable = GO_econ_state_2027_fiscal_authored }
+            NOT = { has_variable = GO_econ_state_liability_@PREV }
+            PREV = {
+                check_variable = { GO_econ_2027_startup_authoring = 1 }
+                GO_econ_country_has_gdp = yes
+                check_variable = { GO_econ_country_gdp > 0 }
+                has_variable = GO_econ_work_2027_opening_debt
+                check_variable = { var = GO_econ_work_2027_opening_debt value = 0 compare = greater_than_or_equals }
+            }
+        }
+        set_variable = { GO_econ_state_liability_@PREV = 0 }
+        if = {
+            limit = { is_capital = yes }
+            set_variable = { GO_econ_state_liability_@PREV = PREV.GO_econ_work_2027_opening_debt }
+            set_variable = { GO_econ_state_2027_inherited_debt_anchor = 1 }
+            PREV = { add_to_variable = { GO_econ_country_2027_inherited_debt_anchors = 1 } }
+        }
+        set_variable = { GO_econ_state_debt_attribution_complete = 1 }
+        # Zero new Services upgrades, not a claim that actual public services do
+        # not exist. Inherited government obligations are in the opening debt.
+        set_variable = { GO_econ_state_services_completed_levels = 0 }
+        set_variable = { GO_econ_state_services_completed_levels_populated = 1 }
+        set_variable = { GO_econ_state_services_requested_levels = 0 }
+        set_variable = { GO_econ_state_services_requested_levels_populated = 1 }
+        set_variable = { GO_econ_state_services_funded_levels = 0 }
+        set_variable = { GO_econ_state_services_funded_levels_populated = 1 }
+        set_variable = { GO_econ_state_services_funding_owner = PREV }
+        set_variable = { GO_econ_state_services_owner_associated = 1 }
+        set_variable = { GO_econ_state_2027_fiscal_authored = 1 }
+        GO_econ_refresh_state_debt = yes
+        GO_econ_refresh_state_gdp = yes
+        PREV = { add_to_variable = { GO_econ_country_2027_fiscal_authored_states = 1 } }
+    }
+}

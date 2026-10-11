@@ -1,4 +1,5 @@
-# Gruppa Ost Stage 7 - physical capacity, assignment and dated result guards.
+# Gruppa Ost Stages 7/8/14 - physical capacity, assignment and dated result guards.
+# Shift/clamp only temporary -1 day copies before modulo, following E-043.
 # Native state building levels and day identity follow E-028/E-029/E-034.
 # Missing or fractional physical levels/assignments are unavailable, never zero.
 # Historical reports validate their snapshots, independent of current tuning.
@@ -93,6 +94,8 @@ GO_econ_country_steel_production_initialized = {
     check_variable = { var = GO_econ_country_steel_plant_last_day value = -1 compare = greater_than_or_equals }
     check_variable = { var = GO_econ_country_steel_plant_last_day value = global.num_days compare = less_than_or_equals }
     set_temp_variable = { GO_econ_processing_last_day_fraction = GO_econ_country_steel_plant_last_day }
+    add_to_temp_variable = { var = GO_econ_processing_last_day_fraction value = 1 }
+    clamp_temp_variable = { var = GO_econ_processing_last_day_fraction min = 0 }
     modulo_temp_variable = { var = GO_econ_processing_last_day_fraction value = 1 }
     check_variable = { GO_econ_processing_last_day_fraction = 0 }
 }
@@ -142,6 +145,7 @@ GO_econ_country_steel_plant_capacity_ready = {
 
 GO_econ_steel_plant_daily_update_ready = {
     GO_econ_country_steel_production_initialized = yes
+    GO_econ_country_material_availability_current = yes
     check_variable = { var = GO_econ_country_steel_plant_last_day value = global.num_days compare = less_than }
 }
 
@@ -325,6 +329,8 @@ GO_econ_country_aluminium_production_initialized = {
     check_variable = { var = GO_econ_country_aluminium_plant_last_day value = -1 compare = greater_than_or_equals }
     check_variable = { var = GO_econ_country_aluminium_plant_last_day value = global.num_days compare = less_than_or_equals }
     set_temp_variable = { GO_econ_processing_last_day_fraction = GO_econ_country_aluminium_plant_last_day }
+    add_to_temp_variable = { var = GO_econ_processing_last_day_fraction value = 1 }
+    clamp_temp_variable = { var = GO_econ_processing_last_day_fraction min = 0 }
     modulo_temp_variable = { var = GO_econ_processing_last_day_fraction value = 1 }
     check_variable = { GO_econ_processing_last_day_fraction = 0 }
 }
@@ -374,6 +380,7 @@ GO_econ_country_aluminium_plant_capacity_ready = {
 
 GO_econ_aluminium_plant_daily_update_ready = {
     GO_econ_country_aluminium_production_initialized = yes
+    GO_econ_country_material_availability_current = yes
     check_variable = { var = GO_econ_country_aluminium_plant_last_day value = global.num_days compare = less_than }
 }
 
@@ -557,6 +564,8 @@ GO_econ_country_rubber_production_initialized = {
     check_variable = { var = GO_econ_country_rubber_plant_last_day value = -1 compare = greater_than_or_equals }
     check_variable = { var = GO_econ_country_rubber_plant_last_day value = global.num_days compare = less_than_or_equals }
     set_temp_variable = { GO_econ_processing_last_day_fraction = GO_econ_country_rubber_plant_last_day }
+    add_to_temp_variable = { var = GO_econ_processing_last_day_fraction value = 1 }
+    clamp_temp_variable = { var = GO_econ_processing_last_day_fraction min = 0 }
     modulo_temp_variable = { var = GO_econ_processing_last_day_fraction value = 1 }
     check_variable = { GO_econ_processing_last_day_fraction = 0 }
 }
@@ -608,6 +617,7 @@ GO_econ_country_rubber_plant_capacity_ready = {
 
 GO_econ_rubber_plant_daily_update_ready = {
     GO_econ_country_rubber_production_initialized = yes
+    GO_econ_country_material_availability_current = yes
     check_variable = { var = GO_econ_country_rubber_plant_last_day value = global.num_days compare = less_than }
 }
 
@@ -807,6 +817,8 @@ GO_econ_country_microchips_production_initialized = {
     check_variable = { var = GO_econ_country_microchips_plant_last_day value = -1 compare = greater_than_or_equals }
     check_variable = { var = GO_econ_country_microchips_plant_last_day value = global.num_days compare = less_than_or_equals }
     set_temp_variable = { GO_econ_processing_last_day_fraction = GO_econ_country_microchips_plant_last_day }
+    add_to_temp_variable = { var = GO_econ_processing_last_day_fraction value = 1 }
+    clamp_temp_variable = { var = GO_econ_processing_last_day_fraction min = 0 }
     modulo_temp_variable = { var = GO_econ_processing_last_day_fraction value = 1 }
     check_variable = { GO_econ_processing_last_day_fraction = 0 }
 }
@@ -860,6 +872,7 @@ GO_econ_country_microchips_plant_capacity_ready = {
 
 GO_econ_microchips_plant_daily_update_ready = {
     GO_econ_country_microchips_production_initialized = yes
+    GO_econ_country_material_availability_current = yes
     check_variable = { var = GO_econ_country_microchips_plant_last_day value = global.num_days compare = less_than }
 }
 
@@ -1021,5 +1034,429 @@ GO_econ_can_assign_processing_plant = {
             check_variable = { GO_econ_work_processing_recipe_id = 4 }
             GO_econ_can_assign_microchips_plant = yes
         }
+    }
+}
+
+# COUNTRY. Stage 8 requested requirements, even when material inputs are unavailable.
+# Saved Stage 7 reports are not assigned an invented availability-model version.
+GO_econ_country_steel_plant_requirements_ready = {
+    GO_econ_country_steel_plant_report_capacity_ready = yes
+    has_variable = GO_econ_country_steel_plant_report_accounting_version
+    check_variable = { GO_econ_country_steel_plant_report_accounting_version = 2 }
+    has_variable = GO_econ_country_steel_plant_requirements_populated
+    check_variable = { GO_econ_country_steel_plant_requirements_populated = 1 }
+    has_variable = GO_econ_country_steel_plant_batches_per_level_snapshot
+    check_variable = { var = GO_econ_country_steel_plant_batches_per_level_snapshot value = 0 compare = greater_than }
+    set_temp_variable = { GO_econ_processing_requirement_batch_fraction = GO_econ_country_steel_plant_batches_per_level_snapshot }
+    modulo_temp_variable = { var = GO_econ_processing_requirement_batch_fraction value = 1 }
+    check_variable = { GO_econ_processing_requirement_batch_fraction = 0 }
+    has_variable = GO_econ_country_steel_plant_output_per_batch_snapshot
+    check_variable = { var = GO_econ_country_steel_plant_output_per_batch_snapshot value = 0 compare = greater_than }
+    has_variable = GO_econ_country_steel_plant_planned_output
+    check_variable = { var = GO_econ_country_steel_plant_planned_output value = 0 compare = greater_than_or_equals }
+    set_temp_variable = { GO_econ_processing_requirement_batches = GO_econ_country_steel_plant_report_assigned }
+    multiply_temp_variable = { var = GO_econ_processing_requirement_batches value = GO_econ_country_steel_plant_batches_per_level_snapshot }
+    set_temp_variable = { GO_econ_processing_requirement_expected = GO_econ_processing_requirement_batches }
+    multiply_temp_variable = { var = GO_econ_processing_requirement_expected value = GO_econ_country_steel_plant_output_per_batch_snapshot }
+    check_variable = { GO_econ_country_steel_plant_planned_output = GO_econ_processing_requirement_expected }
+    has_variable = GO_econ_country_steel_plant_input_iron_per_batch_snapshot
+    check_variable = { var = GO_econ_country_steel_plant_input_iron_per_batch_snapshot value = 0 compare = greater_than }
+    has_variable = GO_econ_country_steel_plant_required_iron
+    check_variable = { var = GO_econ_country_steel_plant_required_iron value = 0 compare = greater_than_or_equals }
+    set_temp_variable = { GO_econ_processing_requirement_expected = GO_econ_processing_requirement_batches }
+    multiply_temp_variable = { var = GO_econ_processing_requirement_expected value = GO_econ_country_steel_plant_input_iron_per_batch_snapshot }
+    check_variable = { GO_econ_country_steel_plant_required_iron = GO_econ_processing_requirement_expected }
+    OR = {
+        check_variable = { GO_econ_country_steel_plant_report_assigned = 0 }
+        AND = {
+            check_variable = { var = GO_econ_country_steel_plant_planned_output value = 0 compare = greater_than }
+            check_variable = { var = GO_econ_country_steel_plant_required_iron value = 0 compare = greater_than }
+        }
+    }
+}
+
+GO_econ_country_steel_plant_requirements_current = {
+    GO_econ_country_material_availability_current = yes
+    GO_econ_country_steel_plant_requirements_ready = yes
+    check_variable = { GO_econ_country_steel_plant_report_day = global.num_days }
+}
+
+GO_econ_country_steel_plant_availability_report_ready = {
+    GO_econ_country_steel_plant_report_ready = yes
+    GO_econ_country_steel_plant_requirements_ready = yes
+}
+
+# COUNTRY. Stage 8 requested requirements, even when material inputs are unavailable.
+# Saved Stage 7 reports are not assigned an invented availability-model version.
+GO_econ_country_aluminium_plant_requirements_ready = {
+    GO_econ_country_aluminium_plant_report_capacity_ready = yes
+    has_variable = GO_econ_country_aluminium_plant_report_accounting_version
+    check_variable = { GO_econ_country_aluminium_plant_report_accounting_version = 2 }
+    has_variable = GO_econ_country_aluminium_plant_requirements_populated
+    check_variable = { GO_econ_country_aluminium_plant_requirements_populated = 1 }
+    has_variable = GO_econ_country_aluminium_plant_batches_per_level_snapshot
+    check_variable = { var = GO_econ_country_aluminium_plant_batches_per_level_snapshot value = 0 compare = greater_than }
+    set_temp_variable = { GO_econ_processing_requirement_batch_fraction = GO_econ_country_aluminium_plant_batches_per_level_snapshot }
+    modulo_temp_variable = { var = GO_econ_processing_requirement_batch_fraction value = 1 }
+    check_variable = { GO_econ_processing_requirement_batch_fraction = 0 }
+    has_variable = GO_econ_country_aluminium_plant_output_per_batch_snapshot
+    check_variable = { var = GO_econ_country_aluminium_plant_output_per_batch_snapshot value = 0 compare = greater_than }
+    has_variable = GO_econ_country_aluminium_plant_planned_output
+    check_variable = { var = GO_econ_country_aluminium_plant_planned_output value = 0 compare = greater_than_or_equals }
+    set_temp_variable = { GO_econ_processing_requirement_batches = GO_econ_country_aluminium_plant_report_assigned }
+    multiply_temp_variable = { var = GO_econ_processing_requirement_batches value = GO_econ_country_aluminium_plant_batches_per_level_snapshot }
+    set_temp_variable = { GO_econ_processing_requirement_expected = GO_econ_processing_requirement_batches }
+    multiply_temp_variable = { var = GO_econ_processing_requirement_expected value = GO_econ_country_aluminium_plant_output_per_batch_snapshot }
+    check_variable = { GO_econ_country_aluminium_plant_planned_output = GO_econ_processing_requirement_expected }
+    has_variable = GO_econ_country_aluminium_plant_input_bauxite_per_batch_snapshot
+    check_variable = { var = GO_econ_country_aluminium_plant_input_bauxite_per_batch_snapshot value = 0 compare = greater_than }
+    has_variable = GO_econ_country_aluminium_plant_required_bauxite
+    check_variable = { var = GO_econ_country_aluminium_plant_required_bauxite value = 0 compare = greater_than_or_equals }
+    set_temp_variable = { GO_econ_processing_requirement_expected = GO_econ_processing_requirement_batches }
+    multiply_temp_variable = { var = GO_econ_processing_requirement_expected value = GO_econ_country_aluminium_plant_input_bauxite_per_batch_snapshot }
+    check_variable = { GO_econ_country_aluminium_plant_required_bauxite = GO_econ_processing_requirement_expected }
+    OR = {
+        check_variable = { GO_econ_country_aluminium_plant_report_assigned = 0 }
+        AND = {
+            check_variable = { var = GO_econ_country_aluminium_plant_planned_output value = 0 compare = greater_than }
+            check_variable = { var = GO_econ_country_aluminium_plant_required_bauxite value = 0 compare = greater_than }
+        }
+    }
+}
+
+GO_econ_country_aluminium_plant_requirements_current = {
+    GO_econ_country_material_availability_current = yes
+    GO_econ_country_aluminium_plant_requirements_ready = yes
+    check_variable = { GO_econ_country_aluminium_plant_report_day = global.num_days }
+}
+
+GO_econ_country_aluminium_plant_availability_report_ready = {
+    GO_econ_country_aluminium_plant_report_ready = yes
+    GO_econ_country_aluminium_plant_requirements_ready = yes
+}
+
+# COUNTRY. Stage 8 requested requirements, even when material inputs are unavailable.
+# Saved Stage 7 reports are not assigned an invented availability-model version.
+GO_econ_country_rubber_plant_requirements_ready = {
+    GO_econ_country_rubber_plant_report_capacity_ready = yes
+    has_variable = GO_econ_country_rubber_plant_report_accounting_version
+    check_variable = { GO_econ_country_rubber_plant_report_accounting_version = 2 }
+    has_variable = GO_econ_country_rubber_plant_requirements_populated
+    check_variable = { GO_econ_country_rubber_plant_requirements_populated = 1 }
+    has_variable = GO_econ_country_rubber_plant_batches_per_level_snapshot
+    check_variable = { var = GO_econ_country_rubber_plant_batches_per_level_snapshot value = 0 compare = greater_than }
+    set_temp_variable = { GO_econ_processing_requirement_batch_fraction = GO_econ_country_rubber_plant_batches_per_level_snapshot }
+    modulo_temp_variable = { var = GO_econ_processing_requirement_batch_fraction value = 1 }
+    check_variable = { GO_econ_processing_requirement_batch_fraction = 0 }
+    has_variable = GO_econ_country_rubber_plant_output_per_batch_snapshot
+    check_variable = { var = GO_econ_country_rubber_plant_output_per_batch_snapshot value = 0 compare = greater_than }
+    has_variable = GO_econ_country_rubber_plant_planned_output
+    check_variable = { var = GO_econ_country_rubber_plant_planned_output value = 0 compare = greater_than_or_equals }
+    set_temp_variable = { GO_econ_processing_requirement_batches = GO_econ_country_rubber_plant_report_assigned }
+    multiply_temp_variable = { var = GO_econ_processing_requirement_batches value = GO_econ_country_rubber_plant_batches_per_level_snapshot }
+    set_temp_variable = { GO_econ_processing_requirement_expected = GO_econ_processing_requirement_batches }
+    multiply_temp_variable = { var = GO_econ_processing_requirement_expected value = GO_econ_country_rubber_plant_output_per_batch_snapshot }
+    check_variable = { GO_econ_country_rubber_plant_planned_output = GO_econ_processing_requirement_expected }
+    has_variable = GO_econ_country_rubber_plant_input_oil_per_batch_snapshot
+    check_variable = { var = GO_econ_country_rubber_plant_input_oil_per_batch_snapshot value = 0 compare = greater_than }
+    has_variable = GO_econ_country_rubber_plant_required_oil
+    check_variable = { var = GO_econ_country_rubber_plant_required_oil value = 0 compare = greater_than_or_equals }
+    set_temp_variable = { GO_econ_processing_requirement_expected = GO_econ_processing_requirement_batches }
+    multiply_temp_variable = { var = GO_econ_processing_requirement_expected value = GO_econ_country_rubber_plant_input_oil_per_batch_snapshot }
+    check_variable = { GO_econ_country_rubber_plant_required_oil = GO_econ_processing_requirement_expected }
+    has_variable = GO_econ_country_rubber_plant_input_coal_per_batch_snapshot
+    check_variable = { var = GO_econ_country_rubber_plant_input_coal_per_batch_snapshot value = 0 compare = greater_than }
+    has_variable = GO_econ_country_rubber_plant_required_coal
+    check_variable = { var = GO_econ_country_rubber_plant_required_coal value = 0 compare = greater_than_or_equals }
+    set_temp_variable = { GO_econ_processing_requirement_expected = GO_econ_processing_requirement_batches }
+    multiply_temp_variable = { var = GO_econ_processing_requirement_expected value = GO_econ_country_rubber_plant_input_coal_per_batch_snapshot }
+    check_variable = { GO_econ_country_rubber_plant_required_coal = GO_econ_processing_requirement_expected }
+    OR = {
+        check_variable = { GO_econ_country_rubber_plant_report_assigned = 0 }
+        AND = {
+            check_variable = { var = GO_econ_country_rubber_plant_planned_output value = 0 compare = greater_than }
+            check_variable = { var = GO_econ_country_rubber_plant_required_oil value = 0 compare = greater_than }
+            check_variable = { var = GO_econ_country_rubber_plant_required_coal value = 0 compare = greater_than }
+        }
+    }
+}
+
+GO_econ_country_rubber_plant_requirements_current = {
+    GO_econ_country_material_availability_current = yes
+    GO_econ_country_rubber_plant_requirements_ready = yes
+    check_variable = { GO_econ_country_rubber_plant_report_day = global.num_days }
+}
+
+GO_econ_country_rubber_plant_availability_report_ready = {
+    GO_econ_country_rubber_plant_report_ready = yes
+    GO_econ_country_rubber_plant_requirements_ready = yes
+}
+
+# COUNTRY. Stage 8 requested requirements, even when material inputs are unavailable.
+# Saved Stage 7 reports are not assigned an invented availability-model version.
+GO_econ_country_microchips_plant_requirements_ready = {
+    GO_econ_country_microchips_plant_report_capacity_ready = yes
+    has_variable = GO_econ_country_microchips_plant_report_accounting_version
+    check_variable = { GO_econ_country_microchips_plant_report_accounting_version = 2 }
+    has_variable = GO_econ_country_microchips_plant_requirements_populated
+    check_variable = { GO_econ_country_microchips_plant_requirements_populated = 1 }
+    has_variable = GO_econ_country_microchips_plant_batches_per_level_snapshot
+    check_variable = { var = GO_econ_country_microchips_plant_batches_per_level_snapshot value = 0 compare = greater_than }
+    set_temp_variable = { GO_econ_processing_requirement_batch_fraction = GO_econ_country_microchips_plant_batches_per_level_snapshot }
+    modulo_temp_variable = { var = GO_econ_processing_requirement_batch_fraction value = 1 }
+    check_variable = { GO_econ_processing_requirement_batch_fraction = 0 }
+    has_variable = GO_econ_country_microchips_plant_output_per_batch_snapshot
+    check_variable = { var = GO_econ_country_microchips_plant_output_per_batch_snapshot value = 0 compare = greater_than }
+    has_variable = GO_econ_country_microchips_plant_planned_output
+    check_variable = { var = GO_econ_country_microchips_plant_planned_output value = 0 compare = greater_than_or_equals }
+    set_temp_variable = { GO_econ_processing_requirement_batches = GO_econ_country_microchips_plant_report_assigned }
+    multiply_temp_variable = { var = GO_econ_processing_requirement_batches value = GO_econ_country_microchips_plant_batches_per_level_snapshot }
+    set_temp_variable = { GO_econ_processing_requirement_expected = GO_econ_processing_requirement_batches }
+    multiply_temp_variable = { var = GO_econ_processing_requirement_expected value = GO_econ_country_microchips_plant_output_per_batch_snapshot }
+    check_variable = { GO_econ_country_microchips_plant_planned_output = GO_econ_processing_requirement_expected }
+    has_variable = GO_econ_country_microchips_plant_input_steel_per_batch_snapshot
+    check_variable = { var = GO_econ_country_microchips_plant_input_steel_per_batch_snapshot value = 0 compare = greater_than }
+    has_variable = GO_econ_country_microchips_plant_required_steel
+    check_variable = { var = GO_econ_country_microchips_plant_required_steel value = 0 compare = greater_than_or_equals }
+    set_temp_variable = { GO_econ_processing_requirement_expected = GO_econ_processing_requirement_batches }
+    multiply_temp_variable = { var = GO_econ_processing_requirement_expected value = GO_econ_country_microchips_plant_input_steel_per_batch_snapshot }
+    check_variable = { GO_econ_country_microchips_plant_required_steel = GO_econ_processing_requirement_expected }
+    has_variable = GO_econ_country_microchips_plant_input_rare_earth_minerals_per_batch_snapshot
+    check_variable = { var = GO_econ_country_microchips_plant_input_rare_earth_minerals_per_batch_snapshot value = 0 compare = greater_than }
+    has_variable = GO_econ_country_microchips_plant_required_rare_earth_minerals
+    check_variable = { var = GO_econ_country_microchips_plant_required_rare_earth_minerals value = 0 compare = greater_than_or_equals }
+    set_temp_variable = { GO_econ_processing_requirement_expected = GO_econ_processing_requirement_batches }
+    multiply_temp_variable = { var = GO_econ_processing_requirement_expected value = GO_econ_country_microchips_plant_input_rare_earth_minerals_per_batch_snapshot }
+    check_variable = { GO_econ_country_microchips_plant_required_rare_earth_minerals = GO_econ_processing_requirement_expected }
+    has_variable = GO_econ_country_microchips_plant_input_titanium_per_batch_snapshot
+    check_variable = { var = GO_econ_country_microchips_plant_input_titanium_per_batch_snapshot value = 0 compare = greater_than }
+    has_variable = GO_econ_country_microchips_plant_required_titanium
+    check_variable = { var = GO_econ_country_microchips_plant_required_titanium value = 0 compare = greater_than_or_equals }
+    set_temp_variable = { GO_econ_processing_requirement_expected = GO_econ_processing_requirement_batches }
+    multiply_temp_variable = { var = GO_econ_processing_requirement_expected value = GO_econ_country_microchips_plant_input_titanium_per_batch_snapshot }
+    check_variable = { GO_econ_country_microchips_plant_required_titanium = GO_econ_processing_requirement_expected }
+    OR = {
+        check_variable = { GO_econ_country_microchips_plant_report_assigned = 0 }
+        AND = {
+            check_variable = { var = GO_econ_country_microchips_plant_planned_output value = 0 compare = greater_than }
+            check_variable = { var = GO_econ_country_microchips_plant_required_steel value = 0 compare = greater_than }
+            check_variable = { var = GO_econ_country_microchips_plant_required_rare_earth_minerals value = 0 compare = greater_than }
+            check_variable = { var = GO_econ_country_microchips_plant_required_titanium value = 0 compare = greater_than }
+        }
+    }
+}
+
+GO_econ_country_microchips_plant_requirements_current = {
+    GO_econ_country_material_availability_current = yes
+    GO_econ_country_microchips_plant_requirements_ready = yes
+    check_variable = { GO_econ_country_microchips_plant_report_day = global.num_days }
+}
+
+GO_econ_country_microchips_plant_availability_report_ready = {
+    GO_econ_country_microchips_plant_report_ready = yes
+    GO_econ_country_microchips_plant_requirements_ready = yes
+}
+
+# Stage 14 private manufacturing commit context. The family has claimed today,
+# registered its exact complete assigned batch, and has not produced its report.
+# No standalone output grant or replay can reuse a completed family attempt.
+GO_econ_processing_recipe_commit_context_ready = {
+    GO_econ_country_material_availability_current = yes
+    GO_econ_work_processing_family_valid = yes
+    OR = {
+        AND = {
+            check_variable = { GO_econ_work_processing_recipe_id = 1 }
+            GO_econ_country_steel_plant_capacity_ready = yes
+            GO_econ_steel_plant_config_ready = yes
+            GO_econ_steel_plant_recipe_quantities_ready = yes
+            has_variable = GO_econ_country_steel_plant_report_accounting_version
+            check_variable = { GO_econ_country_steel_plant_report_accounting_version = 2 }
+            has_variable = GO_econ_country_steel_plant_requirements_populated
+            check_variable = { GO_econ_country_steel_plant_requirements_populated = 1 }
+            has_variable = GO_econ_country_steel_plant_report_populated
+            check_variable = { GO_econ_country_steel_plant_report_populated = 0 }
+            has_variable = GO_econ_country_steel_plant_status
+            check_variable = { GO_econ_country_steel_plant_status = 0 }
+            check_variable = { GO_econ_country_steel_plant_last_day = global.num_days }
+            check_variable = { GO_econ_country_steel_plant_report_day = global.num_days }
+            GO_econ_country_steel_plant_report_capacity_ready = yes
+            check_variable = { GO_econ_country_steel_plant_report_built = GO_econ_country_steel_plant_eligible_built }
+            check_variable = { GO_econ_country_steel_plant_report_assigned = GO_econ_country_steel_plant_assigned }
+            check_variable = { GO_econ_country_steel_plant_batches_per_level_snapshot = global.GO_econ_cfg_steel_plant_batches_per_level }
+            check_variable = { GO_econ_country_steel_plant_output_per_batch_snapshot = global.GO_econ_cfg_steel_plant_output_per_batch }
+            has_variable = GO_econ_country_steel_plant_planned_output
+            has_variable = GO_econ_country_steel_plant_output_steel
+            check_variable = { GO_econ_work_processing_output_quantity = GO_econ_country_steel_plant_planned_output }
+            check_variable = { GO_econ_country_steel_plant_output_steel = 0 }
+            check_variable = { GO_econ_country_material_steel_availability_processing_output = 0 }
+            set_temp_variable = { GO_econ_processing_commit_batches = GO_econ_country_steel_plant_assigned }
+            multiply_temp_variable = { GO_econ_processing_commit_batches = global.GO_econ_cfg_steel_plant_batches_per_level }
+            set_temp_variable = { GO_econ_processing_commit_expected = GO_econ_processing_commit_batches }
+            multiply_temp_variable = { GO_econ_processing_commit_expected = global.GO_econ_cfg_steel_plant_output_per_batch }
+            check_variable = { GO_econ_work_processing_output_quantity = GO_econ_processing_commit_expected }
+            check_variable = { GO_econ_country_steel_plant_input_iron_per_batch_snapshot = global.GO_econ_cfg_steel_plant_input_iron_per_batch }
+            has_variable = GO_econ_country_steel_plant_required_iron
+            has_variable = GO_econ_country_steel_plant_consumed_iron
+            check_variable = { GO_econ_work_processing_input_1_quantity = GO_econ_country_steel_plant_required_iron }
+            check_variable = { GO_econ_country_steel_plant_consumed_iron = 0 }
+            set_temp_variable = { GO_econ_processing_commit_expected = GO_econ_processing_commit_batches }
+            multiply_temp_variable = { GO_econ_processing_commit_expected = global.GO_econ_cfg_steel_plant_input_iron_per_batch }
+            check_variable = { GO_econ_work_processing_input_1_quantity = GO_econ_processing_commit_expected }
+        }
+        AND = {
+            check_variable = { GO_econ_work_processing_recipe_id = 2 }
+            GO_econ_country_aluminium_plant_capacity_ready = yes
+            GO_econ_aluminium_plant_config_ready = yes
+            GO_econ_aluminium_plant_recipe_quantities_ready = yes
+            has_variable = GO_econ_country_aluminium_plant_report_accounting_version
+            check_variable = { GO_econ_country_aluminium_plant_report_accounting_version = 2 }
+            has_variable = GO_econ_country_aluminium_plant_requirements_populated
+            check_variable = { GO_econ_country_aluminium_plant_requirements_populated = 1 }
+            has_variable = GO_econ_country_aluminium_plant_report_populated
+            check_variable = { GO_econ_country_aluminium_plant_report_populated = 0 }
+            has_variable = GO_econ_country_aluminium_plant_status
+            check_variable = { GO_econ_country_aluminium_plant_status = 0 }
+            check_variable = { GO_econ_country_aluminium_plant_last_day = global.num_days }
+            check_variable = { GO_econ_country_aluminium_plant_report_day = global.num_days }
+            GO_econ_country_aluminium_plant_report_capacity_ready = yes
+            check_variable = { GO_econ_country_aluminium_plant_report_built = GO_econ_country_aluminium_plant_eligible_built }
+            check_variable = { GO_econ_country_aluminium_plant_report_assigned = GO_econ_country_aluminium_plant_assigned }
+            check_variable = { GO_econ_country_aluminium_plant_batches_per_level_snapshot = global.GO_econ_cfg_aluminium_plant_batches_per_level }
+            check_variable = { GO_econ_country_aluminium_plant_output_per_batch_snapshot = global.GO_econ_cfg_aluminium_plant_output_per_batch }
+            has_variable = GO_econ_country_aluminium_plant_planned_output
+            has_variable = GO_econ_country_aluminium_plant_output_aluminium
+            check_variable = { GO_econ_work_processing_output_quantity = GO_econ_country_aluminium_plant_planned_output }
+            check_variable = { GO_econ_country_aluminium_plant_output_aluminium = 0 }
+            check_variable = { GO_econ_country_material_aluminium_availability_processing_output = 0 }
+            set_temp_variable = { GO_econ_processing_commit_batches = GO_econ_country_aluminium_plant_assigned }
+            multiply_temp_variable = { GO_econ_processing_commit_batches = global.GO_econ_cfg_aluminium_plant_batches_per_level }
+            set_temp_variable = { GO_econ_processing_commit_expected = GO_econ_processing_commit_batches }
+            multiply_temp_variable = { GO_econ_processing_commit_expected = global.GO_econ_cfg_aluminium_plant_output_per_batch }
+            check_variable = { GO_econ_work_processing_output_quantity = GO_econ_processing_commit_expected }
+            check_variable = { GO_econ_country_aluminium_plant_input_bauxite_per_batch_snapshot = global.GO_econ_cfg_aluminium_plant_input_bauxite_per_batch }
+            has_variable = GO_econ_country_aluminium_plant_required_bauxite
+            has_variable = GO_econ_country_aluminium_plant_consumed_bauxite
+            check_variable = { GO_econ_work_processing_input_1_quantity = GO_econ_country_aluminium_plant_required_bauxite }
+            check_variable = { GO_econ_country_aluminium_plant_consumed_bauxite = 0 }
+            set_temp_variable = { GO_econ_processing_commit_expected = GO_econ_processing_commit_batches }
+            multiply_temp_variable = { GO_econ_processing_commit_expected = global.GO_econ_cfg_aluminium_plant_input_bauxite_per_batch }
+            check_variable = { GO_econ_work_processing_input_1_quantity = GO_econ_processing_commit_expected }
+        }
+        AND = {
+            check_variable = { GO_econ_work_processing_recipe_id = 3 }
+            GO_econ_country_rubber_plant_capacity_ready = yes
+            GO_econ_rubber_plant_config_ready = yes
+            GO_econ_rubber_plant_recipe_quantities_ready = yes
+            has_variable = GO_econ_country_rubber_plant_report_accounting_version
+            check_variable = { GO_econ_country_rubber_plant_report_accounting_version = 2 }
+            has_variable = GO_econ_country_rubber_plant_requirements_populated
+            check_variable = { GO_econ_country_rubber_plant_requirements_populated = 1 }
+            has_variable = GO_econ_country_rubber_plant_report_populated
+            check_variable = { GO_econ_country_rubber_plant_report_populated = 0 }
+            has_variable = GO_econ_country_rubber_plant_status
+            check_variable = { GO_econ_country_rubber_plant_status = 0 }
+            check_variable = { GO_econ_country_rubber_plant_last_day = global.num_days }
+            check_variable = { GO_econ_country_rubber_plant_report_day = global.num_days }
+            GO_econ_country_rubber_plant_report_capacity_ready = yes
+            check_variable = { GO_econ_country_rubber_plant_report_built = GO_econ_country_rubber_plant_eligible_built }
+            check_variable = { GO_econ_country_rubber_plant_report_assigned = GO_econ_country_rubber_plant_assigned }
+            check_variable = { GO_econ_country_rubber_plant_batches_per_level_snapshot = global.GO_econ_cfg_rubber_plant_batches_per_level }
+            check_variable = { GO_econ_country_rubber_plant_output_per_batch_snapshot = global.GO_econ_cfg_rubber_plant_output_per_batch }
+            has_variable = GO_econ_country_rubber_plant_planned_output
+            has_variable = GO_econ_country_rubber_plant_output_rubber
+            check_variable = { GO_econ_work_processing_output_quantity = GO_econ_country_rubber_plant_planned_output }
+            check_variable = { GO_econ_country_rubber_plant_output_rubber = 0 }
+            check_variable = { GO_econ_country_material_rubber_availability_processing_output = 0 }
+            set_temp_variable = { GO_econ_processing_commit_batches = GO_econ_country_rubber_plant_assigned }
+            multiply_temp_variable = { GO_econ_processing_commit_batches = global.GO_econ_cfg_rubber_plant_batches_per_level }
+            set_temp_variable = { GO_econ_processing_commit_expected = GO_econ_processing_commit_batches }
+            multiply_temp_variable = { GO_econ_processing_commit_expected = global.GO_econ_cfg_rubber_plant_output_per_batch }
+            check_variable = { GO_econ_work_processing_output_quantity = GO_econ_processing_commit_expected }
+            check_variable = { GO_econ_country_rubber_plant_input_oil_per_batch_snapshot = global.GO_econ_cfg_rubber_plant_input_oil_per_batch }
+            has_variable = GO_econ_country_rubber_plant_required_oil
+            has_variable = GO_econ_country_rubber_plant_consumed_oil
+            check_variable = { GO_econ_work_processing_input_1_quantity = GO_econ_country_rubber_plant_required_oil }
+            check_variable = { GO_econ_country_rubber_plant_consumed_oil = 0 }
+            set_temp_variable = { GO_econ_processing_commit_expected = GO_econ_processing_commit_batches }
+            multiply_temp_variable = { GO_econ_processing_commit_expected = global.GO_econ_cfg_rubber_plant_input_oil_per_batch }
+            check_variable = { GO_econ_work_processing_input_1_quantity = GO_econ_processing_commit_expected }
+            check_variable = { GO_econ_country_rubber_plant_input_coal_per_batch_snapshot = global.GO_econ_cfg_rubber_plant_input_coal_per_batch }
+            has_variable = GO_econ_country_rubber_plant_required_coal
+            has_variable = GO_econ_country_rubber_plant_consumed_coal
+            check_variable = { GO_econ_work_processing_input_2_quantity = GO_econ_country_rubber_plant_required_coal }
+            check_variable = { GO_econ_country_rubber_plant_consumed_coal = 0 }
+            set_temp_variable = { GO_econ_processing_commit_expected = GO_econ_processing_commit_batches }
+            multiply_temp_variable = { GO_econ_processing_commit_expected = global.GO_econ_cfg_rubber_plant_input_coal_per_batch }
+            check_variable = { GO_econ_work_processing_input_2_quantity = GO_econ_processing_commit_expected }
+        }
+        AND = {
+            check_variable = { GO_econ_work_processing_recipe_id = 4 }
+            GO_econ_country_microchips_plant_capacity_ready = yes
+            GO_econ_microchips_plant_config_ready = yes
+            GO_econ_microchips_plant_recipe_quantities_ready = yes
+            has_variable = GO_econ_country_microchips_plant_report_accounting_version
+            check_variable = { GO_econ_country_microchips_plant_report_accounting_version = 2 }
+            has_variable = GO_econ_country_microchips_plant_requirements_populated
+            check_variable = { GO_econ_country_microchips_plant_requirements_populated = 1 }
+            has_variable = GO_econ_country_microchips_plant_report_populated
+            check_variable = { GO_econ_country_microchips_plant_report_populated = 0 }
+            has_variable = GO_econ_country_microchips_plant_status
+            check_variable = { GO_econ_country_microchips_plant_status = 0 }
+            check_variable = { GO_econ_country_microchips_plant_last_day = global.num_days }
+            check_variable = { GO_econ_country_microchips_plant_report_day = global.num_days }
+            GO_econ_country_microchips_plant_report_capacity_ready = yes
+            check_variable = { GO_econ_country_microchips_plant_report_built = GO_econ_country_microchips_plant_eligible_built }
+            check_variable = { GO_econ_country_microchips_plant_report_assigned = GO_econ_country_microchips_plant_assigned }
+            check_variable = { GO_econ_country_microchips_plant_batches_per_level_snapshot = global.GO_econ_cfg_microchips_plant_batches_per_level }
+            check_variable = { GO_econ_country_microchips_plant_output_per_batch_snapshot = global.GO_econ_cfg_microchips_plant_output_per_batch }
+            has_variable = GO_econ_country_microchips_plant_planned_output
+            has_variable = GO_econ_country_microchips_plant_output_microchips
+            check_variable = { GO_econ_work_processing_output_quantity = GO_econ_country_microchips_plant_planned_output }
+            check_variable = { GO_econ_country_microchips_plant_output_microchips = 0 }
+            check_variable = { GO_econ_country_material_microchips_availability_processing_output = 0 }
+            set_temp_variable = { GO_econ_processing_commit_batches = GO_econ_country_microchips_plant_assigned }
+            multiply_temp_variable = { GO_econ_processing_commit_batches = global.GO_econ_cfg_microchips_plant_batches_per_level }
+            set_temp_variable = { GO_econ_processing_commit_expected = GO_econ_processing_commit_batches }
+            multiply_temp_variable = { GO_econ_processing_commit_expected = global.GO_econ_cfg_microchips_plant_output_per_batch }
+            check_variable = { GO_econ_work_processing_output_quantity = GO_econ_processing_commit_expected }
+            check_variable = { GO_econ_country_microchips_plant_input_steel_per_batch_snapshot = global.GO_econ_cfg_microchips_plant_input_steel_per_batch }
+            has_variable = GO_econ_country_microchips_plant_required_steel
+            has_variable = GO_econ_country_microchips_plant_consumed_steel
+            check_variable = { GO_econ_work_processing_input_1_quantity = GO_econ_country_microchips_plant_required_steel }
+            check_variable = { GO_econ_country_microchips_plant_consumed_steel = 0 }
+            set_temp_variable = { GO_econ_processing_commit_expected = GO_econ_processing_commit_batches }
+            multiply_temp_variable = { GO_econ_processing_commit_expected = global.GO_econ_cfg_microchips_plant_input_steel_per_batch }
+            check_variable = { GO_econ_work_processing_input_1_quantity = GO_econ_processing_commit_expected }
+            check_variable = { GO_econ_country_microchips_plant_input_rare_earth_minerals_per_batch_snapshot = global.GO_econ_cfg_microchips_plant_input_rare_earth_minerals_per_batch }
+            has_variable = GO_econ_country_microchips_plant_required_rare_earth_minerals
+            has_variable = GO_econ_country_microchips_plant_consumed_rare_earth_minerals
+            check_variable = { GO_econ_work_processing_input_2_quantity = GO_econ_country_microchips_plant_required_rare_earth_minerals }
+            check_variable = { GO_econ_country_microchips_plant_consumed_rare_earth_minerals = 0 }
+            set_temp_variable = { GO_econ_processing_commit_expected = GO_econ_processing_commit_batches }
+            multiply_temp_variable = { GO_econ_processing_commit_expected = global.GO_econ_cfg_microchips_plant_input_rare_earth_minerals_per_batch }
+            check_variable = { GO_econ_work_processing_input_2_quantity = GO_econ_processing_commit_expected }
+            check_variable = { GO_econ_country_microchips_plant_input_titanium_per_batch_snapshot = global.GO_econ_cfg_microchips_plant_input_titanium_per_batch }
+            has_variable = GO_econ_country_microchips_plant_required_titanium
+            has_variable = GO_econ_country_microchips_plant_consumed_titanium
+            check_variable = { GO_econ_work_processing_input_3_quantity = GO_econ_country_microchips_plant_required_titanium }
+            check_variable = { GO_econ_country_microchips_plant_consumed_titanium = 0 }
+            set_temp_variable = { GO_econ_processing_commit_expected = GO_econ_processing_commit_batches }
+            multiply_temp_variable = { GO_econ_processing_commit_expected = global.GO_econ_cfg_microchips_plant_input_titanium_per_batch }
+            check_variable = { GO_econ_work_processing_input_3_quantity = GO_econ_processing_commit_expected }
+        }
+    }
+}
+
+GO_econ_manufactured_output_credit_authorized = {
+    has_variable = GO_econ_work_processing_credit_authorized
+    check_variable = { GO_econ_work_processing_credit_authorized = 1 }
+    GO_econ_processing_recipe_commit_context_ready = yes
+    has_variable = GO_econ_work_material_quantity
+    check_variable = { GO_econ_work_material_quantity = GO_econ_work_processing_output_quantity }
+    OR = {
+        AND = { check_variable = { GO_econ_work_processing_recipe_id = 1 } check_variable = { GO_econ_work_material_id = 10 } }
+        AND = { check_variable = { GO_econ_work_processing_recipe_id = 2 } check_variable = { GO_econ_work_material_id = 11 } }
+        AND = { check_variable = { GO_econ_work_processing_recipe_id = 3 } check_variable = { GO_econ_work_material_id = 12 } }
+        AND = { check_variable = { GO_econ_work_processing_recipe_id = 4 } check_variable = { GO_econ_work_material_id = 15 } }
     }
 }

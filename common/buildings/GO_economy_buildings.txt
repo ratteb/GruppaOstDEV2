@@ -1,7 +1,8 @@
-# Physical backend only; no normal construction route or economy simulation.
-# Engine construction IC is not the project's treasury price.
+# Stage 13 processing and food plants use the normal native construction queue.
+# Native construction IC is not money and creates no custom fiscal transaction.
 # Sources: installed 1.18.3 common/buildings/00_buildings.txt and
-# 01_landmark_buildings.txt; see the design brief's Stage 5 evidence.
+# 01_landmark_buildings.txt; ordinary/shared-slot construction follows the
+# installed industrial_complex and the project's existing ammunition_plant.
 buildings = {
 	GO_econ_substation = {
 		show_on_map = 1
@@ -18,15 +19,15 @@ buildings = {
 	# Stage 7 specialized plants provide assigned national capacity only.
 	# The shared 20-level cap and 6400 native IC cost are editable starter
 	# calibration, matching the existing ammunition plant. IC is not money.
-	# Direct construction stays blocked until funded construction is integrated.
+	# Stage 13 exposes the native construction route; completed processing
+	# levels still require an explicit assignment through the existing backend.
 	# These definitions grant no native resources, fuel or ordinary PU capacity.
 	GO_econ_steel_plant = {
 		show_on_map = 1
 		spawn_point = GO_econ_steel_plant_spawn
 		base_cost = 6400
 		icon_frame = 1
-		is_buildable = no
-		only_display_if_exists = yes
+		infrastructure_construction_effect = yes
 		level_cap = {
 			shares_slots = yes
 			state_max = 20
@@ -37,8 +38,7 @@ buildings = {
 		spawn_point = GO_econ_aluminium_plant_spawn
 		base_cost = 6400
 		icon_frame = 1
-		is_buildable = no
-		only_display_if_exists = yes
+		infrastructure_construction_effect = yes
 		level_cap = {
 			shares_slots = yes
 			state_max = 20
@@ -49,8 +49,7 @@ buildings = {
 		spawn_point = GO_econ_rubber_plant_spawn
 		base_cost = 6400
 		icon_frame = 1
-		is_buildable = no
-		only_display_if_exists = yes
+		infrastructure_construction_effect = yes
 		level_cap = {
 			shares_slots = yes
 			state_max = 20
@@ -61,8 +60,20 @@ buildings = {
 		spawn_point = GO_econ_semiconductor_factory_spawn
 		base_cost = 6400
 		icon_frame = 1
-		is_buildable = no
-		only_display_if_exists = yes
+		infrastructure_construction_effect = yes
+		level_cap = {
+			shares_slots = yes
+			state_max = 20
+		}
+	}
+	# Completed owned-and-controlled food levels feed the guarded daily reserve
+	# receipt path; this building grants no native resource or factory output.
+	GO_econ_food_production = {
+		show_on_map = 1
+		spawn_point = GO_econ_food_production_spawn
+		base_cost = 6400
+		icon_frame = 1
+		infrastructure_construction_effect = yes
 		level_cap = {
 			shares_slots = yes
 			state_max = 20
@@ -71,14 +82,16 @@ buildings = {
 }
 
 # An authored map/buildings.txt position is required before the state location
-# readiness input may be set. No campaign positions are supplied by Stage 5.
+# readiness input may be set for the decision-built substation. Stage 13 adds
+# only plant positions copied from the project's existing industrial anchors.
 spawn_points = {
 	GO_econ_substation_spawn = {
 		type = state
 		max = 1
 		disable_auto_nudging = yes
 	}
-	# Stage 7 supplies loading references, not authored campaign map positions.
+	# Stage 13 authored plant positions retain each source anchor's coordinates.
+	# State 1002 has no existing anchor and remains without a map model position.
 	GO_econ_steel_plant_spawn = {
 		type = state
 		max = 1
@@ -95,6 +108,16 @@ spawn_points = {
 		disable_auto_nudging = yes
 	}
 	GO_econ_semiconductor_factory_spawn = {
+		type = state
+		max = 1
+		disable_auto_nudging = yes
+	}
+	GO_econ_food_production_spawn = {
+		type = state
+		max = 1
+		disable_auto_nudging = yes
+	}
+	GO_econ_ammunition_plant_spawn = {
 		type = state
 		max = 1
 		disable_auto_nudging = yes

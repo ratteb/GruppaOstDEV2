@@ -3,6 +3,8 @@ state={
 	name="STATE_432"
 	resources={
 		oil=5.000
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 1
 	}
 
 	history={

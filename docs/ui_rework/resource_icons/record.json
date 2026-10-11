@@ -1,0 +1,35 @@
+{
+  "status": "installed",
+  "game_version": "1.18.3.0.7709 (d7cc)",
+  "before": {
+    "common/resources/00_resources.txt": "95ba5cf77b49dccb6cb869a47819fa039bb57bd0f799f648f4b3842f00654bef",
+    "interface/general_stuff.gfx": "73c8d860ad8d5ba3bc60c44209970f54a57141bda962b8f3b3cd865281c7e340",
+    "common/defines/GO_economy_resources.lua": "6a34d15e144a5c368d5c8c8089ab41e886ec2ee46909e53c0b08fab70790e624",
+    "interface/GO_economy.gui": "0e3fa932b9f6677174dea11c5b175bd20e3040ef38317224cd50a4b4469326eb",
+    "interface/countrytradeview.gui": "f593fd322e630af01e7d2e66fc8521a680dbe90fd8eb571d85f1e93c35c774c2",
+    "interface/countrystateview.gui": "61834a2971793d38f01763e51432d75f9d46c1caf6f40ccec8237d8f2c662dde",
+    "gfx/interface/resources_strip.dds": null,
+    "gfx/interface/missing_resources_strip.dds": null
+  },
+  "resources": [
+    "iron",
+    "bauxite",
+    "natural_gas",
+    "rare_earth_minerals",
+    "titanium"
+  ],
+  "in_game_validated": false,
+  "staged": {
+    "common/resources/00_resources.txt": "030bf23b694cf88bff85d3efe2d08843bd0cfe47bddb7583b5dadefb02138397",
+    "interface/general_stuff.gfx": "4a29cbf01b029fb7c2fa656d23ce2f53ac7ab71c493c4a0018050332e0d1cae1",
+    "gfx/interface/resources_strip.dds": "003b6e1fd0eb3feb19556ed2c108146ed9abde7b0f35b5f5ae42ab29a60ed772",
+    "gfx/interface/missing_resources_strip.dds": "c4ed22806a204ff9534e6b994c16e3f527af9de4d5d39dd76d65394c56202485"
+  },
+  "masters": {
+    "iron": "a0130e6ef73a33b195fc318faa0d80e774e2ceff002741fc6bcb3328682f796d",
+    "bauxite": "1298c5d055137913fd03930bfb5e54edbe28036f7b38d9f8fc72ca7f15cc6366",
+    "natural_gas": "0bcf253e9a93b36ff8d44b14b0f5dec503655c156984b4b076227e13e5ffa53f",
+    "rare_earth_minerals": "54f417c6117ae55497c009fdf6ea943c66f9898021ce6b499cc91ebb893d922d",
+    "titanium": "2ebdc8cb9594e85145454bcf109d1bcb7fd3a33712ed70dbdc0322a908dd4c7c"
+  }
+}

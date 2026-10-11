@@ -1,0 +1,114 @@
+# Stage 13 food production. COUNTRY scope; no reserve opening or direct writes.
+# Editable fictional balance: abstract food units per owned/controlled completed
+# GO_econ_food_production level/day. This is not a real-world production unit.
+# Native building query / scope / arithmetic follow E-018/E-035/E-043.
+
+GO_econ_initialize_food_production_config = {
+    if = {
+        limit = { NOT = { has_variable = global.GO_econ_cfg_food_output_per_level } }
+        set_variable = { global.GO_econ_cfg_food_output_per_level = 1 }
+    }
+}
+
+# Additive record only. Preserve every partial/new saved record and original
+# food receipt token. Copy that token before the external receipt can claim it;
+# a previously processed day cannot receive retroactive building output.
+GO_econ_initialize_country_food_production = {
+    GO_econ_initialize_food_production_config = yes
+    if = {
+        limit = {
+            GO_econ_food_supply_day_ready = yes
+            NOT = { has_variable = GO_econ_country_food_production_schema_version }
+            NOT = { has_variable = GO_econ_country_food_production_last_day }
+            NOT = { has_variable = GO_econ_country_food_production_attempt_populated }
+            NOT = { has_variable = GO_econ_country_food_production_status }
+            NOT = { has_variable = GO_econ_country_food_production_capacity_day }
+            NOT = { has_variable = GO_econ_country_food_production_capacity_populated }
+            NOT = { has_variable = GO_econ_country_food_production_built_levels }
+            NOT = { has_variable = GO_econ_country_food_production_report_day }
+            NOT = { has_variable = GO_econ_country_food_production_report_populated }
+            NOT = { has_variable = GO_econ_country_food_production_report_built_levels }
+            NOT = { has_variable = GO_econ_country_food_production_report_rate }
+            NOT = { has_variable = GO_econ_country_food_production_report_output }
+        }
+        set_variable = { GO_econ_country_food_production_last_day = GO_econ_country_material_food_supply_last_day }
+        set_variable = { GO_econ_country_food_production_attempt_populated = 0 }
+        set_variable = { GO_econ_country_food_production_status = 0 }
+        set_variable = { GO_econ_country_food_production_capacity_day = -1 }
+        set_variable = { GO_econ_country_food_production_capacity_populated = 0 }
+        set_variable = { GO_econ_country_food_production_built_levels = 0 }
+        set_variable = { GO_econ_country_food_production_report_day = -1 }
+        set_variable = { GO_econ_country_food_production_report_populated = 0 }
+        set_variable = { GO_econ_country_food_production_report_built_levels = 0 }
+        set_variable = { GO_econ_country_food_production_report_rate = 0 }
+        set_variable = { GO_econ_country_food_production_report_output = 0 }
+        set_variable = { GO_econ_country_food_production_schema_version = 1 }
+    }
+}
+
+# Pure capacity observation: no record allocation, day claim, opening or credit.
+GO_econ_refresh_food_production_capacity = {
+    if = {
+        limit = { GO_econ_food_production_record_ready = yes }
+        set_variable = { GO_econ_country_food_production_capacity_populated = 1 }
+        set_variable = { GO_econ_country_food_production_capacity_day = global.num_days }
+        set_variable = { GO_econ_country_food_production_built_levels = 0 }
+        every_owned_state = {
+            limit = { is_controlled_by = PREV }
+            if = {
+                limit = { GO_econ_food_state_capacity_ready = yes }
+                add_to_variable = { PREV.GO_econ_country_food_production_built_levels = building_level@GO_econ_food_production }
+            }
+            else = {
+                set_variable = { PREV.GO_econ_country_food_production_capacity_populated = 0 }
+            }
+        }
+    }
+}
+
+# Invoked only by the original selected FOOD daily-receipt path. External
+# supply and physical output have separate histories and once/day identities.
+# Account opening is always explicit; a building never fabricates its reserve.
+GO_econ_update_food_production = {
+    if = {
+        limit = {
+            GO_econ_food_production_record_ready = yes
+            check_variable = { var = GO_econ_country_food_production_last_day value = global.num_days compare = less_than }
+        }
+        set_variable = { GO_econ_country_food_production_last_day = global.num_days }
+        set_variable = { GO_econ_country_food_production_attempt_populated = 1 }
+        set_variable = { GO_econ_country_food_production_status = 0 }
+        GO_econ_refresh_food_production_capacity = yes
+        if = {
+            limit = {
+                GO_econ_food_production_config_ready = yes
+                GO_econ_food_production_capacity_current = yes
+                GO_econ_country_has_material_food = yes
+            }
+            set_variable = { GO_econ_work_material_id = 3 }
+            set_variable = { GO_econ_work_material_quantity = GO_econ_country_food_production_built_levels }
+            multiply_variable = { GO_econ_work_material_quantity = global.GO_econ_cfg_food_output_per_level }
+            if = {
+                limit = {
+                    GO_econ_work_material_quantity_valid = yes
+                    OR = {
+                        check_variable = { GO_econ_country_food_production_built_levels = 0 }
+                        check_variable = { global.GO_econ_cfg_food_output_per_level = 0 }
+                        check_variable = { GO_econ_work_material_quantity > 0 }
+                    }
+                    GO_econ_can_credit_national_material_output = yes
+                }
+                GO_econ_credit_national_material_output = yes
+                if = {
+                    limit = { check_variable = { GO_econ_work_material_succeeded = 1 } }
+                    set_variable = { GO_econ_country_food_production_status = 1 }
+                    set_variable = { GO_econ_country_food_production_report_day = global.num_days }
+                    set_variable = { GO_econ_country_food_production_report_built_levels = GO_econ_country_food_production_built_levels }
+                    set_variable = { GO_econ_country_food_production_report_rate = global.GO_econ_cfg_food_output_per_level }
+                    set_variable = { GO_econ_country_food_production_report_output = GO_econ_work_material_quantity }
+                    set_variable = { GO_econ_country_food_production_report_populated = 1 }
+                }
+            }
+        }
+    }
+}

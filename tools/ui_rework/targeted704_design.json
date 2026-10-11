@@ -1,0 +1,27 @@
+{
+  "game_version": "1.18.3.0.7709",
+  "holders": [
+    {
+      "source": "gfx/interface/generic_box_smallest.dds",
+      "path": "gfx/interface/topbar/GO_value_holder.dds",
+      "sprite": "GFX_GO_topbar_value_holder",
+      "old_sprite": "GFX_generic_box_smallest",
+      "dimensions": [70, 26]
+    },
+    {
+      "source": "gfx/interface/generic_box_96.dds",
+      "path": "gfx/interface/topbar/GO_manpower_holder.dds",
+      "sprite": "GFX_GO_topbar_manpower_holder",
+      "old_sprite": "GFX_generic_box_96",
+      "dimensions": [96, 26]
+    }
+  ],
+  "frame_width": 3,
+  "chamfer": 2,
+  "scanline_strength": 2,
+  "blue_insert": [38, 77, 143],
+  "gui_replacements": {
+    "interface/topbar.gui": {"GFX_generic_box_smallest": 8, "GFX_generic_box_96": 1},
+    "interface/ammunition.gui": {"GFX_generic_box_smallest": 1}
+  }
+}

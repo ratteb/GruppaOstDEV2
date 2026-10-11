@@ -5,6 +5,11 @@ state = {
 	manpower = 94759
 	
 	state_category = pastoral
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 4
+	}
+
 	history = {
 		owner = SOV
 		add_core_of = SOV

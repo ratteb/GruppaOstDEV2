@@ -1,0 +1,38 @@
+{
+  "holders": [
+    {
+      "path": "gfx/interface/topbar/GO_value_holder.dds",
+      "dimensions": [
+        70,
+        26
+      ],
+      "source_header_preserved": true,
+      "opaque_continuous_frame": true,
+      "opaque_face": true,
+      "decoders_agree": true
+    },
+    {
+      "path": "gfx/interface/topbar/GO_manpower_holder.dds",
+      "dimensions": [
+        96,
+        26
+      ],
+      "source_header_preserved": true,
+      "opaque_continuous_frame": true,
+      "opaque_face": true,
+      "decoders_agree": true
+    }
+  ],
+  "new_sprites": 2,
+  "topbar_reference_changes": 9,
+  "ammunition_reference_changes": 1,
+  "layout_changes": 0,
+  "shared_texture_changes": 0,
+  "in_game_validated": false,
+  "installed_hashes_match": true,
+  "unique_sprite_definitions": true,
+  "exact_gui_substitutions_verified": true,
+  "original_custom_resources_unchanged": 75,
+  "prior_navigation_textures_and_shader_unchanged": true,
+  "unrelated_guarded_changes": []
+}

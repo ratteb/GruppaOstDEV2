@@ -4,6 +4,11 @@ state={
 	name="STATE_674"
 	impassable = yes
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		rare_earth_minerals = 6
+	}
+
 	history={
 		owner = AST
 		buildings = {

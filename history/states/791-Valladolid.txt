@@ -3,6 +3,8 @@ state={
 	name="STATE_791"
 	resources={
 		tungsten=10.000 #added due to Portugal Setup
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 2
 	}
 	history={
 		owner = SPR

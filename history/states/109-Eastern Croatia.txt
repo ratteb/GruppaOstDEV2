@@ -3,6 +3,11 @@ state={
 	id=109
 	name="STATE_109"
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 1
+	}
+
 	history={
 		owner = CRO
 		buildings = {

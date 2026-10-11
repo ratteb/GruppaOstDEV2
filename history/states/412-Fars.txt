@@ -6,6 +6,8 @@ state = {
 
 	resources = {
 		oil = 10 # was: 12
+		# Stage 12: sourced geography; authored native resource points.
+		natural_gas = 48
 	}
 
 	history = {

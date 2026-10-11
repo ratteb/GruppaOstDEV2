@@ -1,0 +1,146 @@
+{
+  "textures": [
+    {
+      "path": "gfx/interface/topbar/toolbar/topbar_decisionview_button.dds",
+      "header_preserved": true,
+      "dimensions": [
+        110,
+        41
+      ],
+      "frames": 2,
+      "stored_mips": 1,
+      "opaque_face": true,
+      "shared_rim": true
+    },
+    {
+      "path": "gfx/interface/topbar/toolbar/intelligence_button.dds",
+      "header_preserved": true,
+      "dimensions": [
+        110,
+        41
+      ],
+      "frames": 2,
+      "stored_mips": 1,
+      "opaque_face": true,
+      "shared_rim": true
+    },
+    {
+      "path": "gfx/interface/topbar/toolbar/science_button.dds",
+      "header_preserved": true,
+      "dimensions": [
+        110,
+        41
+      ],
+      "frames": 2,
+      "stored_mips": 1,
+      "opaque_face": true,
+      "shared_rim": true
+    },
+    {
+      "path": "gfx/interface/topbar/toolbar/diplomacy_button.dds",
+      "header_preserved": true,
+      "dimensions": [
+        110,
+        41
+      ],
+      "frames": 2,
+      "stored_mips": 0,
+      "opaque_face": true,
+      "shared_rim": true
+    },
+    {
+      "path": "gfx/interface/topbar/toolbar/trade_button.dds",
+      "header_preserved": true,
+      "dimensions": [
+        110,
+        41
+      ],
+      "frames": 2,
+      "stored_mips": 1,
+      "opaque_face": true,
+      "shared_rim": true
+    },
+    {
+      "path": "gfx/interface/topbar/toolbar/construction_button.dds",
+      "header_preserved": true,
+      "dimensions": [
+        110,
+        41
+      ],
+      "frames": 2,
+      "stored_mips": 1,
+      "opaque_face": true,
+      "shared_rim": true
+    },
+    {
+      "path": "gfx/interface/topbar/toolbar/production_button.dds",
+      "header_preserved": true,
+      "dimensions": [
+        110,
+        41
+      ],
+      "frames": 2,
+      "stored_mips": 1,
+      "opaque_face": true,
+      "shared_rim": true
+    },
+    {
+      "path": "gfx/interface/topbar/toolbar/deployment_button.dds",
+      "header_preserved": true,
+      "dimensions": [
+        110,
+        41
+      ],
+      "frames": 2,
+      "stored_mips": 1,
+      "opaque_face": true,
+      "shared_rim": true
+    },
+    {
+      "path": "gfx/interface/topbar/toolbar/ledger_button.dds",
+      "header_preserved": true,
+      "dimensions": [
+        110,
+        41
+      ],
+      "frames": 2,
+      "stored_mips": 1,
+      "opaque_face": true,
+      "shared_rim": true
+    },
+    {
+      "path": "gfx/interface/topbar/toolbar/international_market_button.dds",
+      "header_preserved": true,
+      "dimensions": [
+        110,
+        41
+      ],
+      "frames": 2,
+      "stored_mips": 0,
+      "opaque_face": true,
+      "shared_rim": true
+    },
+    {
+      "path": "gfx/interface/topbar/toolbar/staff_office_button.dds",
+      "header_preserved": true,
+      "dimensions": [
+        110,
+        41
+      ],
+      "frames": 2,
+      "stored_mips": 1,
+      "opaque_face": true,
+      "shared_rim": true
+    }
+  ],
+  "owning_declarations": 11,
+  "gui_changes": 0,
+  "in_game_validated": false,
+  "installed_hashes_match": true,
+  "unique_owning_sprites": true,
+  "owning_gfx_only_expected_additions": true,
+  "shader_static_structure_checked": true,
+  "shader_engine_compile_checked": false,
+  "unrelated_guarded_changes": [],
+  "original_custom_resources_unchanged": 75
+}

@@ -6,6 +6,11 @@ state = {
 	
 	state_category = pastoral
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		natural_gas = 64
+	}
+
 	history = {
 		owner = SOV
 		buildings = {

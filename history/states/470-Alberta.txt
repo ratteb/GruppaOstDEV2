@@ -2,6 +2,12 @@ state={
 	id=470
 	name="STATE_470"
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 5
+		natural_gas = 24
+	}
+
 	history={
 		owner = CAN
 		buildings = {

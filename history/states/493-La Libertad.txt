@@ -5,6 +5,8 @@ state={
 	manpower = 2826781
 	resources={
 		oil=15 # was: 20
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 6
 	}
 	
 	state_category = town

@@ -3,6 +3,11 @@ state={
 	id=519
 	name="STATE_519"
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		titanium = 8
+	}
+
 	history={
 		owner = AST
 		buildings = {

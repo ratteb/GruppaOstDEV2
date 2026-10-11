@@ -142,6 +142,110 @@ GO_econ_state_month_inputs_ready = {
     check_variable = { var = GO_econ_state_last_service_month value = global.GO_econ_month_serial compare = less_than_or_equals }
     check_variable = { var = GO_econ_state_last_growth_month value = global.GO_econ_month_serial compare = less_than_or_equals }
 }
+# COUNTRY. The existing authored input remains usable without the new source.
+GO_econ_country_authored_monthly_income_ready = {
+    has_variable = GO_econ_country_monthly_receipts
+    has_variable = GO_econ_country_monthly_receipts_populated
+    check_variable = { GO_econ_country_monthly_receipts_populated = 1 }
+    check_variable = { var = GO_econ_country_monthly_receipts value = 0 compare = greater_than_or_equals }
+    has_variable = GO_econ_country_receipts_month
+    has_variable = GO_econ_country_receipts_month_populated
+    check_variable = { GO_econ_country_receipts_month_populated = 1 }
+    check_variable = { GO_econ_country_receipts_month = global.GO_econ_month_serial }
+}
+
+# COUNTRY. Shared source configuration, independent of an opened monthly pulse.
+# A complete cached GDP is refreshed at settlement; input writers must refresh it.
+GO_econ_country_gdp_income_source_ready = {
+    has_country_flag = GO_econ_gdp_income_access
+    GO_econ_country_fiscal_initialized = yes
+    GO_econ_country_has_price_index = yes
+    GO_econ_country_report_ready = yes
+    GO_econ_country_has_gdp = yes
+    check_variable = { var = GO_econ_country_gdp value = 0 compare = greater_than_or_equals }
+    has_variable = GO_econ_country_eligible_states
+    check_variable = { GO_econ_country_eligible_states > 0 }
+    has_variable = GO_econ_country_gdp_states
+    check_variable = { GO_econ_country_gdp_states = GO_econ_country_eligible_states }
+    has_variable = GO_econ_country_missing_gdp_states
+    check_variable = { GO_econ_country_missing_gdp_states = 0 }
+    has_variable = global.GO_econ_cfg_gdp_income_factor
+    check_variable = { var = global.GO_econ_cfg_gdp_income_factor value = 0 compare = greater_than_or_equals }
+    has_variable = global.GO_econ_cfg_months_per_year
+    check_variable = { global.GO_econ_cfg_months_per_year > 0 }
+    has_variable = GO_econ_country_gdp_income_policy
+    has_variable = GO_econ_country_gdp_income_policy_populated
+    check_variable = { GO_econ_country_gdp_income_policy_populated = 1 }
+    OR = {
+        check_variable = { GO_econ_country_gdp_income_policy = 1 }
+        check_variable = { GO_econ_country_gdp_income_policy = 2 }
+    }
+}
+
+# COUNTRY. Stage 12 opt-in source. Policy 1 explicitly declares GDP-only income;
+# policy 2 requires an additional authored current-serial income entry, even zero.
+# Temporary arithmetic is observational. No account is credited by this guard.
+GO_econ_country_gdp_monthly_income_ready = {
+    GO_econ_country_gdp_income_source_ready = yes
+    GO_econ_country_has_treasury = yes
+    OR = {
+        AND = {
+            check_variable = { GO_econ_country_gdp_income_policy = 1 }
+            # A populated/partial entry must be explicitly reconciled, not lost.
+            has_variable = GO_econ_country_monthly_receipts_populated
+            has_variable = GO_econ_country_receipts_month_populated
+            check_variable = { GO_econ_country_monthly_receipts_populated = 0 }
+            check_variable = { GO_econ_country_receipts_month_populated = 0 }
+        }
+        AND = {
+            check_variable = { GO_econ_country_gdp_income_policy = 2 }
+            GO_econ_country_authored_monthly_income_ready = yes
+        }
+    }
+    # Do not enter division/multiplication with an invalid or missing basis.
+    if = {
+        limit = {
+            GO_econ_country_has_gdp = yes
+            GO_econ_country_has_price_index = yes
+            has_variable = global.GO_econ_cfg_gdp_income_factor
+            check_variable = { var = global.GO_econ_cfg_gdp_income_factor value = 0 compare = greater_than_or_equals }
+            has_variable = global.GO_econ_cfg_months_per_year
+            check_variable = { global.GO_econ_cfg_months_per_year > 0 }
+        }
+        set_temp_variable = { GO_econ_calc_gdp_monthly_income = GO_econ_country_gdp }
+        multiply_temp_variable = { GO_econ_calc_gdp_monthly_income = GO_econ_country_price_index }
+        multiply_temp_variable = { GO_econ_calc_gdp_monthly_income = global.GO_econ_cfg_gdp_income_factor }
+        divide_temp_variable = { GO_econ_calc_gdp_monthly_income = global.GO_econ_cfg_months_per_year }
+        check_variable = { var = GO_econ_calc_gdp_monthly_income value = 0 compare = greater_than_or_equals }
+        if = {
+            limit = {
+                check_variable = { GO_econ_country_gdp > 0 }
+                check_variable = { global.GO_econ_cfg_gdp_income_factor > 0 }
+            }
+            check_variable = { GO_econ_calc_gdp_monthly_income > 0 }
+        }
+        set_temp_variable = { GO_econ_calc_combined_monthly_income = GO_econ_calc_gdp_monthly_income }
+        if = {
+            limit = { check_variable = { GO_econ_country_gdp_income_policy = 2 } }
+            add_to_temp_variable = { GO_econ_calc_combined_monthly_income = GO_econ_country_monthly_receipts }
+            check_variable = { var = GO_econ_calc_combined_monthly_income value = GO_econ_country_monthly_receipts compare = greater_than_or_equals }
+            if = {
+                limit = { check_variable = { GO_econ_country_monthly_receipts > 0 } }
+                check_variable = { GO_econ_calc_combined_monthly_income > GO_econ_calc_gdp_monthly_income }
+            }
+        }
+        check_variable = { var = GO_econ_calc_combined_monthly_income value = GO_econ_calc_gdp_monthly_income compare = greater_than_or_equals }
+        set_temp_variable = { GO_econ_calc_income_treasury = GO_econ_country_treasury }
+        add_to_temp_variable = { GO_econ_calc_income_treasury = GO_econ_calc_combined_monthly_income }
+        check_variable = { var = GO_econ_calc_income_treasury value = GO_econ_country_treasury compare = greater_than_or_equals }
+        check_variable = { var = GO_econ_calc_income_treasury value = GO_econ_calc_combined_monthly_income compare = greater_than_or_equals }
+        if = {
+            limit = { check_variable = { GO_econ_calc_combined_monthly_income > 0 } }
+            check_variable = { GO_econ_calc_income_treasury > GO_econ_country_treasury }
+        }
+    }
+}
+
 GO_econ_country_month_inputs_ready = {
     GO_econ_country_fiscal_initialized = yes
     GO_econ_fiscal_config_ready = yes
@@ -160,12 +264,13 @@ GO_econ_country_month_inputs_ready = {
     check_variable = { global.GO_econ_month_serial > 0 }
     check_variable = { global.GO_econ_month_pulse_day = global.num_days }
     check_variable = { GO_econ_country_last_processed_month < global.GO_econ_month_serial }
-    has_variable = GO_econ_country_monthly_receipts
-    check_variable = { GO_econ_country_monthly_receipts_populated = 1 }
-    check_variable = { var = GO_econ_country_monthly_receipts value = 0 compare = greater_than_or_equals }
-    has_variable = GO_econ_country_receipts_month
-    check_variable = { GO_econ_country_receipts_month_populated = 1 }
-    check_variable = { GO_econ_country_receipts_month = global.GO_econ_month_serial }
+    if = {
+        limit = { has_country_flag = GO_econ_gdp_income_access }
+        GO_econ_country_gdp_monthly_income_ready = yes
+    }
+    else = {
+        GO_econ_country_authored_monthly_income_ready = yes
+    }
     has_variable = GO_econ_country_annual_inflation_percent
     check_variable = { GO_econ_country_annual_inflation_percent_populated = 1 }
     # Require a positive index multiplier, without inventing an inflation cap/model.
@@ -183,4 +288,81 @@ GO_econ_country_fiscal_report_ready = {
     has_variable = GO_econ_country_report_month
     check_variable = { GO_econ_country_report_month = GO_econ_country_last_processed_month }
     check_variable = { GO_econ_country_report_month > 0 }
+}
+
+# COUNTRY. Last closed source breakdown, validated from saved opening inputs.
+# Changing today's rate, policy or GDP cannot reinterpret this historical report.
+GO_econ_country_gdp_income_report_ready = {
+    GO_econ_country_fiscal_report_ready = yes
+    has_variable = GO_econ_country_gdp_income_report_populated
+    check_variable = { GO_econ_country_gdp_income_report_populated = 1 }
+    has_variable = GO_econ_country_gdp_income_report_month
+    check_variable = { GO_econ_country_gdp_income_report_month = GO_econ_country_report_month }
+    has_variable = GO_econ_country_gdp_income_last
+    check_variable = { var = GO_econ_country_gdp_income_last value = 0 compare = greater_than_or_equals }
+    has_variable = GO_econ_country_other_income_last
+    check_variable = { var = GO_econ_country_other_income_last value = 0 compare = greater_than_or_equals }
+    has_variable = GO_econ_country_gdp_income_real_gdp_snapshot
+    check_variable = { var = GO_econ_country_gdp_income_real_gdp_snapshot value = 0 compare = greater_than_or_equals }
+    has_variable = GO_econ_country_gdp_income_price_snapshot
+    check_variable = { GO_econ_country_gdp_income_price_snapshot > 0 }
+    has_variable = GO_econ_country_gdp_income_rate_snapshot
+    check_variable = { var = GO_econ_country_gdp_income_rate_snapshot value = 0 compare = greater_than_or_equals }
+    has_variable = GO_econ_country_gdp_income_months_snapshot
+    check_variable = { GO_econ_country_gdp_income_months_snapshot > 0 }
+    has_variable = GO_econ_country_gdp_income_policy_snapshot
+    OR = {
+        AND = {
+            check_variable = { GO_econ_country_gdp_income_policy_snapshot = 1 }
+            check_variable = { GO_econ_country_other_income_last = 0 }
+        }
+        check_variable = { GO_econ_country_gdp_income_policy_snapshot = 2 }
+    }
+    if = {
+        limit = { check_variable = { GO_econ_country_gdp_income_months_snapshot > 0 } }
+        set_temp_variable = { GO_econ_calc_saved_gdp_income = GO_econ_country_gdp_income_real_gdp_snapshot }
+        multiply_temp_variable = { GO_econ_calc_saved_gdp_income = GO_econ_country_gdp_income_price_snapshot }
+        multiply_temp_variable = { GO_econ_calc_saved_gdp_income = GO_econ_country_gdp_income_rate_snapshot }
+        divide_temp_variable = { GO_econ_calc_saved_gdp_income = GO_econ_country_gdp_income_months_snapshot }
+        check_variable = { GO_econ_calc_saved_gdp_income = GO_econ_country_gdp_income_last }
+        set_temp_variable = { GO_econ_calc_saved_income_total = GO_econ_country_gdp_income_last }
+        add_to_temp_variable = { GO_econ_calc_saved_income_total = GO_econ_country_other_income_last }
+        check_variable = { GO_econ_calc_saved_income_total = GO_econ_country_receipts_last }
+    }
+}
+
+# COUNTRY. An estimate from current GDP/tuning, not a paid income entry. The saved
+# day is its actual rebuild day; stale basis or tuning makes the cache unavailable.
+GO_econ_country_gdp_income_preview_ready = {
+    GO_econ_country_gdp_income_source_ready = yes
+    has_variable = GO_econ_country_gdp_income_preview_populated
+    check_variable = { GO_econ_country_gdp_income_preview_populated = 1 }
+    has_variable = GO_econ_country_gdp_income_preview
+    check_variable = { var = GO_econ_country_gdp_income_preview value = 0 compare = greater_than_or_equals }
+    has_variable = GO_econ_country_gdp_income_preview_day
+    check_variable = { var = GO_econ_country_gdp_income_preview_day value = 0 compare = greater_than_or_equals }
+    check_variable = { var = GO_econ_country_gdp_income_preview_day value = global.num_days compare = less_than_or_equals }
+    has_variable = GO_econ_country_gdp_income_preview_real_gdp
+    check_variable = { GO_econ_country_gdp_income_preview_real_gdp = GO_econ_country_gdp }
+    has_variable = GO_econ_country_gdp_income_preview_price
+    check_variable = { GO_econ_country_gdp_income_preview_price = GO_econ_country_price_index }
+    has_variable = GO_econ_country_gdp_income_preview_rate
+    check_variable = { GO_econ_country_gdp_income_preview_rate = global.GO_econ_cfg_gdp_income_factor }
+    has_variable = GO_econ_country_gdp_income_preview_months
+    check_variable = { GO_econ_country_gdp_income_preview_months = global.GO_econ_cfg_months_per_year }
+    if = {
+        limit = { GO_econ_country_gdp_income_source_ready = yes }
+        set_temp_variable = { GO_econ_calc_gdp_income_preview = GO_econ_country_gdp }
+        multiply_temp_variable = { GO_econ_calc_gdp_income_preview = GO_econ_country_price_index }
+        multiply_temp_variable = { GO_econ_calc_gdp_income_preview = global.GO_econ_cfg_gdp_income_factor }
+        divide_temp_variable = { GO_econ_calc_gdp_income_preview = global.GO_econ_cfg_months_per_year }
+        check_variable = { GO_econ_country_gdp_income_preview = GO_econ_calc_gdp_income_preview }
+        if = {
+            limit = {
+                check_variable = { GO_econ_country_gdp > 0 }
+                check_variable = { global.GO_econ_cfg_gdp_income_factor > 0 }
+            }
+            check_variable = { GO_econ_country_gdp_income_preview > 0 }
+        }
+    }
 }

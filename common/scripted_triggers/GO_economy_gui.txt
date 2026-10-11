@@ -1,0 +1,438 @@
+# Gruppa Ost Stages 10/11 - observational UI guards (COUNTRY unless noted).
+# No persistent writes, initialization, economic refresh or transaction effects.
+# Existing backend guards are authoritative; extra checks protect display caches.
+
+GO_econ_gui_country_ready = {
+    GO_econ_native_resource_observer_country_ready = yes
+}
+
+GO_econ_gui_gdp_ready = {
+    GO_econ_country_has_gdp = yes
+    has_variable = GO_econ_country_gdp
+    check_variable = { var = GO_econ_country_gdp value = 0 compare = greater_than_or_equals }
+}
+
+GO_econ_gui_gdp_nominal_ready = {
+    GO_econ_country_has_gdp_nominal = yes
+    has_variable = GO_econ_country_gdp_nominal
+    check_variable = { var = GO_econ_country_gdp_nominal value = 0 compare = greater_than_or_equals }
+}
+
+GO_econ_gui_gdp_per_capita_ready = {
+    GO_econ_country_has_gdp_per_capita = yes
+    has_variable = GO_econ_country_gdp_per_capita
+    check_variable = { var = GO_econ_country_gdp_per_capita value = 0 compare = greater_than_or_equals }
+}
+
+GO_econ_gui_price_index_ready = {
+    GO_econ_country_has_price_index = yes
+    has_variable = GO_econ_country_price_index
+    check_variable = { var = GO_econ_country_price_index value = 0 compare = greater_than_or_equals }
+}
+
+GO_econ_gui_treasury_ready = {
+    GO_econ_country_has_treasury = yes
+    has_variable = GO_econ_country_treasury
+    check_variable = { var = GO_econ_country_treasury value = 0 compare = greater_than_or_equals }
+}
+
+GO_econ_gui_debt_ready = {
+    GO_econ_country_has_debt = yes
+    has_variable = GO_econ_country_debt
+    check_variable = { var = GO_econ_country_debt value = 0 compare = greater_than_or_equals }
+}
+
+GO_econ_gui_coverage_ready = {
+    GO_econ_country_report_ready = yes
+    has_variable = GO_econ_country_owned_states
+    check_variable = { var = GO_econ_country_owned_states value = 0 compare = greater_than_or_equals }
+    set_temp_variable = { GO_econ_gui_count_fraction = GO_econ_country_owned_states }
+    modulo_temp_variable = { var = GO_econ_gui_count_fraction value = 1 }
+    check_variable = { GO_econ_gui_count_fraction = 0 }
+    has_variable = GO_econ_country_eligible_states
+    check_variable = { var = GO_econ_country_eligible_states value = 0 compare = greater_than_or_equals }
+    set_temp_variable = { GO_econ_gui_count_fraction = GO_econ_country_eligible_states }
+    modulo_temp_variable = { var = GO_econ_gui_count_fraction value = 1 }
+    check_variable = { GO_econ_gui_count_fraction = 0 }
+    has_variable = GO_econ_country_excluded_states
+    check_variable = { var = GO_econ_country_excluded_states value = 0 compare = greater_than_or_equals }
+    set_temp_variable = { GO_econ_gui_count_fraction = GO_econ_country_excluded_states }
+    modulo_temp_variable = { var = GO_econ_gui_count_fraction value = 1 }
+    check_variable = { GO_econ_gui_count_fraction = 0 }
+    has_variable = GO_econ_country_gdp_states
+    check_variable = { var = GO_econ_country_gdp_states value = 0 compare = greater_than_or_equals }
+    set_temp_variable = { GO_econ_gui_count_fraction = GO_econ_country_gdp_states }
+    modulo_temp_variable = { var = GO_econ_gui_count_fraction value = 1 }
+    check_variable = { GO_econ_gui_count_fraction = 0 }
+    has_variable = GO_econ_country_population_states
+    check_variable = { var = GO_econ_country_population_states value = 0 compare = greater_than_or_equals }
+    set_temp_variable = { GO_econ_gui_count_fraction = GO_econ_country_population_states }
+    modulo_temp_variable = { var = GO_econ_gui_count_fraction value = 1 }
+    check_variable = { GO_econ_gui_count_fraction = 0 }
+    has_variable = GO_econ_country_missing_gdp_states
+    check_variable = { var = GO_econ_country_missing_gdp_states value = 0 compare = greater_than_or_equals }
+    set_temp_variable = { GO_econ_gui_count_fraction = GO_econ_country_missing_gdp_states }
+    modulo_temp_variable = { var = GO_econ_gui_count_fraction value = 1 }
+    check_variable = { GO_econ_gui_count_fraction = 0 }
+    has_variable = GO_econ_country_missing_population_states
+    check_variable = { var = GO_econ_country_missing_population_states value = 0 compare = greater_than_or_equals }
+    set_temp_variable = { GO_econ_gui_count_fraction = GO_econ_country_missing_population_states }
+    modulo_temp_variable = { var = GO_econ_gui_count_fraction value = 1 }
+    check_variable = { GO_econ_gui_count_fraction = 0 }
+    check_variable = { var = GO_econ_country_gdp_states value = GO_econ_country_eligible_states compare = less_than_or_equals }
+    check_variable = { var = GO_econ_country_population_states value = GO_econ_country_eligible_states compare = less_than_or_equals }
+}
+
+GO_econ_gui_receipts_ready = {
+    GO_econ_country_fiscal_report_ready = yes
+    has_variable = GO_econ_country_receipts
+    check_variable = { var = GO_econ_country_receipts value = 0 compare = greater_than_or_equals }
+}
+
+GO_econ_gui_expenses_ready = {
+    GO_econ_country_fiscal_report_ready = yes
+    has_variable = GO_econ_country_expenses
+    OR = { check_variable = { var = GO_econ_country_expenses value = 0 compare = greater_than_or_equals } check_variable = { var = GO_econ_country_expenses value = 0 compare = less_than } }
+}
+
+GO_econ_gui_deficit_ready = {
+    GO_econ_country_fiscal_report_ready = yes
+    has_variable = GO_econ_country_deficit
+    OR = { check_variable = { var = GO_econ_country_deficit value = 0 compare = greater_than_or_equals } check_variable = { var = GO_econ_country_deficit value = 0 compare = less_than } }
+}
+
+GO_econ_gui_financing_ready = {
+    GO_econ_country_fiscal_report_ready = yes
+    has_variable = GO_econ_country_financing
+    check_variable = { var = GO_econ_country_financing value = 0 compare = greater_than_or_equals }
+}
+
+GO_econ_gui_services_expense_ready = {
+    GO_econ_country_fiscal_report_ready = yes
+    has_variable = GO_econ_country_services_expenses_last
+    check_variable = { var = GO_econ_country_services_expenses_last value = 0 compare = greater_than_or_equals }
+}
+
+GO_econ_gui_ammunition_reserve_ready = {
+    GO_econ_country_ammunition_production_initialized = yes
+    check_variable = { var = GO_econ_country_ammunition_last_day value = 0 compare = greater_than_or_equals }
+    has_variable = ammunition_variable
+    OR = { check_variable = { var = ammunition_variable value = 0 compare = greater_than_or_equals } check_variable = { var = ammunition_variable value = 0 compare = less_than } }
+}
+
+GO_econ_gui_ammunition_capacity_ready = {
+    GO_econ_gui_ammunition_reserve_ready = yes
+    has_variable = ammunition_max
+    check_variable = { var = ammunition_max value = 0 compare = greater_than_or_equals }
+}
+
+GO_econ_gui_ammunition_flows_ready = {
+    GO_econ_gui_ammunition_reserve_ready = yes
+    has_variable = ammunition_daily
+    has_variable = daily_ammo_need
+    OR = { check_variable = { var = ammunition_daily value = 0 compare = greater_than_or_equals } check_variable = { var = ammunition_daily value = 0 compare = less_than } }
+    check_variable = { var = daily_ammo_need value = 0 compare = greater_than_or_equals }
+}
+
+GO_econ_gui_native_fuel_ready = {
+    exists = yes
+    check_variable = { var = fuel_k value = 0 compare = greater_than_or_equals }
+    check_variable = { var = max_fuel_k value = 0 compare = greater_than_or_equals }
+}
+
+# Stage 11 sections collapse when they have no supported values. These guards
+# never initialize, refresh, settle or write persistent economic variables.
+GO_econ_gui_summary_has_data = {
+    OR = {
+        GO_econ_gui_gdp_nominal_ready = yes
+        GO_econ_gui_gdp_ready = yes
+        GO_econ_gui_treasury_ready = yes
+        GO_econ_gui_debt_ready = yes
+        GO_econ_country_has_global_status = yes
+        GO_econ_country_pu_capacity_ready = yes
+    }
+}
+
+GO_econ_gui_fiscal_ready = {
+    GO_econ_gui_receipts_ready = yes
+    GO_econ_gui_expenses_ready = yes
+    GO_econ_gui_deficit_ready = yes
+    GO_econ_gui_financing_ready = yes
+    GO_econ_gui_services_expense_ready = yes
+}
+
+GO_econ_gui_capital_spending_ready = {
+    GO_econ_country_fiscal_report_ready = yes
+    has_variable = GO_econ_country_capital_expenses_last
+    check_variable = { var = GO_econ_country_capital_expenses_last value = 0 compare = greater_than_or_equals }
+}
+
+GO_econ_gui_capital_refunds_ready = {
+    GO_econ_country_fiscal_report_ready = yes
+    has_variable = GO_econ_country_capital_refunds_last
+    check_variable = { var = GO_econ_country_capital_refunds_last value = 0 compare = greater_than_or_equals }
+}
+
+GO_econ_gui_native_coal_row_visible = {
+    OR = {
+        GO_econ_material_coal_native_surplus_report_ready = yes
+        GO_econ_material_coal_native_produced_report_ready = yes
+        GO_econ_material_coal_native_imported_report_ready = yes
+        GO_econ_material_coal_native_exported_report_ready = yes
+        GO_econ_material_coal_native_consumed_report_ready = yes
+    }
+}
+
+GO_econ_gui_native_oil_row_visible = {
+    OR = {
+        GO_econ_material_oil_native_surplus_report_ready = yes
+        GO_econ_material_oil_native_produced_report_ready = yes
+        GO_econ_material_oil_native_imported_report_ready = yes
+        GO_econ_material_oil_native_exported_report_ready = yes
+        GO_econ_material_oil_native_consumed_report_ready = yes
+    }
+}
+
+GO_econ_gui_native_tungsten_row_visible = {
+    OR = {
+        GO_econ_material_tungsten_native_surplus_report_ready = yes
+        GO_econ_material_tungsten_native_produced_report_ready = yes
+        GO_econ_material_tungsten_native_imported_report_ready = yes
+        GO_econ_material_tungsten_native_exported_report_ready = yes
+        GO_econ_material_tungsten_native_consumed_report_ready = yes
+    }
+}
+
+GO_econ_gui_native_steel_row_visible = {
+    OR = {
+        GO_econ_material_steel_native_surplus_report_ready = yes
+        GO_econ_material_steel_native_produced_report_ready = yes
+        GO_econ_material_steel_native_imported_report_ready = yes
+        GO_econ_material_steel_native_exported_report_ready = yes
+        GO_econ_material_steel_native_consumed_report_ready = yes
+    }
+}
+
+GO_econ_gui_native_aluminium_row_visible = {
+    OR = {
+        GO_econ_material_aluminium_native_surplus_report_ready = yes
+        GO_econ_material_aluminium_native_produced_report_ready = yes
+        GO_econ_material_aluminium_native_imported_report_ready = yes
+        GO_econ_material_aluminium_native_exported_report_ready = yes
+        GO_econ_material_aluminium_native_consumed_report_ready = yes
+    }
+}
+
+GO_econ_gui_native_rubber_row_visible = {
+    OR = {
+        GO_econ_material_rubber_native_surplus_report_ready = yes
+        GO_econ_material_rubber_native_produced_report_ready = yes
+        GO_econ_material_rubber_native_imported_report_ready = yes
+        GO_econ_material_rubber_native_exported_report_ready = yes
+        GO_econ_material_rubber_native_consumed_report_ready = yes
+    }
+}
+
+GO_econ_gui_material_iron_row_visible = {
+    OR = {
+        GO_econ_material_iron_availability_report_ready = yes
+        AND = {
+            GO_econ_material_iron_availability_demand_report_ready = yes
+            check_variable = { GO_econ_country_material_iron_availability_requested_demand > 0 }
+        }
+        AND = {
+            GO_econ_material_iron_availability_output_report_ready = yes
+            check_variable = { GO_econ_country_material_iron_availability_processing_output > 0 }
+        }
+    }
+}
+
+GO_econ_gui_material_bauxite_row_visible = {
+    OR = {
+        GO_econ_material_bauxite_availability_report_ready = yes
+        AND = {
+            GO_econ_material_bauxite_availability_demand_report_ready = yes
+            check_variable = { GO_econ_country_material_bauxite_availability_requested_demand > 0 }
+        }
+        AND = {
+            GO_econ_material_bauxite_availability_output_report_ready = yes
+            check_variable = { GO_econ_country_material_bauxite_availability_processing_output > 0 }
+        }
+    }
+}
+
+GO_econ_gui_material_coal_row_visible = {
+    OR = {
+        GO_econ_material_coal_availability_report_ready = yes
+        AND = {
+            GO_econ_material_coal_availability_demand_report_ready = yes
+            check_variable = { GO_econ_country_material_coal_availability_requested_demand > 0 }
+        }
+        AND = {
+            GO_econ_material_coal_availability_output_report_ready = yes
+            check_variable = { GO_econ_country_material_coal_availability_processing_output > 0 }
+        }
+    }
+}
+
+GO_econ_gui_material_natural_gas_row_visible = {
+    OR = {
+        GO_econ_material_natural_gas_availability_report_ready = yes
+        AND = {
+            GO_econ_material_natural_gas_availability_demand_report_ready = yes
+            check_variable = { GO_econ_country_material_natural_gas_availability_requested_demand > 0 }
+        }
+        AND = {
+            GO_econ_material_natural_gas_availability_output_report_ready = yes
+            check_variable = { GO_econ_country_material_natural_gas_availability_processing_output > 0 }
+        }
+    }
+}
+
+GO_econ_gui_material_oil_row_visible = {
+    OR = {
+        GO_econ_material_oil_availability_report_ready = yes
+        AND = {
+            GO_econ_material_oil_availability_demand_report_ready = yes
+            check_variable = { GO_econ_country_material_oil_availability_requested_demand > 0 }
+        }
+        AND = {
+            GO_econ_material_oil_availability_output_report_ready = yes
+            check_variable = { GO_econ_country_material_oil_availability_processing_output > 0 }
+        }
+    }
+}
+
+GO_econ_gui_material_rare_earth_minerals_row_visible = {
+    OR = {
+        GO_econ_material_rare_earth_minerals_availability_report_ready = yes
+        AND = {
+            GO_econ_material_rare_earth_minerals_availability_demand_report_ready = yes
+            check_variable = { GO_econ_country_material_rare_earth_minerals_availability_requested_demand > 0 }
+        }
+        AND = {
+            GO_econ_material_rare_earth_minerals_availability_output_report_ready = yes
+            check_variable = { GO_econ_country_material_rare_earth_minerals_availability_processing_output > 0 }
+        }
+    }
+}
+
+GO_econ_gui_material_tungsten_row_visible = {
+    OR = {
+        GO_econ_material_tungsten_availability_report_ready = yes
+        AND = {
+            GO_econ_material_tungsten_availability_demand_report_ready = yes
+            check_variable = { GO_econ_country_material_tungsten_availability_requested_demand > 0 }
+        }
+        AND = {
+            GO_econ_material_tungsten_availability_output_report_ready = yes
+            check_variable = { GO_econ_country_material_tungsten_availability_processing_output > 0 }
+        }
+    }
+}
+
+GO_econ_gui_material_titanium_row_visible = {
+    OR = {
+        GO_econ_material_titanium_availability_report_ready = yes
+        AND = {
+            GO_econ_material_titanium_availability_demand_report_ready = yes
+            check_variable = { GO_econ_country_material_titanium_availability_requested_demand > 0 }
+        }
+        AND = {
+            GO_econ_material_titanium_availability_output_report_ready = yes
+            check_variable = { GO_econ_country_material_titanium_availability_processing_output > 0 }
+        }
+    }
+}
+
+GO_econ_gui_material_steel_row_visible = {
+    OR = {
+        GO_econ_material_steel_availability_report_ready = yes
+        AND = {
+            GO_econ_material_steel_availability_demand_report_ready = yes
+            check_variable = { GO_econ_country_material_steel_availability_requested_demand > 0 }
+        }
+        AND = {
+            GO_econ_material_steel_availability_output_report_ready = yes
+            check_variable = { GO_econ_country_material_steel_availability_processing_output > 0 }
+        }
+    }
+}
+
+GO_econ_gui_material_aluminium_row_visible = {
+    OR = {
+        GO_econ_material_aluminium_availability_report_ready = yes
+        AND = {
+            GO_econ_material_aluminium_availability_demand_report_ready = yes
+            check_variable = { GO_econ_country_material_aluminium_availability_requested_demand > 0 }
+        }
+        AND = {
+            GO_econ_material_aluminium_availability_output_report_ready = yes
+            check_variable = { GO_econ_country_material_aluminium_availability_processing_output > 0 }
+        }
+    }
+}
+
+GO_econ_gui_material_rubber_row_visible = {
+    OR = {
+        GO_econ_material_rubber_availability_report_ready = yes
+        AND = {
+            GO_econ_material_rubber_availability_demand_report_ready = yes
+            check_variable = { GO_econ_country_material_rubber_availability_requested_demand > 0 }
+        }
+        AND = {
+            GO_econ_material_rubber_availability_output_report_ready = yes
+            check_variable = { GO_econ_country_material_rubber_availability_processing_output > 0 }
+        }
+    }
+}
+
+GO_econ_gui_material_microchips_row_visible = {
+    OR = {
+        GO_econ_material_microchips_availability_report_ready = yes
+        AND = {
+            GO_econ_material_microchips_availability_demand_report_ready = yes
+            check_variable = { GO_econ_country_material_microchips_availability_requested_demand > 0 }
+        }
+        AND = {
+            GO_econ_material_microchips_availability_output_report_ready = yes
+            check_variable = { GO_econ_country_material_microchips_availability_processing_output > 0 }
+        }
+    }
+}
+
+GO_econ_gui_native_any_reports = {
+    OR = {
+        GO_econ_gui_native_coal_row_visible = yes
+        GO_econ_gui_native_oil_row_visible = yes
+        GO_econ_gui_native_tungsten_row_visible = yes
+        GO_econ_gui_native_steel_row_visible = yes
+        GO_econ_gui_native_aluminium_row_visible = yes
+        GO_econ_gui_native_rubber_row_visible = yes
+    }
+}
+
+GO_econ_gui_materials_any_reports = {
+    OR = {
+        GO_econ_gui_material_iron_row_visible = yes
+        GO_econ_gui_material_bauxite_row_visible = yes
+        GO_econ_gui_material_coal_row_visible = yes
+        GO_econ_gui_material_natural_gas_row_visible = yes
+        GO_econ_gui_material_oil_row_visible = yes
+        GO_econ_gui_material_rare_earth_minerals_row_visible = yes
+        GO_econ_gui_material_tungsten_row_visible = yes
+        GO_econ_gui_material_titanium_row_visible = yes
+        GO_econ_gui_material_steel_row_visible = yes
+        GO_econ_gui_material_aluminium_row_visible = yes
+        GO_econ_gui_material_rubber_row_visible = yes
+        GO_econ_gui_material_microchips_row_visible = yes
+    }
+}
+
+# Summary visibility is independent of authorization to change allocation.
+GO_econ_gui_pu_visible = {
+    OR = {
+        GO_econ_country_pu_capacity_ready = yes
+        GO_econ_country_pu_allocation_ready = yes
+    }
+}

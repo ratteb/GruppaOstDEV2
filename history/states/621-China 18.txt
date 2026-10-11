@@ -2,6 +2,13 @@ state={
 	id=621
 	name="STATE_621"
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 8
+		iron = 16
+		rare_earth_minerals = 24
+	}
+
 	history={
 		owner = CHI
 		add_core_of = CHI

@@ -7,9 +7,12 @@ state={
 	state_category = rural
 	
 	resources={
-		steel=25 # was: 44
 		chromium=20 # was: 36
-		aluminium=1 # was: 2
+		# Stage 12: sourced geography; authored native resource points.
+		iron = 16
+		bauxite = 16
+		rare_earth_minerals = 4
+		titanium = 4
 	}
 
 	history={

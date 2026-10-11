@@ -7,7 +7,9 @@ state={
 	state_category = megalopolis
 	
 	resources={
-		steel=44 # was: 80
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 160
+		natural_gas = 24
 	}
 
 

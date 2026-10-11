@@ -5,8 +5,9 @@ state= {
 	state_category = town
 	resources={
 		tungsten=15 # was: 20
-		steel= 15 # was: 20
 		chromium = 3 # was: 4
+		# Stage 12: sourced geography; authored native resource points.
+		rare_earth_minerals = 4
 	}
 
 	history= {

@@ -5,8 +5,11 @@ state={
 	manpower = 275751
 	state_category = rural
 	resources={
-		steel=14 # was: 28
 		chromium=12 # was: 24
+		# Stage 12: sourced geography; authored native resource points.
+		iron = 12
+		rare_earth_minerals = 6
+		titanium = 6
 	}
 
 	history={

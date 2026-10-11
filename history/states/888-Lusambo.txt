@@ -4,6 +4,11 @@ state={
 	manpower = 885237
 	state_category = pastoral 
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 2
+	}
+
 	history = {
 		owner = COG
 		buildings = {

@@ -1426,13 +1426,7 @@ technologies = {
 	#####################################
 	rubber_processing = {
 
-		on_research_complete = {
-			modify_building_resources = {
-				building = synthetic_refinery
-				resource = rubber
-				amount = 1
-			}
-		}
+		# Stage 14: no native refinery rubber grant; assigned plants own supply.
 
 		path = {
 			leads_to_tech = improved_rubber_processing
@@ -1491,13 +1485,7 @@ technologies = {
 	
 	improved_rubber_processing = {
 
-		on_research_complete = {
-			modify_building_resources = {
-				building = synthetic_refinery
-				resource = rubber
-				amount = 1
-			}
-		}
+		# Stage 14: no native refinery rubber grant; assigned plants own supply.
 
 		path = {
 			leads_to_tech = advanced_rubber_processing
@@ -1551,13 +1539,7 @@ technologies = {
 	
 	advanced_rubber_processing = {
 
-		on_research_complete = {
-			modify_building_resources = {
-				building = synthetic_refinery
-				resource = rubber
-				amount = 1
-			}
-		}
+		# Stage 14: no native refinery rubber grant; assigned plants own supply.
 
 		path = {
 			leads_to_tech = modern_rubber_processing
@@ -1611,13 +1593,7 @@ technologies = {
 
 	modern_rubber_processing = {
 
-		on_research_complete = {
-			modify_building_resources = {
-				building = synthetic_refinery
-				resource = rubber
-				amount = 1
-			}
-		}
+		# Stage 14: no native refinery rubber grant; assigned plants own supply.
 		
 		research_cost = 1.5
 		start_year = 1943

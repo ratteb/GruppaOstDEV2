@@ -30,7 +30,7 @@ guiTypes = {
 			textureFile = ""
 			font = "hoi_36header"
 			borderSize = {x = 0 y = 0}
-			text = "TRADE_TRADE"
+			text = "GO_ECON_UI_NATIVE_HOST_TITLE"
 			maxWidth = 440
 			maxHeight = 20
 			format = left
@@ -109,9 +109,10 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "resources"
-			position = { x = 11 y = 115 }	
-			size = { width = 655 height = 210 }
-			verticalScrollbar = "right_vertical_slider"
+			position = { x = 112 y = 115 }
+			size = { width = 553 height = 210 }
+			clipping = yes
+			horizontalScrollbar = "bottom_horizontal_slider"
 
 			background = {
 				name ="resources_bg"
@@ -120,10 +121,10 @@ guiTypes = {
 
 			gridBoxType = {
 				name = "resources_grid"
-				position = { x = 101 y = 0 }
-				size = { width = 422 height = 100%% }
+				position = { x = 0 y = 0 }
+				size = { width = 948 height = 100%% }
 				slotsize = { width = 79 height = 156 }
-				max_slots = { x = 7 y = 1 }
+				max_slots = { x = 12 y = 1 }
 				format = "UPPER_LEFT"
 			}
 		}
@@ -250,14 +251,15 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "filters"
-			position = { x = 113 y = 78 }	
-			size = { width = 422 height = 50 }
-			verticalScrollbar = "right_vertical_slider"			
+			position = { x = 113 y = 78 }
+			size = { width = 553 height = 50 }
+			clipping = yes
+			horizontalScrollbar = "bottom_horizontal_slider"
 			
 			gridBoxType = {
 				name = "resources_grid"
 				position = { x = 0 y = 0 }
-				size = { width = 400 height = 100%% }
+				size = { width = 948 height = 100%% }
 				slotsize = { width = 79 height = 46 }
 				max_slots_vertical = 1
 				format = "UPPER_LEFT"

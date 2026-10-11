@@ -1,0 +1,51 @@
+{
+  "gfx/interface/resources_strip.dds": {
+    "sha256": "003b6e1fd0eb3feb19556ed2c108146ed9abde7b0f35b5f5ae42ab29a60ed772",
+    "size": [
+      324,
+      27
+    ],
+    "cell": [
+      27,
+      27
+    ],
+    "frames": 12,
+    "format": "RGB32",
+    "mips": 1,
+    "original_seven_packed_cells_exact": true,
+    "alpha_and_four_edge_gutters": true,
+    "independent_pillow_decode_matches": true
+  },
+  "gfx/interface/missing_resources_strip.dds": {
+    "sha256": "c4ed22806a204ff9534e6b994c16e3f527af9de4d5d39dd76d65394c56202485",
+    "size": [
+      324,
+      27
+    ],
+    "cell": [
+      27,
+      27
+    ],
+    "frames": 12,
+    "format": "RGB32",
+    "mips": 1,
+    "original_seven_packed_cells_exact": true,
+    "alpha_and_four_edge_gutters": true,
+    "independent_pillow_decode_matches": true
+  },
+  "protected_unchanged": {
+    "common/defines/GO_economy_resources.lua": true,
+    "interface/GO_economy.gui": true,
+    "interface/countrytradeview.gui": true,
+    "interface/countrystateview.gui": true
+  },
+  "opaque_artwork_identical_in_shortage_state": true,
+  "owner_changes_exactly_staged": true,
+  "single_sprite_definitions": true,
+  "in_game_validated": false,
+  "pending_game_checks": [
+    "Trade and state views: frames 8-12 and resource names",
+    "Native shortage icon state and tooltip use",
+    "1920x1080 / 2560x1440 and UI scales; fresh texture logs"
+  ]
+}

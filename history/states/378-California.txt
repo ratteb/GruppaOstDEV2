@@ -8,7 +8,8 @@ state={
 	
 	resources={
 		oil=180 # was: 350
-		aluminium=8 # was: 14
+		# Stage 12: sourced geography; authored native resource points.
+		rare_earth_minerals = 8
 	}
 
 	history={

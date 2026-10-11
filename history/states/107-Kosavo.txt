@@ -3,6 +3,11 @@ state={
 	id=107
 	name="STATE_107"
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 4
+	}
+
 	history={
 		owner = SER
 		buildings = {

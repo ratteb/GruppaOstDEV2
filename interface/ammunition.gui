@@ -7,7 +7,7 @@ guiTypes = {
 		
 		iconType = {
 			name ="ammo_value_bg"
-			spriteType = "GFX_generic_box_smallest"
+			spriteType = "GFX_GO_topbar_value_holder"
 			position = { x= 564 y = 5 }
 			Orientation = "UPPER_LEFT"
 

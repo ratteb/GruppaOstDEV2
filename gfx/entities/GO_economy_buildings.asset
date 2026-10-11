@@ -28,3 +28,47 @@ entity = {
 	pdxmesh = "building_industrial_complex"
 	scale = 1.0
 }
+
+# Stage 13 native-queue food and existing ammunition production placeholders.
+entity = {
+	name = "building_GO_econ_food_production"
+	pdxmesh = "building_industrial_complex"
+	scale = 1.0
+}
+entity = {
+	name = "building_ammunition_plant"
+	pdxmesh = "building_industrial_complex"
+	scale = 1.0
+}
+
+# Native spawn-point tokens resolve building_<spawn_point> entities.
+# Installed 1.18.3 buildings.asset:937-945 uses both dam/spawn aliases.
+# Keep the original building entities for existing references.
+entity = {
+    clone = "building_GO_econ_substation"
+    name = "building_GO_econ_substation_spawn"
+}
+entity = {
+    clone = "building_GO_econ_steel_plant"
+    name = "building_GO_econ_steel_plant_spawn"
+}
+entity = {
+    clone = "building_GO_econ_aluminium_plant"
+    name = "building_GO_econ_aluminium_plant_spawn"
+}
+entity = {
+    clone = "building_GO_econ_rubber_plant"
+    name = "building_GO_econ_rubber_plant_spawn"
+}
+entity = {
+    clone = "building_GO_econ_semiconductor_factory"
+    name = "building_GO_econ_semiconductor_factory_spawn"
+}
+entity = {
+    clone = "building_GO_econ_food_production"
+    name = "building_GO_econ_food_production_spawn"
+}
+entity = {
+    clone = "building_ammunition_plant"
+    name = "building_GO_econ_ammunition_plant_spawn"
+}

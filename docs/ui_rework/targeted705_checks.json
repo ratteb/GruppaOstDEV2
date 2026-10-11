@@ -1,0 +1,135 @@
+{
+  "assets": [
+    {
+      "path": "gfx/interface/mapmode/mapmode_main_bg.dds",
+      "dimensions": [
+        87,
+        206
+      ],
+      "frames": 1,
+      "header_and_mips_preserved": true,
+      "decoders_agree": true,
+      "tight_masks": 0,
+      "symbol_core_pixels_preserved": true
+    },
+    {
+      "path": "gfx/interface/mapmode/mapmode_bottom_bg.dds",
+      "dimensions": [
+        86,
+        59
+      ],
+      "frames": 1,
+      "header_and_mips_preserved": true,
+      "decoders_agree": true,
+      "tight_masks": 0,
+      "symbol_core_pixels_preserved": true
+    },
+    {
+      "path": "gfx/interface/mapmode/mapmode_button_bg.dds",
+      "dimensions": [
+        42,
+        51
+      ],
+      "frames": 1,
+      "header_and_mips_preserved": true,
+      "decoders_agree": true,
+      "tight_masks": 0,
+      "symbol_core_pixels_preserved": true
+    },
+    {
+      "path": "gfx/interface/mapmode/mapmode_button_depressed.dds",
+      "dimensions": [
+        23,
+        20
+      ],
+      "frames": 1,
+      "header_and_mips_preserved": true,
+      "decoders_agree": true,
+      "tight_masks": 0,
+      "symbol_core_pixels_preserved": true
+    },
+    {
+      "path": "gfx/interface/mapmode/mapmode_buttons_deselected_big.dds",
+      "dimensions": [
+        136,
+        31
+      ],
+      "frames": 4,
+      "header_and_mips_preserved": true,
+      "decoders_agree": true,
+      "tight_masks": 4,
+      "symbol_core_pixels_preserved": true
+    },
+    {
+      "path": "gfx/interface/mapmode/mapmode_buttons_selected_big.dds",
+      "dimensions": [
+        136,
+        31
+      ],
+      "frames": 4,
+      "header_and_mips_preserved": true,
+      "decoders_agree": true,
+      "tight_masks": 4,
+      "symbol_core_pixels_preserved": true
+    },
+    {
+      "path": "gfx/interface/mapmode/mapmode_buttons_deselected_small.dds",
+      "disposition": "Retained inherited transparent artwork; corrected shared seat supplies chrome."
+    },
+    {
+      "path": "gfx/interface/mapmode/mapmode_buttons_selected_small.dds",
+      "dimensions": [
+        360,
+        18
+      ],
+      "frames": 18,
+      "header_and_mips_preserved": true,
+      "decoders_agree": true,
+      "tight_masks": 18,
+      "symbol_core_pixels_preserved": true
+    },
+    {
+      "path": "gfx/interface/mapmode/mapmode_button_all.dds",
+      "dimensions": [
+        44,
+        21
+      ],
+      "frames": 2,
+      "header_and_mips_preserved": true,
+      "decoders_agree": true,
+      "tight_masks": 2,
+      "symbol_core_pixels_preserved": true
+    },
+    {
+      "path": "gfx/interface/mapmode/find_screen_button.dds",
+      "dimensions": [
+        39,
+        39
+      ],
+      "frames": 1,
+      "header_and_mips_preserved": true,
+      "decoders_agree": true,
+      "tight_masks": 1,
+      "symbol_core_pixels_preserved": true
+    },
+    {
+      "path": "gfx/interface/military_raids/raids_filter_header_button.dds",
+      "dimensions": [
+        82,
+        39
+      ],
+      "frames": 1,
+      "header_and_mips_preserved": true,
+      "decoders_agree": true,
+      "tight_masks": 0,
+      "symbol_core_pixels_preserved": true
+    }
+  ],
+  "modified_textures": 10,
+  "definition_changes": 0,
+  "layout_changes": 0,
+  "source_frame_counts_verified": true,
+  "selected_states_distinct": true,
+  "four_button_seats_do_not_overlap": true,
+  "in_game_validated": false
+}

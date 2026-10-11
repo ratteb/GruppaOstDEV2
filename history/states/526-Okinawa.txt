@@ -6,6 +6,11 @@ state={
 	
 	state_category = small_island
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 4
+	}
+
 	history={
 		owner = JAP
 		add_core_of = JAP

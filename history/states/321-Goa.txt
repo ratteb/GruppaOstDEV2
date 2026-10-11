@@ -6,6 +6,11 @@ state={
 
 	state_category = enclave
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		iron = 4
+	}
+
 	history={
 		owner = RAJ
 		add_core_of = RAJ

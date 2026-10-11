@@ -1,0 +1,3574 @@
+# Gruppa Ost Stages 10/11 - guarded conditional text. COUNTRY unless noted.
+# All numbers are existing backend/cache values; fallbacks never manufacture zero.
+# Project/installed defined_text conventions and E-015/E-037 apply.
+
+defined_text = {
+    name = GetGOEconomyGDP
+    text = {
+        trigger = { GO_econ_gui_gdp_nominal_ready = yes check_variable = { var = GO_econ_country_gdp_nominal value = 0 compare = greater_than } check_variable = { var = GO_econ_country_gdp_nominal value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOEconomyGDP_TINY
+    }
+    text = {
+        trigger = { GO_econ_gui_gdp_nominal_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOEconomyGDP_VALUE
+    }
+    text = {
+        trigger = { GO_econ_country_ledger_initialized = yes has_variable = GO_econ_country_gdp has_variable = GO_econ_country_gdp_populated check_variable = { GO_econ_country_gdp_populated = 0 } check_variable = { var = GO_econ_country_gdp value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_GDP_NEEDS_SETUP
+    }
+    text = { localization_key = GO_ECON_GUI_GDP_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyRealGDP
+    text = {
+        trigger = { GO_econ_gui_gdp_ready = yes check_variable = { var = GO_econ_country_gdp value = 0 compare = greater_than } check_variable = { var = GO_econ_country_gdp value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOEconomyRealGDP_TINY
+    }
+    text = {
+        trigger = { GO_econ_gui_gdp_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOEconomyRealGDP_VALUE
+    }
+    text = {
+        trigger = { GO_econ_country_ledger_initialized = yes has_variable = GO_econ_country_gdp has_variable = GO_econ_country_gdp_populated check_variable = { GO_econ_country_gdp_populated = 0 } check_variable = { var = GO_econ_country_gdp value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_GDP_NEEDS_SETUP
+    }
+    text = { localization_key = GO_ECON_GUI_GDP_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyTreasury
+    text = {
+        trigger = { GO_econ_gui_treasury_ready = yes check_variable = { var = GO_econ_country_treasury value = 0 compare = greater_than } check_variable = { var = GO_econ_country_treasury value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOEconomyTreasury_TINY
+    }
+    text = {
+        trigger = { GO_econ_gui_treasury_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOEconomyTreasury_VALUE
+    }
+    text = {
+        trigger = { GO_econ_country_fiscal_initialized = yes has_variable = GO_econ_country_treasury has_variable = GO_econ_country_treasury_populated check_variable = { GO_econ_country_treasury_populated = 0 } check_variable = { var = GO_econ_country_treasury value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_TREASURY_NEEDS_SETUP
+    }
+    text = { localization_key = GO_ECON_GUI_TREASURY_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyDebt
+    text = {
+        trigger = { GO_econ_gui_debt_ready = yes check_variable = { var = GO_econ_country_debt value = 0 compare = greater_than } check_variable = { var = GO_econ_country_debt value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOEconomyDebt_TINY
+    }
+    text = {
+        trigger = { GO_econ_gui_debt_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOEconomyDebt_VALUE
+    }
+    text = {
+        trigger = { GO_econ_country_fiscal_initialized = yes has_variable = GO_econ_country_debt has_variable = GO_econ_country_debt_populated check_variable = { GO_econ_country_debt_populated = 0 } check_variable = { var = GO_econ_country_debt value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_DEBT_NEEDS_SETUP
+    }
+    text = { localization_key = GO_ECON_GUI_DEBT_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyGDPPerCapita
+    text = {
+        trigger = { GO_econ_gui_gdp_per_capita_ready = yes check_variable = { var = GO_econ_country_gdp_per_capita value = 0 compare = greater_than } check_variable = { var = GO_econ_country_gdp_per_capita value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOEconomyGDPPerCapita_TINY
+    }
+    text = {
+        trigger = { GO_econ_gui_gdp_per_capita_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOEconomyGDPPerCapita_VALUE
+    }
+    text = {
+        trigger = { GO_econ_country_ledger_initialized = yes has_variable = GO_econ_country_gdp has_variable = GO_econ_country_gdp_populated check_variable = { GO_econ_country_gdp_populated = 0 } check_variable = { var = GO_econ_country_gdp value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_GDP_NEEDS_SETUP
+    }
+    text = { localization_key = GO_ECON_GUI_GDP_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyPriceIndex
+    text = {
+        trigger = { GO_econ_gui_price_index_ready = yes check_variable = { var = GO_econ_country_price_index value = 0 compare = greater_than } check_variable = { var = GO_econ_country_price_index value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOEconomyPriceIndex_TINY
+    }
+    text = {
+        trigger = { GO_econ_gui_price_index_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOEconomyPriceIndex_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOEconomyCoverage
+    text = {
+        trigger = { GO_econ_gui_coverage_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOEconomyCoverage_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOEconomyGlobalStatus
+    text = {
+        trigger = { GO_econ_country_has_global_status = yes check_variable = { GO_econ_country_global_status = 1 } }
+        localization_key = GO_ECON_GUI_STATUS_1
+    }
+    text = {
+        trigger = { GO_econ_country_has_global_status = yes check_variable = { GO_econ_country_global_status = 2 } }
+        localization_key = GO_ECON_GUI_STATUS_2
+    }
+    text = {
+        trigger = { GO_econ_country_has_global_status = yes check_variable = { GO_econ_country_global_status = 3 } }
+        localization_key = GO_ECON_GUI_STATUS_3
+    }
+    text = {
+        trigger = { GO_econ_country_has_global_status = yes check_variable = { GO_econ_country_global_status = 4 } }
+        localization_key = GO_ECON_GUI_STATUS_4
+    }
+    text = {
+        trigger = { GO_econ_country_has_global_status = yes check_variable = { GO_econ_country_global_status = 5 } }
+        localization_key = GO_ECON_GUI_STATUS_5
+    }
+    text = {
+        trigger = { GO_econ_country_fiscal_initialized = yes has_variable = GO_econ_country_global_status has_variable = GO_econ_country_global_status_populated check_variable = { GO_econ_country_global_status_populated = 0 } }
+        localization_key = GO_ECON_GUI_STATUS_NEEDS_SETUP
+    }
+    text = { localization_key = GO_ECON_GUI_STATUS_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyFiscalStatus
+    text = {
+        trigger = { GO_econ_country_fiscal_report_ready = yes }
+        localization_key = GO_ECON_GUI_FISCAL_STATUS_CLOSED
+    }
+    text = {
+        trigger = {
+            GO_econ_country_fiscal_initialized = yes
+            has_variable = GO_econ_country_last_processed_month
+            check_variable = { GO_econ_country_last_processed_month = -1 }
+            NOT = { has_country_flag = GO_econ_fiscal_campaign_access }
+        }
+        localization_key = GO_ECON_GUI_NOT_CONFIGURED
+    }
+    text = {
+        trigger = {
+            GO_econ_country_fiscal_initialized = yes
+            has_variable = GO_econ_country_last_processed_month
+            check_variable = { GO_econ_country_last_processed_month = -1 }
+        }
+        localization_key = GO_ECON_GUI_NO_FISCAL_CLOSE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOEconomyReceipts
+    text = {
+        trigger = { GO_econ_gui_receipts_ready = yes check_variable = { var = GO_econ_country_receipts value = 0 compare = greater_than } check_variable = { var = GO_econ_country_receipts value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOEconomyReceipts_TINY
+    }
+    text = {
+        trigger = { GO_econ_gui_receipts_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOEconomyReceipts_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOEconomyExpenses
+    text = {
+        trigger = { GO_econ_gui_expenses_ready = yes check_variable = { var = GO_econ_country_expenses value = 0 compare = less_than } check_variable = { var = GO_econ_country_expenses value = -0.01 compare = greater_than } }
+        localization_key = GO_ECON_GUI_GetGOEconomyExpenses_TINY_NEG
+    }
+    text = {
+        trigger = { GO_econ_gui_expenses_ready = yes check_variable = { var = GO_econ_country_expenses value = 0 compare = greater_than } check_variable = { var = GO_econ_country_expenses value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOEconomyExpenses_TINY
+    }
+    text = {
+        trigger = { GO_econ_gui_expenses_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOEconomyExpenses_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOEconomyFinancing
+    text = {
+        trigger = { GO_econ_gui_financing_ready = yes check_variable = { var = GO_econ_country_financing value = 0 compare = greater_than } check_variable = { var = GO_econ_country_financing value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOEconomyFinancing_TINY
+    }
+    text = {
+        trigger = { GO_econ_gui_financing_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOEconomyFinancing_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOEconomyServices
+    text = {
+        trigger = { GO_econ_gui_services_expense_ready = yes check_variable = { var = GO_econ_country_services_expenses_last value = 0 compare = greater_than } check_variable = { var = GO_econ_country_services_expenses_last value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOEconomyServices_TINY
+    }
+    text = {
+        trigger = { GO_econ_gui_services_expense_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOEconomyServices_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOEconomyDeficit
+    text = {
+        trigger = { GO_econ_gui_deficit_ready = yes check_variable = { GO_econ_country_deficit > 0 } check_variable = { GO_econ_country_deficit < 0.01 } }
+        localization_key = GO_ECON_GUI_DEFICIT_TINY
+    }
+    text = {
+        trigger = { GO_econ_gui_deficit_ready = yes check_variable = { GO_econ_country_deficit < 0 } check_variable = { GO_econ_country_deficit > -0.01 } }
+        localization_key = GO_ECON_GUI_SURPLUS_TINY
+    }
+    text = {
+        trigger = { GO_econ_gui_deficit_ready = yes check_variable = { GO_econ_country_deficit > 0 } }
+        localization_key = GO_ECON_GUI_DEFICIT
+    }
+    text = {
+        trigger = { GO_econ_gui_deficit_ready = yes check_variable = { GO_econ_country_deficit < 0 } }
+        localization_key = GO_ECON_GUI_SURPLUS
+    }
+    text = {
+        trigger = { GO_econ_gui_deficit_ready = yes }
+        localization_key = GO_ECON_GUI_BALANCED
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOEconomyPUCapacity
+    text = {
+        trigger = { GO_econ_country_pu_capacity_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOEconomyPUCapacity_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOEconomyUsablePUs
+    text = {
+        trigger = { GO_econ_country_pu_capacity_ready = yes }
+        localization_key = GO_ECON_GUI_PU_USABLE_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_PU_CAPACITY_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyPUAllocation
+    text = {
+        trigger = { GO_econ_country_pu_allocation_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOEconomyPUAllocation_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOEconomyGDPDetails
+    text = {
+        localization_key = GO_ECON_GUI_GDP_DETAILS
+    }
+}
+
+defined_text = {
+    name = GetGOEconomyFiscalDetails
+    text = {
+        trigger = { GO_econ_country_gdp_income_report_ready = yes }
+        localization_key = GO_ECON_GUI_GDP_FISCAL_DETAILS
+    }
+    text = {
+        localization_key = GO_ECON_GUI_FISCAL_DETAILS
+    }
+}
+
+defined_text = {
+    name = GetGOEconomyPUDetails
+    text = {
+        localization_key = GO_ECON_GUI_PU_DETAILS
+    }
+}
+
+defined_text = {
+    name = GetGOMaterialIronAvailable
+    text = {
+        trigger = { GO_econ_material_iron_availability_report_ready = yes check_variable = { var = GO_econ_country_material_iron_availability_remaining value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_iron_availability_remaining value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialIronAvailable_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_iron_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialIronAvailable_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_iron_supply_record_ready = yes check_variable = { GO_econ_country_material_iron_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialIronDemand
+    text = {
+        trigger = { GO_econ_material_iron_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_iron_availability_requested_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_iron_availability_requested_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialIronDemand_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_iron_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialIronDemand_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialIronAllocation
+    text = {
+        trigger = { GO_econ_material_iron_availability_report_ready = yes check_variable = { var = GO_econ_country_material_iron_availability_committed_allocation value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_iron_availability_committed_allocation value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialIronAllocation_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_iron_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialIronAllocation_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_iron_supply_record_ready = yes check_variable = { GO_econ_country_material_iron_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialIronOutput
+    text = {
+        trigger = { GO_econ_material_iron_availability_output_report_ready = yes check_variable = { var = GO_econ_country_material_iron_availability_processing_output value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_iron_availability_processing_output value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialIronOutput_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_iron_availability_output_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialIronOutput_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialIronExternal
+    text = {
+        trigger = { GO_econ_material_iron_availability_report_ready = yes check_variable = { var = GO_econ_country_material_iron_availability_external_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_iron_availability_external_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialIronExternal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_iron_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialIronExternal_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_iron_supply_record_ready = yes check_variable = { GO_econ_country_material_iron_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialIronTotal
+    text = {
+        trigger = { GO_econ_material_iron_availability_report_ready = yes check_variable = { var = GO_econ_country_material_iron_availability_total_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_iron_availability_total_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialIronTotal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_iron_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialIronTotal_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_iron_supply_record_ready = yes check_variable = { GO_econ_country_material_iron_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialIronShortage
+    text = {
+        trigger = { GO_econ_material_iron_availability_complete_report_ready = yes check_variable = { var = GO_econ_country_material_iron_availability_shortage value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_iron_availability_shortage value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialIronShortage_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_iron_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialIronShortage_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_iron_supply_record_ready = yes check_variable = { GO_econ_country_material_iron_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialIronUnmet
+    text = {
+        trigger = { GO_econ_material_iron_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_iron_availability_unmet_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_iron_availability_unmet_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialIronUnmet_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_iron_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialIronUnmet_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialIronDate
+    text = {
+        trigger = { GO_econ_material_iron_availability_record_ready = yes check_variable = { GO_econ_country_material_iron_availability_day = global.num_days } check_variable = { var = GO_econ_country_material_iron_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_Iron_DATE_CURRENT
+    }
+    text = {
+        trigger = { GO_econ_material_iron_availability_record_ready = yes check_variable = { var = GO_econ_country_material_iron_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_Iron_DATE_HISTORY
+    }
+    text = { localization_key = GO_ECON_GUI_NO_REPORT }
+}
+
+defined_text = {
+    name = GetGOMaterialIronCoverage
+    text = {
+        trigger = { GO_econ_material_iron_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_COVERAGE_READY
+    }
+    text = { localization_key = GO_ECON_GUI_COVERAGE_INCOMPLETE }
+}
+
+defined_text = {
+    name = GetGOMaterialIronSource
+    text = {
+        trigger = { GO_econ_material_iron_source_installed_report_ready = yes }
+        localization_key = GO_ECON_GUI_SOURCE_AUTHORED
+    }
+    text = { localization_key = GO_ECON_GUI_SOURCE_NOT_INSTALLED }
+}
+
+defined_text = {
+    name = GetGOResourceIronDetails
+    text = {
+        localization_key = GO_ECON_GUI_Iron_DETAILS
+    }
+}
+
+defined_text = {
+    name = GetGOMaterialBauxiteAvailable
+    text = {
+        trigger = { GO_econ_material_bauxite_availability_report_ready = yes check_variable = { var = GO_econ_country_material_bauxite_availability_remaining value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_bauxite_availability_remaining value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialBauxiteAvailable_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_bauxite_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialBauxiteAvailable_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_bauxite_supply_record_ready = yes check_variable = { GO_econ_country_material_bauxite_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialBauxiteDemand
+    text = {
+        trigger = { GO_econ_material_bauxite_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_bauxite_availability_requested_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_bauxite_availability_requested_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialBauxiteDemand_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_bauxite_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialBauxiteDemand_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialBauxiteAllocation
+    text = {
+        trigger = { GO_econ_material_bauxite_availability_report_ready = yes check_variable = { var = GO_econ_country_material_bauxite_availability_committed_allocation value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_bauxite_availability_committed_allocation value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialBauxiteAllocation_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_bauxite_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialBauxiteAllocation_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_bauxite_supply_record_ready = yes check_variable = { GO_econ_country_material_bauxite_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialBauxiteOutput
+    text = {
+        trigger = { GO_econ_material_bauxite_availability_output_report_ready = yes check_variable = { var = GO_econ_country_material_bauxite_availability_processing_output value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_bauxite_availability_processing_output value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialBauxiteOutput_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_bauxite_availability_output_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialBauxiteOutput_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialBauxiteExternal
+    text = {
+        trigger = { GO_econ_material_bauxite_availability_report_ready = yes check_variable = { var = GO_econ_country_material_bauxite_availability_external_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_bauxite_availability_external_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialBauxiteExternal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_bauxite_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialBauxiteExternal_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_bauxite_supply_record_ready = yes check_variable = { GO_econ_country_material_bauxite_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialBauxiteTotal
+    text = {
+        trigger = { GO_econ_material_bauxite_availability_report_ready = yes check_variable = { var = GO_econ_country_material_bauxite_availability_total_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_bauxite_availability_total_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialBauxiteTotal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_bauxite_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialBauxiteTotal_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_bauxite_supply_record_ready = yes check_variable = { GO_econ_country_material_bauxite_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialBauxiteShortage
+    text = {
+        trigger = { GO_econ_material_bauxite_availability_complete_report_ready = yes check_variable = { var = GO_econ_country_material_bauxite_availability_shortage value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_bauxite_availability_shortage value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialBauxiteShortage_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_bauxite_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialBauxiteShortage_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_bauxite_supply_record_ready = yes check_variable = { GO_econ_country_material_bauxite_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialBauxiteUnmet
+    text = {
+        trigger = { GO_econ_material_bauxite_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_bauxite_availability_unmet_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_bauxite_availability_unmet_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialBauxiteUnmet_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_bauxite_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialBauxiteUnmet_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialBauxiteDate
+    text = {
+        trigger = { GO_econ_material_bauxite_availability_record_ready = yes check_variable = { GO_econ_country_material_bauxite_availability_day = global.num_days } check_variable = { var = GO_econ_country_material_bauxite_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_Bauxite_DATE_CURRENT
+    }
+    text = {
+        trigger = { GO_econ_material_bauxite_availability_record_ready = yes check_variable = { var = GO_econ_country_material_bauxite_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_Bauxite_DATE_HISTORY
+    }
+    text = { localization_key = GO_ECON_GUI_NO_REPORT }
+}
+
+defined_text = {
+    name = GetGOMaterialBauxiteCoverage
+    text = {
+        trigger = { GO_econ_material_bauxite_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_COVERAGE_READY
+    }
+    text = { localization_key = GO_ECON_GUI_COVERAGE_INCOMPLETE }
+}
+
+defined_text = {
+    name = GetGOMaterialBauxiteSource
+    text = {
+        trigger = { GO_econ_material_bauxite_source_installed_report_ready = yes }
+        localization_key = GO_ECON_GUI_SOURCE_AUTHORED
+    }
+    text = { localization_key = GO_ECON_GUI_SOURCE_NOT_INSTALLED }
+}
+
+defined_text = {
+    name = GetGOResourceBauxiteDetails
+    text = {
+        localization_key = GO_ECON_GUI_Bauxite_DETAILS
+    }
+}
+
+defined_text = {
+    name = GetGOMaterialCoalAvailable
+    text = {
+        trigger = { GO_econ_material_coal_availability_report_ready = yes check_variable = { var = GO_econ_country_material_coal_availability_remaining value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_coal_availability_remaining value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialCoalAvailable_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_coal_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialCoalAvailable_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialCoalDemand
+    text = {
+        trigger = { GO_econ_material_coal_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_coal_availability_requested_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_coal_availability_requested_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialCoalDemand_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_coal_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialCoalDemand_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialCoalAllocation
+    text = {
+        trigger = { GO_econ_material_coal_availability_report_ready = yes check_variable = { var = GO_econ_country_material_coal_availability_committed_allocation value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_coal_availability_committed_allocation value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialCoalAllocation_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_coal_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialCoalAllocation_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialCoalOutput
+    text = {
+        trigger = { GO_econ_material_coal_availability_output_report_ready = yes check_variable = { var = GO_econ_country_material_coal_availability_processing_output value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_coal_availability_processing_output value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialCoalOutput_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_coal_availability_output_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialCoalOutput_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialCoalExternal
+    text = {
+        trigger = { GO_econ_material_coal_availability_report_ready = yes check_variable = { var = GO_econ_country_material_coal_availability_external_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_coal_availability_external_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialCoalExternal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_coal_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialCoalExternal_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialCoalTotal
+    text = {
+        trigger = { GO_econ_material_coal_availability_report_ready = yes check_variable = { var = GO_econ_country_material_coal_availability_total_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_coal_availability_total_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialCoalTotal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_coal_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialCoalTotal_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialCoalShortage
+    text = {
+        trigger = { GO_econ_material_coal_availability_complete_report_ready = yes check_variable = { var = GO_econ_country_material_coal_availability_shortage value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_coal_availability_shortage value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialCoalShortage_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_coal_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialCoalShortage_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialCoalUnmet
+    text = {
+        trigger = { GO_econ_material_coal_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_coal_availability_unmet_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_coal_availability_unmet_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialCoalUnmet_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_coal_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialCoalUnmet_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialCoalDate
+    text = {
+        trigger = { GO_econ_material_coal_availability_record_ready = yes check_variable = { GO_econ_country_material_coal_availability_day = global.num_days } check_variable = { var = GO_econ_country_material_coal_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_Coal_DATE_CURRENT
+    }
+    text = {
+        trigger = { GO_econ_material_coal_availability_record_ready = yes check_variable = { var = GO_econ_country_material_coal_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_Coal_DATE_HISTORY
+    }
+    text = { localization_key = GO_ECON_GUI_NO_REPORT }
+}
+
+defined_text = {
+    name = GetGOMaterialCoalCoverage
+    text = {
+        trigger = { GO_econ_material_coal_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_COVERAGE_READY
+    }
+    text = { localization_key = GO_ECON_GUI_COVERAGE_INCOMPLETE }
+}
+
+defined_text = {
+    name = GetGOMaterialCoalSource
+    text = {
+        trigger = { GO_econ_material_coal_source_installed_report_ready = yes }
+        localization_key = GO_ECON_GUI_SOURCE_NATIVE
+    }
+    text = { localization_key = GO_ECON_GUI_SOURCE_NOT_INSTALLED }
+}
+
+defined_text = {
+    name = GetGOResourceCoalDetails
+    text = {
+        localization_key = GO_ECON_GUI_Coal_DETAILS
+    }
+}
+
+defined_text = {
+    name = GetGONativeCoalSurplus
+    text = {
+        trigger = { GO_econ_material_coal_native_surplus_report_ready = yes check_variable = { var = GO_econ_country_material_coal_source_native_surplus value = 0 compare = less_than } check_variable = { var = GO_econ_country_material_coal_source_native_surplus value = -0.01 compare = greater_than } }
+        localization_key = GO_ECON_GUI_GetGONativeCoalSurplus_TINY_NEG
+    }
+    text = {
+        trigger = { GO_econ_material_coal_native_surplus_report_ready = yes check_variable = { var = GO_econ_country_material_coal_source_native_surplus value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_coal_source_native_surplus value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeCoalSurplus_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_coal_native_surplus_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeCoalSurplus_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeCoalProduced
+    text = {
+        trigger = { GO_econ_material_coal_native_produced_report_ready = yes check_variable = { var = GO_econ_country_material_coal_source_native_produced value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_coal_source_native_produced value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeCoalProduced_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_coal_native_produced_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeCoalProduced_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeCoalImported
+    text = {
+        trigger = { GO_econ_material_coal_native_imported_report_ready = yes check_variable = { var = GO_econ_country_material_coal_source_native_imported value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_coal_source_native_imported value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeCoalImported_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_coal_native_imported_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeCoalImported_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeCoalExported
+    text = {
+        trigger = { GO_econ_material_coal_native_exported_report_ready = yes check_variable = { var = GO_econ_country_material_coal_source_native_exported value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_coal_source_native_exported value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeCoalExported_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_coal_native_exported_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeCoalExported_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeCoalConsumed
+    text = {
+        trigger = { GO_econ_material_coal_native_consumed_report_ready = yes check_variable = { var = GO_econ_country_material_coal_source_native_consumed value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_coal_source_native_consumed value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeCoalConsumed_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_coal_native_consumed_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeCoalConsumed_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeCoalDate
+    text = {
+        trigger = { GO_econ_material_coal_source_attempt_ready = yes check_variable = { GO_econ_country_material_coal_source_day = global.num_days } }
+        localization_key = GO_ECON_GUI_NATIVE_Coal_DATE_CURRENT
+    }
+    text = {
+        trigger = { GO_econ_material_coal_source_attempt_ready = yes }
+        localization_key = GO_ECON_GUI_NATIVE_Coal_DATE_HISTORY
+    }
+    text = { localization_key = GO_ECON_GUI_NO_REPORT }
+}
+
+defined_text = {
+    name = GetGOResourceNativeCoalDetails
+    text = {
+        localization_key = GO_ECON_GUI_NATIVE_Coal_DETAILS
+    }
+}
+
+defined_text = {
+    name = GetGOMaterialNaturalGasAvailable
+    text = {
+        trigger = { GO_econ_material_natural_gas_availability_report_ready = yes check_variable = { var = GO_econ_country_material_natural_gas_availability_remaining value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_natural_gas_availability_remaining value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialNaturalGasAvailable_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_natural_gas_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialNaturalGasAvailable_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_natural_gas_supply_record_ready = yes check_variable = { GO_econ_country_material_natural_gas_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialNaturalGasDemand
+    text = {
+        trigger = { GO_econ_material_natural_gas_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_natural_gas_availability_requested_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_natural_gas_availability_requested_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialNaturalGasDemand_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_natural_gas_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialNaturalGasDemand_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialNaturalGasAllocation
+    text = {
+        trigger = { GO_econ_material_natural_gas_availability_report_ready = yes check_variable = { var = GO_econ_country_material_natural_gas_availability_committed_allocation value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_natural_gas_availability_committed_allocation value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialNaturalGasAllocation_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_natural_gas_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialNaturalGasAllocation_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_natural_gas_supply_record_ready = yes check_variable = { GO_econ_country_material_natural_gas_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialNaturalGasOutput
+    text = {
+        trigger = { GO_econ_material_natural_gas_availability_output_report_ready = yes check_variable = { var = GO_econ_country_material_natural_gas_availability_processing_output value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_natural_gas_availability_processing_output value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialNaturalGasOutput_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_natural_gas_availability_output_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialNaturalGasOutput_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialNaturalGasExternal
+    text = {
+        trigger = { GO_econ_material_natural_gas_availability_report_ready = yes check_variable = { var = GO_econ_country_material_natural_gas_availability_external_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_natural_gas_availability_external_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialNaturalGasExternal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_natural_gas_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialNaturalGasExternal_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_natural_gas_supply_record_ready = yes check_variable = { GO_econ_country_material_natural_gas_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialNaturalGasTotal
+    text = {
+        trigger = { GO_econ_material_natural_gas_availability_report_ready = yes check_variable = { var = GO_econ_country_material_natural_gas_availability_total_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_natural_gas_availability_total_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialNaturalGasTotal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_natural_gas_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialNaturalGasTotal_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_natural_gas_supply_record_ready = yes check_variable = { GO_econ_country_material_natural_gas_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialNaturalGasShortage
+    text = {
+        trigger = { GO_econ_material_natural_gas_availability_complete_report_ready = yes check_variable = { var = GO_econ_country_material_natural_gas_availability_shortage value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_natural_gas_availability_shortage value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialNaturalGasShortage_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_natural_gas_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialNaturalGasShortage_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_natural_gas_supply_record_ready = yes check_variable = { GO_econ_country_material_natural_gas_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialNaturalGasUnmet
+    text = {
+        trigger = { GO_econ_material_natural_gas_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_natural_gas_availability_unmet_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_natural_gas_availability_unmet_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialNaturalGasUnmet_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_natural_gas_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialNaturalGasUnmet_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialNaturalGasDate
+    text = {
+        trigger = { GO_econ_material_natural_gas_availability_record_ready = yes check_variable = { GO_econ_country_material_natural_gas_availability_day = global.num_days } check_variable = { var = GO_econ_country_material_natural_gas_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_NaturalGas_DATE_CURRENT
+    }
+    text = {
+        trigger = { GO_econ_material_natural_gas_availability_record_ready = yes check_variable = { var = GO_econ_country_material_natural_gas_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_NaturalGas_DATE_HISTORY
+    }
+    text = { localization_key = GO_ECON_GUI_NO_REPORT }
+}
+
+defined_text = {
+    name = GetGOMaterialNaturalGasCoverage
+    text = {
+        trigger = { GO_econ_material_natural_gas_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_COVERAGE_READY
+    }
+    text = { localization_key = GO_ECON_GUI_COVERAGE_INCOMPLETE }
+}
+
+defined_text = {
+    name = GetGOMaterialNaturalGasSource
+    text = {
+        trigger = { GO_econ_material_natural_gas_source_installed_report_ready = yes }
+        localization_key = GO_ECON_GUI_SOURCE_AUTHORED
+    }
+    text = { localization_key = GO_ECON_GUI_SOURCE_NOT_INSTALLED }
+}
+
+defined_text = {
+    name = GetGOResourceNaturalGasDetails
+    text = {
+        localization_key = GO_ECON_GUI_NaturalGas_DETAILS
+    }
+}
+
+defined_text = {
+    name = GetGOMaterialOilAvailable
+    text = {
+        trigger = { GO_econ_material_oil_availability_report_ready = yes check_variable = { var = GO_econ_country_material_oil_availability_remaining value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_oil_availability_remaining value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialOilAvailable_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_oil_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialOilAvailable_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialOilDemand
+    text = {
+        trigger = { GO_econ_material_oil_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_oil_availability_requested_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_oil_availability_requested_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialOilDemand_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_oil_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialOilDemand_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialOilAllocation
+    text = {
+        trigger = { GO_econ_material_oil_availability_report_ready = yes check_variable = { var = GO_econ_country_material_oil_availability_committed_allocation value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_oil_availability_committed_allocation value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialOilAllocation_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_oil_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialOilAllocation_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialOilOutput
+    text = {
+        trigger = { GO_econ_material_oil_availability_output_report_ready = yes check_variable = { var = GO_econ_country_material_oil_availability_processing_output value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_oil_availability_processing_output value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialOilOutput_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_oil_availability_output_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialOilOutput_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialOilExternal
+    text = {
+        trigger = { GO_econ_material_oil_availability_report_ready = yes check_variable = { var = GO_econ_country_material_oil_availability_external_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_oil_availability_external_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialOilExternal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_oil_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialOilExternal_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialOilTotal
+    text = {
+        trigger = { GO_econ_material_oil_availability_report_ready = yes check_variable = { var = GO_econ_country_material_oil_availability_total_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_oil_availability_total_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialOilTotal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_oil_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialOilTotal_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialOilShortage
+    text = {
+        trigger = { GO_econ_material_oil_availability_complete_report_ready = yes check_variable = { var = GO_econ_country_material_oil_availability_shortage value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_oil_availability_shortage value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialOilShortage_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_oil_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialOilShortage_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialOilUnmet
+    text = {
+        trigger = { GO_econ_material_oil_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_oil_availability_unmet_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_oil_availability_unmet_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialOilUnmet_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_oil_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialOilUnmet_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialOilDate
+    text = {
+        trigger = { GO_econ_material_oil_availability_record_ready = yes check_variable = { GO_econ_country_material_oil_availability_day = global.num_days } check_variable = { var = GO_econ_country_material_oil_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_Oil_DATE_CURRENT
+    }
+    text = {
+        trigger = { GO_econ_material_oil_availability_record_ready = yes check_variable = { var = GO_econ_country_material_oil_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_Oil_DATE_HISTORY
+    }
+    text = { localization_key = GO_ECON_GUI_NO_REPORT }
+}
+
+defined_text = {
+    name = GetGOMaterialOilCoverage
+    text = {
+        trigger = { GO_econ_material_oil_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_COVERAGE_READY
+    }
+    text = { localization_key = GO_ECON_GUI_COVERAGE_INCOMPLETE }
+}
+
+defined_text = {
+    name = GetGOMaterialOilSource
+    text = {
+        trigger = { GO_econ_material_oil_source_installed_report_ready = yes }
+        localization_key = GO_ECON_GUI_SOURCE_NATIVE
+    }
+    text = { localization_key = GO_ECON_GUI_SOURCE_NOT_INSTALLED }
+}
+
+defined_text = {
+    name = GetGOResourceOilDetails
+    text = {
+        localization_key = GO_ECON_GUI_Oil_DETAILS
+    }
+}
+
+defined_text = {
+    name = GetGONativeOilSurplus
+    text = {
+        trigger = { GO_econ_material_oil_native_surplus_report_ready = yes check_variable = { var = GO_econ_country_material_oil_source_native_surplus value = 0 compare = less_than } check_variable = { var = GO_econ_country_material_oil_source_native_surplus value = -0.01 compare = greater_than } }
+        localization_key = GO_ECON_GUI_GetGONativeOilSurplus_TINY_NEG
+    }
+    text = {
+        trigger = { GO_econ_material_oil_native_surplus_report_ready = yes check_variable = { var = GO_econ_country_material_oil_source_native_surplus value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_oil_source_native_surplus value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeOilSurplus_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_oil_native_surplus_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeOilSurplus_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeOilProduced
+    text = {
+        trigger = { GO_econ_material_oil_native_produced_report_ready = yes check_variable = { var = GO_econ_country_material_oil_source_native_produced value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_oil_source_native_produced value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeOilProduced_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_oil_native_produced_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeOilProduced_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeOilImported
+    text = {
+        trigger = { GO_econ_material_oil_native_imported_report_ready = yes check_variable = { var = GO_econ_country_material_oil_source_native_imported value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_oil_source_native_imported value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeOilImported_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_oil_native_imported_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeOilImported_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeOilExported
+    text = {
+        trigger = { GO_econ_material_oil_native_exported_report_ready = yes check_variable = { var = GO_econ_country_material_oil_source_native_exported value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_oil_source_native_exported value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeOilExported_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_oil_native_exported_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeOilExported_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeOilConsumed
+    text = {
+        trigger = { GO_econ_material_oil_native_consumed_report_ready = yes check_variable = { var = GO_econ_country_material_oil_source_native_consumed value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_oil_source_native_consumed value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeOilConsumed_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_oil_native_consumed_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeOilConsumed_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeOilDate
+    text = {
+        trigger = { GO_econ_material_oil_source_attempt_ready = yes check_variable = { GO_econ_country_material_oil_source_day = global.num_days } }
+        localization_key = GO_ECON_GUI_NATIVE_Oil_DATE_CURRENT
+    }
+    text = {
+        trigger = { GO_econ_material_oil_source_attempt_ready = yes }
+        localization_key = GO_ECON_GUI_NATIVE_Oil_DATE_HISTORY
+    }
+    text = { localization_key = GO_ECON_GUI_NO_REPORT }
+}
+
+defined_text = {
+    name = GetGOResourceNativeOilDetails
+    text = {
+        localization_key = GO_ECON_GUI_NATIVE_Oil_DETAILS
+    }
+}
+
+defined_text = {
+    name = GetGOMaterialRareEarthMineralsAvailable
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_availability_report_ready = yes check_variable = { var = GO_econ_country_material_rare_earth_minerals_availability_remaining value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_rare_earth_minerals_availability_remaining value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialRareEarthMineralsAvailable_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialRareEarthMineralsAvailable_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_supply_record_ready = yes check_variable = { GO_econ_country_material_rare_earth_minerals_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialRareEarthMineralsDemand
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_rare_earth_minerals_availability_requested_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_rare_earth_minerals_availability_requested_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialRareEarthMineralsDemand_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialRareEarthMineralsDemand_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialRareEarthMineralsAllocation
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_availability_report_ready = yes check_variable = { var = GO_econ_country_material_rare_earth_minerals_availability_committed_allocation value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_rare_earth_minerals_availability_committed_allocation value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialRareEarthMineralsAllocation_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialRareEarthMineralsAllocation_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_supply_record_ready = yes check_variable = { GO_econ_country_material_rare_earth_minerals_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialRareEarthMineralsOutput
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_availability_output_report_ready = yes check_variable = { var = GO_econ_country_material_rare_earth_minerals_availability_processing_output value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_rare_earth_minerals_availability_processing_output value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialRareEarthMineralsOutput_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_availability_output_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialRareEarthMineralsOutput_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialRareEarthMineralsExternal
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_availability_report_ready = yes check_variable = { var = GO_econ_country_material_rare_earth_minerals_availability_external_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_rare_earth_minerals_availability_external_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialRareEarthMineralsExternal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialRareEarthMineralsExternal_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_supply_record_ready = yes check_variable = { GO_econ_country_material_rare_earth_minerals_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialRareEarthMineralsTotal
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_availability_report_ready = yes check_variable = { var = GO_econ_country_material_rare_earth_minerals_availability_total_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_rare_earth_minerals_availability_total_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialRareEarthMineralsTotal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialRareEarthMineralsTotal_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_supply_record_ready = yes check_variable = { GO_econ_country_material_rare_earth_minerals_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialRareEarthMineralsShortage
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_availability_complete_report_ready = yes check_variable = { var = GO_econ_country_material_rare_earth_minerals_availability_shortage value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_rare_earth_minerals_availability_shortage value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialRareEarthMineralsShortage_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialRareEarthMineralsShortage_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_supply_record_ready = yes check_variable = { GO_econ_country_material_rare_earth_minerals_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialRareEarthMineralsUnmet
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_rare_earth_minerals_availability_unmet_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_rare_earth_minerals_availability_unmet_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialRareEarthMineralsUnmet_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialRareEarthMineralsUnmet_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialRareEarthMineralsDate
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_availability_record_ready = yes check_variable = { GO_econ_country_material_rare_earth_minerals_availability_day = global.num_days } check_variable = { var = GO_econ_country_material_rare_earth_minerals_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_RareEarthMinerals_DATE_CURRENT
+    }
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_availability_record_ready = yes check_variable = { var = GO_econ_country_material_rare_earth_minerals_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_RareEarthMinerals_DATE_HISTORY
+    }
+    text = { localization_key = GO_ECON_GUI_NO_REPORT }
+}
+
+defined_text = {
+    name = GetGOMaterialRareEarthMineralsCoverage
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_COVERAGE_READY
+    }
+    text = { localization_key = GO_ECON_GUI_COVERAGE_INCOMPLETE }
+}
+
+defined_text = {
+    name = GetGOMaterialRareEarthMineralsSource
+    text = {
+        trigger = { GO_econ_material_rare_earth_minerals_source_installed_report_ready = yes }
+        localization_key = GO_ECON_GUI_SOURCE_AUTHORED
+    }
+    text = { localization_key = GO_ECON_GUI_SOURCE_NOT_INSTALLED }
+}
+
+defined_text = {
+    name = GetGOResourceRareEarthMineralsDetails
+    text = {
+        localization_key = GO_ECON_GUI_RareEarthMinerals_DETAILS
+    }
+}
+
+defined_text = {
+    name = GetGOMaterialTungstenAvailable
+    text = {
+        trigger = { GO_econ_material_tungsten_availability_report_ready = yes check_variable = { var = GO_econ_country_material_tungsten_availability_remaining value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_tungsten_availability_remaining value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialTungstenAvailable_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_tungsten_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialTungstenAvailable_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialTungstenDemand
+    text = {
+        trigger = { GO_econ_material_tungsten_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_tungsten_availability_requested_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_tungsten_availability_requested_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialTungstenDemand_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_tungsten_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialTungstenDemand_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialTungstenAllocation
+    text = {
+        trigger = { GO_econ_material_tungsten_availability_report_ready = yes check_variable = { var = GO_econ_country_material_tungsten_availability_committed_allocation value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_tungsten_availability_committed_allocation value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialTungstenAllocation_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_tungsten_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialTungstenAllocation_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialTungstenOutput
+    text = {
+        trigger = { GO_econ_material_tungsten_availability_output_report_ready = yes check_variable = { var = GO_econ_country_material_tungsten_availability_processing_output value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_tungsten_availability_processing_output value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialTungstenOutput_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_tungsten_availability_output_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialTungstenOutput_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialTungstenExternal
+    text = {
+        trigger = { GO_econ_material_tungsten_availability_report_ready = yes check_variable = { var = GO_econ_country_material_tungsten_availability_external_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_tungsten_availability_external_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialTungstenExternal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_tungsten_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialTungstenExternal_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialTungstenTotal
+    text = {
+        trigger = { GO_econ_material_tungsten_availability_report_ready = yes check_variable = { var = GO_econ_country_material_tungsten_availability_total_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_tungsten_availability_total_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialTungstenTotal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_tungsten_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialTungstenTotal_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialTungstenShortage
+    text = {
+        trigger = { GO_econ_material_tungsten_availability_complete_report_ready = yes check_variable = { var = GO_econ_country_material_tungsten_availability_shortage value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_tungsten_availability_shortage value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialTungstenShortage_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_tungsten_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialTungstenShortage_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialTungstenUnmet
+    text = {
+        trigger = { GO_econ_material_tungsten_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_tungsten_availability_unmet_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_tungsten_availability_unmet_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialTungstenUnmet_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_tungsten_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialTungstenUnmet_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialTungstenDate
+    text = {
+        trigger = { GO_econ_material_tungsten_availability_record_ready = yes check_variable = { GO_econ_country_material_tungsten_availability_day = global.num_days } check_variable = { var = GO_econ_country_material_tungsten_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_Tungsten_DATE_CURRENT
+    }
+    text = {
+        trigger = { GO_econ_material_tungsten_availability_record_ready = yes check_variable = { var = GO_econ_country_material_tungsten_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_Tungsten_DATE_HISTORY
+    }
+    text = { localization_key = GO_ECON_GUI_NO_REPORT }
+}
+
+defined_text = {
+    name = GetGOMaterialTungstenCoverage
+    text = {
+        trigger = { GO_econ_material_tungsten_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_COVERAGE_READY
+    }
+    text = { localization_key = GO_ECON_GUI_COVERAGE_INCOMPLETE }
+}
+
+defined_text = {
+    name = GetGOMaterialTungstenSource
+    text = {
+        trigger = { GO_econ_material_tungsten_source_installed_report_ready = yes }
+        localization_key = GO_ECON_GUI_SOURCE_NATIVE
+    }
+    text = { localization_key = GO_ECON_GUI_SOURCE_NOT_INSTALLED }
+}
+
+defined_text = {
+    name = GetGOResourceTungstenDetails
+    text = {
+        localization_key = GO_ECON_GUI_Tungsten_DETAILS
+    }
+}
+
+defined_text = {
+    name = GetGONativeTungstenSurplus
+    text = {
+        trigger = { GO_econ_material_tungsten_native_surplus_report_ready = yes check_variable = { var = GO_econ_country_material_tungsten_source_native_surplus value = 0 compare = less_than } check_variable = { var = GO_econ_country_material_tungsten_source_native_surplus value = -0.01 compare = greater_than } }
+        localization_key = GO_ECON_GUI_GetGONativeTungstenSurplus_TINY_NEG
+    }
+    text = {
+        trigger = { GO_econ_material_tungsten_native_surplus_report_ready = yes check_variable = { var = GO_econ_country_material_tungsten_source_native_surplus value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_tungsten_source_native_surplus value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeTungstenSurplus_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_tungsten_native_surplus_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeTungstenSurplus_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeTungstenProduced
+    text = {
+        trigger = { GO_econ_material_tungsten_native_produced_report_ready = yes check_variable = { var = GO_econ_country_material_tungsten_source_native_produced value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_tungsten_source_native_produced value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeTungstenProduced_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_tungsten_native_produced_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeTungstenProduced_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeTungstenImported
+    text = {
+        trigger = { GO_econ_material_tungsten_native_imported_report_ready = yes check_variable = { var = GO_econ_country_material_tungsten_source_native_imported value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_tungsten_source_native_imported value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeTungstenImported_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_tungsten_native_imported_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeTungstenImported_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeTungstenExported
+    text = {
+        trigger = { GO_econ_material_tungsten_native_exported_report_ready = yes check_variable = { var = GO_econ_country_material_tungsten_source_native_exported value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_tungsten_source_native_exported value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeTungstenExported_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_tungsten_native_exported_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeTungstenExported_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeTungstenConsumed
+    text = {
+        trigger = { GO_econ_material_tungsten_native_consumed_report_ready = yes check_variable = { var = GO_econ_country_material_tungsten_source_native_consumed value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_tungsten_source_native_consumed value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeTungstenConsumed_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_tungsten_native_consumed_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeTungstenConsumed_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeTungstenDate
+    text = {
+        trigger = { GO_econ_material_tungsten_source_attempt_ready = yes check_variable = { GO_econ_country_material_tungsten_source_day = global.num_days } }
+        localization_key = GO_ECON_GUI_NATIVE_Tungsten_DATE_CURRENT
+    }
+    text = {
+        trigger = { GO_econ_material_tungsten_source_attempt_ready = yes }
+        localization_key = GO_ECON_GUI_NATIVE_Tungsten_DATE_HISTORY
+    }
+    text = { localization_key = GO_ECON_GUI_NO_REPORT }
+}
+
+defined_text = {
+    name = GetGOResourceNativeTungstenDetails
+    text = {
+        localization_key = GO_ECON_GUI_NATIVE_Tungsten_DETAILS
+    }
+}
+
+defined_text = {
+    name = GetGOMaterialTitaniumAvailable
+    text = {
+        trigger = { GO_econ_material_titanium_availability_report_ready = yes check_variable = { var = GO_econ_country_material_titanium_availability_remaining value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_titanium_availability_remaining value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialTitaniumAvailable_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_titanium_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialTitaniumAvailable_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_titanium_supply_record_ready = yes check_variable = { GO_econ_country_material_titanium_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialTitaniumDemand
+    text = {
+        trigger = { GO_econ_material_titanium_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_titanium_availability_requested_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_titanium_availability_requested_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialTitaniumDemand_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_titanium_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialTitaniumDemand_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialTitaniumAllocation
+    text = {
+        trigger = { GO_econ_material_titanium_availability_report_ready = yes check_variable = { var = GO_econ_country_material_titanium_availability_committed_allocation value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_titanium_availability_committed_allocation value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialTitaniumAllocation_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_titanium_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialTitaniumAllocation_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_titanium_supply_record_ready = yes check_variable = { GO_econ_country_material_titanium_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialTitaniumOutput
+    text = {
+        trigger = { GO_econ_material_titanium_availability_output_report_ready = yes check_variable = { var = GO_econ_country_material_titanium_availability_processing_output value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_titanium_availability_processing_output value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialTitaniumOutput_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_titanium_availability_output_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialTitaniumOutput_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialTitaniumExternal
+    text = {
+        trigger = { GO_econ_material_titanium_availability_report_ready = yes check_variable = { var = GO_econ_country_material_titanium_availability_external_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_titanium_availability_external_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialTitaniumExternal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_titanium_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialTitaniumExternal_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_titanium_supply_record_ready = yes check_variable = { GO_econ_country_material_titanium_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialTitaniumTotal
+    text = {
+        trigger = { GO_econ_material_titanium_availability_report_ready = yes check_variable = { var = GO_econ_country_material_titanium_availability_total_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_titanium_availability_total_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialTitaniumTotal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_titanium_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialTitaniumTotal_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_titanium_supply_record_ready = yes check_variable = { GO_econ_country_material_titanium_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialTitaniumShortage
+    text = {
+        trigger = { GO_econ_material_titanium_availability_complete_report_ready = yes check_variable = { var = GO_econ_country_material_titanium_availability_shortage value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_titanium_availability_shortage value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialTitaniumShortage_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_titanium_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialTitaniumShortage_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_titanium_supply_record_ready = yes check_variable = { GO_econ_country_material_titanium_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialTitaniumUnmet
+    text = {
+        trigger = { GO_econ_material_titanium_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_titanium_availability_unmet_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_titanium_availability_unmet_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialTitaniumUnmet_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_titanium_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialTitaniumUnmet_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialTitaniumDate
+    text = {
+        trigger = { GO_econ_material_titanium_availability_record_ready = yes check_variable = { GO_econ_country_material_titanium_availability_day = global.num_days } check_variable = { var = GO_econ_country_material_titanium_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_Titanium_DATE_CURRENT
+    }
+    text = {
+        trigger = { GO_econ_material_titanium_availability_record_ready = yes check_variable = { var = GO_econ_country_material_titanium_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_Titanium_DATE_HISTORY
+    }
+    text = { localization_key = GO_ECON_GUI_NO_REPORT }
+}
+
+defined_text = {
+    name = GetGOMaterialTitaniumCoverage
+    text = {
+        trigger = { GO_econ_material_titanium_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_COVERAGE_READY
+    }
+    text = { localization_key = GO_ECON_GUI_COVERAGE_INCOMPLETE }
+}
+
+defined_text = {
+    name = GetGOMaterialTitaniumSource
+    text = {
+        trigger = { GO_econ_material_titanium_source_installed_report_ready = yes }
+        localization_key = GO_ECON_GUI_SOURCE_AUTHORED
+    }
+    text = { localization_key = GO_ECON_GUI_SOURCE_NOT_INSTALLED }
+}
+
+defined_text = {
+    name = GetGOResourceTitaniumDetails
+    text = {
+        localization_key = GO_ECON_GUI_Titanium_DETAILS
+    }
+}
+
+defined_text = {
+    name = GetGOMaterialSteelAvailable
+    text = {
+        trigger = { GO_econ_material_steel_availability_report_ready = yes check_variable = { var = GO_econ_country_material_steel_availability_remaining value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_steel_availability_remaining value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialSteelAvailable_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_steel_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialSteelAvailable_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialSteelDemand
+    text = {
+        trigger = { GO_econ_material_steel_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_steel_availability_requested_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_steel_availability_requested_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialSteelDemand_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_steel_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialSteelDemand_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialSteelAllocation
+    text = {
+        trigger = { GO_econ_material_steel_availability_report_ready = yes check_variable = { var = GO_econ_country_material_steel_availability_committed_allocation value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_steel_availability_committed_allocation value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialSteelAllocation_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_steel_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialSteelAllocation_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialSteelOutput
+    text = {
+        trigger = { GO_econ_material_steel_availability_output_report_ready = yes check_variable = { var = GO_econ_country_material_steel_availability_processing_output value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_steel_availability_processing_output value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialSteelOutput_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_steel_availability_output_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialSteelOutput_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialSteelExternal
+    text = {
+        trigger = { GO_econ_material_steel_availability_report_ready = yes check_variable = { var = GO_econ_country_material_steel_availability_external_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_steel_availability_external_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialSteelExternal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_steel_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialSteelExternal_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialSteelTotal
+    text = {
+        trigger = { GO_econ_material_steel_availability_report_ready = yes check_variable = { var = GO_econ_country_material_steel_availability_total_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_steel_availability_total_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialSteelTotal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_steel_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialSteelTotal_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialSteelShortage
+    text = {
+        trigger = { GO_econ_material_steel_availability_complete_report_ready = yes check_variable = { var = GO_econ_country_material_steel_availability_shortage value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_steel_availability_shortage value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialSteelShortage_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_steel_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialSteelShortage_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialSteelUnmet
+    text = {
+        trigger = { GO_econ_material_steel_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_steel_availability_unmet_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_steel_availability_unmet_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialSteelUnmet_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_steel_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialSteelUnmet_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialSteelDate
+    text = {
+        trigger = { GO_econ_material_steel_availability_record_ready = yes check_variable = { GO_econ_country_material_steel_availability_day = global.num_days } check_variable = { var = GO_econ_country_material_steel_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_Steel_DATE_CURRENT
+    }
+    text = {
+        trigger = { GO_econ_material_steel_availability_record_ready = yes check_variable = { var = GO_econ_country_material_steel_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_Steel_DATE_HISTORY
+    }
+    text = { localization_key = GO_ECON_GUI_NO_REPORT }
+}
+
+defined_text = {
+    name = GetGOMaterialSteelCoverage
+    text = {
+        trigger = { GO_econ_material_steel_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_COVERAGE_READY
+    }
+    text = { localization_key = GO_ECON_GUI_COVERAGE_INCOMPLETE }
+}
+
+defined_text = {
+    name = GetGOMaterialSteelSource
+    text = {
+        trigger = { GO_econ_material_steel_source_installed_report_ready = yes }
+        localization_key = GO_ECON_GUI_SOURCE_PLANT_ONLY
+    }
+    text = { localization_key = GO_ECON_GUI_SOURCE_NOT_INSTALLED }
+}
+
+defined_text = {
+    name = GetGOResourceSteelDetails
+    text = {
+        localization_key = GO_ECON_GUI_Steel_DETAILS
+    }
+}
+
+defined_text = {
+    name = GetGONativeSteelSurplus
+    text = {
+        trigger = { GO_econ_material_steel_native_surplus_report_ready = yes check_variable = { var = GO_econ_country_material_steel_source_native_surplus value = 0 compare = less_than } check_variable = { var = GO_econ_country_material_steel_source_native_surplus value = -0.01 compare = greater_than } }
+        localization_key = GO_ECON_GUI_GetGONativeSteelSurplus_TINY_NEG
+    }
+    text = {
+        trigger = { GO_econ_material_steel_native_surplus_report_ready = yes check_variable = { var = GO_econ_country_material_steel_source_native_surplus value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_steel_source_native_surplus value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeSteelSurplus_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_steel_native_surplus_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeSteelSurplus_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeSteelProduced
+    text = {
+        trigger = { GO_econ_material_steel_native_produced_report_ready = yes check_variable = { var = GO_econ_country_material_steel_source_native_produced value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_steel_source_native_produced value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeSteelProduced_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_steel_native_produced_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeSteelProduced_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeSteelImported
+    text = {
+        trigger = { GO_econ_material_steel_native_imported_report_ready = yes check_variable = { var = GO_econ_country_material_steel_source_native_imported value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_steel_source_native_imported value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeSteelImported_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_steel_native_imported_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeSteelImported_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeSteelExported
+    text = {
+        trigger = { GO_econ_material_steel_native_exported_report_ready = yes check_variable = { var = GO_econ_country_material_steel_source_native_exported value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_steel_source_native_exported value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeSteelExported_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_steel_native_exported_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeSteelExported_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeSteelConsumed
+    text = {
+        trigger = { GO_econ_material_steel_native_consumed_report_ready = yes check_variable = { var = GO_econ_country_material_steel_source_native_consumed value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_steel_source_native_consumed value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeSteelConsumed_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_steel_native_consumed_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeSteelConsumed_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeSteelDate
+    text = {
+        trigger = { GO_econ_material_steel_source_attempt_ready = yes check_variable = { GO_econ_country_material_steel_source_day = global.num_days } }
+        localization_key = GO_ECON_GUI_NATIVE_Steel_DATE_CURRENT
+    }
+    text = {
+        trigger = { GO_econ_material_steel_source_attempt_ready = yes }
+        localization_key = GO_ECON_GUI_NATIVE_Steel_DATE_HISTORY
+    }
+    text = { localization_key = GO_ECON_GUI_NO_REPORT }
+}
+
+defined_text = {
+    name = GetGOResourceNativeSteelDetails
+    text = {
+        localization_key = GO_ECON_GUI_NATIVE_Steel_DETAILS
+    }
+}
+
+defined_text = {
+    name = GetGOMaterialAluminiumAvailable
+    text = {
+        trigger = { GO_econ_material_aluminium_availability_report_ready = yes check_variable = { var = GO_econ_country_material_aluminium_availability_remaining value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_aluminium_availability_remaining value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialAluminiumAvailable_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_aluminium_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialAluminiumAvailable_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialAluminiumDemand
+    text = {
+        trigger = { GO_econ_material_aluminium_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_aluminium_availability_requested_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_aluminium_availability_requested_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialAluminiumDemand_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_aluminium_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialAluminiumDemand_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialAluminiumAllocation
+    text = {
+        trigger = { GO_econ_material_aluminium_availability_report_ready = yes check_variable = { var = GO_econ_country_material_aluminium_availability_committed_allocation value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_aluminium_availability_committed_allocation value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialAluminiumAllocation_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_aluminium_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialAluminiumAllocation_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialAluminiumOutput
+    text = {
+        trigger = { GO_econ_material_aluminium_availability_output_report_ready = yes check_variable = { var = GO_econ_country_material_aluminium_availability_processing_output value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_aluminium_availability_processing_output value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialAluminiumOutput_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_aluminium_availability_output_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialAluminiumOutput_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialAluminiumExternal
+    text = {
+        trigger = { GO_econ_material_aluminium_availability_report_ready = yes check_variable = { var = GO_econ_country_material_aluminium_availability_external_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_aluminium_availability_external_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialAluminiumExternal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_aluminium_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialAluminiumExternal_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialAluminiumTotal
+    text = {
+        trigger = { GO_econ_material_aluminium_availability_report_ready = yes check_variable = { var = GO_econ_country_material_aluminium_availability_total_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_aluminium_availability_total_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialAluminiumTotal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_aluminium_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialAluminiumTotal_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialAluminiumShortage
+    text = {
+        trigger = { GO_econ_material_aluminium_availability_complete_report_ready = yes check_variable = { var = GO_econ_country_material_aluminium_availability_shortage value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_aluminium_availability_shortage value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialAluminiumShortage_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_aluminium_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialAluminiumShortage_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialAluminiumUnmet
+    text = {
+        trigger = { GO_econ_material_aluminium_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_aluminium_availability_unmet_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_aluminium_availability_unmet_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialAluminiumUnmet_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_aluminium_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialAluminiumUnmet_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialAluminiumDate
+    text = {
+        trigger = { GO_econ_material_aluminium_availability_record_ready = yes check_variable = { GO_econ_country_material_aluminium_availability_day = global.num_days } check_variable = { var = GO_econ_country_material_aluminium_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_Aluminium_DATE_CURRENT
+    }
+    text = {
+        trigger = { GO_econ_material_aluminium_availability_record_ready = yes check_variable = { var = GO_econ_country_material_aluminium_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_Aluminium_DATE_HISTORY
+    }
+    text = { localization_key = GO_ECON_GUI_NO_REPORT }
+}
+
+defined_text = {
+    name = GetGOMaterialAluminiumCoverage
+    text = {
+        trigger = { GO_econ_material_aluminium_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_COVERAGE_READY
+    }
+    text = { localization_key = GO_ECON_GUI_COVERAGE_INCOMPLETE }
+}
+
+defined_text = {
+    name = GetGOMaterialAluminiumSource
+    text = {
+        trigger = { GO_econ_material_aluminium_source_installed_report_ready = yes }
+        localization_key = GO_ECON_GUI_SOURCE_PLANT_ONLY
+    }
+    text = { localization_key = GO_ECON_GUI_SOURCE_NOT_INSTALLED }
+}
+
+defined_text = {
+    name = GetGOResourceAluminiumDetails
+    text = {
+        localization_key = GO_ECON_GUI_Aluminium_DETAILS
+    }
+}
+
+defined_text = {
+    name = GetGONativeAluminiumSurplus
+    text = {
+        trigger = { GO_econ_material_aluminium_native_surplus_report_ready = yes check_variable = { var = GO_econ_country_material_aluminium_source_native_surplus value = 0 compare = less_than } check_variable = { var = GO_econ_country_material_aluminium_source_native_surplus value = -0.01 compare = greater_than } }
+        localization_key = GO_ECON_GUI_GetGONativeAluminiumSurplus_TINY_NEG
+    }
+    text = {
+        trigger = { GO_econ_material_aluminium_native_surplus_report_ready = yes check_variable = { var = GO_econ_country_material_aluminium_source_native_surplus value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_aluminium_source_native_surplus value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeAluminiumSurplus_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_aluminium_native_surplus_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeAluminiumSurplus_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeAluminiumProduced
+    text = {
+        trigger = { GO_econ_material_aluminium_native_produced_report_ready = yes check_variable = { var = GO_econ_country_material_aluminium_source_native_produced value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_aluminium_source_native_produced value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeAluminiumProduced_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_aluminium_native_produced_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeAluminiumProduced_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeAluminiumImported
+    text = {
+        trigger = { GO_econ_material_aluminium_native_imported_report_ready = yes check_variable = { var = GO_econ_country_material_aluminium_source_native_imported value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_aluminium_source_native_imported value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeAluminiumImported_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_aluminium_native_imported_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeAluminiumImported_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeAluminiumExported
+    text = {
+        trigger = { GO_econ_material_aluminium_native_exported_report_ready = yes check_variable = { var = GO_econ_country_material_aluminium_source_native_exported value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_aluminium_source_native_exported value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeAluminiumExported_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_aluminium_native_exported_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeAluminiumExported_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeAluminiumConsumed
+    text = {
+        trigger = { GO_econ_material_aluminium_native_consumed_report_ready = yes check_variable = { var = GO_econ_country_material_aluminium_source_native_consumed value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_aluminium_source_native_consumed value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeAluminiumConsumed_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_aluminium_native_consumed_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeAluminiumConsumed_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeAluminiumDate
+    text = {
+        trigger = { GO_econ_material_aluminium_source_attempt_ready = yes check_variable = { GO_econ_country_material_aluminium_source_day = global.num_days } }
+        localization_key = GO_ECON_GUI_NATIVE_Aluminium_DATE_CURRENT
+    }
+    text = {
+        trigger = { GO_econ_material_aluminium_source_attempt_ready = yes }
+        localization_key = GO_ECON_GUI_NATIVE_Aluminium_DATE_HISTORY
+    }
+    text = { localization_key = GO_ECON_GUI_NO_REPORT }
+}
+
+defined_text = {
+    name = GetGOResourceNativeAluminiumDetails
+    text = {
+        localization_key = GO_ECON_GUI_NATIVE_Aluminium_DETAILS
+    }
+}
+
+defined_text = {
+    name = GetGOMaterialRubberAvailable
+    text = {
+        trigger = { GO_econ_material_rubber_availability_report_ready = yes check_variable = { var = GO_econ_country_material_rubber_availability_remaining value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_rubber_availability_remaining value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialRubberAvailable_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_rubber_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialRubberAvailable_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialRubberDemand
+    text = {
+        trigger = { GO_econ_material_rubber_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_rubber_availability_requested_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_rubber_availability_requested_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialRubberDemand_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_rubber_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialRubberDemand_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialRubberAllocation
+    text = {
+        trigger = { GO_econ_material_rubber_availability_report_ready = yes check_variable = { var = GO_econ_country_material_rubber_availability_committed_allocation value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_rubber_availability_committed_allocation value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialRubberAllocation_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_rubber_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialRubberAllocation_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialRubberOutput
+    text = {
+        trigger = { GO_econ_material_rubber_availability_output_report_ready = yes check_variable = { var = GO_econ_country_material_rubber_availability_processing_output value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_rubber_availability_processing_output value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialRubberOutput_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_rubber_availability_output_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialRubberOutput_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialRubberExternal
+    text = {
+        trigger = { GO_econ_material_rubber_availability_report_ready = yes check_variable = { var = GO_econ_country_material_rubber_availability_external_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_rubber_availability_external_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialRubberExternal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_rubber_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialRubberExternal_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialRubberTotal
+    text = {
+        trigger = { GO_econ_material_rubber_availability_report_ready = yes check_variable = { var = GO_econ_country_material_rubber_availability_total_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_rubber_availability_total_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialRubberTotal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_rubber_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialRubberTotal_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialRubberShortage
+    text = {
+        trigger = { GO_econ_material_rubber_availability_complete_report_ready = yes check_variable = { var = GO_econ_country_material_rubber_availability_shortage value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_rubber_availability_shortage value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialRubberShortage_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_rubber_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialRubberShortage_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialRubberUnmet
+    text = {
+        trigger = { GO_econ_material_rubber_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_rubber_availability_unmet_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_rubber_availability_unmet_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialRubberUnmet_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_rubber_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialRubberUnmet_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialRubberDate
+    text = {
+        trigger = { GO_econ_material_rubber_availability_record_ready = yes check_variable = { GO_econ_country_material_rubber_availability_day = global.num_days } check_variable = { var = GO_econ_country_material_rubber_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_Rubber_DATE_CURRENT
+    }
+    text = {
+        trigger = { GO_econ_material_rubber_availability_record_ready = yes check_variable = { var = GO_econ_country_material_rubber_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_Rubber_DATE_HISTORY
+    }
+    text = { localization_key = GO_ECON_GUI_NO_REPORT }
+}
+
+defined_text = {
+    name = GetGOMaterialRubberCoverage
+    text = {
+        trigger = { GO_econ_material_rubber_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_COVERAGE_READY
+    }
+    text = { localization_key = GO_ECON_GUI_COVERAGE_INCOMPLETE }
+}
+
+defined_text = {
+    name = GetGOMaterialRubberSource
+    text = {
+        trigger = { GO_econ_material_rubber_source_installed_report_ready = yes }
+        localization_key = GO_ECON_GUI_SOURCE_PLANT_ONLY
+    }
+    text = { localization_key = GO_ECON_GUI_SOURCE_NOT_INSTALLED }
+}
+
+defined_text = {
+    name = GetGOResourceRubberDetails
+    text = {
+        localization_key = GO_ECON_GUI_Rubber_DETAILS
+    }
+}
+
+defined_text = {
+    name = GetGONativeRubberSurplus
+    text = {
+        trigger = { GO_econ_material_rubber_native_surplus_report_ready = yes check_variable = { var = GO_econ_country_material_rubber_source_native_surplus value = 0 compare = less_than } check_variable = { var = GO_econ_country_material_rubber_source_native_surplus value = -0.01 compare = greater_than } }
+        localization_key = GO_ECON_GUI_GetGONativeRubberSurplus_TINY_NEG
+    }
+    text = {
+        trigger = { GO_econ_material_rubber_native_surplus_report_ready = yes check_variable = { var = GO_econ_country_material_rubber_source_native_surplus value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_rubber_source_native_surplus value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeRubberSurplus_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_rubber_native_surplus_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeRubberSurplus_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeRubberProduced
+    text = {
+        trigger = { GO_econ_material_rubber_native_produced_report_ready = yes check_variable = { var = GO_econ_country_material_rubber_source_native_produced value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_rubber_source_native_produced value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeRubberProduced_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_rubber_native_produced_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeRubberProduced_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeRubberImported
+    text = {
+        trigger = { GO_econ_material_rubber_native_imported_report_ready = yes check_variable = { var = GO_econ_country_material_rubber_source_native_imported value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_rubber_source_native_imported value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeRubberImported_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_rubber_native_imported_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeRubberImported_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeRubberExported
+    text = {
+        trigger = { GO_econ_material_rubber_native_exported_report_ready = yes check_variable = { var = GO_econ_country_material_rubber_source_native_exported value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_rubber_source_native_exported value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeRubberExported_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_rubber_native_exported_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeRubberExported_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeRubberConsumed
+    text = {
+        trigger = { GO_econ_material_rubber_native_consumed_report_ready = yes check_variable = { var = GO_econ_country_material_rubber_source_native_consumed value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_rubber_source_native_consumed value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGONativeRubberConsumed_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_rubber_native_consumed_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGONativeRubberConsumed_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_UNOBSERVED }
+}
+
+defined_text = {
+    name = GetGONativeRubberDate
+    text = {
+        trigger = { GO_econ_material_rubber_source_attempt_ready = yes check_variable = { GO_econ_country_material_rubber_source_day = global.num_days } }
+        localization_key = GO_ECON_GUI_NATIVE_Rubber_DATE_CURRENT
+    }
+    text = {
+        trigger = { GO_econ_material_rubber_source_attempt_ready = yes }
+        localization_key = GO_ECON_GUI_NATIVE_Rubber_DATE_HISTORY
+    }
+    text = { localization_key = GO_ECON_GUI_NO_REPORT }
+}
+
+defined_text = {
+    name = GetGOResourceNativeRubberDetails
+    text = {
+        localization_key = GO_ECON_GUI_NATIVE_Rubber_DETAILS
+    }
+}
+
+defined_text = {
+    name = GetGOMaterialMicrochipsAvailable
+    text = {
+        trigger = { GO_econ_material_microchips_availability_report_ready = yes check_variable = { var = GO_econ_country_material_microchips_availability_remaining value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_microchips_availability_remaining value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialMicrochipsAvailable_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_microchips_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialMicrochipsAvailable_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_microchips_supply_record_ready = yes check_variable = { GO_econ_country_material_microchips_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialMicrochipsDemand
+    text = {
+        trigger = { GO_econ_material_microchips_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_microchips_availability_requested_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_microchips_availability_requested_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialMicrochipsDemand_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_microchips_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialMicrochipsDemand_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialMicrochipsAllocation
+    text = {
+        trigger = { GO_econ_material_microchips_availability_report_ready = yes check_variable = { var = GO_econ_country_material_microchips_availability_committed_allocation value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_microchips_availability_committed_allocation value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialMicrochipsAllocation_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_microchips_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialMicrochipsAllocation_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_microchips_supply_record_ready = yes check_variable = { GO_econ_country_material_microchips_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialMicrochipsOutput
+    text = {
+        trigger = { GO_econ_material_microchips_availability_output_report_ready = yes check_variable = { var = GO_econ_country_material_microchips_availability_processing_output value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_microchips_availability_processing_output value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialMicrochipsOutput_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_microchips_availability_output_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialMicrochipsOutput_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialMicrochipsExternal
+    text = {
+        trigger = { GO_econ_material_microchips_availability_report_ready = yes check_variable = { var = GO_econ_country_material_microchips_availability_external_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_microchips_availability_external_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialMicrochipsExternal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_microchips_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialMicrochipsExternal_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_microchips_supply_record_ready = yes check_variable = { GO_econ_country_material_microchips_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialMicrochipsTotal
+    text = {
+        trigger = { GO_econ_material_microchips_availability_report_ready = yes check_variable = { var = GO_econ_country_material_microchips_availability_total_supply value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_microchips_availability_total_supply value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialMicrochipsTotal_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_microchips_availability_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialMicrochipsTotal_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_microchips_supply_record_ready = yes check_variable = { GO_econ_country_material_microchips_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialMicrochipsShortage
+    text = {
+        trigger = { GO_econ_material_microchips_availability_complete_report_ready = yes check_variable = { var = GO_econ_country_material_microchips_availability_shortage value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_microchips_availability_shortage value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialMicrochipsShortage_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_microchips_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialMicrochipsShortage_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_microchips_supply_record_ready = yes check_variable = { GO_econ_country_material_microchips_supply_populated = 0 } }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialMicrochipsUnmet
+    text = {
+        trigger = { GO_econ_material_microchips_availability_demand_report_ready = yes check_variable = { var = GO_econ_country_material_microchips_availability_unmet_demand value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_microchips_availability_unmet_demand value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOMaterialMicrochipsUnmet_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_microchips_availability_demand_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOMaterialMicrochipsUnmet_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOMaterialMicrochipsDate
+    text = {
+        trigger = { GO_econ_material_microchips_availability_record_ready = yes check_variable = { GO_econ_country_material_microchips_availability_day = global.num_days } check_variable = { var = GO_econ_country_material_microchips_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_Microchips_DATE_CURRENT
+    }
+    text = {
+        trigger = { GO_econ_material_microchips_availability_record_ready = yes check_variable = { var = GO_econ_country_material_microchips_availability_day value = 0 compare = greater_than_or_equals } }
+        localization_key = GO_ECON_GUI_Microchips_DATE_HISTORY
+    }
+    text = { localization_key = GO_ECON_GUI_NO_REPORT }
+}
+
+defined_text = {
+    name = GetGOMaterialMicrochipsCoverage
+    text = {
+        trigger = { GO_econ_material_microchips_availability_complete_report_ready = yes }
+        localization_key = GO_ECON_GUI_COVERAGE_READY
+    }
+    text = { localization_key = GO_ECON_GUI_COVERAGE_INCOMPLETE }
+}
+
+defined_text = {
+    name = GetGOMaterialMicrochipsSource
+    text = {
+        trigger = { GO_econ_material_microchips_source_installed_report_ready = yes }
+        localization_key = GO_ECON_GUI_SOURCE_PLANT_ONLY
+    }
+    text = { localization_key = GO_ECON_GUI_SOURCE_NOT_INSTALLED }
+}
+
+defined_text = {
+    name = GetGOResourceMicrochipsDetails
+    text = {
+        localization_key = GO_ECON_GUI_Microchips_DETAILS
+    }
+}
+
+defined_text = {
+    name = GetGOReserveFuel
+    text = {
+        trigger = { GO_econ_gui_native_fuel_ready = yes check_variable = { var = fuel_k value = 0 compare = greater_than } check_variable = { var = fuel_k value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOReserveFuel_TINY
+    }
+    text = {
+        trigger = { GO_econ_gui_native_fuel_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOReserveFuel_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOReserveFuelCapacity
+    text = {
+        trigger = { GO_econ_gui_native_fuel_ready = yes check_variable = { var = max_fuel_k value = 0 compare = greater_than } check_variable = { var = max_fuel_k value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOReserveFuelCapacity_TINY
+    }
+    text = {
+        trigger = { GO_econ_gui_native_fuel_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOReserveFuelCapacity_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOReserveAmmunition
+    text = {
+        trigger = { GO_econ_gui_ammunition_reserve_ready = yes check_variable = { var = ammunition_variable value = 0 compare = less_than } check_variable = { var = ammunition_variable value = -0.01 compare = greater_than } }
+        localization_key = GO_ECON_GUI_GetGOReserveAmmunition_TINY_NEG
+    }
+    text = {
+        trigger = { GO_econ_gui_ammunition_reserve_ready = yes check_variable = { var = ammunition_variable value = 0 compare = greater_than } check_variable = { var = ammunition_variable value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOReserveAmmunition_TINY
+    }
+    text = {
+        trigger = { GO_econ_gui_ammunition_reserve_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOReserveAmmunition_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOReserveAmmunitionCapacity
+    text = {
+        trigger = { GO_econ_gui_ammunition_capacity_ready = yes check_variable = { var = ammunition_max value = 0 compare = greater_than } check_variable = { var = ammunition_max value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOReserveAmmunitionCapacity_TINY
+    }
+    text = {
+        trigger = { GO_econ_gui_ammunition_capacity_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOReserveAmmunitionCapacity_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOReserveAmmunitionGain
+    text = {
+        trigger = { GO_econ_gui_ammunition_flows_ready = yes check_variable = { var = ammunition_daily value = 0 compare = less_than } check_variable = { var = ammunition_daily value = -0.01 compare = greater_than } }
+        localization_key = GO_ECON_GUI_GetGOReserveAmmunitionGain_TINY_NEG
+    }
+    text = {
+        trigger = { GO_econ_gui_ammunition_flows_ready = yes check_variable = { var = ammunition_daily value = 0 compare = greater_than } check_variable = { var = ammunition_daily value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOReserveAmmunitionGain_TINY
+    }
+    text = {
+        trigger = { GO_econ_gui_ammunition_flows_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOReserveAmmunitionGain_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOReserveAmmunitionConsumption
+    text = {
+        trigger = { GO_econ_gui_ammunition_flows_ready = yes check_variable = { var = daily_ammo_need value = 0 compare = greater_than } check_variable = { var = daily_ammo_need value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOReserveAmmunitionConsumption_TINY
+    }
+    text = {
+        trigger = { GO_econ_gui_ammunition_flows_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOReserveAmmunitionConsumption_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOReserveFood
+    text = {
+        trigger = { GO_econ_country_has_material_food = yes check_variable = { var = GO_econ_country_material_food value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_food value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOReserveFood_TINY
+    }
+    text = {
+        trigger = { GO_econ_country_has_material_food = yes }
+        localization_key = GO_ECON_GUI_GetGOReserveFood_VALUE
+    }
+    text = {
+        trigger = { GO_econ_material_food_can_open = yes }
+        localization_key = GO_ECON_GUI_NOT_SET
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOReserveAmmunitionDate
+    text = {
+        trigger = { GO_econ_gui_ammunition_reserve_ready = yes check_variable = { GO_econ_country_ammunition_last_day = global.num_days } }
+        localization_key = GO_ECON_GUI_AMMO_CURRENT
+    }
+    text = {
+        trigger = { GO_econ_gui_ammunition_reserve_ready = yes }
+        localization_key = GO_ECON_GUI_AMMO_HISTORY
+    }
+    text = { localization_key = GO_ECON_GUI_NO_REPORT }
+}
+
+defined_text = {
+    name = GetGOReserveAmmunitionState
+    text = {
+        trigger = { GO_econ_gui_ammunition_reserve_ready = yes check_variable = { ammunition_variable < 0 } }
+        localization_key = GO_ECON_GUI_AMMO_DEFICIT
+    }
+    text = {
+        trigger = { GO_econ_gui_ammunition_reserve_ready = yes }
+        localization_key = GO_ECON_GUI_AMMO_STOCK
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOReserveFoodReceipt
+    text = {
+        trigger = { GO_econ_material_food_supply_report_ready = yes check_variable = { var = GO_econ_country_material_food_supply_received value = 0 compare = greater_than } check_variable = { var = GO_econ_country_material_food_supply_received value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_GetGOReserveFoodReceipt_TINY
+    }
+    text = {
+        trigger = { GO_econ_material_food_supply_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOReserveFoodReceipt_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOReserveFoodReceiptDate
+    text = {
+        trigger = { GO_econ_material_food_supply_report_ready = yes }
+        localization_key = GO_ECON_GUI_GetGOReserveFoodReceiptDate_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+# Stage 13 food production reads. Capacity, latest attempt and successful
+# receipts retain separate guards/dates; no producer or report refresh is called.
+defined_text = {
+    name = GetGOFoodProductionCapacity
+    text = {
+        trigger = { GO_econ_food_production_capacity_report_ready = yes }
+        localization_key = GO_ECON_GUI_FOOD_PRODUCTION_CAPACITY
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOFoodProductionCapacityDate
+    text = {
+        trigger = { GO_econ_food_production_capacity_report_ready = yes }
+        localization_key = GO_ECON_GUI_FOOD_PRODUCTION_CAPACITY_DATE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_REPORT }
+}
+
+defined_text = {
+    name = GetGOFoodProductionOutput
+    text = {
+        trigger = { GO_econ_food_production_report_ready = yes check_variable = { var = GO_econ_country_food_production_report_output value = 0 compare = greater_than } check_variable = { var = GO_econ_country_food_production_report_output value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_FOOD_PRODUCTION_OUTPUT_TINY
+    }
+    text = {
+        trigger = { GO_econ_food_production_report_ready = yes }
+        localization_key = GO_ECON_GUI_FOOD_PRODUCTION_OUTPUT
+    }
+    text = {
+        trigger = { GO_econ_food_production_attempt_ready = yes check_variable = { GO_econ_country_food_production_status = 0 } }
+        localization_key = GO_ECON_GUI_FOOD_PRODUCTION_UNAVAILABLE
+    }
+    text = {
+        trigger = { NOT = { GO_econ_country_has_material_food = yes } GO_econ_material_food_can_open = yes }
+        localization_key = GO_ECON_GUI_FOOD_PRODUCTION_RESERVE_UNSET
+    }
+    text = {
+        trigger = { GO_econ_food_production_capacity_report_ready = yes }
+        localization_key = GO_ECON_GUI_FOOD_PRODUCTION_PENDING
+    }
+    text = { localization_key = GO_ECON_GUI_NO_DATA }
+}
+
+defined_text = {
+    name = GetGOFoodProductionReportBasis
+    text = {
+        trigger = { GO_econ_food_production_report_ready = yes check_variable = { var = GO_econ_country_food_production_report_rate value = 0 compare = greater_than } check_variable = { var = GO_econ_country_food_production_report_rate value = 0.01 compare = less_than } }
+        localization_key = GO_ECON_GUI_FOOD_PRODUCTION_BASIS_TINY
+    }
+    text = {
+        trigger = { GO_econ_food_production_report_ready = yes }
+        localization_key = GO_ECON_GUI_FOOD_PRODUCTION_BASIS
+    }
+    text = { localization_key = GO_ECON_GUI_NO_REPORT }
+}
+
+defined_text = {
+    name = GetGOFoodProductionAttempt
+    text = {
+        trigger = { GO_econ_food_production_attempt_ready = yes check_variable = { GO_econ_country_food_production_status = 1 } }
+        localization_key = GO_ECON_GUI_FOOD_PRODUCTION_SUCCEEDED
+    }
+    text = {
+        trigger = { GO_econ_food_production_attempt_ready = yes check_variable = { GO_econ_country_food_production_status = 0 } }
+        localization_key = GO_ECON_GUI_FOOD_PRODUCTION_UNAVAILABLE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_REPORT }
+}
+
+defined_text = {
+    name = GetGOFoodProductionAttemptDate
+    text = {
+        trigger = { GO_econ_food_production_attempt_ready = yes }
+        localization_key = GO_ECON_GUI_FOOD_PRODUCTION_ATTEMPT_DATE
+    }
+    text = { localization_key = GO_ECON_GUI_NO_REPORT }
+}
+
+defined_text = {
+    name = GetGOReserveFuelDetails
+    text = {
+        localization_key = GO_ECON_GUI_RESERVE_FUEL_DETAILS
+    }
+}
+
+defined_text = {
+    name = GetGOReserveAmmunitionDetails
+    text = {
+        localization_key = GO_ECON_GUI_RESERVE_AMMUNITION_DETAILS
+    }
+}
+
+defined_text = {
+    name = GetGOReserveFoodDetails
+    text = {
+        localization_key = GO_ECON_GUI_RESERVE_FOOD_DETAILS
+    }
+}
+
+# Stage 11 section explanations and assignment summaries. No economic effects.
+
+defined_text = {
+    name = GetGOEconomySummaryStatus
+    text = {
+        trigger = { GO_econ_gui_summary_has_data = yes }
+        localization_key = GO_ECON_UI_SUMMARY_PARTIAL
+    }
+    text = {
+        trigger = { NOT = { GO_econ_country_ledger_initialized = yes } }
+        localization_key = GO_ECON_UI_SUMMARY_UNINITIALIZED
+    }
+    text = {
+        localization_key = GO_ECON_UI_SUMMARY_EMPTY
+    }
+}
+
+defined_text = {
+    name = GetGOEconomyFiscalUnavailable
+    text = {
+        trigger = { NOT = { GO_econ_country_fiscal_initialized = yes } }
+        localization_key = GO_ECON_UI_FISCAL_UNINITIALIZED
+    }
+    text = {
+        trigger = { has_variable = GO_econ_country_last_processed_month check_variable = { GO_econ_country_last_processed_month > 0 } }
+        localization_key = GO_ECON_UI_FISCAL_INCOMPLETE
+    }
+    text = {
+        trigger = { NOT = { has_country_flag = GO_econ_fiscal_campaign_access } }
+        localization_key = GO_ECON_UI_FISCAL_INACTIVE
+    }
+    text = {
+        localization_key = GO_ECON_UI_FISCAL_NO_CLOSE
+    }
+}
+
+defined_text = {
+    name = GetGOEconomyCapitalSpending
+    text = {
+        trigger = { GO_econ_gui_capital_spending_ready = yes check_variable = { GO_econ_country_capital_expenses_last > 0 } check_variable = { GO_econ_country_capital_expenses_last < 0.01 } }
+        localization_key = GO_ECON_GUI_AMOUNT_TINY
+    }
+    text = {
+        trigger = { GO_econ_gui_capital_spending_ready = yes }
+        localization_key = GO_ECON_GUI_CAPITALSPENDING_VALUE
+    }
+    text = {
+        localization_key = GO_ECON_GUI_FISCAL_UNAVAILABLE
+    }
+}
+
+defined_text = {
+    name = GetGOEconomyCapitalRefunds
+    text = {
+        trigger = { GO_econ_gui_capital_refunds_ready = yes check_variable = { GO_econ_country_capital_refunds_last > 0 } check_variable = { GO_econ_country_capital_refunds_last < 0.01 } }
+        localization_key = GO_ECON_GUI_AMOUNT_TINY
+    }
+    text = {
+        trigger = { GO_econ_gui_capital_refunds_ready = yes }
+        localization_key = GO_ECON_GUI_CAPITALREFUNDS_VALUE
+    }
+    text = {
+        localization_key = GO_ECON_GUI_FISCAL_UNAVAILABLE
+    }
+}
+
+defined_text = {
+    name = GetGOEconomyReportSpan
+    text = {
+        trigger = { GO_econ_country_fiscal_report_ready = yes }
+        localization_key = GO_ECON_GUI_REPORT_SPAN
+    }
+    text = {
+        localization_key = GO_ECON_GUI_FISCAL_UNAVAILABLE
+    }
+}
+
+defined_text = {
+    name = GetGOEconomyPendingCivil
+    text = {
+        trigger = { GO_econ_ui_pending_pu_counts_ready = yes }
+        localization_key = GO_ECON_GUI_PENDING_CIVIL_VALUE
+    }
+    text = {
+        localization_key = GO_ECON_GUI_PU_REQUEST_UNAVAILABLE
+    }
+}
+
+defined_text = {
+    name = GetGOEconomyPendingMilitary
+    text = {
+        trigger = { GO_econ_ui_pending_pu_counts_ready = yes }
+        localization_key = GO_ECON_GUI_PENDING_MILITARY_VALUE
+    }
+    text = {
+        localization_key = GO_ECON_GUI_PU_REQUEST_UNAVAILABLE
+    }
+}
+
+defined_text = {
+    name = GetGOEconomyEffectiveCivil
+    text = {
+        trigger = { GO_econ_country_pu_allocation_ready = yes }
+        localization_key = GO_ECON_GUI_EFFECTIVE_CIVIL_VALUE
+    }
+    text = {
+        localization_key = GO_ECON_GUI_PU_EFFECTIVE_UNAVAILABLE
+    }
+}
+
+defined_text = {
+    name = GetGOEconomyEffectiveMilitary
+    text = {
+        trigger = { GO_econ_country_pu_allocation_ready = yes }
+        localization_key = GO_ECON_GUI_EFFECTIVE_MILITARY_VALUE
+    }
+    text = {
+        localization_key = GO_ECON_GUI_PU_EFFECTIVE_UNAVAILABLE
+    }
+}
+
+defined_text = {
+    name = GetGOEconomyRequestedShare
+    text = {
+        trigger = { GO_econ_country_has_requested_civil_percent = yes }
+        localization_key = GO_ECON_GUI_REQUESTED_SHARE_VALUE
+    }
+    text = {
+        localization_key = GO_ECON_GUI_PU_REQUEST_UNAVAILABLE
+    }
+}
+
+defined_text = {
+    name = GetGOEconomyPUUnavailable
+    text = {
+        trigger = { NOT = { has_country_flag = GO_econ_production_units_access } }
+        localization_key = GO_ECON_UI_PU_INACTIVE
+    }
+    text = {
+        trigger = { NOT = { GO_econ_country_pu_capacity_ready = yes } }
+        localization_key = GO_ECON_UI_PU_INPUTS_INCOMPLETE
+    }
+    text = {
+        localization_key = GO_ECON_UI_PU_SAVED_INCOMPLETE
+    }
+}
+
+defined_text = {
+    name = GetGOEconomyPlantBuilt
+    text = {
+        trigger = { GO_econ_ui_plant_row_ready = yes }
+        localization_key = GO_ECON_GUI_PLANT_BUILT_VALUE
+    }
+    text = {
+        localization_key = GO_ECON_GUI_PLANT_CAPACITY_UNAVAILABLE
+    }
+}
+
+defined_text = {
+    name = GetGOEconomyPlantAssigned
+    text = {
+        trigger = { GO_econ_ui_plant_row_assignment_ready = yes }
+        localization_key = GO_ECON_GUI_PLANT_ASSIGNED_VALUE
+    }
+    text = {
+        trigger = { GO_econ_ui_plant_row_unconfigured = yes }
+        localization_key = GO_ECON_GUI_PLANT_AWAITING
+    }
+    text = {
+        localization_key = GO_ECON_GUI_PLANT_ASSIGNMENT_UNAVAILABLE
+    }
+}
+
+defined_text = {
+    name = GetGOEconomyPlantAssignmentStatus
+    text = {
+        trigger = { GO_econ_ui_plant_row_assignment_ready = yes }
+        localization_key = GO_ECON_GUI_PLANT_ASSIGNED
+    }
+    text = {
+        trigger = { GO_econ_ui_plant_row_unconfigured = yes }
+        localization_key = GO_ECON_GUI_PLANT_AWAITING
+    }
+    text = {
+        localization_key = GO_ECON_GUI_PLANT_ASSIGNMENT_UNAVAILABLE
+    }
+}
+
+defined_text = {
+    name = GetGOEconomyPlantFamilyTitle
+    text = {
+        trigger = { has_variable = GO_econ_ui_plant_family check_variable = { GO_econ_ui_plant_family = 2 } }
+        localization_key = GO_ECON_UI_PLANT_ALUMINIUM
+    }
+    text = {
+        trigger = { has_variable = GO_econ_ui_plant_family check_variable = { GO_econ_ui_plant_family = 3 } }
+        localization_key = GO_ECON_UI_PLANT_RUBBER
+    }
+    text = {
+        trigger = { has_variable = GO_econ_ui_plant_family check_variable = { GO_econ_ui_plant_family = 4 } }
+        localization_key = GO_ECON_UI_PLANT_MICROCHIPS
+    }
+    text = {
+        trigger = { has_variable = GO_econ_ui_plant_family check_variable = { GO_econ_ui_plant_family = 5 } }
+        localization_key = GO_ECON_UI_PLANT_AMMUNITION
+    }
+    text = {
+        trigger = { OR = { NOT = { has_variable = GO_econ_ui_plant_family } check_variable = { GO_econ_ui_plant_family = 1 } } }
+        localization_key = GO_ECON_UI_PLANT_STEEL
+    }
+    text = {
+        localization_key = GO_ECON_UI_PLANT_TYPE_UNAVAILABLE
+    }
+}
+
+defined_text = {
+    name = GetGOEconomyPlantsUnavailable
+    text = {
+        trigger = { GO_econ_ui_country_has_selected_plants = yes }
+        localization_key = GO_ECON_UI_PLANTS_REFRESH_NEEDED
+    }
+    text = {
+        localization_key = GO_ECON_UI_PLANTS_EMPTY
+    }
+}
+
+defined_text = {
+    name = GetGOEconomyCivilSlot1
+    text = {
+        trigger = {
+            set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+            set_temp_variable = { GO_econ_ui_slot_index = 1 }
+            GO_econ_ui_prepare_pu_slot = yes
+        }
+        localization_key = GO_ECON_GUI_PU_SLOT_TARGET_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_SLOT_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyCivilSlot2
+    text = {
+        trigger = {
+            set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+            set_temp_variable = { GO_econ_ui_slot_index = 2 }
+            GO_econ_ui_prepare_pu_slot = yes
+        }
+        localization_key = GO_ECON_GUI_PU_SLOT_TARGET_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_SLOT_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyCivilSlot3
+    text = {
+        trigger = {
+            set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+            set_temp_variable = { GO_econ_ui_slot_index = 3 }
+            GO_econ_ui_prepare_pu_slot = yes
+        }
+        localization_key = GO_ECON_GUI_PU_SLOT_TARGET_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_SLOT_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyCivilSlot4
+    text = {
+        trigger = {
+            set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+            set_temp_variable = { GO_econ_ui_slot_index = 4 }
+            GO_econ_ui_prepare_pu_slot = yes
+        }
+        localization_key = GO_ECON_GUI_PU_SLOT_TARGET_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_SLOT_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyCivilSlot5
+    text = {
+        trigger = {
+            set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+            set_temp_variable = { GO_econ_ui_slot_index = 5 }
+            GO_econ_ui_prepare_pu_slot = yes
+        }
+        localization_key = GO_ECON_GUI_PU_SLOT_TARGET_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_SLOT_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyCivilSlot6
+    text = {
+        trigger = {
+            set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+            set_temp_variable = { GO_econ_ui_slot_index = 6 }
+            GO_econ_ui_prepare_pu_slot = yes
+        }
+        localization_key = GO_ECON_GUI_PU_SLOT_TARGET_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_SLOT_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyCivilSlot7
+    text = {
+        trigger = {
+            set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+            set_temp_variable = { GO_econ_ui_slot_index = 7 }
+            GO_econ_ui_prepare_pu_slot = yes
+        }
+        localization_key = GO_ECON_GUI_PU_SLOT_TARGET_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_SLOT_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyCivilSlot8
+    text = {
+        trigger = {
+            set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+            set_temp_variable = { GO_econ_ui_slot_index = 8 }
+            GO_econ_ui_prepare_pu_slot = yes
+        }
+        localization_key = GO_ECON_GUI_PU_SLOT_TARGET_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_SLOT_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyCivilSlot9
+    text = {
+        trigger = {
+            set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+            set_temp_variable = { GO_econ_ui_slot_index = 9 }
+            GO_econ_ui_prepare_pu_slot = yes
+        }
+        localization_key = GO_ECON_GUI_PU_SLOT_TARGET_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_SLOT_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyCivilSlot10
+    text = {
+        trigger = {
+            set_temp_variable = { GO_econ_ui_candidate_kind = 1 }
+            set_temp_variable = { GO_econ_ui_slot_index = 10 }
+            GO_econ_ui_prepare_pu_slot = yes
+        }
+        localization_key = GO_ECON_GUI_PU_SLOT_TARGET_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_SLOT_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyMilitarySlot1
+    text = {
+        trigger = {
+            set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+            set_temp_variable = { GO_econ_ui_slot_index = 1 }
+            GO_econ_ui_prepare_pu_slot = yes
+        }
+        localization_key = GO_ECON_GUI_PU_SLOT_TARGET_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_SLOT_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyMilitarySlot2
+    text = {
+        trigger = {
+            set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+            set_temp_variable = { GO_econ_ui_slot_index = 2 }
+            GO_econ_ui_prepare_pu_slot = yes
+        }
+        localization_key = GO_ECON_GUI_PU_SLOT_TARGET_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_SLOT_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyMilitarySlot3
+    text = {
+        trigger = {
+            set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+            set_temp_variable = { GO_econ_ui_slot_index = 3 }
+            GO_econ_ui_prepare_pu_slot = yes
+        }
+        localization_key = GO_ECON_GUI_PU_SLOT_TARGET_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_SLOT_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyMilitarySlot4
+    text = {
+        trigger = {
+            set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+            set_temp_variable = { GO_econ_ui_slot_index = 4 }
+            GO_econ_ui_prepare_pu_slot = yes
+        }
+        localization_key = GO_ECON_GUI_PU_SLOT_TARGET_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_SLOT_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyMilitarySlot5
+    text = {
+        trigger = {
+            set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+            set_temp_variable = { GO_econ_ui_slot_index = 5 }
+            GO_econ_ui_prepare_pu_slot = yes
+        }
+        localization_key = GO_ECON_GUI_PU_SLOT_TARGET_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_SLOT_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyMilitarySlot6
+    text = {
+        trigger = {
+            set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+            set_temp_variable = { GO_econ_ui_slot_index = 6 }
+            GO_econ_ui_prepare_pu_slot = yes
+        }
+        localization_key = GO_ECON_GUI_PU_SLOT_TARGET_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_SLOT_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyMilitarySlot7
+    text = {
+        trigger = {
+            set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+            set_temp_variable = { GO_econ_ui_slot_index = 7 }
+            GO_econ_ui_prepare_pu_slot = yes
+        }
+        localization_key = GO_ECON_GUI_PU_SLOT_TARGET_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_SLOT_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyMilitarySlot8
+    text = {
+        trigger = {
+            set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+            set_temp_variable = { GO_econ_ui_slot_index = 8 }
+            GO_econ_ui_prepare_pu_slot = yes
+        }
+        localization_key = GO_ECON_GUI_PU_SLOT_TARGET_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_SLOT_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyMilitarySlot9
+    text = {
+        trigger = {
+            set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+            set_temp_variable = { GO_econ_ui_slot_index = 9 }
+            GO_econ_ui_prepare_pu_slot = yes
+        }
+        localization_key = GO_ECON_GUI_PU_SLOT_TARGET_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_SLOT_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyMilitarySlot10
+    text = {
+        trigger = {
+            set_temp_variable = { GO_econ_ui_candidate_kind = 2 }
+            set_temp_variable = { GO_econ_ui_slot_index = 10 }
+            GO_econ_ui_prepare_pu_slot = yes
+        }
+        localization_key = GO_ECON_GUI_PU_SLOT_TARGET_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_SLOT_UNAVAILABLE }
+}
+
+# COUNTRY. Native scoped-variable localization follows installed
+# aat_events_l_english.yml:1923-1924 and 09_aat_on_actions.txt:1760 (1.18.3).
+defined_text = {
+    name = GetGOEconomyPlantStateName
+    text = {
+        trigger = { GO_econ_ui_plant_row_value_valid = yes }
+        localization_key = GO_ECON_GUI_PLANT_STATE_NAME_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_PLANT_STATE_UNAVAILABLE }
+}
+
+# Stage 12. Closed actual income and an unpaid next-month estimate are distinct.
+defined_text = {
+    name = GetGOEconomyGDPIncome
+    text = {
+        trigger = { GO_econ_country_gdp_income_report_ready = yes check_variable = { GO_econ_country_gdp_income_last > 0 } check_variable = { GO_econ_country_gdp_income_last < 0.01 } }
+        localization_key = GO_ECON_GUI_GDP_INCOME_TINY
+    }
+    text = {
+        trigger = { GO_econ_country_gdp_income_report_ready = yes }
+        localization_key = GO_ECON_GUI_GDP_INCOME_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_FISCAL_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyOtherIncome
+    text = {
+        trigger = { GO_econ_country_gdp_income_report_ready = yes check_variable = { GO_econ_country_other_income_last > 0 } check_variable = { GO_econ_country_other_income_last < 0.01 } }
+        localization_key = GO_ECON_GUI_OTHER_INCOME_TINY
+    }
+    text = {
+        trigger = { GO_econ_country_gdp_income_report_ready = yes }
+        localization_key = GO_ECON_GUI_OTHER_INCOME_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_FISCAL_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyGDPIncomePreview
+    text = {
+        trigger = { GO_econ_country_gdp_income_preview_ready = yes check_variable = { GO_econ_country_gdp_income_preview > 0 } check_variable = { GO_econ_country_gdp_income_preview < 0.01 } }
+        localization_key = GO_ECON_GUI_GDP_INCOME_PREVIEW_TINY
+    }
+    text = {
+        trigger = { GO_econ_country_gdp_income_preview_ready = yes }
+        localization_key = GO_ECON_GUI_GDP_INCOME_PREVIEW_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_FISCAL_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyGDPIncomePreviewLine
+    text = {
+        trigger = { GO_econ_country_gdp_income_preview_ready = yes }
+        localization_key = GO_ECON_GUI_GDP_INCOME_PREVIEW_LINE
+    }
+    text = { localization_key = GO_ECON_GUI_FISCAL_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyGDPIncomePreviewDetails
+    text = {
+        trigger = { GO_econ_country_gdp_income_preview_ready = yes }
+        localization_key = GO_ECON_GUI_GDP_INCOME_PREVIEW_DETAILS
+    }
+    text = { localization_key = GO_ECON_GUI_FISCAL_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyFiscalPeriod
+    text = {
+        trigger = { GO_econ_country_fiscal_report_ready = yes }
+        localization_key = GO_ECON_GUI_FISCAL_PERIOD
+    }
+    text = { localization_key = GO_ECON_GUI_FISCAL_UNAVAILABLE }
+}
+
+# National Plants controls read a dated regular-country presentation scan;
+# the operating result is separately guarded and retains its recorded day.
+defined_text = {
+    name = GetGOEconomyNationalPlantBuilt
+    text = {
+        trigger = { GO_econ_ui_national_plant_capacity_ready = yes }
+        localization_key = GO_ECON_GUI_NATIONAL_PLANT_BUILT_VALUE
+    }
+    text = { localization_key = GO_ECON_GUI_PLANT_CAPACITY_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyNationalPlantAssigned
+    text = {
+        trigger = { GO_econ_ui_national_plant_assignment_ready = yes }
+        localization_key = GO_ECON_GUI_NATIONAL_PLANT_ASSIGNED_VALUE
+    }
+    text = {
+        trigger = { GO_econ_ui_national_plant_writable = yes }
+        localization_key = GO_ECON_GUI_PLANT_AWAITING
+    }
+    text = { localization_key = GO_ECON_GUI_PLANT_ASSIGNMENT_UNAVAILABLE }
+}
+
+defined_text = {
+    name = GetGOEconomyNationalPlantOperating
+    text = {
+        trigger = {
+            OR = { NOT = { has_variable = GO_econ_ui_plant_family } check_variable = { GO_econ_ui_plant_family = 1 } }
+            GO_econ_country_steel_plant_availability_report_ready = yes
+        }
+        localization_key = GO_ECON_GUI_NATIONAL_PLANT_STEEL_OPERATING_VALUE
+    }
+    text = {
+        trigger = {
+            has_variable = GO_econ_ui_plant_family check_variable = { GO_econ_ui_plant_family = 2 }
+            GO_econ_country_aluminium_plant_availability_report_ready = yes
+        }
+        localization_key = GO_ECON_GUI_NATIONAL_PLANT_ALUMINIUM_OPERATING_VALUE
+    }
+    text = {
+        trigger = {
+            has_variable = GO_econ_ui_plant_family check_variable = { GO_econ_ui_plant_family = 3 }
+            GO_econ_country_rubber_plant_availability_report_ready = yes
+        }
+        localization_key = GO_ECON_GUI_NATIONAL_PLANT_RUBBER_OPERATING_VALUE
+    }
+    text = {
+        trigger = {
+            has_variable = GO_econ_ui_plant_family check_variable = { GO_econ_ui_plant_family = 4 }
+            GO_econ_country_microchips_plant_availability_report_ready = yes
+        }
+        localization_key = GO_ECON_GUI_NATIONAL_PLANT_MICROCHIPS_OPERATING_VALUE
+    }
+    text = {
+        trigger = {
+            has_variable = GO_econ_ui_plant_family check_variable = { GO_econ_ui_plant_family = 5 }
+            GO_econ_country_ammunition_plant_availability_report_ready = yes
+        }
+        localization_key = GO_ECON_GUI_NATIONAL_PLANT_AMMUNITION_OPERATING_VALUE
+    }
+    text = { localization_key = GO_ECON_UI_NATIONAL_PLANT_NO_RESULT }
+}
+
+defined_text = {
+    name = GetGOEconomyNationalPlantStatus
+    text = {
+        trigger = { NOT = { has_variable = GO_econ_ui_plant_scan_populated } }
+        localization_key = GO_ECON_UI_NATIONAL_PLANT_NOT_SCANNED
+    }
+    text = {
+        trigger = { NOT = { GO_econ_ui_national_plant_capacity_ready = yes } }
+        localization_key = GO_ECON_UI_NATIONAL_PLANT_CAPACITY_INVALID
+    }
+    text = {
+        trigger = { NOT = { GO_econ_ui_national_plant_writable = yes } }
+        localization_key = GO_ECON_UI_NATIONAL_PLANT_RECORDS_INVALID
+    }
+    text = {
+        trigger = {
+            GO_econ_ui_national_plant_capacity_ready = yes
+            check_variable = { GO_econ_ui_plant_scan_built = 0 }
+        }
+        localization_key = GO_ECON_UI_PLANTS_EMPTY
+    }
+    text = {
+        trigger = { GO_econ_ui_national_plant_assignment_ready = yes }
+        localization_key = GO_ECON_UI_NATIONAL_PLANT_CONFIGURED
+    }
+    text = { localization_key = GO_ECON_UI_NATIONAL_PLANT_NEEDS_ASSIGNMENT }
+}
+
+# A capacity scan date is presentation history, not a production result date.
+defined_text = {
+    name = GetGOEconomyNationalPlantScanDate
+    text = {
+        trigger = { GO_econ_ui_national_plant_capacity_ready = yes }
+        localization_key = GO_ECON_GUI_NATIONAL_PLANT_SCAN_DATE_VALUE
+    }
+    text = { localization_key = GO_ECON_UI_NATIONAL_PLANT_SCAN_UNAVAILABLE }
+}

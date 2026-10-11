@@ -1,0 +1,1956 @@
+# Gruppa Ost Stage 12 - authored 2027 bookmark GDP, COUNTRY dispatcher / STATE leaf.
+# Annual real GDP: billions of the common constant-2027 reference currency.
+# Fictional calibration, not measured regional GDP or a verified 2027 forecast.
+# Official 2024 national anchors and projection assumptions: docs/HOI4_MOD_DESIGN.md.
+# Static state values use the current state-history population shares, rounded to
+# 0.001 billion by largest remainder. Native population remains the runtime
+# per-capita denominator; this file never writes population or reads factories.
+# SOV 2150 / USA 31000 / CHI 20500 / FRA 3450 are editable scenario totals.
+# No startup hook lives here. The fresh-start campaign authoring integration alone
+# sets GO_econ_2027_startup_authoring = 1 on the requesting COUNTRY before calling.
+# Existing saves and partially initialized/authored records are never repaired here.
+
+# STATE, entered directly from the country dataset. GDP/growth inputs only.
+GO_econ_author_2027_state_gdp = {
+    if = {
+        limit = {
+            PREV = {
+                exists = yes
+                has_variable = GO_econ_2027_startup_authoring
+                check_variable = { GO_econ_2027_startup_authoring = 1 }
+                has_variable = GO_econ_country_2027_gdp_authored_states
+            }
+            is_owned_by = PREV
+            is_controlled_by = PREV
+            GO_econ_state_fiscal_initialized = yes
+            has_variable = GO_econ_work_2027_starting_gdp
+            check_variable = { var = GO_econ_work_2027_starting_gdp value = 0 compare = greater_than_or_equals }
+            has_variable = GO_econ_state_gdp
+            has_variable = GO_econ_state_gdp_populated
+            check_variable = { GO_econ_state_gdp = 0 }
+            check_variable = { GO_econ_state_gdp_populated = 0 }
+            has_variable = GO_econ_state_growth_modifier_percent
+            has_variable = GO_econ_state_growth_modifier_percent_populated
+            check_variable = { GO_econ_state_growth_modifier_percent = 0 }
+            check_variable = { GO_econ_state_growth_modifier_percent_populated = 0 }
+            has_variable = GO_econ_state_last_service_month
+            check_variable = { GO_econ_state_last_service_month = -1 }
+            has_variable = GO_econ_state_last_growth_month
+            check_variable = { GO_econ_state_last_growth_month = -1 }
+            has_variable = GO_econ_state_project_active
+            check_variable = { GO_econ_state_project_active = 0 }
+            NOT = { has_variable = GO_econ_state_project_sponsor }
+            NOT = { has_variable = GO_econ_state_2027_gdp_authored }
+        }
+        set_variable = { GO_econ_state_gdp = GO_econ_work_2027_starting_gdp }
+        set_variable = { GO_econ_state_gdp_populated = 1 }
+        # Explicit known zero: no additional modifier beyond the approved base rate.
+        set_variable = { GO_econ_state_growth_modifier_percent = 0 }
+        set_variable = { GO_econ_state_growth_modifier_percent_populated = 1 }
+        set_variable = { GO_econ_state_2027_gdp_authored = 1 }
+        PREV = { add_to_variable = { GO_econ_country_2027_gdp_authored_states = 1 } }
+    }
+    clear_variable = GO_econ_work_2027_starting_gdp
+}
+
+# COUNTRY. The owner keeps the fresh-start authoring marker live only for setup.
+# The result is provenance/coverage metadata, never a second GDP ledger.
+GO_econ_author_2027_bookmark_gdp = {
+    if = {
+        limit = {
+            exists = yes
+            has_variable = GO_econ_2027_startup_authoring
+            check_variable = { GO_econ_2027_startup_authoring = 1 }
+            GO_econ_country_fiscal_initialized = yes
+            NOT = { has_variable = GO_econ_country_2027_gdp_dataset_complete }
+            NOT = { has_variable = GO_econ_country_2027_gdp_authored_states }
+            OR = { tag = SOV tag = USA tag = CHI tag = FRA }
+        }
+        set_variable = { GO_econ_country_2027_gdp_dataset_complete = 0 }
+        set_variable = { GO_econ_country_2027_gdp_authored_states = 0 }
+        if = {
+            limit = { tag = SOV }
+            set_variable = { GO_econ_country_2027_gdp_expected_states = 112 }
+            GO_econ_author_2027_SOV_gdp = yes
+        }
+        else_if = {
+            limit = { tag = USA }
+            set_variable = { GO_econ_country_2027_gdp_expected_states = 52 }
+            GO_econ_author_2027_USA_gdp = yes
+        }
+        else_if = {
+            limit = { tag = CHI }
+            set_variable = { GO_econ_country_2027_gdp_expected_states = 61 }
+            GO_econ_author_2027_CHI_gdp = yes
+        }
+        else_if = {
+            limit = { tag = FRA }
+            set_variable = { GO_econ_country_2027_gdp_expected_states = 33 }
+            GO_econ_author_2027_FRA_gdp = yes
+        }
+        if = {
+            limit = {
+                check_variable = { GO_econ_country_2027_gdp_authored_states = GO_econ_country_2027_gdp_expected_states }
+            }
+            set_variable = { GO_econ_country_2027_gdp_dataset_complete = 1 }
+        }
+    }
+}
+
+# SOV: 112 starting owned-and-controlled states; authored total 2150 billion.
+GO_econ_author_2027_SOV_gdp = {
+    if = {
+        limit = {
+            tag = SOV
+            has_variable = GO_econ_2027_startup_authoring
+            check_variable = { GO_econ_2027_startup_authoring = 1 }
+            has_variable = GO_econ_country_2027_gdp_authored_states
+            check_variable = { GO_econ_country_2027_gdp_dataset_complete = 0 }
+        }
+        40 = { # 40-USSR; native history population 2,107,451
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 38.016 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        137 = { # 137-Crimea; native history population 2,416,856
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 43.597 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        146 = { # 146-Karelia; native history population 604,427
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 10.903 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        147 = { # 147-Salla; native history population 4,630
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.084 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        195 = { # 195-Leningrad Area; native history population 5,536,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 99.862 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        205 = { # 205-Hrodna; native history population 1,121,004
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 20.221 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        208 = { # 208-Pskov; native history population 341,819
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 6.166 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        209 = { # 209-Smolensk; native history population 639,587
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 11.537 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        210 = { # 210-Bryansk; native history population 830,133
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 14.975 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        213 = { # 213-Murmansk; native history population 275,751
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 4.974 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        214 = { # 214-Arkhangelsk; native history population 577,985
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 10.426 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        215 = { # 215-Eastern Karelia; native history population 214,858
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 3.876 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        216 = { # 216-Below Zero; native history population 229,564
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 4.141 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        217 = { # 217-Stalingrad Area; native history population 2,500,781
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 45.111 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        218 = { # 218-Rostov Area; native history population 4,200,729
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 75.776 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        219 = { # 219-Moscow Area; native history population 8,524,665
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 153.774 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        220 = { # 220-Kursk Area; native history population 1,680,086
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 30.307 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        222 = { # 222-Orel; native history population 1,218,607
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 21.982 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        223 = { # 223-tula; native history population 1,635,549
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 29.503 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        224 = { # 224-Bryansk; native history population 1,707,567
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 30.802 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        232 = { # 232-Grozny; native history population 1,358,292
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 24.502 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        233 = { # 233-Caucasus Mountains; native history population 466,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 8.406 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        234 = { # 234-Krasodar; native history population 5,838,273
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 105.315 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        235 = { # 235-Stravropol; native history population 1,316,516
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 23.748 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        236 = { # 236-Astrakhan; native history population 647,208
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 11.675 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        237 = { # 237-Elista; native history population 169,620
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 3.060 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        238 = { # 238-volgodonsk; native history population 556,677
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 10.042 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        239 = { # 239-Saratov; native history population 1,226,088
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 22.117 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        240 = { # 240-Voronezh; native history population 1,540,486
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 27.788 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        242 = { # 242-Smolensk; native history population 1,300,028
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 23.451 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        243 = { # 243-Roslavl; native history population 576,210
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 10.394 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        244 = { # 244-Gatchina; native history population 195,325
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 3.523 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        245 = { # 245-Donetsk; native history population 761,769
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 13.741 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        246 = { # 246-Rzhev; native history population 1,025,458
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 18.498 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        247 = { # 247-Tver; native history population 1,331,211
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 24.013 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        248 = { # 248-Yaroslavl; native history population 1,664,541
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 30.026 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        249 = { # 249-Kazan; native history population 2,761,291
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 49.810 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        250 = { # 250-ulyanovsky; native history population 1,630,524
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 29.413 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        251 = { # 251-Samara; native history population 1,391,819
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 25.107 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        252 = { # 252-Nizhny Novogrod; native history population 3,378,176
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 60.938 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        253 = { # 253-Ivanovo; native history population 2,585,987
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 46.648 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        254 = { # 254-Ryazan; native history population 1,824,120
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 32.905 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        255 = { # 255-Penza; native history population 2,342,937
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 42.264 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        256 = { # 256-Cheboksary; native history population 786,030
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 14.179 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        257 = { # 257-Livny; native history population 1,779,583
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 32.101 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        258 = { # 258-lipetsk; native history population 1,282,096
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 23.127 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        260 = { # 260-Borisoglbsk; native history population 2,567,983
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 46.323 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        262 = { # 262-Torzhok; native history population 21,795
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.393 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        263 = { # 263-Veliky Novogrod; native history population 1,092,577
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 19.709 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        264 = { # 264-Tikhvin; native history population 185,559
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 3.347 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        265 = { # 265-Mikhaylovka; native history population 468,781
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 8.456 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        329 = { # 329-Tannu Tuva; native history population 85,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 1.533 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        351 = { # 351-Vologda; native history population 2,352,100
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 42.429 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        397 = { # 397-Syktyvkar; native history population 137,203
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 2.475 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        398 = { # 398-Perm; native history population 2,135,879
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 38.529 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        399 = { # 399-Izhevsk; native history population 1,324,935
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 23.900 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        400 = { # 400-Kirov; native history population 2,115,475
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 38.160 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        401 = { # 401-Engels; native history population 309,530
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 5.584 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        403 = { # 403-Kharabali; native history population 939,067
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 16.940 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        408 = { # 408-Vladivostok; native history population 841,465
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 15.179 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        409 = { # 409-Khabarovsk; native history population 295,605
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 5.332 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        516 = { # 516-Northern Siberia; native history population 6,004
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.108 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        537 = { # 537-South Sakhalin; native history population 295,196
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 5.325 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        555 = { # 555-Lagos; native history population 15,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.271 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        560 = { # 560-TS 2; native history population 97,663
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 1.762 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        561 = { # 561-TS 3; native history population 454,281
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 8.195 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        562 = { # 562-TS 4; native history population 63,480
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 1.145 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        563 = { # 563-TS 5; native history population 1,044,310
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 18.838 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        564 = { # 564-TS 6; native history population 370,893
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 6.690 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        565 = { # 565-TS 7; native history population 195,325
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 3.523 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        566 = { # 566-TS 8; native history population 755,237
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 13.624 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        567 = { # 567-TS 9; native history population 410,183
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 7.399 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        568 = { # 568-TS 10; native history population 1,726,427
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 31.143 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        569 = { # 569-TS 11; native history population 1,567,322
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 28.272 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        570 = { # 570-TS 12; native history population 1,765,369
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 31.845 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        571 = { # 571-TS 13; native history population 1,317,157
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 23.760 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        572 = { # 572-TS 14; native history population 2,074,932
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 37.429 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        573 = { # 573-Ts 15; native history population 556,677
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 10.042 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        574 = { # 574-Siberia 1; native history population 407,866
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 7.357 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        575 = { # 575-Siberia 2; native history population 146,494
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 2.643 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        576 = { # 576-Siberia 3; native history population 117,195
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 2.114 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        577 = { # 577-Siberia 4; native history population 29,299
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.529 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        578 = { # 578-Siberia 5; native history population 609,304
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 10.991 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        579 = { # 579-Siberia 6; native history population 45,484
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.820 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        580 = { # 580-Siberia 7; native history population 88,126
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 1.590 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        581 = { # 581-Northern Urals; native history population 48,831
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.881 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        582 = { # 582-Sourthern Urals; native history population 1,044,991
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 18.850 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        637 = { # 637-State 1; native history population 48,831
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.881 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        644 = { # 644-state 3; native history population 13,090
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.236 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        651 = { # 651-Sov state 5; native history population 2,552,075
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 46.036 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        652 = { # 652-Sov state 6; native history population 1,225,870
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 22.113 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        653 = { # 653-Sov state 7; native history population 2,161,650
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 38.993 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        654 = { # 654-sov state 8; native history population 153,510
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 2.769 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        655 = { # 655-North Sakhalin; native history population 94,759
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 1.709 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        657 = { # 657-Border state; native history population 308,380
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 5.563 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        722 = { # 722-Petsamo; native history population 2,371
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.043 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        763 = { # 763-Konigsberg; native history population 2,140,234
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 38.607 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        821 = { # 821 - Chenchnya-Ingushetia; native history population 1,394,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 25.146 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        822 = { # 822 - Chukotka; native history population 31,182
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.562 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        824 = { # 824 - Yamalia; native history population 21,974
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.396 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        825 = { # 825 - Nenetsia; native history population 21,795
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.393 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        827 = { # 827 - Kabardino-Balkaria; native history population 387,990
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 6.999 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        828 = { # 828 - North Ossetia; native history population 387,990
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 6.999 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        829 = { # 829 - Volga Germany; native history population 618,530
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 11.157 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        833 = { # 833 - Mari El; native history population 786,030
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 14.179 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        874 = { # 874-Magadan; native history population 63,481
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 1.145 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        875 = { # 875-Chukchi Peninsulay; native history population 30,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.541 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        876 = { # 876-Udachny; native history population 12,182
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.220 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        877 = { # 877-Verkhoyansk; native history population 13,055
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.236 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        878 = { # 878-Khatangsky; native history population 15,974
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.288 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        879 = { # 879-Kargopol; native history population 210,177
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 3.791 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        880 = { # 880-Kotlas; native history population 262,721
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 4.739 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+    }
+}
+
+# USA: 52 starting owned-and-controlled states; authored total 31000 billion.
+GO_econ_author_2027_USA_gdp = {
+    if = {
+        limit = {
+            tag = USA
+            has_variable = GO_econ_2027_startup_authoring
+            check_variable = { GO_econ_2027_startup_authoring = 1 }
+            has_variable = GO_econ_country_2027_gdp_authored_states
+            check_variable = { GO_econ_country_2027_gdp_dataset_complete = 0 }
+        }
+        261 = { # 261-USA; native history population 6,646,694
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 1650.523 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        357 = { # 357-New England; native history population 8,404,713
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 2087.079 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        358 = { # 358-New York; native history population 12,588,061
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 3125.898 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        359 = { # 359-New Jersey; native history population 4,041,332
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 1003.553 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        360 = { # 360-Pennsylvania; native history population 9,631,346
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 2391.679 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        361 = { # 361-Maryland; native history population 2,118,394
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 526.045 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        362 = { # 362-Virginia; native history population 2,249,080
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 558.497 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        363 = { # 363-North Carolina; native history population 3,170,274
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 787.250 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        364 = { # 364-South Carolina; native history population 1,738,764
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 431.774 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        365 = { # 365-Georgia; native history population 2,908,504
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 722.247 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        366 = { # 366-Florida; native history population 1,468,210
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 364.589 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        367 = { # 367-Alabama; native history population 2,646,247
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 657.123 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        368 = { # 368-Tennesse; native history population 2,616,555
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 649.749 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        369 = { # 369-Kentucky; native history population 2,614,588
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 649.261 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        370 = { # 370-Mississippi; native history population 2,009,820
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 499.083 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        371 = { # 371-Louisiana; native history population 2,101,592
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 521.872 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        372 = { # 372-Arkansas; native history population 1,854,481
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 460.509 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        373 = { # 373-Missouri; native history population 3,629,365
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 901.253 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        374 = { # 374-Oklahoma; native history population 2,396,039
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 594.990 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        375 = { # 375-Texas; native history population 5,824,712
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 1446.407 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        376 = { # 376-New Mexico; native history population 423,316
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 105.119 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        377 = { # 377-Arizona; native history population 435,572
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 108.162 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        378 = { # 378-California; native history population 5,677,248
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 1409.788 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        379 = { # 379-Nevada; native history population 91,057
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 22.612 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        380 = { # 380-Utah; native history population 507,846
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 126.110 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        381 = { # 381-Wyoming; native history population 225,564
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 56.013 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        382 = { # 382-Colorado; native history population 1,035,790
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 257.210 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        383 = { # 383-Kansas; native history population 1,880,998
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 467.094 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        384 = { # 384-Nebraska; native history population 1,377,962
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 342.179 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        385 = { # 385-Oregon; native history population 953,785
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 236.846 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        386 = { # 386-Washington; native history population 1,563,395
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 388.226 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        387 = { # 387-Idaho; native history population 445,031
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 110.511 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        388 = { # 388-Montana; native history population 537,605
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 133.499 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        389 = { # 389-North Dakota; native history population 680,844
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 169.069 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        390 = { # 390-South Dakota; native history population 692,849
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 172.050 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        391 = { # 391-Minnesota; native history population 2,563,952
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 636.687 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        392 = { # 392-Iowa; native history population 2,470,938
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 613.589 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        393 = { # 393-Michigan; native history population 4,842,323
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 1202.457 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        394 = { # 394-Wisconsin; native history population 2,939,004
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 729.821 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        395 = { # 395-Illinois; native history population 7,630,651
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 1894.862 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        396 = { # 396-Indiana; native history population 3,238,501
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 804.192 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        463 = { # 463-Alaska; native history population 67,500
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 16.762 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        629 = { # 629-Hawaii; native history population 368,336
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 91.466 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        630 = { # 630-Johnston Atoll; native history population 100
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.025 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        631 = { # 631-Midway Island; native history population 2,159
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.536 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        632 = { # 632-Wake Island; native history population 150
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.037 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        638 = { # 638-Guam; native history population 75,153
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 18.662 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        642 = { # 642-Phoenix Island; native history population 24
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.006 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        650 = { # 650-Attu Island; native history population 20
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.005 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        686 = { # 686-Puerto Rico; native history population 1,543,913
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 383.388 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        727 = { # 727-Line Islands; native history population 5,367
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 1.333 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        816 = { # 816-West Virginia; native history population 1,901,974
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 472.303 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+    }
+}
+
+# CHI: 61 starting owned-and-controlled states; authored total 20500 billion.
+GO_econ_author_2027_CHI_gdp = {
+    if = {
+        limit = {
+            tag = CHI
+            has_variable = GO_econ_2027_startup_authoring
+            check_variable = { GO_econ_2027_startup_authoring = 1 }
+            has_variable = GO_econ_country_2027_gdp_authored_states
+            check_variable = { GO_econ_country_2027_gdp_dataset_complete = 0 }
+        }
+        283 = { # 283-China; native history population 3,705,400
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 155.904 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        287 = { # 287-Sinkiang; native history population 408,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 17.166 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        322 = { # 322-Tibet; native history population 1,722,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 72.453 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        325 = { # 325-Yunnan; native history population 10,994,500
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 462.590 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        328 = { # 328-Manchukuo; native history population 7,536,266
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 317.086 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        591 = { # 591-Hainan; native history population 4,350,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 183.025 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        592 = { # 592-Guangzhou; native history population 17,835,200
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 750.411 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        593 = { # 593-Guangdong; native history population 12,700,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 534.349 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        594 = { # 594-Nanning; native history population 6,550,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 275.589 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        595 = { # 595-Fujian; native history population 11,755,600
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 494.613 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        596 = { # 596-Zhejiang; native history population 21,230,700
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 893.275 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        597 = { # 597-Shandong; native history population 38,373,200
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 1614.541 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        598 = { # 598-Jiansu; native history population 23,669,300
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 995.879 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        599 = { # 599-Guanxi; native history population 8,685,200
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 365.427 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        600 = { # 600-Jiangxi; native history population 15,820,400
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 665.638 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        601 = { # 601-China 1; native history population 368,200
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 15.492 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        602 = { # 602-China 2; native history population 20,293,700
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 853.851 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        603 = { # 603-China 3; native history population 7,543,200
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 317.378 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        604 = { # 604-China 4; native history population 1,196,100
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 50.326 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        605 = { # 605-China 5; native history population 52,963,300
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 2228.415 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        606 = { # 606-China 6; native history population 18,265,400
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 768.511 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        607 = { # 607-China 7; native history population 34,289,800
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 1442.733 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        608 = { # 608-Beijing; native history population 9,648,400
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 405.953 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        609 = { # 609-China 8; native history population 6,400,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 269.278 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        610 = { # 610-China 9; native history population 1,975,377
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 83.113 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        611 = { # 611-China 10; native history population 1,470,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 61.850 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        612 = { # 612-China 11; native history population 566,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 23.814 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        613 = { # 613-China 12; native history population 17,305,100
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 728.107 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        614 = { # 614-China 13; native history population 18,434,900
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 775.643 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        615 = { # 615-Shanxi; native history population 11,601,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 488.109 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        616 = { # 616-China 14; native history population 2,077,600
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 87.414 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        617 = { # 617-Xinjiang; native history population 1,080,500
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 45.462 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        618 = { # 618-China 15; native history population 670,800
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 28.224 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        619 = { # 619-China 16; native history population 1,430,700
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 60.196 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        620 = { # 620-China 17; native history population 25,541,600
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 1074.655 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        621 = { # 621-China 18; native history population 1,583,700
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 66.634 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        622 = { # 622-China 19; native history population 7,006,200
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 294.784 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        714 = { # 714-Heilungkiang; native history population 3,694,191
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 155.432 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        715 = { # 715-Liaoning; native history population 3,643,373
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 153.294 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        716 = { # 716-Liaotung; native history population 10,264,620
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 431.881 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        717 = { # 717-Chuho; native history population 5,224,174
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 219.805 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        728 = { # 728-Guangzhouwan; native history population 200,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 8.415 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        743 = { # 743-Qingdao; native history population 385,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 16.199 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        744 = { # 744-Xian; native history population 9,000,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 378.672 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        745 = { # 745-Dalian; native history population 1,000,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 42.075 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        746 = { # 746-Ordos; native history population 500,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 21.037 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        747 = { # 747-Dali Bai; native history population 1,000,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 42.075 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        748 = { # 748-Zunyi; native history population 1,500,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 63.112 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        749 = { # 749-Huangshan; native history population 5,000,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 210.373 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        750 = { # 750-Changde; native history population 8,000,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 336.598 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        751 = { # 751-Liangshan; native history population 300,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 12.622 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        752 = { # 752-Chamdo; native history population 300,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 12.622 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        753 = { # 753-Gannan; native history population 3,000,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 126.224 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        754 = { # 754-Golog; native history population 400,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 16.830 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        755 = { # 755-Haixi; native history population 1,000,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 42.075 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        756 = { # 756-Jiuquan; native history population 1,000,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 42.075 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        757 = { # 757-Shigatse; native history population 1,000,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 42.075 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        758 = { # 758-Ngari; native history population 1,000,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 42.075 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        759 = { # 759-Kunlun; native history population 70,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 2.945 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        760 = { # 760-Dabancheng; native history population 700,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 29.452 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        761 = { # 761-Hulunbuir; native history population 2,000,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 84.149 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+    }
+}
+
+# FRA: 33 starting owned-and-controlled states; authored total 3450 billion.
+GO_econ_author_2027_FRA_gdp = {
+    if = {
+        limit = {
+            tag = FRA
+            has_variable = GO_econ_2027_startup_authoring
+            check_variable = { GO_econ_2027_startup_authoring = 1 }
+            has_variable = GO_econ_country_2027_gdp_authored_states
+            check_variable = { GO_econ_country_2027_gdp_dataset_complete = 0 }
+        }
+        1 = { # 1-France; native history population 322,900
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 25.177 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        14 = { # 14-Brittany; native history population 2,396,600
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 186.865 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        15 = { # 15-Normandy; native history population 2,332,100
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 181.836 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        16 = { # 16-Ile de France; native history population 7,038,500
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 548.799 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        17 = { # 17-Alcase Lorraine; native history population 1,517,500
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 118.321 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        18 = { # 18-Champagne; native history population 1,370,800
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 106.883 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        19 = { # 19-Aquitaine; native history population 1,140,400
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 88.918 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        20 = { # 20-Franche-comte; native history population 2,973,200
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 231.823 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        21 = { # 21-Bouches-du-Rhone; native history population 1,670,310
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 130.236 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        22 = { # 22-Roussillion; native history population 1,691,200
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 131.864 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        23 = { # 23-Poitou; native history population 1,603,100
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 124.995 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        24 = { # 24-Centre; native history population 1,546,300
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 120.567 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        25 = { # 25-Limousin; native history population 1,343,700
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 104.770 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        26 = { # 26-Bourgogne; native history population 877,800
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 68.443 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        27 = { # 27-Champagne2; native history population 1,370,800
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 106.883 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        28 = { # 28-Alcase; native history population 1,915,600
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 149.361 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        29 = { # 29-Pas de Calais; native history population 4,058,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 316.406 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        30 = { # 30-Loire; native history population 1,388,400
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 108.255 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        31 = { # 31-Midi Pyrenees; native history population 1,825,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 142.297 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        32 = { # 32-Rhone Alpes; native history population 1,007,500
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 78.556 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        33 = { # 33-Centre sud; native history population 636,400
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 49.621 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        310 = { # 310-French SA; native history population 47,341
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 3.691 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        635 = { # 635-New Caledonia; native history population 51,876
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 4.045 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        641 = { # 641-Tahiti; native history population 105,786
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 8.248 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        694 = { # 694-French Caribbean; native history population 444,290
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 34.642 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        706 = { # 706-Reunion; native history population 186,637
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 14.552 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        708 = { # 708-Comoro Islands; native history population 126,703
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 9.879 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        713 = { # 713-Kerguelen; native history population 96
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.007 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        734 = { # 734-Nendo; native history population 5,167
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 0.403 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        735 = { # 735-Savoy; native history population 907,500
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 70.759 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        785 = { # 785-Picardy; native history population 1,580,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 123.194 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        806 = { # 806-French Basque Country; native history population 280,723
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 21.888 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+        851 = { # 851-Var; native history population 485,000
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_work_2027_starting_gdp = 37.816 }
+                GO_econ_author_2027_state_gdp = yes
+            }
+        }
+    }
+}

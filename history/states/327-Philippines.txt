@@ -5,6 +5,11 @@ state=
 	manpower = 3548684
 	
 	state_category = town
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 1
+	}
+
 	history=
 	{
 		owner = PHI

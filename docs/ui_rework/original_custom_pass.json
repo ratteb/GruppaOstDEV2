@@ -6861,6 +6861,21 @@
       "interface/eventwindow.gui": "b873dcac6ab67e4662174220805edd446a5243efe801a80d51b325c2a28d966c",
       "interface/eventwindow.gfx": "707cd20656aeaf7ddf7556e37841445e4bf316bf14ddf45df67f33bfc6a4cd3a",
       "interface/countrypoliticsview.gui": "e256303d994660e12fac0767543a8cc9f20053a941a02384c9a759cd9ef0e3a3"
+    },
+    "topbar_buttons": {
+      "interface/topbar.gfx": "649d436ab5810d457cfd441b31ee513ca633a435d03e6a1c8035f749aeec8b86"
+    },
+    "targeted704": {
+      "interface/topbar.gfx": "8e0ec36e967660b39f0029bc1b7f88bf11f58d123d49bfb4dd79ceb16c9ca8d8",
+      "interface/topbar.gui": "f3a6a12780629c9e93077832a85c5b479bdfe281e72017ac901c04ca16273b27",
+      "interface/ammunition.gui": "6bd7f028422ff8fecd53bb664a4a6d0fea3c5964414b949a38e77cef4a1f2e8b"
+    },
+    "targeted707": {
+      "interface/topbar.gfx": "50e43662b4deeff3eb3a2d84a271a2da76d7ad4c512557f569e688b30e858668",
+      "interface/topbar.gui": "b5ee962a0fa29dafbcd8ae472b7b2d2b92513b1fc5142ce3af23e95255d356b7"
+    },
+    "resource_icons": {
+      "interface/general_stuff.gfx": "4a29cbf01b029fb7c2fa656d23ce2f53ac7ab71c493c4a0018050332e0d1cae1"
     }
   }
 }

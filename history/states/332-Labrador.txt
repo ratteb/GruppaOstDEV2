@@ -4,6 +4,11 @@ state={
 	
 	state_category = wasteland
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		iron = 16
+	}
+
 	history={
 		owner = CAN
 		buildings = {

@@ -26,6 +26,7 @@ buildings = {
 
 	ammunition_plant = {
 		show_on_map = 1
+		spawn_point = GO_econ_ammunition_plant_spawn
 		base_cost = 6400
 		icon_frame = 28
 		value = 5
@@ -272,7 +273,8 @@ buildings = {
 		base_cost = 14500
 		icon_frame = 10
 		#local_resources_oil = 1 # May use local_resources_ + any resource name
-		local_resources_rubber = 1 # May use local_resources_ + any resource name
+		# Stage 14: rubber comes only from assigned GO_econ_rubber_plant levels.
+		# Preserve this refinery's native fuel behavior; no direct rubber supply.
 		refinery = yes
 		value = 5
 		infrastructure_construction_effect = yes

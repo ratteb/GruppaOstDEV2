@@ -1,0 +1,144 @@
+{
+  "textures": [
+    {
+      "path": "gfx/interface/topbar/armyoverview_button.dds",
+      "dimensions": [
+        76,
+        38
+      ],
+      "frames": 2,
+      "source_header_and_mips_preserved": true,
+      "decoders_agree": true,
+      "opaque_continuous_edges": true,
+      "symbol_core_detail_preserved": true
+    },
+    {
+      "path": "gfx/interface/topbar/navyoverview_button.dds",
+      "dimensions": [
+        76,
+        38
+      ],
+      "frames": 2,
+      "source_header_and_mips_preserved": true,
+      "decoders_agree": true,
+      "opaque_continuous_edges": true,
+      "symbol_core_detail_preserved": true
+    },
+    {
+      "path": "gfx/interface/topbar/airoverview_button.dds",
+      "dimensions": [
+        76,
+        38
+      ],
+      "frames": 2,
+      "source_header_and_mips_preserved": true,
+      "decoders_agree": true,
+      "opaque_continuous_edges": true,
+      "symbol_core_detail_preserved": true
+    },
+    {
+      "path": "gfx/interface/topbar/musicplayer/playlist_button.dds",
+      "dimensions": [
+        33,
+        33
+      ],
+      "frames": 1,
+      "source_header_and_mips_preserved": true,
+      "decoders_agree": true,
+      "opaque_continuous_edges": true,
+      "symbol_core_detail_preserved": true
+    },
+    {
+      "path": "gfx/interface/topbar/achievements_button.dds",
+      "dimensions": [
+        24,
+        24
+      ],
+      "frames": 1,
+      "source_header_and_mips_preserved": true,
+      "decoders_agree": true,
+      "opaque_continuous_edges": true,
+      "symbol_core_detail_preserved": true
+    },
+    {
+      "path": "gfx/interface/topbar/GO_utility_menu.dds",
+      "dimensions": [
+        24,
+        24
+      ],
+      "frames": 1,
+      "source_header_and_mips_preserved": true,
+      "decoders_agree": true,
+      "opaque_continuous_edges": true,
+      "symbol_core_detail_preserved": true
+    },
+    {
+      "path": "gfx/interface/topbar/GO_utility_help.dds",
+      "dimensions": [
+        24,
+        24
+      ],
+      "frames": 1,
+      "source_header_and_mips_preserved": true,
+      "decoders_agree": true,
+      "opaque_continuous_edges": true,
+      "symbol_core_detail_preserved": true
+    },
+    {
+      "path": "gfx/interface/topbar/GO_utility_alerts.dds",
+      "dimensions": [
+        24,
+        24
+      ],
+      "frames": 1,
+      "source_header_and_mips_preserved": true,
+      "decoders_agree": true,
+      "opaque_continuous_edges": true,
+      "symbol_core_detail_preserved": true
+    },
+    {
+      "path": "gfx/interface/topbar/GO_speed_plus.dds",
+      "dimensions": [
+        27,
+        27
+      ],
+      "frames": 1,
+      "source_header_and_mips_preserved": true,
+      "decoders_agree": true,
+      "opaque_continuous_edges": true,
+      "symbol_core_detail_preserved": true
+    },
+    {
+      "path": "gfx/interface/topbar/GO_speed_minus.dds",
+      "dimensions": [
+        27,
+        27
+      ],
+      "frames": 1,
+      "source_header_and_mips_preserved": true,
+      "decoders_agree": true,
+      "opaque_continuous_edges": true,
+      "symbol_core_detail_preserved": true
+    },
+    {
+      "path": "gfx/interface/topbar/speed_step.dds",
+      "dimensions": [
+        84,
+        10
+      ],
+      "frames": 3,
+      "source_header_and_mips_preserved": true,
+      "decoders_agree": true,
+      "opaque_continuous_edges": true,
+      "symbol_core_detail_preserved": true
+    }
+  ],
+  "new_local_sprites": 5,
+  "gui_reference_changes": 5,
+  "existing_overview_standard_effect_additions": 3,
+  "layout_changes": 0,
+  "gui_other_bytes_unchanged": true,
+  "no_competing_sprite_definitions": true,
+  "sprite_frame_counts_verified": true,
+  "in_game_validated": false
+}

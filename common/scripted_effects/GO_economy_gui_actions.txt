@@ -1,0 +1,523 @@
+# Gruppa Ost Stage 11 - guarded UI action bridges only.
+# These effects are called only by explicit factory-slot clicks.
+# PU requests preserve whole-percent monthly settlement. Plant assignment uses
+# the existing STATE APIs and their capacity-only refresh; no recipe is run.
+# clear_variable: installed 1.18.3 effects_documentation.md:2752-2760.
+# Scope/temporary arithmetic follow E-018/E-022/E-028.
+
+# COUNTRY. Regular inputs: GO_econ_ui_work_pu_kind (1 civil / 2 military),
+# GO_econ_ui_work_target (absolute whole factory count).
+# Returns GO_econ_ui_work_action_succeeded. Unsupported count granularity fails.
+GO_econ_ui_request_pu_allocation = {
+    set_variable = { GO_econ_ui_work_action_succeeded = 0 }
+    if = {
+        limit = {
+            has_variable = GO_econ_ui_work_pu_kind
+            has_variable = GO_econ_ui_work_target
+        }
+        set_temp_variable = { GO_econ_ui_candidate_kind = GO_econ_ui_work_pu_kind }
+        set_temp_variable = { GO_econ_ui_candidate_target = GO_econ_ui_work_target }
+        if = {
+            limit = { GO_econ_ui_can_request_pu_allocation = yes }
+            set_variable = { GO_econ_work_civil_percent = GO_econ_ui_candidate_civil_percent }
+            GO_econ_request_production_unit_allocation = yes
+            set_variable = { GO_econ_ui_work_action_succeeded = GO_econ_work_pu_request_succeeded }
+            clear_variable = GO_econ_work_civil_percent
+        }
+    }
+    clear_variable = GO_econ_ui_work_pu_kind
+    clear_variable = GO_econ_ui_work_target
+}
+
+# STATE. Regular inputs: GO_econ_ui_work_requester (country),
+# GO_econ_ui_work_plant_family (1 steel, 2 aluminium, 3 rubber, 4 microchips,
+# 5 ammunition) and GO_econ_ui_work_target (whole levels).
+# Preserve the requesting country rather than deriving a replacement owner.
+# Fresh assignments are initialized only inside the existing public click API.
+GO_econ_ui_assign_plant = {
+    set_variable = { GO_econ_ui_work_action_succeeded = 0 }
+    if = {
+        limit = {
+            has_variable = GO_econ_ui_work_requester
+            has_variable = GO_econ_ui_work_plant_family
+            has_variable = GO_econ_ui_work_target
+            any_of_scopes = {
+                array = global.countries
+                check_variable = { PREV.GO_econ_ui_work_requester = THIS }
+            }
+            var:GO_econ_ui_work_requester = {
+                PREV = { is_owned_by = PREV is_controlled_by = PREV }
+            }
+        }
+        set_temp_variable = { GO_econ_ui_candidate_family = GO_econ_ui_work_plant_family }
+        set_temp_variable = { GO_econ_ui_candidate_target = GO_econ_ui_work_target }
+        if = {
+            limit = { GO_econ_ui_can_assign_plant = yes }
+            set_variable = { GO_econ_work_actor = GO_econ_ui_work_requester }
+            if = {
+                limit = { check_variable = { GO_econ_ui_work_plant_family = 5 } }
+                set_variable = { GO_econ_work_ammunition_assigned_levels = GO_econ_ui_work_target }
+                GO_econ_assign_ammunition_plant = yes
+                set_variable = { GO_econ_ui_work_action_succeeded = GO_econ_work_ammunition_assignment_succeeded }
+                clear_variable = GO_econ_work_ammunition_assigned_levels
+            }
+            else = {
+                set_variable = { GO_econ_work_processing_recipe_id = GO_econ_ui_work_plant_family }
+                set_variable = { GO_econ_work_processing_assigned_levels = GO_econ_ui_work_target }
+                GO_econ_assign_processing_plant = yes
+                set_variable = { GO_econ_ui_work_action_succeeded = GO_econ_work_processing_assignment_succeeded }
+                clear_variable = GO_econ_work_processing_recipe_id
+                clear_variable = GO_econ_work_processing_assigned_levels
+            }
+            clear_variable = GO_econ_work_actor
+        }
+    }
+    clear_variable = GO_econ_ui_work_requester
+    clear_variable = GO_econ_ui_work_plant_family
+    clear_variable = GO_econ_ui_work_target
+}
+
+# COUNTRY. Explicit Plants/family/update-list click only. Rebuilds a presentation
+# list of real eligible states; never refreshes capacity or economic reports.
+# Installed effects_documentation.md:2285-2298,2692-2701; native example
+# 00_scripted_effects.txt:4287-4297 (state handles appended through PREV).
+GO_econ_ui_collect_plant_rows = {
+    clear_array = GO_econ_ui_plant_states
+    every_owned_state = {
+        limit = { GO_econ_ui_selected_plant_visible = yes }
+        owner = {
+            add_to_array = {
+                array = GO_econ_ui_plant_states
+                value = PREV
+            }
+        }
+    }
+}
+
+# COUNTRY. Explicit row click inputs: regular work_row_state, work_plant_family,
+# work_target on the GO_econ_ui_ prefix. Validate the requesting country's own
+# current state/control again before delegating. Saved foreign handles fail.
+GO_econ_ui_assign_plant_row = {
+    set_variable = { GO_econ_ui_work_action_succeeded = 0 }
+    if = {
+        limit = {
+            has_variable = GO_econ_ui_work_row_state
+            has_variable = GO_econ_ui_work_plant_family
+            has_variable = GO_econ_ui_work_target
+            any_owned_state = {
+                check_variable = { PREV.GO_econ_ui_work_row_state = THIS }
+                is_controlled_by = PREV
+            }
+        }
+        var:GO_econ_ui_work_row_state = {
+            # PREV is the explicitly validated requesting country.
+            if = {
+                limit = { is_owned_by = PREV is_controlled_by = PREV }
+                set_variable = { GO_econ_ui_work_requester = PREV }
+                set_variable = { GO_econ_ui_work_plant_family = PREV.GO_econ_ui_work_plant_family }
+                set_variable = { GO_econ_ui_work_target = PREV.GO_econ_ui_work_target }
+                GO_econ_ui_assign_plant = yes
+                set_variable = { PREV.GO_econ_ui_work_action_succeeded = GO_econ_ui_work_action_succeeded }
+            }
+        }
+    }
+    clear_variable = GO_econ_ui_work_row_state
+    clear_variable = GO_econ_ui_work_plant_family
+    clear_variable = GO_econ_ui_work_target
+}
+
+
+# COUNTRY explicit national assignment, not a production or refresh action.
+# Regular inputs: GO_econ_ui_work_plant_family (1..5), GO_econ_ui_work_target
+# (whole national total). Returns GO_econ_ui_work_action_succeeded.
+# Preserve each valid current-owner state assignment, then distribute only the
+# requested increase/decrease in native every_owned_state traversal order.
+# That order has no geographic/energy meaning. Fresh/transferred assignments
+# start at zero ONLY within this explicit click; captured records are untouched.
+# Every relevant state is preflighted before any existing STATE API is called.
+GO_econ_ui_assign_national_plant = {
+    set_variable = { GO_econ_ui_work_action_succeeded = 0 }
+    if = {
+        limit = {
+            has_variable = GO_econ_ui_work_plant_family
+            has_variable = GO_econ_ui_work_target
+        }
+        set_temp_variable = { GO_econ_ui_candidate_family = GO_econ_ui_work_plant_family }
+        GO_econ_ui_scan_national_plant_capacity = yes
+        set_temp_variable = { GO_econ_ui_candidate_target = GO_econ_ui_work_target }
+        if = {
+            limit = { GO_econ_ui_can_assign_national_plant = yes }
+            # Regular country scratch survives delegated capacity refreshes.
+            set_variable = { GO_econ_ui_national_work_add_remaining = GO_econ_ui_work_target }
+            subtract_from_variable = { GO_econ_ui_national_work_add_remaining = GO_econ_ui_plant_scan_assigned }
+            clamp_variable = { var = GO_econ_ui_national_work_add_remaining min = 0 }
+            set_variable = { GO_econ_ui_national_work_remove_remaining = GO_econ_ui_plant_scan_assigned }
+            subtract_from_variable = { GO_econ_ui_national_work_remove_remaining = GO_econ_ui_work_target }
+            clamp_variable = { var = GO_econ_ui_national_work_remove_remaining min = 0 }
+            set_variable = { GO_econ_ui_national_work_commit_failed = 0 }
+            every_owned_state = {
+                limit = { is_controlled_by = PREV }
+                GO_econ_ui_commit_national_plant_state = yes
+            }
+            # Rebuild the real presentation scan after all explicit commits.
+            set_temp_variable = { GO_econ_ui_candidate_family = GO_econ_ui_work_plant_family }
+            GO_econ_ui_scan_national_plant_capacity = yes
+            if = {
+                limit = {
+                    check_variable = { GO_econ_ui_national_work_commit_failed = 0 }
+                    check_variable = { GO_econ_ui_national_work_add_remaining = 0 }
+                    check_variable = { GO_econ_ui_national_work_remove_remaining = 0 }
+                    GO_econ_ui_read_national_plant_capacity = yes
+                    check_variable = { GO_econ_ui_plant_scan_missing_count = 0 }
+                    check_variable = { GO_econ_ui_plant_scan_invalid_count = 0 }
+                    check_variable = { GO_econ_ui_plant_scan_assigned = GO_econ_ui_work_target }
+                }
+                set_variable = { GO_econ_ui_work_action_succeeded = 1 }
+            }
+        }
+    }
+    clear_variable = GO_econ_ui_national_work_add_remaining
+    clear_variable = GO_econ_ui_national_work_remove_remaining
+    clear_variable = GO_econ_ui_national_work_commit_failed
+    clear_variable = GO_econ_ui_work_plant_family
+    clear_variable = GO_econ_ui_work_target
+}
+
+# COUNTRY public presentation refresh. This writes only the GO_econ_ui_plant_scan
+# cache; no STATE initialization, assignment, production or daily call is made.
+GO_econ_ui_refresh_national_plant_capacity = {
+    set_temp_variable = { GO_econ_ui_candidate_family = 1 }
+    if = {
+        limit = { has_variable = GO_econ_ui_plant_family }
+        set_temp_variable = { GO_econ_ui_candidate_family = GO_econ_ui_plant_family }
+    }
+    GO_econ_ui_scan_national_plant_capacity = yes
+}
+
+# COUNTRY internal presentation scan. Caller sets temporary candidate_family.
+# Use real effects and persistent country sums so localization reads no trigger
+# temporary aggregate. Dates are observations, not production cadence tokens.
+GO_econ_ui_scan_national_plant_capacity = {
+    set_variable = { GO_econ_ui_plant_scan_populated = 0 }
+    if = {
+        limit = {
+            GO_econ_processing_native_day_ready = yes
+            OR = {
+                check_variable = { GO_econ_ui_candidate_family = 1 }
+                check_variable = { GO_econ_ui_candidate_family = 2 }
+                check_variable = { GO_econ_ui_candidate_family = 3 }
+                check_variable = { GO_econ_ui_candidate_family = 4 }
+                check_variable = { GO_econ_ui_candidate_family = 5 }
+            }
+        }
+        set_variable = { GO_econ_ui_plant_scan_family = GO_econ_ui_candidate_family }
+        set_variable = { GO_econ_ui_plant_scan_day = global.num_days }
+        set_variable = { GO_econ_ui_plant_scan_physical_valid = 1 }
+        set_variable = { GO_econ_ui_plant_scan_built = 0 }
+        set_variable = { GO_econ_ui_plant_scan_assigned = 0 }
+        set_variable = { GO_econ_ui_plant_scan_missing_count = 0 }
+        set_variable = { GO_econ_ui_plant_scan_invalid_count = 0 }
+        every_owned_state = {
+            limit = { is_controlled_by = PREV }
+            GO_econ_ui_scan_national_plant_state = yes
+        }
+        set_variable = { GO_econ_ui_plant_scan_populated = 1 }
+    }
+}
+
+# STATE internal, called directly from the requesting country's owned-state
+# loop. Literal native/assignment reads credit only the country presentation
+# cache. Zero-capacity retained records follow the original recipe coverage.
+GO_econ_ui_scan_national_plant_state = {
+    if = {
+        limit = { check_variable = { PREV.GO_econ_ui_plant_scan_family = 1 } }
+        if = {
+            limit = { GO_econ_state_steel_physical_levels_valid = yes }
+            add_to_variable = { PREV.GO_econ_ui_plant_scan_built = building_level@GO_econ_steel_plant }
+            if = {
+                limit = { NOT = { AND = { check_variable = { building_level@GO_econ_steel_plant = 0 } GO_econ_state_steel_zero_capacity_unassigned = yes } } }
+                if = {
+                    limit = { GO_econ_state_has_steel_assignment = yes }
+                    add_to_variable = { PREV.GO_econ_ui_plant_scan_assigned = GO_econ_state_steel_assigned_levels }
+                }
+                else = { add_to_variable = { PREV.GO_econ_ui_plant_scan_missing_count = 1 } }
+                if = {
+                    limit = { NOT = { GO_econ_ui_state_steel_record_writable = yes } }
+                    add_to_variable = { PREV.GO_econ_ui_plant_scan_invalid_count = 1 }
+                }
+            }
+        }
+        else = {
+            set_variable = { PREV.GO_econ_ui_plant_scan_physical_valid = 0 }
+            add_to_variable = { PREV.GO_econ_ui_plant_scan_invalid_count = 1 }
+        }
+    }
+    else_if = {
+        limit = { check_variable = { PREV.GO_econ_ui_plant_scan_family = 2 } }
+        if = {
+            limit = { GO_econ_state_aluminium_physical_levels_valid = yes }
+            add_to_variable = { PREV.GO_econ_ui_plant_scan_built = building_level@GO_econ_aluminium_plant }
+            if = {
+                limit = { NOT = { AND = { check_variable = { building_level@GO_econ_aluminium_plant = 0 } GO_econ_state_aluminium_zero_capacity_unassigned = yes } } }
+                if = {
+                    limit = { GO_econ_state_has_aluminium_assignment = yes }
+                    add_to_variable = { PREV.GO_econ_ui_plant_scan_assigned = GO_econ_state_aluminium_assigned_levels }
+                }
+                else = { add_to_variable = { PREV.GO_econ_ui_plant_scan_missing_count = 1 } }
+                if = {
+                    limit = { NOT = { GO_econ_ui_state_aluminium_record_writable = yes } }
+                    add_to_variable = { PREV.GO_econ_ui_plant_scan_invalid_count = 1 }
+                }
+            }
+        }
+        else = {
+            set_variable = { PREV.GO_econ_ui_plant_scan_physical_valid = 0 }
+            add_to_variable = { PREV.GO_econ_ui_plant_scan_invalid_count = 1 }
+        }
+    }
+    else_if = {
+        limit = { check_variable = { PREV.GO_econ_ui_plant_scan_family = 3 } }
+        if = {
+            limit = { GO_econ_state_rubber_physical_levels_valid = yes }
+            add_to_variable = { PREV.GO_econ_ui_plant_scan_built = building_level@GO_econ_rubber_plant }
+            if = {
+                limit = { NOT = { AND = { check_variable = { building_level@GO_econ_rubber_plant = 0 } GO_econ_state_rubber_zero_capacity_unassigned = yes } } }
+                if = {
+                    limit = { GO_econ_state_has_rubber_assignment = yes }
+                    add_to_variable = { PREV.GO_econ_ui_plant_scan_assigned = GO_econ_state_rubber_assigned_levels }
+                }
+                else = { add_to_variable = { PREV.GO_econ_ui_plant_scan_missing_count = 1 } }
+                if = {
+                    limit = { NOT = { GO_econ_ui_state_rubber_record_writable = yes } }
+                    add_to_variable = { PREV.GO_econ_ui_plant_scan_invalid_count = 1 }
+                }
+            }
+        }
+        else = {
+            set_variable = { PREV.GO_econ_ui_plant_scan_physical_valid = 0 }
+            add_to_variable = { PREV.GO_econ_ui_plant_scan_invalid_count = 1 }
+        }
+    }
+    else_if = {
+        limit = { check_variable = { PREV.GO_econ_ui_plant_scan_family = 4 } }
+        if = {
+            limit = { GO_econ_state_microchips_physical_levels_valid = yes }
+            add_to_variable = { PREV.GO_econ_ui_plant_scan_built = building_level@GO_econ_semiconductor_factory }
+            if = {
+                limit = { NOT = { AND = { check_variable = { building_level@GO_econ_semiconductor_factory = 0 } GO_econ_state_microchips_zero_capacity_unassigned = yes } } }
+                if = {
+                    limit = { GO_econ_state_has_microchips_assignment = yes }
+                    add_to_variable = { PREV.GO_econ_ui_plant_scan_assigned = GO_econ_state_microchips_assigned_levels }
+                }
+                else = { add_to_variable = { PREV.GO_econ_ui_plant_scan_missing_count = 1 } }
+                if = {
+                    limit = { NOT = { GO_econ_ui_state_microchips_record_writable = yes } }
+                    add_to_variable = { PREV.GO_econ_ui_plant_scan_invalid_count = 1 }
+                }
+            }
+        }
+        else = {
+            set_variable = { PREV.GO_econ_ui_plant_scan_physical_valid = 0 }
+            add_to_variable = { PREV.GO_econ_ui_plant_scan_invalid_count = 1 }
+        }
+    }
+    else_if = {
+        limit = { check_variable = { PREV.GO_econ_ui_plant_scan_family = 5 } }
+        if = {
+            limit = { GO_econ_state_ammunition_physical_levels_valid = yes }
+            add_to_variable = { PREV.GO_econ_ui_plant_scan_built = building_level@ammunition_plant }
+            if = {
+                limit = { NOT = { AND = { check_variable = { building_level@ammunition_plant = 0 } GO_econ_state_ammunition_has_no_assignment = yes } } }
+                if = {
+                    limit = { GO_econ_state_has_ammunition_assignment = yes }
+                    add_to_variable = { PREV.GO_econ_ui_plant_scan_assigned = GO_econ_state_ammunition_assigned_levels }
+                }
+                else = { add_to_variable = { PREV.GO_econ_ui_plant_scan_missing_count = 1 } }
+                if = {
+                    limit = { NOT = { GO_econ_ui_state_ammunition_record_writable = yes } }
+                    add_to_variable = { PREV.GO_econ_ui_plant_scan_invalid_count = 1 }
+                }
+            }
+        }
+        else = {
+            set_variable = { PREV.GO_econ_ui_plant_scan_physical_valid = 0 }
+            add_to_variable = { PREV.GO_econ_ui_plant_scan_invalid_count = 1 }
+        }
+    }
+}
+
+# STATE private explicit commit, reached only after the complete COUNTRY scan
+# and live preflight. Build/assignment baselines are literal native/regular reads
+# calculated in this effect, not temporary values exported by a trigger limit.
+GO_econ_ui_commit_national_plant_state = {
+    set_temp_variable = { GO_econ_ui_national_state_family = PREV.GO_econ_ui_plant_scan_family }
+    set_temp_variable = { GO_econ_ui_national_state_built = 0 }
+    set_temp_variable = { GO_econ_ui_national_state_assigned = 0 }
+    set_temp_variable = { GO_econ_ui_national_state_needed = 0 }
+    if = {
+        limit = { check_variable = { GO_econ_ui_national_state_family = 1 } }
+        set_temp_variable = { GO_econ_ui_national_state_built = building_level@GO_econ_steel_plant }
+        if = {
+            limit = { NOT = { AND = { check_variable = { building_level@GO_econ_steel_plant = 0 } GO_econ_state_steel_zero_capacity_unassigned = yes } } }
+            set_temp_variable = { GO_econ_ui_national_state_needed = 1 }
+            if = {
+                limit = { GO_econ_state_has_steel_assignment = yes }
+                set_temp_variable = { GO_econ_ui_national_state_assigned = GO_econ_state_steel_assigned_levels }
+            }
+        }
+    }
+    else_if = {
+        limit = { check_variable = { GO_econ_ui_national_state_family = 2 } }
+        set_temp_variable = { GO_econ_ui_national_state_built = building_level@GO_econ_aluminium_plant }
+        if = {
+            limit = { NOT = { AND = { check_variable = { building_level@GO_econ_aluminium_plant = 0 } GO_econ_state_aluminium_zero_capacity_unassigned = yes } } }
+            set_temp_variable = { GO_econ_ui_national_state_needed = 1 }
+            if = {
+                limit = { GO_econ_state_has_aluminium_assignment = yes }
+                set_temp_variable = { GO_econ_ui_national_state_assigned = GO_econ_state_aluminium_assigned_levels }
+            }
+        }
+    }
+    else_if = {
+        limit = { check_variable = { GO_econ_ui_national_state_family = 3 } }
+        set_temp_variable = { GO_econ_ui_national_state_built = building_level@GO_econ_rubber_plant }
+        if = {
+            limit = { NOT = { AND = { check_variable = { building_level@GO_econ_rubber_plant = 0 } GO_econ_state_rubber_zero_capacity_unassigned = yes } } }
+            set_temp_variable = { GO_econ_ui_national_state_needed = 1 }
+            if = {
+                limit = { GO_econ_state_has_rubber_assignment = yes }
+                set_temp_variable = { GO_econ_ui_national_state_assigned = GO_econ_state_rubber_assigned_levels }
+            }
+        }
+    }
+    else_if = {
+        limit = { check_variable = { GO_econ_ui_national_state_family = 4 } }
+        set_temp_variable = { GO_econ_ui_national_state_built = building_level@GO_econ_semiconductor_factory }
+        if = {
+            limit = { NOT = { AND = { check_variable = { building_level@GO_econ_semiconductor_factory = 0 } GO_econ_state_microchips_zero_capacity_unassigned = yes } } }
+            set_temp_variable = { GO_econ_ui_national_state_needed = 1 }
+            if = {
+                limit = { GO_econ_state_has_microchips_assignment = yes }
+                set_temp_variable = { GO_econ_ui_national_state_assigned = GO_econ_state_microchips_assigned_levels }
+            }
+        }
+    }
+    else_if = {
+        limit = { check_variable = { GO_econ_ui_national_state_family = 5 } }
+        set_temp_variable = { GO_econ_ui_national_state_built = building_level@ammunition_plant }
+        if = {
+            limit = { NOT = { AND = { check_variable = { building_level@ammunition_plant = 0 } GO_econ_state_ammunition_has_no_assignment = yes } } }
+            set_temp_variable = { GO_econ_ui_national_state_needed = 1 }
+            if = {
+                limit = { GO_econ_state_has_ammunition_assignment = yes }
+                set_temp_variable = { GO_econ_ui_national_state_assigned = GO_econ_state_ammunition_assigned_levels }
+            }
+        }
+    }
+    if = {
+        limit = { check_variable = { GO_econ_ui_national_state_needed = 1 } }
+        set_temp_variable = { GO_econ_ui_national_state_target = GO_econ_ui_national_state_assigned }
+        if = {
+            limit = { check_variable = { PREV.GO_econ_ui_national_work_add_remaining > 0 } }
+            set_temp_variable = { GO_econ_ui_national_state_delta = GO_econ_ui_national_state_built }
+            subtract_from_temp_variable = { var = GO_econ_ui_national_state_delta value = GO_econ_ui_national_state_target }
+            clamp_temp_variable = { var = GO_econ_ui_national_state_delta max = PREV.GO_econ_ui_national_work_add_remaining }
+            add_to_temp_variable = { var = GO_econ_ui_national_state_target value = GO_econ_ui_national_state_delta }
+            subtract_from_variable = { PREV.GO_econ_ui_national_work_add_remaining = GO_econ_ui_national_state_delta }
+        }
+        if = {
+            limit = { check_variable = { PREV.GO_econ_ui_national_work_remove_remaining > 0 } }
+            set_temp_variable = { GO_econ_ui_national_state_delta = GO_econ_ui_national_state_target }
+            clamp_temp_variable = { var = GO_econ_ui_national_state_delta max = PREV.GO_econ_ui_national_work_remove_remaining }
+            subtract_from_temp_variable = { var = GO_econ_ui_national_state_target value = GO_econ_ui_national_state_delta }
+            subtract_from_variable = { PREV.GO_econ_ui_national_work_remove_remaining = GO_econ_ui_national_state_delta }
+        }
+        # The original APIs accept explicit zero at native zero;
+        # the older positive-row UI bridge intentionally does not.
+        set_variable = { GO_econ_work_actor = PREV }
+        if = {
+            limit = { check_variable = { GO_econ_ui_national_state_family = 5 } }
+            set_variable = { GO_econ_work_ammunition_assigned_levels = GO_econ_ui_national_state_target }
+            GO_econ_assign_ammunition_plant = yes
+            if = {
+                limit = { NOT = { check_variable = { GO_econ_work_ammunition_assignment_succeeded = 1 } } }
+                set_variable = { PREV.GO_econ_ui_national_work_commit_failed = 1 }
+            }
+            clear_variable = GO_econ_work_ammunition_assigned_levels
+        }
+        else = {
+            set_variable = { GO_econ_work_processing_recipe_id = PREV.GO_econ_ui_work_plant_family }
+            set_variable = { GO_econ_work_processing_assigned_levels = GO_econ_ui_national_state_target }
+            GO_econ_assign_processing_plant = yes
+            if = {
+                limit = { NOT = { check_variable = { GO_econ_work_processing_assignment_succeeded = 1 } } }
+                set_variable = { PREV.GO_econ_ui_national_work_commit_failed = 1 }
+            }
+            clear_variable = GO_econ_work_processing_recipe_id
+            clear_variable = GO_econ_work_processing_assigned_levels
+        }
+        clear_variable = GO_econ_work_actor
+    }
+}
+
+# COUNTRY explicit GUI action. Regular work_plant_action: 0 idle, 1 fewer,
+# 2 more, 3 all. Copy selected family/group and calculate regular request inputs
+# in effects, never from temporary values exported by an enabled/limit trigger.
+GO_econ_ui_apply_national_plant_action = {
+    set_variable = { GO_econ_ui_work_action_succeeded = 0 }
+    if = {
+        limit = {
+            has_variable = GO_econ_ui_work_plant_action
+            OR = {
+                check_variable = { GO_econ_ui_work_plant_action = 0 }
+                check_variable = { GO_econ_ui_work_plant_action = 1 }
+                check_variable = { GO_econ_ui_work_plant_action = 2 }
+                check_variable = { GO_econ_ui_work_plant_action = 3 }
+            }
+        }
+        GO_econ_ui_refresh_national_plant_capacity = yes
+        if = {
+            limit = {
+                GO_econ_ui_national_plant_scan_ready = yes
+                check_variable = { GO_econ_ui_plant_scan_invalid_count = 0 }
+                GO_econ_ui_national_plant_states_writable = yes
+                if = {
+                    limit = { has_variable = GO_econ_ui_plant_group }
+                    OR = {
+                        check_variable = { GO_econ_ui_plant_group = 1 }
+                        check_variable = { GO_econ_ui_plant_group = 5 }
+                        check_variable = { GO_econ_ui_plant_group = 10 }
+                    }
+                }
+            }
+            set_variable = { GO_econ_ui_national_work_group = 1 }
+            if = {
+                limit = { has_variable = GO_econ_ui_plant_group }
+                set_variable = { GO_econ_ui_national_work_group = GO_econ_ui_plant_group }
+            }
+            set_variable = { GO_econ_ui_work_plant_family = GO_econ_ui_plant_scan_family }
+            set_variable = { GO_econ_ui_work_target = 0 }
+            if = {
+                limit = { check_variable = { GO_econ_ui_work_plant_action = 1 } }
+                set_variable = { GO_econ_ui_work_target = GO_econ_ui_plant_scan_assigned }
+                subtract_from_variable = { GO_econ_ui_work_target = GO_econ_ui_national_work_group }
+                clamp_variable = { var = GO_econ_ui_work_target min = 0 }
+            }
+            if = {
+                limit = { check_variable = { GO_econ_ui_work_plant_action = 2 } }
+                set_variable = { GO_econ_ui_work_target = GO_econ_ui_plant_scan_assigned }
+                add_to_variable = { GO_econ_ui_work_target = GO_econ_ui_national_work_group }
+                clamp_variable = { var = GO_econ_ui_work_target max = GO_econ_ui_plant_scan_built }
+            }
+            if = {
+                limit = { check_variable = { GO_econ_ui_work_plant_action = 3 } }
+                set_variable = { GO_econ_ui_work_target = GO_econ_ui_plant_scan_built }
+            }
+            GO_econ_ui_assign_national_plant = yes
+        }
+    }
+    clear_variable = GO_econ_ui_work_plant_action
+    clear_variable = GO_econ_ui_national_work_group
+    clear_variable = GO_econ_ui_work_plant_family
+    clear_variable = GO_econ_ui_work_target
+}

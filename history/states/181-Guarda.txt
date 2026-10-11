@@ -8,6 +8,8 @@ state={
 	
 	resources={
 		tungsten=95 #was 150 # was: 300
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 1
 	}
 
 	history={

@@ -6,6 +6,8 @@ state={
 	state_category = rural
 	resources={
 		tungsten=11 # was: 16
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 7
 	}
 
 	history={

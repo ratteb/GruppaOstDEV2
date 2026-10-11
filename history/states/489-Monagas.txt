@@ -8,6 +8,8 @@ state={
 	
 	resources={
 		oil=35 # was: 126
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 1
 	}
 
 	history={

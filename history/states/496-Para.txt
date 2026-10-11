@@ -7,8 +7,10 @@ state = {
 	state_category = rural # was town
 	
 	resources = {
-		steel = 3 # was: 4
 		
+		# Stage 12: sourced geography; authored native resource points.
+		iron = 32
+		bauxite = 8
 	}
 
 	history = {

@@ -3,6 +3,11 @@ state={
 	id=731
 	name="STATE_731"
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 1
+	}
+
 	history={
 		owner = GRE
 		victory_points = {

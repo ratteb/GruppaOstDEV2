@@ -193,6 +193,8 @@ guiTypes = {
 				name = "state_resources"
 				position = { x= 26 y=301}
 				size = { width=135 height=99 }
+				clipping = yes
+				verticalScrollbar = "right_vertical_slider"
 				
 				
 				background = {
@@ -203,11 +205,11 @@ guiTypes = {
 				gridBoxType = {
 					name = "state_resources_entries"
 					position = { x = -42 y = -2 }
-					size = { width = 132 height = 60 }
+					size = { width = 132 height = 186 }
 					format = "UPPER_LEFT"
 					slotsize = { width = 50 height = 31 }
 					max_slots_horizontal = 2
-					max_slots_vertical = 3
+					max_slots_vertical = 6
 					
 				}
 			}

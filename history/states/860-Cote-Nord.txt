@@ -4,6 +4,12 @@ state = {
 	manpower=110000
 	state_category = rural
 	
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		iron = 16
+		titanium = 8
+	}
+
 	history = {
 		owner = CAN
 		add_core_of = CAN

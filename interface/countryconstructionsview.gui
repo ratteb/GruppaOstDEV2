@@ -7,7 +7,7 @@ guiTypes = {
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		animation_time = 300	
-		size = { width=550 height=100%% }
+		size = { width=570 height=100%% }
 		clipping = no
 		
 		#hide_sound = menu_close_window
@@ -323,7 +323,15 @@ guiTypes = {
 		containerWindowType = {
 			name = "possible_constructions"
 			position = { x = 438 y = 48 }
-			size = { width = 104 height = 585 }
+			# Stage 13: retain the native categories and two-column button grids,
+			# with room for all 18 shared types and a separate scrollbar gutter.
+			size = { width = 124 height = 100%% }
+			clipping = yes
+			verticalScrollbar = "right_vertical_slider"
+			vertical_scroll_step = 44
+			scroll_wheel_factor = 40
+			smooth_scrolling = yes
+			margin = { top = 0 left = 0 bottom = 14 right = 20 }
 			
 #			background = {
 #				name = "Background"
@@ -333,7 +341,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "possible_state_constructions"
 				position = { x = 0 y = 0 }
-				size = { width = 104 height = 100% }
+				size = { width = 104 height = 146 }
 				clipping = no
 
 				iconType = {
@@ -361,7 +369,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "possible_shared_constructions"
 				position = { x = 0 y = 146 }
-				size = { width = 104 height = 100% }
+				size = { width = 104 height = 512 }
 				clipping = no
 
 				iconType = {
@@ -388,8 +396,8 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "possible_province_constructions"
-				position = { x = 0 y = 424 }
-				size = { width = 104 height = 100% }
+				position = { x = 0 y = 658 }
+				size = { width = 104 height = 188 }
 				clipping = no
 
 				iconType = {
@@ -416,8 +424,8 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "possible_facility_constructions"
-				position = { x = 0 y = 568 }
-				size = { width = 104 height = 100% }
+				position = { x = 0 y = 846 }
+				size = { width = 104 height = 148 }
 			
 
 				iconType = {
@@ -439,7 +447,7 @@ guiTypes = {
 			
 			buttonType = {
 				name = "convert_ic_button"
-				position = { x = -50 y = 377 }
+				position = { x = -70 y = 604 }
 				quadTextureSprite ="GFX_convert_ic_button"
 				buttonFont = "Main_14_black"
 				Orientation = "UPPER_RIGHT"

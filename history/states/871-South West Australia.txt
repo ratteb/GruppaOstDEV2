@@ -4,6 +4,12 @@ state={
 	provinces={
 		1526 2191 8200 10949 10969 10997 11011 12948 12962 12976 12990 
 	}
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		rare_earth_minerals = 12
+		titanium = 16
+	}
+
 	history = {
 		buildings = {
 			infrastructure = 1

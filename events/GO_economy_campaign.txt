@@ -1,0 +1,23 @@
+# Authored fresh-bookmark event. No popup, periodic trigger or save-load hook.
+# Geopolitical status is an authored scenario choice, never GDP progression.
+add_namespace = GO_economy_campaign
+
+country_event = {
+    id = GO_economy_campaign.1
+    hidden = yes
+    is_triggered_only = yes
+    trigger = {
+        has_country_flag = GO_econ_2027_authoring_pending
+        GO_econ_2027_country_fresh = yes
+    }
+    immediate = {
+        clr_country_flag = GO_econ_2027_authoring_pending
+        set_variable = { GO_econ_2027_startup_authoring = 1 }
+        # Fictional starting standing: three superpowers and one major power.
+        if = { limit = { tag = FRA } set_variable = { GO_econ_country_global_status = 4 } }
+        else = { set_variable = { GO_econ_country_global_status = 5 } }
+        set_variable = { GO_econ_country_global_status_populated = 1 }
+        GO_econ_author_2027_country_fiscal = yes
+        clear_variable = GO_econ_2027_startup_authoring
+    }
+}

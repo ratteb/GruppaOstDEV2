@@ -107,7 +107,7 @@ guiTypes = {
 
 		iconType ={
 			name ="pol_power_value_bg"
-			spriteType = "GFX_generic_box_smallest"
+			spriteType = "GFX_GO_topbar_value_holder"
 			position = { x = 100 y = 5 }
 			Orientation = "UPPER_LEFT"
 		}
@@ -132,7 +132,7 @@ guiTypes = {
 		
 		iconType ={
 			name ="manpower_value_bg"
-			spriteType = "GFX_generic_box_96"
+			spriteType = "GFX_GO_topbar_manpower_holder"
 			position = { x = 319 y = 5 }
 			Orientation = "UPPER_LEFT"
 		}
@@ -157,7 +157,7 @@ guiTypes = {
 		
 		iconType ={
 			name ="sability_value_bg"
-			spriteType = "GFX_generic_box_smallest"
+			spriteType = "GFX_GO_topbar_value_holder"
 			position = { x = 173 y = 5 }
 			Orientation = "UPPER_LEFT"
 		}
@@ -182,7 +182,7 @@ guiTypes = {
 		
 		iconType ={
 			name ="war_support_value_bg"
-			spriteType = "GFX_generic_box_smallest"
+			spriteType = "GFX_GO_topbar_value_holder"
 			position = { x = 246 y = 5 }
 			Orientation = "UPPER_LEFT"
 		}
@@ -331,7 +331,7 @@ guiTypes = {
 		
 		iconType ={
 			name ="industrial_capacity_bg" 
-			spriteType = "GFX_generic_box_smallest"
+			spriteType = "GFX_GO_topbar_value_holder"
 			position = { x=418 y = 5 } 
 			Orientation = "UPPER_LEFT"
 		}
@@ -366,7 +366,7 @@ guiTypes = {
 		
 		iconType ={
 			name ="convoy_text_bg"
-			spriteType = "GFX_generic_box_smallest"
+			spriteType = "GFX_GO_topbar_value_holder"
 			position = { x=710 y=5 }
 			Orientation = "UPPER_LEFT"
 		}
@@ -401,7 +401,7 @@ guiTypes = {
 		
 		iconType ={
 			name ="fuel_value_bg"
-			spriteType = "GFX_generic_box_smallest"
+			spriteType = "GFX_GO_topbar_value_holder"
 			position = { x=491 y=5 }
 			Orientation = "UPPER_LEFT"
 		}
@@ -436,7 +436,7 @@ guiTypes = {
 		
 		iconType ={
 			name ="supply_value_bg"
-			spriteType = "GFX_generic_box_smallest"
+			spriteType = "GFX_GO_topbar_value_holder"
 			position = { x=637 y=5 }
 			Orientation = "UPPER_LEFT"
 		}
@@ -516,7 +516,7 @@ guiTypes = {
 
 			iconType ={
 				name ="nuke_text_bg"
-				spriteType = "GFX_generic_box_smallest"
+				spriteType = "GFX_GO_topbar_value_holder"
 				position = { x = 0 y = 0 }
 				Orientation = "UPPER_LEFT"
 			}
@@ -579,7 +579,7 @@ guiTypes = {
 			
 			buttonType = {
 				name = "button_speeddown"
-				quadTextureSprite ="GFX_zoom_out"
+				quadTextureSprite ="GFX_GO_speed_minus"
 				position = { x = 58 y = 1 }
 				shortcut = "KP_MINUS"
 				pdx_tooltip = "SPEED_DECREASE"
@@ -624,7 +624,7 @@ guiTypes = {
 		
 			buttonType = {
 				name = "button_speedup"
-				quadTextureSprite ="GFX_zoom_in"
+				quadTextureSprite ="GFX_GO_speed_plus"
 				position = { x = 233 y =1 }
 				shortcut = "KP_PLUS"
 				pdx_tooltip = "SPEED_INCREASE"
@@ -650,7 +650,7 @@ guiTypes = {
 		buttonType = {
 			name = "menu_button"
 			position = { x = -35 y = 7 }
-			quadTextureSprite ="GFX_menu_button"
+			quadTextureSprite ="GFX_GO_utility_menu"
 			buttonText = ""
 			buttonFont = "Main_14_black"
 			clicksound = click_ok
@@ -662,7 +662,7 @@ guiTypes = {
 		buttonType = {
 			name = "help_button"
 			position = { x = -29 y = 34 }
-			quadTextureSprite ="GFX_help_button"
+			quadTextureSprite ="GFX_GO_utility_help"
 			buttonText = ""
 			buttonFont = "Main_14_black"
 			clicksound = click_ok
@@ -698,7 +698,7 @@ guiTypes = {
 		buttonType = {
 			name = "dismissed_alerts_button"
 			position = { x = -35 y = 62 }
-			quadTextureSprite ="GFX_show_dismissed_alerts_icon"
+			quadTextureSprite ="GFX_GO_utility_alerts"
 			buttonText = ""
 			buttonFont = "Main_14_black"
 			clicksound = click_ok
@@ -948,9 +948,11 @@ guiTypes = {
 					}
 
 					buttonType = {
+						# Keep the native trade controller and shortcut; its view hosts Economy/Resources.
 						name = "trade_button"
-						position = { x= 61 y = 0 }
-						quadTextureSprite ="GFX_topbar_trade_button"
+						position = { x = 61 y = 0 }
+						quadTextureSprite = "GFX_topbar_trade_button"
+						pdx_tooltip = "GO_ECON_UI_ENTRY_TOOLTIP"
 						Orientation = "UPPER_LEFT"
 						shortcut = "r"
 						clicksound = click_close

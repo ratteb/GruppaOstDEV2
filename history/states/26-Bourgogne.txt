@@ -6,6 +6,11 @@ state={
 	
 	state_category = town
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 2
+	}
+
 	history={
 		owner = FRA
 		victory_points = {

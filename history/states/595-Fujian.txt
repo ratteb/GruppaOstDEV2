@@ -3,6 +3,11 @@ state= {
 	name="STATE_595"
 	manpower = 11755600
 	state_category = city
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		rare_earth_minerals = 6
+	}
+
 	history=
 	{
 		owner = CHI

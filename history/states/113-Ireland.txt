@@ -4,8 +4,8 @@ state={
 	name="STATE_113" # Leinster
 	manpower = 1357600
 	resources={
-		aluminium=0 # was: 2
-		steel=2 # was: 3
+		# Stage 12: sourced geography; authored native resource points.
+		coal = 1
 	}
 	
 	state_category = city

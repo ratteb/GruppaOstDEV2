@@ -1,4 +1,4 @@
-# Gruppa Ost Stage 7 - explicit COUNTRY material/ammunition daily sequence.
+# Gruppa Ost Stage 7/8/9 - explicit COUNTRY availability/ammunition sequence.
 # Daily order is authored here, independent of separate on_daily file order.
 # Each subsystem owns its persistent native-day identity and guards its inputs.
 # No fiscal readiness, campaign seed, catch-up or global production lock.
@@ -8,10 +8,15 @@
 GO_econ_initialize_material_production_backend = {
     GO_econ_initialize_ammunition_backend = yes
     GO_econ_initialize_processing_config = yes
+    GO_econ_initialize_native_materials_config = yes
+    GO_econ_initialize_food_production_config = yes
     every_state = { GO_econ_initialize_state_processing_assignments = yes }
     every_country = {
         GO_econ_initialize_country_material_supply = yes
+        GO_econ_initialize_country_food_production = yes
         GO_econ_initialize_country_processing = yes
+        GO_econ_initialize_country_material_availability = yes
+        GO_econ_initialize_country_native_materials = yes
     }
 }
 
@@ -19,10 +24,16 @@ GO_econ_initialize_material_production_backend = {
 # New steel can feed both later consumers. Ammunition has priority over
 # microchips when steel is scarce; each whole family batch is all-or-nothing.
 GO_econ_update_country_material_production = {
+    # Claim and rebuild industrial availability before any recipe. Mapped
+    # inputs snapshot native net surplus; custom-only inputs use authored rates.
+    # Food keeps its stored receipt cadence; native fuel is not credited here.
+    GO_econ_begin_country_material_availability_cycle = yes
     GO_econ_update_national_material_daily_supply = yes
     GO_econ_update_steel_plant_production = yes
     GO_econ_update_aluminium_plant_production = yes
     GO_econ_update_rubber_plant_production = yes
     GO_econ_update_daily_ammunition = yes
     GO_econ_update_microchips_plant_production = yes
+    GO_econ_finalize_country_material_availability_report = yes
+    GO_econ_refresh_native_material_output_report = yes
 }

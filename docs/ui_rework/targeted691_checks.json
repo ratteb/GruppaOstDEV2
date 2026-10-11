@@ -1,0 +1,25 @@
+{
+  "dds_header_unchanged": true,
+  "dimensions": [
+    1092,
+    553
+  ],
+  "stored_mip_count": 0,
+  "decoders_agree": true,
+  "new_edge_alpha_values": [
+    0,
+    255
+  ],
+  "stats_black_text_light_fields": true,
+  "white_labels_dark_fields": true,
+  "grid_capacity_preserved": true,
+  "sprite": "GFX_division_designer_popup_bg",
+  "owning_definition": "inherited interface/divisiondesignerview.gfx",
+  "gui_changes": 0,
+  "game_texture_changes": 1,
+  "protected_art_changes": 0,
+  "in_game_validated": false,
+  "installed_hash_verified": true,
+  "original_custom_resources_unchanged": 75,
+  "interface_files_changed": []
+}

@@ -6,6 +6,11 @@ state={
 	
 	state_category = city
 
+	resources = {
+		# Stage 12: sourced geography; authored native resource points.
+		iron = 8
+	}
+
 	history={
 		owner = SOV
 		victory_points = {

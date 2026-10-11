@@ -463,6 +463,37 @@ GO_econ_refresh_fiscal_report = {
     }
 }
 
+# COUNTRY. Transaction-free GDP-income estimate. This does not open a month,
+# claim settlement history, change treasury/debt, or populate an actual receipt.
+# Call after an authored GDP/price/rate change; UI readers never invoke it.
+GO_econ_refresh_gdp_income_preview = {
+    set_variable = { GO_econ_country_gdp_income_preview_populated = 0 }
+    if = {
+        limit = { GO_econ_country_gdp_income_source_ready = yes }
+        set_variable = { GO_econ_country_gdp_income_preview_real_gdp = GO_econ_country_gdp }
+        set_variable = { GO_econ_country_gdp_income_preview_price = GO_econ_country_price_index }
+        set_variable = { GO_econ_country_gdp_income_preview_rate = global.GO_econ_cfg_gdp_income_factor }
+        set_variable = { GO_econ_country_gdp_income_preview_months = global.GO_econ_cfg_months_per_year }
+        set_variable = { GO_econ_country_gdp_income_preview = GO_econ_country_gdp }
+        multiply_variable = { GO_econ_country_gdp_income_preview = GO_econ_country_price_index }
+        multiply_variable = { GO_econ_country_gdp_income_preview = global.GO_econ_cfg_gdp_income_factor }
+        divide_variable = { GO_econ_country_gdp_income_preview = global.GO_econ_cfg_months_per_year }
+        set_variable = { GO_econ_country_gdp_income_preview_day = global.num_days }
+        if = {
+            limit = { check_variable = { var = GO_econ_country_gdp_income_preview value = 0 compare = greater_than_or_equals } }
+            set_variable = { GO_econ_country_gdp_income_preview_populated = 1 }
+            if = {
+                limit = {
+                    check_variable = { GO_econ_country_gdp > 0 }
+                    check_variable = { global.GO_econ_cfg_gdp_income_factor > 0 }
+                    NOT = { check_variable = { GO_econ_country_gdp_income_preview > 0 } }
+                }
+                set_variable = { GO_econ_country_gdp_income_preview_populated = 0 }
+            }
+        }
+    }
+}
+
 # COUNTRY. Native monthly pulse only; no late catch-up or settlement via refresh.
 GO_econ_settle_country_month = {
     GO_econ_initialize_fiscal_config = yes
@@ -485,6 +516,12 @@ GO_econ_settle_country_month = {
             add_to_variable = { PREV.GO_econ_country_settlement_blocked_states = 1 }
         }
     }
+    # The GDP-income basis is the complete opening eligible-state sum. A cache
+    # rebuild applies no growth or payment and cannot turn partial coverage ready.
+    if = {
+        limit = { has_country_flag = GO_econ_gdp_income_access }
+        GO_econ_refresh_country_gdp = yes
+    }
     if = {
         limit = { GO_econ_country_month_inputs_ready = yes }
         # Set before committing: a repeated/indirect call cannot enter this settlement.
@@ -505,9 +542,36 @@ GO_econ_settle_country_month = {
             set_variable = { GO_econ_state_services_funding_owner = OWNER }
         }
 
-        # 2. Receipt is an explicit input for this serial, not a default or borrowed money.
-        set_variable = { GO_econ_country_receipts_last = GO_econ_country_monthly_receipts }
-        add_to_variable = { GO_econ_country_treasury = GO_econ_country_monthly_receipts }
+        # 2. One income credit for this serial, before services/growth/inflation.
+        # Policy 1 explicitly chooses GDP-only income. Policy 2 adds an authored
+        # current-serial receipt; an incomplete or stale entry blocks preflight.
+        if = {
+            limit = { has_country_flag = GO_econ_gdp_income_access }
+            set_variable = { GO_econ_country_gdp_income_real_gdp_snapshot = GO_econ_country_gdp }
+            set_variable = { GO_econ_country_gdp_income_price_snapshot = GO_econ_country_price_index }
+            set_variable = { GO_econ_country_gdp_income_rate_snapshot = global.GO_econ_cfg_gdp_income_factor }
+            set_variable = { GO_econ_country_gdp_income_months_snapshot = global.GO_econ_cfg_months_per_year }
+            set_variable = { GO_econ_country_gdp_income_policy_snapshot = GO_econ_country_gdp_income_policy }
+            set_variable = { GO_econ_country_gdp_income_last = GO_econ_country_gdp_income_real_gdp_snapshot }
+            multiply_variable = { GO_econ_country_gdp_income_last = GO_econ_country_gdp_income_price_snapshot }
+            multiply_variable = { GO_econ_country_gdp_income_last = GO_econ_country_gdp_income_rate_snapshot }
+            divide_variable = { GO_econ_country_gdp_income_last = GO_econ_country_gdp_income_months_snapshot }
+            set_variable = { GO_econ_country_other_income_last = 0 }
+            if = {
+                limit = { check_variable = { GO_econ_country_gdp_income_policy = 2 } }
+                set_variable = { GO_econ_country_other_income_last = GO_econ_country_monthly_receipts }
+            }
+            set_variable = { GO_econ_country_receipts_last = GO_econ_country_gdp_income_last }
+            add_to_variable = { GO_econ_country_receipts_last = GO_econ_country_other_income_last }
+            set_variable = { GO_econ_country_gdp_income_report_month = global.GO_econ_month_serial }
+            set_variable = { GO_econ_country_gdp_income_report_populated = 1 }
+        }
+        else = {
+            # Original explicit-receipt countries retain their original behavior.
+            set_variable = { GO_econ_country_receipts_last = GO_econ_country_monthly_receipts }
+            set_variable = { GO_econ_country_gdp_income_report_populated = 0 }
+        }
+        add_to_variable = { GO_econ_country_treasury = GO_econ_country_receipts_last }
         GO_econ_mark_open_fiscal_flow = yes
         set_variable = { GO_econ_country_monthly_receipts_populated = 0 }
         set_variable = { GO_econ_country_receipts_month_populated = 0 }
@@ -585,6 +649,10 @@ GO_econ_settle_country_month = {
         GO_econ_refresh_country_gdp = yes
         GO_econ_refresh_country_debt = yes
         GO_econ_refresh_fiscal_report = yes
+        if = {
+            limit = { has_country_flag = GO_econ_gdp_income_access }
+            GO_econ_refresh_gdp_income_preview = yes
+        }
         set_variable = { GO_econ_country_settlement_in_progress = 0 }
     }
     # Guarded same-day allocation retry is possible after a successful close;
